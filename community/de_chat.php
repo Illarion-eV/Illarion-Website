@@ -10,7 +10,7 @@
 
 <h2>Hinweise</h2>
 
-<p>Auf dieser Seite wird ein Java Applet geladen welches eine Verbindung zum Quakenet
+<p>Auf dieser Seite wird ein Java Applet geladen, welches eine Verbindung zum Quakenet
 IRC Servernetzwerk herstellt und automatisch dem Illarion Chat betritt. In diesem Chat
 gelten sowohl die <a href="<?php echo $url; ?>/illarion/de_rules.php">Regeln von
 Illarion</a> als auch die Regeln von <a href="http://www.quakenet.org/">Quakenet</a>.
