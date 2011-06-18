@@ -1,0 +1,13 @@
+// Konfigurationsdatei fuer HTML Tidy, XHTML Strict
+indent: auto
+indent-spaces: 3
+wrap: 100
+tab-size: 3
+quote-marks: yes
+output-xhtml: yes
+doctype: strict
+tidy-mark: no
+clean: yes
+enclose-block-text: yes
+logical-emphasis: yes
+char-encoding: raw

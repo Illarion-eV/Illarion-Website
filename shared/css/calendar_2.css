@@ -1,0 +1,52 @@
+h2.spring
+{
+   /* border: 1px solid #003300; */
+   margin: 0px
+}
+
+h2.summer
+{
+   /* border: 1px solid #B8860B; */
+   margin: 0px
+}
+
+h2.autumn
+{
+   /* border: 1px solid #330000; */
+   margin: 0px
+}
+h2.winter
+{
+   /* border: 1px solid #003399; */
+   margin: 0px
+}
+
+.day {
+   font-size:10px;
+   width: 22px;
+}
+.today {
+   color: #FF0000;
+   font-size:10px;
+   width: 22px;
+}
+
+.month {
+   font-style:italic;
+   color: #FFFFFF;
+   font-size:12px;
+   width: 110px;
+
+}
+div.meine_Klasse {
+    margin:20px;
+    float:left;
+    width: 183px;
+    height: 136px;
+}
+
+div.meine_Klasse td
+{
+    text-align: center;
+}
+

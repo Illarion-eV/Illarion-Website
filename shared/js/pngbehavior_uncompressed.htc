@@ -1,0 +1,68 @@
+<public:component lightWeight="true">
+<public:attach event="onpropertychange" onevent="propertyChanged()" />
+<public:attach event="onbeforeprint" onevent="beforePrint()" for="window"/>
+<public:attach event="onafterprint" onevent="afterPrint()" for="window"/>
+<script>
+
+var supported = /MSIE ((5\.5)|[6789])/.test(navigator.userAgent) &&
+navigator.platform == "Win32";
+
+var realSrc;
+var blankSrc = "http://illarion.org/shared/pics/blank.gif";
+var isPrinting = false;
+
+if (supported) fixImage();
+
+function propertyChanged() {
+if (!supported || isPrinting) return;
+var pName = event.propertyName;
+if (pName != "src") return;
+// if not set to blank
+if (!new RegExp(blankSrc).test(src))
+fixImage();
+};
+
+function fixImage() {
+// get src
+var src = element.src;
+// check for real change
+if (src == realSrc && /\.png$/i.test(src)) {
+element.src = blankSrc;
+return;
+}
+
+if ( ! new RegExp(blankSrc).test(src)) {
+// backup old src
+realSrc = src;
+}
+// test for png
+if (/\.png$/i.test(realSrc)) {
+// set blank image
+element.src = blankSrc;
+testimage = new Image();
+testimage.src = src;
+// set filter
+element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+"AlphaImageLoader(src='" + src + "',sizingMethod='scale')";
+element.runtimeStyle.width = testimage.width;
+element.runtimeStyle.height = testimage.height;
+}
+else {
+// remove filter
+element.runtimeStyle.filter = "";
+}
+}
+
+function beforePrint() {
+isPrinting = true;
+element.src = realSrc;
+element.runtimeStyle.filter = "";
+realSrc = null;
+}
+
+function afterPrint() {
+isPrinting = false;
+fixImage();
+}
+</script>
+</public:component>

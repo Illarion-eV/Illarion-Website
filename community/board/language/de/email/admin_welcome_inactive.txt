@@ -1,0 +1,20 @@
+Subject: Willkommen auf „{SITENAME}“
+
+{WELCOME_MSG}
+
+Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+
+----------------------------
+Benutzername: {USERNAME}
+Passwort:     {PASSWORD}
+
+Board-URL:    {U_BOARD}
+----------------------------
+
+Dein Account ist derzeit inaktiv. Ein Administrator des Boards muss dein Konto erst aktivieren, bevor du es verwenden kannst. Du erhältst eine weitere E-Mail, sobald dies geschehen ist.
+
+Bitte vergiss dein Passwort nicht, da es verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls du dein Passwort dennoch vergessen solltest, kannst du ein neues anfordern, das dann auf die gleiche Weise wie dieses Benutzerkonto aktiviert wird.
+
+Vielen Dank für deine Registrierung.
+
+{EMAIL_SIG}

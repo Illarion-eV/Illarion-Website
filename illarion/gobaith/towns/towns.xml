@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE tutorial [
+    <!ENTITY auml "&amp;auml;">
+    <!ENTITY ouml "&amp;ouml;">
+    <!ENTITY uuml "&amp;uuml;">
+    <!ENTITY Auml "&amp;Auml;">
+    <!ENTITY Ouml "&amp;Ouml;">
+    <!ENTITY Uuml "&amp;Uuml;">
+    <!ENTITY szlig "&amp;szlig;">
+]>
+
+<screenshots>
+   <group index="0" gName="Neuste Screenshots" eName="Latest Screenshots">
+	<screenshot filename="nordmark.jpg" gName="Die Nordmark" eName="The Nordmark" />
+   </group>
+</screenshots>
+

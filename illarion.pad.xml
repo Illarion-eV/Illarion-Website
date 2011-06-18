@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to dissemminate information to anyone interested in their software products.  To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+		<MASTER_PAD_EDITOR>DeuPAD 2.0.2.50 (http://www.deupad.org)</MASTER_PAD_EDITOR>
+		<MASTER_PAD_VERSION>2.01</MASTER_PAD_VERSION>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>Illarion e.V.</Company_Name>
+		<Address_1>Scheffelstr. 19</Address_1>
+		<Address_2 />
+		<Zip_Postal_Code>88045</Zip_Postal_Code>
+		<City_Town>Friedrichshafen</City_Town>
+		<Country>Deutschland</Country>
+		<State_Province />
+		<Company_WebSite_URL>http://illarion.org</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Jan</Author_First_Name>
+			<Author_Last_Name>Falke</Author_Last_Name>
+			<Author_Email>promotion@illarion.org</Author_Email>
+			<Contact_First_Name>Jan</Contact_First_Name>
+			<Contact_Last_Name>Falke</Contact_Last_Name>
+			<Contact_Email>promotion@illarion.org</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<General_Email>general@illarion.org</General_Email>
+			<Support_Email>general@illarion.org</Support_Email>
+			<Sales_Email>general@illarion.org</Sales_Email>
+			<General_Phone />
+			<Support_Phone />
+			<Sales_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>Illarion Java-Client</Program_Name>
+		<Program_Version>0.97</Program_Version>
+		<Program_Release_Year>2006</Program_Release_Year>
+		<Program_Release_Month>07</Program_Release_Month>
+		<Program_Release_Day>24</Program_Release_Day>
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>Major Update</Program_Release_Status>
+		<Program_Cost_Other>0.00</Program_Cost_Other>
+		<Program_Cost_Dollars>0.00</Program_Cost_Dollars>
+		<Program_Categories />
+		<Program_Specific_Category>Games</Program_Specific_Category>
+		<Program_Change_Info>Weiche Übergaenge zwischen einzelnen Kartenfeldern
+Brücken und Stege und viele neue Gegenstände
+Neue Rasse: Gnom
+Neue Rasse: Fee
+Neue Rasse: Goblin
+Der alte Client ist aufgrund drastischer Veränderungen nicht mehr benutzbar</Program_Change_Info>
+		<Program_Language>English,German</Program_Language>
+		<Program_OS_Support>Windows2000,WinXP,Linux,Mac PPC</Program_OS_Support>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_System_Requirements>Java Runtime v1.5, Intel 500 MHz, 256 MB RAM, Open-GL graphic card 16 MB, internet connection</Program_System_Requirements>
+		<Includes_VB_Runtime />
+		<Includes_JAVA_VM>N</Includes_JAVA_VM>
+		<Includes_DirectX />
+		<File_Info>
+			<Filename_Long />
+			<Filename_Generic />
+			<Filename_Versioned />
+			<Filename_Previous />
+			<File_Size_Bytes>33840369</File_Size_Bytes>
+			<File_Size_K>33047</File_Size_K>
+			<File_Size_MB>32.27</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Based_On />
+			<Expire_Count>0</Expire_Count>
+			<Expire_Year />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Other_Info />
+		</Expire_Info>
+		<Program_Cost_Other_Code>EUR</Program_Cost_Other_Code>
+		<Program_Category_Class>Games &amp; Entertainment::Adventure &amp; Roleplay</Program_Category_Class>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>Illarion, RPG, online, MPORPG, graphical, free, grafic, Role-Playing Game, game, mud, newmud, Java, client, Linux, Windows, Mac, Macintosh</Keywords>
+			<Char_Desc_45>Free graphical online roleplaying game.</Char_Desc_45>
+			<Char_Desc_80>Illarion is a graphical fantasy game that focuses on true roleplaying.</Char_Desc_80>
+			<Char_Desc_250>Illarion is a free, completely self developed graphical fantasy game that focuses on true roleplaying. Come and join the world of Illarion. Pick a race you would like to play: human, dwarf, halfling, elf. Maybe an orc? Or even a lizardman?</Char_Desc_250>
+			<Char_Desc_450>Illarion is a free, completely self developed graphical fantasy game that focuses on true roleplaying. Come and join the world of Illarion. Pick a race you would like to play: human, dwarf, halfling, elf. Maybe an orc? Or even a lizardman? We are offering our own server, a Java client (which can be used at Linux or Windows) and the guarantee that you will never ever pay anything for this game.</Char_Desc_450>
+			<Char_Desc_2000>Illarion is a free, completely self developed graphical fantasy game that focuses on true roleplaying. Come and join the world of Illarion. You'll fully emerse yourself in the world of Illarion, as though your character is a real being. All characters around you will behave themselves like real beings in this independent, mysterious world. They'll tell you about magicians, ghosts, and fairies in some of the most unbelievable stories and rumours. Pick a race you would like to play: human, dwarf, halfling, elf. Maybe an orc? Or even a lizardman? 
+
+Please don't expect experience points or other numbers inside the game which reveal your skills. Just follow the role you want to play, then you will notice wether you will become a great warrior, fighting against the various evil creatures of Illarion, or the most respected master smith of the town, or even the most popular barkeeper - because practice makes perfect. Druids and magicians will cast mysterious spells with herbs and runes. In addition to all of this each race speaks with it's own language, but all are able to speak the common language of Illarion to make themselves understood. 
+
+We are offering our own server, a Java client (which can be used at Linux or Windows) and the guarantee that you will never ever pay anything for this game. To ensure this we founded a registered society and its became contractual in the statute. Illarion is online since Februrary 2000 and it's always being developed by programers and volunteers to fit and satisfy the wishes of the player community. 
+
+Even you can't resist the magic of this world!</Char_Desc_2000>
+		</English>
+		<German>
+			<Keywords>Illarion, RPG, online, MPORPG, graphisch, frei, freies, kostenlos, kostenloses, grafisch, Rollenspiel, Spiel, mud, newmud, Java, client, Linux, Windows, Mac, Macintosh</Keywords>
+			<Char_Desc_45>Kostenloses, grafisches Online-Rollenspiel.</Char_Desc_45>
+			<Char_Desc_80>Illarion ist ein grafisches Fantasy-Spiel, mit Schwerpunkt auf Rollenspiel.</Char_Desc_80>
+			<Char_Desc_250>Illarion ist ein kostenloses, eigenentwickeltes grafisches Fantasy-Spiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Entscheide Dich für eine Rasse, die du spielen möchtest:Mensch, Zwerg, Halbling, Elf, ein Ork? Oder gar ein Echsenwesen?</Char_Desc_250>
+			<Char_Desc_450>Illarion ist ein kostenloses, komplett eigenentwickeltes grafisches Fantasy-Spiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Entscheide Dich für eine Rasse, die du spielen möchtest: Mensch, Zwerg, Halbling, Elf. Vielleicht ein Ork? Oder gar ein Echsenwesen? Wir bieten unseren eigenen Server, einen Java-Client, der unter Windows und Linux läuft und die Garantie, dass Du nie etwas für dieses Spiel bezahlen musst.</Char_Desc_450>
+			<Char_Desc_2000>Illarion ist ein kostenloses, komplett eigenentwickeltes grafisches Fantasy-Spiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Komm und tauch in die Welt Illarions ein! Du interagierst mit anderen Spielern und Deiner Umgebung als ob Du mitten in dieser Welt lebst. Alle Charaktere um Dich herum werden sich wie echte Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Sie werden Dir von Zauberern, Geistern, Fabelwesen und den unglaublichsten Geschichten und Gerüchten berichten. Entscheide Dich für eine Rasse, die du spielen möchtest: Mensch, Zwerg, Halbling, Elf. Vielleicht ein Ork? Oder gar ein Echsenwesen? 
+
+Bitte erwarte keine Erfahrungspunkte oder andere Zahlen im Spiel, die Dir verraten, wie gut Deine Fähigkeiten sind. Folge einfach der Rolle die Du spielen möchtest, dann wirst Du merken, ob du als Kämpfer gegen die Kreaturen Illarions immer furchtloser und geschickter wirst, der angesehenste Meisterschmied der Stadt oder gar der beliebteste Barkeeper - denn Übung macht den Meister. Druiden und Zauberer wird eine geheimnisvolle Magie, basierend auf Kräutern, anderen Pflanzen und Runen erwarten. Darüber hinaus spricht jede Rasse ihre eigene Sprache, aber alle beherrschen auch die gemeinsame Sprache Illarions, um sich über Rassengrenzen hinweg verständigen zu können. 
+
+Wir bieten unseren eigenen Server, einen Java-Client, der unter Windows und Linux läuft und die Garantie, dass Du nie etwas für dieses Spiel bezahlen musst. Um dies sicher zu stellen, haben wir einen Verein gegründet, der dies in seiner Satzung festschreibt. Illarion ist seit Februar 2000 online und wird ständig von freiwilligen Programmierern und Helfern weiterentwickelt und so den Wünschen der Spielerschaft angepasst. 
+
+Auch Du wirst Dich dem Zauber dieser Welt nicht entziehen können!</Char_Desc_2000>
+		</German>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://illarion.org</Application_Info_URL>
+			<Application_Order_URL />
+			<Application_Screenshot_URL>http://illarion.org/illarion/screenshots_new_client/dji04.jpg</Application_Screenshot_URL>
+			<Application_Icon_URL>http://illarion.org/logo.gif</Application_Icon_URL>
+			<Application_XML_File_URL>http://pad.illarion.org/illarion.pad.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://download.illarion.org/</Primary_Download_URL>
+			<Secondary_Download_URL>http://javaclient.illarion.org/illarion_client.jnlp</Secondary_Download_URL>
+			<Additional_Download_URL_1>http://www.illarion.org/illarion/IllarionSetup097.exe</Additional_Download_URL_1>
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions />
+		<EULA />
+	</Permissions>
+	<DeuPAD>
+		<DeuPAD_Extension_Version>2.00</DeuPAD_Extension_Version>
+		<DeuPAD_Extension_Info>For information on the DeuPAD Extensions please go to http://www.deupad.org</DeuPAD_Extension_Info>
+		<SAVE_Member>Y</SAVE_Member>
+		<SAVE_Member_Number>JAF</SAVE_Member_Number>
+		<Company_Unique_ID>{E5440903-F335-4F75-94D3-50A7EAE34CEF}</Company_Unique_ID>
+		<Save_Prog_Num>RPG</Save_Prog_Num>
+		<Program_Cost_EUR>0.00</Program_Cost_EUR>
+		<Program_Cost_DEM />
+		<Program_Unique_ID>{D25E8C22-71DD-4866-96EC-80F0FA74BA00}</Program_Unique_ID>
+		<Program_Categories_German>Spiele: Verschiedenes</Program_Categories_German>
+		<Program_System_Requirements_German>Java Runtime v1.5, Intel 500 MHz, 256 MB RAM, Open-GL fähige Grafikkarte mit 16 MB, Internetanschluss</Program_System_Requirements_German>
+		<Expire_Other_Info_German />
+		<EULA_German />
+		<Program_Change_Info_German />
+	</DeuPAD>
+	<ASP>
+		<ASP_FORM>Y</ASP_FORM>
+		<ASP_Member>N</ASP_Member>
+		<ASP_Member_Number />
+	</ASP>
+	<MSN>
+		<MSN_FORM>Y</MSN_FORM>
+		<MSN_IS_32bit>Y</MSN_IS_32bit>
+	</MSN>
+	<ZDNET>
+		<ZDNET_FORM>Y</ZDNET_FORM>
+		<ZDNET_Product_ID_Code />
+	</ZDNET>
+	<Affiliates>
+		<Affiliates_FORM>Y</Affiliates_FORM>
+		<Affiliates_VERSION>1.2</Affiliates_VERSION>
+		<Affiliates_URL>http://www.asp-shareware.org/pad/extensions/Affiliates.htm</Affiliates_URL>
+		<Affiliates_Information_Page />
+		<Affiliates_Avangate_Order_Page />
+		<Affiliates_Avangate_Vendor_ID />
+		<Affiliates_Avangate_Product_ID />
+		<Affiliates_Avangate_Maximum_Commission_Rate />
+		<Affiliates_BMTMicro_Order_Page />
+		<Affiliates_BMTMicro_Vendor_ID />
+		<Affiliates_BMTMicro_Product_ID />
+		<Affiliates_BMTMicro_Maximum_Commission_Rate />
+		<Affiliates_clixGalore_Order_Page />
+		<Affiliates_clixGalore_Vendor_ID />
+		<Affiliates_clixGalore_Product_ID />
+		<Affiliates_clixGalore_Maximum_Commission_Rate />
+		<Affiliates_CommissionJunction_Order_Page />
+		<Affiliates_CommissionJunction_Vendor_ID />
+		<Affiliates_CommissionJunction_Product_ID />
+		<Affiliates_CommissionJunction_Maximum_Commission_Rate />
+		<Affiliates_DigiBuy_Order_Page />
+		<Affiliates_DigiBuy_Vendor_ID />
+		<Affiliates_DigiBuy_Product_ID />
+		<Affiliates_DigiBuy_Maximum_Commission_Rate />
+		<Affiliates_DigitalCandle_Order_Page />
+		<Affiliates_DigitalCandle_Vendor_ID />
+		<Affiliates_DigitalCandle_Product_ID />
+		<Affiliates_DigitalCandle_Maximum_Commission_Rate />
+		<Affiliates_Emetrix_Order_Page />
+		<Affiliates_Emetrix_Vendor_ID />
+		<Affiliates_Emetrix_Product_ID />
+		<Affiliates_Emetrix_Maximum_Commission_Rate />
+		<Affiliates_eSellerate_Order_Page />
+		<Affiliates_eSellerate_Vendor_ID />
+		<Affiliates_eSellerate_Product_ID />
+		<Affiliates_eSellerate_Maximum_Commission_Rate />
+		<Affiliates_Kagi_Order_Page />
+		<Affiliates_Kagi_Vendor_ID />
+		<Affiliates_Kagi_Product_ID />
+		<Affiliates_Kagi_Maximum_Commission_Rate />
+		<Affiliates_LinkShare_Order_Page />
+		<Affiliates_LinkShare_Vendor_ID />
+		<Affiliates_LinkShare_Product_ID />
+		<Affiliates_LinkShare_Maximum_Commission_Rate />
+		<Affiliates_NorthStarSol_Order_Page />
+		<Affiliates_NorthStarSol_Vendor_ID />
+		<Affiliates_NorthStarSol_Product_ID />
+		<Affiliates_NorthStarSol_Maximum_Commission_Rate />
+		<Affiliates_Order1_Order_Page />
+		<Affiliates_Order1_Vendor_ID />
+		<Affiliates_Order1_Product_ID />
+		<Affiliates_Order1_Maximum_Commission_Rate />
+		<Affiliates_Osolis_Order_Page />
+		<Affiliates_Osolis_Vendor_ID />
+		<Affiliates_Osolis_Product_ID />
+		<Affiliates_Osolis_Maximum_Commission_Rate />
+		<Affiliates_Plimus_Order_Page />
+		<Affiliates_Plimus_Vendor_ID />
+		<Affiliates_Plimus_Product_ID />
+		<Affiliates_Plimus_Maximum_Commission_Rate />
+		<Affiliates_Regnet_Order_Page />
+		<Affiliates_Regnet_Vendor_ID />
+		<Affiliates_Regnet_Product_ID />
+		<Affiliates_Regnet_Maximum_Commission_Rate />
+		<Affiliates_Regnow_Order_Page />
+		<Affiliates_Regnow_Vendor_ID />
+		<Affiliates_Regnow_Product_ID />
+		<Affiliates_Regnow_Maximum_Commission_Rate />
+		<Affiliates_Regsoft_Order_Page />
+		<Affiliates_Regsoft_Vendor_ID />
+		<Affiliates_Regsoft_Product_ID />
+		<Affiliates_Regsoft_Maximum_Commission_Rate />
+		<Affiliates_ShareIt_Order_Page />
+		<Affiliates_ShareIt_Vendor_ID />
+		<Affiliates_ShareIt_Product_ID />
+		<Affiliates_ShareIt_Maximum_Commission_Rate />
+		<Affiliates_Shareasale_Order_Page />
+		<Affiliates_Shareasale_Vendor_ID />
+		<Affiliates_Shareasale_Product_ID />
+		<Affiliates_Shareasale_Maximum_Commission_Rate />
+		<Affiliates_SWReg_Order_Page />
+		<Affiliates_SWReg_Vendor_ID />
+		<Affiliates_SWReg_Product_ID />
+		<Affiliates_SWReg_Maximum_Commission_Rate />
+		<Affiliates_V-Share_Order_Page />
+		<Affiliates_V-Share_Vendor_ID />
+		<Affiliates_V-Share_Product_ID />
+		<Affiliates_V-Share_Maximum_Commission_Rate />
+		<Affiliates_VFree_Order_Page />
+		<Affiliates_VFree_Vendor_ID />
+		<Affiliates_VFree_Product_ID />
+		<Affiliates_VFree_Maximum_Commission_Rate />
+		<Affiliates_Yaskifo_Order_Page />
+		<Affiliates_Yaskifo_Vendor_ID />
+		<Affiliates_Yaskifo_Product_ID />
+		<Affiliates_Yaskifo_Maximum_Commission_Rate />
+	</Affiliates>
+</XML_DIZ_INFO>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screenshots>
+	<group index="0" gName="Neuste Screenshots" eName="Latest Screenshots">
+		<screenshot filename="undeads.jpg" gName="Die Toten halten den Weg" eName="The deads protect the way" />
+		<screenshot filename="screenshot04.jpg" gName="Heiliger Tempel" eName="Holy shire" />
+		<screenshot filename="screenshot06.jpg" gName="Der Drachenhort" eName="The dragons lair" />
+		<screenshot filename="screenshot01.jpg" gName="Ein Drache in den hohen Bergen" eName="A dragon in the high mountains" />
+		<screenshot filename="screenshot02.jpg" gName="Im Schutz des Nebels..." eName="Hidden in the fog..." />
+		<screenshot filename="screenshot05.jpg" gName="Im tiefen, tiefen Wald" eName="In the deep, deep forest..." />
+		<screenshot filename="dji05.jpg" gName="Ruhe in Frieden" eName="Rest in peace" />
+		<screenshot filename="screenshot03.jpg" gName="Es gibt Wesen, mit denen legt man sich nicht an." eName="There are creatures, you shouldn't mess up with." />
+		<screenshot filename="dji07.jpg" gName="Die Macht der Magie" eName="The power of magic" />
+		<screenshot filename="dji04.jpg" gName="Die Macht des Wissens" eName="The power of knowledge" />
+		<screenshot filename="dji02.jpg" gName="Ein magisches Tor" eName="A magical gate" />
+		<screenshot filename="dji10.jpg" gName="Auch die Magier können kämpfen." eName="The mages can fight too." />
+		<screenshot filename="darklair.jpg" gName="Wo das Böse sich verbirgt..." eName="Where the evil ones hide..." />
+		<screenshot filename="maze.jpg" gName="Ein Irrgarten mit Überraschungen" eName="A maze with surprises" />
+		<screenshot filename="dwarf_work.jpg" gName="Ein Zwerg an der Arbeit" eName="A dwarf at work" />
+		<screenshot filename="workshop_silverbrand.jpg" gName="Die Schmiede von Silberbrand" eName="The smithery of Silverbrand" />
+		<screenshot filename="winter_forest.jpg" gName="Winter im Wald" eName="Winter in the forest" />
+		<screenshot filename="trollsbane.jpg" gName="Trolls Bane - Für einen Kampf ist immer Zeit" eName="Trollsbane - There is always time for a short fight" />
+		<screenshot filename="dragon_battle.jpg" gName="In der Höhle des L... Drachen" eName="In the l...dragon's den" />
+		<screenshot filename="magic_maggi.jpg" gName="...Feierabend!" eName="...end of the work!" />
+		<screenshot filename="castle.jpg" gName="Ist die Katze aus dem Haus..." eName="While the cat's away..." />
+		<screenshot filename="ritual_2.jpg" gName="Im Bann der Magie" eName="Under the charm of magic" />
+	</group>
+	<group index="1" gName="Karten" eName="Maps">
+		<screenshot filename="map_silverbrand.jpg" gName="Das erste Silberbrand" eName="The first Silverbrand" />
+	</group>
+	<group index="2" gName="Screenshots mit dem alten Client" eName="Screenshots from the old client">
+		<screenshot filename="ogre.jpg" gName="Auch einem Oger ist es mal kalt" eName="Sometimes it is too cold, even for a ogre" />
+		<screenshot filename="garden.jpg" gName="Der Garten der Halblinge" eName="The garden of the halflings" />
+		<screenshot filename="taking_for_a_walk.jpg" gName="Gassi gehen" eName="Taking for a walk" />
+		<screenshot filename="ritual.jpg" gName="Ein Ritual..." eName="A ritual..." />
+		<screenshot filename="picnic.jpg" gName="Lagerfeuer Geschichten fern ab von der Stadt." eName="Campfire Stories far away from the town." />
+		<screenshot filename="sunflowers.jpg" gName="Ein übereifriger Gärtner" eName="A overzealous gardener." />
+	</group>
+	<group index="3" gName="Screenshots mit dem ganz alten Client" eName="Screenshots from the very old client">
+		<screenshot filename="zasmias_celebration_of_resurrection.jpg" gName="Zasmias Auferstehung" eName="Zasmias resurrection" />
+		<screenshot filename="workshop_attack.jpg" gName="Angriff auf die Werkstatt" eName="Attack against the workshop" />
+		<screenshot filename="temple_consecration.jpg" gName="Einweihung des Irmoroms Tempels von Silberbrand" eName="Consecration of the Irmorom temple in Silverbrand" />
+		<screenshot filename="story_telling_at_campfire.jpg" gName="Geschichten am Lagerfeuer" eName="Stories at the campfire" />
+		<screenshot filename="flames_heart.jpg" gName="Wenn das Herz in Flammen steht" eName="When the heart is in flames" />
+		<screenshot filename="desert_battle.jpg" gName="Schlacht in der Wüste" eName="Battle in the desert" />
+		<screenshot filename="ceremony_of_shi_and_sun.jpg" gName="Hochzeit von Shi und Sun" eName="Marriage of Shi and Sun" />
+		<screenshot filename="burning_castle.jpg" gName="Angriff auf die Burg" eName="Attack against the castle" />
+		<screenshot filename="a_dwarfs_money.jpg" gName="Die Zwerge und das Gold" eName="The dwarves and the gold" />
+		<screenshot filename="a_dangerous_isle.jpg" gName="Eine gefährliche Insel" eName="A dangerous island" />
+	</group>
+	<group index="4" gName="Es war einmal vor langer Zeit..." eName="Once upon a time...">
+		<screenshot filename="2000-02-19.jpg" gName="19. Februar 2000 - Testbild" eName="19th February 2000 - Testscreen" />
+		<screenshot filename="2000-02-22.jpg" gName="22. Februar 2000 - Dummy Bild" eName="22nd February 2000 - Dummy picture" />
+		<screenshot filename="2000-02-24.jpg" gName="24. Februar 2000 - Alle mal lächeln" eName="24th February 2000 - Say cheese" />
+		<screenshot filename="2000-03-05.jpg" gName="5. März 2000 - Eine Mumie" eName="5th March 2000 - A mummy" />
+		<screenshot filename="2000-04-01.jpg" gName="1. April 2000 - Client mit Rahmen" eName="1st April 2000 - Client with border" />
+		<screenshot filename="2000-04-15.jpg" gName="15. April 2000 - Ein neuer Rahmen von Schattenfeuer" eName="15th April 2000 - A new border made by Schattenfeuer" />
+		<screenshot filename="2000-07-06.jpg" gName="6. Juli 2000 - Wer hat den Pinguin getötet?" eName="6th July 2000 - Who killed the penguin?" />
+		<screenshot filename="2000-09-12.jpg" gName="12. September 2000 - My home is my castle" eName="12th September 2000 - My home is my castle" />
+		<screenshot filename="2000-10-21.jpg" gName="21. Oktober 2000 - Neuer Rahmen von Martin" eName="21st October 2000 - New border by Martin" />
+		<screenshot filename="2000-10-30.jpg" gName="30. Oktober 2000 - Erstens Illarion Server Treffen" eName="30th October 2000 - First Illarion server meeting" />
+		<screenshot filename="2000-10-31.jpg" gName="31. Oktober 2000 - Erstens Illarion Server Treffen" eName="31st October 2000 - First Illarion server meeting" />
+		<screenshot filename="2001-01-29.jpg" gName="29. Januar 2001 - Die vier Völker" eName="29th January 2001 - The four races" />
+		<screenshot filename="2001-03-09.jpg" gName="9. März 2001 - Der neue Isometische Client" eName="9th March 2001 - The new isometric client" />
+	</group>
+</screenshots>

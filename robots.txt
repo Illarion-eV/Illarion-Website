@@ -1,0 +1,18 @@
+# robots.txt zu http://illarion.org
+
+User-Agent: *
+Disallow: /ssl/
+Disallow: /_hp_admin_files_/
+Disallow: /illarion/gmtool/
+Disallow: /new/
+Allow: /
+
+User-Agent: Googlebot-Image
+Allow: /illarion/screenshots/
+Allow: /community/fanart/
+Disallow: /ssl/
+Disallow: /_hp_admin_files_/
+Disallow: /illarion/gmtool/
+Disallow: /new/
+Allow: /
+

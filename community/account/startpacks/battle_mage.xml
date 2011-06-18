@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pack>
+	<skills>
+	    <group value="1"> <!-- Language -->
+		</group>
+		<group value="2"> <!-- Crafting -->
+		</group>
+		<group value="3"> <!-- Magic -->
+			<skill name="commotio" value="1" />
+		</group>
+		<group value="4"> <!-- Misc -->
+		</group>
+		<group value="5"> <!-- Fighting -->
+			<skill name="concussion weapons" value="5" />
+			<skill name="parry" value="5" />
+			</group>
+		<group value="6"> <!-- Druid -->
+		</group>
+		<group value="7"> <!-- Priest -->
+		</group>
+		<group value="8"> <!-- Bard -->
+		</group>
+	</skills>
+	<items>
+		<item id="97"   linenumber="1"  number="1"   qual="333" data="0" /> <!-- bag -->
+		<item id="0"    linenumber="2"  number="1"   qual="0"   data="0" /> <!-- helmet -->
+		<item id="0"    linenumber="3"  number="1"   qual="0"   data="0" /> <!-- amulett -->
+		<item id="365"  linenumber="4"  number="1"   qual="288" data="0" /> <!-- armor -->
+		<item id="48"   linenumber="5"  number="1"   qual="233" data="0" /> <!-- gloves -->
+		<item id="76"   linenumber="6"  number="1"   qual="488" data="0" /> <!-- left hand -->
+		<item id="0"    linenumber="7"  number="1"   qual="0"   data="0" /> <!-- right hand -->
+		<item id="0"    linenumber="8"  number="1"   qual="0"   data="0" /> <!-- left finger -->
+		<item id="0"    linenumber="9"  number="1"   qual="0"   data="0" /> <!-- right finger -->
+		<item id="367"  linenumber="10" number="1"   qual="321" data="0" /> <!-- trousers -->
+		<item id="369"  linenumber="11" number="1"   qual="333" data="0" /> <!-- shoes -->
+		<item id="0"    linenumber="12" number="1"   qual="0"   data="0" /> <!-- cape -->
+		<item id="3076" linenumber="13" number="200" qual="333" data="0" /> <!-- belt 1 -->
+		<item id="0"    linenumber="14" number="0"   qual="0"   data="0" /> <!-- belt 2 -->
+		<item id="306"  linenumber="15" number="5"   qual="333" data="0" /> <!-- belt 3 -->
+		<item id="3051" linenumber="16" number="5"   qual="333" data="0" /> <!-- belt 4 -->
+		<item id="15"   linenumber="17" number="10"  qual="333" data="0" /> <!-- belt 5 -->
+		<item id="285"  linenumber="18" number="1"   qual="433" data="0" /> <!-- belt 6 -->
+	</items>
+	<magic>
+		<type>0</type>
+		<flag>0</flag>
+	</magic>
+</pack>

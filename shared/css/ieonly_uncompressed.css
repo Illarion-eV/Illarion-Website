@@ -1,0 +1,56 @@
+/* IE ONLY CSS */
+* div.banner,
+* a.banner_left,
+* div.banner_right,
+* .pngfix,
+* div.rating div.icon img {
+	behavior: url("http://illarion.org/shared/js/iepngfix.htc");
+}
+
+body {
+	behavior:url("http://illarion.org/shared/js/csshover2.htc");
+}
+
+* html a#lightwindow_galleries_tab,
+* html a#lightwindow_galleries_tab:link,
+* html a#lightwindow_galleries_tab:visited,
+* html #lightwindow_galleries_list {
+	background: none;
+	background-color: #000000;
+	opacity: .70;
+	filter: alpha(opacity=70);
+}
+
+/* IE6 needs this or it messes with our positioning */
+* html #lightwindow_container {
+	overflow: hidden;
+}
+
+dl.messages dd.info {
+	background:transparent url(pics/background_message_ie.jpg) repeat scroll 0 0;
+}
+
+dl.messages dd.note {
+	background:transparent url(pics/background_notice_ie.jpg) repeat scroll 0 0;
+}
+
+dl.messages dd.error {
+	background:transparent url(pics/background_error_ie.jpg) repeat scroll 0 0;
+}
+
+tr.row0 td {
+	background:transparent none repeat scroll 0 0;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://illarion.org/shared/pics/black-25.png');
+}
+
+div.head_button,
+div.head_button * {
+	background: transparent none scroll no-repeat 0 0;
+	display: none;
+}
+
+html,
+body,
+div.main {
+	width: 100%;
+}

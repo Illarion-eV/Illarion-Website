@@ -1,0 +1,109 @@
+/*
+	Messages System
+*/
+div#message_box {
+	margin:7px;
+}
+
+div#message_border_top {
+	background:transparent url(pics/alodh.jpg) repeat-x scroll left top;
+	z-index:10;
+}
+
+div#message_border_bottom {
+	background:transparent url(pics/alodh.jpg) repeat-x scroll left bottom;
+	z-index:11;
+}
+
+div#message_border_left {
+	background:transparent url(pics/alodv.jpg) repeat-y scroll left top;
+	width:100%;
+	z-index:12;
+}
+
+div#message_border_right {
+	background:transparent url(pics/alodv.jpg) repeat-y scroll right top;
+	width:100%;
+	z-index:13;
+}
+
+dl.messages {
+	margin:0;
+	padding:3px;
+}
+
+dl.messages dt {
+	font-weight:bold;
+}
+
+dl.messages dd {
+	font-size:12pt;
+	line-height:13pt;
+	font-weight:bold;
+	margin:0;
+	text-indent:30px;
+}
+
+dl.messages dd ul {
+	border:0 none;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:10px;
+}
+
+dl.messages dt.info {
+	display:none;
+}
+
+dl.messages dd.info {
+	background:transparent url(pics/background_message.png) repeat scroll 0 0;
+}
+
+dl.messages dd.info ul {
+	background:transparent url(pics/message.gif) no-repeat scroll 14px center;
+}
+
+dl.messages dd.info ul li,
+dl.messages dd.info ul li * {
+	color:#6BFF64;
+}
+
+dl.messages dt.error {
+	display:none;
+}
+
+dl.messages dd.error {
+	background:transparent url(pics/background_error.png) repeat scroll 0 0;
+}
+
+dl.messages dd.error ul {
+	background:transparent url(pics/error.gif) no-repeat scroll 10px center;
+	border:0 none;
+	color:#FF6060;
+}
+
+dl.messages dd.error ul li,
+dl.messages dd.error ul li * {
+	color:#FF6060;
+}
+
+dl.messages dt.note {
+	display:none;
+}
+
+dl.messages dd.note {
+	background:transparent url(pics/background_notice.png) repeat scroll 0 0;
+}
+
+dl.messages dd.note ul {
+	background:transparent url(pics/notice.gif) no-repeat scroll 14px center;
+	border:0 none;
+	color:#FFC946;
+}
+
+dl.messages dd.note ul li,
+dl.messages dd.note ul li * {
+	color:#FFC946;
+}

@@ -1,0 +1,33 @@
+/*
+	Debug area
+*/
+
+div.debug {
+	border-top: 1px solid #D4B96E;
+}
+
+div.debug,
+div.debug * {
+	color: #D4B96E;
+	font: normal normal normal 10pt/12pt Consolas,"Courier New",monospace;
+}
+
+div.debug b,
+div.debug * b {
+	font-weight: bold;
+}
+
+div.debug i,
+div.debug * i {
+	font-style: italic;
+}
+
+div.debug div.backtrace {
+	display: none;
+	margin-left: 28px;
+}
+
+div.debug div.backtrace div.backtrace_params {
+	display: none;
+	margin-left: 28px;
+}

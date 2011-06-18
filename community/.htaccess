@@ -1,0 +1,4 @@
+ RewriteEngine On
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^wiki/(.*)$ ./wiki/index.php?title=$1 [PT,L,QSA]
