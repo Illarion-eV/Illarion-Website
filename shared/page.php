@@ -902,7 +902,9 @@ class Page {
 		IllaUser::init();
 
 		if ((defined('NO_DEBUG') || !IllaUser::auth('errors')) && !isset($_GET['FORCE_ERROR_OUTPUT'])) {
-			xdebug_disable();
+			if (function_exists('xdebug_disable')) {
+				xdebug_disable();
+			}
 		}else {
 			ini_set('xdebug.collect_params', '4');
 			ini_set('xdebug.collect_vars', 'on');
@@ -1482,12 +1484,13 @@ class Page {
 			} else {
 				$database_debug = Database::getDiagnosticData();
 
+				$enablexdebug = function_exists('xdebug_time_index');
 				$output = str_replace('{DEBUG}',
 					'<div class="debug" id="debug">'
-					 . 'Page processing time: <b>' . number_format(xdebug_time_index(), 6) . ' seconds</b><br />'
+					 . ($enablexdebug ? 'Page processing time: <b>' . number_format(xdebug_time_index(), 6) . ' seconds</b>' : '<b style="color:red">XDebug not activated</b>' ) .'<br />'
 					 . 'MySQL activity: <b>' . $database_debug['mysql_queries'] . ' queries</b> within <b>' . number_format($database_debug['mysql_query_time'], 6) . ' seconds</b> to get and <b>' . number_format($database_debug['mysql_parse_time'], 6) . ' seconds</b> to parse<br />'
 					 . 'PostgreSQL activity: <b>' . $database_debug['pgsql_queries'] . ' queries</b> within <b>' . number_format($database_debug['pgsql_query_time'], 6) . ' seconds</b> to get and <b>' . number_format($database_debug['pgsql_parse_time'], 6) . ' seconds</b> to parse<br />'
-					 . 'Memory Usage: <b>' . number_format(xdebug_peak_memory_usage(), 0, '', '.') . ' Byte</b><br />'
+					 . ($enablexdebug ? 'Memory Usage: <b>' . number_format(xdebug_peak_memory_usage(), 0, '', '.') . ' Byte</b><br />' : '')
 					 . implode('<br />', self::$errors)
 					 . '</div>', $output);
 			}
@@ -1511,7 +1514,9 @@ class Page {
 		echo $output;
 
 		if (isset($_GET['XDEBUG_TRACE'])) {
-			xdebug_stop_trace();
+			if (function_exists('xdebug_stop_trace')) {
+				xdebug_stop_trace();
+			}
 		}
 	}
 
@@ -1677,23 +1682,26 @@ class Page {
 		}
 		$error_id = count(self::$errors) + 1;
 		$error = '<b>' . $error_typ . '</b> - <i>' . str_replace(self::getRootPath(), '', $errfile) . ':' . $errline . '</i>: ' . $errstr;
-		$backtrace = xdebug_get_function_stack();
-		if (count($backtrace) > 0) {
-			$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace' . $error_id . '\').style.display = \'block\';">Show Backtrace</a><div class="backtrace" id="backtrace' . $error_id . '">';
-			for($i = count($backtrace) - 1;$i >= 0;--$i) {
-				if ($backtrace[$i]['function'] != 'trigger_error' && $backtrace[$i]['function'] != 'errorHandler') {
-					$error .= '<i>' . str_replace(self::getRootPath(), '', $backtrace[$i]['file']) . ':' . $backtrace[$i]['line'] . '</i>: ' . (isset($backtrace[$i]['class']) ? $backtrace[$i]['class'] . '::' : '') . $backtrace[$i]['function'] . '()';
-					if (count($backtrace[$i]['params']) > 0) {
-						$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace_params' . $error_id . '_' . $i . '\').style.display = \'block\';">Show Parameters</a><div class="backtrace_params" id="backtrace_params' . $error_id . '_' . $i . '">';
-						foreach ($backtrace[$i]['params'] as $param_name => $param_value) {
-							$error .= '$' . $param_name . ' = \'' . $param_value . '\'<br />';
+		
+		if (function_exists('xdebug_get_function_stack')) {
+			$backtrace = xdebug_get_function_stack();
+			if (count($backtrace) > 0) {
+				$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace' . $error_id . '\').style.display = \'block\';">Show Backtrace</a><div class="backtrace" id="backtrace' . $error_id . '">';
+				for($i = count($backtrace) - 1;$i >= 0;--$i) {
+					if ($backtrace[$i]['function'] != 'trigger_error' && $backtrace[$i]['function'] != 'errorHandler') {
+						$error .= '<i>' . str_replace(self::getRootPath(), '', $backtrace[$i]['file']) . ':' . $backtrace[$i]['line'] . '</i>: ' . (isset($backtrace[$i]['class']) ? $backtrace[$i]['class'] . '::' : '') . $backtrace[$i]['function'] . '()';
+						if (count($backtrace[$i]['params']) > 0) {
+							$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace_params' . $error_id . '_' . $i . '\').style.display = \'block\';">Show Parameters</a><div class="backtrace_params" id="backtrace_params' . $error_id . '_' . $i . '">';
+							foreach ($backtrace[$i]['params'] as $param_name => $param_value) {
+								$error .= '$' . $param_name . ' = \'' . $param_value . '\'<br />';
+							}
+							$error .= '</div>';
 						}
-						$error .= '</div>';
+						$error .= '<br />';
 					}
-					$error .= '<br />';
 				}
+				$error .= '</div>';
 			}
-			$error .= '</div>';
 		}
 		self::$errors[] = $error;
 	}
