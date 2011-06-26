@@ -25,7 +25,7 @@ Rechnern der Benutzer läuft. Dabei handelt es sich um den Illarion Client, den
 easyNPC Editor und den Mapeditor.</p>
 
 <ul>
-	<li><a href="https://github.com/mkaring/Illarion-Java">Nitrams Entwicklungsstrang</a> (Hauptspeicher)
+	<li><a href="https://github.com/mkaring/Illarion-Java">Nitrams Entwicklungsstrang</a> (Hauptspeicher)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -35,5 +35,5 @@ easyNPC Editor und den Mapeditor.</p>
 dem Server von Illarion läuft und auf dem das eigentliche Spiel abläuft.</p>
 
 <ul>
-	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions Entwicklungsstrang</a> (Hauptspeicher)
+	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions Entwicklungsstrang</a> (Hauptspeicher)</li>
 </ul>

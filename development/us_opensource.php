@@ -24,7 +24,7 @@ is installed on the users computers. The Client, the easyNPC Editor and the MapE
 are developed with Java.</p>
 
 <ul>
-	<li><a href="https://github.com/mkaring/Illarion-Java">Nitrams development branch</a> (main repository)
+	<li><a href="https://github.com/mkaring/Illarion-Java">Nitrams development branch</a> (main repository)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -34,5 +34,5 @@ are developed with Java.</p>
 Server of Illarion and takes care for the flow of the actual game.</p>
 
 <ul>
-	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions development branch</a> (main repository)
+	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions development branch</a> (main repository)</li>
 </ul>
