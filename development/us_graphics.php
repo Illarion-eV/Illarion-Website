@@ -2,7 +2,7 @@
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 Page::setTitle( 'Creating Graphics' );
-Page::setDescription( 'This page contains informations about creating Illarion graphics' );
+Page::setDescription( 'This page contains information about creating Illarion graphics' );
 Page::setKeywords( array( 'Development', 'Graphics' ) );
 Page::setXHTML();
 Page::Init();
