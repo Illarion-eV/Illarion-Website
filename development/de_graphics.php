@@ -2,7 +2,7 @@
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 Page::setTitle( 'Grafiken erstellen' );
-Page::setDescription( 'Diese Seite enthält informationen wie man Grafiken für Illarion erstellt.' );
+Page::setDescription( 'Diese Seite enthält Informationen wie man Grafiken für Illarion erstellt.' );
 Page::setKeywords( array( 'Entwicklung', 'Grafiken' ) );
 Page::setXHTML();
 Page::Init();
