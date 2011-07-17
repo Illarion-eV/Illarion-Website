@@ -34,7 +34,7 @@ Here's a small step-by-step introduction to get started:
 <li>Click on "build script" (which automatically completes the script)</li>
 <li>It's recommended but not mandatory to save the script.</li>
 <li>By clicking on the application's main button (on the top left) and selecting "upload lua script", the script will be transfered to the server.</li>
-<li>To start the client, start the file of the given link (illarion_download.jnlp) once more and select the Testclient.</li>
+<li>To start the client, start the <a href="http://illarion.org/~nitram/downloads/illarion_download.jnlp">Illarion Loader</a> once more and select the Testclient.</li>
 <li>Enter "testserver" as both, account name and password. By that, you will be given the choice between two characters, "Testserver" and "Testserver One". Chose one of them and start the client.</li>
 <li>As soon as you see your character on the map, hit enter to start the speech-mode and enter "!fr".</li>
 <li>As soon as the server has loaded all scripts, it will inform you. You can now walk over to the NPC, say "Hi" and he will answer according to your script.</li>
