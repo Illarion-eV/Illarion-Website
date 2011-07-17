@@ -37,7 +37,7 @@ Hier eine kleine Schritt-für-Schritt-Anleitung, wie man sofort einsteigen kann:
 <li>Um den Client zu starten, muss man noch einmal obige Datei (illarion_download.jnlp) starten und diesmal den Client auswählen.</li>
 <li>Als Accountname UND Passwort gebt ihr "testserver" an. Dadurch werden euch zwei Charaktere zur Auswahl angeboten ("Testserver" und "Testserver One"). Wählt einen davon und startet den Client.</li>
 <li>Sobald ihr den Charakter auf der Karte seht, drückt Enter, um in den Sprechmodus zu kommen und gebt "!fr" ein.</li>
-<li>Sobald der Server die Skripte neu geladen hat, informiert er euch darüber. Ihr könnt euch nun neben den NPC stellen, "Hi" sagen und er wird dem Skript entsprechend antworten.
+<li>Sobald der Server die Skripte neu geladen hat, informiert er euch darüber. Ihr könnt euch nun neben den NPC stellen, "Hi" sagen und er wird dem Skript entsprechend antworten.</li>
 </ol>
 </p>
 
