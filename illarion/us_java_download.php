@@ -39,7 +39,7 @@
 
 <h3>System requirements</h3>
 <ul>
-  <li>Betriebssystem:
+  <li>Operating system:
     <ul>
       <li>Windows 98, ME, 2000, XP, XP 64bit, Vista, Vista 64bit, 7, 7 64bit</li>
       <li>Linux Kernel 2.4.20 or newer (32bit und 64bit)</li>
@@ -47,13 +47,13 @@
       <li>Solaris 8, 9, 10 (only 32bit)</li>
     </ul>
   </li>
-  <li>Grafikkarte: 32MB memory, driver with openGL support</li>
+  <li>Graphic card: 32MB memory, driver with openGL support</li>
   <li>CPU: 700 MHz and better</li>
   <li>A Java 1.5 runtime environment or higher</li>
 </ul>
 
 <p>Windows Vista, Windows 7 and the most Linux version do not have a graphic driver with OpenGL installed out of the box. Such a driver can be downloaded and installed from the homepage of
-    the ventor of your graphic card.</p>
+    the vendor of your graphic card.</p>
 
 <h3>Installation</h3>
 
@@ -67,16 +67,5 @@
 </ul>
 
 <p>In case there are any problems during the installation, feel free to ask for help using the IRC chat or the board. There are barely problems that can't be solved.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-
-<h2>Background Images for Your Desktop</h2>
-
-<p>
-   <a href="<?php echo Page::getURL(); ?>/illarion/desktop1.jpg" rel="external" title="Desktop image 1"><img class="border" src="<?php echo Page::getURL(); ?>/illarion/t_desktop1.jpg" width="100" height="75" alt="Desktop image 1" title="Desktop image 1" /></a> (179 KB)
-
-   <a href="<?php echo Page::getURL(); ?>/illarion/desktop2.jpg" rel="external" title="Desktop image 2"><img class="border" src="<?php echo Page::getURL(); ?>/illarion/t_desktop2.jpg" width="100" height="75" alt="Desktop image 2" title="Desktop image 2" /></a> (170 KB)
-</p>
 
 <?php Page::insert_go_to_top_link(); ?>

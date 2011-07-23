@@ -70,13 +70,3 @@ Hersteller deiner Grafikkarte gefunden werden.</p>
 <p>Sollte es Probleme bei der Installation oder beim Start des Clienten geben, frage bitte im IRC Chat oder im Forum nach Hilfe. Es gibt fast kein Problem das nicht gelöst werden kann.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
-
-<h2>Hintergrundbilder für Euren Desktop</h2>
-
-<p>
-  <a href="<?php echo Page::getURL(); ?>/illarion/desktop1.jpg" rel="external" title="Hintergrundbild 1"><img class="border" src="<?php echo Page::getURL(); ?>/illarion/t_desktop1.jpg" width="100" height="75" alt="Hintergrundbild 1" title="Hintergrundbild 1" /></a> (179 KB)
-
-  <a href="<?php echo Page::getURL(); ?>/illarion/desktop2.jpg" rel="external" title="Hintergrundbild 2"><img class="border" src="<?php echo Page::getURL(); ?>/illarion/t_desktop2.jpg" width="100" height="75" alt="Hintergrundbild 2" title="Hintergrundbild 2" /></a> (170 KB)
-</p>
-
-<?php Page::insert_go_to_top_link(); ?>
