@@ -126,6 +126,7 @@ und um alle die es nicht so mit Regeln haben.</p>
 	<li><a href="?contact=21">Lennier</a> - Karte</li>
 	<li><a href="?contact=22">martin</a> - Skripte, Server, Grafik</li>
 	<li><a href="?contact=23">Nitram</a> - Client, Skripte, Homepage</li>
+	<li><a href="?contact=23">Kadiya</a> - Skripte, Homepage</li>
 	<li><a href="?contact=31">pharse</a> - Skripte</li>
 	<li><a href="?contact=25">Vilarion</a> - Skripte, Server, Serveradministration</li>
 	<li><a href="?contact=40">Zot</a> - Karte</li>
