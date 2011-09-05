@@ -6,7 +6,7 @@ IllaUser::requireLogin();
 Page::Init();
 
 Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
-Page::setDescription( 'Auf dieser Seite kannst Du einen neuen Charakter für Illarion erstellen' );
+Page::setDescription( 'Auf dieser Seite kannst Du einen neuen Charakter fÃ¼r Illarion erstellen' );
 Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
 Page::setXHTML();
