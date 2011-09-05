@@ -11,8 +11,7 @@ Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
 Page::setXHTML();
 
-
-
- echo "hallo welt";
-
 ?>
+
+
+<p>Hallo Welt</p>
