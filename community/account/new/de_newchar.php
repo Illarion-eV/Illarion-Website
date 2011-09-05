@@ -33,7 +33,18 @@ if (!count(IllaUser::$allowed_races))
 {
 	exit('Fehler - keine Zulassung für Rassenerstellung.');
 }
+$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 
+if ($enable_lightwindow)
+{
+	Page::setXML();
+}
+else
+{
+	Page::setXHTML();
+	Page::addJavaScript( 'prototype' );
+	Page::addJavaScript( 'newchar_1' );
+}
 
 Page::Init();
 
@@ -62,8 +73,7 @@ $module_path = "/community/account/new";
 				</td>
 			</tr>
 			<tr>
-			<td>moep1</td>
-			<td>moep2</td>
+				<td id="charname_result" style="height:70px;vertical-align:top;" colspan="2"></td>
 			</tr>
 			<tr>
 				<td class="td_left">Rasse: </td>
