@@ -1,11 +1,15 @@
 <?php
+include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-/**
- *
- *
- * @version $Id$
- * @copyright 2011
- */
+IllaUser::requireLogin();
+
+Page::Init();
+
+Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
+Page::setDescription( 'Auf dieser Seite kannst Du einen neuen Charakter für Illarion erstellen' );
+Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
+
+Page::setXHTML();
 
 
 
