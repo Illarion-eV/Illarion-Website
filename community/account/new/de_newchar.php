@@ -49,7 +49,7 @@ $module_path = "/community/account/new";
 
 <h2>Schritt 1 - Name, Rasse und Geschlecht des Charakters festlegen</h2>
 
-<div style=width:70%;margin:auto;>
+<div style='width:70%;margin:auto;'>
 	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL().$module_path; ?>/de_newchar_2.php">
 		<table style="width:100%;">
 			<tbody>
