@@ -53,18 +53,16 @@ $module_path = "/community/account/new";
 
 <div style='width:70%;margin:auto;'>
 	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL().$module_path; ?>/de_newchar_2.php">
-		<table style="width:100%;">
+		<table style="width:100%;background-color:#999999;">
 			<tr>
-				<td class="td_left" rowspan="2">
-					Name:
-				</td>
+				<td class="td_left" rowspan="2">Name: </td>
 				<td class="td_right">
 					<input type="text" name="charname" id="charname" value="" style="width:98%;" onkeyup="checkCharname();return true;" />
 					<br /><a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a> beachten!
 				</td>
 			</tr>
 			<tr>
-				<td class="td_left">Rasse:</td>
+				<td class="td_left">Rasse: </td>
 				<td class="td_right">
 					<select name="race" style="width:100%;">
 						<?php foreach( IllaUser::$allowed_races as $race ): ?>
