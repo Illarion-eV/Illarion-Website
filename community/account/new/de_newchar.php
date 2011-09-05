@@ -3,6 +3,36 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
+$query = 'SELECT COUNT(*)'
+	.PHP_EOL.' FROM chars'
+	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
+	;
+$pgSQL->setQuery( $query );
+$charcount = $pgSQL->loadResult();
+
+$servers = array();
+if ($charcount < IllaUser::$charlimit || IllaUser::$charlimit == 0)
+{
+	$servers[] = 'rs';
+}
+
+if (IllaUser::auth('testserver'))
+{
+	$servers[] = 'ts';
+}
+
+if (!count($servers))
+{
+	exit('Fehler - Charakterlimit erreicht.');
+}
+
+if (!count(IllaUser::$allowed_races))
+{
+	exit('Fehler - keine Zulassung für Rassenerstellung.');
+}
+
+
 Page::Init();
 
 Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
@@ -25,10 +55,11 @@ $module_path = "/community/account/new";
 			<tbody>
 				<tr>
 					<td style="width:45%;vertical-align:top;" rowspan="2">
-						Name:<br /><a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a> beachten
+						Name:
 					</td>
 					<td>
 						<input type="text" name="charname" id="charname" value="" style="width:98%;" onkeyup="checkCharname();return true;" />
+						<br /><a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a> beachten!
 					</td>
 				</tr>
 				<tr>
@@ -51,7 +82,6 @@ $module_path = "/community/account/new";
 							<option value="0">männlich</option>
 							<option value="1">weiblich</option>
 						</select>
-						<input type="hidden" name="action" value="newchar_1" />
 					</td>
 				</tr>
 				<?php if (count($servers) == 2): ?>
