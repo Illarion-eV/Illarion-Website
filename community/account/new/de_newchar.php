@@ -62,6 +62,10 @@ $module_path = "/community/account/new";
 				</td>
 			</tr>
 			<tr>
+			<td>moep1</td>
+			<td>moep2</td>
+			</tr>
+			<tr>
 				<td class="td_left">Rasse: </td>
 				<td class="td_right">
 					<select name="race" style="width:100%;">
