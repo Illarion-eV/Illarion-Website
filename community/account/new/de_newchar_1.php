@@ -54,7 +54,7 @@
 <div>
 	<h1>Schritt 1</h1>
 
-	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">
+	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
