@@ -63,9 +63,6 @@ $module_path = "/community/account/new";
 					</td>
 				</tr>
 				<tr>
-					<td id="charname_result" style="height:70px;vertical-align:top;"></td>
-				</tr>
-				<tr>
 					<td>Rasse:</td>
 					<td>
 						<select name="race" style="width:100%;">
@@ -120,7 +117,10 @@ $module_path = "/community/account/new";
 				<?php endif; ?>
 			</tbody>
 		</table>
-
+		<p class="center">
+			<input type="submit" name="submit" value="Eintragen" />
+			<input type="reset" name="reset" value="Zurücksetzen" />
+		</p>
 
 	</form>
 </div>
