@@ -85,7 +85,7 @@
 	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Informationen</h2>
-			<table style="width:100%">
+			<table style="width:100%;">
 				<tbody>
 					<tr>
 						<td>
@@ -132,7 +132,7 @@
 
 			<h2>Aussehen</h2>
 
-			<table style="width=100%">
+			<table style="width:100%;background-color:#990000;">
 				<tbody>
 					<tr>
 						<td>
