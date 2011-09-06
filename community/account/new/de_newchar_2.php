@@ -142,12 +142,13 @@
 			moep
 			</div>
 
-
+			<div>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_2" />
 				<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
 				<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
 			</p>
+			</div>
 		</div>
 	</form>
 </div>
