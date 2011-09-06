@@ -132,12 +132,12 @@
 
 			<h2>Aussehen</h2>
 
-			<div style="background-color:#990000;">
-			div links
+			<div style="background-image: url(pics/char_screen.jpg);width:300px;float:left;">
+			div rechts
 			</div>
 
-			<div style="width:300px;background-color:#009900;float:rechts;">
-			div rechts
+			<div style="background-color:#009900;">
+			div links
 			</div>
 
 
