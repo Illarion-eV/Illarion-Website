@@ -144,7 +144,7 @@
                             <?php endforeach; ?>
 						</td>
 
-						<td rowspan="4">moep</td>
+						<td rowspan="4" style="background-color:#999999;">moep</td>
 					</tr>
 					<tr>
                         <td>
