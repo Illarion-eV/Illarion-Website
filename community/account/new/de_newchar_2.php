@@ -8,6 +8,7 @@
 	}
 
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
@@ -132,7 +133,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<?php if ($race==0) { $skincolors = array("F2C59E", "EFC096", "EABB92", "E2B38A", "DEAF87","D9AB84","D2A680","CDA17B","CA9E78","C69B75","BD9571","B8906C","B38B68","AC8360","A77F5C","9A7453","936E4E","8F6B4C","8A6749","856345","78573A"); } ?>
+							$skincolors = char_create::getSkinColors($race);
 							Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
 							<input type="hidden" id="skincolor" value="" name="skincolor" />
                             <?php foreach ( $skincolors as $color ): ?>
@@ -142,7 +143,7 @@
 					</tr>
 					<tr>
                         <td>
-                            <?php if ($race==0) { $haircolors = array("292C31", "342626", "443532", "5F4536", "7F6449","5B402B","84613B","84542E","D3C499","C18D54","AF6F3F","A15229","613F3E","85594C","633E2E","843629","6D2C32","984229","E9CE92","E0BD79","B6A88C"); } ?>
+                            $haircolors = char_create::getHairColors($race);
                             Haarfarbe: <span id="hair_color" style="width:100%;height:30px;display:block;"></span>
 							<input type="hidden" id="haircolor" value="" name="haircolor" />
                             <?php foreach ( $haircolors as $color ): ?>
@@ -152,21 +153,7 @@
                     </tr>
 					<tr>
                         <td>
-							<?php if ($sex==0) { ?>
-								<?php if ($race==0) { $hairs = array("hum_m_hair_1","hum_m_hair_2");  }
-								elseif ($race==1) { $hairs = array("dwa_m_hair_1","dwa_m_hair_2");  }
-								elseif ($race==2) { $hairs = array("hal_m_hair_1","hal_m_hair_2");  }
-								elseif ($race==3) { $hairs = array("elf_m_hair_1","elf_m_hair_2");  }
-								elseif ($race==4) { $hairs = array("orc_m_hair_1","orc_m_hair_2");  }
-								elseif ($race==5) { $hairs = array("liz_m_hair_1","liz_m_hair_2");  }
-							} else {
-								if ($race==0) { $hairs = array("hum_f_hair_1","hum_f_hair_2");  }
-								elseif ($race==1) { $hairs = array("dwa_f_hair_1","dwa_f_hair_2");  }
-								elseif ($race==2) { $hairs = array("hal_f_hair_1","hal_f_hair_2");  }
-								elseif ($race==3) { $hairs = array("elf_f_hair_1","elf_f_hair_2");  }
-								elseif ($race==4) { $hairs = array("orc_f_hair_1","orc_f_hair_2");  }
-								elseif ($race==5) { $hairs = array("liz_f_hair_1","liz_f_hair_2");  }
-							} ?>
+							<?php $hair_list = char_create::getHairValues($race, $sex); ?>
 							<input type="hidden" id="hair" value="" name="hair" />
 							Haare: <br/>
 						 	<br/>
@@ -175,7 +162,12 @@
 							<?php endforeach; ?>
                         </td>
                     </tr>
-					<?php if ( ((($race==0) || ($race==4)) && ($sex==0)) || ($race==1) ) { ?>
+					<?php
+			/*
+					if ( ((($race==0) || ($race==4)) && ($sex==0)) || ($race==1) )
+					{
+						$beard_list = char_create::getBeardValues($race);
+						?>
 						<tr>
                     	    <td>
 								<?php if ($race==0) { $beards = array("hum_m_beard_1","hum_m_beard_2");  }
@@ -190,7 +182,9 @@
                             	<?php endforeach; ?>
                     	    </td>
                     	</tr>
-					<?php } ?>
+					<?php }
+			   */
+			   ?>
 				</tbody>
 			</table>
 
