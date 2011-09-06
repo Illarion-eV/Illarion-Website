@@ -138,7 +138,8 @@
 			</div>
 
 			<div style="background-color:#009900;">
-			<img href="pics/char_screen.jpg" />
+			<img src="pics/char_screen.jpg" />
+
 			</div>
 
 
