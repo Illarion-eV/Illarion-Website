@@ -137,7 +137,7 @@
 			<img src="<?php echo $url; ?>/shared/pics/chars/hum/hum_m_stand_w.png" style="position:relative;left:150px; top:100px; width:28px; height:75px;" />
 			</div>
 
-			<div style="background-color:#009900;height:200px;padding:10px;">
+			<div style="background-color:#009900;height:200px;padding-left:315px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
