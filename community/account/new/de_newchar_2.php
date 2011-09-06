@@ -133,7 +133,7 @@
 			<h2>Aussehen</h2>
 
 			<!-- <div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;"> -->
-			<div  style="background-color:#990000;float:left;">
+			<div  style="background-color:#990000;float:left;border:2px groove #000;">
 			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
 			</div>
 
