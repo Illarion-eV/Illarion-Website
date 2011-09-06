@@ -136,7 +136,7 @@
 			div links
 			</div>
 
-			<div style="width:300px;background-color:#009900;float:left;">
+			<div style="width:300px;background-color:#009900;float:rechts;">
 			div rechts
 			</div>
 
