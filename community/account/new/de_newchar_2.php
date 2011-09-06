@@ -132,7 +132,8 @@
 
 			<h2>Aussehen</h2>
 
-			<div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;">
+			<!-- <div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;"> -->
+			<div  style="background-color:#990000;width:300px;">
 			div rechts
 			</div>
 
