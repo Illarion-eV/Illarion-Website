@@ -130,65 +130,7 @@
             <?php include_age_js( $limits ); ?>
 
 			<h2>Aussehen</h2>
-			<table style="width=100%">
-				<tbody>
-					<tr>
-						<td>
-							$skincolors = char_create::getSkinColors($race);
-							Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
-							<input type="hidden" id="skincolor" value="" name="skincolor" />
-                            <?php foreach ( $skincolors as $color ): ?>
-                                <a onclick="$('skin_color').style.backgroundColor = '#<?php echo $color; ?>';$('skincolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
-                            <?php endforeach; ?>
-						</td>
-					</tr>
-					<tr>
-                        <td>
-                            $haircolors = char_create::getHairColors($race);
-                            Haarfarbe: <span id="hair_color" style="width:100%;height:30px;display:block;"></span>
-							<input type="hidden" id="haircolor" value="" name="haircolor" />
-                            <?php foreach ( $haircolors as $color ): ?>
-                                <a onclick="$('hair_color').style.backgroundColor = '#<?php echo $color; ?>';$('haircolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
-                            <?php endforeach; ?>
-                        </td>
-                    </tr>
-		<?php
-/*
-					<tr>
-                        <td>
-							<?php $hair_list = char_create::getHairValues($race, $sex); ?>
-							<input type="hidden" id="hair" value="" name="hair" />
-							Haare: <br/>
-						 	<br/>
-							<?php foreach ( $hairs as $hair ): ?>
-								<a onclick="$('<?php echo $hair; ?>').style.border='1px solid black';$('hair').value = '<?php echo $hair; ?>';" ><img id="<?php echo $hair; ?>" src="<?php echo $url; ?>/shared/pics/chars/<?php echo $hair; ?>.png" style="width:25px;border: 1px solid black;"/></a>
-							<?php endforeach; ?>
-                        </td>
-                    </tr>
 
-					if ( ((($race==0) || ($race==4)) && ($sex==0)) || ($race==1) )
-					{
-						$beard_list = char_create::getBeardValues($race);
-						?>
-						<tr>
-                    	    <td>
-								<?php if ($race==0) { $beards = array("hum_m_beard_1","hum_m_beard_2");  }
-								elseif ($race==1) { $beards = array("dwa_m_beard_1","dwa_m_beard_2");  }
-								elseif ($race==4) { $beards = array("orc_m_beard_1","orc_m_beard_2");  }
-								?>
-								<input type="hidden" id="beard" value="" name="beard" />
-                    	        Bart: <br/>
-								<br/>
-								<?php foreach ( $beards as $beard ): ?>
-                                	<a onclick="$('<?php echo $beard; ?>').style.border='1px solid black';$('beard').value = '<?php echo $beard; ?>';" ><img id="<?php echo $beard; ?>" src="<?php echo $url; ?>/shared/pics/chars/<?php echo $beard; ?>.png" style="width:25px"/></a>
-                            	<?php endforeach; ?>
-                    	    </td>
-                    	</tr>
-					<?php }
-			   */
-			   ?>
-				</tbody>
-			</table>
 
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_2" />
