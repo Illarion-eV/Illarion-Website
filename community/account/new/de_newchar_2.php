@@ -124,6 +124,7 @@
 							</p>
 						</td>
 					</tr>
+
 				</tbody>
 			</table>
 			<?php include_heightweight_js( $limits ); ?>
@@ -131,6 +132,31 @@
 
 			<h2>Aussehen</h2>
 
+			<table style="width=100%">
+				<tbody>
+					<tr>
+						<td>
+							$skincolors = char_create::getSkinColors($race);
+							Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
+							<input type="hidden" id="skincolor" value="" name="skincolor" />
+                            <?php foreach ( $skincolors as $color ): ?>
+                                <a onclick="$('skin_color').style.backgroundColor = '#<?php echo $color; ?>';$('skincolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
+                            <?php endforeach; ?>
+						</td>
+					</tr>
+					<tr>
+                        <td>
+                            $haircolors = char_create::getHairColors($race);
+                            Haarfarbe: <span id="hair_color" style="width:100%;height:30px;display:block;"></span>
+							<input type="hidden" id="haircolor" value="" name="haircolor" />
+                            <?php foreach ( $haircolors as $color ): ?>
+                                <a onclick="$('hair_color').style.backgroundColor = '#<?php echo $color; ?>';$('haircolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
+                            <?php endforeach; ?>
+                        </td>
+                    </tr>
+
+				</tbody>
+			</table>
 
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_2" />
