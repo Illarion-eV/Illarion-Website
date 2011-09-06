@@ -21,6 +21,38 @@ define ('GENDER_MALE',                0 );
  */
 define ('GENDER_FEMALE',                1 );
 
+
+// Rassen
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_HUMAN',                	0 );
+
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_DWARF',                	1 );
+
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_HALFLING',                2 );
+
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_ELF',                		3 );
+
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_ORC',                		4 );
+
+/**
+ * Geschlecht: maennlich
+ */
+define ('RACE_LIZARD',                	5 );
+
 // Haarfarbe
 
 // Menschen
@@ -68,11 +100,40 @@ define ('HUMAN_SKIN_COLOR_19',			"#8A6749");
 define ('HUMAN_SKIN_COLOR_20',			"#856345");
 define ('HUMAN_SKIN_COLOR_21',			"#78573A");
 
+define ('HUMAN_FEMALE_HAIR_NO',			0);
+define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hairlong2_stand");
+define ('HUMAN_FEMALE_HAIR_2',			"hum_f_stand_hair_hairlong");
+define ('HUMAN_FEMALE_HAIR_3',			"hum_f_stand_hair_hair1");
+
+define ('HUMAN_MALE_HAIR_NO',			0);
+define ('HUMAN_MALE_HAIR_1',			"hum_m_hair1_stand");
+define ('HUMAN_MALE_HAIR_2',			"hum_m_stand_hair_hair2");
+define ('HUMAN_MALE_HAIR_3',			"hum_m_stand_hair_hair3");
+
+define('HUMAN_BEARD_NO',				0);
+define('HUMAN_BEARD_1',					"hum_m_beardfull_stand");
+define('HUMAN_BEARD_2',					"hum_m_stand_beard_beard2");
+define('HUMAN_BEARD_3',					"hum_m_stand_beard_beard3");
+define('HUMAN_BEARD_4',					"hum_m_stand_beard_beard4");
+define('HUMAN_BEARD_5',					"hum_m_stand_beard_beard5");
+
 function getGenderArray()
 {
 	return array(
 	    GENDER_MALE => "Männlich",
 	    GENDER_FEMALE => "Weiblich",
+	);
+}
+
+function getRaceArray()
+{
+	return array(
+	    RACE_HUMAN => "Mensch",
+	    RACE_DWARF => "Zwerg",
+	    RACE_HALFLING => "Halbling",
+	    RACE_ELF => "Elf",
+	    RACE_ORC => "Orc",
+	    RACE_LIZARD => "Echsenwesen"
 	);
 }
 
@@ -127,6 +188,38 @@ function getHumanSkinColorArray()
 	    HUMAN_SKIN_COLOR_19,
 	    HUMAN_SKIN_COLOR_20,
 	    HUMAN_SKIN_COLOR_21
+	);
+}
+
+function getHumanFemaleHairArray()
+{
+	return array(
+		HUMAN_FEMALE_HAIR_NO => "--Keine Haare--",
+	    HUMAN_FEMALE_HAIR_1 => "Kurze Haare",
+	    HUMAN_FEMALE_HAIR_2 => "Lange, geflochtene Haare",
+	    HUMAN_FEMALE_HAIR_3 => "Lange, offene Haare"
+	);
+}
+
+function getHumanMaleHairArray()
+{
+	return array(
+		HUMAN_MALE_HAIR_NO => "--Keine Haare--",
+	    HUMAN_MALE_HAIR_1 => "Kurze Haare",
+	    HUMAN_MALE_HAIR_2 => "Mittellange Haare",
+	    HUMAN_MALE_HAIR_3 => "Lange Haare"
+	);
+}
+
+function getHumanBeardArray()
+{
+	return array(
+		HUMAN_BEARD_NO => "--Kein Bart--",
+	    HUMAN_BEARD_1 => "Vollbart",
+	    HUMAN_BEARD_2 => "Ziegenbart",
+	    HUMAN_BEARD_3 => "Bauschebart",
+	    HUMAN_BEARD_4 => "Backenbart",
+	    HUMAN_BEARD_5 => "Rauschebart"
 	);
 }
 

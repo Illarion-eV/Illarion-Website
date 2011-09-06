@@ -143,6 +143,8 @@
                                 <a onclick="$('skin_color').style.backgroundColor = '<?php echo $color; ?>';$('skincolor').value = '<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                             <?php endforeach; ?>
 						</td>
+
+						<td rowspan="4">moep</td>
 					</tr>
 					<tr>
                         <td>
@@ -155,6 +157,9 @@
                         </td>
                     </tr>
 
+					<tr><td>Haare</td></tr>
+
+					<tr><td>Bart (opt.)</td></tr>
 				</tbody>
 			</table>
 
