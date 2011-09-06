@@ -137,7 +137,7 @@
 			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
 			</div>
 
-			<div style="background-color:#009900;">
+			<div style="background-color:#009900;height:200px;">
 
 			moep
 			</div>
