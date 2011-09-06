@@ -136,7 +136,7 @@
 				<tbody>
 					<tr>
 						<td>
-							$skincolors = char_create::getSkinColors($race);
+							<?php $skincolors = char_create::getSkinColors($race); ?>
 							Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
 							<input type="hidden" id="skincolor" value="" name="skincolor" />
                             <?php foreach ( $skincolors as $color ): ?>
@@ -146,7 +146,7 @@
 					</tr>
 					<tr>
                         <td>
-                            $haircolors = char_create::getHairColors($race);
+                            <?php $haircolors = char_create::getHairColors($race); ?>
                             Haarfarbe: <span id="hair_color" style="width:100%;height:30px;display:block;"></span>
 							<input type="hidden" id="haircolor" value="" name="haircolor" />
                             <?php foreach ( $haircolors as $color ): ?>
