@@ -132,11 +132,11 @@
 
 			<h2>Aussehen</h2>
 
-			<div style="background-color:#990000;float:left;">
+			<div style="background-color:#990000;">
 			div links
 			</div>
 
-			<div style="width:300px;background-color:#009900;">
+			<div style="width:300px;background-color:#009900;float:left;">
 			div rechts
 			</div>
 
