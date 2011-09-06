@@ -133,11 +133,11 @@
 			<h2>Aussehen</h2>
 
 			<!-- <div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;"> -->
-			<div  style="background-color:#990000;width:300px;float:left;">
+			<div  style="background-color:#990000;float:left;">
 			div link
 			</div>
 
-			<div style="background-color:#009900;">
+			<div style="background-color:#009900;width:300px;">
 			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
 			moep
 			</div>
