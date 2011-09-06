@@ -132,7 +132,7 @@
 
 			<h2>Aussehen</h2>
 
-			<div style="background-image: url(pics/char_screen.jpg);width:300px;float:left;">
+			<div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;">
 			div rechts
 			</div>
 
