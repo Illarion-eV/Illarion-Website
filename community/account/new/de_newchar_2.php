@@ -134,11 +134,11 @@
 
 			<!-- <div style="background: #99000 url(pics/char_screen.jpg) fixed no-repeat;width:300px;float:left;"> -->
 			<div  style="background-color:#990000;float:left;">
-			div link
+			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
 			</div>
 
-			<div style="background-color:#009900;width:300px;">
-			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
+			<div style="background-color:#009900;">
+
 			moep
 			</div>
 
