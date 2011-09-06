@@ -138,8 +138,8 @@
 			</div>
 
 			<div style="background-color:#009900;">
-			<img src="pics/char_screen.jpg" />
-
+			<img src="<?php echo $url; ?>/shared/pics/char_screen.jpg" />
+			moep
 			</div>
 
 
