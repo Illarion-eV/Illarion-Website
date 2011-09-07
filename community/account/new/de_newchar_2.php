@@ -146,7 +146,7 @@
 				Hautfarbe:<span id="skin_color" style="width:80%;height:30px;display:block;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ): ?>
-                <a onclick="changeColor(<?php echo $color; ?>)" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <a onclick="colorChange(<?php echo $color; ?>)" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 			</div>
 
