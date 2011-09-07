@@ -11,6 +11,8 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
 
+	Page::addJavaScript( array( 'prototype', 'charcreate_search_color' ) );
+
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 	if (!$charid)
@@ -144,7 +146,7 @@
 				Hautfarbe:<span id="skin_color" style="width:80%;height:30px;display:block;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ): ?>
-                <a onclick="$('skin_color').style.backgroundColor = '<?php echo $color; ?>';$('skincolor').value = '<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <a onclick="changeColor(<?php echo $color; ?>)" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 			</div>
 
