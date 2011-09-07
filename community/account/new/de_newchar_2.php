@@ -143,6 +143,9 @@
 			$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
 			$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
 			$new_img_url = Page::getMediaURL()."/charcreate/".$image_name."_".$farbcode.".png";
+			$cmd = $script.' '.$farbcode.' '.$base_img.' '.$new_img;
+			$sdtout = "";
+			$rc = 0;
 			/*
 $script = "/home/kadiya/imagetest/script.sh";
 $farbcode = "990000";
@@ -151,7 +154,11 @@ $base_img = "/home/kadiya/imagetest/".$image_name.".png";
 $new_img = "/home/kadiya/imagetest/".$image_name."_".$farbcode.".png";
 			   */
 			?>
-			<?php exec($script.' '.$farbcode.' '.$base_img.' '.$new_img); ?>
+			<?php exec($cmd, $stdout, $rc); ?>
+			<?php
+			echo "STDOUT: ".$stdout;
+			echo "RC: ".$rc;
+			?>
 			<img src="<?php echo $new_img_url; ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
 			<img src="<?php echo Page::getURL(); ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>

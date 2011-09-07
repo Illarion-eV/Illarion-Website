@@ -9,4 +9,5 @@
 
 dummy="$(mktemp).png"
 convert -size 300x300 xc:\#$1 $dummy
-convert -compos
+convert -compose multiply $2 $dummy -composite $3
+composite -compose Dst_In $2 $3 $3
