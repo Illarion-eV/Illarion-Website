@@ -4,6 +4,9 @@ function colorChange(color, image)
 	params+='color='+color;
 	params+='&image='+image;
 
+	$('ajax_works').firstChild.setStyle({
+		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
+	});
 
 	var newAJAX = new Ajax.Request(
 		url+'/community/account/new/ajax_search_colors.php',
@@ -14,6 +17,10 @@ function colorChange(color, image)
 			onComplete: function(response)
 			{
 				parseResponse( response.responseXML );
+
+				$('ajax_works').firstChild.setStyle({
+						background: ''
+				});
 			}
 		}
 	);
