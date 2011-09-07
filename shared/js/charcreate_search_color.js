@@ -4,7 +4,7 @@ function colorChange(color, image)
 	params+='color='+color;
 	params+='&image='+image;
 
-	$('ajax_works').firstChild.setStyle({
+	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
 	});
 
@@ -18,7 +18,7 @@ function colorChange(color, image)
 			{
 				parseResponse( response.responseXML );
 
-				$('ajax_works').firstChild.setStyle({
+				$('ajax_works').setStyle({
 						background: ''
 				});
 			}
