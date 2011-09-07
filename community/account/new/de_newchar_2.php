@@ -143,7 +143,7 @@
 			$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
 			$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
 			$new_img_url = Page::getMediaURL()."/charcreate/".$image_name."_".$farbcode.".png";
-			$cmd = $script.' '.$farbcode.' '.$base_img.' '.$new_img;
+			$cmd = 'bash '.$script.' '.$farbcode.' '.$base_img.' '.$new_img;
 			$sdtout = "";
 			$rc = 0;
 			/*
