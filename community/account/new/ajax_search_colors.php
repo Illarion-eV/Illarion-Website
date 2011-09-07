@@ -19,7 +19,7 @@
 	}
 */
 	$color = $_POST['color'];
-	$image_n = $_POST['image'];
+	$image = $_POST['image'];
 
 
 	//if (substr($_POST['base_image']-4) != ".png")
