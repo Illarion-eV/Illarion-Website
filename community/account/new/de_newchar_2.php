@@ -137,8 +137,8 @@
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
 
-			<img src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_n","CA9E78"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
-			<img src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_w","CA9E78"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
+			<img id="char_image_n" src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_n","CA9E78"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
+			<img id="char_image_w" src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_w","CA9E78"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
 
 			<div style="background-color:#009900;height:200px;padding-left:315px;">
@@ -147,7 +147,7 @@
 				<span id="skin_color" style="width:80%;height:30px;display:block;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ): ?>
-                <a onclick="colorChange('<?php echo $color; ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <a onclick="colorChange('<?php echo $color; ?>', 'hum_m_stand')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 			</div>
 

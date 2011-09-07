@@ -13,14 +13,25 @@
 	Page::setXML();
 	Page::Init();
 
-	if (is_numeric($_POST['color']))
+	if (strlen($_POST['color']) == 6)
 	{
-		$status = ( array_search( (int)$_POST['color'], char_create::getHairValues()) === false ? false : (int)$_POST['color'] );
+		$color = ( array_search( "#".$_POST['color'], char_create::getHairValues()) === false ? false : $_POST['color'] );
+	}
 
+	$image_n = $_POST['image']."_n";
+	$image_w = $_POST['image']."_w";
+
+
+	//if (substr($_POST['base_image']-4) != ".png")
 
 
 
 ?>
+
+<image>
+ <north><?php echo getConvertedImageUrl($image_n, $color); ?></north>
+ <west><?php echo getConvertedImageUrl($image_w, $color); ?></west>
+</image>
 
 <?php /*
 

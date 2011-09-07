@@ -1,22 +1,72 @@
-var currentlySearching = false;
-var searchAgain = false;
-function performSearch()
+function colorChange(color, image)
 {
-	if (!currentlySearching)
-	{
-		currentlySearching = true;
-	}
-	else
-	{
-		searchAgain = true;
-		return;
-	};
+	var params = '';
+	params+='color='+color;
+	params+='&image='+image;
 
 
-}
+	var newAJAX = new Ajax.Request(
+		url+'/community/account/new/ajax_search_colors.php',
+		{
+			method: 'post',
+			parameters: params,
+			evalJS: false,
+			onComplete: function(response)
+			{
+				var output_area = $('output_area');
+				if (Object.isUndefined(response.responseXML))
+				{
+					addOrReplaceChild( output_area, document.createTextNode( 'Error - Invalid XML' ) );
+				}
+				else
+				{
+					addOrReplaceChild( output_area, parseResponse( response.responseXML ) );
+				};
+				currentlySearching = false;
+				if (searchAgain)
+				{
+					searchAgain = false;
+					performSearch();
+				}
+				else
+				{
+					$('search_title').firstChild.setStyle({
+						background: ''
+					});
+				}
+			}
+		}
+	);
 
-function colorChange(color)
-{
 	$('skin_color').style.backgroundColor = color;
 	$('skincolor').value = color;
+
+
 }
+
+function parseResponse( object )
+{
+	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus
+	if ( object.nodeType == 9 ) {
+		if (object.childNodes.length > 0) {
+			for( var i = 0;i<object.childNodes.length; i++ ) {
+			    if (object.childNodes[i].nodeType != 10 && object.childNodes[i].nodeType != 7) {
+			    	return parseResponse( object.childNodes[i] );
+				};
+			};
+		};
+	}
+	else if ( object.nodeType == 1 ) {
+		if (object.nodeName == 'image') {
+			for(var i=0;i<object.childNodes.length; i++ ) {
+				if (object.childNodes[i].nodeName == 'north') {
+					$('char_image_n').src = object.childNodes[i].firstChild.nodeValue;
+				}
+				else if (object.childNodes[i].nodeName == 'west') {
+					$('char_image_w').src = object.childNodes[i].firstChild.nodeValue;
+				};
+			};
+
+		}
+	};
+};
