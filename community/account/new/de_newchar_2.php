@@ -136,33 +136,10 @@
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
 			<?php
 
-			//$script = "/home/kadiya/imagetest/script.sh";
-			$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
-			$farbcode = "990000";
-			$image_name = "hum_m_stand_w";
-			$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
-			$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
-			$new_img_url = Page::getMediaURL()."/charcreate/".$image_name."_".$farbcode.".png";
-			$cmd = 'bash '.$script.' '.$farbcode.' '.$base_img.' '.$new_img;
-			$sdtout = "";
-			$rc = 0;
-			/*
-$script = "/home/kadiya/imagetest/script.sh";
-$farbcode = "990000";
-$image_name = "hum_m_stand_n";
-$base_img = "/home/kadiya/imagetest/".$image_name.".png";
-$new_img = "/home/kadiya/imagetest/".$image_name."_".$farbcode.".png";
-			   */
 			?>
-			<?php exec($cmd, $stdout, $rc); ?>
-			<?php
-			echo "CMD: ".$cmd."<br/>";
-			echo "STDOUT: ".$stdout."<br/>";
-			echo "RC: ".$rc."<br/>";
-			echo "RC: ".$new_img_url."<br/>";
-			?>
-			<img src="<?php echo $new_img_url; ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
-			<img src="<?php echo Page::getURL(); ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
+
+			<img src="<?php echo getConvertedImageUrl("hum_m_stand_n","990000"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
+			<img src="<?php echo getConvertedImageUrl("hum_m_stand_w","990000"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
 
 			<div style="background-color:#009900;height:200px;padding-left:315px;">
