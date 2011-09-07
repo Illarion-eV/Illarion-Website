@@ -136,7 +136,8 @@
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
 			<?php
 
-			$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
+			$script = "/home/kadiya/imagetest/script.sh";
+			//$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
 			$farbcode = "990000";
 			$image_name = "hum_m_stand_w";
 			$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
