@@ -135,8 +135,8 @@
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
 
-			<img src="<?php echo getConvertedImageUrl("hum_m_stand_n","990000"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
-			<img src="<?php echo getConvertedImageUrl("hum_m_stand_w","990000"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
+			<img src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_n","990000"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
+			<img src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_w","990000"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
 
 			<div style="background-color:#009900;height:200px;padding-left:315px;">
