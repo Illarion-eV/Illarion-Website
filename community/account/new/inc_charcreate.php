@@ -80,20 +80,24 @@
 	public function getConvertedImageUrl($image_name, $farbcode)
 	{
 		/*
-		$farbcode = "990000";
-		$image_name = "hum_m_stand_w";
+		   $farbcode = "990000";
+		   $image_name = "hum_m_stand_w";
 		*/
 		$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
 		$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
 		$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
 		$new_img_url = Page::getMediaURL()."/charcreate/".$image_name."_".$farbcode.".png";
-		$cmd = 'bash '.$script.' '.$farbcode.' '.$base_img.' '.$new_img;
-		$sdtout = "";
-		$rc = 0;
 
-		exec($cmd, $stdout, $rc);
+		if (! file_exists($new_img))
+		{
+			$cmd = 'bash '.$script.' '.$farbcode.' '.$base_img.' '.$new_img;
+			$sdtout = "";
+			$rc = 0;
 
+			exec($cmd, $stdout, $rc);
+		}
 		return $new_img_url;
+
 	}
 
  }
