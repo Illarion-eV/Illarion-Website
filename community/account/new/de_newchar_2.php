@@ -134,8 +134,8 @@
 
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
-			<?php exec('.'.Page::getRootPath().'/shared/scripts/img_convert.sh 99000 '.Page::getRootPath().'/shared/pics/chars/hum/hum_m_stand_w.png /tmp/image_west.png'); ?>
-			<img src="<?php echo Page::getURL(); ?>/tmp/image_west.png" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
+			<?php exec('.'.Page::getRootPath().'/shared/scripts/img_convert.sh 990000 '.Page::getRootPath().'/shared/pics/chars/hum/hum_m_stand_w.png '.Page::getRootPath().'/media/charcreate/hum_m_w_990000.png'); ?>
+			<img src="<?php echo Page::getRootPath(); ?>/media/charcreate/hum_m_w_990000.png" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
 			<img src="<?php echo Page::getURL(); ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
 
