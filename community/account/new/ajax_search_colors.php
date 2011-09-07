@@ -29,8 +29,8 @@
 ?>
 
 <image>
- <north><?php echo getConvertedImageUrl($image_n, $color); ?></north>
- <west><?php echo getConvertedImageUrl($image_w, $color); ?></west>
+ <north><?php echo char_create::getConvertedImageUrl($image_n, $color); ?></north>
+ <west><?php echo char_create::getConvertedImageUrl($image_w, $color); ?></west>
 </image>
 
 <?php /*
