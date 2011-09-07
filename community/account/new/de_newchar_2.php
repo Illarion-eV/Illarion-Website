@@ -134,7 +134,8 @@
 
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
-			<img src="<?php echo $url; ?>/shared/pics/chars/hum/hum_m_stand_w.png" style="position:relative;left:150px; top:100px; width:28px; height:75px;" />
+			<img src="<?php echo $url; ?>/shared/pics/chars/hum/hum_m_stand_w.png" style="position:relative;left:140px; top:80px; width:28px; height:75px;" />
+			<img src="<?php echo $url; ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:160px; top:80px; width:28px; height:75px;" />
 			</div>
 
 			<div style="background-color:#009900;height:200px;padding-left:315px;">
