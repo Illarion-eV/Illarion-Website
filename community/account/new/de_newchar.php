@@ -84,7 +84,7 @@
 	Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
 	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow', 'charcreate_search_color' ) );
 
 	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 
