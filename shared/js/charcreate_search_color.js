@@ -17,6 +17,6 @@ function performSearch()
 
 function colorChange(color)
 {
-	$('skin_color').style.backgroundColor = color;
-	$('skincolor').value = color;
+	$('skin_color').style.backgroundColor = '#'+color;
+	$('skincolor').value = '#'+color;
 }
