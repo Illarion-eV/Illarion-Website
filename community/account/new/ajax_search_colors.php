@@ -12,12 +12,13 @@
 
 	Page::setXML();
 	Page::Init();
-
+/*
 	if (strlen($_POST['color']) == 6)
 	{
 		$color = ( array_search( "#".$_POST['color'], char_create::getHairValues()) === false ? false : $_POST['color'] );
 	}
-
+*/
+	$color = $_POST['color'];
 	$image_n = $_POST['image']."_n";
 	$image_w = $_POST['image']."_w";
 

@@ -38,8 +38,8 @@ function colorChange(color, image)
 		}
 	);
 
-	$('skin_color').style.backgroundColor = color;
-	$('skincolor').value = color;
+	$('skin_color').style.backgroundColor = '#'+color;
+	$('skincolor').value = '#'+color;
 
 
 }
