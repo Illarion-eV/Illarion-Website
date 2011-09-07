@@ -136,7 +136,7 @@
 
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
-			<div id="ajax_works" style='display:inline;position:relative;left:5px;top:5px;width:32px;height:32px;'></div>
+			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
 			<img id="char_image_n" src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_n","CA9E78"); ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
 			<img id="char_image_w" src="<?php echo char_create::getConvertedImageUrl("hum_m_stand_w","CA9E78"); ?>" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
