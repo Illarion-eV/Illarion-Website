@@ -159,6 +159,7 @@ $new_img = "/home/kadiya/imagetest/".$image_name."_".$farbcode.".png";
 			echo "CMD: ".$cmd."<br/>";
 			echo "STDOUT: ".$stdout."<br/>";
 			echo "RC: ".$rc."<br/>";
+			echo "RC: ".$new_img_url."<br/>";
 			?>
 			<img src="<?php echo $new_img_url; ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
 			<img src="<?php echo Page::getURL(); ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
