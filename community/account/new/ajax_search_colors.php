@@ -19,8 +19,7 @@
 	}
 */
 	$color = $_POST['color'];
-	$image_n = $_POST['image']."_n";
-	$image_w = $_POST['image']."_w";
+	$image_n = $_POST['image'];
 
 
 	//if (substr($_POST['base_image']-4) != ".png")
@@ -30,26 +29,6 @@
 ?>
 
 <image>
- <north><?php echo char_create::getConvertedImageUrl($image_n, $color); ?></north>
- <west><?php echo char_create::getConvertedImageUrl($image_w, $color); ?></west>
+ <newimage><?php echo char_create::getConvertedImageUrl($image, $color); ?></newimage>
 </image>
 
-<?php /*
-
-<?php if ($count > 30): ?>
-<manyHits>
-	<found><?php echo $count; ?></found>
-	<max><?php echo $max; ?></max>
-</manyHits>
-<?php else: ?>
-<accounts>
-	<?php foreach($result_list as $result): ?>
-	<account>
-		<id><?php echo $result['id']; ?></id>
-		<name><?php echo $result['username'],' (',$result['name'],')'; ?></name>
-	</account>
-	<?php endforeach; ?>
-</accounts>
-<?php endif; ?>
-
-   */ ?>

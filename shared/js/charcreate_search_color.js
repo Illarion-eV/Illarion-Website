@@ -46,12 +46,9 @@ function parseResponse( object )
 	else if ( object.nodeType == 1 ) {
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
-				if (object.childNodes[i].nodeName == 'north') {
-					$('char_image_n').src = object.childNodes[i].firstChild.nodeValue;
+				if (object.childNodes[i].nodeName == 'newimage') {
+					$('char_image').src = object.childNodes[i].firstChild.nodeValue;
 				}
-				else if (object.childNodes[i].nodeName == 'west') {
-					$('char_image_w').src = object.childNodes[i].firstChild.nodeValue;
-				};
 			};
 
 		}
