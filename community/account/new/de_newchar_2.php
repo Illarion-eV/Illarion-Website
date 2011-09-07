@@ -134,8 +134,16 @@
 
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
-			<?php exec('.'.Page::getRootPath().'/shared/scripts/img_convert.sh 990000 '.Page::getRootPath().'/shared/pics/chars/hum/hum_m_stand_w.png '.Page::getRootPath().'/media/charcreate/hum_m_w_990000.png'); ?>
-			<img src="<?php echo Page::getRootPath(); ?>/media/charcreate/hum_m_w_990000.png" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
+			<?php
+			$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
+			$farbcode = "990000";
+			$image_name = "hum_m_stand_w";
+			$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
+			$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
+
+			?>
+			<?php exec($script.' '.$farbcode.' '.$base_img.' '.$new_img); ?>
+			<img src="<?php echo $new_image; ?>" style="position:relative;left:133px; top:73px; width:28px; height:75px;" />
 			<img src="<?php echo Page::getURL(); ?>/shared/pics/chars/hum/hum_m_stand_n.png" style="position:relative;left:183px; top:73px; width:28px; height:75px;" />
 			</div>
 
