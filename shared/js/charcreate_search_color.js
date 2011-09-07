@@ -13,27 +13,7 @@ function colorChange(color, image)
 			evalJS: false,
 			onComplete: function(response)
 			{
-				var output_area = $('output_area');
-				if (Object.isUndefined(response.responseXML))
-				{
-					addOrReplaceChild( output_area, document.createTextNode( 'Error - Invalid XML' ) );
-				}
-				else
-				{
-					addOrReplaceChild( output_area, parseResponse( response.responseXML ) );
-				};
-				currentlySearching = false;
-				if (searchAgain)
-				{
-					searchAgain = false;
-					performSearch();
-				}
-				else
-				{
-					$('search_title').firstChild.setStyle({
-						background: ''
-					});
-				}
+				parseResponse( response.responseXML );
 			}
 		}
 	);
