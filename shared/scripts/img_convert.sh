@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Farben von Images multiplizieren
 #
