@@ -77,6 +77,69 @@
 		return getHumanBeardArray();
 	}
 
+ 	public function getImageName($race, $gender)
+	{
+		switch($race){
+			case RACE_HUMAN:
+				if ($gender == GENDER_MALE) {
+					$name = "hum_m";
+				}
+				else
+				{
+					$name = "hum_f";
+				}
+				break;
+			case RACE_DWARF:
+				if ($gender == GENDER_MALE) {
+					$name = "dwa_m";
+				}
+				else
+				{
+					$name = "dwa_f";
+				}
+				break;
+			case RACE_HALFLING:
+				if ($gender == GENDER_MALE) {
+					$name = "dwa_m";
+				}
+				else
+				{
+					$name = "dwa_f";
+				}
+				break;
+			case RACE_ELF:
+				if ($gender == GENDER_MALE) {
+					$name = "dwa_m";
+				}
+				else
+				{
+					$name = "dwa_f";
+				}
+				break;
+			case RACE_ORC:
+				if ($gender == GENDER_MALE) {
+					$name = "dwa_m";
+				}
+				else
+				{
+					$name = "dwa_f";
+				}
+				break;
+			case RACE_LIZARD:
+				if ($gender == GENDER_MALE) {
+					$name = "dwa_m";
+				}
+				else
+				{
+					$name = "dwa_f";
+				}
+				break;
+			default:
+				$name = "";
+		}
+		return $name;
+	}
+
 	public function getConvertedImageUrl($image_name, $farbcode)
 	{
 		/*
