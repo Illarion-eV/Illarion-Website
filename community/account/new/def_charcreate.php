@@ -77,7 +77,7 @@ define ('HUMAN_HAIR_COLOR_18',			"#984229");
 define ('HUMAN_HAIR_COLOR_19',			"#E9CE92");
 define ('HUMAN_HAIR_COLOR_20',			"#E0BD79");
 define ('HUMAN_HAIR_COLOR_21',			"#B6A88C");
-define ('HUMAN_HAIR_COLOR_21',			"#999999");
+
 
 define ('HUMAN_SKIN_COLOR_1',			"#F2C59E");
 define ('HUMAN_SKIN_COLOR_2',			"#EFC096");
@@ -100,6 +100,7 @@ define ('HUMAN_SKIN_COLOR_18',			"#8F6B4C");
 define ('HUMAN_SKIN_COLOR_19',			"#8A6749");
 define ('HUMAN_SKIN_COLOR_20',			"#856345");
 define ('HUMAN_SKIN_COLOR_21',			"#78573A");
+define ('HUMAN_SKIN_COLOR_22',			"#999999");
 
 define ('HUMAN_FEMALE_HAIR_NO',			0);
 define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hairlong2_stand");
