@@ -78,6 +78,42 @@
 					$hair_values = getHumanFemaleHairArray();
 				}
 				break;
+			case RACE_ELF:
+				if ($gender == GENDER_MALE) {
+					$hair_values = getHumanMaleHairArray();
+				}
+				else
+				{
+					$hair_values = getHumanFemaleHairArray();
+				}
+				break;
+			case RACE_HALFLING:
+				if ($gender == GENDER_MALE) {
+					$hair_values = getHumanMaleHairArray();
+				}
+				else
+				{
+					$hair_values = getHumanFemaleHairArray();
+				}
+				break;
+			case RACE_ORC:
+				if ($gender == GENDER_MALE) {
+					$hair_values = getHumanMaleHairArray();
+				}
+				else
+				{
+					$hair_values = getHumanFemaleHairArray();
+				}
+				break;
+			case RACE_LIZARD:
+				if ($gender == GENDER_MALE) {
+					$hair_values = getLizardMaleHairArray();
+				}
+				else
+				{
+					$hair_values = getLizardFemaleHairArray();
+				}
+				break;
 			default:
 				$hair_values = array();
 		}

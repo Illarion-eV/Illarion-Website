@@ -56,27 +56,48 @@ define ('RACE_LIZARD',                	5 );
 // Haarfarbe
 
 // Menschen
-define ('HUMAN_HAIR_COLOR_1',			"#292C31");
-define ('HUMAN_HAIR_COLOR_2',			"#342626");
-define ('HUMAN_HAIR_COLOR_3',			"#443532");
-define ('HUMAN_HAIR_COLOR_4',			"#5F4536");
-define ('HUMAN_HAIR_COLOR_5',			"#7F6449");
-define ('HUMAN_HAIR_COLOR_6',			"#5B402B");
-define ('HUMAN_HAIR_COLOR_7',			"#84613B");
-define ('HUMAN_HAIR_COLOR_8',			"#84542E");
-define ('HUMAN_HAIR_COLOR_9',			"#D3C499");
-define ('HUMAN_HAIR_COLOR_10',			"#C18D54");
-define ('HUMAN_HAIR_COLOR_11',			"#AF6F3F");
-define ('HUMAN_HAIR_COLOR_12',			"#A15229");
-define ('HUMAN_HAIR_COLOR_13',			"#613F3E");
-define ('HUMAN_HAIR_COLOR_14',			"#85594C");
-define ('HUMAN_HAIR_COLOR_15',			"#633E2E");
-define ('HUMAN_HAIR_COLOR_16',			"#843629");
-define ('HUMAN_HAIR_COLOR_17',			"#6D2C32");
-define ('HUMAN_HAIR_COLOR_18',			"#984229");
-define ('HUMAN_HAIR_COLOR_19',			"#E9CE92");
-define ('HUMAN_HAIR_COLOR_20',			"#E0BD79");
-define ('HUMAN_HAIR_COLOR_21',			"#B6A88C");
+define ('HUMAN_HAIR_COLOR_1',			"#FFF2DF");
+define ('HUMAN_HAIR_COLOR_2',			"#FDE1B9");
+define ('HUMAN_HAIR_COLOR_3',			"#F8D093");
+define ('HUMAN_HAIR_COLOR_4',			"#F5D4B4");
+define ('HUMAN_HAIR_COLOR_5',			"#F2C59E");
+define ('HUMAN_HAIR_COLOR_6',			"#C98D77");
+define ('HUMAN_HAIR_COLOR_7',			"#D9AB84");
+define ('HUMAN_HAIR_COLOR_8',			"#C69B75");
+define ('HUMAN_HAIR_COLOR_9',			"#C98C54");
+define ('HUMAN_HAIR_COLOR_10',			"#E57B50");
+define ('HUMAN_HAIR_COLOR_11',			"#F0965A");
+define ('HUMAN_HAIR_COLOR_12',			"#B7623E");
+define ('HUMAN_HAIR_COLOR_13',			"#A56F31");
+define ('HUMAN_HAIR_COLOR_14',			"#BD582E");
+define ('HUMAN_HAIR_COLOR_15',			"#AA502F");
+define ('HUMAN_HAIR_COLOR_16',			"#C98049");
+define ('HUMAN_HAIR_COLOR_17',			"#8B562C");
+define ('HUMAN_HAIR_COLOR_18',			"#9C3215");
+define ('HUMAN_HAIR_COLOR_19',			"#9F3F21");
+define ('HUMAN_HAIR_COLOR_20',			"#683B24");
+define ('HUMAN_HAIR_COLOR_21',			"#630002");
+define ('HUMAN_HAIR_COLOR_22',			"#E8BB80");
+define ('HUMAN_HAIR_COLOR_23',			"#F8D3AB");
+define ('HUMAN_HAIR_COLOR_24',			"#F9C397");
+define ('HUMAN_HAIR_COLOR_25',			"#EAD5C4");
+define ('HUMAN_HAIR_COLOR_26',			"#F5BBA7");
+define ('HUMAN_HAIR_COLOR_27',			"#F2DEBD");
+define ('HUMAN_HAIR_COLOR_28',			"#EFABA2");
+define ('HUMAN_HAIR_COLOR_29',			"#CDA17B");
+define ('HUMAN_HAIR_COLOR_30',			"#AC8360");
+define ('HUMAN_HAIR_COLOR_31',			"#D9A35B");
+define ('HUMAN_HAIR_COLOR_32',			"#B67E41");
+define ('HUMAN_HAIR_COLOR_33',			"#78573A");
+define ('HUMAN_HAIR_COLOR_34',			"#5B3A2B");
+define ('HUMAN_HAIR_COLOR_35',			"#4C2903");
+define ('HUMAN_HAIR_COLOR_36',			"#421605");
+define ('HUMAN_HAIR_COLOR_37',			"#6A2311");
+define ('HUMAN_HAIR_COLOR_38',			"#4F2A1A");
+define ('HUMAN_HAIR_COLOR_39',			"#562A07");
+define ('HUMAN_HAIR_COLOR_40',			"#421B1C");
+define ('HUMAN_HAIR_COLOR_41',			"#2F0F02");
+define ('HUMAN_HAIR_COLOR_42',			"#412728");
 
 
 define ('HUMAN_SKIN_COLOR_1',			"#FFF2DF");
@@ -139,6 +160,50 @@ define('HUMAN_BEARD_3',					"hum_m_stand_beard_beard3");
 define('HUMAN_BEARD_4',					"hum_m_stand_beard_beard4");
 define('HUMAN_BEARD_5',					"hum_m_stand_beard_beard5");
 
+
+define ('LIZARD_HAIR_COLOR_1',			"#FFF594");
+define ('LIZARD_HAIR_COLOR_2',			"#FFF050");
+define ('LIZARD_HAIR_COLOR_3',			"#FFD34F");
+define ('LIZARD_HAIR_COLOR_4',			"#FFA6E1");
+define ('LIZARD_HAIR_COLOR_5',			"#CF66FF");
+define ('LIZARD_HAIR_COLOR_6',			"#FF41FE");
+define ('LIZARD_HAIR_COLOR_7',			"#AE00FE");
+define ('LIZARD_HAIR_COLOR_8',			"#FFF678");
+define ('LIZARD_HAIR_COLOR_9',			"#F39900");
+define ('LIZARD_HAIR_COLOR_10',			"#C26100");
+define ('LIZARD_HAIR_COLOR_11',			"#B39437");
+define ('LIZARD_HAIR_COLOR_12',			"#654566");
+define ('LIZARD_HAIR_COLOR_13',			"#B32DB3");
+define ('LIZARD_HAIR_COLOR_14',			"#B3749E");
+define ('LIZARD_HAIR_COLOR_15',			"#8585A6");
+define ('LIZARD_HAIR_COLOR_16',			"#579294");
+define ('LIZARD_HAIR_COLOR_17',			"#8F4A6D");
+define ('LIZARD_HAIR_COLOR_18',			"#64457C");
+define ('LIZARD_HAIR_COLOR_19',			"#1D4344");
+define ('LIZARD_HAIR_COLOR_20',			"#786000");
+define ('LIZARD_HAIR_COLOR_21',			"#6B2C60");
+define ('LIZARD_HAIR_COLOR_22',			"#AAFF00");
+define ('LIZARD_HAIR_COLOR_23',			"#00FF00");
+define ('LIZARD_HAIR_COLOR_24',			"#00FF68");
+define ('LIZARD_HAIR_COLOR_25',			"#4100FE");
+define ('LIZARD_HAIR_COLOR_26',			"#ADFF85");
+define ('LIZARD_HAIR_COLOR_27',			"#61FFFF");
+define ('LIZARD_HAIR_COLOR_28',			"#61C1FF");
+define ('LIZARD_HAIR_COLOR_29',			"#81D0F4");
+define ('LIZARD_HAIR_COLOR_30',			"#6161F2");
+define ('LIZARD_HAIR_COLOR_31',			"#7091B8");
+define ('LIZARD_HAIR_COLOR_32',			"#52B58A");
+define ('LIZARD_HAIR_COLOR_33',			"#79B35D");
+define ('LIZARD_HAIR_COLOR_34',			"#00B278");
+define ('LIZARD_HAIR_COLOR_35',			"#00B347");
+define ('LIZARD_HAIR_COLOR_36',			"#44B3B3");
+define ('LIZARD_HAIR_COLOR_37',			"#4486B3");
+define ('LIZARD_HAIR_COLOR_38',			"#73A58C");
+define ('LIZARD_HAIR_COLOR_39',			"#007252");
+define ('LIZARD_HAIR_COLOR_40',			"#009B70");
+define ('LIZARD_HAIR_COLOR_41',			"#60967C");
+define ('LIZARD_HAIR_COLOR_42',			"#507F28");
+
 define ('LIZARD_SKIN_COLOR_1',			"#FFF594");
 define ('LIZARD_SKIN_COLOR_2',			"#FFF050");
 define ('LIZARD_SKIN_COLOR_3',			"#FFD34F");
@@ -181,6 +246,7 @@ define ('LIZARD_SKIN_COLOR_39',			"#007252");
 define ('LIZARD_SKIN_COLOR_40',			"#009B70");
 define ('LIZARD_SKIN_COLOR_41',			"#60967C");
 define ('LIZARD_SKIN_COLOR_42',			"#507F28");
+
 
 function getGenderArray()
 {
@@ -225,7 +291,28 @@ function getHumanHairColorArray()
 	    HUMAN_HAIR_COLOR_18,
 	    HUMAN_HAIR_COLOR_19,
 	    HUMAN_HAIR_COLOR_20,
-	    HUMAN_HAIR_COLOR_21
+		HUMAN_HAIR_COLOR_21,
+		HUMAN_HAIR_COLOR_22,
+		HUMAN_HAIR_COLOR_23,
+		HUMAN_HAIR_COLOR_24,
+		HUMAN_HAIR_COLOR_25,
+		HUMAN_HAIR_COLOR_26,
+		HUMAN_HAIR_COLOR_27,
+		HUMAN_HAIR_COLOR_28,
+		HUMAN_HAIR_COLOR_29,
+		HUMAN_HAIR_COLOR_30,
+		HUMAN_HAIR_COLOR_31,
+		HUMAN_HAIR_COLOR_32,
+		HUMAN_HAIR_COLOR_33,
+		HUMAN_HAIR_COLOR_34,
+		HUMAN_HAIR_COLOR_35,
+		HUMAN_HAIR_COLOR_36,
+		HUMAN_HAIR_COLOR_37,
+		HUMAN_HAIR_COLOR_38,
+		HUMAN_HAIR_COLOR_39,
+		HUMAN_HAIR_COLOR_40,
+		HUMAN_HAIR_COLOR_41,
+		HUMAN_HAIR_COLOR_42
 	);
 }
 
@@ -309,6 +396,54 @@ function getHumanBeardArray()
 	);
 }
 
+function getLizardHairColorArray()
+{
+	return array(
+	    LIZARD_HAIR_COLOR_1,
+	    LIZARD_HAIR_COLOR_2,
+	    LIZARD_HAIR_COLOR_3,
+	    LIZARD_HAIR_COLOR_4,
+	    LIZARD_HAIR_COLOR_5,
+	    LIZARD_HAIR_COLOR_6,
+	    LIZARD_HAIR_COLOR_7,
+	    LIZARD_HAIR_COLOR_8,
+	    LIZARD_HAIR_COLOR_9,
+	    LIZARD_HAIR_COLOR_10,
+	    LIZARD_HAIR_COLOR_11,
+	    LIZARD_HAIR_COLOR_12,
+	    LIZARD_HAIR_COLOR_13,
+	    LIZARD_HAIR_COLOR_14,
+	    LIZARD_HAIR_COLOR_15,
+	    LIZARD_HAIR_COLOR_16,
+	    LIZARD_HAIR_COLOR_17,
+	    LIZARD_HAIR_COLOR_18,
+	    LIZARD_HAIR_COLOR_19,
+	    LIZARD_HAIR_COLOR_20,
+	    LIZARD_HAIR_COLOR_21,
+	    LIZARD_HAIR_COLOR_22,
+		LIZARD_HAIR_COLOR_23,
+		LIZARD_HAIR_COLOR_24,
+		LIZARD_HAIR_COLOR_25,
+		LIZARD_HAIR_COLOR_26,
+		LIZARD_HAIR_COLOR_27,
+		LIZARD_HAIR_COLOR_28,
+		LIZARD_HAIR_COLOR_29,
+		LIZARD_HAIR_COLOR_30,
+		LIZARD_HAIR_COLOR_31,
+		LIZARD_HAIR_COLOR_32,
+		LIZARD_HAIR_COLOR_33,
+		LIZARD_HAIR_COLOR_34,
+		LIZARD_HAIR_COLOR_35,
+		LIZARD_HAIR_COLOR_36,
+		LIZARD_HAIR_COLOR_37,
+		LIZARD_HAIR_COLOR_38,
+		LIZARD_HAIR_COLOR_39,
+		LIZARD_HAIR_COLOR_40,
+		LIZARD_HAIR_COLOR_41,
+		LIZARD_HAIR_COLOR_42
+	);
+}
+
 function getLizardSkinColorArray()
 {
 	return array(
@@ -356,4 +491,6 @@ function getLizardSkinColorArray()
 		LIZARD_SKIN_COLOR_42
 	);
 }
+
+
 ?>
