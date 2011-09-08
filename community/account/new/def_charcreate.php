@@ -101,6 +101,8 @@ define ('HUMAN_SKIN_COLOR_19',			"#8A6749");
 define ('HUMAN_SKIN_COLOR_20',			"#856345");
 define ('HUMAN_SKIN_COLOR_21',			"#78573A");
 define ('HUMAN_SKIN_COLOR_22',			"#999999");
+define ('HUMAN_SKIN_COLOR_23',			"#990000");
+define ('HUMAN_SKIN_COLOR_24',			"#000099");
 
 define ('HUMAN_FEMALE_HAIR_NO',			0);
 define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hairlong2_stand");
@@ -190,7 +192,9 @@ function getHumanSkinColorArray()
 	    HUMAN_SKIN_COLOR_19,
 	    HUMAN_SKIN_COLOR_20,
 	    HUMAN_SKIN_COLOR_21,
-	    HUMAN_SKIN_COLOR_22
+	    HUMAN_SKIN_COLOR_22,
+		HUMAN_SKIN_COLOR_23,
+		HUMAN_SKIN_COLOR_24
 	);
 }
 
