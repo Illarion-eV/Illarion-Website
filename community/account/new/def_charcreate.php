@@ -77,6 +77,7 @@ define ('HUMAN_HAIR_COLOR_18',			"#984229");
 define ('HUMAN_HAIR_COLOR_19',			"#E9CE92");
 define ('HUMAN_HAIR_COLOR_20',			"#E0BD79");
 define ('HUMAN_HAIR_COLOR_21',			"#B6A88C");
+define ('HUMAN_HAIR_COLOR_21',			"#999999");
 
 define ('HUMAN_SKIN_COLOR_1',			"#F2C59E");
 define ('HUMAN_SKIN_COLOR_2',			"#EFC096");
