@@ -39,6 +39,18 @@
 			case RACE_DWARF:
 				$skin_colors = getHumanSkinColorArray();
 				break;
+			case RACE_ELF:
+				$skin_colors = getHumanSkinColorArray();
+				break;
+			case RACE_HALFLING:
+				$skin_colors = getHumanSkinColorArray();
+				break;
+			case RACE_ORC:
+				$skin_colors = getHumanSkinColorArray();
+				break;
+			case RACE_LIZARD:
+				$skin_colors = getLizardSkinColorArray();
+				break;
 			default:
 				$skin_colors = array();
 		}
