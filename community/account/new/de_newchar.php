@@ -107,7 +107,7 @@
 
 <h1>Neuen Charakter erstellen</h1>
 
-<h2>Drei Schritte zu einem neuen Charakter für Illarion</h2>
+<h2>Vier Schritte zu einem neuen Charakter für Illarion</h2>
 
 <table style="width:100%">
 	<tr>
