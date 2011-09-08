@@ -309,7 +309,7 @@ function getHumanBeardArray()
 	);
 }
 
-function getHumanSkinColorArray()
+function getLizardSkinColorArray()
 {
 	return array(
 	    LIZARD_SKIN_COLOR_1,
