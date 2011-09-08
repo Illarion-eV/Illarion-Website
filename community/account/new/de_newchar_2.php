@@ -138,7 +138,7 @@
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:200px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"CA9E78"); ?>" style="position:relative;left:133px; top:73px;" />
-			<img src="hum_m_cloth" style="position:relative;left:133px; top:73px;" />
+			<img src="/shared/pics/chars/hum_m_cloth.png" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="background-color:#009900;height:200px;padding-left:320px;padding-right:20px;">
