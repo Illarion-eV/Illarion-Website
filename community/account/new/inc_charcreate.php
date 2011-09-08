@@ -100,39 +100,33 @@
 				break;
 			case RACE_HALFLING:
 				if ($gender == GENDER_MALE) {
-					$name = "dwa_m";
+					$name = "hal_m";
 				}
 				else
 				{
-					$name = "dwa_f";
+					$name = "hal_f";
 				}
 				break;
 			case RACE_ELF:
 				if ($gender == GENDER_MALE) {
-					$name = "dwa_m";
+					$name = "elf_m";
 				}
 				else
 				{
-					$name = "dwa_f";
+					$name = "elf_f";
 				}
 				break;
 			case RACE_ORC:
 				if ($gender == GENDER_MALE) {
-					$name = "dwa_m";
+					$name = "orc_m";
 				}
 				else
 				{
-					$name = "dwa_f";
+					$name = "orc_f";
 				}
 				break;
 			case RACE_LIZARD:
-				if ($gender == GENDER_MALE) {
-					$name = "dwa_m";
-				}
-				else
-				{
-					$name = "dwa_f";
-				}
+					$name = "liz_m";
 				break;
 			default:
 				$name = "";
