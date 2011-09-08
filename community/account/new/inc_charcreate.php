@@ -141,7 +141,7 @@
 		   $image_name = "hum_m_stand_w";
 		*/
 		$script = Page::getRootPath()."/shared/scripts/img_convert.sh";
-		$base_img = Page::getRootPath()."/shared/pics/chars/hum/".$image_name.".png";
+		$base_img = Page::getRootPath()."/shared/pics/chars/".$image_name.".png";
 		$new_img = Page::getRootPath()."/media/charcreate/".$image_name."_".$farbcode.".png";
 		$new_img_url = Page::getMediaURL()."/charcreate/".$image_name."_".$farbcode.".png";
 
