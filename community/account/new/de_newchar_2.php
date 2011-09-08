@@ -143,7 +143,7 @@
 			<div style="background-color:#009900;height:200px;padding-left:320px;padding-right:20px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:
-				<span id="skin_color" style="width:210px;height:30px;display:block;"></span>
+				<span id="skin_color" style="width:95%;height:30px;display:block;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="colorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
