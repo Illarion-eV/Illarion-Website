@@ -140,7 +140,7 @@
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"CA9E78"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
-			<div style="background-color:#0099900;height:200px;padding-left:335px;padding-right:40px;">
+			<div style="background-color:#009900;height:200px;padding-left:335px;padding-right:40px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:
 				<span id="skin_color" style="width:80%;height:30px;display:block;"></span>
