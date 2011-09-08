@@ -189,7 +189,8 @@ function getHumanSkinColorArray()
 	    HUMAN_SKIN_COLOR_18,
 	    HUMAN_SKIN_COLOR_19,
 	    HUMAN_SKIN_COLOR_20,
-	    HUMAN_SKIN_COLOR_21
+	    HUMAN_SKIN_COLOR_21,
+	    HUMAN_SKIN_COLOR_22
 	);
 }
 
