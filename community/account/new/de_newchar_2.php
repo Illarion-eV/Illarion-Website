@@ -156,8 +156,8 @@
 
 				Haare:
 				<select name="hair" style="width:100%;">
-					<option>Eins</option>
-					<option>Eins</option>
+					<option value="1">Eins</option>
+					<option value="2">Eins</option>
 				</select>
 			</div>
 			<p style="text-align:center;padding-bottom:10px;">
