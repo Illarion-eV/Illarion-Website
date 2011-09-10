@@ -151,20 +151,27 @@
                 <?php endforeach; ?>
 
 				Haarfarbe:
-				<span>x</span>
-				<span>x</span>
+				<p>x</p>
+				<p>x</p>
 
 				Haare:
 				<select name="hair" style="width:100%;">
 					<option value="1">Eins</option>
-					<option value="2">Eins</option>
+					<option value="2">Zwei</option>
 				</select>
 
-			<p style="text-align:center;padding-bottom:10px;">
-				<input type="hidden" name="action" value="newchar_2" />
-				<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
-				<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
-			</p>
+				Bart:
+				<select name="beard" style="width:100%;">
+					<option value="1">Eins</option>
+					<option value="2">Zwei</option>
+				</select>
+			<div>
+				<p style="text-align:center;padding-bottom:10px;">
+					<input type="hidden" name="action" value="newchar_2" />
+					<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
+					<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
+				</p>
+			</div>
 			</div>
 		</div>
 	</form>
