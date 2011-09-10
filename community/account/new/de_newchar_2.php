@@ -141,7 +141,7 @@
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="position:relative;left:133px; top:73px;" />
 			</div>
 
-			<div style="height:200px;padding-left:320px;padding-right:20px;">
+			<div style="background-color:#990000;height:200px;padding-left:320px;padding-right:20px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:
 				<span id="skin_color" style="width:97%;height:30px;display:block;background-color:#CA9E78;"></span>
@@ -151,8 +151,13 @@
                 <?php endforeach; ?>
 
 				Haarfarbe:
-				<p>x</p>
-				<p>x</p>
+				<?php $skincolors = char_create::getSkinColors($race); ?>
+				Hautfarbe:
+				<span id="skin_color" style="width:97%;height:30px;display:block;background-color:#CA9E78;"></span>
+				<input type="hidden" id="skincolor" value="" name="skincolor" />
+                <?php foreach ( $skincolors as $color ):?>
+                <a onclick="colorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <?php endforeach; ?>
 
 				Haare:
 				<select name="hair" style="width:100%;">
@@ -165,7 +170,7 @@
 					<option value="1">Eins</option>
 					<option value="2">Zwei</option>
 				</select>
-			<div>
+			<div background-color:#009900;>
 				<p style="text-align:center;padding-bottom:10px;">
 					<input type="hidden" name="action" value="newchar_2" />
 					<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
