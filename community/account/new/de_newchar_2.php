@@ -149,9 +149,18 @@
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="colorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
-			</div>
 
-			<div>
+				Haarfarbe:
+				<span>x</span>
+				<span>x</span>
+
+				Haare:
+				<select name="hair" style="width:100%;">
+				<options>Eins</options>
+				<options>Eins</options>
+
+				</select>
+			</div>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_2" />
 				<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
