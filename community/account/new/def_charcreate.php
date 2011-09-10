@@ -292,6 +292,49 @@ define ('LIZARD_SKIN_COLOR_41',			"#A17654");
 define ('LIZARD_SKIN_COLOR_42',			"#92684F");
 
 
+define ('ORC_SKIN_COLOR_1',				"#A49049");
+define ('ORC_SKIN_COLOR_2',				"#998843");
+define ('ORC_SKIN_COLOR_3',				"#8B7B3F");
+define ('ORC_SKIN_COLOR_4',				"#827139");
+define ('ORC_SKIN_COLOR_5',				"#796C35");
+define ('ORC_SKIN_COLOR_6',				"#918457");
+define ('ORC_SKIN_COLOR_7',				"#867A52");
+define ('ORC_SKIN_COLOR_8',				"#7D714B");
+define ('ORC_SKIN_COLOR_9',				"#736945");
+define ('ORC_SKIN_COLOR_10',			"#615B41");
+define ('ORC_SKIN_COLOR_11',			"#AF9536");
+define ('ORC_SKIN_COLOR_12',			"#A99033");
+define ('ORC_SKIN_COLOR_13',			"#97812E");
+define ('ORC_SKIN_COLOR_14',			"#927B2B");
+define ('ORC_SKIN_COLOR_15',			"#8D762A");
+define ('ORC_SKIN_COLOR_16',			"#89CA48");
+define ('ORC_SKIN_COLOR_17',			"#6FB032");
+define ('ORC_SKIN_COLOR_18',			"#5F9929");
+define ('ORC_SKIN_COLOR_19',			"#548625");
+define ('ORC_SKIN_COLOR_20',			"#507E26");
+define ('ORC_SKIN_COLOR_21',			"#7EA645");
+define ('ORC_SKIN_COLOR_22',			"#749B3E");
+define ('ORC_SKIN_COLOR_23',			"#6A8D39");
+define ('ORC_SKIN_COLOR_24',			"#638435");
+define ('ORC_SKIN_COLOR_25',			"#54712E");
+define ('ORC_SKIN_COLOR_26',			"#789552");
+define ('ORC_SKIN_COLOR_27',			"#718E4E");
+define ('ORC_SKIN_COLOR_28',			"#688046");
+define ('ORC_SKIN_COLOR_29',			"#5B723E");
+define ('ORC_SKIN_COLOR_30',			"#546538");
+define ('ORC_SKIN_COLOR_31',			"#C7BE97");
+define ('ORC_SKIN_COLOR_32',			"#958C55");
+define ('ORC_SKIN_COLOR_33',			"#5C5636");
+define ('ORC_SKIN_COLOR_34',			"#4A4528");
+define ('ORC_SKIN_COLOR_35',			"#7F7F7F");
+define ('ORC_SKIN_COLOR_36',			"#5B5B5B");
+define ('ORC_SKIN_COLOR_37',			"#404040");
+define ('ORC_SKIN_COLOR_38',			"#A87A3C");
+define ('ORC_SKIN_COLOR_39',			"#916936");
+define ('ORC_SKIN_COLOR_40',			"#7D5C31");
+define ('ORC_SKIN_COLOR_41',			"#5C3C27");
+define ('ORC_SKIN_COLOR_42',			"#422A1D");
+
 function getGenderArray()
 {
 	return array(
@@ -536,5 +579,51 @@ function getLizardSkinColorArray()
 	);
 }
 
-
+function getOrcSkinColorArray()
+{
+return array(
+	    ORC_SKIN_COLOR_1,
+	    ORC_SKIN_COLOR_2,
+	    ORC_SKIN_COLOR_3,
+	    ORC_SKIN_COLOR_4,
+	    ORC_SKIN_COLOR_5,
+	    ORC_SKIN_COLOR_6,
+	    ORC_SKIN_COLOR_7,
+	    ORC_SKIN_COLOR_8,
+	    ORC_SKIN_COLOR_9,
+	    ORC_SKIN_COLOR_10,
+	    ORC_SKIN_COLOR_11,
+	    ORC_SKIN_COLOR_12,
+	    ORC_SKIN_COLOR_13,
+	    ORC_SKIN_COLOR_14,
+	    ORC_SKIN_COLOR_15,
+	    ORC_SKIN_COLOR_16,
+	    ORC_SKIN_COLOR_17,
+	    ORC_SKIN_COLOR_18,
+	    ORC_SKIN_COLOR_19,
+	    ORC_SKIN_COLOR_20,
+	    ORC_SKIN_COLOR_21,
+	    ORC_SKIN_COLOR_22,
+		ORC_SKIN_COLOR_23,
+		ORC_SKIN_COLOR_24,
+		ORC_SKIN_COLOR_25,
+		ORC_SKIN_COLOR_26,
+		ORC_SKIN_COLOR_27,
+		ORC_SKIN_COLOR_28,
+		ORC_SKIN_COLOR_29,
+		ORC_SKIN_COLOR_30,
+		ORC_SKIN_COLOR_31,
+		ORC_SKIN_COLOR_32,
+		ORC_SKIN_COLOR_33,
+		ORC_SKIN_COLOR_34,
+		ORC_SKIN_COLOR_35,
+		ORC_SKIN_COLOR_36,
+		ORC_SKIN_COLOR_37,
+		ORC_SKIN_COLOR_38,
+		ORC_SKIN_COLOR_39,
+		ORC_SKIN_COLOR_40,
+		ORC_SKIN_COLOR_41,
+		ORC_SKIN_COLOR_42
+	);
+}
 ?>
