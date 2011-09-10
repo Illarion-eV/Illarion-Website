@@ -99,7 +99,7 @@ define ('HUMAN_HAIR_COLOR_40',			"#421B1C");
 define ('HUMAN_HAIR_COLOR_41',			"#2F0F02");
 define ('HUMAN_HAIR_COLOR_42',			"#412728");
 
-
+/*
 define ('HUMAN_SKIN_COLOR_1',			"#FFF2DF");
 define ('HUMAN_SKIN_COLOR_2',			"#FDE1B9");
 define ('HUMAN_SKIN_COLOR_3',			"#F8D093");
@@ -142,6 +142,50 @@ define ('HUMAN_SKIN_COLOR_39',			"#562A07");
 define ('HUMAN_SKIN_COLOR_40',			"#421B1C");
 define ('HUMAN_SKIN_COLOR_41',			"#2F0F02");
 define ('HUMAN_SKIN_COLOR_42',			"#412728");
+*/
+
+define ('HUMAN_SKIN_COLOR_1',			"#F6DAB5");
+define ('HUMAN_SKIN_COLOR_2',			"#F7CF9C");
+define ('HUMAN_SKIN_COLOR_3',			"#F8C689");
+define ('HUMAN_SKIN_COLOR_4',			"#F3B96F");
+define ('HUMAN_SKIN_COLOR_5',			"#FAC7A8");
+define ('HUMAN_SKIN_COLOR_6',			"#F5B68B");
+define ('HUMAN_SKIN_COLOR_7',			"#F3A36E");
+define ('HUMAN_SKIN_COLOR_8',			"#F0D0C3");
+define ('HUMAN_SKIN_COLOR_9',			"#E1AD95");
+define ('HUMAN_SKIN_COLOR_10',			"#D9997D");
+define ('HUMAN_SKIN_COLOR_11',			"#D2926E");
+define ('HUMAN_SKIN_COLOR_12',			"#CB774B");
+define ('HUMAN_SKIN_COLOR_13',			"#F5E68B");
+define ('HUMAN_SKIN_COLOR_14',			"#F3D479");
+define ('HUMAN_SKIN_COLOR_15',			"#F3CC65");
+define ('HUMAN_SKIN_COLOR_16',			"#DDB591");
+define ('HUMAN_SKIN_COLOR_17',			"#D1A173");
+define ('HUMAN_SKIN_COLOR_18',			"#C6935E");
+define ('HUMAN_SKIN_COLOR_19',			"#C28043");
+define ('HUMAN_SKIN_COLOR_20',			"#AC743B");
+define ('HUMAN_SKIN_COLOR_21',			"#C9874A");
+define ('HUMAN_SKIN_COLOR_22',			"#B07435");
+define ('HUMAN_SKIN_COLOR_23',			"#8A5A2C");
+define ('HUMAN_SKIN_COLOR_24',			"#764C24");
+define ('HUMAN_SKIN_COLOR_25',			"#734923");
+define ('HUMAN_SKIN_COLOR_26',			"#A36333");
+define ('HUMAN_SKIN_COLOR_27',			"#6C4023");
+define ('HUMAN_SKIN_COLOR_28',			"#5D381D");
+define ('HUMAN_SKIN_COLOR_29',			"#452A15");
+define ('HUMAN_SKIN_COLOR_30',			"#9B6944");
+define ('HUMAN_SKIN_COLOR_31',			"#7D5639");
+define ('HUMAN_SKIN_COLOR_32',			"#63432C");
+define ('HUMAN_SKIN_COLOR_33',			"#523724");
+define ('HUMAN_SKIN_COLOR_34',			"#C3A08A");
+define ('HUMAN_SKIN_COLOR_35',			"#B38A6E");
+define ('HUMAN_SKIN_COLOR_36',			"#A17656");
+define ('HUMAN_SKIN_COLOR_37',			"#92694D");
+define ('HUMAN_SKIN_COLOR_38',			"#876247");
+define ('HUMAN_SKIN_COLOR_39',			"#9F3F21");
+define ('HUMAN_SKIN_COLOR_40',			"#9C3215");
+define ('HUMAN_SKIN_COLOR_41',			"#6A2311");
+define ('HUMAN_SKIN_COLOR_42',			"#562A07");
 
 define ('HUMAN_FEMALE_HAIR_NO',			0);
 define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hairlong2_stand");
