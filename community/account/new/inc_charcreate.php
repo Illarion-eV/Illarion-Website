@@ -40,7 +40,7 @@
 				$skin_colors = getHumanSkinColorArray();
 				break;
 			case RACE_ELF:
-				$skin_colors = getHumanSkinColorArray();
+				$skin_colors = getElfSkinColorArray();
 				break;
 			case RACE_HALFLING:
 				$skin_colors = getHumanSkinColorArray();

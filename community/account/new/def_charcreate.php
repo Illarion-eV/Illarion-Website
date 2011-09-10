@@ -335,6 +335,49 @@ define ('ORC_SKIN_COLOR_40',			"#7D5C31");
 define ('ORC_SKIN_COLOR_41',			"#5C3C27");
 define ('ORC_SKIN_COLOR_42',			"#422A1D");
 
+define ('ELF_SKIN_COLOR_1',				"#E3D9D5");
+define ('ELF_SKIN_COLOR_2',				"#DBCBCA");
+define ('ELF_SKIN_COLOR_3',				"#F1EBD4");
+define ('ELF_SKIN_COLOR_4',				"#E6DAB0");
+define ('ELF_SKIN_COLOR_5',				"#F4D9C5");
+define ('ELF_SKIN_COLOR_6',				"#F3CFBA");
+define ('ELF_SKIN_COLOR_7',				"#F1CBC0");
+define ('ELF_SKIN_COLOR_8',				"#EABDAA");
+define ('ELF_SKIN_COLOR_9',				"#F8D2AE");
+define ('ELF_SKIN_COLOR_10',			"#F5CDA3");
+define ('ELF_SKIN_COLOR_11',			"#EFBC89");
+define ('ELF_SKIN_COLOR_12',			"#EBB171");
+define ('ELF_SKIN_COLOR_13',			"#EED8AE");
+define ('ELF_SKIN_COLOR_14',			"#E9C984");
+define ('ELF_SKIN_COLOR_15',			"#F2D9D5");
+define ('ELF_SKIN_COLOR_16',			"#ECCEC4");
+define ('ELF_SKIN_COLOR_17',			"#D0AE8A");
+define ('ELF_SKIN_COLOR_18',			"#D5BAA5");
+define ('ELF_SKIN_COLOR_19',			"#DCC3AF");
+define ('ELF_SKIN_COLOR_20',			"#D7AC86");
+define ('ELF_SKIN_COLOR_21',			"#DCB897");
+define ('ELF_SKIN_COLOR_22',			"#DEC2A8");
+define ('ELF_SKIN_COLOR_23',			"#CF9C73");
+define ('ELF_SKIN_COLOR_24',			"#C18857");
+define ('ELF_SKIN_COLOR_25',			"#BC7C5F");
+define ('ELF_SKIN_COLOR_26',			"#D09069");
+define ('ELF_SKIN_COLOR_27',			"#D39E7C");
+define ('ELF_SKIN_COLOR_28',			"#C98E72");
+define ('ELF_SKIN_COLOR_29',			"#D0A793");
+define ('ELF_SKIN_COLOR_30',			"#D2B19E");
+define ('ELF_SKIN_COLOR_31',			"#DDB591");
+define ('ELF_SKIN_COLOR_32',			"#D4A271");
+define ('ELF_SKIN_COLOR_33',			"#D99A7A");
+define ('ELF_SKIN_COLOR_34',			"#F6B58B");
+define ('ELF_SKIN_COLOR_35',			"#FAC8A7");
+define ('ELF_SKIN_COLOR_36',			"#E1AD95");
+define ('ELF_SKIN_COLOR_37',			"#F4CEC5");
+define ('ELF_SKIN_COLOR_38',			"#B7A59A");
+define ('ELF_SKIN_COLOR_39',			"#C3A794");
+define ('ELF_SKIN_COLOR_40',			"#A5826A");
+define ('ELF_SKIN_COLOR_41',			"#C4C59D");
+define ('ELF_SKIN_COLOR_42',			"#B3BB86");
+
 function getGenderArray()
 {
 	return array(
@@ -624,6 +667,54 @@ return array(
 		ORC_SKIN_COLOR_40,
 		ORC_SKIN_COLOR_41,
 		ORC_SKIN_COLOR_42
+	);
+}
+
+function getElfSkinColorArray()
+{
+	return array(
+		ELF_SKIN_COLOR_1,
+		ELF_SKIN_COLOR_2,
+		ELF_SKIN_COLOR_3,
+		ELF_SKIN_COLOR_4,
+		ELF_SKIN_COLOR_5,
+		ELF_SKIN_COLOR_6,
+		ELF_SKIN_COLOR_7,
+		ELF_SKIN_COLOR_8,
+		ELF_SKIN_COLOR_9,
+		ELF_SKIN_COLOR_10,
+		ELF_SKIN_COLOR_11,
+		ELF_SKIN_COLOR_12,
+		ELF_SKIN_COLOR_13,
+		ELF_SKIN_COLOR_14,
+		ELF_SKIN_COLOR_15,
+		ELF_SKIN_COLOR_16,
+		ELF_SKIN_COLOR_17,
+		ELF_SKIN_COLOR_18,
+		ELF_SKIN_COLOR_19,
+		ELF_SKIN_COLOR_20,
+		ELF_SKIN_COLOR_21,
+		ELF_SKIN_COLOR_22,
+		ELF_SKIN_COLOR_23,
+		ELF_SKIN_COLOR_24,
+		ELF_SKIN_COLOR_25,
+		ELF_SKIN_COLOR_26,
+		ELF_SKIN_COLOR_27,
+		ELF_SKIN_COLOR_28,
+		ELF_SKIN_COLOR_29,
+		ELF_SKIN_COLOR_30,
+		ELF_SKIN_COLOR_31,
+		ELF_SKIN_COLOR_32,
+		ELF_SKIN_COLOR_33,
+		ELF_SKIN_COLOR_34,
+		ELF_SKIN_COLOR_35,
+		ELF_SKIN_COLOR_36,
+		ELF_SKIN_COLOR_37,
+		ELF_SKIN_COLOR_38,
+		ELF_SKIN_COLOR_39,
+		ELF_SKIN_COLOR_40,
+		ELF_SKIN_COLOR_41,
+		ELF_SKIN_COLOR_42
 	);
 }
 ?>
