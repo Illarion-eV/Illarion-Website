@@ -46,7 +46,7 @@
 				$skin_colors = getHumanSkinColorArray();
 				break;
 			case RACE_ORC:
-				$skin_colors = getHumanSkinColorArray();
+				$skin_colors = getOrcSkinColorArray();
 				break;
 			case RACE_LIZARD:
 				$skin_colors = getLizardSkinColorArray();
