@@ -164,22 +164,22 @@
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
-					<option value="1">Eins</option>
-					<option value="2">Zwei</option>
 				</select>
-
-				Bart:
-				<select name="beard" style="width:100%;">
-					<option value="1">Eins</option>
-					<option value="2">Zwei</option>
-				</select>
+				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD))
+				{
+					Bart:
+					<select name="beard" style="width:100%;">
+						<option value="1">Eins</option>
+						<option value="2">Zwei</option>
+					</select>
+				}
+			</div>
 			<div style="background-color:#009900;">
 				<p style="text-align:center;padding-bottom:10px;">
 					<input type="hidden" name="action" value="newchar_2" />
 					<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
 					<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
 				</p>
-			</div>
 			</div>
 		</div>
 	</form>
