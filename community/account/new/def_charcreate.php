@@ -188,9 +188,9 @@ define ('HUMAN_SKIN_COLOR_41',			"#6A2311");
 define ('HUMAN_SKIN_COLOR_42',			"#562A07");
 
 define ('HUMAN_FEMALE_HAIR_NO',			0);
-define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hairlong2_stand");
-define ('HUMAN_FEMALE_HAIR_2',			"hum_f_stand_hair_hairlong");
-define ('HUMAN_FEMALE_HAIR_3',			"hum_f_stand_hair_hair1");
+define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hair_1");
+define ('HUMAN_FEMALE_HAIR_2',			"hum_f_hair_2");
+define ('HUMAN_FEMALE_HAIR_3',			"hum_f_hair_3");
 
 define ('HUMAN_MALE_HAIR_NO',			0);
 define ('HUMAN_MALE_HAIR_1',			"hum_m_hair1_stand");
@@ -499,8 +499,8 @@ function getHumanFemaleHairArray()
 	return array(
 		HUMAN_FEMALE_HAIR_NO => "--Keine Haare--",
 	    HUMAN_FEMALE_HAIR_1 => "Kurze Haare",
-	    HUMAN_FEMALE_HAIR_2 => "Lange, geflochtene Haare",
-	    HUMAN_FEMALE_HAIR_3 => "Lange, offene Haare"
+	    HUMAN_FEMALE_HAIR_2 => "Lange, offene Haare",
+	    HUMAN_FEMALE_HAIR_3 => "Lange Zöpfe"
 	);
 }
 

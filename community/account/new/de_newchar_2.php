@@ -161,6 +161,9 @@
 
 				Haare:
 				<select name="hair" style="width:100%;">
+					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
+						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
+					<?php endforeach; ?>
 					<option value="1">Eins</option>
 					<option value="2">Zwei</option>
 				</select>
