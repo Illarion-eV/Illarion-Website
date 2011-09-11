@@ -165,6 +165,11 @@
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
+
+				<?php
+				echo $sex;
+				echo $race;
+				?>
 				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD)) ?>
 				<?php { ?>
 					Bart:
