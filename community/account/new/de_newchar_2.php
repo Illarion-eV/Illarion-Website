@@ -173,11 +173,7 @@
 				<?php //if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD))
 				if ($sex == GENDER_MALE)?>
 				<?php { ?>
-					Bart:
-					<select name="beard" style="width:100%;">
-						<option value="1">Eins</option>
-						<option value="2">Zwei</option>
-					</select>
+						moep
 				<?php } ?>
 			</div>
 			<div style="background-color:#009900;">
