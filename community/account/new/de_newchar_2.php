@@ -165,14 +165,14 @@
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
-				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD))
-				{
+				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD)) ?>
+				<?php { ?>
 					Bart:
 					<select name="beard" style="width:100%;">
 						<option value="1">Eins</option>
 						<option value="2">Zwei</option>
 					</select>
-				}
+				<?php } ?>
 			</div>
 			<div style="background-color:#009900;">
 				<p style="text-align:center;padding-bottom:10px;">
