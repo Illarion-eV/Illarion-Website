@@ -171,7 +171,7 @@
 				echo $race."-".RACE_ELF."-".RACE_LIZARD."<br/>";
 				?>
 				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD)) ?>
-				<?php {
+				<?php { ?>
 					Bart:
 					<select name="beard" style="width:100%;">
 						<option value="1">Eins</option>
