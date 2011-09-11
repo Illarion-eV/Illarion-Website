@@ -167,8 +167,8 @@
 				</select>
 
 				<?php
-				echo $sex;
-				echo $race;
+				echo $sex."-".GENDER_MALE."<br/>";
+				echo $race."-".RACE_ELF."-".RACE_LIZARD."<br/>";
 				?>
 				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD)) ?>
 				<?php { ?>
