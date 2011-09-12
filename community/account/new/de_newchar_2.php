@@ -167,10 +167,10 @@
 				</select>
 
 				<?php
-				echo $sex."-".GENDER_MALE."<br/>";
-				echo $race."-".RACE_ELF."-".RACE_LIZARD."<br/>";
+				echo "GENDER-ID: ".$sex."<br/>";
+				echo "MALE-ID:".GENDER_MALE."<br/>";
 				?>
-				<?php if (($sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD)) ?>
+				<?php if ($sex == GENDER_MALE) ?>
 				<?php { ?>
 					Bart:
 					<select name="beard" style="width:100%;">
