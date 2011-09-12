@@ -170,8 +170,8 @@
 				echo "GENDER-ID: ".$sex."<br/>";
 				echo "MALE-ID:".GENDER_MALE."<br/>";
 				?>
-				<?php if ($sex == GENDER_MALE) ?>
-				<?php { ?>
+				<?php if ($sex == GENDER_MALE)
+				{ ?>
 					Bart:
 					<select name="beard" style="width:100%;">
 						<option value="1">Eins</option>
