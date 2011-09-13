@@ -1,4 +1,4 @@
-function hairColorChange(color, image)
+function skinColorChange(color, image)
 {
 	var params = '';
 	params+='color='+color;
@@ -30,6 +30,7 @@ function hairColorChange(color, image)
 
 
 }
+
 
 function parseResponse( object )
 {
