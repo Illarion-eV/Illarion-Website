@@ -142,7 +142,7 @@
 			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_2","412728"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
-			<div style="background-color:#990000;height:250px;padding-left:320px;padding-right:20px;">
+			<div style="height:250px;padding-left:320px;padding-right:20px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:
 				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
@@ -176,7 +176,7 @@
 					</select>
 				<?php } ?>
 			</div>
-			<div style="background-color:#009900;">
+			<div>
 				<p style="text-align:center;padding-bottom:10px;">
 					<input type="hidden" name="action" value="newchar_2" />
 					<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
