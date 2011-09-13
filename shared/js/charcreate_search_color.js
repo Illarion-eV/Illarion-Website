@@ -28,7 +28,6 @@ function skinColorChange(color, image)
 	$('skin_color').style.backgroundColor = '#'+color;
 	$('skincolor').value = '#'+color;
 
-
 }
 
 
