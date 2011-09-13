@@ -159,7 +159,7 @@
                 <?php foreach ( $haircolors as $color ):?>
                 <a onclick="hairColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex)."_hair_2" ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
-
+				<?php print_r($_POST); ?>
 				Haare:
 				<select name="hair" onchange="hairChange(this.form.hair)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
