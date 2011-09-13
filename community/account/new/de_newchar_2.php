@@ -139,13 +139,13 @@
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"CA9E78"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-80px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-80px;" />
-			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_hair_1.png" style="position:relative;left:133px; top:73px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","CA9E78"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
-			<div style="background-color:#990000;height:250px;padding-left:320px;padding-right:20px;">
+			<div style="background-color:#990000;height:250px;padding-left:320px;padding-right:10px;">
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Hautfarbe:
-				<span id="skin_color" style="width:97%;height:30px;display:block;background-color:#CA9E78;"></span>
+				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
@@ -154,14 +154,14 @@
 
 				<?php $skincolors = char_create::getSkinColors($race); ?>
 				Haarfarbe:
-				<span id="hair_color" style="width:97%;height:30px;display:block;background-color:#CA9E78;"></span>
+				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="haircolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 
 				Haare:
-				<select name="hair" style="width:100%;">
+				<select name="hair" onchange="hairChange(this.form.hair)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
