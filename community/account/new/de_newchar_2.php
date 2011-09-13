@@ -139,7 +139,7 @@
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"CA9E78"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-80px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-80px;" />
-			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","412728"); ?>" style="position:relative;left:133px; top:73px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_2","412728"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="background-color:#990000;height:250px;padding-left:320px;padding-right:20px;">
@@ -167,10 +167,6 @@
 					<?php endforeach; ?>
 				</select>
 
-				<?php
-				echo "GENDER-ID: ".$sex."<br/>";
-				echo "MALE-ID:".GENDER_MALE."<br/>";
-				?>
 				<?php if ($sex == GENDER_MALE)
 				{ ?>
 					Bart:
