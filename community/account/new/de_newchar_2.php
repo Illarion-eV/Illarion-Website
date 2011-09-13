@@ -156,7 +156,7 @@
 				<span id="hair_color" style="width:97%;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="haircolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
-                <a onclick="colorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <a onclick="HairColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 
 				Haare:

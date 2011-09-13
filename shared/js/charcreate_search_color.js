@@ -1,4 +1,4 @@
-function colorChange(color, image)
+function hairColorChange(color, image)
 {
 	var params = '';
 	params+='color='+color;
