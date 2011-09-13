@@ -16,7 +16,7 @@ function skinColorChange(color, image)
 			evalJS: false,
 			onComplete: function(response)
 			{
-				parseResponse( response.responseXML );
+				parseResponse( response.responseXML, 'char_image' );
 
 				$('ajax_works').setStyle({
 						background: ''
@@ -47,7 +47,7 @@ function hairColorChange(color, image)
 			evalJS: false,
 			onComplete: function(response)
 			{
-				parseResponse( response.responseXML );
+				parseResponse( response.responseXML, 'hair_image' );
 
 				$('ajax_works').setStyle({
 						background: ''
@@ -64,14 +64,14 @@ function hairChange(select)
 {
 
 }
-function parseResponse( object )
+function parseResponse( object, target )
 {
 	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus
 	if ( object.nodeType == 9 ) {
 		if (object.childNodes.length > 0) {
 			for( var i = 0;i<object.childNodes.length; i++ ) {
 			    if (object.childNodes[i].nodeType != 10 && object.childNodes[i].nodeType != 7) {
-			    	return parseResponse( object.childNodes[i] );
+			    	return parseResponse( object.childNodes[i] , target);
 				};
 			};
 		};
@@ -80,7 +80,7 @@ function parseResponse( object )
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
 				if (object.childNodes[i].nodeName == 'newimage') {
-					$('char_image').src = object.childNodes[i].firstChild.nodeValue;
+					$(target).src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};
 
