@@ -63,11 +63,11 @@ function hairColorChange(color, image)
 	haircolor = color;
 }
 
-function hairChange(hair, color)
+function hairChange(image, color)
 {
 	var params = '';
 	params+='color='+color;
-	params+='&hair='+hair;
+	params+='&image='+image;
 
 	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
