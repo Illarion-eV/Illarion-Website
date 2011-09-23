@@ -161,7 +161,7 @@
                 <?php endforeach; ?>
 				<?php print_r($_POST); ?>
 				Haare:
-				<select name="hair" onchange="hairChange(document.this.form.hair.options[document.this.form.hair.selectedIndex].value, color)" style="width:100%;">
+				<select name="hair" onchange="hairChange(<?php echo char_create::getImageName($race, $sex)."_hair_2" ?>, color)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
