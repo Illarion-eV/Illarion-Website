@@ -1,3 +1,5 @@
+var haircolor = '';
+
 function skinColorChange(color, image)
 {
 	var params = '';
@@ -58,9 +60,10 @@ function hairColorChange(color, image)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
+	haircolor = color;
 }
 
-function hairChange(select)
+function hairChange(hair)
 {
 
 }
