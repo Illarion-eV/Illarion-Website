@@ -36,7 +36,7 @@ function hairChange(image, color)
 {
 	var params = '';
 	params+='color='+color;
-	params+='&image='+image;
+	params+='&image='+image+$('hair');
 
 	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
@@ -61,9 +61,9 @@ function hairChange(image, color)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
-	$('hairvalue').value = image.substring(5);
+	$('hairvalue').value = $('hair');
 	h_color = color;
-	h_value = image.substring(5);
+	h_value = $('hair');
 }
 
 function parseResponse( object, target )
