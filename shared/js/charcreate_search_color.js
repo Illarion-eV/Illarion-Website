@@ -38,7 +38,7 @@ function hairChange(image, color)
 	params+='color='+color;
 	params+='&image='+image;
 
-	alert($('hair'));
+	alert($('hair').options[$('hair').selectedIndex].value);
 
 	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
