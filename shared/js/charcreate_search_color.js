@@ -1,7 +1,7 @@
 var h_color = '412728';
 var h_value = '_hair_2';
 
-function skinColorChange(color, image)
+function skinColorChange(image, color)
 {
 	var params = '';
 	params+='color='+color;
