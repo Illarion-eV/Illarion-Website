@@ -165,7 +165,7 @@
 					<?php foreach( char_create::getHairvalues($race, $sex) as $key => $hair ): ?>
 						<option value="<?php echo $key; ?>"
 						<?php if ($key == HUMAN_FEMALE_HAIR_2) { echo ' selected="selected"'; } ?>
-						><?php echo $key; ?></option>
+						><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
 
