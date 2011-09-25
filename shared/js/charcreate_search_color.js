@@ -90,8 +90,6 @@ function hairChange(image, color)
 			}
 		}
 	);
-
-
 	hairvalue = image;
 
 }
