@@ -32,38 +32,6 @@ function skinColorChange(color, image)
 	$('skincolor').value = '#'+color;
 }
 
-function hairColorChange(color, image)
-{
-	var params = '';
-	params+='color='+color;
-	params+='&image='+image;
-
-	$('ajax_works').setStyle({
-		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
-	});
-
-	var newAJAX = new Ajax.Request(
-		url+'/community/account/new/ajax_search_colors.php',
-		{
-			method: 'post',
-			parameters: params,
-			evalJS: false,
-			onComplete: function(response)
-			{
-				parseResponse( response.responseXML, 'hair_image' );
-
-				$('ajax_works').setStyle({
-						background: ''
-				});
-			}
-		}
-	);
-
-	$('hair_color').style.backgroundColor = '#'+color;
-	$('haircolor').value = '#'+color;
-	h_color = color;
-}
-
 function hairChange(image, color)
 {
 	var params = '';
@@ -93,6 +61,7 @@ function hairChange(image, color)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
+	$('hairvalue').value = image.substring(5);
 	h_color = color;
 	h_value = image.substring(5);
 
