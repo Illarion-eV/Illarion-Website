@@ -1,5 +1,5 @@
 var haircolor = '412728';
-var hairvalue = 'hum_f_hair_2';
+var hairvalue = '_hair_2';
 
 function skinColorChange(color, image)
 {
