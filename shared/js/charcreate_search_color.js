@@ -61,7 +61,6 @@ function hairChange(image, color)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
-	$('hairvalue').value = image.substring(5);
 	h_color = color;
 	h_value = image.substring(5);
 
