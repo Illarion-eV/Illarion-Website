@@ -161,9 +161,9 @@
                 <?php endforeach; ?>
 				Haare:
 				<input type="hidden" id="hairvalue" value="" name="hairvalue" />
-				<select name="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex)."_hair_1" ?>', h_color)" style="width:100%;">
-					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
-						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
+				<select name="hair" onchange="alert(this.form.hair.options[this.form.hair.selectedIndex].value)" style="width:100%;">
+					<?php foreach( char_create::getHairvalues($race, $sex) as $key => $hair ): ?>
+						<option value="<?php echo $key; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
 

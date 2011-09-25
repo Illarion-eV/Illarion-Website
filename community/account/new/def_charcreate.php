@@ -188,9 +188,9 @@ define ('HUMAN_SKIN_COLOR_41',			"#6A2311");
 define ('HUMAN_SKIN_COLOR_42',			"#562A07");
 
 define ('HUMAN_FEMALE_HAIR_NO',			0);
-define ('HUMAN_FEMALE_HAIR_1',			"hum_f_hair_1");
-define ('HUMAN_FEMALE_HAIR_2',			"hum_f_hair_2");
-define ('HUMAN_FEMALE_HAIR_3',			"hum_f_hair_3");
+define ('HUMAN_FEMALE_HAIR_1',			"_hair_1");
+define ('HUMAN_FEMALE_HAIR_2',			"_hair_2");
+define ('HUMAN_FEMALE_HAIR_3',			"_hair_3");
 
 define ('HUMAN_MALE_HAIR_NO',			0);
 define ('HUMAN_MALE_HAIR_1',			"hum_m_hair1_stand");
