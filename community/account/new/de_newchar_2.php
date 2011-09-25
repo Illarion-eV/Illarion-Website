@@ -163,7 +163,9 @@
 				<input type="hidden" id="hairvalue" value="" name="hairvalue" />
 				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $key => $hair ): ?>
-						<option value="<?php echo $key; ?>"><?php echo $key; ?></option>
+						<option value="<?php echo $key; ?>"
+						<?php if ($key == HUMAN_FEMALE_HAIR_2) { echo ' selected="selected"'; } ?>
+						><?php echo $key; ?></option>
 					<?php endforeach; ?>
 				</select>
 
