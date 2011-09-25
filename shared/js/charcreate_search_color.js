@@ -1,4 +1,5 @@
-var haircolor = '';
+var haircolor = '412728';
+var hairvalue = '_hair_2';
 
 function skinColorChange(color, image)
 {
@@ -90,8 +91,8 @@ function hairChange(image, color)
 		}
 	);
 
-	$('hair_color').style.backgroundColor = '#'+color;
-	$('haircolor').value = '#'+color;
+	$('hairvalue').value = '#'+color;
+	hairvalue = image;
 
 }
 function parseResponse( object, target )
