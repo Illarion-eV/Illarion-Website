@@ -34,7 +34,7 @@ function skinColorChange(color, image)
 
 function hairChange(image, color)
 {
-	var = hairvalue = $('hair').options[$('hair').selectedIndex].value;
+	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
 	var params = '';
 	params+='color='+color;
 	params+='&image='+image+hairvalue;
