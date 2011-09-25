@@ -90,7 +90,7 @@ function hairChange(image, color)
 			}
 		}
 	);
-	hairvalue = image;
+	hairvalue = image.substring(5);
 
 }
 function parseResponse( object, target )
