@@ -91,7 +91,7 @@ function hairChange(image, color)
 		}
 	);
 
-	$('hairvalue').value = '#'+color;
+
 	hairvalue = image;
 
 }
