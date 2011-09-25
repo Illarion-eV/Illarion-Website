@@ -61,10 +61,11 @@ function hairChange(image, color)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
+	$('haircolor').value = image.substring(5);
 	h_color = color;
 	h_value = image.substring(5);
-
 }
+
 function parseResponse( object, target )
 {
 	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus

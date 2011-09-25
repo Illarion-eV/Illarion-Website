@@ -160,6 +160,7 @@
                 <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>'+h_value, '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 				Haare:
+				<input type="hidden" id="hairvalue" value="" name="hairvalue" />
 				<select name="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex)."_hair_1" ?>', h_color)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
