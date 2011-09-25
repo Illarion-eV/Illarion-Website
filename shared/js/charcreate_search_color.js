@@ -1,5 +1,5 @@
-var haircolor = '412728';
-var hairvalue = '_hair_2';
+var h_color = '412728';
+var h_value = '_hair_2';
 
 function skinColorChange(color, image)
 {
@@ -61,7 +61,7 @@ function hairColorChange(color, image)
 
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
-	haircolor = color;
+	h_color = color;
 }
 
 function hairChange(image, color)
@@ -90,7 +90,7 @@ function hairChange(image, color)
 			}
 		}
 	);
-	hairvalue = image.substring(5);
+	h_value = image.substring(5);
 
 }
 function parseResponse( object, target )

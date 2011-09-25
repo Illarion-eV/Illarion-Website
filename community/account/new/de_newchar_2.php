@@ -157,11 +157,11 @@
 				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="haircolor" value="" name="haircolor" />
                 <?php foreach ( $haircolors as $color ):?>
-                <a onclick="hairColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>'+hairvalue)" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <a onclick="hairColorChange('<?php echo substr($color, 1); ?>', '<?php echo char_create::getImageName($race, $sex) ?>'+h_value)" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 				<?php print_r($_POST); ?>
 				Haare:
-				<select name="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex)."_hair_1" ?>', haircolor)" style="width:100%;">
+				<select name="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex)."_hair_1" ?>', h_color)" style="width:100%;">
 					<?php foreach( char_create::getHairvalues($race, $sex) as $hair ): ?>
 						<option value="<?php echo $hair; ?>"><?php echo $hair; ?></option>
 					<?php endforeach; ?>
