@@ -69,7 +69,7 @@
 		return $skin_colors;
 	}
 
- 	public function getHairValues($base_img)
+ 	public function getHairValues($race, $gender)
 	{
 		switch($race){
 			case RACE_HUMAN:
