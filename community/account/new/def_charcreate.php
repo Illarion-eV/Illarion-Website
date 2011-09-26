@@ -148,16 +148,33 @@ define ('HUMAN_FEMALE_HAIR_2',			"_hair_2");
 define ('HUMAN_FEMALE_HAIR_3',			"_hair_3");
 
 define ('HUMAN_MALE_HAIR_0',			"_hair_0");
-define ('HUMAN_MALE_HAIR_1',			"hum_m_hair1_stand");
-define ('HUMAN_MALE_HAIR_2',			"hum_m_stand_hair_hair2");
-define ('HUMAN_MALE_HAIR_3',			"hum_m_stand_hair_hair3");
+define ('HUMAN_MALE_HAIR_1',			"_hair_1");
+define ('HUMAN_MALE_HAIR_2',			"_hair_2");
+define ('HUMAN_MALE_HAIR_3',			"_hair_3");
 
-define('HUMAN_BEARD_0',				"_beard_0");
+define('HUMAN_BEARD_0',					"_beard_0");
 define('HUMAN_BEARD_1',					"hum_m_beardfull_stand");
 define('HUMAN_BEARD_2',					"hum_m_stand_beard_beard2");
 define('HUMAN_BEARD_3',					"hum_m_stand_beard_beard3");
 define('HUMAN_BEARD_4',					"hum_m_stand_beard_beard4");
 define('HUMAN_BEARD_5',					"hum_m_stand_beard_beard5");
+
+define ('HALFLING_FEMALE_HAIR_1',			"_hair_1");
+define ('HALFLING_FEMALE_HAIR_2',			"_hair_2");
+define ('HALFLING_FEMALE_HAIR_3',			"_hair_3");
+
+define ('HALFLING_MALE_HAIR_1',			"_hair_1");
+define ('HALFLING_MALE_HAIR_2',			"_hair_2");
+
+define ('DWARF_FEMALE_HAIR_0',			"_hair_0");
+define ('DWARF_FEMALE_HAIR_1',			"_hair_1");
+define ('DWARF_FEMALE_HAIR_2',			"_hair_2");
+define ('DWARF_FEMALE_HAIR_3',			"_hair_3");
+
+define ('DWARF_MALE_HAIR_0',			"_hair_0");
+define ('DWARF_MALE_HAIR_1',			"_hair_1");
+define ('DWARF_MALE_HAIR_2',			"_hair_2");
+define ('DWARF_MALE_HAIR_3',			"_hair_3");
 
 
 define ('LIZARD_HAIR_COLOR_1',			"#FFF594");
@@ -246,6 +263,12 @@ define ('LIZARD_SKIN_COLOR_40',			"#B38A6E");
 define ('LIZARD_SKIN_COLOR_41',			"#A17654");
 define ('LIZARD_SKIN_COLOR_42',			"#92684F");
 
+define ('LIZARD_MALE_HAIR_0',			"_hair_0");
+define ('LIZARD_MALE_HAIR_1',			"_hair_1");
+define ('LIZARD_MALE_HAIR_2',			"_hair_2");
+define ('LIZARD_MALE_HAIR_3',			"_hair_3");
+define ('LIZARD_MALE_HAIR_4',			"_hair_4");
+define ('LIZARD_MALE_HAIR_5',			"_hair_5");
 
 define ('ORC_SKIN_COLOR_1',				"#A49049");
 define ('ORC_SKIN_COLOR_2',				"#998843");
@@ -290,6 +313,13 @@ define ('ORC_SKIN_COLOR_40',			"#7D5C31");
 define ('ORC_SKIN_COLOR_41',			"#5C3C27");
 define ('ORC_SKIN_COLOR_42',			"#422A1D");
 
+define ('ORC_MALE_HAIR_0',				"_hair_0");
+define ('ORC_MALE_HAIR_1',				"_hair_1");
+define ('ORC_MALE_HAIR_2',				"_hair_2");
+define ('ORC_MALE_HAIR_3',				"_hair_3");
+define ('ORC_MALE_HAIR_4',				"_hair_4");
+define ('ORC_MALE_HAIR_5',				"_hair_5");
+
 define ('ELF_SKIN_COLOR_1',				"#E3D9D5");
 define ('ELF_SKIN_COLOR_2',				"#DBCBCA");
 define ('ELF_SKIN_COLOR_3',				"#F1EBD4");
@@ -332,6 +362,13 @@ define ('ELF_SKIN_COLOR_39',			"#C3A794");
 define ('ELF_SKIN_COLOR_40',			"#A5826A");
 define ('ELF_SKIN_COLOR_41',			"#C4C59D");
 define ('ELF_SKIN_COLOR_42',			"#B3BB86");
+
+define ('ELF_FEMALE_HAIR_1',			"_hair_1");
+define ('ELF_FEMALE_HAIR_2',			"_hair_2");
+define ('ELF_FEMALE_HAIR_3',			"_hair_3");
+
+define ('ELF_MALE_HAIR_1',				"_hair_1");
+define ('ELF_MALE_HAIR_2',				"_hair_2");
 
 function getGenderArray()
 {
