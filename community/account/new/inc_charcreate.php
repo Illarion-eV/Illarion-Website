@@ -83,48 +83,36 @@
 				break;
 			case RACE_DWARF:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray();
+					$hair_values = getDwarfMaleHairArray();
 				}
 				else
 				{
-					$hair_values = getHumanFemaleHairArray();
+					$hair_values = getDwarfFemaleHairArray();
 				}
 				break;
 			case RACE_ELF:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray();
+					$hair_values = getElfMaleHairArray();
 				}
 				else
 				{
-					$hair_values = getHumanFemaleHairArray();
+					$hair_values = getElfFemaleHairArray();
 				}
 				break;
 			case RACE_HALFLING:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray();
+					$hair_values = getHalflingMaleHairArray();
 				}
 				else
 				{
-					$hair_values = getHumanFemaleHairArray();
+					$hair_values = getHalflingFemaleHairArray();
 				}
 				break;
 			case RACE_ORC:
-				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray();
-				}
-				else
-				{
-					$hair_values = getHumanFemaleHairArray();
-				}
+				$hair_values = getOrcMaleHairArray();
 				break;
 			case RACE_LIZARD:
-				if ($gender == GENDER_MALE) {
-					$hair_values = getLizardMaleHairArray();
-				}
-				else
-				{
-					$hair_values = getLizardFemaleHairArray();
-				}
+				$hair_values = getLizardMaleHairArray();
 				break;
 			default:
 				$hair_values = array();

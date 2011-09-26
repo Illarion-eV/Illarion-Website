@@ -506,6 +506,43 @@ function getHumanMaleHairArray()
 	);
 }
 
+function getHalflingFemaleHairArray()
+{
+	return array(
+	    HALFLING_FEMALE_HAIR_1 => "Mittellange, gewellte Haare",
+	    HALFLING_FEMALE_HAIR_2 => "Kurze Haare",
+	    HALFLING_FEMALE_HAIR_3 => "Mittellange, glatte"
+	);
+}
+
+function getHalflingMaleHairArray()
+{
+	return array(
+	    HALFLING_MALE_HAIR_1 => "Mittellange Haare",
+	    HALFLING_MALE_HAIR_2 => "Kurze Haare",
+	);
+}
+
+function getDwarfFemaleHairArray()
+{
+	return array(
+		DWARF_FEMALE_HAIR_0 => "--Keine Haare--",
+	    DWARF_FEMALE_HAIR_1 => "Lange, offene Haare",
+	    DWARF_FEMALE_HAIR_2 => "Zöpfe",
+	    DWARF_FEMALE_HAIR_3 => "Pferdeschwanz"
+	);
+}
+
+function getDwarfMaleHairArray()
+{
+	return array(
+		DWARF_MALE_HAIR_0 => "--Keine Haare--",
+	    DWARF_MALE_HAIR_1 => "Kurze Haare",
+	    DWARF_MALE_HAIR_2 => "Lange Haare (1)",
+	    DWARF_MALE_HAIR_3 => "Lange Haare (2)"
+	);
+}
+
 function getHumanBeardArray()
 {
 	return array(
@@ -614,6 +651,18 @@ function getLizardSkinColorArray()
 	);
 }
 
+function getLizardMaleHairArray()
+{
+	return array(
+		LIZARD_MALE_HAIR_0 => "--Kein Kamm--",
+	    LIZARD_MALE_HAIR_1 => "Runder Kamm",
+	    LIZARD_MALE_HAIR_2 => "Gezackter Kamm",
+	    LIZARD_MALE_HAIR_3 => "Einfacher Zacken",
+		LIZARD_MALE_HAIR_4 => "Doppelter Zacken",
+		LIZARD_MALE_HAIR_5 => "Zackenkranz"
+	);
+}
+
 function getOrcSkinColorArray()
 {
 return array(
@@ -662,6 +711,18 @@ return array(
 	);
 }
 
+function getOrcMaleHairArray()
+{
+	return array(
+		ORC_MALE_HAIR_0 => "--Keine Haare",
+	    ORC_MALE_HAIR_1 => "Pferdeschwanz",
+	    ORC_MALE_HAIR_2 => "Mönchsplatte",
+	    ORC_MALE_HAIR_3 => "Langer Pferdeschwanz",
+		ORC_MALE_HAIR_4 => "Gewusel",
+		ORC_MALE_HAIR_5 => "Großes Gewusel"
+	);
+}
+
 function getElfSkinColorArray()
 {
 	return array(
@@ -707,6 +768,23 @@ function getElfSkinColorArray()
 		ELF_SKIN_COLOR_40,
 		ELF_SKIN_COLOR_41,
 		ELF_SKIN_COLOR_42
+	);
+}
+
+function getElfFemaleHairArray()
+{
+	return array(
+	    ELF_FEMALE_HAIR_1 => "Pferdeschwanz",
+	    ELF_FEMALE_HAIR_2 => "Halblange Haare",
+	    ELF_FEMALE_HAIR_3 => "Lange Haare",
+	);
+}
+
+function getElfMaleHairArray()
+{
+	return array(
+	    ELF_MALE_HAIR_1 => "Kurze Haare",
+	    ELF_MALE_HAIR_2 => "Lange Haare",
 	);
 }
 ?>
