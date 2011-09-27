@@ -169,9 +169,19 @@
 					<?php endforeach; ?>
 				</select>
 
-				<?php if ($sex == GENDER_MALE)
+				<input type="hidden" id="beardvalue" value="" name="beardvalue" />
+				<?php if (( $sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD) )
 				{ ?>
 					Bart:
+					<select name="beard" id="beard" onchange="beardChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
+						<?php foreach( char_create::getBeardvalues($race, $sex) as $key => $beard ): ?>
+							<option value="<?php echo $key; ?>"
+							<?php if ($key == 1) { echo ' selected="selected"'; } ?>
+							><?php echo $beard; ?></option>
+						<?php endforeach; ?>
+					</select>
+
+
 					<select name="beard" style="width:100%;">
 						<option value="1">Eins</option>
 						<option value="2">Zwei</option>

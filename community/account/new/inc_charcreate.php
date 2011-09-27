@@ -122,7 +122,24 @@
 
 	public function getBeardValues($race)
 	{
-		return getHumanBeardArray();
+		switch($race){
+			case RACE_HUMAN:
+				$beard_values = getHumanBeardArray();
+				break;
+			case RACE_DWARF:
+				$beard_values = getDwarfBeardArray();
+				break;
+			case RACE_HALFLING:
+				$beard_values = getHalflingBeardArray();
+				break;
+			case RACE_ORC:
+				$beard_values = getOrcBeardArray();
+				break;
+			default:
+				$beard_values = array();
+		}
+
+		return $beard_values;
 	}
 
  	public function getImageName($race, $gender)

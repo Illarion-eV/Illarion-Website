@@ -35,6 +35,7 @@ function skinColorChange(image, color)
 function hairChange(image, color)
 {
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
+
 	var params = '';
 	params+='color='+color;
 	params+='&image='+image+hairvalue;
@@ -65,6 +66,11 @@ function hairChange(image, color)
 	$('hairvalue').value = hairvalue;
 	h_color = color;
 	h_value = hairvalue;
+}
+
+function beardChange(xy, yz)
+{
+	true;
 }
 
 function parseResponse( object, target )
