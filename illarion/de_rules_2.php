@@ -307,11 +307,14 @@ so einen Vorteil für den Spieler bewirken, sind nicht gestattet.</p>
 <div><a id="copyright"></a></div>
 <h2>Urheberrecht</h2>
 
-<p>Sämtliche Inhalte von Illarion, das heißt alle Texte, die für Illarion
-verfasst wurden, alle Scripte, Bilder, Soundeffekte, Musik und Quellcodes, die
-im Client, auf der Homepage oder im Server vorliegen, gehören dem Illarion e.V.
-und sind damit urheberrechtlich geschützt, soweit nicht explizit anders
-angegeben. Diese Inhalte dürfen ohne die Zustimmung des Illarion e.V. nicht
-verwendet werden.</p>
+<p>Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) und die
+Serversoftware sind unter der <a href="http://www.gnu.de/documents/gpl.de.html">
+GPLv3</a> veröffentlicht und somit
+<a href="http://illarion.org/development/de_opensource.php">öffentlich einsehbar</a>
+und verwendbar. Alle anderen Inhalte von Illarion, das heißt alle Texte, die für
+Illarion verfasst wurden, alle Scripte, Grafiken, Soundeffekte, Musik und die
+Homepage gehören dem Illarion e.V. und sind damit urheberrechtlich geschützt,
+soweit nicht explizit anders angegeben. Diese Inhalte dürfen ohne die Zustimmung
+des Illarion e.V. nicht verwendet werden.</p>
 
 <?php Page::NavBarBottom(); ?>
