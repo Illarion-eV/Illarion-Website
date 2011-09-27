@@ -181,11 +181,6 @@
 						<?php endforeach; ?>
 					</select>
 
-
-					<select name="beard" style="width:100%;">
-						<option value="1">Eins</option>
-						<option value="2">Zwei</option>
-					</select>
 				<?php } ?>
 			</div>
 			<div>
