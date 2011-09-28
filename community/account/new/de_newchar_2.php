@@ -163,7 +163,7 @@
 				Haare:
 				<input type="hidden" id="hairvalue" value="" name="hairvalue" />
 				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
-					<?php foreach( char_create::getHairvalues($race, $sex) as $key => $hair ): ?>
+					<?php foreach( char_create::getHairValues($race, $sex) as $key => $hair ): ?>
 						<option value="<?php echo $key; ?>"
 						<?php if ($key == 1) { echo ' selected="selected"'; } ?>
 						><?php echo $hair; ?></option>
@@ -175,7 +175,7 @@
 				{ ?>
 					Bart:
 					<select name="beard" id="beard" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
-						<?php foreach( char_create::getBeardvalues($race, $sex) as $key => $beard ): ?>
+						<?php foreach( char_create::getBeardValues($race, $sex) as $key => $beard ): ?>
 							<option value="<?php echo $key; ?>"
 							<?php if ($key == 1) { echo ' selected="selected"'; } ?>
 							><?php echo $beard; ?></option>

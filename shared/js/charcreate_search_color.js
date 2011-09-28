@@ -1,5 +1,6 @@
 var h_color = '412728';
 var h_value = '_hair_2';
+var b_value = '_beard_1';
 
 function skinColorChange(image, color)
 {
