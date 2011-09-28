@@ -67,8 +67,10 @@ function hairChange(image, color)
 	$('hair_color').style.backgroundColor = '#'+color;
 	$('haircolor').value = '#'+color;
 	$('hairvalue').value = hairvalue;
+	$('beardvalue').value = beardvalue;
 	h_color = color;
 	h_value = hairvalue;
+	b_value = beardvalue;
 }
 
 function beardChange(xy, yz)

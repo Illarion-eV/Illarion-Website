@@ -140,7 +140,7 @@
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"CA9E78"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
 			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","412728"); ?>" style="position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_beard_0","412728"); ?>" style="position:relative;left:133px; top:73px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_beard_1","412728"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="height:250px;padding-left:320px;padding-right:20px;">
@@ -174,7 +174,7 @@
 				<?php if (( $sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD) )
 				{ ?>
 					Bart:
-					<select name="beard" id="beard" onchange="beardChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
+					<select name="beard" id="beard" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 						<?php foreach( char_create::getBeardvalues($race, $sex) as $key => $beard ): ?>
 							<option value="<?php echo $key; ?>"
 							<?php if ($key == 1) { echo ' selected="selected"'; } ?>
