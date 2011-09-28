@@ -36,7 +36,7 @@ function skinColorChange(image, color)
 function hairChange(image, color)
 {
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
-	if ($('beard').options[$('beard').selectedIndex].value === null)
+	if ($('beard') === null)
 	{
 		var beardvalue = '_beard_0';
 	}
