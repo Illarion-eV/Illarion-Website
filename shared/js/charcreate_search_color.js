@@ -38,6 +38,7 @@ function hairChange(image, color)
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
 	if ($('beard').options[$('beard').selectedIndex].value === null)
 	{
+		image = image.substr(0, image.length-1)+'m';
 		var beardvalue = '_beard_0';
 	}
 	else
