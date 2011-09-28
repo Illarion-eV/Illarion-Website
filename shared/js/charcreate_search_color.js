@@ -36,6 +36,7 @@ function skinColorChange(image, color)
 function hairChange(image, color)
 {
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
+
 	var beardvalue = $('beard').options[$('beard').selectedIndex].value;
 
 	var params = '';
@@ -74,11 +75,6 @@ function hairChange(image, color)
 	b_value = beardvalue;
 }
 
-function beardChange(xy, yz)
-{
-	true;
-}
-
 function parseResponse( object, hairtarget, beardtarget )
 {
 	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus
@@ -95,10 +91,10 @@ function parseResponse( object, hairtarget, beardtarget )
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
 				if (object.childNodes[i].nodeName == 'hairimage') {
-					$(hairtarget).src = object.childNodes[i].firstChild.nodeValue;
+					$('hairtarget').src = object.childNodes[i].firstChild.nodeValue;
 				}
 				if (object.childNodes[i].nodeName == 'beardimage') {
-					$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
+					$('beardtarget').src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};
 
