@@ -38,7 +38,8 @@ function hairChange(image, color)
 
 	var params = '';
 	params+='color='+color;
-	params+='&image='+image+hairvalue;
+	params+='&image='+image;
+	params+='&hairvalue='+hairvalue;
 
 	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
@@ -88,7 +89,7 @@ function parseResponse( object, target )
 	else if ( object.nodeType == 1 ) {
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
-				if (object.childNodes[i].nodeName == 'newimage') {
+				if (object.childNodes[i].nodeName == 'hairimage') {
 					$(target).src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};

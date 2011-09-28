@@ -19,7 +19,7 @@
 	}
 */
 	$color = $_POST['color'];
-	$image = $_POST['image'];
+	$hairimage = $_POST['image'].$_POST['hairvalue'];
 
 
 	//if (substr($_POST['base_image']-4) != ".png")
@@ -29,6 +29,5 @@
 ?>
 
 <image>
- <newimage><?php echo char_create::getConvertedImageUrl($image, $color); ?></newimage>
+ <hairimage><?php echo char_create::getConvertedImageUrl($hairimage, $color); ?></hairimage>
 </image>
-
