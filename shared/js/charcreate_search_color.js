@@ -35,11 +35,13 @@ function skinColorChange(image, color)
 function hairChange(image, color)
 {
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
+	var beardvalue = $('beard').options[$('beard').selectedIndex].value;
 
 	var params = '';
 	params+='color='+color;
 	params+='&image='+image;
 	params+='&hairvalue='+hairvalue;
+	params+='&beardvalue='+beardvalue;
 
 	$('ajax_works').setStyle({
 		background: 'transparent url('+url+'/shared/pics/ajax-loading.gif) no-repeat scroll center center'
@@ -53,7 +55,7 @@ function hairChange(image, color)
 			evalJS: false,
 			onComplete: function(response)
 			{
-				parseResponse( response.responseXML, 'hair_image' );
+				parseResponse( response.responseXML, 'hair_image', 'beard_image' );
 
 				$('ajax_works').setStyle({
 						background: ''
@@ -74,7 +76,7 @@ function beardChange(xy, yz)
 	true;
 }
 
-function parseResponse( object, target )
+function parseResponse( object, hairtarget, beardtarget )
 {
 	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus
 	if ( object.nodeType == 9 ) {
@@ -90,7 +92,10 @@ function parseResponse( object, target )
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
 				if (object.childNodes[i].nodeName == 'hairimage') {
-					$(target).src = object.childNodes[i].firstChild.nodeValue;
+					$(hairtarget).src = object.childNodes[i].firstChild.nodeValue;
+				}
+				if (object.childNodes[i].nodeName == 'beardimage') {
+					$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};
 
