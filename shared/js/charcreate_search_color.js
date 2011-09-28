@@ -36,8 +36,14 @@ function skinColorChange(image, color)
 function hairChange(image, color)
 {
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
-
-	var beardvalue = $('beard').options[$('beard').selectedIndex].value;
+	if ($('beard').options[$('beard').selectedIndex].value === null)
+	{
+		var beardvalue = '_beard_0';
+	}
+	else
+	{
+		var beardvalue = $('beard').options[$('beard').selectedIndex].value;
+	}
 
 	var params = '';
 	params+='color='+color;
