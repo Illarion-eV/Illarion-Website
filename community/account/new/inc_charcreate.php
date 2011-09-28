@@ -25,7 +25,7 @@
 				$hair_colors = getHumanHairColorArray();
 				break;
 			case RACE_ELF:
-				$hair_colors = getElfSkinColorArray();
+				$hair_colors = getElfHairColorArray();
 				break;
 			case RACE_HALFLING:
 				$hair_colors = getHumanHairColorArray();
