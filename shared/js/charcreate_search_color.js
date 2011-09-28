@@ -38,7 +38,6 @@ function hairChange(image, color)
 	var hairvalue = $('hair').options[$('hair').selectedIndex].value;
 	if ($('beard').options[$('beard').selectedIndex].value === null)
 	{
-		image = image.substr(0, image.length-1)+'m';
 		var beardvalue = '_beard_0';
 	}
 	else
@@ -89,7 +88,7 @@ function parseResponse( object, hairtarget, beardtarget )
 		if (object.childNodes.length > 0) {
 			for( var i = 0;i<object.childNodes.length; i++ ) {
 			    if (object.childNodes[i].nodeType != 10 && object.childNodes[i].nodeType != 7) {
-			    	return parseResponse( object.childNodes[i] , target);
+			    	return parseResponse( object.childNodes[i] , hairtarget, beardtarget);
 				};
 			};
 		};
@@ -98,10 +97,10 @@ function parseResponse( object, hairtarget, beardtarget )
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
 				if (object.childNodes[i].nodeName == 'hairimage') {
-					$('hairtarget').src = object.childNodes[i].firstChild.nodeValue;
+					$(hairtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
 				if (object.childNodes[i].nodeName == 'beardimage') {
-					$('beardtarget').src = object.childNodes[i].firstChild.nodeValue;
+					$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};
 
