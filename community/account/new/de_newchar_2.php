@@ -170,7 +170,7 @@
 				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 					<?php foreach( $hairvalues as $key => $hair ): ?>
 						<option value="<?php echo $key; ?>"
-						<?php if ($key == char_create::getStartHairValue($race, $sex)) { echo ' selected="selected"'; } ?>
+						<?php if ($key == "_hair_1") { echo ' selected="selected"'; } ?>
 						><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
@@ -182,7 +182,7 @@
 					<select name="beard" id="beard" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 						<?php foreach( $beardvalues as $key => $beard ): ?>
 							<option value="<?php echo $key; ?>"
-							<?php if ($key == char_create::getStartBeardValue($race, $sex)) { echo ' selected="selected"'; } ?>
+							<?php if ($key == "_beard_1") { echo ' selected="selected"'; } ?>
 							><?php echo $beard; ?></option>
 						<?php endforeach; ?>
 					</select>
