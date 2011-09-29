@@ -138,8 +138,6 @@
 			<?php $skincolors = char_create::getSkinColors($race); ?>
 			<?php $hairvalues = char_create::getHairValues($race, $sex); ?>
 			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
-			<?php $start_skin_color = $skincolors[mt_rand(0,41)]; ?>
-			<?php $start_hair_color = $haircolors[mt_rand(0,41)]; ?>
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
