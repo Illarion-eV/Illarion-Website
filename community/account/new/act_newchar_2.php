@@ -12,7 +12,7 @@
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
 		echo "Haare: ".$_POST['hairvalue']."<br/>";
 		echo "Bart: ".$_POST['beardvalue']."<br/>";
-/*
+
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
@@ -102,22 +102,52 @@
 			$hair_green = hexdec($hex_green);
 			$hair_blue = hexdec($hex_blue);
 
+		// Das hier sollte eigentlich in newchar_1 sein!!!
 		$appearance = 1;
 		switch ( $race )
 		{
-			case 0: if ($sex == 0) { $appearance =1;  } else { $appearance =16; } break;
-			case 1: if ($sex == 0) { $appearance =12; } else { $appearance =17; } break;
-			case 2: if ($sex == 0) { $appearance =24; } else { $appearance =25; } break;
-			case 3: if ($sex == 0) { $appearance =20; } else { $appearance =19; } break;
-			case 4: if ($sex == 0) { $appearance =13; } else { $appearance =18; } break;
-			case 5: $appearance =7; break;
-			case 6: if ($sex == 0) { $appearance =47; }	else { $appearance =46; } break;
-			case 7: $appearance =45; break;
-			case 8: if ($sex == 0) { $appearance =32; }	else { $appearance =49; } break;
+			case RACE_HUMAN: if ($sex == 0) { $appearance =1;  } else { $appearance =16; } break;
+			case RACE_DWARF: if ($sex == 0) { $appearance =12; } else { $appearance =17; } break;
+			case RACE_HALFLING: if ($sex == 0) { $appearance =24; } else { $appearance =25; } break;
+			case RACE_ELF: if ($sex == 0) { $appearance =20; } else { $appearance =19; } break;
+			case RACE_ORC: if ($sex == 0) { $appearance =13; } else { $appearance =18; } break;
+			case RACE_LIZARD: $appearance =7; break;
 		}
-
-		$query = 'INSERT INTO player (ply_playerid,ply_age,ply_weight,ply_body_height,ply_hairred,ply_hairgreen,ply_hairblue,ply_skinred,ply_skingreen,ply_skinblue,ply_appearance,ply_dob,ply_hitpoints,ply_mana,ply_foodlevel,ply_lifestate)'
-		.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).','.$pgSQL->Quote( $age ).','.$pgSQL->Quote( $new_weight ).','.$pgSQL->Quote( $new_bodyheight ).','.$pgSQL->Quote( $hair_red ).','.$pgSQL->Quote( $hair_green ).','.$pgSQL->Quote( $hair_blue ).','.$pgSQL->Quote( $skin_red ).','.$pgSQL->Quote( $skin_green ).','.$pgSQL->Quote( $skin_blue ).','.$pgSQL->Quote( $appearance ).','.$pgSQL->Quote( $illa_day_stamp ).',10000,0,50000,1)'
+/*
+		$query = 'INSERT INTO player (
+   					ply_playerid,
+   					ply_age,
+   					ply_weight,
+   					ply_body_height,
+   					ply_hairred,
+   					ply_hairgreen,
+   					ply_hairblue,
+   					ply_skinred,
+   					ply_skingreen,
+   					ply_skinblue,
+   					ply_appearance,
+   					ply_dob,
+   					ply_hitpoints,
+   					ply_mana,
+   					ply_foodlevel,
+   					ply_lifestate)
+					VALUES (
+   					'.$pgSQL->Quote( $charid ).',
+   					'.$pgSQL->Quote( $age ).',
+   					'.$pgSQL->Quote( $new_weight ).',
+   					'.$pgSQL->Quote( $new_bodyheight ).',
+   					'.$pgSQL->Quote( $hair_red ).',
+   					'.$pgSQL->Quote( $hair_green ).',
+				    '.$pgSQL->Quote( $hair_blue ).',
+				    '.$pgSQL->Quote( $skin_red ).',
+				    '.$pgSQL->Quote( $skin_green ).',
+				    '.$pgSQL->Quote( $skin_blue ).',
+				    '.$pgSQL->Quote( $appearance ).',
+				    '.$pgSQL->Quote( $illa_day_stamp ).',
+				    10000,
+				    0,
+				    50000,
+				    1)'
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
