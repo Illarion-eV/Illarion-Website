@@ -138,23 +138,21 @@
 			<?php $skincolors = char_create::getSkinColors($race); ?>
 			<?php $hairvalues = char_create::getHairValues($race, $sex); ?>
 			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
-			<?php //$start_skin_color = $skincolors[mt_rand(0,41)]; ?>
-			<?php //$start_hair_color = $haircolors[mt_rand(0,41)]; ?>
+			<?php $start_skin_color = $skincolors[mt_rand(0,41)]; ?>
+			<?php $start_hair_color = $haircolors[mt_rand(0,41)]; ?>
 
-
-			<?php //echo $start_hair_color; ?>
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
-			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"999999"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
+			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"DCC3AF"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","666666"); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m_beard_1","666666"); ?>" style="position:relative;left:133px; top:73px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","482400"); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m_beard_1","482400"); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="height:250px;padding-left:320px;padding-right:20px;">
 
 				Hautfarbe:
-				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#666666;"></span>
+				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
@@ -163,7 +161,7 @@
 
 
 				Haarfarbe:
-				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#666666;"></span>
+				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#CA9E78;"></span>
 				<input type="hidden" id="haircolor" value="" name="haircolor" />
                 <?php foreach ( $haircolors as $color ):?>
                 <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
