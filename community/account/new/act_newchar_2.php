@@ -113,6 +113,21 @@
 			case RACE_ORC: if ($sex == 0) { $appearance =13; } else { $appearance =18; } break;
 			case RACE_LIZARD: $appearance =7; break;
 		}
+
+		echo "ID: ".$charid."<br/>";
+		echo "AGE: ".$age."<br/>";
+		echo "WEIGTH: ".$new_weight."<br/>";
+		echo "HEIGHT: ".$new_bodyheight."<br/>";
+		echo "HAIR RED: ".$hair_red."<br/>";
+		echo "HAIR GREEN: ".$hair_green."<br/>";
+		echo "HAIR BLUE: ".$hair_blue."<br/>";
+		echo "SKIN RED: ".$skin_red."<br/>";
+		echo "SKIN GREEN: ".$skin_green."<br/>";
+		echo "SKIN BLUE: ".$skin_blue."<br/>";
+		echo "APP: ".$appearance."<br/>";
+		echo "ILLA DAY STAMP: ".$illa_day_stamp."<br/>";
+
+
 /*
 		$query = 'INSERT INTO player (
    					ply_playerid,
