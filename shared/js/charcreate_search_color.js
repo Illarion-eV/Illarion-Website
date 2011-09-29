@@ -1,6 +1,4 @@
 var h_color = '';
-var h_value = '_hair_2';
-var b_value = '_beard_1';
 
 function skinColorChange(image, color)
 {
@@ -81,8 +79,7 @@ function hairChange(image, color)
 	$('hairvalue').value = hairvalue;
 	$('beardvalue').value = beardvalue;
 	h_color = color;
-	h_value = hairvalue;
-	b_value = beardvalue;
+
 }
 
 function parseResponse( object, hairtarget, beardtarget )
