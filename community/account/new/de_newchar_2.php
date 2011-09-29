@@ -152,7 +152,7 @@
 			<div style="height:250px;padding-left:320px;padding-right:20px;">
 
 				Hautfarbe:
-				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_skin_color; ?>;"></span>
+				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#666666;"></span>
 				<input type="hidden" id="skincolor" value="" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
@@ -161,7 +161,7 @@
 
 
 				Haarfarbe:
-				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_hair_color; ?>;"></span>
+				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#666666;"></span>
 				<input type="hidden" id="haircolor" value="" name="haircolor" />
                 <?php foreach ( $haircolors as $color ):?>
                 <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
