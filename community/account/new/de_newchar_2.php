@@ -141,15 +141,15 @@
 
 			<?php $start_hair_value  = "_hair_1"; ?>
 			<?php $start_beard_value = "_beard_0"; ?>
-			<?php $start_skin_color  = substr($skincolors[mt_rand(0,41)], 1); ?>
-			<?php $start_hair_color  = substr($haircolors[mt_rand(0,41)],1); ?>
+			<?php $start_skin_color  = $skincolors[mt_rand(0,41)]; ?>
+			<?php $start_hair_color  = $haircolors[mt_rand(0,41)]; ?>
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
-			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),$start_skin_color); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
+			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),substr($start_skin_color, 1)); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex).$start_hair_value,$start_hair_color); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,$start_hair_color); ?>" style="position:relative;left:133px; top:73px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex).$start_hair_value,substr($start_hair_color, 1)); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,substr($start_hair_color, 1)); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="height:250px;padding-left:320px;padding-right:20px;">

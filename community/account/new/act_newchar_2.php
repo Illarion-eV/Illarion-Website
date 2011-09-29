@@ -10,8 +10,8 @@
 		}
 		echo "Hautfarbe: ".$_POST['skincolor']."<br/>";
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
-		echo "Haare: ".$_POST['hair']."<br/>";
-		echo "Bart: ".$_POST['beard']."<br/>";
+		echo "Haare: ".$_POST['hairvalue']."<br/>";
+		echo "Bart: ".$_POST['beardvalue']."<br/>";
 /*
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
