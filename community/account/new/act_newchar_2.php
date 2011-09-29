@@ -12,7 +12,7 @@
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
 		echo "Haare: ".$_POST['hair']."<br/>";
 		echo "Bart: ".$_POST['beard']."<br/>";
-
+/*
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
@@ -121,5 +121,6 @@
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
+   */
 	}
 ?>

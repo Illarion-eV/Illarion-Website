@@ -79,7 +79,6 @@ function hairChange(image, color)
 	$('hairvalue').value = hairvalue;
 	$('beardvalue').value = beardvalue;
 	h_color = color;
-
 }
 
 function parseResponse( object, hairtarget, beardtarget )
