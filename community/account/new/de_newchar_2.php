@@ -139,13 +139,18 @@
 			<?php $hairvalues = char_create::getHairValues($race, $sex); ?>
 			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
 
+			<?php $start_hair_value  = "_hair_1"; ?>
+			<?php $start_beard_value = "_beard_1"; ?>
+			<?php $start_skin_color  = $skincolor[mt_rand(0,41)]; ?>
+			<?php $start_hair_color  = $haircolor[mt_rand(0,41)]; ?>
+
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
-			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),"DCC3AF"); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
+			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),$start_skin_color); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
 			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex)."_hair_1","482400"); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
-			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m_beard_1","482400"); ?>" style="position:relative;left:133px; top:73px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex).$start_hair_value,$start_hair_color); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,$start_hair_color); ?>" style="position:relative;left:133px; top:73px;" />
 			</div>
 
 			<div style="height:250px;padding-left:320px;padding-right:20px;">
@@ -170,7 +175,7 @@
 				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 					<?php foreach( $hairvalues as $key => $hair ): ?>
 						<option value="<?php echo $key; ?>"
-						<?php if ($key == "_hair_1") { echo ' selected="selected"'; } ?>
+						<?php if ($key == $start_hair_value) { echo ' selected="selected"'; } ?>
 						><?php echo $hair; ?></option>
 					<?php endforeach; ?>
 				</select>
@@ -182,7 +187,7 @@
 					<select name="beard" id="beard" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 						<?php foreach( $beardvalues as $key => $beard ): ?>
 							<option value="<?php echo $key; ?>"
-							<?php if ($key == "_beard_1") { echo ' selected="selected"'; } ?>
+							<?php if ($key == $start_beard_value) { echo ' selected="selected"'; } ?>
 							><?php echo $beard; ?></option>
 						<?php endforeach; ?>
 					</select>
