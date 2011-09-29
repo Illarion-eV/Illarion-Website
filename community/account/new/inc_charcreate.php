@@ -225,7 +225,7 @@
 	public function getStartBeardValue($race, $gender)
 	{
 		$beard_value = substr(self::getImageName($race, $gender), 0, -1);
-		$beard_value .= "_beard_1";
+		$beard_value .= "m_beard_1";
 
 		return $beard_value;
 	}
