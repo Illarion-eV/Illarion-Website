@@ -216,19 +216,6 @@
 		return $hair_color;
 	}
 
-	public function getStartHairValue($race, $gender)
-	{
-		$hair_value = "_hair_1";
-
-		return $hair_value;
-	}
-
-	public function getStartBeardValue($race, $gender)
-	{
-		$beard_value = "_beard_1";
-
-		return $beard_value;
-	}
 
 	public function getConvertedImageUrl($image_name, $farbcode)
 	{
