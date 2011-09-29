@@ -140,11 +140,10 @@
 			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
 
 			<?php $start_hair_value  = "_hair_1"; ?>
-			<?php $start_beard_value = "_beard_1"; ?>
+			<?php $start_beard_value = "_beard_0"; ?>
 			<?php $start_skin_color  = substr($skincolors[mt_rand(0,41)], 1); ?>
 			<?php $start_hair_color  = substr($haircolors[mt_rand(0,41)],1); ?>
 
-			<p><?php echo "1:".$start_hair_color."-".$start_skin_color."-".mt_rand(0,42); ?></p>
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
 			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),$start_skin_color); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
