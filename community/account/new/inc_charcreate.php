@@ -204,28 +204,19 @@
  		//$color_array = self::getSkinColors($race);
  		//$skin_color = '#'.$color_array[mt_rand(0,41)];
 
- 		$skin_color='#efgccc';
+ 		$skin_color='DCC3AF';
 
 		return $skin_color;
 	}
 
 	public function getStartHairColor($race)
 	{
+		//$color_array = self::getHairColors($race);
+		//$hair_color = '#'.$color_array[mt_rand(0,41)];
 
-	}
+		$hair_color='482400';
 
-	public function getStartHairValue($race, $gender)
-	{
-		$hair_value = "_hair_1";
-
-		return $hair_value;
-	}
-
-	public function getStartBeardValue($race, $gender)
-	{
-		$beard_value = "_beard_1";
-
-		return $beard_value;
+		return $hair_color;
 	}
 
 	public function getConvertedImageUrl($image_name, $farbcode)
