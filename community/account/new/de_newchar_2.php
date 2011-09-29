@@ -138,7 +138,7 @@
 			<?php $skincolors = char_create::getSkinColors($race); ?>
 			<?php $hairvalues = char_create::getHairValues($race, $sex); ?>
 			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
-			<?php $start_h_color = $haircolors[mt_rand(0,42)]; ?>
+			<?php $start_h_color = "DCC3AF"; ?>
 
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
 			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
