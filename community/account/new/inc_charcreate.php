@@ -199,6 +199,37 @@
 		return $name;
 	}
 
+ 	public function getStartSkinColor($race)
+	{
+ 		//$color_array = self::getSkinColors($race);
+ 		//$skin_color = '#'.$color_array[mt_rand(0,41)];
+
+ 		$skin_color='#efgccc';
+
+		return $skin_color;
+	}
+
+	public function getStartHairColor($race)
+	{
+
+	}
+
+	public function getStartHairValue($race, $gender)
+	{
+		$hair_value = self::getImageName($race, $gender);
+		$hair_value .= "_hair_1";
+
+		return $hair_value;
+	}
+
+	public function getStartBeardValue($race, $gender)
+	{
+		$beard_value = substr(self::getImageName($race, $gender), 0, -1);
+		$beard_value .= "_beard_1";
+
+		return $beard_value;
+	}
+
 	public function getConvertedImageUrl($image_name, $farbcode)
 	{
 		/*
