@@ -1,4 +1,4 @@
-var h_color = '412728';
+var h_color = '';
 var h_value = '_hair_2';
 var b_value = '_beard_1';
 
@@ -43,6 +43,10 @@ function hairChange(image, color)
 	else
 	{
 		var beardvalue = $('beard').options[$('beard').selectedIndex].value;
+	}
+	if (color.length == 0)
+	{
+		color = $('haircolor');
 	}
 
 	var params = '';
