@@ -141,8 +141,8 @@
 
 			<?php $start_hair_value  = "_hair_1"; ?>
 			<?php $start_beard_value = "_beard_1"; ?>
-			<?php $start_skin_color  = $skincolor[mt_rand(0,41)]; ?>
-			<?php $start_hair_color  = $haircolor[mt_rand(0,41)]; ?>
+			<?php $start_skin_color  = $skincolors[mt_rand(0,41)]; ?>
+			<?php $start_hair_color  = $haircolors[mt_rand(0,41)]; ?>
 
 			<p><?php echo "1:".$start_hair_color."-".$start_skin_color."-".mt_rand(0,42); ?></p>
 			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
