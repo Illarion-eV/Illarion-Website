@@ -156,21 +156,19 @@
 
 				Hautfarbe:
 				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#<?php echo $start_skin_color; ?>;"></span>
-				<input type="hidden" id="skincolor" value="" name="skincolor" />
+				<input type="hidden" id="skincolor" value="<?php echo $start_skin_color; ?>" name="skincolor" />
                 <?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 
-
-
 				Haarfarbe:
 				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:#<?php echo $start_hair_color; ?>;"></span>
-				<input type="hidden" id="haircolor" value="" name="haircolor" />
+				<input type="hidden" id="haircolor" value="<?php echo $start_hair_color; ?>" name="haircolor" />
                 <?php foreach ( $haircolors as $color ):?>
                 <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
                 <?php endforeach; ?>
 				Haare:
-				<input type="hidden" id="hairvalue" value="" name="hairvalue" />
+				<input type="hidden" id="hairvalue" value="<?php echo $start_hair_value; ?>" name="hairvalue" />
 				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
 					<?php foreach( $hairvalues as $key => $hair ): ?>
 						<option value="<?php echo $key; ?>"
@@ -179,7 +177,7 @@
 					<?php endforeach; ?>
 				</select>
 
-				<input type="hidden" id="beardvalue" value="" name="beardvalue" />
+				<input type="hidden" id="beardvalue" value="<?php echo $start_beard_value; ?>" name="beardvalue" />
 				<?php if (( $sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD) )
 				{ ?>
 					Bart:
