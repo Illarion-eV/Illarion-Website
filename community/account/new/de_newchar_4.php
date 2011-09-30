@@ -97,8 +97,9 @@ $query = 'SELECT spa_id, spa_name_de AS name'
 $pgSQL->setQuery( $query );
 $start_packs = $pgSQL->loadAssocList();
 
-
-
+Page::setXHTML();
+Page::addJavaScript( 'prototype' );
+Page::addJavaScript( 'newchar_3' );
 
 Page::Init();
 
@@ -111,3 +112,38 @@ Page::Init();
 			neue Ausrüstung bekommen. Die Wahl dieser Startausrüstung schränkt den weiteren Verlauf des Spiels nicht ein.
 			Wähle also einfach das Paket, dass Dir für den Anfang am meisten zusagt.</p>
 
+	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
+		<p>
+			<?php if (count($start_places)>1): ?>
+			<select name="location" id="location">
+				<?php foreach($start_places as $place): ?>
+				<option value="<?php echo $place['spl_id']; ?>"><?php echo $place['name']; ?></option>
+				<?php endforeach; ?>
+			</select>
+			<?php else: ?>
+			<input type="hidden" name="location" value="<?php echo $start_places[0]['spl_id']; ?>" />
+			<?php echo $start_places[0]['name']; ?>
+			<?php endif; ?>
+		</p>
+
+		<h2>Startausrüstung</h2>
+
+		<select name="startpack" id="startpack">
+			<?php foreach($start_packs as $pack): ?>
+			<option value="<?php echo $pack['spa_id']; ?>"><?php echo $pack['name']; ?></option>
+			<?php endforeach; ?>
+		</select>
+		<button onclick="selectStartpack();return false;" style="margin-right:20px;">Anzeigen</button>
+		<span id="loading" style="display:none;">
+			<img src="<?php echo Page::getImageURL(); ?>/ajax-loading-small.gif" style="height:16px;width:16px;margin-right:10px;" alt="Laden..." />
+			Wird geladen...
+		</span>
+
+		<div id="startpack_area"></div>
+
+		<p style="text-align:center;padding:10px;">
+			<input type="hidden" name="sel_pack" id="sel_pack" value="" />
+			<input type="hidden" name="action" value="newchar_3" />
+			<input type="submit" name="submit" value="Daten speichern" />
+		</p>
+	</form>
