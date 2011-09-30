@@ -667,7 +667,7 @@ function getDwarfMaleHairArray()
 	);
 }
 
-function getDwarfMaleBeardArray()
+function getDwarfBeardArray()
 {
 	return array(
 	    DWARF_BEARD_0 => "--Kein Bart--",
