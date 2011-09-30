@@ -136,12 +136,14 @@
 		echo "ILLA DAY STAMP: ".$illa_day_stamp."<br/>";
 
 
-/*
+
 		$query = 'INSERT INTO player (
    					ply_playerid,
    					ply_age,
    					ply_weight,
    					ply_body_height,
+					ply_hair,
+					ply_beard,
    					ply_hairred,
    					ply_hairgreen,
    					ply_hairblue,
@@ -159,6 +161,8 @@
    					'.$pgSQL->Quote( $age ).',
    					'.$pgSQL->Quote( $new_weight ).',
    					'.$pgSQL->Quote( $new_bodyheight ).',
+   					'.$pgSQL->Quote( $hair_id ).',
+   					'.$pgSQL->Quote( $beard_id ).',
    					'.$pgSQL->Quote( $hair_red ).',
    					'.$pgSQL->Quote( $hair_green ).',
 				    '.$pgSQL->Quote( $hair_blue ).',
@@ -174,6 +178,6 @@
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
-   */
+
 	}
 ?>
