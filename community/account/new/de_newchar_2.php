@@ -145,26 +145,20 @@
 		<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,substr($start_hair_color, 1)); ?>" style="position:relative;left:133px; top:73px;" />
 		</div>
 
-		<div style="height:250px;padding-left:320px;padding-right:20px;">
+		<div style="height:250px;padding-left:320px;padding-right:20px;background-color:#ff0000;">
 
 			Hautfarbe:
 			<span id="skin_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_skin_color; ?>;"></span>
 			<input type="hidden" id="skincolor" value="<?php echo $start_skin_color; ?>" name="skincolor" />
-				<?php $i =1; ?>
 				<?php foreach ( $skincolors as $color ):?>
                 <a onclick="skinColorChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
-				<?php if ($i==21) { echo "<br/>"; } ?>
-				<?php $i++; ?>
                 <?php endforeach; ?>
 
 			Haarfarbe:
 			<span id="hair_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_hair_color; ?>;"></span>
 			<input type="hidden" id="haircolor" value="<?php echo $start_hair_color; ?>" name="haircolor" />
-				<?php $i =1; ?>
                 <?php foreach ( $haircolors as $color ):?>
                 <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
-				<?php if ($i==21) { echo "<br/>"; } ?>
-				<?php $i++; ?>
                 <?php endforeach; ?>
 			Haare:
 			<input type="hidden" id="hairvalue" value="<?php echo $start_hair_value; ?>" name="hairvalue" />
