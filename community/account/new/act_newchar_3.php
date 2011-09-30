@@ -1,4 +1,6 @@
 <?php
+	print_r($_POST);
+
 	checkAndUpdateChar();
 
 	function checkAndUpdateChar()
