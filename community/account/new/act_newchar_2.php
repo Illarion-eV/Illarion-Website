@@ -10,12 +10,12 @@
 			Messages::add((Page::isGerman()?'Nicht eingeloggt':'Not logged in'),'error');
 			return;
 		}
-
+/*
 		echo "Hautfarbe: ".$_POST['skincolor']."<br/>";
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
 		echo "Haare: ".$_POST['hairvalue']."<br/>";
 		echo "Bart: ".$_POST['beardvalue']."<br/>";
-
+*/
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
@@ -119,7 +119,7 @@
 			case RACE_ORC: if ($sex == 0) { $appearance =13; } else { $appearance =18; } break;
 			case RACE_LIZARD: $appearance =7; break;
 		}
-
+/*
 		echo "ID: ".$charid."<br/>";
 		echo "AGE: ".$age."<br/>";
 		echo "WEIGTH: ".$new_weight."<br/>";
@@ -134,7 +134,7 @@
 		echo "SKIN BLUE: ".$skin_blue."<br/>";
 		echo "APP: ".$appearance."-".$race."<br/>";
 		echo "ILLA DAY STAMP: ".$illa_day_stamp."<br/>";
-
+*/
 
 
 		$query = 'INSERT INTO player (
