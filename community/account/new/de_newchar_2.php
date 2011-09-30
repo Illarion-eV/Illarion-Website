@@ -3,8 +3,6 @@
 
 	IllaUser::requireLogin();
 
-	Page::Init();
-
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
