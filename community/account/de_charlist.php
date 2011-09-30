@@ -50,6 +50,10 @@
 				<?php else: ?>
 				<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">Neuen Charakter erstellen</a>
 				<?php endif; ?>
+
+				<?php if (IllaUser::$name == "kadiya"): ?>
+				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php">Neuen Testserver-Charakter erstellen</a>
+				<?php endif; ?>
 			</td>
 		</tr>
 	</tfoot>
