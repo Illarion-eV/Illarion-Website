@@ -96,7 +96,7 @@
 					<td>Server:</td>
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
-							<option value="0">Spielserver</option>
+							<!--<option value="0">Spielserver</option>  Spielserver fuer die neue charerschaffung deaktiviert-->
 							<option value="1">Testserver</option>
 						</select>
 					</td>
