@@ -44,7 +44,8 @@ function hairChange(image, color)
 	}
 	if (color.length == 0)
 	{
-		color = $('haircolor').value;
+		color = $('haircolor').value.substring(1);
+
 	}
 
 	var params = '';
