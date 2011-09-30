@@ -589,10 +589,10 @@ function getHumanFemaleHairArray()
 {
 	return array(
 		HUMAN_FEMALE_HAIR_0 => "--Keine Haare--",
-	    HUMAN_FEMALE_HAIR_1 => "Kurze Haare",
-	    HUMAN_FEMALE_HAIR_2 => "Lange, offene Haare",
-	    HUMAN_FEMALE_HAIR_3 => "Lange Zöpfe",
-	    HUMAN_FEMALE_HAIR_4 => "Hochgesteckte Haare"
+	    HUMAN_FEMALE_HAIR_1 => "Mittellange Haare",
+	    HUMAN_FEMALE_HAIR_4 => "Hochgesteckte Haare",
+	    HUMAN_FEMALE_HAIR_7 => "Lange, offene Haare",
+	    HUMAN_FEMALE_HAIR_8 => "Lange Zöpfe"
 	);
 }
 
@@ -610,30 +610,30 @@ function getHumanBeardArray()
 {
 	return array(
 		HUMAN_BEARD_0 => "--Kein Bart--",
-	    HUMAN_BEARD_1 => "Vollbart",
-	    HUMAN_BEARD_2 => "Backenbart",
-	    HUMAN_BEARD_3 => "Bauschebart",
-	    HUMAN_BEARD_4 => "Ziegenbart",
+	    HUMAN_BEARD_1 => "Backenbart",
+	    HUMAN_BEARD_3 => "Spitzbart",
+	    HUMAN_BEARD_4 => "Bauschebart",
 	    HUMAN_BEARD_5 => "Lincolnbart",
-	    HUMAN_BEARD_6 => "Kaptainsbart"
+	    HUMAN_BEARD_6 => "Vollbart",
+	    HUMAN_BEARD_8 => "Kaptainsbart"
 	);
 }
 
 function getHalflingFemaleHairArray()
 {
 	return array(
-	    HALFLING_FEMALE_HAIR_1 => "Mittellange, gewellte Haare",
-	    HALFLING_FEMALE_HAIR_2 => "Kurze Haare",
-	    HALFLING_FEMALE_HAIR_3 => "Mittellange, glatte",
-	    HALFLING_FEMALE_HAIR_4 => "Hochgesteckte Haare"
+	    HALFLING_FEMALE_HAIR_1 => "Mittellange, glatte Haare",
+	    HALFLING_FEMALE_HAIR_2 => "Mittellange, glatte",
+	    HALFLING_FEMALE_HAIR_4 => "Hochgesteckte Haare",
+	 	HALFLING_FEMALE_HAIR_9 => "Pferdeschwanz"
 	);
 }
 
 function getHalflingMaleHairArray()
 {
 	return array(
-	    HALFLING_MALE_HAIR_1 => "Mittellange Haare",
-	    HALFLING_MALE_HAIR_2 => "Kurze Haare",
+	    HALFLING_MALE_HAIR_1 => "Kurze Haare",
+	    HALFLING_MALE_HAIR_2 => "Mittellange Haare"
 	);
 }
 
@@ -649,10 +649,11 @@ function getDwarfFemaleHairArray()
 {
 	return array(
 		DWARF_FEMALE_HAIR_0 => "--Keine Haare--",
-	    DWARF_FEMALE_HAIR_1 => "Lange, offene Haare",
-	    DWARF_FEMALE_HAIR_2 => "Zöpfe",
-	    DWARF_FEMALE_HAIR_3 => "Pferdeschwanz",
-	    DWARF_FEMALE_HAIR_4 => "Hochgesteckte Haare"
+	    DWARF_FEMALE_HAIR_1 => "Zöpfe",
+	    DWARF_FEMALE_HAIR_4 => "Hochgesteckte Haare",
+	    DWARF_FEMALE_HAIR_7 => "Lange, offene Haare",
+	    DWARF_FEMALE_HAIR_9 => "Pferdeschwanz"
+
 	);
 }
 
@@ -672,7 +673,7 @@ function getDwarfMaleBeardArray()
 	    DWARF_BEARD_0 => "--Kein Bart--",
 	    DWARF_BEARD_1 => "Backenbart",
 	    DWARF_BEARD_2 => "Vollbart",
-	    DWARF_BEARD_3 => "Rauschebart",
+	    DWARF_BEARD_4 => "Rauschebart",
 	);
 }
 
@@ -776,11 +777,11 @@ function getLizardMaleHairArray()
 {
 	return array(
 		LIZARD_MALE_HAIR_0 => "--Kein Kamm--",
-	    LIZARD_MALE_HAIR_1 => "Runder Kamm",
-	    LIZARD_MALE_HAIR_2 => "Gezackter Kamm",
-	    LIZARD_MALE_HAIR_3 => "Einfacher Zacken",
-		LIZARD_MALE_HAIR_4 => "Doppelter Zacken",
-		LIZARD_MALE_HAIR_5 => "Zackenkranz"
+		LIZARD_MALE_HAIR_1 => "Einfacher Zacken",
+		LIZARD_MALE_HAIR_2 => "Doppelter Zacken",
+		LIZARD_MALE_HAIR_4 => "Gezackter Kamm",
+	    LIZARD_MALE_HAIR_5 => "Runder Kamm",
+		LIZARD_MALE_HAIR_6 => "Zackenkranz"
 	);
 }
 
@@ -884,11 +885,11 @@ function getOrcMaleHairArray()
 {
 	return array(
 		ORC_MALE_HAIR_0 => "--Keine Haare",
-	    ORC_MALE_HAIR_1 => "Pferdeschwanz",
-	    ORC_MALE_HAIR_2 => "Mönchsplatte",
-	    ORC_MALE_HAIR_3 => "Langer Pferdeschwanz",
+		ORC_MALE_HAIR_1 => "Kurze Haare",
+	    ORC_MALE_HAIR_2 => "Pferdeschwanz",
+		ORC_MALE_HAIR_3 => "Großes Gewusel",
 		ORC_MALE_HAIR_4 => "Gewusel",
-		ORC_MALE_HAIR_5 => "Großes Gewusel"
+		ORC_MALE_HAIR_5 => "Langer Pferdeschwanz"
 	);
 }
 
@@ -998,10 +999,10 @@ function getElfSkinColorArray()
 function getElfFemaleHairArray()
 {
 	return array(
-	    ELF_FEMALE_HAIR_1 => "Pferdeschwanz",
-	    ELF_FEMALE_HAIR_2 => "Halblange Haare",
-	    ELF_FEMALE_HAIR_3 => "Lange Haare",
-	    ELF_FEMALE_HAIR_4 => "Hochgesteckte Haare"
+		ELF_FEMALE_HAIR_1 => "Halblange Haare",
+		ELF_FEMALE_HAIR_4 => "Hochgesteckte Haare",
+	    ELF_FEMALE_HAIR_7 => "Lange Haare",
+	    ELF_FEMALE_HAIR_8 => "Pferdeschwanz"
 	);
 }
 
@@ -1009,7 +1010,7 @@ function getElfMaleHairArray()
 {
 	return array(
 	    ELF_MALE_HAIR_1 => "Kurze Haare",
-	    ELF_MALE_HAIR_2 => "Lange Haare",
+	    ELF_MALE_HAIR_2 => "Halblange Haare",
 	);
 }
 ?>
