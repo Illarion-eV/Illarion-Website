@@ -144,9 +144,9 @@ define ('HUMAN_SKIN_COLOR_42',			"#562A07");
 
 define ('HUMAN_FEMALE_HAIR_0',			"_hair_0");
 define ('HUMAN_FEMALE_HAIR_1',			"_hair_1");
-define ('HUMAN_FEMALE_HAIR_2',			"_hair_2");
-define ('HUMAN_FEMALE_HAIR_3',			"_hair_3");
 define ('HUMAN_FEMALE_HAIR_4',			"_hair_4");
+define ('HUMAN_FEMALE_HAIR_7',			"_hair_7");
+define ('HUMAN_FEMALE_HAIR_8',			"_hair_8");
 
 define ('HUMAN_MALE_HAIR_0',			"_hair_0");
 define ('HUMAN_MALE_HAIR_1',			"_hair_1");
@@ -155,16 +155,16 @@ define ('HUMAN_MALE_HAIR_3',			"_hair_3");
 
 define('HUMAN_BEARD_0',					"_beard_0");
 define('HUMAN_BEARD_1',					"_beard_1");
-define('HUMAN_BEARD_2',					"_beard_2");
 define('HUMAN_BEARD_3',					"_beard_3");
 define('HUMAN_BEARD_4',					"_beard_4");
 define('HUMAN_BEARD_5',					"_beard_5");
 define('HUMAN_BEARD_6',					"_beard_6");
+define('HUMAN_BEARD_8',					"_beard_8");
 
 define ('HALFLING_FEMALE_HAIR_1',		"_hair_1");
 define ('HALFLING_FEMALE_HAIR_2',		"_hair_2");
-define ('HALFLING_FEMALE_HAIR_3',		"_hair_3");
 define ('HALFLING_FEMALE_HAIR_4',		"_hair_4");
+define ('HALFLING_FEMALE_HAIR_9',		"_hair_9");
 
 define ('HALFLING_MALE_HAIR_1',			"_hair_1");
 define ('HALFLING_MALE_HAIR_2',			"_hair_2");
@@ -173,9 +173,9 @@ define('HALFLING_BEARD_0',				"_beard_0");
 
 define ('DWARF_FEMALE_HAIR_0',			"_hair_0");
 define ('DWARF_FEMALE_HAIR_1',			"_hair_1");
-define ('DWARF_FEMALE_HAIR_2',			"_hair_2");
-define ('DWARF_FEMALE_HAIR_3',			"_hair_3");
 define ('DWARF_FEMALE_HAIR_4',			"_hair_4");
+define ('DWARF_FEMALE_HAIR_7',			"_hair_7");
+define ('DWARF_FEMALE_HAIR_9',			"_hair_9");
 
 define ('DWARF_MALE_HAIR_0',			"_hair_0");
 define ('DWARF_MALE_HAIR_1',			"_hair_1");
@@ -185,7 +185,7 @@ define ('DWARF_MALE_HAIR_3',			"_hair_3");
 define('DWARF_BEARD_0',					"_beard_0");
 define('DWARF_BEARD_1',					"_beard_1");
 define('DWARF_BEARD_2',					"_beard_2");
-define('DWARF_BEARD_3',					"_beard_3");
+define('DWARF_BEARD_4',					"_beard_4");
 
 define ('LIZARD_HAIR_COLOR_1',			"#FFFC4F");
 define ('LIZARD_HAIR_COLOR_2',			"#FFF907");
@@ -276,9 +276,9 @@ define ('LIZARD_SKIN_COLOR_42',			"#92684F");
 define ('LIZARD_MALE_HAIR_0',			"_hair_0");
 define ('LIZARD_MALE_HAIR_1',			"_hair_1");
 define ('LIZARD_MALE_HAIR_2',			"_hair_2");
-define ('LIZARD_MALE_HAIR_3',			"_hair_3");
 define ('LIZARD_MALE_HAIR_4',			"_hair_4");
 define ('LIZARD_MALE_HAIR_5',			"_hair_5");
+define ('LIZARD_MALE_HAIR_6',			"_hair_6");
 
 define ('ORC_HAIR_COLOR_1',				"#B94820");
 define ('ORC_HAIR_COLOR_2',				"#C05A06");
@@ -462,9 +462,9 @@ define ('ELF_SKIN_COLOR_41',			"#C4C59D");
 define ('ELF_SKIN_COLOR_42',			"#B3BB86");
 
 define ('ELF_FEMALE_HAIR_1',			"_hair_1");
-define ('ELF_FEMALE_HAIR_2',			"_hair_2");
-define ('ELF_FEMALE_HAIR_3',			"_hair_3");
 define ('ELF_FEMALE_HAIR_4',			"_hair_4");
+define ('ELF_FEMALE_HAIR_7',			"_hair_7");
+define ('ELF_FEMALE_HAIR_8',			"_hair_8");
 
 define ('ELF_MALE_HAIR_1',				"_hair_1");
 define ('ELF_MALE_HAIR_2',				"_hair_2");
