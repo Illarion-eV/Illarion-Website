@@ -86,23 +86,26 @@
 		}
 		$illa_day_stamp = ( $illa_day_stamp * 365 ) + ( ( $month - 1 ) * 24 ) + $day;
 
-			// Skincode in RGB umwandeln
-			$hex_red = substr($_POST['skincolor'], 1, 2);
-			$hex_green = substr($_POST['skincolor'], 3, 2);
-			$hex_blue = substr($_POST['skincolor'], 5, 2);
-			$skin_red = hexdec($hex_red);
-			$skin_green = hexdec($hex_green);
-			$skin_blue = hexdec($hex_blue);
+		// ID von Haare und Bart extrahieren
+		$hair_id = substr($_POST['hairvalue'], 6);
+		$beard_id = substr($_POST['beardvalue'], 7);
 
-			// Haircode in RGB umwandeln
-			$hex_red = substr($_POST['haircolor'], 1, 2);
-			$hex_green = substr($_POST['haircolor'], 3, 2);
-			$hex_blue = substr($_POST['haircolor'], 5, 2);
-			$hair_red = hexdec($hex_red);
-			$hair_green = hexdec($hex_green);
-			$hair_blue = hexdec($hex_blue);
+		// Skincode in RGB umwandeln
+		$hex_red = substr($_POST['skincolor'], 1, 2);
+		$hex_green = substr($_POST['skincolor'], 3, 2);
+		$hex_blue = substr($_POST['skincolor'], 5, 2);
+		$skin_red = hexdec($hex_red);
+		$skin_green = hexdec($hex_green);
+		$skin_blue = hexdec($hex_blue);
 
-		// Das hier sollte eigentlich in newchar_1 sein!!!
+		// Haircode in RGB umwandeln
+		$hex_red = substr($_POST['haircolor'], 1, 2);
+		$hex_green = substr($_POST['haircolor'], 3, 2);
+		$hex_blue = substr($_POST['haircolor'], 5, 2);
+		$hair_red = hexdec($hex_red);
+		$hair_green = hexdec($hex_green);
+		$hair_blue = hexdec($hex_blue);
+
 		$appearance = 1;
 		switch ( $race )
 		{
@@ -118,13 +121,15 @@
 		echo "AGE: ".$age."<br/>";
 		echo "WEIGTH: ".$new_weight."<br/>";
 		echo "HEIGHT: ".$new_bodyheight."<br/>";
+		echo "HAIR: ".$hair_id."<br/>";
+		echo "BEARD: ".$beard_id."<br/>";
 		echo "HAIR RED: ".$hair_red."<br/>";
 		echo "HAIR GREEN: ".$hair_green."<br/>";
 		echo "HAIR BLUE: ".$hair_blue."<br/>";
 		echo "SKIN RED: ".$skin_red."<br/>";
 		echo "SKIN GREEN: ".$skin_green."<br/>";
 		echo "SKIN BLUE: ".$skin_blue."<br/>";
-		echo "APP: ".$appearance."<br/>";
+		echo "APP: ".$appearance."-".$race."<br/>";
 		echo "ILLA DAY STAMP: ".$illa_day_stamp."<br/>";
 
 
