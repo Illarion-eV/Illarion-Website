@@ -71,7 +71,6 @@
 					.PHP_EOL.'ply_willpower = '.$pgSQL->Quote($attributes['willpower']).','
 					.PHP_EOL.'ply_essence = '.$pgSQL->Quote($attributes['essence'])
 					.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid );
-		echo $query;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
 	}
