@@ -1,5 +1,4 @@
 <?php
-	print_r($_POST);
 
 	checkAndUpdateChar();
 
@@ -61,6 +60,7 @@
 			Messages::add((Page::isGerman()?'Die Summe der Attribute ist zu klein. Es müssen genau '.$limits['maxattribs'].' Attributspunkte verteilt werden.':'The sum of attributes is too low. You have to use exactly '.$limits['maxattribs'].' attribute points.'),'error');
 			return;
 		}
+
 		$query = 'UPDATE player SET '
 					.PHP_EOL.'ply_strength = '.$pgSQL->Quote($attributes['strength']).','
 					.PHP_EOL.'ply_dexterity = '.$pgSQL->Quote($attributes['dexterity']).','
@@ -69,8 +69,8 @@
 					.PHP_EOL.'ply_intelligence = '.$pgSQL->Quote($attributes['intelligence']).','
 					.PHP_EOL.'ply_perception = '.$pgSQL->Quote($attributes['perception']).','
 					.PHP_EOL.'ply_willpower = '.$pgSQL->Quote($attributes['willpower']).','
-					.PHP_EOL.'ply_essence = '.$pgSQL->Quote($attributes['essence']).','
-					.PHP_EOL.'WHERE ply_playerid ='.$pgSQL->Quote( $charid );
+					.PHP_EOL.'ply_essence = '.$pgSQL->Quote($attributes['essence'])
+					.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid );
 		echo $query;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
