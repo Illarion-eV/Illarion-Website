@@ -73,6 +73,7 @@
 		. ", `ply_essence` = ".$attributes['essence']
 		. "\n WHERE `char_id` =".$pgSQL->Quote( $charid )
 		;
+		echo $query;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
 	}
