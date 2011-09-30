@@ -145,7 +145,7 @@
 		<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,substr($start_hair_color, 1)); ?>" style="position:relative;left:133px; top:73px;" />
 		</div>
 
-		<div style="height:250px;padding-left:320px;padding-right:70px;background-color:#ff0000;">
+		<div style="height:250px;padding-left:320px;padding-right:70px;">
 
 			Hautfarbe:
 			<span id="skin_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_skin_color; ?>;"></span>
