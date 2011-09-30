@@ -4,7 +4,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 IllaUser::requireLogin();
 
 Page::Init();
-
+/*
 // Maximale Anzahl an Charakteren ist erreicht
 $pgSQL =& Database::getPostgreSQL( 'illarionserver' );
 $query = 'SELECT COUNT(*)'
@@ -28,6 +28,7 @@ Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 Page::addJavaScript( array( 'prototype', 'effects', 'newchar_1');
 
 Page::setXHTML();
+*/
 ?>
 
 <h1>Neuen Charakter erstellen</h1>

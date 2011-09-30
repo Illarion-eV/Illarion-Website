@@ -52,7 +52,7 @@
 				<?php endif; ?>
 
 				<?php if (IllaUser::$name == "kadiya"): ?>
-				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php">Neuen Testserver-Charakter erstellen</a>
+				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_1.php">Neuen Testserver-Charakter erstellen</a>
 				<?php endif; ?>
 			</td>
 		</tr>
