@@ -210,7 +210,7 @@
         <td>
             <?php if ($step == 4): ?>
             <a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php<?php echo $ident; ?>">
-				Schriit 4
+				Schritt 4
 			</a>
 			<?php elseif ($step > 4): ?>
 			<span style="color:#007f00;">
