@@ -62,17 +62,16 @@
 			Messages::add((Page::isGerman()?'Die Summe der Attribute ist zu klein. Es müssen genau '.$limits['maxattribs'].' Attributspunkte verteilt werden.':'The sum of attributes is too low. You have to use exactly '.$limits['maxattribs'].' attribute points.'),'error');
 			return;
 		}
-		$query = "UPDATE `player`"
-		. "\n SET `ply_strength` = ".$attributes['strength']
-		. ", `ply_dexterity` = ".$attributes['dexterity']
-		. ", `ply_constitution` = ".$attributes['constitution']
-		. ", `ply_agility` = ".$attributes['agility']
-		. ", `ply_intelligence` = ".$attributes['intelligence']
-		. ", `ply_perception` = ".$attributes['perception']
-		. ", `ply_willpower` = ".$attributes['willpower']
-		. ", `ply_essence` = ".$attributes['essence']
-		. "\n WHERE `char_id` =".$pgSQL->Quote( $charid )
-		;
+		$query = 'UPDATE player SET
+					ply_strength = '.$attributes['strength'].',
+					ply_dexterity = '.$attributes['dexterity'].',
+					ply_constitution = '.$attributes['constitution'].',
+					ply_agility = '.$attributes['agility'].',
+					ply_intelligence = '.$attributes['intelligence'].',
+					ply_perception = '.$attributes['perception'].',
+					ply_willpower = '.$attributes['willpower'].',
+					ply_essence = '.$attributes['essence'].',
+					WHERE char_id ='.$pgSQL->Quote( $charid );
 		echo $query;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
