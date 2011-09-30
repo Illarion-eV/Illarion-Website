@@ -70,6 +70,15 @@
 	Page::addJavaScript( 'charcreate_search_color' );
 
 	Page::Init();
+
+	$haircolors = char_create::getHairColors($race);
+	$skincolors = char_create::getSkinColors($race);
+	$hairvalues = char_create::getHairValues($race, $sex);
+	$beardvalues = char_create::getBeardValues($race, $sex);
+	$start_hair_value  = "_hair_1";
+	$start_beard_value = "_beard_0";
+	$start_skin_color  = $skincolors[mt_rand(0,41)];
+	$start_hair_color  = $haircolors[mt_rand(0,41)];
 ?>
 
 <h1>Neuen Charakter erstellen</h1>
@@ -78,52 +87,66 @@
 
 <p>In diesem Teil der Charaktererstellung kannst Du das Aussehen Deines Charakters festlegen.</p>
 
-	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
-		<div>
-			<h2>Informationen</h2>
-			<table style="width:100%;">
-				<tbody>
-					<tr>
-						<td>
-							Gewicht: <?php echo $limit_text['weight']; ?>
-						</td>
-						<td style="width:423px;">
-							<?php include_slider( $limits, 'weight' ); ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Größe: <?php echo $limit_text['height']; ?>
-						</td>
-						<td>
-							<?php include_slider( $limits, 'bodyheight' ); ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Alter: <?php echo $limits['minage']; ?> Jahre bis <?php echo $limits['maxage']; ?> Jahre
-						</td>
-						<td>
-							<?php include_slider( $limits, 'age' ); ?>
-							<p>
-								Geburtsdatum:
-								<select name="day" id="day" style="width:50px;margin-right:10px;">
-									<?php for ($i = 1;$i <= 24;++$i): ?>
-									<option value="<?php echo $i; ?>"<?php echo ($dob['day'] == $i ? ' selected="selected"' : '' ); ?>><?php echo $i; ?>.</option>
-									<?php endfor; ?>
-								</select>
-								<select name="month" id="month" style="margin-left:10px;">
-									<?php for ($i = 1;$i <= 16;++$i): ?>
-									<option value="<?php echo $i; ?>"<?php echo ($dob['month'] == $i ? ' selected="selected"' : '' ); ?>><?php echo IllaDateTime::getMonthName( $i ); ?></option>
-									<?php endfor; ?>
-								</select>
-							</p>
-						</td>
-					</tr>
+<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<div>
+		<h2>Informationen</h2>
+		<table style="width:100%;">
+			<tbody>
+				<tr>
+					<td>
+						Gewicht: <?php echo $limit_text['weight']; ?>
+					</td>
+					<td style="width:423px;">
+						<?php include_slider( $limits, 'weight' ); ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Größe: <?php echo $limit_text['height']; ?>
+					</td>
+					<td>
+						<?php include_slider( $limits, 'bodyheight' ); ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Alter: <?php echo $limits['minage']; ?> Jahre bis <?php echo $limits['maxage']; ?> Jahre
+					</td>
+					<td>
+						<?php include_slider( $limits, 'age' ); ?>
+						<p>
+							Geburtsdatum:
+							<select name="day" id="day" style="width:50px;margin-right:10px;">
+								<?php for ($i = 1;$i <= 24;++$i): ?>
+								<option value="<?php echo $i; ?>"<?php echo ($dob['day'] == $i ? ' selected="selected"' : '' ); ?>><?php echo $i; ?>.</option>
+								<?php endfor; ?>
+							</select>
+							<select name="month" id="month" style="margin-left:10px;">
+								<?php for ($i = 1;$i <= 16;++$i): ?>
+								<option value="<?php echo $i; ?>"<?php echo ($dob['month'] == $i ? ' selected="selected"' : '' ); ?>><?php echo IllaDateTime::getMonthName( $i ); ?></option>
+								<?php endfor; ?>
+							</select>
+						</p>
+					</td>
+				</tr>
 
-				</tbody>
-			</table>
-			<?php include_heightweight_js( $limits ); ?>
-            <?php include_age_js( $limits ); ?>
+			</tbody>
+		</table>
+		<?php include_heightweight_js( $limits ); ?>
+        <?php include_age_js( $limits ); ?>
+
+		<h2>Aussehen</h2>
+
+		<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
+			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
+			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),substr($start_skin_color, 1)); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
+			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex).$start_hair_value,substr($start_hair_color, 1)); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,substr($start_hair_color, 1)); ?>" style="position:relative;left:133px; top:73px;" />
 		</div>
-	</form>
+
+
+
+
+	</div>
+</form>
