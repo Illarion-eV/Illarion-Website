@@ -88,6 +88,7 @@
 					$step = 5;
 				}
 			}
+		}
 	}
 
 	Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
