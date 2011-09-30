@@ -52,9 +52,21 @@
 		.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
 		;
 		$pgSQL->setQuery( $query );
+
 		if ($pgSQL->loadResult() == 1)
 		{
 			$step = 3;
+			$query = 'SELECT COUNT(*)'
+			.PHP_EOL.' FROM player'
+			.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
+			.PHP_EOL.' AND ply_dob > 0'
+			;
+			$pgSQL->setQuery( $query );
+
+			if ($pgSQL->loadResult() > 0)
+			{
+				$step = 4;
+			}
 			$query = 'SELECT COUNT(*)'
 			.PHP_EOL.' FROM playerskills'
 			.PHP_EOL.' WHERE psk_playerid = '.$pgSQL->Quote( $charid )
@@ -62,7 +74,7 @@
 			$pgSQL->setQuery( $query );
 			if ($pgSQL->loadResult() > 0)
 			{
-				$step = 4;
+				$step = 5;
 			}
 			else
 			{
@@ -73,10 +85,9 @@
 				$pgSQL->setQuery( $query );
 				if ($pgSQL->loadResult() > 0)
 				{
-					$step = 4;
+					$step = 5;
 				}
 			}
-		}
 	}
 
 	Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
