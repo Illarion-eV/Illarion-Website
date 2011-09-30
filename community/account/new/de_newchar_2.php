@@ -73,8 +73,8 @@
 
 	$haircolors = char_create::getHairColors($race);
 	$skincolors = char_create::getSkinColors($race);
-	/*
 	$hairvalues = char_create::getHairValues($race, $sex);
+	/*
 	$beardvalues = char_create::getBeardValues($race, $sex);
 
 	$start_hair_value  = "_hair_1";
