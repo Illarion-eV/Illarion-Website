@@ -49,7 +49,6 @@
 				return;
 			}
 			$sum += $attributes[$name];
-			$attributes[$name] = $pgSQL->Quote( $attributes[$name] );
 		}
 
 		if ($sum > $limits['maxattribs'])
