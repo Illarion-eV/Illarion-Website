@@ -54,7 +54,7 @@
 <div>
 	<h1>Schritt 1</h1>
 
-	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">
+	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
@@ -96,7 +96,7 @@
 					<td>Server:</td>
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
-							<option value="0">Spielserver</option>
+							<!--<option value="0">Spielserver</option>  Spielserver fuer die neue charerschaffung deaktiviert-->
 							<option value="1">Testserver</option>
 						</select>
 					</td>

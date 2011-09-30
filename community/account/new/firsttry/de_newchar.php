@@ -84,7 +84,7 @@
 	Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
 	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow', 'charcreate_search_color' ) );
 
 	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 
@@ -107,7 +107,7 @@
 
 <h1>Neuen Charakter erstellen</h1>
 
-<h2>Drei Schritte zu einem neuen Charakter für Illarion</h2>
+<h2>Vier Schritte zu einem neuen Charakter für Illarion</h2>
 
 <table style="width:100%">
 	<tr>

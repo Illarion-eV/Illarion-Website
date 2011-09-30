@@ -8,6 +8,8 @@
 	}
 
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
@@ -73,7 +75,9 @@
 		Page::addJavaScript( 'effects' );
 		Page::addCSS( 'slider' );
 		Page::addJavaScript( 'slider' );
+		Page::addJavaScript( 'charcreate_search_color' );
 	}
+
 	Page::Init();
 ?>
 
@@ -83,7 +87,7 @@
 	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Informationen</h2>
-			<table style="width:100%">
+			<table style="width:100%;">
 				<tbody>
 					<tr>
 						<td>
@@ -122,83 +126,78 @@
 							</p>
 						</td>
 					</tr>
+
 				</tbody>
 			</table>
 			<?php include_heightweight_js( $limits ); ?>
             <?php include_age_js( $limits ); ?>
 
 			<h2>Aussehen</h2>
-			<table style="width=100%">
-				<tbody>
-					<tr>
-						<td>
-							<?php if ($race==0) { $skincolors = array("F2C59E", "EFC096", "EABB92", "E2B38A", "DEAF87","D9AB84","D2A680","CDA17B","CA9E78","C69B75","BD9571","B8906C","B38B68","AC8360","A77F5C","9A7453","936E4E","8F6B4C","8A6749","856345","78573A"); } ?>
-							Hautfarbe:<span id="skin_color" style="width:100%;height:30px;display:block;"></span>
-							<input type="hidden" id="skincolor" value="" name="skincolor" />
-                            <?php foreach ( $skincolors as $color ): ?>
-                                <a onclick="$('skin_color').style.backgroundColor = '#<?php echo $color; ?>';$('skincolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
-                            <?php endforeach; ?>
-						</td>
-					</tr>
-					<tr>
-                        <td>
-                            <?php if ($race==0) { $haircolors = array("292C31", "342626", "443532", "5F4536", "7F6449","5B402B","84613B","84542E","D3C499","C18D54","AF6F3F","A15229","613F3E","85594C","633E2E","843629","6D2C32","984229","E9CE92","E0BD79","B6A88C"); } ?>
-                            Haarfarbe: <span id="hair_color" style="width:100%;height:30px;display:block;"></span>
-							<input type="hidden" id="haircolor" value="" name="haircolor" />
-                            <?php foreach ( $haircolors as $color ): ?>
-                                <a onclick="$('hair_color').style.backgroundColor = '#<?php echo $color; ?>';$('haircolor').value = '#<?php echo $color; ?>';" style="display: block;height: 10px;width: 10px;float: left;background-color: #<?php echo $color; ?>;border: 1px solid black;"></a>
-                            <?php endforeach; ?>
-                        </td>
-                    </tr>
-					<tr>
-                        <td>
-							<?php if ($sex==0) { ?>
-								<?php if ($race==0) { $hairs = array("hum_m_hair_1","hum_m_hair_2");  }
-								elseif ($race==1) { $hairs = array("dwa_m_hair_1","dwa_m_hair_2");  }
-								elseif ($race==2) { $hairs = array("hal_m_hair_1","hal_m_hair_2");  }
-								elseif ($race==3) { $hairs = array("elf_m_hair_1","elf_m_hair_2");  }
-								elseif ($race==4) { $hairs = array("orc_m_hair_1","orc_m_hair_2");  }
-								elseif ($race==5) { $hairs = array("liz_m_hair_1","liz_m_hair_2");  }
-							} else {
-								if ($race==0) { $hairs = array("hum_f_hair_1","hum_f_hair_2");  }
-								elseif ($race==1) { $hairs = array("dwa_f_hair_1","dwa_f_hair_2");  }
-								elseif ($race==2) { $hairs = array("hal_f_hair_1","hal_f_hair_2");  }
-								elseif ($race==3) { $hairs = array("elf_f_hair_1","elf_f_hair_2");  }
-								elseif ($race==4) { $hairs = array("orc_f_hair_1","orc_f_hair_2");  }
-								elseif ($race==5) { $hairs = array("liz_f_hair_1","liz_f_hair_2");  }
-							} ?>
-							<input type="hidden" id="hair" value="" name="hair" />
-							Haare: <br/>
-						 	<br/>
-							<?php foreach ( $hairs as $hair ): ?>
-								<a onclick="$('<?php echo $hair; ?>').style.border='1px solid black';$('hair').value = '<?php echo $hair; ?>';" ><img id="<?php echo $hair; ?>" src="<?php echo $url; ?>/shared/pics/chars/<?php echo $hair; ?>.png" style="width:25px;border: 1px solid black;"/></a>
-							<?php endforeach; ?>
-                        </td>
-                    </tr>
-					<?php if ( ((($race==0) || ($race==4)) && ($sex==0)) || ($race==1) ) { ?>
-						<tr>
-                    	    <td>
-								<?php if ($race==0) { $beards = array("hum_m_beard_1","hum_m_beard_2");  }
-								elseif ($race==1) { $beards = array("dwa_m_beard_1","dwa_m_beard_2");  }
-								elseif ($race==4) { $beards = array("orc_m_beard_1","orc_m_beard_2");  }
-								?>
-								<input type="hidden" id="beard" value="" name="beard" />
-                    	        Bart: <br/>
-								<br/>
-								<?php foreach ( $beards as $beard ): ?>
-                                	<a onclick="$('<?php echo $beard; ?>').style.border='1px solid black';$('beard').value = '<?php echo $beard; ?>';" ><img id="<?php echo $beard; ?>" src="<?php echo $url; ?>/shared/pics/chars/<?php echo $beard; ?>.png" style="width:25px"/></a>
-                            	<?php endforeach; ?>
-                    	    </td>
-                    	</tr>
-					<?php } ?>
-				</tbody>
-			</table>
 
-			<p style="text-align:center;padding-bottom:10px;">
-				<input type="hidden" name="action" value="newchar_2" />
-				<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
-				<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
-			</p>
+			<?php $haircolors = char_create::getHairColors($race); ?>
+			<?php $skincolors = char_create::getSkinColors($race); ?>
+			<?php $hairvalues = char_create::getHairValues($race, $sex); ?>
+			<?php $beardvalues = char_create::getBeardValues($race, $sex); ?>
+
+			<?php $start_hair_value  = "_hair_1"; ?>
+			<?php $start_beard_value = "_beard_0"; ?>
+			<?php $start_skin_color  = $skincolors[mt_rand(0,41)]; ?>
+			<?php $start_hair_color  = $haircolors[mt_rand(0,41)]; ?>
+
+			<div style="background-image: url(<?php echo $url; ?>/shared/pics/char_screen.jpg);float:left;border:2px groove #000;width:300px;height:250px;">
+			<div id="ajax_works" style='display:block;position:relative;left:5px;top:5px;width:32px;height:32px;margin-bottom:-32px;'></div>
+			<img id="char_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex),substr($start_skin_color, 1)); ?>" style="position:relative;left:133px; top:73px;display:block;margin-bottom:-100px;" />
+			<img src="/shared/pics/chars/<?php echo char_create::getImageName($race, $sex); ?>_cloth.png" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="hair_image" src="<?php echo char_create::getConvertedImageUrl(char_create::getImageName($race, $sex).$start_hair_value,substr($start_hair_color, 1)); ?>" style="display:block;position:relative;left:133px; top:73px;margin-bottom:-100px;" />
+			<img id="beard_image" src="<?php echo char_create::getConvertedImageUrl(substr(char_create::getImageName($race, $sex), 0, -1)."m".$start_beard_value,substr($start_hair_color, 1)); ?>" style="position:relative;left:133px; top:73px;" />
+			</div>
+
+			<div style="height:250px;padding-left:320px;padding-right:20px;">
+
+				Hautfarbe:
+				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_skin_color; ?>;"></span>
+				<input type="hidden" id="skincolor" value="<?php echo $start_skin_color; ?>" name="skincolor" />
+                <?php foreach ( $skincolors as $color ):?>
+                <a onclick="skinColorChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <?php endforeach; ?>
+
+				Haarfarbe:
+				<span id="hair_color" style="width:251px;height:30px;display:block;background-color:<?php echo $start_hair_color; ?>;"></span>
+				<input type="hidden" id="haircolor" value="<?php echo $start_hair_color; ?>" name="haircolor" />
+                <?php foreach ( $haircolors as $color ):?>
+                <a onclick="hairChange('<?php echo char_create::getImageName($race, $sex) ?>', '<?php echo substr($color, 1); ?>')" style="display: block;height: 10px;width: 10px;float: left;background-color: <?php echo $color; ?>;border: 1px solid black;"></a>
+                <?php endforeach; ?>
+				Haare:
+				<input type="hidden" id="hairvalue" value="<?php echo $start_hair_value; ?>" name="hairvalue" />
+				<select name="hair" id="hair" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
+					<?php foreach( $hairvalues as $key => $hair ): ?>
+						<option value="<?php echo $key; ?>"
+						<?php if ($key == $start_hair_value) { echo ' selected="selected"'; } ?>
+						><?php echo $hair; ?></option>
+					<?php endforeach; ?>
+				</select>
+
+				<input type="hidden" id="beardvalue" value="<?php echo $start_beard_value; ?>" name="beardvalue" />
+				<?php if (( $sex == GENDER_MALE) && ($race != RACE_ELF) && ($race != RACE_LIZARD) )
+				{ ?>
+					Bart:
+					<select name="beard" id="beard" onchange="hairChange('<?php echo char_create::getImageName($race, $sex); ?>', h_color)" style="width:100%;">
+						<?php foreach( $beardvalues as $key => $beard ): ?>
+							<option value="<?php echo $key; ?>"
+							<?php if ($key == $start_beard_value) { echo ' selected="selected"'; } ?>
+							><?php echo $beard; ?></option>
+						<?php endforeach; ?>
+					</select>
+
+				<?php } ?>
+			</div>
+			<div>
+				<p style="text-align:center;padding-bottom:10px;">
+					<input type="hidden" name="action" value="newchar_2" />
+					<button onclick="document.forms.create_char.submit();" style="margin-right:10px;">Daten speichern</button>
+					<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
+				</p>
+			</div>
 		</div>
 	</form>
 </div>
