@@ -86,10 +86,8 @@ Page::Init();
 <h1>Neuen Charakter erstellen</h1>
 
 <h2>Schritt 3</h2>
-
+<p>Hier kannst Du die Attribute Deines Charakters festlegen. Die Attribute verändern sich im Spiel nicht mehr. Überlege also möglichst genau, wie Du sie wählst.</p>
 <div>
-	<h1>Schritt 3</h1>
-
 	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attribute</h2>
