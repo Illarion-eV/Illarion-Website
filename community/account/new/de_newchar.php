@@ -112,31 +112,15 @@
 <table style="width:100%">
 	<tr>
 		<td style="width:130px;">
-			<?php if ($step == 1): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_1.php"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 1', 350, 380 ); ?>"<?php endif; ?> style="font-size:18pt;">
-				Schritt 1
-			</a>
-			<?php else: ?>
 			<span style="color:#007f00;">
 				Schritt 1
 			</span>
-			<?php endif; ?>
 		</td>
 		<td>
 			&nbsp;&nbsp;&nbsp;
 		</td>
 		<td>
-			<?php if ($step == 1): ?>
-			Klicke auf den Link "Schritt 1" um diesen Teil der Charaktererstellung
-			durchzuführen. Hier musst Du Name, Rasse und Geschlecht des Charakters
-			festlegen. Bitte beachte dazu die
-			<a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a>
-			von Illarion. Hilfreich kann auch die
-			<a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a>
-			sein.
-			<?php else: ?>
 			Schritt 1 wurde richtig ausgeführt.
-			<?php endif; ?>
 		</td>
 	</tr>
 	<tr>
@@ -145,7 +129,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 2): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_2.php<?php echo $ident; ?>"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 2', 600, 750 ); ?>"<?php endif; ?> style="font-size:18pt;">
+			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_2.php<?php echo $ident; ?>">
 				Schritt 2
 			</a>
 			<?php elseif ($step > 2): ?>
@@ -178,7 +162,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 3): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_3.php<?php echo $ident; ?>"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 3', 450, 550 ); ?>"<?php endif; ?> style="font-size:18pt;">
+			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_3.php<?php echo $ident; ?>">
 				Schritt 3
             </a>
             <?php elseif ($step > 3): ?>
@@ -213,7 +197,7 @@
     <tr>
         <td>
             <?php if ($step == 4): ?>
-            <a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php<?php echo $ident; ?>"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 4', 450, 550 ); ?>"<?php endif; ?> style="font-size:18pt;">
+            <a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php<?php echo $ident; ?>">
 				Schriit 4
 			</a>
 			<?php elseif ($step > 4): ?>
