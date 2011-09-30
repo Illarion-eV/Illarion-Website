@@ -1,4 +1,6 @@
 <?php
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
+
 	checkAndUpdateChar();
 
 	function checkAndUpdateChar()
@@ -8,6 +10,7 @@
 			Messages::add((Page::isGerman()?'Nicht eingeloggt':'Not logged in'),'error');
 			return;
 		}
+
 		echo "Hautfarbe: ".$_POST['skincolor']."<br/>";
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
 		echo "Haare: ".$_POST['hairvalue']."<br/>";
@@ -115,7 +118,6 @@
 			case RACE_ELF: if ($sex == 0) { $appearance =20; } else { $appearance =19; } break;
 			case RACE_ORC: if ($sex == 0) { $appearance =13; } else { $appearance =18; } break;
 			case RACE_LIZARD: $appearance =7; break;
-			default: $appearance =666;
 		}
 
 		echo "ID: ".$charid."<br/>";
