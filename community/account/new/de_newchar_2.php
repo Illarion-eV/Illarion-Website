@@ -153,7 +153,7 @@
 			</div>
 
 			<div style="height:250px;padding-left:320px;padding-right:20px;">
-
+				skin: <?php echo $start_skin_color; ?> - Hair: <?php echo $start_hair_color; ?>
 				Hautfarbe:
 				<span id="skin_color" style="width:251px;height:30px;display:block;background-color:#<?php echo $start_skin_color; ?>;"></span>
 				<input type="hidden" id="skincolor" value="<?php echo $start_skin_color; ?>" name="skincolor" />
