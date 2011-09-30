@@ -116,8 +116,8 @@ Hilfreich kann dabei die <a href="<?php echo Page::getURL(); ?>/general/de_rpg_g
 				<?php endif; ?>
 			</tbody>
 		</table>
-	</form>
 	<p style="text-align:center;">
 		<input type="hidden" name="action" value="newchar_1" />
 		<input type="submit" name="submit" value="Eintragen" />
 	</p>
+	</form>
