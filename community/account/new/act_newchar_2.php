@@ -136,7 +136,7 @@
 		echo "ILLA DAY STAMP: ".$illa_day_stamp."<br/>";
 
 
-/*
+
 		$query = 'INSERT INTO player (
    					ply_playerid,
    					ply_age,
@@ -178,6 +178,6 @@
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
-*/
+
 	}
 ?>
