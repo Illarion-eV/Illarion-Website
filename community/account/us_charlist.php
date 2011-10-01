@@ -50,7 +50,7 @@
 				<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar.php">Create a new character</a>
 				<?php endif; ?>
 				<?php if (IllaUser::auth('testserver')): ?>
-				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_1.php">Create a new testserver character</a>
+				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_1.php">Create a new testserver character</a>
 				<?php endif; ?>
 			</td>
 		</tr>
