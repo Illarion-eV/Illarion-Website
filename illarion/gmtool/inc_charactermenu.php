@@ -23,7 +23,7 @@
 			</ul>
 		</li>
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_runes.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Runen' : 'Runes' ); ?></a></li>
-		<li class="end" />
+
 	</ul>
 </div>
 
