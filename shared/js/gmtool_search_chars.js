@@ -123,7 +123,7 @@ function parseResponse( object )
 					}
 				};
 				var tag = '';
-				if (server.value == 1)
+				if (server == 1)
 				{
 					tag = '(ts)';
 				}
