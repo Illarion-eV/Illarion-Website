@@ -110,7 +110,7 @@ function parseResponse( object )
 				};
 				var name = '';
 				var id = '';
-				var server = '1';
+				var server = '';
 				for(var k=0;k<object.childNodes[i].childNodes.length; k++ ) {
 					if (object.childNodes[i].childNodes[k].nodeName == 'name') {
 						name = object.childNodes[i].childNodes[k].firstChild.nodeValue;

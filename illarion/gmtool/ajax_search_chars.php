@@ -155,12 +155,23 @@
 		if ($server === -1 || $server === 0)
 		{
 			$illarionserver->setQuery( $query );
-			$result_list = array_merge($result_list,$illarionserver->loadAssocList());
+			$illarionserver_list = $illarionserver->loadAssocList();
+			foreach($illarionserver_list as $result)
+			{
+				$result['server'] = 0;
+			}
+			$result_list = array_merge($result_list,$illarionserver_list);
+
 		}
 		if ($server === -1 || $server === 1)
 		{
 			$testserver->setQuery( $query );
-			$result_list = array_merge($result_list,$testserver->loadAssocList());
+			$testserver_list = $testserver->loadAssocList();
+			foreach($illarionserver_list as $result)
+			{
+				$result['server'] = 0;
+			}
+			$result_list = array_merge($result_list,$testserver_list);
 		}
 	}
 ?>
@@ -176,7 +187,7 @@
 	<char>
 		<id><?php echo $result['chr_playerid']; ?></id>
 		<name><?php echo $result['chr_name']; ?></name>
-		<server><?php echo $server; ?></server>
+		<server><?php echo $result['$server']; ?></server>
 	</char>
 	<?php } ?>
 </characters>
