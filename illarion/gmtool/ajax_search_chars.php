@@ -189,7 +189,7 @@
 	<char>
 		<id><?php echo $result['chr_playerid']; ?></id>
 		<name><?php echo $result['chr_name']; ?></name>
-		<server><?php echo $result['$server']; ?></server>
+		<server><?php echo $result['server']; ?></server>
 	</char>
 	<?php } ?>
 </characters>
