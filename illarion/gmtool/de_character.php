@@ -57,11 +57,10 @@
 			<dd><?php echo $char_data['chr_playerid']; ?></dd>
 			<dt>Charaktername</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
-			<dt></dt>
-			<dd>
-				Prefix<input type="text" name="prefix" size="20" value="<?php echo $char_data['chr_prefix']; ?>" />
-				Suffix<input type="text" name="suffix" size="20" value="<?php echo $char_data['chr_suffix']; ?>" />
-			</dd>
+			<dt>Prefix</dt>
+			<dd><input type="text" name="prefix" size="20" value="<?php echo $char_data['chr_prefix']; ?>" /></dd>
+			<dt>Suffix</dt>
+			<dd><input type="text" name="suffix" size="20" value="<?php echo $char_data['chr_suffix']; ?>" /></dd>
 			<dt>Rasse</dt>
 			<dd>
 				<select name="race">
