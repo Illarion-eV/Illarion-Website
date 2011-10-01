@@ -46,9 +46,37 @@
 
 <div class="spacer"></div>
 
-<?php include_character_menu( $char_data['id'], 1 ); ?>
+<?php include_character_menu( $char_data['chr_playerid'], 1 ); ?>
 
-<h1>moep</h1>
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $account_data['id']; ?>" method="post">
+	<div>
+		<dl class="gmtool">
+			<dt>Account ID</dt>
+			<dd><?php echo $char_data['chr_accid']; ?></dd>
+			<dt>Charakter ID</dt>
+			<dd><?php echo $char_data['chr_playerid']; ?></dd>
+			<dt>Charaktername</dt>
+			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
+			<dt></dt>
+			<dd>
+				Prefix<input type="text" name="prefix" size="20" value="<?php echo $char_data['chr_prefix']; ?>" />
+				Suffix<input type="text" name="suffix" size="20" value="<?php echo $char_data['chr_suffix']; ?>" />
+			</dd>
+			<dt>Rasse</dt>
+			<dd>
+				<select name="race">
+					<option value="0"<?php echo ($char_data['chr_race'] ? '' : ' selected="selected"'); ?>>Mensch</option>
+					<option value="1"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Zwerg</option>
+					<option value="6"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Gnom</option>
+					<option value="7"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Fee</option>
+				</select>
+			</dd>
+		</dl>
+		<div class="spacer" />
+		<input type="submit" name="submit" value="Änderungen speichern" />
+		<input type="hidden" name="action" value="character" />
+	</div>
+</form>
 
 <div>
 <pre>
