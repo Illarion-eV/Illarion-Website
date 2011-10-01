@@ -20,4 +20,31 @@
 </pre>
 </div>
 
+
+<div class="menu">
+	<ul class="menu_top">
+		<?php foreach ($entries as $key=>$entry): ?>
+			<li<?php echo ($active==$key ? ' class="selected"' : ''); ?>>
+				<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
+					<?php echo $entry['name']; ?>
+				</a>
+			</li>
+			<?php if (isset($entries[$key]['subentries']) ) : ?>
+				<?php foreach ($entries[$key]['subentries'] as $key => $subentry): ?>
+					<li>
+						<a href="'.$subentry['link'].'">
+						<?php echo $subentry['name']; ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			<?php endif ?>
+
+
+		<?php endforeach; ?>
+		<li class="end" />
+	</ul>
+</div>
+
+
+
 <?php } ?>
