@@ -78,7 +78,7 @@
 	</div>
 </form>
 
-<div>
+<div style=width:400px;>
 <pre>
 <?php print_r($char_data); ?>
 </pre>
