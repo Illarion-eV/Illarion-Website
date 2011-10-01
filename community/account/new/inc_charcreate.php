@@ -69,50 +69,50 @@
 		return $skin_colors;
 	}
 
- 	public static function getHairValues($race, $gender)
+ 	public static function getHairValues($race, $gender, $lang)
 	{
 		switch($race){
 			case RACE_HUMAN:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray(IllaUser::$lang);
+					$hair_values = getHumanMaleHairArray($lang);
 				}
 				else
 				{
-					$hair_values = getHumanFemaleHairArray();
+					$hair_values = getHumanFemaleHairArray($lang);
 				}
 				break;
 			case RACE_DWARF:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getDwarfMaleHairArray();
+					$hair_values = getDwarfMaleHairArray($lang);
 				}
 				else
 				{
-					$hair_values = getDwarfFemaleHairArray();
+					$hair_values = getDwarfFemaleHairArray($lang);
 				}
 				break;
 			case RACE_ELF:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getElfMaleHairArray();
+					$hair_values = getElfMaleHairArray($lang);
 				}
 				else
 				{
-					$hair_values = getElfFemaleHairArray();
+					$hair_values = getElfFemaleHairArray($lang);
 				}
 				break;
 			case RACE_HALFLING:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHalflingMaleHairArray();
+					$hair_values = getHalflingMaleHairArray($lang);
 				}
 				else
 				{
-					$hair_values = getHalflingFemaleHairArray();
+					$hair_values = getHalflingFemaleHairArray($lang);
 				}
 				break;
 			case RACE_ORC:
-				$hair_values = getOrcMaleHairArray();
+				$hair_values = getOrcMaleHairArray($lang);
 				break;
 			case RACE_LIZARD:
-				$hair_values = getLizardMaleHairArray();
+				$hair_values = getLizardMaleHairArray($lang);
 				break;
 			default:
 				$hair_values = array();
