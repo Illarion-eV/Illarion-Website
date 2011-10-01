@@ -118,6 +118,6 @@ Hilfreich kann dabei die <a href="<?php echo Page::getURL(); ?>/general/de_rpg_g
 		</table>
 	<p style="text-align:center;">
 		<input type="hidden" name="action" value="newchar_1" />
-		<input type="submit" name="submit" value="Daten speichern" />
+		<input type="submit" name="submit" id="submit" value="Daten speichern" />
 	</p>
 	</form>

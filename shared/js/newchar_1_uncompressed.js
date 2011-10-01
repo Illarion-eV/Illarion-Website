@@ -19,9 +19,6 @@ function checkCharname()
 	var server = document.getElementById("server").value;
 	var text_area = document.getElementById("charname_result");
 	var submitElement = document.getElementById("submit");
-
-	input_field.className = 'ajax_loading';
-
 	if (charname.length<4)
 	{
 		if (cur_lang == 'de')
@@ -205,7 +202,7 @@ function checkCharname()
 		return true;
 	}
 
-	input_field.className = '';
+	input_field.className = 'ajax_loading';
 	charname_request_cnt++;
 	var target = url+'/community/account/func.newchar_1.php?charname='+encodeURIComponent(charname)+'&server='+server+'&lang='+cur_lang+'&cnt='+charname_request_cnt;
 	new Ajax.Request(target, {
