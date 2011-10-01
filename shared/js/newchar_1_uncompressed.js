@@ -230,6 +230,7 @@ function checkCharname()
 				}
 				submitElement.className = '';
 				submitElement.disabled = false;
+				input_field.className = '';
 			}
 			else
 			{
