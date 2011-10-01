@@ -149,6 +149,6 @@ Page::addJavaScript( 'newchar_3' );
 		<p style="text-align:center;padding:10px;">
 			<input type="hidden" name="sel_pack" id="sel_pack" value="" />
 			<input type="hidden" name="action" value="newchar_3" />
-			<input type="submit" name="submit_button" value="Daten speichern" />
+			<input type="submit" name="submit_button" id="submit_button" value="Daten speichern" />
 		</p>
 	</form>
