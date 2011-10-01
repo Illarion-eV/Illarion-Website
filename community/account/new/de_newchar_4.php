@@ -13,10 +13,10 @@ if (!$charid)
 	exit('Fehler - Charakter ID wurde nicht richtig übergeben.');
 }
 
-$pgSQL =& Database::getPostgreSQL( $server );
+$pgSQL =& Database::getPostgreSQL();
 
 $query = 'SELECT chr_race, chr_status'
-.PHP_EOL.' FROM chars'
+.PHP_EOL.' FROM '.$server.'.chars'
 .PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
 .PHP_EOL.' AND chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
 ;
@@ -36,7 +36,7 @@ if ($status != 3 && $status != 5 && $status != 7 && $status != 8)
 }
 
 $query = 'SELECT COUNT(*)'
-.PHP_EOL.' FROM player'
+.PHP_EOL.' FROM '.$server.'player'
 .PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
 ;
 $pgSQL->setQuery( $query );
@@ -83,6 +83,8 @@ else
 		}
 	}
 }
+
+
 
 $query = 'SELECT spl_id, spl_name_de AS name'
 	.PHP_EOL.' FROM accounts.startplace'
