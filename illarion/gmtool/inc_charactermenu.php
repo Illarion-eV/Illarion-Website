@@ -14,7 +14,7 @@
 
 <div class="menu">
 	<ul class="menu_top">
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php"><?php echo ( $language == 'de' ? 'Übersicht' : 'Overview' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php"><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a></li>
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
 		<li>
 			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>

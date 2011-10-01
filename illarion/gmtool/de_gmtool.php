@@ -32,10 +32,10 @@
 	<legend>Suchen</legend>
 	<ul style="list-style-type:none;padding-left:50px;">
 		<?php if (IllaUser::auth('gmtool_accounts')): ?>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/de_search_accounts.php">Suche nach Accounts</a></li>
+			<li><a href="<?php echo $url; ?>/illarion/gmtool/de_search_accounts.php">Suche nach Accounts</a></li>
 		<?php endif; ?>
 		<?php if (IllaUser::auth('gmtool_chars')): ?>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/de_search_chars.php">Suche nach Charakteren</a></li>
+			<li><a href="<?php echo $url; ?>/illarion/gmtool/de_search_chars.php">Suche nach Charakteren</a></li>
 		<?php endif; ?>
 	</ul>
 </fieldset>
@@ -47,21 +47,8 @@
 <fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(3109); ?>) scroll no-repeat 15px center;">
 	<legend>Account Arbeit</legend>
 	<ul style="list-style-type:none;padding-left:50px;">
-		<?php if (IllaUser::auth('gmtool_raceapplys')): ?>
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_raceapplies.php">Rassenbewerbungen bearbeiten</a>
-			<?php if ( $pendingwork['apply_checks'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
-				(<?php echo $pendingwork['apply_checks']; ?>)
-			</span>
-		</li>
-		<?php endif; ?>
-		<?php if (IllaUser::auth('gmtool_namecheck')): ?>
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_namecheck.php">Namen überprüfen</a>
-			<?php if ( $pendingwork['name_checks'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
-				(<?php echo $pendingwork['name_checks']; ?>)
-			</span>
-		</li>
+		<?php if (IllaUser::auth('gmtool_change_rights')): ?>
+			<li><a href="<?php echo $url; ?>/illarion/gmtool/de_rights.php">Berechtigungen bearbeiten</a></li>
 		<?php endif; ?>
 	</ul>
 </fieldset>
