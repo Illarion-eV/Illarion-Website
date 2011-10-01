@@ -3,6 +3,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+Page::Init();
+
 includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
 
 $server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
@@ -78,8 +80,6 @@ Page::addJavaScript( 'prototype' );
 Page::addJavaScript( 'effects' );
 Page::addCSS( 'slider' );
 Page::addJavaScript( 'slider' );
-
-Page::Init();
 
 ?>
 

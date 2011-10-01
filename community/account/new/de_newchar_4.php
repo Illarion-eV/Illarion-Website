@@ -3,6 +3,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+Page::Init();
+
 $server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 $charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 
@@ -100,8 +102,6 @@ $start_packs = $pgSQL->loadAssocList();
 Page::setXHTML();
 Page::addJavaScript( 'prototype' );
 Page::addJavaScript( 'newchar_3' );
-
-Page::Init();
 
 ?>
 
