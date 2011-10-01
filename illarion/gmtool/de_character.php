@@ -51,10 +51,23 @@
 <form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $account_data['id']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
-			<dt>Account ID</dt>
-			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Charakter ID</dt>
 			<dd><?php echo $char_data['chr_playerid']; ?></dd>
+			<dt>Online Status</dt>
+			<dd><?php echo $char_data['chr_status']; ?></dd>
+			<dt>Charakter Status</dt>
+			<dd><?php echo $char_data['chr_status']; ?></dd>
+			<dt>Zuletzt eingeloggt</dt>
+			<dd><?php echo $char_data['chr_lastsavetime']; ?></dd>
+			<dt>Account ID</dt>
+			<dd><?php echo $char_data['chr_accid']; ?></dd>
+			<dt>Account Name</dt>
+			<dd>charname
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?id=<?php echo $account_data['chr_accid']; ?>">
+					(email@mail.de)
+				</a>
+			</dd>
+
 			<dt>Charaktername</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
 			<dt>Prefix</dt>
