@@ -110,12 +110,16 @@ function parseResponse( object )
 				};
 				var name = '';
 				var id = '';
+				var server = '';
 				for(var k=0;k<object.childNodes[i].childNodes.length; k++ ) {
 					if (object.childNodes[i].childNodes[k].nodeName == 'name') {
 						name = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					}
 					else if (object.childNodes[i].childNodes[k].nodeName == 'id') {
 						id = object.childNodes[i].childNodes[k].firstChild.nodeValue;
+					};
+					else if (object.childNodes[i].childNodes[k].nodeName == 'server') {
+						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					};
 				};
 				var temp = document.createElement( 'li' );
