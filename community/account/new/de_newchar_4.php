@@ -36,7 +36,7 @@ if ($status != 3 && $status != 5 && $status != 7 && $status != 8)
 }
 
 $query = 'SELECT COUNT(*)'
-.PHP_EOL.' FROM '.$server.'player'
+.PHP_EOL.' FROM '.$server.'.player'
 .PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
 ;
 $pgSQL->setQuery( $query );
