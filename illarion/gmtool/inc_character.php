@@ -3,11 +3,14 @@
 	{
 		$pgSQL =& Database::getPostgreSQL();
 
-		$query = "SELECT * FROM `".$server."`.`chars` WHERE `chr_playerid` = ".$charid;
-		echo "<div>";
-		echo $query;
-		echo "</div>";
-		$char_data = array("charname" => "test", "id" => 666, 1 => "moep", 2 => "blala");
+		$query = "SELECT * FROM ".$server.".chars WHERE chr_playerid = ".$pgSQL->Quote( $charid);
+		$pgSQL->setQuery( $query );
+		$char_data = $pgSQL->loadAssocRow();
+
+		if (!$char_data || !count($char_data))
+		{
+			return false;
+		}
 
 		return $char_data;
 	}
