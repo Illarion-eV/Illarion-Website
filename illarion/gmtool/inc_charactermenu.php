@@ -25,7 +25,7 @@
 	<ul class="menu_top">
 		<?php foreach ($entries as $key=>$entry): ?>
 			<li<?php echo ($active==$key ? ' class="selected"' : ''); ?>>
-				<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
+				<a class="none" <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
 					<?php echo $entry['name']."-".count($entry['subentries']); ?>
 				</a>
 
