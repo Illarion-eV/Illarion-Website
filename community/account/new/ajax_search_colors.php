@@ -23,9 +23,6 @@
 	$beardimage = substr($_POST['image'], 0, -1)."m".$_POST['beardvalue'];
 
 
-	//if (substr($_POST['base_image']-4) != ".png")
-
-
 
 ?>
 

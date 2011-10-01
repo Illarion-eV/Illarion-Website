@@ -81,7 +81,7 @@ function hairChange(image, color)
 	h_color = color;
 }
 
-function parseResponse( object, hairimage, beardimage )
+function parseResponse( object, hairtarget, beardtarget )
 {
 	// Normalisiert das Xml weil verschiedene Browser werten die daten unterschiedlich aus
 	if ( object.nodeType == 9 ) {
@@ -97,12 +97,12 @@ function parseResponse( object, hairimage, beardimage )
 		if (object.nodeName == 'image') {
 			for(var i=0;i<object.childNodes.length; i++ ) {
 				if (object.childNodes[i].nodeName == 'hairimage') {
-					$(hairimage).src = object.childNodes[i].firstChild.nodeValue;
+					$(hairtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
-				if (beardimage.length > 0)
+				if (beardtarget.length > 0)
 				{
 					if (object.childNodes[i].nodeName == 'beardimage') {
-						$(beardimage).src = object.childNodes[i].firstChild.nodeValue;
+						$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
 					}
 				}
 			};
