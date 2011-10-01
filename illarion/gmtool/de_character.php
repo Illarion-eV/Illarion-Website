@@ -30,9 +30,9 @@
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Charakter', $char_data['charname'] ) );
-	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['charname'].'"' );
-	Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen', $char_data['charname'] ) );
+	Page::setTitle( array( 'GM-Tool', 'Charakter', $char_data['chr_name'] ) );
+	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['chr_name'].'"' );
+	Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen', $char_data['chr_name'] ) );
 
 	Page::addCSS( array( 'menu', 'gmtool' ) );
 
@@ -40,7 +40,7 @@
 	Page::Init();
 ?>
 
-<h1>Charakter - <?php echo $char_data['charname']; ?></h1>
+<h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
 
 <?php include_menu(); ?>
 
