@@ -118,6 +118,9 @@ function parseResponse( object )
 					else if (object.childNodes[i].childNodes[k].nodeName == 'id') {
 						id = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					};
+					if (object.childNodes[i].childNodes[k].nodeName == 'server') {
+						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
+					}
 				};
 				var temp = document.createElement( 'li' );
 				temp.appendChild( document.createTextNode( id ) );
