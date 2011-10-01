@@ -28,7 +28,7 @@
 				<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
 					<?php echo $entry['name']."-".count($entry['subentries']); ?>
 				</a>
-			</li>
+
 			<?php if (count($entry['subentries']) > 0 ) : ?>
 				<?php foreach ($entry['subentries'] as $key => $subentry): ?>
 					<li>
@@ -38,7 +38,7 @@
 					</li>
 				<?php endforeach; ?>
 			<?php endif ?>
-
+			</li>
 
 		<?php endforeach; ?>
 		<li class="end" />
