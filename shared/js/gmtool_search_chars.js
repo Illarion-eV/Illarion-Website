@@ -122,12 +122,17 @@ function parseResponse( object )
 						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					}
 				};
+				var tag = '';
+				if (server.value == 1)
+				{
+					tag = '(ts)';
+				}
 				var temp = document.createElement( 'li' );
 				temp.appendChild( document.createTextNode( id ) );
 				temp.appendChild( document.createTextNode( ' - ' ) );
 				var temp2 = document.createElement( 'a' );
 				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_character.php?id='+id+'&server='+server;
-				temp2.appendChild( document.createTextNode( name ) );
+				temp2.appendChild( document.createTextNode( name+tag ) );
 				temp.appendChild( temp2 );
 				result.appendChild( temp );
 				index++;
