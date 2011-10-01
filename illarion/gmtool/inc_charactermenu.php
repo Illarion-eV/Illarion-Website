@@ -7,9 +7,9 @@
 
 <div class="menu">
 	<ul class="menu_top">
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?id=<?php echo $charid; ?>><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a></li>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?id=<?php echo $charid; ?>><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php?id=<?php echo $charid; ?>><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
 		<li>
 			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
 			<ul>
