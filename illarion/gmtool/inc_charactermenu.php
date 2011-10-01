@@ -29,8 +29,8 @@
 					<?php echo $entry['name']; ?>
 				</a>
 			</li>
-			<?php if (isset($entries[$key]['subentries']) ) : ?>
-				<?php foreach ($entries[$key]['subentries'] as $key => $subentry): ?>
+			<?php if (isset($entry['subentries']) ) : ?>
+				<?php foreach ($entry['subentries'] as $key => $subentry): ?>
 					<li>
 						<a href="'.$subentry['link'].'">
 						<?php echo $subentry['name']; ?>
