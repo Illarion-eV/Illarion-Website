@@ -154,14 +154,14 @@
 
 		if ($server === -1 || $server === 0)
 		{
-			$query = "SELECT CONCAT('0') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			$query = "SELECT '0' AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
 			$illarionserver->setQuery( $query );
 			$result_list = array_merge($result_list,$illarionserver->loadAssocList());
 
 		}
 		if ($server === -1 || $server === 1)
 		{
-			$query = "SELECT CONCAT('1') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			$query = "SELECT '1' AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
 			$testserver->setQuery( $query );
 			$result_list = array_merge($result_list,$testserver->loadAssocList());
 		}
