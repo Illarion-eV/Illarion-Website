@@ -19,9 +19,13 @@
 		<li>
 			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
 			<ul>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?filter=0"><?php echo ( $language == 'de' ? 'Kampfskills' : 'Fighting skills' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=1"><?php echo ( $language == 'de' ? 'Handwerkskills' : 'Crafting skills' ); ?></a></li>
-				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=2"><?php echo ( $language == 'de' ? 'Sprachskills' : 'Language skills' ); ?></a></li>
+			<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?filter=0"><?php echo ( $language == 'de' ? 'Sprachen' : 'Language' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?filter=1"><?php echo ( $language == 'de' ? 'Kampf' : 'Fighting' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?filter=2"><?php echo ( $language == 'de' ? 'Magie' : 'Magic' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=3"><?php echo ( $language == 'de' ? 'Handwerk' : 'Crafting' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=4"><?php echo ( $language == 'de' ? 'Druiden' : 'Druidic' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=5"><?php echo ( $language == 'de' ? 'Barden' : 'Bard' ); ?></a></li>
+				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=6"><?php echo ( $language == 'de' ? 'Sonstiges' : 'Others' ); ?></a></li>
 			</ul>
 		</li>
 		<li class="end" />
