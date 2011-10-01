@@ -166,7 +166,7 @@
 		}
 		if ($server === -1 || $server === 1)
 		{
-			$illarionserver_list=array();
+			$testserver_list=array();
 			$testserver->setQuery( $query );
 			$testserver_list = $testserver->loadAssocList();
 			foreach($illarionserver_list as $result)
