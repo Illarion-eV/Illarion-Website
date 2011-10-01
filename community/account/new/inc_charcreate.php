@@ -15,7 +15,7 @@
   */
  class char_create {
 
-	public function getHairColors($race)
+	public static function getHairColors($race)
 	{
 		switch($race){
 			case RACE_HUMAN:
@@ -42,7 +42,7 @@
 		return $hair_colors;
 	}
 
-	public function getSkinColors($race)
+	public static function getSkinColors($race)
 	{
 		switch($race){
 			case RACE_HUMAN:
@@ -69,7 +69,7 @@
 		return $skin_colors;
 	}
 
- 	public function getHairValues($race, $gender)
+ 	public static function getHairValues($race, $gender)
 	{
 		switch($race){
 			case RACE_HUMAN:
@@ -120,7 +120,7 @@
 		return $hair_values;
 	}
 
-	public function getBeardValues($race)
+	public static function getBeardValues($race)
 	{
 		switch($race){
 			case RACE_HUMAN:
@@ -142,7 +142,7 @@
 		return $beard_values;
 	}
 
- 	public function getImageName($race, $gender)
+ 	public static function getImageName($race, $gender)
 	{
 		switch($race){
 			case RACE_HUMAN:
@@ -199,7 +199,7 @@
 		return $name;
 	}
 
- 	public function getStartSkinColor($race)
+ 	public static function getStartSkinColor($race)
 	{
  		//$color_array = self::getSkinColors($race);
  		//$skin_color = '#'.$color_array[mt_rand(0,41)];
@@ -209,28 +209,28 @@
 		return $skin_color;
 	}
 
-	public function getStartHairColor($race)
+	public static function getStartHairColor($race)
 	{
 		$hair_color='#efgccc';
 
 		return $hair_color;
 	}
 
-	public function getStartHairValue($race, $gender)
+	public static function getStartHairValue($race, $gender)
 	{
 		$hair_value = "_hair_1";
 
 		return $hair_value;
 	}
 
-	public function getStartBeardValue($race, $gender)
+	public static function getStartBeardValue($race, $gender)
 	{
 		$beard_value = "_beard_1";
 
 		return $beard_value;
 	}
 
-	public function getConvertedImageUrl($image_name, $farbcode)
+	public static function getConvertedImageUrl($image_name, $farbcode)
 	{
 		/*
 		   $farbcode = "990000";
