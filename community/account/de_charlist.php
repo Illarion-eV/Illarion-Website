@@ -51,7 +51,7 @@
 				<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">Neuen Charakter erstellen</a>
 				<?php endif; ?>
 
-				<?php if ((IllaUser::$ID == 86577) || (IllaUser::$ID == 572)): ?>
+				<?php if ((IllaUser::$ID == 86577) || (IllaUser::$ID == 572) || (IllaUser::$ID == 462)): ?>
 				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_1.php">Neuen Testserver-Charakter erstellen</a>
 				<?php endif; ?>
 			</td>
