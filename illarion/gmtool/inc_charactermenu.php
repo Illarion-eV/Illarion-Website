@@ -13,9 +13,11 @@
 ?>
 
 <div>
+<pre>
 <?php
 	print_r($entries);
 ?>
+</pre>
 </div>
 
 <?php } ?>
