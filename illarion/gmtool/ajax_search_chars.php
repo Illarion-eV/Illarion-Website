@@ -154,7 +154,7 @@
 
 		if ($server === -1 || $server === 0)
 		{
-			$query = "SELECT CONCAT(0) AS 'server', chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			$query = "SELECT CONCAT('moep1') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
 			//$illarionserver_list = array();
 			$illarionserver->setQuery( $query );
 			$illarionserver_list = $illarionserver->loadAssocList();
@@ -167,7 +167,7 @@
 		}
 		if ($server === -1 || $server === 1)
 		{
-			$query = "SELECT CONCAT(1) AS 'server', chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			$query = "SELECT CONCAT('moep') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
 			//$testserver_list=array();
 			$testserver->setQuery( $query );
 			$testserver_list = $testserver->loadAssocList();
