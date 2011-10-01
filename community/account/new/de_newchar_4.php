@@ -92,16 +92,12 @@ $query = 'SELECT spl_id, spl_name_de AS name'
 $pgSQL->setQuery( $query );
 $start_places = $pgSQL->loadAssocList();
 
-print_r($start_places);
-
 $query = 'SELECT spa_id, spa_name_de AS name'
 	.PHP_EOL.' FROM accounts.startpack'
 .PHP_EOL.' WHERE spa_race IN (-1,'.$pgSQL->Quote( $race ).')'
 	;
 $pgSQL->setQuery( $query );
 $start_packs = $pgSQL->loadAssocList();
-
-print_r($start_packs);
 
 Page::setXHTML();
 Page::addJavaScript( 'prototype' );
