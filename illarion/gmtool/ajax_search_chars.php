@@ -155,27 +155,15 @@
 		if ($server === -1 || $server === 0)
 		{
 			$query = "SELECT CONCAT('moep1', '2') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
-			//$illarionserver_list = array();
 			$illarionserver->setQuery( $query );
-			$illarionserver_list = $illarionserver->loadAssocList();
-			/*foreach($illarionserver_list as $result)
-			{
-				$result['server'] = 0;
-			}*/
-			$result_list = array_merge($result_list,$illarionserver_list);
+			$result_list = array_merge($result_list,$illarionserver->loadAssocList());
 
 		}
 		if ($server === -1 || $server === 1)
 		{
 			$query = "SELECT CONCAT('moep', '1') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
-			//$testserver_list=array();
 			$testserver->setQuery( $query );
-			$testserver_list = $testserver->loadAssocList();
-			/*foreach($illarionserver_list as $result)
-			{
-				$result['server'] = 1;
-			}*/
-			$result_list = array_merge($result_list,$testserver_list);
+			$result_list = array_merge($result_list,$testserver->loadAssocList());
 		}
 	}
 ?>
