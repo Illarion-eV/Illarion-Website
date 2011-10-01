@@ -154,6 +154,7 @@
 		$query = "SELECT chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
 		if ($server === -1 || $server === 0)
 		{
+			$illarionserver_list = array();
 			$illarionserver->setQuery( $query );
 			$illarionserver_list = $illarionserver->loadAssocList();
 			foreach($illarionserver_list as $result)
@@ -165,6 +166,7 @@
 		}
 		if ($server === -1 || $server === 1)
 		{
+			$illarionserver_list=array();
 			$testserver->setQuery( $query );
 			$testserver_list = $testserver->loadAssocList();
 			foreach($illarionserver_list as $result)
