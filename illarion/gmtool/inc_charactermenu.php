@@ -10,9 +10,12 @@
 		$entries[3] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_status.php?id='.$charid, 'name'=>( $language == 'de' ? 'Status' : 'State' ) );
 		$entries[4] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_skills.php?id='.$charid, 'name'=>( $language == 'de' ? 'Skills' : 'Skills' ) );
 		$entries[4]['subentries'][1] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_skills.php?id='.$charid.'&sub=fight', 'name'=>( $language == 'de' ? 'Kampfskills' : 'fighting skills' ));
-
-	print_r($entries);
 ?>
 
+<div>
+<?php
+	print_r($entries);
+?>
+</div>
 
 <?php } ?>
