@@ -24,21 +24,31 @@
 <div class="menu">
 	<ul class="menu_top">
 		<?php foreach ($entries as $key=>$entry): ?>
-			<li<?php echo ($active==$key ? ' class="selected"' : ''); ?>>
-				<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
-					<?php echo $entry['name']."-".count($entry['subentries']); ?>
-				</a>
 
-			<?php if (count($entry['subentries']) > 0 ) : ?>
-				<?php foreach ($entry['subentries'] as $key => $subentry): ?>
-					<li>
-						<a href="<?php echo $subentry['link']; ?>">
-						<?php echo $subentry['name']; ?>
-						</a>
-					</li>
-				<?php endforeach; ?>
-			<?php endif ?>
-			</li>
+			<?php if (count($entry['subentries']) > 0 )
+			{ ?>
+				<li class="none<?php echo ($active==$key ? ', selected' : ''); ?>">
+					<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
+						<?php echo $entry['name']."-".count($entry['subentries']); ?>
+					</a>
+					<?php foreach ($entry['subentries'] as $key => $subentry): ?>
+						<li>
+							<a href="<?php echo $subentry['link']; ?>">
+							<?php echo $subentry['name']; ?>
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</li>
+			<?php }
+			else
+			{ ?>
+				<li<?php echo ($active==$key ? ' class="selected"' : ''); ?>>
+					<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
+						<?php echo $entry['name']."-".count($entry['subentries']); ?>
+					</a>
+				</li>
+			<?php }?>
+
 
 		<?php endforeach; ?>
 		<li class="end" />
