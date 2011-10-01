@@ -67,9 +67,7 @@
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
 			<dt>Zuletzt eingeloggt</dt>
-			date("y-m-d h:i:s",$char[0][chr_lastsavetime])." (via IP: ".( $acc[0][acc_id] == 107945 ? $acc[0][acc_lastip] : $char[0][chr_lastip] )
 			<dd><?php echo date("y-m-d h:i:s",$char_data['chr_lastsavetime'])." (via IP: ".$char_data['chr_lastip'].")"; ?></dd>
-
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Charaktername</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
