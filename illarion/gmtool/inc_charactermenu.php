@@ -21,7 +21,7 @@
 				<?php if (isset($entries[$key]['subentries']) ) : ?>
 				<?php foreach ($entries[$key]['subentries'] as $key => $subentry): ?>
 					<li>
-						<a 'href="'.$subentry['link'].'"'); ?>>
+						<a href="'.$subentry['link'].'"'); ?>>
 						<?php echo $subentry['name']; ?>
 						</a>
 					</li>
