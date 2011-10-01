@@ -155,6 +155,7 @@
 		if ($server === -1 || $server === 0)
 		{
 			$query = "SELECT CONCAT('moep1', '2') AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			echo $query;
 			$illarionserver->setQuery( $query );
 			$result_list = array_merge($result_list,$illarionserver->loadAssocList());
 
