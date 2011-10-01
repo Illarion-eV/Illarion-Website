@@ -1,5 +1,5 @@
 <?php
-	function getCharacterData( $charid )
+	function getCharData( $charid )
 	{
 		$char_data = array("charname" => "test", "id" => 666, 1 => "moep", 2 => "blala");
 
