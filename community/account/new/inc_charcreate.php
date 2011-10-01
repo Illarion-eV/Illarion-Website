@@ -120,20 +120,20 @@
 		return $hair_values;
 	}
 
-	public static function getBeardValues($race)
+	public static function getBeardValues($race, $lang)
 	{
 		switch($race){
 			case RACE_HUMAN:
-				$beard_values = getHumanBeardArray();
+				$beard_values = getHumanBeardArray($lang);
 				break;
 			case RACE_DWARF:
-				$beard_values = getDwarfBeardArray();
+				$beard_values = getDwarfBeardArray($lang);
 				break;
 			case RACE_HALFLING:
-				$beard_values = getHalflingBeardArray();
+				$beard_values = getHalflingBeardArray($lang);
 				break;
 			case RACE_ORC:
-				$beard_values = getOrcBeardArray();
+				$beard_values = getOrcBeardArray($lang);
 				break;
 			default:
 				$beard_values = array();
