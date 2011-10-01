@@ -84,7 +84,7 @@ else
 	}
 }
 
-$query = 'SELECT spl_id, spl_name_de AS name'
+$query = 'SELECT spl_id, spl_name_us AS name'
 	.PHP_EOL.' FROM accounts.startplace'
 .( $newbieOnly ? PHP_EOL.' WHERE spl_newbie = 1' : '')
 	.PHP_EOL.' ORDER BY spl_id ASC'
@@ -92,7 +92,7 @@ $query = 'SELECT spl_id, spl_name_de AS name'
 $pgSQL->setQuery( $query );
 $start_places = $pgSQL->loadAssocList();
 
-$query = 'SELECT spa_id, spa_name_de AS name'
+$query = 'SELECT spa_id, spa_name_us AS name'
 	.PHP_EOL.' FROM accounts.startpack'
 .PHP_EOL.' WHERE spa_race IN (-1,'.$pgSQL->Quote( $race ).')'
 	;
