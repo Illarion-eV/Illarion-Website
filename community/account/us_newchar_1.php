@@ -97,7 +97,6 @@
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
 							<option value="0">Gameserver</option>
-							<option value="1">Testserver</option>
 						</select>
 					</td>
 				</tr>
