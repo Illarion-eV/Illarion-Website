@@ -3,18 +3,12 @@
 	{
 		global $url;
 		global $language;
-
-		$entries = array();
-		$entries[1] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character.php?id='.$charid, 'name'=>( $language == 'de' ? 'Informationen' : 'Informations' ) );
-		$entries[2] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_attribs.php?id='.$charid, 'name'=>( $language == 'de' ? 'Attribute' : 'Attributs' ) );
-		$entries[3] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_status.php?id='.$charid, 'name'=>( $language == 'de' ? 'Status' : 'State' ) );
-		$entries[4] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_skills.php?id='.$charid, 'name'=>( $language == 'de' ? 'Skills' : 'Skills' ) );
-		$entries[4]['subentries'][1] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_skills.php?id='.$charid, 'name'=>( $language == 'de' ? 'Kampfskills' : 'fighting skills' ));
 ?>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php"><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php"><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
 		<li>
 			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
@@ -28,6 +22,7 @@
 				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=6"><?php echo ( $language == 'de' ? 'Sonstiges' : 'Others' ); ?></a></li>
 			</ul>
 		</li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_runes.php"><?php echo ( $language == 'de' ? 'Runen' : 'Runes' ); ?></a></li>
 		<li class="end" />
 	</ul>
 </div>
