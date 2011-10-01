@@ -110,7 +110,6 @@ function parseResponse( object )
 				};
 				var name = '';
 				var id = '';
-				var server = '';
 				for(var k=0;k<object.childNodes[i].childNodes.length; k++ ) {
 					if (object.childNodes[i].childNodes[k].nodeName == 'name') {
 						name = object.childNodes[i].childNodes[k].firstChild.nodeValue;
@@ -118,15 +117,12 @@ function parseResponse( object )
 					else if (object.childNodes[i].childNodes[k].nodeName == 'id') {
 						id = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					};
-					else if (object.childNodes[i].childNodes[k].nodeName == 'server') {
-						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
-					};
 				};
 				var temp = document.createElement( 'li' );
 				temp.appendChild( document.createTextNode( id ) );
 				temp.appendChild( document.createTextNode( ' - ' ) );
 				var temp2 = document.createElement( 'a' );
-				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_character.php?id='+id+'&server='+server;
+				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_character.php?id='+id;
 				temp2.appendChild( document.createTextNode( name ) );
 				temp.appendChild( temp2 );
 				result.appendChild( temp );
