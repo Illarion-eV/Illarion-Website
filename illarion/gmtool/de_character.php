@@ -11,7 +11,8 @@
 		exit();
 	}
 
-	$charid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 
 	if (!$charid)
 	{
@@ -20,7 +21,7 @@
 		exit();
 	}
 
-	$char_data = getCharData( $charid );
+	$char_data = getCharData( $charid, $server );
 
 	if (!$char_data || !count($char_data))
 	{
@@ -48,3 +49,9 @@
 <?php include_character_menu( $char_data['id'], 1 ); ?>
 
 <h1>moep</h1>
+
+<div>
+<pre>
+<?php print_r($char_data); ?>
+</pre>
+</div>
