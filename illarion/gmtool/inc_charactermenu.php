@@ -12,49 +12,20 @@
 		$entries[4]['subentries'][1] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_character_skills.php?id='.$charid, 'name'=>( $language == 'de' ? 'Kampfskills' : 'fighting skills' ));
 ?>
 
-<div>
-<pre>
-<?php
-	print_r($entries);
-?>
-</pre>
-</div>
-
-
 <div class="menu">
 	<ul class="menu_top">
-		<?php foreach ($entries as $key=>$entry): ?>
-
-			<?php if (count($entry['subentries']) > 0 )
-			{ ?>
-				<li class="none<?php echo ($active==$key ? ', selected' : ''); ?>">
-					<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
-						<?php echo $entry['name']."-".count($entry['subentries']); ?>
-					</a>
-					<?php foreach ($entry['subentries'] as $key => $subentry): ?>
-						<li>
-							<a href="<?php echo $subentry['link']; ?>">
-							<?php echo $subentry['name']; ?>
-							</a>
-						</li>
-					<?php endforeach; ?>
-				</li>
-			<?php }
-			else
-			{ ?>
-				<li<?php echo ($active==$key ? ' class="selected"' : ''); ?>>
-					<a <?php echo ($active==$key ? ' class="selected"' : 'href="'.$entry['link'].'"'); ?>>
-						<?php echo $entry['name']."-".count($entry['subentries']); ?>
-					</a>
-				</li>
-			<?php }?>
-
-
-		<?php endforeach; ?>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php"><?php echo ( $language == 'de' ? 'Übersicht' : 'Overview' ); ?></a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
+		<li>
+			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
+			<ul>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?filter=0"><?php echo ( $language == 'de' ? 'Kampfskills' : 'Fighting skills' ); ?></a></li>
+				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=1"><?php echo ( $language == 'de' ? 'Handwerkskills' : 'Crafting skills' ); ?></a></li>
+				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?filter=2"><?php echo ( $language == 'de' ? 'Sprachskills' : 'Language skills' ); ?></a></li>
+			</ul>
+		</li>
 		<li class="end" />
 	</ul>
 </div>
-
-
 
 <?php } ?>
