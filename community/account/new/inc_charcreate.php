@@ -74,7 +74,7 @@
 		switch($race){
 			case RACE_HUMAN:
 				if ($gender == GENDER_MALE) {
-					$hair_values = getHumanMaleHairArray();
+					$hair_values = getHumanMaleHairArray(IllaUser::$lang);
 				}
 				else
 				{
