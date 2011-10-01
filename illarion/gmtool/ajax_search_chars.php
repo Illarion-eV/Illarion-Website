@@ -176,6 +176,7 @@
 	<char>
 		<id><?php echo $result['chr_playerid']; ?></id>
 		<name><?php echo $result['chr_name']; ?></name>
+		<server><?php echo $server; ?></server>
 	</char>
 	<?php } ?>
 </characters>
