@@ -1,8 +1,8 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_accountmenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_account.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_charactermenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character.php' );
 
 	if (!IllaUser::auth('gmtool_chars'))
 	{
