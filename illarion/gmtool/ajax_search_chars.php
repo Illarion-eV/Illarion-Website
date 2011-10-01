@@ -151,28 +151,30 @@
 	}
 	else
 	{
-		$query = "SELECT chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+
 		if ($server === -1 || $server === 0)
 		{
-			$illarionserver_list = array();
+			$query = "SELECT CONCAT(0) AS 'server', chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			//$illarionserver_list = array();
 			$illarionserver->setQuery( $query );
 			$illarionserver_list = $illarionserver->loadAssocList();
-			foreach($illarionserver_list as $result)
+			/*foreach($illarionserver_list as $result)
 			{
 				$result['server'] = 0;
-			}
+			}*/
 			$result_list = array_merge($result_list,$illarionserver_list);
 
 		}
 		if ($server === -1 || $server === 1)
 		{
-			$testserver_list=array();
+			$query = "SELECT CONCAT(1) AS 'server', chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
+			//$testserver_list=array();
 			$testserver->setQuery( $query );
 			$testserver_list = $testserver->loadAssocList();
-			foreach($illarionserver_list as $result)
+			/*foreach($illarionserver_list as $result)
 			{
-				$result['server'] = 0;
-			}
+				$result['server'] = 1;
+			}*/
 			$result_list = array_merge($result_list,$testserver_list);
 		}
 	}
