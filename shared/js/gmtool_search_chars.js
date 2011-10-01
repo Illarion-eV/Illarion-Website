@@ -122,7 +122,7 @@ function parseResponse( object )
 						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					}
 				};
-				var tag = '';
+				var tag = '[RS]';
 				if (server == 1)
 				{
 					tag = '[TS]';
