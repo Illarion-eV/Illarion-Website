@@ -29,10 +29,10 @@
 					<?php echo $entry['name']."-".count($entry['subentries']); ?>
 				</a>
 			</li>
-			<?php if (isset($entry['subentries']) ) : ?>
+			<?php if (count($entry['subentries']) > 0 ) : ?>
 				<?php foreach ($entry['subentries'] as $key => $subentry): ?>
 					<li>
-						<a href="'.$subentry['link'].'">
+						<a href="<?php echo $subentry['link']; ?>">
 						<?php echo $subentry['name']; ?>
 						</a>
 					</li>
