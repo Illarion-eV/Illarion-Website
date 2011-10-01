@@ -18,7 +18,7 @@ function skinColorChange(image, color)
 			evalJS: false,
 			onComplete: function(response)
 			{
-				parseResponse( response.responseXML, 'char_image', '' );
+				parseResponse( response.responseXML, 'char_image' );
 
 				$('ajax_works').setStyle({
 						background: ''
@@ -45,6 +45,7 @@ function hairChange(image, color)
 	if (color.length == 0)
 	{
 		color = $('haircolor').value.substring(1);
+
 	}
 
 	var params = '';
@@ -99,11 +100,8 @@ function parseResponse( object, hairtarget, beardtarget )
 				if (object.childNodes[i].nodeName == 'hairimage') {
 					$(hairtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
-				if (beardtarget.length > 0)
-				{
-					if (object.childNodes[i].nodeName == 'beardimage') {
-						$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
-					}
+				if (object.childNodes[i].nodeName == 'beardimage') {
+					$(beardtarget).src = object.childNodes[i].firstChild.nodeValue;
 				}
 			};
 
