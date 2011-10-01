@@ -53,12 +53,6 @@
 		<dl class="gmtool">
 			<dt>Charakter ID</dt>
 			<dd><?php echo $char_data['chr_playerid']; ?></dd>
-			<dt>Online Status</dt>
-			<dd><?php echo $char_data['chr_status']; ?></dd>
-			<dt>Charakter Status</dt>
-			<dd><?php echo $char_data['chr_status']; ?></dd>
-			<dt>Zuletzt eingeloggt</dt>
-			<dd><?php echo $char_data['chr_lastsavetime']; ?></dd>
 			<dt>Account ID</dt>
 			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Account Name</dt>
@@ -67,7 +61,14 @@
 					(email@mail.de)
 				</a>
 			</dd>
-
+			<dd class="spacer">&nbsp;</dd>
+			<dt>Online Status</dt>
+			<dd><?php echo $char_data['chr_status']; ?></dd>
+			<dt>Charakter Status</dt>
+			<dd><?php echo $char_data['chr_status']; ?></dd>
+			<dt>Zuletzt eingeloggt</dt>
+			<dd><?php echo $char_data['chr_lastsavetime']; ?></dd>
+			<dd class="spacer">&nbsp;</dd>
 			<dt>Charaktername</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
 			<dt>Prefix</dt>
