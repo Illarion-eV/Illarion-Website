@@ -298,10 +298,26 @@ class IllarionData {
 
 	public static function getRaceArray($lang)
 	{
+		$race_array=array();
+
 		$pgSQL =& Database::getPostgreSQL();
-		$query = "SELECT raceattr.id FROM accounts.raceattr ORDER BY raceattr.id";
+		$query = "SELECT raceattr.id, raceattr.name FROM accounts.raceattr ORDER BY raceattr.id";
 		$pgSQL->setQuery( $query );
-		$race_array = $pgSQL->loadAssocList('id');
+		$result = $pgSQL->loadAssocList();
+
+
+		$race_list = getRaceArray();
+		foreach ($result as $key => $value)
+		{
+			if (in_array ( $value['id'], $race_list) )
+			{
+				$race_array[] = array('id' => $value['id'], 'name' => $race_list[$value['id']]);
+			}
+			else
+			{
+				$race_array[] = array('id' => $value['id'], 'name' => $value['name']);
+			}
+		}
 
 		return $race_array;
 
