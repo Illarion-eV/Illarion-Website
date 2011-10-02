@@ -103,10 +103,135 @@ define ('RACE_BEHOLDER',               	12 );
 define ('RACE_GHOST',                	13 );
 
 /**
- * Rasse: Goblin
+ * Rasse: Unsichtbar
  */
-define ('RACE_GOBLIN',                	15 );
+define ('RACE_INVISIBLE',            	14 );
 
+/**
+ * Rasse: Insekten
+ */
+define ('RACE_INSECTS',             	17 );
+
+/**
+ * Rasse: Schaf
+ */
+define ('RACE_SHEEP',    	        	18 );
+
+/**
+ * Rasse: Spinne
+ */
+define ('RACE_SPIDER',             		19 );
+
+/**
+ * Rasse: Dämonenskelett
+ */
+define ('RACE_DEMONSKELETON',            20 );
+
+/**
+ * Rasse: Rotwurm
+ */
+define ('RACE_ROTWORM',          	  	21 );
+
+/**
+ * Rasse:  Dämon
+ */
+define ('RACE_DEMON',            		22 );
+
+/**
+ * Rasse: Skorpion
+ */
+define ('RACE_SCORPION',            	23 );
+
+/**
+ * Rasse: Schwein
+ */
+define ('RACE_PIG',					 	24);
+
+/**
+ * Rasse: Schädel
+ */
+define ('RACE_SKULL',					26 );
+
+/**
+ * Rasse: Wespe
+ */
+define ('RACE_WASP',					27 );
+
+/**
+ * Rasse: Troll
+ */
+define ('RACE_TROLL',					28 );
+
+/**
+ * Rasse: Schattenskelett
+ */
+define ('RACE_SHADOWSKELETON',			29 );
+
+/**
+ * Rasse: STEINGOLEM
+ */
+define ('RACE_STONEGOLEM',				30 );
+
+/**
+ * Rasse: Gnoll
+ */
+define ('RACE_GNOLL',					32 );
+
+/**
+ * Rasse: Drache
+ */
+define ('RACE_DRAGON',					33 );
+
+/**
+ * Rasse: Drow (männlich)
+ */
+define ('RACE_MALE_DROW',				34	 );
+
+/**
+ * Rasse: Drow (weiblich)
+ */
+define ('RACE_FEMALE_DROW',				35	 );
+
+/**
+ * Rasse: Niederer Dämon
+ */
+define ('RACE_LESSER_DEMON',			36	 );
+
+/**
+ * Rasse: Kuh
+ */
+define ('RACE_COW',						37 );
+
+/**
+ * Rasse: Reh
+ */
+define ('RACE_DEER',					38 );
+
+/**
+ * Rasse: Wolf
+ */
+define ('RACE_WOLF',					39 );
+
+/**
+ * Rasse: Panther
+ */
+define ('RACE_PANTHER',					40 );
+
+/**
+ * Rasse: Hase
+ */
+define ('RACE_RABBIT',					41 );
+
+/**
+ * Rasse: Gefallener
+ */
+define ('RACE_FALLEN',					42 );
+
+
+/**
+ * Rasse: Gefallener
+ */
+define ('RACE_ICEDRAGON',					53 );
 
 // Online Status
 
