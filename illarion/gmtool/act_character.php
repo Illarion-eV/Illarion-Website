@@ -1,5 +1,5 @@
 <?php
-	if (!IllaUser::auth('gmtool_character'))
+	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add(($language=='de'?'Zugriff verweigert':'Access denieded'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
