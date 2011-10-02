@@ -46,7 +46,7 @@
 					.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['sex'] ).", "
 					.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] )." "
 				.PHP_EOL."WHERE "
-					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid )." "
+					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
 
 	echo $query;
 	$pgSQL->setQuery( $query );
