@@ -33,7 +33,7 @@
 	$pgSQL =& Database::getPostgreSQL();
 
 	$query = "UPDATE chars"
-	. "\n SET chr_name = ".$pgSQL->Quote( $new_data['name'] )
+	. "\n SET chr_name = ".$pgSQL->Quote( $newdata['name'] )
 	. "\n WHERE chr_playerid = ".$pgSQL->Quote( $charid )
 	;
 	$pgSQL->setQuery( $query );
