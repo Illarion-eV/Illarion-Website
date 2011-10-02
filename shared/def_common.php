@@ -335,7 +335,6 @@ function getRaceArray($lang)
 	if ($lang == "de")
 	{
 		return array(
-			RACE_OTHER => "--Sonstiges--",
 		    RACE_HUMAN => "Mensch",
 		    RACE_DWARF => "Zwerg",
 		    RACE_HALFLING => "Halbling",
@@ -382,7 +381,6 @@ function getRaceArray($lang)
 	else
 	{
 		return array(
-			RACE_OTHER => "--Other--",
 		    RACE_HUMAN => "Human",
 		    RACE_DWARF => "Dwarf",
 		    RACE_HALFLING => "Halfling",
