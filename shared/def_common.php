@@ -68,6 +68,17 @@ define ('RACE_FAIRY',                	7 );
  */
 define ('RACE_GOBLIN',                	8 );
 
+/**
+ * Char-Race: sonstige
+ */
+define ('RACE_OTHER',					1000 );
+
+/**
+ * Char-Race: Alle
+ */
+define ('RACE_ALL',						1001 );
+
+
 // Charakter Status
 
 /**
@@ -125,6 +136,16 @@ define ('CHAR_STATUS_TEMP_BANNED',				31 );
  */
 define ('CHAR_STATUS_INFORMATION_INCOMPLETE',	40 );
 
+/**
+ * Char-Status: unbekannt
+ */
+define ('CHAR_STATUS_UNKNOWN',					1000 );
+
+/**
+ * Char-Status: Alle
+ */
+define ('CHAR_STATUS_ALL',					1001 );
+
 function getGenderArray($lang)
 {
 	if ($lang == "de")
@@ -148,14 +169,14 @@ function getRaceArray($lang)
 	if ($lang == "de")
 	{
 		return array(
-			100 => "--Sonstiges--",
+			RACE_OTHER => "--Sonstiges--",
 		    RACE_HUMAN => "Mensch",
 		    RACE_DWARF => "Zwerg",
 		    RACE_HALFLING => "Halbling",
 		    RACE_ELF => "Elf",
 		    RACE_ORC => "Ork",
 		    RACE_LIZARD => "Echsenwesen",
-
+		    RACE_GNOME => "Gnom",
 		    RACE_FAIRY => "Fee",
 		    RACE_GOBLIN => "Goblin"
 
@@ -164,6 +185,7 @@ function getRaceArray($lang)
 	else
 	{
 		return array(
+			RACE_OTHER => "--Other--",
 		    RACE_HUMAN => "Human",
 		    RACE_DWARF => "Dwarf",
 		    RACE_HALFLING => "Halfling",
@@ -172,8 +194,8 @@ function getRaceArray($lang)
 		    RACE_LIZARD => "Lizard",
 			RACE_GNOME => "Gnome",
 			RACE_FAIRY => "Fairy",
-			RACE_GOBLIN => "Goblin",
-			"--Other--"
+			RACE_GOBLIN => "Goblin"
+
 		);
 	}
 }
@@ -183,6 +205,7 @@ function getCharStatusArray($lang)
 	if ($lang == "de")
 	{
 		return array(
+			CHAR_STATUS_UNKNOWN => "Status unbekannt",
 		    CHAR_STATUS_PLAYABLE => "Spielbar",
 		    CHAR_STATUS_INAKTIVE => "Inaktiv",
 		    CHAR_STATUS_NAME_CHECK => "Namensprüfung",
