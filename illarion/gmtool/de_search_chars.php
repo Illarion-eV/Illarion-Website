@@ -30,10 +30,10 @@
 		<div style="height:10px;"></div>
 		<span style="width:100px;display:block;float:left;">Status:</span>
 		<select name="status" id="status" onchange="performSearch();" style="width:150px">
-			<option value="-1">jeder</option>
-			<?php foreach( array(0,1,3,4,6,20,21,30,31,40) as $status ): ?>
-			<option value="<?php echo $status; ?>"><?php echo $status,' - ',getCharacterStatusName($status); ?></option>
-			<?php endforeach; ?>
+		<?php foreach (getCharStatusArray(IllaUser::$lang) as $key => $status) : ?>
+			<option value="<?php echo $key; ?>"><?php echo $key.' - '.$status; ?></option>
+		<?php endforeach; ?>
+
 		</select>
 	</div>
 	<div style="display:block;float:left;width:300px;margin-bottom:10px;">
