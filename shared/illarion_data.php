@@ -306,7 +306,7 @@ class IllarionData {
 		$result = $pgSQL->loadAssocList();
 
 
-		$race_list = getRaceArray();
+		$race_list = getRaceArray($lang);
 		foreach ($result as $key => $value)
 		{
 			if (array_key_exists ( $value['id'], $race_list) )
