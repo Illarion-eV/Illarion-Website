@@ -236,7 +236,14 @@ class IllarionData {
 		}
 	}
 
-	public static function getCharacterStatusName($status) {
+	public static function getCharacterStatusName($status)
+	{
+		if (Page::isGerman()) { $lang = "de"; } else { $lang = "us"; }
+
+		$charStatusArray = getCharStatusArray($lang);
+
+		return $charStatusArray[$status];
+		/*
 		switch ($status) {
 			case 0: return (Page::isGerman() ? 'spielbar' : 'playable');
 				break;
@@ -264,6 +271,7 @@ class IllarionData {
 			default: return (Page::isGerman() ? 'unbekannt' : 'unknown');
 				break;
 		}
+		   */
 	}
 
 	public static function getAccountStatusName($status) {

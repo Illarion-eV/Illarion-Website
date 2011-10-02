@@ -24,6 +24,15 @@ define ('GENDER_FEMALE',                1 );
 
 // Rassen
 /**
+ * Char-Race: sonstige
+ */
+define ('RACE_OTHER',					-2 );
+
+/**
+ * Char-Race: Alle
+ */
+define ('RACE_ALL',						-1 );
+/**
  * Rasse: Mensch
  */
 define ('RACE_HUMAN',                	0 );
@@ -68,15 +77,7 @@ define ('RACE_FAIRY',                	7 );
  */
 define ('RACE_GOBLIN',                	8 );
 
-/**
- * Char-Race: sonstige
- */
-define ('RACE_OTHER',					1000 );
 
-/**
- * Char-Race: Alle
- */
-define ('RACE_ALL',						1001 );
 
 // Online Status
 
@@ -92,7 +93,14 @@ define ('ONLINE_STATUS_ONLINE',					1 );
 
 
 // Charakter Status
-
+/**
+ * Char-Status: unbekannt
+ */
+define ('CHAR_STATUS_UNKNOWN',					-2 );
+/**
+ * Char-Status: Alle
+ */
+define ('CHAR_STATUS_ALL',						-1 );
 /**
 * Char-Status: Spielbar
 */
@@ -148,15 +156,7 @@ define ('CHAR_STATUS_TEMP_BANNED',				31 );
  */
 define ('CHAR_STATUS_INFORMATION_INCOMPLETE',	40 );
 
-/**
- * Char-Status: unbekannt
- */
-define ('CHAR_STATUS_UNKNOWN',					1000 );
 
-/**
- * Char-Status: Alle
- */
-define ('CHAR_STATUS_ALL',					1001 );
 
 function getGenderArray($lang)
 {
