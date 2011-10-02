@@ -54,47 +54,5 @@ define ('RACE_ORC',                		4 );
 define ('RACE_LIZARD',                	5 );
 
 
-function getGenderArray($lang)
-{
-	if ($lang == "de")
-	{
-		return array(
-		    GENDER_MALE => "Männlich",
-		    GENDER_FEMALE => "Weiblich",
-		);
-	}
-	else
-	{
-		return array(
-		    GENDER_MALE => "Male",
-		    GENDER_FEMALE => "Female",
-		);
-	}
-}
 
-function getRaceArray($lang)
-{
-	if ($lang == "de")
-	{
-		return array(
-		    RACE_HUMAN => "Mensch",
-		    RACE_DWARF => "Zwerg",
-		    RACE_HALFLING => "Halbling",
-		    RACE_ELF => "Elf",
-		    RACE_ORC => "Ork",
-		    RACE_LIZARD => "Echsenwesen"
-		);
-	}
-	else
-	{
-		return array(
-		    RACE_HUMAN => "Human",
-		    RACE_DWARF => "Dwarf",
-		    RACE_HALFLING => "Halfling",
-		    RACE_ELF => "Elf",
-		    RACE_ORC => "Orc",
-		    RACE_LIZARD => "Lizard"
-		);
-	}
-}
 
