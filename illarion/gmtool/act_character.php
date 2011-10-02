@@ -47,6 +47,8 @@
 				.PHP_EOL."WHERE "
 					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid )." "
 					.PHP_EOL."AND ply_playerid = ".$pgSQL->Quote( $charid );
+
+	echo $query;
 	$pgSQL->setQuery( $query );
 
 	if ($pgSQL->query())
