@@ -65,7 +65,7 @@
 			</dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Online Status</dt>
-			<dd><?php echo getOnlineStatus($char_data['online']); ?></dd>
+			<dd><?php echo IllarionData::getOnlineStatus($char_data['online']); ?></dd>
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
 			<dt>Zuletzt eingeloggt</dt>
