@@ -58,9 +58,9 @@
 			<dt>Account ID</dt>
 			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Account Name</dt>
-			<dd><?php echo $account_data['acc_name']; ?>
-				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?id=<?php echo $account_data['chr_accid']; ?>">
-					(<?php echo $account_data['acc_email']; ?>)
+			<dd><?php echo $char_data['acc_name']; ?>
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?id=<?php echo $char_data['chr_accid']; ?>">
+					(<?php echo $char_data['acc_email']; ?>)
 				</a>
 			</dd>
 			<dd class="spacer">&nbsp;</dd>
