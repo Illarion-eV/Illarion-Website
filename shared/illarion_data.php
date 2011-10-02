@@ -301,7 +301,7 @@ class IllarionData {
 		$pgSQL =& Database::getPostgreSQL();
 		$query = "SELECT raceattr.id FROM accounts.raceattr ORDER BY raceattr.id";
 		$pgSQL->setQuery( $query );
-		$race_array = $pgSQL->loadList();
+		$race_array = $pgSQL->loadAssocList('id');
 
 		return $race_array;
 
