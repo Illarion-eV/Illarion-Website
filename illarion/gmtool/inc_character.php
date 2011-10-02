@@ -26,7 +26,9 @@
 					.PHP_EOL."WHERE chr_playerid = ".$pgSQL->Quote( $charid)." "
 					.PHP_EOL."AND acc_id = chr_accid "
 					.PHP_EOL."AND ply_playerid = chr_playerid "
-					.PHP_EOL."AND on_playerid = chr_playerid";
+					.PHP_EOL."AND on_playerid = chr_playerid "
+					.PHP_EOL."GROUP BY chr_playerid"
+					;
 		$pgSQL->setQuery( $query );
 		$char_data = $pgSQL->loadAssocRow();
 
