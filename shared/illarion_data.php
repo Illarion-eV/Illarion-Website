@@ -320,7 +320,7 @@ class IllarionData {
 		}
 
 		// alte ID's aussortieren, die sollen eh nicht mehr benutzt werden
-		$bad_ids = array(15, 16, 25, 31, 42, 43 ,44, 45, 51);
+		$bad_ids = array(-1, 15, 16, 25, 31, 42, 43 ,44, 45, 51);
 
 		foreach ($bad_ids as $id)
 		{
