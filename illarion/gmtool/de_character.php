@@ -66,9 +66,10 @@
 			<dd class="spacer">&nbsp;</dd>
 			<?php if ($server == "illarionserver") : ?>
 			<dt>Online Status</dt>
-			<dd><?php echo $char_data['online']; ?></dd>
+			<?php if ($server == "illarionserver") : ?>
+				<dd><?php echo $char_data['online']; ?></dd>
 			<?php else : ?>
-			<dt>moep</dt><dd>xxx</dd>
+				<dd>-</dd>
 			<?php endif ?>
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
