@@ -11,7 +11,7 @@
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php?id=<?php echo $charid; ?>"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
 		<li>
-			<a class="none"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
+			<a class="none" href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?id=<?php echo $charid; ?>&amp;filter=0"><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
 			<ul>
 			<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?id=<?php echo $charid; ?>&amp;filter=0"><?php echo ( $language == 'de' ? 'Sprachen' : 'Language' ); ?></a></li>
 				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_charakter_skills.php?id=<?php echo $charid; ?>&amp;filter=1"><?php echo ( $language == 'de' ? 'Kampf' : 'Fighting' ); ?></a></li>
