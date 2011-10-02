@@ -4,6 +4,7 @@
 		$pgSQL =& Database::getPostgreSQL();
 
 		$query = "SELECT "
+					.PHP_EOL."count(onlineplayer.on_playerid) AS online,"
 					.PHP_EOL."chars.chr_accid,"
 					.PHP_EOL."chars.chr_playerid,"
 					.PHP_EOL."chars.chr_status,"
@@ -21,7 +22,7 @@
 					.PHP_EOL."player.ply_posx,"
 					.PHP_EOL."player.ply_posy,"
 					.PHP_EOL."player.ply_posz "
-					.PHP_EOL."FROM ".$server.".chars, ".$server.".player, accounts.account "
+					.PHP_EOL."FROM ".$server.".chars, ".$server.".player, ".$server.".onlineplayer, accounts.account "
 					.PHP_EOL."WHERE chr_playerid = ".$pgSQL->Quote( $charid)." "
 					.PHP_EOL."AND acc_id = chr_accid "
 					.PHP_EOL."AND ply_playerid = chr_playerid";
