@@ -3,7 +3,7 @@
 	{
 		$pgSQL =& Database::getPostgreSQL();
 
-		$query = "SELECT * FROM ".$server.".chars, account.account WHERE chr_playerid = ".$pgSQL->Quote( $charid)." AND acc_id = chr_accid";
+		$query = "SELECT * FROM ".$server.".chars, accounts.account WHERE chr_playerid = ".$pgSQL->Quote( $charid)." AND acc_id = chr_accid";
 		$pgSQL->setQuery( $query );
 		$char_data = $pgSQL->loadAssocRow();
 
