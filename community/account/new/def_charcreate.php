@@ -9,50 +9,6 @@
  * @author        kadiya
  */
 
-
- // Geschlecht
-/**
- * Geschlecht: maennlich
- */
-define ('GENDER_MALE',                0 );
-
-/**
- * Geschlecht: weiblich
- */
-define ('GENDER_FEMALE',                1 );
-
-
-// Rassen
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_HUMAN',                	0 );
-
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_DWARF',                	1 );
-
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_HALFLING',                2 );
-
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_ELF',                		3 );
-
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_ORC',                		4 );
-
-/**
- * Geschlecht: maennlich
- */
-define ('RACE_LIZARD',                	5 );
-
 // Haarfarbe
 
 // Menschen
@@ -468,26 +424,6 @@ define ('ELF_FEMALE_HAIR_8',			"_hair_8");
 
 define ('ELF_MALE_HAIR_1',				"_hair_1");
 define ('ELF_MALE_HAIR_2',				"_hair_2");
-
-function getGenderArray()
-{
-	return array(
-	    GENDER_MALE => "Männlich",
-	    GENDER_FEMALE => "Weiblich",
-	);
-}
-
-function getRaceArray()
-{
-	return array(
-	    RACE_HUMAN => "Mensch",
-	    RACE_DWARF => "Zwerg",
-	    RACE_HALFLING => "Halbling",
-	    RACE_ELF => "Elf",
-	    RACE_ORC => "Orc",
-	    RACE_LIZARD => "Echsenwesen"
-	);
-}
 
 function getHumanHairColorArray()
 {
