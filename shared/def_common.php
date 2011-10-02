@@ -225,7 +225,7 @@ define ('RACE_RABBIT',					41 );
 /**
  * Rasse: Gefallener
  */
-define ('RACE_FALLEN',					42 );
+define ('RACE_FALLEN',					46 );
 
 
 /**
