@@ -64,7 +64,6 @@
 				</a>
 			</dd>
 			<dd class="spacer">&nbsp;</dd>
-			<?php if ($server == "illarionserver") : ?>
 			<dt>Online Status</dt>
 			<?php if ($server == "illarionserver") : ?>
 				<dd><?php echo $char_data['online']; ?></dd>
