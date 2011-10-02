@@ -30,6 +30,8 @@
 	print_r($newdata);
 	echo "</pre>";
 
+	$char_data['chr_name'] = $newdata['name'];
+
 	$pgSQL =& Database::getPostgreSQL();
 
 	$query = "UPDATE chars"
