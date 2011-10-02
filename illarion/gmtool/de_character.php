@@ -65,11 +65,7 @@
 			</dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Online Status</dt>
-			<?php if ($server == "illarionserver") : ?>
-				<dd><?php echo $char_data['online']; ?></dd>
-			<?php else : ?>
-				<dd>-</dd>
-			<?php endif ?>
+			<dd><?php echo $char_data['online']; ?></dd>
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
 			<dt>Zuletzt eingeloggt</dt>
