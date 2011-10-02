@@ -29,13 +29,12 @@
 	echo "<pre>";
 	print_r($newdata);
 	echo "</pre>";
-/*
+
 	$pgSQL =& Database::getPostgreSQL();
 
-	$query = "UPDATE account"
-	. "\n SET acc_lang = ".$pgSQL->Quote( $new_lang )
-	. ", acc_passwd = ".$pgSQL->Quote( $new_passwd )
-	. "\n WHERE acc_id = ".$pgSQL->Quote( $accid )
+	$query = "UPDATE chars"
+	. "\n SET chr_name = ".$pgSQL->Quote( $new_data['name'] )
+	. "\n WHERE chr_playerid = ".$pgSQL->Quote( $charid )
 	;
 	$pgSQL->setQuery( $query );
 
@@ -47,5 +46,5 @@
 	{
 		Messages::add(($language=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
 	}
-*/
+
 ?>
