@@ -39,7 +39,7 @@
 	<div style="display:block;float:left;width:300px;margin-bottom:10px;">
 		<span style="width:100px;display:block;float:left;">Rasse:</span>
 		<select name="race" id="race" onchange="performSearch();" style="width:150px">
-		<?php foreach (getRaceArray(IllaUser::$lang) as $key => $race) : ?>
+		<?php foreach (IllarionData::getRaceArray(IllaUser::$lang) as $key => $race) : ?>
 			<option value="<?php echo $key; ?>"><?php echo $key ."-". $race; ?> </option>
 		<?php endforeach ?>
 		</select>
