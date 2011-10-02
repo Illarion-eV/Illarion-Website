@@ -51,6 +51,8 @@
 <form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $account_data['id']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
+			<dt>Server</dt>
+			<dd><?php echo $server; ?></dd>
 			<dt>Charakter ID</dt>
 			<dd><?php echo $char_data['chr_playerid']; ?></dd>
 			<dt>Account ID</dt>
