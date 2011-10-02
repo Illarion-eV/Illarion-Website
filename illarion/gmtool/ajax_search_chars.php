@@ -12,7 +12,7 @@
 	$search = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', $search);
 
 	$status = ( array_search( $_POST['state'], array(0,1,3,4,6,20,21,30,31,40)) === false ? false : $_POST['state'] );
-	$race   = ( $_POST['race'] > -1 && $_POST['race'] < 47 ? $_POST['race'] : false );
+	$race   = ( $_POST['race'] > -1  ? $_POST['race'] : false );
 	$sex    = ( $_POST['sex'] == 0 || $_POST['sex'] == 1 ? $_POST['sex'] : false );
 	$online = ( $_POST['online'] == 0 || $_POST['online'] == 1 ? $_POST['online'] : false );
 
