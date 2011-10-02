@@ -78,6 +78,18 @@ define ('RACE_OTHER',					1000 );
  */
 define ('RACE_ALL',						1001 );
 
+// Online Status
+
+/**
+ * Online-Status: online
+ */
+define ('ONLINE_STATUS_OFFLINE',				0 );
+
+/**
+ * Online Status: offline
+ */
+define ('ONLINE_STATUS_ONLINE',					1 );
+
 
 // Charakter Status
 
@@ -198,6 +210,14 @@ function getRaceArray($lang)
 
 		);
 	}
+}
+
+function getOnlineArray()
+{
+		return array(
+		    ONLINE_STATUS_OFFLINE => "Offline",
+		    ONLINE_STATUS_ONLINE => "Online",
+		);
 }
 
 function getCharStatusArray($lang)

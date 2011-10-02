@@ -48,7 +48,7 @@
 
 <?php include_character_menu( $char_data['chr_playerid'], 1, $_GET['server'] ); ?>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $account_data['id']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $char_data['id']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
 			<dt>Server</dt>
@@ -65,7 +65,7 @@
 			</dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Online Status</dt>
-			<dd><?php echo $char_data['online']; ?></dd>
+			<dd><?php echo getOnlineStatus($char_data['online']); ?></dd>
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
 			<dt>Zuletzt eingeloggt</dt>
