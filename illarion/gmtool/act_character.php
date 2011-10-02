@@ -7,6 +7,7 @@
 	}
 
 	$charid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$server = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : false );
 
 	if (!$charid)
 	{
@@ -30,7 +31,7 @@
 	print_r($newdata);
 	echo "</pre>";
 
-	$char_data['chr_name'] = $newdata['name'];
+
 
 	$pgSQL =& Database::getPostgreSQL();
 
@@ -48,5 +49,7 @@
 	{
 		Messages::add(($language=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
 	}
+
+	$char_data = getCharData( $charid, $server );
 
 ?>
