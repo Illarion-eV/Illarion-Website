@@ -4,6 +4,8 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_charactermenu.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character.php' );
 
+	Page::Init();
+
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add('Zugriff verweigert', 'error');
@@ -21,7 +23,14 @@
 		exit();
 	}
 
+	$char_data = getCharData( $charid,$server );
 
+	if (!$char_data || !count($char_data))
+	{
+		Messages::add('Charakter wurde nicht gefunden', 'error');
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		exit();
+	}
 
 	Page::setTitle( array( 'GM-Tool', 'Charakter', $char_data['chr_name'] ) );
 	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['chr_name'].'"' );
@@ -31,15 +40,6 @@
 
 	Page::setXHTML();
 	Page::Init();
-
-	$char_data = getCharData( $charid,$server );
-
-	if (!$char_data || !count($char_data))
-	{
-		Messages::add('Charakter wurde nicht gefunden', 'error');
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
-		exit();
-	}
 ?>
 
 <h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
