@@ -80,6 +80,7 @@
 			<dt>Rasse</dt>
 			<dd>
 				<select name="race">
+					<option value="-1">--Sonstiges--</option>
 					<?php foreach( getRaceArray(IllaUser::$lang) as $key => $race ): ?>
 						<option value="<?php echo $key; ?>"
 						<?php if ($key == $char_data['chr_race']) { echo ' selected="selected"'; } ?>
