@@ -148,6 +148,7 @@ function getRaceArray($lang)
 	if ($lang == "de")
 	{
 		return array(
+			"--Sonstiges--",
 		    RACE_HUMAN => "Mensch",
 		    RACE_DWARF => "Zwerg",
 		    RACE_HALFLING => "Halbling",
@@ -156,8 +157,8 @@ function getRaceArray($lang)
 		    RACE_LIZARD => "Echsenwesen",
 
 		    RACE_FAIRY => "Fee",
-		    RACE_GOBLIN => "Goblin",
-		    "--Sonstiges--"
+		    RACE_GOBLIN => "Goblin"
+
 		);
 	}
 	else
