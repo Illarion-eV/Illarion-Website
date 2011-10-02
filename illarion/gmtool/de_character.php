@@ -101,6 +101,10 @@
 					<?php endforeach; ?>
 				</select>
 			</dd>
+			<dt>Hitpoints</dt>
+			<dd><input type="text" name="hitpoints" size="5" value="666" /></dd>
+			<dt>Mana</dt>
+			<dd><input type="text" name="mana" value="666" /></dd>
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />
