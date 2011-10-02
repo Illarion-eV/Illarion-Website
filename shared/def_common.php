@@ -439,7 +439,6 @@ function getCharStatusArray($lang)
 	if ($lang == "de")
 	{
 		return array(
-			CHAR_STATUS_ALL => "Jeder",
 		    CHAR_STATUS_PLAYABLE => "Spielbar",
 		    CHAR_STATUS_INAKTIVE => "Inaktiv",
 		    CHAR_STATUS_NAME_CHECK => "Namensprüfung",
@@ -456,7 +455,6 @@ function getCharStatusArray($lang)
 	else
 	{
 		return array(
-			CHAR_STATUS_ALL => "Jeder",
 			CHAR_STATUS_PLAYABLE => "Playable",
 			CHAR_STATUS_INAKTIVE => "Inaktiv",
 			CHAR_STATUS_NAME_CHECK => "Namecheck",

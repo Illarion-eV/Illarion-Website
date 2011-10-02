@@ -30,6 +30,7 @@
 		<div style="height:10px;"></div>
 		<span style="width:100px;display:block;float:left;">Status:</span>
 		<select name="status" id="status" onchange="performSearch();" style="width:150px">
+		<option value="-1">Jeder</option>
 		<?php foreach (getCharStatusArray(IllaUser::$lang) as $key => $status) : ?>
 			<option value="<?php echo $key; ?>"><?php echo $status; ?></option>
 		<?php endforeach; ?>
