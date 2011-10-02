@@ -280,6 +280,13 @@ class IllarionData {
 				break;
 		}
 	}
+
+	public static function getOnlineStatus($status)
+	{
+		$online_array = getOnlineArray();
+
+		return $online_array[$status];
+	}
 }
 
 ?>
