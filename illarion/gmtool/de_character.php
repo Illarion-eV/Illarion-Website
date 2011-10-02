@@ -107,11 +107,11 @@
 			<dt>Mana</dt>
 			<dd><input type="text" name="mana" value="<?php echo $char_data['ply_mana']; ?>" /></dd>
 			<dt>Position X</dt>
-			<dd><input type="text" name="pos_x" value="<?php echo $char_data['ply_posx']; ?>" /></dd>
+			<dd><input type="text" name="posx" value="<?php echo $char_data['ply_posx']; ?>" /></dd>
 			<dt>Position Y</dt>
-			<dd><input type="text" name="pos_y" value="<?php echo $char_data['ply_posy']; ?>" /></dd>
+			<dd><input type="text" name="posy" value="<?php echo $char_data['ply_posy']; ?>" /></dd>
 			<dt>Position Z</dt>
-			<dd><input type="text" name="pos_z" value="<?php echo $char_data['ply_posz']; ?>" /></dd>
+			<dd><input type="text" name="posz" value="<?php echo $char_data['ply_posz']; ?>" /></dd>
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />
