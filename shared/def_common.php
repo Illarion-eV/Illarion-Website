@@ -24,35 +24,97 @@ define ('GENDER_FEMALE',                1 );
 
 // Rassen
 /**
- * Geschlecht: maennlich
+ * Rasse: Mensch
  */
 define ('RACE_HUMAN',                	0 );
 
 /**
- * Geschlecht: maennlich
+ * Rasse: Zwerg
  */
 define ('RACE_DWARF',                	1 );
 
 /**
- * Geschlecht: maennlich
+ * Rasse: Halbling
  */
 define ('RACE_HALFLING',                2 );
 
 /**
- * Geschlecht: maennlich
+ * Rasse: Elf
  */
 define ('RACE_ELF',                		3 );
 
 /**
- * Geschlecht: maennlich
+ * Rasse: Ork
  */
 define ('RACE_ORC',                		4 );
 
 /**
- * Geschlecht: maennlich
+ * Rasse: Echsenwesen
  */
 define ('RACE_LIZARD',                	5 );
 
+/**
+ * Rasse: Gnom
+ */
+define ('RACE_GNOME',                	6 );
 
+/**
+ * Rasse: Fee
+ */
+define ('RACE_FAIRY',                	7 );
 
+/**
+ * Rasse: Goblin
+ */
+define ('RACE_GOBLIN',                	8 );
+
+function getGenderArray($lang)
+{
+	if ($lang == "de")
+	{
+		return array(
+		    GENDER_MALE => "Männlich",
+		    GENDER_FEMALE => "Weiblich",
+		);
+	}
+	else
+	{
+		return array(
+		    GENDER_MALE => "Male",
+		    GENDER_FEMALE => "Female",
+		);
+	}
+}
+
+function getRaceArray($lang)
+{
+	if ($lang == "de")
+	{
+		return array(
+		    RACE_HUMAN => "Mensch",
+		    RACE_DWARF => "Zwerg",
+		    RACE_HALFLING => "Halbling",
+		    RACE_ELF => "Elf",
+		    RACE_ORC => "Ork",
+		    RACE_LIZARD => "Echsenwesen",
+		    RACE_GNOME => "Gnom",
+		    RACE_FAIRY => "Fee",
+		    RACE_GOBLIN => "Goblin"
+		);
+	}
+	else
+	{
+		return array(
+		    RACE_HUMAN => "Human",
+		    RACE_DWARF => "Dwarf",
+		    RACE_HALFLING => "Halfling",
+		    RACE_ELF => "Elf",
+		    RACE_ORC => "Orc",
+		    RACE_LIZARD => "Lizard",
+			RACE_GNOME => "Gnome",
+			RACE_FAIRY => "Fairy",
+			RACE_GOBLIN => "Goblin"
+		);
+	}
+}
 

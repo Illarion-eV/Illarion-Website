@@ -80,6 +80,16 @@
 			<dt>Rasse</dt>
 			<dd>
 				<select name="race">
+					<?php foreach( getRaceArray(IllaUser::$lang) as $key => $race ): ?>
+						<option value="<?php echo $key; ?>">
+							<?php echo $race; ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+			</dd>
+			<dt>Geschlecht</dt>
+			<dd>
+				<select name="race">
 					<option value="0"<?php echo ($char_data['chr_race'] ? '' : ' selected="selected"'); ?>>Mensch</option>
 					<option value="1"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Zwerg</option>
 					<option value="6"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Gnom</option>
