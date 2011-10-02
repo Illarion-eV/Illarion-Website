@@ -1,7 +1,7 @@
 <?php
 	if (!IllaUser::auth('gmtool_chars'))
 	{
-		Messages::add(($language=='de'?'Zugriff verweigert':'Access denieded'), 'error');
+		Messages::add((IllaUser::$lang=='de'?'Zugriff verweigert':'Access denieded'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -11,7 +11,7 @@
 
 	if (!$charid)
 	{
-		Messages::add(($language=='de'?'Charakter ID wurde nicht richtig übergeben':'Character ID was not transfered correctly'), 'error');
+		Messages::add((IllaUser::$lang=='de'?'Charakter ID wurde nicht richtig übergeben':'Character ID was not transfered correctly'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -43,11 +43,11 @@
 
 	if ($pgSQL->query())
 	{
-		Messages::add(($language=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
+		Messages::add((IllaUser::$lang=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
 	}
 	else
 	{
-		Messages::add(($language=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
+		Messages::add((IllaUser::$lang=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
 	}
 
 ?>
