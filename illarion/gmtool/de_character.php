@@ -68,7 +68,7 @@
 			<dt>Online Status</dt>
 			<dd><?php echo $char_data['online']; ?></dd>
 			<?php else : ?>
-			<dt><dd></dd></dt>
+			<dt></dt><dd></dd>
 			<?php endif ?>
 			<dt>Charakter Status</dt>
 			<dd><?php echo $char_data['chr_status']; ?></dd>
