@@ -91,11 +91,14 @@
 			</dd>
 			<dt>Geschlecht</dt>
 			<dd>
-				<select name="race">
-					<option value="0"<?php echo ($char_data['chr_race'] ? '' : ' selected="selected"'); ?>>Mensch</option>
-					<option value="1"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Zwerg</option>
-					<option value="6"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Gnom</option>
-					<option value="7"<?php echo ($char_data['chr_race'] ? ' selected="selected"' : ''); ?>>Fee</option>
+				<select name="sex">
+					<?php foreach( getGenderArray(IllaUser::$lang) as $key => $gender ): ?>
+						<option value="<?php echo $key; ?>"
+						<?php if ($key == $char_data['chr_sex']) { echo ' selected="selected"'; } ?>
+						>
+						<?php echo $gender; ?>
+						</option>
+					<?php endforeach; ?>
 				</select>
 			</dd>
 		</dl>
