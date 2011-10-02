@@ -295,6 +295,17 @@ class IllarionData {
 
 		return $online_array[$status];
 	}
+
+	public static function getRaceArray($lang)
+	{
+		$pgSQL =& Database::getPostgreSQL();
+		$query = "SELECT raceattr.id FROM accounts.raceattr ORDER BY raceattr.id";
+		$pgSQL->setQuery( $query );
+		$race_array = $pgSQL->loadAssocRow();
+
+		return $race_array();
+
+	}
 }
 
 ?>

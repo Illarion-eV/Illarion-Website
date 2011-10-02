@@ -77,6 +77,35 @@ define ('RACE_FAIRY',                	7 );
  */
 define ('RACE_GOBLIN',                	8 );
 
+/**
+ * Rasse: Oger
+ */
+define ('RACE_OGRE',                	9 );
+
+/**
+ * Rasse: Mumie
+ */
+define ('RACE_MUMMIE',                	10 );
+
+/**
+ * Rasse: Skelett
+ */
+define ('RACE_SKELETON',            	11 );
+
+/**
+ * Rasse: Beholder
+ */
+define ('RACE_BEHOLDER',               	12 );
+
+/**
+ * Rasse: Geist
+ */
+define ('RACE_GHOST',                	13 );
+
+/**
+ * Rasse: Goblin
+ */
+define ('RACE_GOBLIN',                	15 );
 
 
 // Online Status

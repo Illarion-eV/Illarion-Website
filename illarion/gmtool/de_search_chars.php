@@ -39,10 +39,9 @@
 	<div style="display:block;float:left;width:300px;margin-bottom:10px;">
 		<span style="width:100px;display:block;float:left;">Rasse:</span>
 		<select name="race" id="race" onchange="performSearch();" style="width:150px">
-			<option value="-1">alle</option>
-			<?php for($i=0;$i<47;$i++): if ($i!=15 && $i!=16 && $i!=44 && $i!=45 && $i!=43 && $i!=25 && $i!=35 && $i!=31 && $i!=42): ?>
-			<option value="<?php echo $i; ?>"><?php echo getRaceName($i); ?></option>
-			<?php endif; endfor; ?>
+		<?php foreach (getRaceArray(IllaUser::$lang) as $key => $race) : ?>
+			<option value="<?php echo $key; ?>"><?php echo $key ."-". $race; ?> </option>
+		<?php endforeach ?>
 		</select>
 		<div style="height:10px;"></div>
 		<span style="width:100px;display:block;float:left;">Geschlecht:</span>
