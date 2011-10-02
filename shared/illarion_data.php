@@ -309,13 +309,13 @@ class IllarionData {
 		$race_list = getRaceArray();
 		foreach ($result as $key => $value)
 		{
-			if (in_array ( $value['id'], $race_list) )
+			if (array_key_exists ( $value['id'], $race_list) )
 			{
-				$race_array[] = array('id' => $value['id'], 'name' => $race_list[$value['id']]);
+				$race_array[$value['id']] = $race_list[$value['id']];
 			}
 			else
 			{
-				$race_array[] = array('id' => $value['id'], 'name' => $value['name']);
+				$race_array[$value['id']] = $value['name'];
 			}
 		}
 
