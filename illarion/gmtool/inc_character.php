@@ -33,7 +33,7 @@
 			return false;
 		}
 
-		$char_data['online'] = 3;
+		$char_data['online'] = 0;
 		if ($server == "illarionserver")
 		{
 			$query = "SELECT count(onlineplayer.on_playerid) as hits FROM ".$server.".onlineplayer WHERE on_playerid=".$pgSQL->Quote( $charid);
