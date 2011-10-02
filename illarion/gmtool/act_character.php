@@ -50,6 +50,4 @@
 		Messages::add(($language=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
 	}
 
-	$char_data = getCharData( $charid, $server );
-
 ?>

@@ -312,7 +312,7 @@ define ('CHAR_STATUS_INFORMATION_INCOMPLETE',	40 );
 
 
 
-function getGenderArray($lang)
+function getGenderArray($lang="")
 {
 	if ($lang == "de")
 	{
@@ -330,7 +330,7 @@ function getGenderArray($lang)
 	}
 }
 
-function getRaceArray($lang)
+function getRaceArray($lang="")
 {
 	if ($lang == "de")
 	{
@@ -434,7 +434,7 @@ function getOnlineArray()
 		);
 }
 
-function getCharStatusArray($lang)
+function getCharStatusArray($lang="")
 {
 	if ($lang == "de")
 	{
