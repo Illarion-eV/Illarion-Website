@@ -303,7 +303,7 @@ class IllarionData {
 		$pgSQL->setQuery( $query );
 		$race_array = $pgSQL->loadAssocRow();
 
-		return $race_array();
+		return $race_array;
 
 	}
 }
