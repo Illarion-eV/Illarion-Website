@@ -52,11 +52,11 @@
 
 <div class="spacer"></div>
 
-<?php include_character_menu( $char_data['chr_playerid'], 1, $_GET['server'] ); ?>
+<?php include_character_menu( $charid, 1, $_GET['server'] ); ?>
 
 
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $char_data['chr_playerid']; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
 			<dt>Geburtstag</dt>
@@ -66,7 +66,7 @@
 			<dt>Größe</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['ply_body_height']; ?>" /></dd>
 			<dt>Gewicht</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['chr_weight']; ?>" /></dd>
+			<dd><input type="text" name="name" value="<?php echo $char_data['ply_weight']; ?>" /></dd>
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />
