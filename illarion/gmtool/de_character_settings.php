@@ -77,7 +77,7 @@
 			</dd>
 			<dt>&nbsp;</dt>
 			<dd>
-				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
 						Bild des Charakters bearbeiten
 				</a>
 			</dd>

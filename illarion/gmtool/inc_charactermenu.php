@@ -11,8 +11,7 @@
 			<a class="none" ><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a>
 			<ul>
 			<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Allgemeines' : 'General' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Einstellungen' : 'Settings' ); ?></a></li>
-				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_style.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Aussehen' : 'Style' ); ?></a></li>
+				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Einstellungen' : 'Settings' ); ?></a></li>
 			</ul>
 		</li>
 		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
