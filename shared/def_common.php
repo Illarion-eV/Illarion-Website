@@ -265,6 +265,12 @@ define ('CHAR_STATUS_PLAYABLE',					0 );
  */
 define ('CHAR_STATUS_INAKTIVE',					1 );
 
+
+/**
+ * Char-Status: Erstellung nicht fertig
+ */
+define ('CHAR_STATUS_CREATION_NOT_DONE_X',		3 );
+
 /**
  * Char-Status: Namen wird gecheckt
  */
@@ -279,6 +285,12 @@ define ('CHAR_STATUS_NAME_ACCEPTED',			5 );
  * Char-Status: Name abgelehnt
  */
 define ('CHAR_STATUS_NAME_REJECTED',			6 );
+
+
+/**
+ * Char-Status: Erstellung nicht fertig
+ */
+define ('CHAR_STATUS_CREATION_NOT_DONE_Y',		7 );
 
 /**
  * Char-Status: Erstellung nicht fertig
@@ -441,9 +453,11 @@ function getCharStatusArray($lang="")
 		return array(
 		    CHAR_STATUS_PLAYABLE => "Spielbar",
 		    CHAR_STATUS_INAKTIVE => "Inaktiv",
+		    CHAR_STATUS_CREATION_NOT_DONE_X => "Erstellung nicht fertig",
 		    CHAR_STATUS_NAME_CHECK => "Namensprüfung",
 		    CHAR_STATUS_NAME_ACCEPTED => "Name akzeptiert",
 		    CHAR_STATUS_NAME_REJECTED => "Name abgelehnt",
+		    CHAR_STATUS_CREATION_NOT_DONE_Y => "Erstellung nicht fertig",
 		    CHAR_STATUS_CREATION_NOT_DONE => "Erstellung nicht fertig",
 		    CHAR_STATUS_JAILED => "Eingesperrt",
 		    CHAR_STATUS_TEMP_JAILED => "Temporär eingesperrt",
