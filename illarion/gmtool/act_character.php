@@ -46,7 +46,18 @@
 				.PHP_EOL."WHERE "
 					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
 
-	echo $query;
+	$pgSQL->setQuery( $query );
+
+	$query = "UPDATE ".$server.".player "
+				.PHP_EOL."SET "
+				.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] ).", "
+				.PHP_EOL."ply_mana = ".$pgSQL->Quote( $newdata['mana'] ).", "
+				.PHP_EOL."ply_posx = ".$pgSQL->Quote( $newdata['posx'] ).", "
+				.PHP_EOL."ply_posy = ".$pgSQL->Quote( $newdata['posy'] ).", "
+				.PHP_EOL."ply_posz = ".$pgSQL->Quote( $newdata['posz'] )." "
+			.PHP_EOL."WHERE "
+				.PHP_EOL."ply_playerid = ".$pgSQL->Quote( $charid );
+
 	$pgSQL->setQuery( $query );
 
 	if ($pgSQL->query())
