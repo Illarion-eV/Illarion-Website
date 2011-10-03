@@ -61,25 +61,25 @@
 	<div>
 		<dl class="gmtool">
 			<dt>Stärke</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_strength']; ?>" /></dd>
+			<dd><input type="text" name="strength" value="<?php echo $char_data['ply_strength']; ?>" /></dd>
 			<dt>Geschicklichkeit</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_dexterity']; ?>" /></dd>
+			<dd><input type="text" name="dexterity" value="<?php echo $char_data['ply_dexterity']; ?>" /></dd>
 			<dt>Ausdauer</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_constitution']; ?>" /></dd>
+			<dd><input type="text" name="constitution" value="<?php echo $char_data['ply_constitution']; ?>" /></dd>
 			<dt>Schnelligkeit</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_agility']; ?>" /></dd>
+			<dd><input type="text" name="agility" value="<?php echo $char_data['ply_agility']; ?>" /></dd>
 			<dt>Intelligenz</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_intelligence']; ?>" /></dd>
+			<dd><input type="text" name="intelligence" value="<?php echo $char_data['ply_intelligence']; ?>" /></dd>
 			<dt>Wahrnehmung</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_perception']; ?>" /></dd>
+			<dd><input type="text" name="perception" value="<?php echo $char_data['ply_perception']; ?>" /></dd>
 			<dt>Willenskraft</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_willpower']; ?>" /></dd>
+			<dd><input type="text" name="willpower" value="<?php echo $char_data['ply_willpower']; ?>" /></dd>
 			<dt>Essenz</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_essence']; ?>" /></dd>
+			<dd><input type="text" name="essence" value="<?php echo $char_data['ply_essence']; ?>" /></dd>
 			<dt>&nbsp;</dt>
 			<dd>&nbsp;</dd>
 			<dt>Gesamt</dt>
-			<dd><input type="text" name="name" value="<?php echo $count; ?>" /></dd>
+			<dd><input type="text" name="count" value="<?php echo $count; ?>" /></dd>
 
 		</dl>
 		<div class="spacer" />
