@@ -1,5 +1,5 @@
 <?php
-	function loadCharacterData( $charid, $server )
+	function getCharData( $charid, $server )
 	{
 		$pgSQL =& Database::getPostgreSQL( $server );
 

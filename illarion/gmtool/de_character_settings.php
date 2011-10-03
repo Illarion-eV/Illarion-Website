@@ -23,7 +23,7 @@
 		exit();
 	}
 
-	$char_data = getCharData( $charid,$server );
+	$char_data = getCharData( $charid, $server );
 
 	if (!$char_data || !count($char_data))
 	{
