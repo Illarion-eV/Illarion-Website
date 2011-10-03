@@ -71,7 +71,7 @@
 			<dd><?php echo $char_data['ply_weight']; ?></dd>
 			<dt>Einstellungen</dt>
 			<dd>
-				<a href="<?php echo Page::getURL(); ?>/community/account/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>&amp;source=1" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
 						Einstellungen des Charakters bearbeiten
 				</a>
 			</dd>
