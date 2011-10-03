@@ -62,7 +62,7 @@
 			<dt>Geburtstag</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['ply_dob']; ?>" /></dd>
 			<dt>Alter</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_dob']; ?>" /> Jahre</dd>
+			<dd><input type="text" name="name" value="<?php echo $char_data['ply_dob']; ?>" /> </dd><dd>Jahre</dd>
 			<dt>Größe</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['ply_body_height']; ?>" /></dd>
 			<dt>Gewicht</dt>
