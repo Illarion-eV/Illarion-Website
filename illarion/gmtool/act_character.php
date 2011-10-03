@@ -37,7 +37,7 @@
 	$pgSQL =& Database::getPostgreSQL();
 
 	$query = "UPDATE ".$server.".chars "
-				.PHP_EOL."INNER JOIN ".$server.".player ON ply_playerid = chr_playerid "
+				.PHP_EOL." JOIN ".$server.".player ON chr_playerid = ply_playerid "
 					.PHP_EOL."SET "
 					.PHP_EOL."chr_name = ".$pgSQL->Quote( $newdata['name'] ).", "
 					.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
