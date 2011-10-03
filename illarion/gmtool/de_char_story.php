@@ -57,7 +57,7 @@
 
 <h1>Charaktergeschichte</h1>
 
-<form method="post" action="<?php echo Page::getURL(); ?>/community/account/de_char_story.php?charid=<?php echo $charid; ?>" id="mainForm">
+<form method="post" action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_story.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>" id="mainForm">
 	<h2>Charaktergeschichte für das Webprofil</h2>
 
 	<p>
@@ -74,8 +74,8 @@
 		<button onclick="document.forms.mainForm.submit()" style="margin-right:10px;">Speichern</button>
 		<button onclick="document.forms.mainForm.reset()" style="margin-left:10px;">Zurücksetzen</button>
 		<br /><br />
-		<a href="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>">
-			Zurück zu den Details
+		<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_details.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>">
+			Zurück zu den Einstellungen
 		</a>
 		<input type="hidden" name="action" value="char_story" />
 	</p>
