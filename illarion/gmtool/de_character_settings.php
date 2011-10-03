@@ -60,7 +60,7 @@
 	<div>
 		<dl class="gmtool">
 			<dt>Geburtstag</dt>
-			<dd><?php echo $chardata['ply_dob']['day'],'. ',IllaDateTime::getMonthName( $chardata['ply_dob']['month'] ),' ',($chardata['ply_dob']['year']>0 ? $chardata['ply_dob']['year'].' n.VdH' : (-$chardata['ply_dob']['year']).' v.VdH' ); ?></dd>
+			<dd><?php echo $char_data['ply_dob']['day'],'. ',IllaDateTime::getMonthName( $char_data['ply_dob']['month'] ),' ',($char_data['ply_dob']['year']>0 ? $char_data['ply_dob']['year'].' n.VdH' : (-$char_data['ply_dob']['year']).' v.VdH' ); ?></dd>
 			<dt>Alter</dt>
 			<dd><?php echo $char_data['ply_dob']['age']; ?> Jahre</dd>
 			<dt>Größe</dt>
