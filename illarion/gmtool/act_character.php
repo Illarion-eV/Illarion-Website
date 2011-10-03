@@ -17,6 +17,8 @@
 		exit();
 	}
 
+
+
 	$newdata['name'] 		= ( strlen($_POST['name']) > 0 ? (string)$_POST['name'] : null );
 	$newdata['prefix']   	= (string)$_POST['prefix'];
 	$newdata['suffix']  	= (string)$_POST['suffix'];
@@ -29,6 +31,19 @@
 	$newdata['posz']		= (strlen($_POST['posz']) > 0 ? (int)$_POST['posz'] : false);
 
 	$pgSQL =& Database::getPostgreSQL();
+
+	// Namenscheck : Gibt es den Namen schon?
+	$query = "SELECT count(*) FROM ".$server.".chars WHERE chr_name = ".$pgSQL->Quote( $newdata['name'] );
+	$pgSQL->setQuery( $query );
+
+	if ($pgSQL->loadResult() != 0)
+	{
+		Messages::add((IllaUser::$lang=='de'?'Der Charactername ist bereits vergeben':'Character is already in use'), 'error');
+		exit();
+	}
+
+
+
 
 	$query = "UPDATE ".$server.".chars "
 					.PHP_EOL."SET "
