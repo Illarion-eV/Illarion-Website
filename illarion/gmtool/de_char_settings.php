@@ -48,7 +48,7 @@
 <div>
 	<h2>Einstellungen anpassen</h2>
 
-	<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>" method="post" name="settingsForm">
+	<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post" name="settingsForm">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
