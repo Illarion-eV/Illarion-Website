@@ -43,9 +43,6 @@
 	Page::setXHTML();
 	Page::Init();
 
-	echo "<pre>";
-	print_r($char_data);
-	echo "</pre>";
 ?>
 
 <h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
