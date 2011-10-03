@@ -32,6 +32,8 @@
 		exit();
 	}
 
+	$count = ($char_data['ply_strength']+$char_data['ply_dexterity']+$char_data['ply_constitution']+$char_data['ply_agility']+$char_data['ply_intelligence']+$char_data['ply_perception']+$char_data['ply_willpower']+$char_data['ply_essence']);
+
 	Page::setTitle( array( 'GM-Tool', 'Charakter', $char_data['chr_name'] ) );
 	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['chr_name'].'"' );
 	Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen', $char_data['chr_name'] ) );
@@ -74,6 +76,11 @@
 			<dd><input type="text" name="name" value="<?php echo $char_data['ply_willpower']; ?>" /></dd>
 			<dt>Essenz</dt>
 			<dd><input type="text" name="name" value="<?php echo $char_data['ply_essence']; ?>" /></dd>
+			<dt>&nbsp;</dt>
+			<dd>&nbsp;</dd>
+			<dt>Gesamt</dt>
+			<dd><input type="text" name="name" value="<?php echo $count; ?>" /></dd>
+
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />
