@@ -69,10 +69,28 @@
 			<dd><?php echo $char_data['ply_body_height']; ?></dd>
 			<dt>Gewicht</dt>
 			<dd><?php echo $char_data['ply_weight']; ?></dd>
-			<dt>Einstellungen</dt>
+			<dt>&nbsp;</dt>
 			<dd>
-				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:200,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
 						Einstellungen des Charakters bearbeiten
+				</a>
+			</dd>
+			<dt>&nbsp;</dt>
+			<dd>
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
+						Bild des Charakters bearbeiten
+				</a>
+			</dd>
+			<dt>&nbsp;</dt>
+			<dd>
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_description.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>">
+						Beschreibung des Charakters bearbeiten
+				</a>
+			</dd>
+			<dt>&nbsp;</dt>
+			<dd>
+				<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_story.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>">
+						Geschichte des Charakters bearbeiten
 				</a>
 			</dd>
 		</dl>
