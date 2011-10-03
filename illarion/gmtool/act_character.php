@@ -18,8 +18,8 @@
 	}
 
 	$newdata['name'] 		= ( strlen($_POST['name']) > 0 ? (string)$_POST['name'] : null );
-	$newdata['prefix']   	= ( strlen($_POST['prefix']) > 0 ? (string)$_POST['prefix'] : false );
-	$newdata['suffix']  	= ( strlen($_POST['suffix']) > 0 ? (string)$_POST['suffix'] : false );
+	$newdata['prefix']   	= (string)$_POST['prefix'];
+	$newdata['suffix']  	= (string)$_POST['suffix'];
 	$newdata['race'] 		= (array_key_exists ($_POST['race'], getRaceArray()) ? (int)$_POST['race'] : false  );
 	$newdata['gender']		= ( (int)$_POST['sex'] == 0 || (int)$_POST['sex'] == 1 ? (int)$_POST['sex'] : false );
 	$newdata['hitpoints']	= ( $_POST['hitpoints'] <= 10000 && $_POST['hitpoints'] >= 0 ? (int)$_POST['hitpoints'] : false );
