@@ -36,7 +36,9 @@
 	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['chr_name'].'"' );
 	Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen', $char_data['chr_name'] ) );
 
+	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
 	Page::addCSS( array( 'menu', 'gmtool' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow') );
 
 	Page::setXHTML();
 	Page::Init();
