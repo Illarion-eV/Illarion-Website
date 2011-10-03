@@ -48,6 +48,8 @@
 
 	$pgSQL->setQuery( $query );
 
+	echo $query;
+
 	$query = "UPDATE ".$server.".player "
 				.PHP_EOL."SET "
 				.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] ).", "
