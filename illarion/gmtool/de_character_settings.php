@@ -54,7 +54,7 @@
 
 <?php include_character_menu( $charid, 1, $_GET['server'] ); ?>
 
-
+<div class="spacer"></div>
 
 <form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
