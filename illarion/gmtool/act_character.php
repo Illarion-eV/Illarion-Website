@@ -28,12 +28,6 @@
 	$newdata['posy']		= (strlen($_POST['posy']) > 0 ? (int)$_POST['posy'] : false);
 	$newdata['posz']		= (strlen($_POST['posz']) > 0 ? (int)$_POST['posz'] : false);
 
-	echo "<pre>";
-	print_r($newdata);
-	echo "</pre>";
-
-
-
 	$pgSQL =& Database::getPostgreSQL();
 
 	$query = "UPDATE ".$server.".chars "
@@ -48,7 +42,6 @@
 
 	$pgSQL->setQuery( $query );
 	$up_1 = $pgSQL->query();
-	echo $query;
 
 	$query = "UPDATE ".$server.".player "
 				.PHP_EOL."SET "

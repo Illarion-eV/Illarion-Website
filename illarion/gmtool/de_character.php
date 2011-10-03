@@ -120,9 +120,3 @@
 		<input type="hidden" name="action" value="character" />
 	</div>
 </form>
-
-<div style="width:400px;">
-<pre>
-<?php print_r($char_data); ?>
-</pre>
-</div>
