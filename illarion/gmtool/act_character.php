@@ -71,15 +71,17 @@
 
 		$pgSQL->setQuery( $query );
 		$up_2 = $pgSQL->query();
+
+		if (($up_1)&&($up_2))
+		{
+			Messages::add((IllaUser::$lang=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
+		}
+		else
+		{
+			Messages::add((IllaUser::$lang=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
+		}
 	}
 
-	if (($up_1)&&($up_2))
-	{
-		Messages::add((IllaUser::$lang=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
-	}
-	else
-	{
-		Messages::add((IllaUser::$lang=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
-	}
+
 
 ?>
