@@ -21,7 +21,7 @@
 	$newdata['prefix']   	= ( strlen($_POST['prefix']) > 0 ? (string)$_POST['prefix'] : false );
 	$newdata['suffix']  	= ( strlen($_POST['suffix']) > 0 ? (string)$_POST['suffix'] : false );
 	$newdata['race'] 		= (array_key_exists ($_POST['race'], getRaceArray()) ? (int)$_POST['race'] : false  );
-	$newdata['gender']		= ( $_POST['sex'] == 0 || $_POST['sex'] == 1 ? $_POST['sex'] : false );
+	$newdata['gender']		= ( (int)$_POST['sex'] == 0 || (int)$_POST['sex'] == 1 ? (int)$_POST['sex'] : false );
 	$newdata['hitpoints']	= ( $_POST['hitpoints'] <= 10000 && $_POST['hitpoints'] >= 0 ? (int)$_POST['hitpoints'] : false );
 	$newdata['mana']		= ( $_POST['mana'] <= 10000 && $_POST['mana'] >= 0 ? (int)$_POST['mana'] : false );
 	$newdata['posx']		= (strlen($_POST['posx']) > 0   ? (int)$_POST['posx'] : false);
