@@ -36,17 +36,15 @@
 
 	$pgSQL =& Database::getPostgreSQL();
 
-	$query = "UPDATE ".$server.".chars, ".$server.".player "
+	$query = "UPDATE ".$server.".chars "
 					.PHP_EOL."SET "
 					.PHP_EOL."chr_name = ".$pgSQL->Quote( $newdata['name'] ).", "
 					.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
 					.PHP_EOL."chr_suffix = ".$pgSQL->Quote( $newdata['suffix'] ).", "
 					.PHP_EOL."chr_race = ".$pgSQL->Quote( $newdata['race'] ).", "
 					.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['gender'] ).", "
-					.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] )." "
 				.PHP_EOL."WHERE "
-					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid )." "
-					.PHP_EOL."AND ply_playerid = ".$pgSQL->Quote( $charid );
+					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
 
 	echo $query;
 	$pgSQL->setQuery( $query );
