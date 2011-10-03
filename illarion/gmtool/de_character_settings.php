@@ -67,6 +67,12 @@
 			<dd><?php echo $char_data['ply_body_height']; ?></dd>
 			<dt>Gewicht</dt>
 			<dd><?php echo $char_data['ply_weight']; ?></dd>
+			<dt>Einstellungen</dt>
+			<dd>
+				<a href="<?php echo Page::getURL(); ?>/community/account/de_char_settings.php?id=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
+						Einstellungen des Charakters bearbeiten
+				</a>
+			</dd>
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />

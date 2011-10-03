@@ -50,6 +50,8 @@
 
 <?php include_character_menu( $char_data['chr_playerid'], 1, $_GET['server'] ); ?>
 
+<div class="spacer"></div>
+
 <form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $char_data['chr_playerid']; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
