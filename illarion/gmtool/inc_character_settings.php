@@ -7,7 +7,7 @@ function getCharData( $charid, $server )
 			.PHP_EOL."player.ply_body_height,"
 			.PHP_EOL."player.ply_weight,"
 			.PHP_EOL."player.ply_dob,"
-			.PHP_EOL."chr.name"
+			.PHP_EOL."chars.chr_name"
 			.PHP_EOL."FROM ".$server.".player, ".$server.".chars "
 			.PHP_EOL."WHERE ply_playerid = ".$pgSQL->Quote( $charid)." "
 			.PHP_EOL."AND chr_playerid =".$pgSQL->Quote( $charid);
