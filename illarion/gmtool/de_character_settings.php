@@ -60,13 +60,13 @@
 	<div>
 		<dl class="gmtool">
 			<dt>Geburtstag</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_dob']; ?>" /></dd>
+			<dd><?php echo $chardata['ply_dob']['day'],'. ',IllaDateTime::getMonthName( $chardata['ply_dob']['month'] ),' ',($chardata['ply_dob']['year']>0 ? $chardata['ply_dob']['year'].' n.VdH' : (-$chardata['ply_dob']['year']).' v.VdH' ); ?></dd>
 			<dt>Alter</dt>
-			<dd><?php echo $char_data['ply_age']; ?> Jahre</dd>
+			<dd><?php echo $char_data['ply_dob']['age']; ?> Jahre</dd>
 			<dt>Größe</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_body_height']; ?>" /></dd>
+			<dd><?php echo $char_data['ply_body_height']; ?></dd>
 			<dt>Gewicht</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['ply_weight']; ?>" /></dd>
+			<dd><?php echo $char_data['ply_weight']; ?></dd>
 		</dl>
 		<div class="spacer" />
 		<input type="submit" name="submit" value="Änderungen speichern" />

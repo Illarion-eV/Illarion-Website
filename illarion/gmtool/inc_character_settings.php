@@ -30,11 +30,11 @@ function getCharData( $charid, $server )
 
 	if (IllaUser::usesMeter())
 	{
-		$char_data['ply_body_height'] = round($char_data['ply_body_height']*0.0254,2) .'m';
+		$char_data['ply_body_height'] = round($char_data['ply_body_height']*0.0254,2) .' m';
 	}
 	else
 	{
-		$char_data['ply_body_height'] = floor($char_data['ply_body_height']/12).'ft '.($char_data['ply_body_height']%12).'inch';
+		$char_data['ply_body_height'] = floor($char_data['ply_body_height']/12).' ft '.($char_data['ply_body_height']%12).' inch';
 	}
 
 	if (IllaUser::usesGram())
