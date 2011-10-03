@@ -2,6 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? false : true );
+	$source = ( isset( $_GET['source'] ) && $_GET['source'] == '1' ? true : false );
 
 	if (!$server)
 	{
@@ -48,7 +49,11 @@
 <div>
 	<h2>Einstellungen anpassen</h2>
 
-	<form action="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>" method="post" name="settingsForm">
+	<?php if ($source) : ?>
+		<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post" name="settingsForm">
+	<?php else : ?>
+		<form action="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>" method="post" name="settingsForm">
+	<?php endif ?>
 		<table style="width:100%;">
 			<tbody>
 				<tr>
