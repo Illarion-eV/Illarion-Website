@@ -44,7 +44,7 @@
 		$error = 1;
 	}
 
-	if ($error = 0)
+	if ($error == 0)
 	{
 		$query = "UPDATE ".$server.".chars "
 						.PHP_EOL."SET "
