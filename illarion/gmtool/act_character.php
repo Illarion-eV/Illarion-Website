@@ -47,7 +47,7 @@
 					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
 
 	$pgSQL->setQuery( $query );
-
+	$up_1 = $pgSQL->query();
 	echo $query;
 
 	$query = "UPDATE ".$server.".player "
@@ -61,8 +61,9 @@
 				.PHP_EOL."ply_playerid = ".$pgSQL->Quote( $charid );
 
 	$pgSQL->setQuery( $query );
+	$up_2 = $pgSQL->query();
 
-	if ($pgSQL->query())
+	if (($up_1)&&($up_2))
 	{
 		Messages::add((IllaUser::$lang=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
 	}
