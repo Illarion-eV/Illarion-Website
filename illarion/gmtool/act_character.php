@@ -42,7 +42,7 @@
 					.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
 					.PHP_EOL."chr_suffix = ".$pgSQL->Quote( $newdata['suffix'] ).", "
 					.PHP_EOL."chr_race = ".$pgSQL->Quote( $newdata['race'] ).", "
-					.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['sex'] ).", "
+					.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['gender'] ).", "
 					.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] )." "
 				.PHP_EOL."WHERE "
 					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid )." "
