@@ -84,7 +84,7 @@
 					<img src="<?php echo $pic_link; ?>" style="width:<?php echo $pic_width; ?>px;height:<?php echo $pic_height; ?>px;" alt="Charakter Bild" />
 				</td>
 				<td style="vertical-align:middle;text-align:center;">
-					<form method="post" action="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>" name="deleteForm">
+					<form method="post" action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" name="deleteForm">
 						<button onclick="document.forms.deleteForm.submit();">Bild löschen</button>
 						<input type="hidden" name="action" value="char_picture" />
 						<input type="hidden" name="picture" value="delete" />
@@ -97,7 +97,7 @@
 
 	<h3>Neues Bild hochladen</h3>
 
-	<form method="post" action="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>" name="pictureForm" enctype="multipart/form-data">
+	<form method="post" action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" name="pictureForm" enctype="multipart/form-data">
 		<p>
 			<input type="file" name="picture" class="file" accept="image/*" style="margin-left:20px;" />
 			<input type="hidden" name="action" value="char_picture" />
