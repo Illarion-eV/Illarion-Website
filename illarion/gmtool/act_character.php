@@ -32,6 +32,8 @@
 
 	$pgSQL =& Database::getPostgreSQL();
 
+	$error = 0;
+
 	// Namenscheck : Gibt es den Namen schon?
 	$query = "SELECT count(*) FROM ".$server.".chars WHERE chr_name = ".$pgSQL->Quote( $newdata['name'] );
 	$pgSQL->setQuery( $query );
@@ -39,37 +41,37 @@
 	if ($pgSQL->loadResult() != 0)
 	{
 		Messages::add((IllaUser::$lang=='de'?'Der Charactername ist bereits vergeben':'Character is already in use'), 'error');
-		exit();
+		$error = 1;
 	}
 
+	if ($error = 0)
+	{
+		$query = "UPDATE ".$server.".chars "
+						.PHP_EOL."SET "
+						.PHP_EOL."chr_name = ".$pgSQL->Quote( $newdata['name'] ).", "
+						.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
+						.PHP_EOL."chr_suffix = ".$pgSQL->Quote( $newdata['suffix'] ).", "
+						.PHP_EOL."chr_race = ".$pgSQL->Quote( $newdata['race'] ).", "
+						.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['gender'] )." "
+					.PHP_EOL."WHERE "
+						.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
 
+		$pgSQL->setQuery( $query );
+		$up_1 = $pgSQL->query();
 
-
-	$query = "UPDATE ".$server.".chars "
+		$query = "UPDATE ".$server.".player "
 					.PHP_EOL."SET "
-					.PHP_EOL."chr_name = ".$pgSQL->Quote( $newdata['name'] ).", "
-					.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
-					.PHP_EOL."chr_suffix = ".$pgSQL->Quote( $newdata['suffix'] ).", "
-					.PHP_EOL."chr_race = ".$pgSQL->Quote( $newdata['race'] ).", "
-					.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['gender'] )." "
+					.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] ).", "
+					.PHP_EOL."ply_mana = ".$pgSQL->Quote( $newdata['mana'] ).", "
+					.PHP_EOL."ply_posx = ".$pgSQL->Quote( $newdata['posx'] ).", "
+					.PHP_EOL."ply_posy = ".$pgSQL->Quote( $newdata['posy'] ).", "
+					.PHP_EOL."ply_posz = ".$pgSQL->Quote( $newdata['posz'] )." "
 				.PHP_EOL."WHERE "
-					.PHP_EOL."chr_playerid = ".$pgSQL->Quote( $charid );
+					.PHP_EOL."ply_playerid = ".$pgSQL->Quote( $charid );
 
-	$pgSQL->setQuery( $query );
-	$up_1 = $pgSQL->query();
-
-	$query = "UPDATE ".$server.".player "
-				.PHP_EOL."SET "
-				.PHP_EOL."ply_hitpoints = ".$pgSQL->Quote( $newdata['hitpoints'] ).", "
-				.PHP_EOL."ply_mana = ".$pgSQL->Quote( $newdata['mana'] ).", "
-				.PHP_EOL."ply_posx = ".$pgSQL->Quote( $newdata['posx'] ).", "
-				.PHP_EOL."ply_posy = ".$pgSQL->Quote( $newdata['posy'] ).", "
-				.PHP_EOL."ply_posz = ".$pgSQL->Quote( $newdata['posz'] )." "
-			.PHP_EOL."WHERE "
-				.PHP_EOL."ply_playerid = ".$pgSQL->Quote( $charid );
-
-	$pgSQL->setQuery( $query );
-	$up_2 = $pgSQL->query();
+		$pgSQL->setQuery( $query );
+		$up_2 = $pgSQL->query();
+	}
 
 	if (($up_1)&&($up_2))
 	{
