@@ -14,7 +14,7 @@
 	}
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
-	$charid = ( isset( $_GET['id'] )  && is_numeric($_GET['id']) ? (int)$_GET['id'] : false );
+	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 
 	if (!$charid)
 	{
@@ -58,7 +58,7 @@
 
 <div class="spacer"></div>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
 			<dt>Geburtstag</dt>
