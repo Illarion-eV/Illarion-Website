@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_charactermenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character_settings.php' );
 
 	Page::Init();
 
@@ -40,6 +40,10 @@
 
 	Page::setXHTML();
 	Page::Init();
+
+	echo "<pre>";
+	print_r($char_data);
+	echo "</pre>";
 ?>
 
 <h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
@@ -49,6 +53,10 @@
 <div class="spacer"></div>
 
 <?php include_character_menu( $char_data['chr_playerid'], 1, $_GET['server'] ); ?>
+
+<div style="float:left; height:200px; width:255px;vertical-align:middle;text-align:center;">
+	<img src="<?php echo $chardata['picture']['file']; ?>" height="<?php echo $chardata['picture']['height']; ?>" width="<?php echo $chardata['picture']['width']; ?>" alt="Bild von <?php echo $chardata['chr_name']; ?>" />
+</div>
 
 <form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?id=<?php echo $char_data['chr_playerid']; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
