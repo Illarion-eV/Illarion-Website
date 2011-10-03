@@ -68,7 +68,7 @@
 
 <h2>Kurzbeschreibung (maximal 255 Zeichen)</h2>
 
-<form method="post" action="<?php echo Page::getURL(); ?>/community/account/de_char_description.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>" id="mainForm">
+<form method="post" action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_description.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>" id="mainForm">
 	<p>
 		Deutsch<br />
 		<input style="width:100%;" maxlength="255" type="text" name="short_de" value="<?php echo $descriptions['short_de']; ?>" />
@@ -99,8 +99,8 @@
 		<button onclick="document.forms.mainForm.submit()" style="margin-right:10px;">Speichern</button>
 		<button onclick="document.forms.mainForm.reset()" style="margin-left:10px;">Zurücksetzen</button>
 		<br /><br />
-		<a href="<?php echo Page::getURL(); ?>/community/account/de_char_details.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>">
-			Zurück zu den Details
+		<a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_details.php?charid=<?php echo $charid; ?>&amp;server=<?php echo ($_GET['server']==1 ? 1 : 0); ?>">
+			Zurück zu den Einstellungen
 		</a>
 		<input type="hidden" name="action" value="char_description" />
 	</p>
