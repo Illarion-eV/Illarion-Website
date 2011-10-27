@@ -6,7 +6,6 @@
 
 	Page::addCSS( 'onlineplayer' );
 
-	Page::setXHTML();
 	Page::Init();
 ?>
 
