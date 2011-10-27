@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	Page::setTitle( 'Entwicklungsstatus' );
+	Page::setTitle( 'Entwicklungsfortschritt' );
 	Page::setDescription( 'Diese Seite zeigt an, wie es um die Entwicklung von Illarion steht.' );
 
 	Page::addCSS( 'onlineplayer' );
@@ -10,7 +10,7 @@
 	Page::Init();
 ?>
 
-<h1>Entwicklungsstatus (VBU)</h1>
+<h1>Entwicklungsfortschritt (VBU)</h1>
 
 <p>
     Legende:
