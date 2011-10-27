@@ -25,25 +25,25 @@
 <h3>Systems</h3>
 <ul>
     <li><span style="color:#FFA500">Crafting</span></li>
-    <li><span style="color:#FF4500">Gathering</span>: pharse</li>
-    <li><span style="color:#D2691E">Fighting</span>: martin</li>
+    <li><span style="color:#FF4500">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
+    <li><span style="color:#D2691E">Fighting</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="color:#FFA500">Arcane Magic</span></li>
-    <li><span style="color:#D2691E">Druids</span>: Jupiter</li>
-    <li><span style="color:#FF4500">Factions</span>: Ardian</li>
+    <li><span style="color:#D2691E">Druids</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5791">Jupiter</a></li>
+    <li><span style="color:#FF4500">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
 </ul>
 
 <h3>NPCs</h3>
 <ul>
     <li><span style="color:#FF4500">Traders</span></li>
     <li><span style="color:#FFA500">Monsters</span></li>
-    <li><span style="color:#FFA500">Guards</span>: pharse</li>
+    <li><span style="color:#FFA500">Guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
     <li><span style="color:#FFA500">Mules</span></li>
 </ul>
 
 <h3>Other</h3>
 <ul>
     <li><span style="color:#FF4500">Tutorial</span></li>
-    <li><span style="color:#D2691E">Magic Gems</span>: martin</li>
-    <li><span style="color:#D2691E">Books</span>: Skamato</li>
+    <li><span style="color:#D2691E">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
+    <li><span style="color:#D2691E">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="color:#D2691E">Quests</span></li>
 </ul>
