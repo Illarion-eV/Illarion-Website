@@ -24,11 +24,10 @@
 <h3>Systems</h3>
 <ul>
     <li><span style="font-weight:bold; color:#FFA500">Crafting</span></li>
-    <li><span style="font-weight:bold; color:#FFA500">Arcane Magic</span></li>
     <li><span style="font-weight:bold; color:#FF4500">Fighting</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Druids</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5791">Jupiter</a></li>
-    <li><span style="font-weight:bold; color:#8B0000">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span style="font-weight:bold; color:#8B0000">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
+    <li><span style="font-weight:bold; color:#FF4500">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
+    <li><span style="font-weight:bold; color:#FF4500">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
 </ul>
 
 <h3>NPCs</h3>
