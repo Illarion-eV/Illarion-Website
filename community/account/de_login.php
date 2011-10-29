@@ -14,7 +14,7 @@
 	}
 	else
 	{
-		$targetURL = Page::getURL().'/general/de_startpage.php';
+		$targetURL = Page::getURL().'/community/account/de_charlist.php';
 	}
 	$targetURL = str_replace( '&', '&amp;', $targetURL );
 
