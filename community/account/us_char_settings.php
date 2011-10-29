@@ -65,7 +65,7 @@
 						<label for="show_profil1">show</label>
 					</td>
 				</tr>
-
+<!-- always show chars on online list
 				<tr>
 					<td>
 						<a title='' class="tooltip" onmouseover="Tip('This option selects if the character is shown at the online list or not',TITLE,'Show onlinestate',WIDTH,-300);" onmouseout="UnTip();">Show onlinestate</a>
@@ -79,7 +79,7 @@
 						<label for="show_online1">show</label>
 					</td>
 				</tr>
-
+-->
 				<tr>
 					<td>
 						<a title='' class="tooltip" onmouseover="Tip('This option selects if the character story is visible or not.',TITLE,'Show story',WIDTH,-300);" onmouseout="UnTip();">Show story</a>

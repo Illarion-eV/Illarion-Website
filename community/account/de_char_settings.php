@@ -64,7 +64,7 @@
 						<label for="show_profil1">anzeigen</label>
 					</td>
 				</tr>
-
+<!-- always show chars on online list
 				<tr>
 					<td>
 						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob dieser Charakter auf der Onlineliste erscheint oder nicht.',TITLE,'Onlinestatus anzeigen',WIDTH,-300);" onmouseout="UnTip();">Onlinestatus anzeigen</a>
@@ -78,7 +78,7 @@
 						<label for="show_online1">anzeigen</label>
 					</td>
 				</tr>
-
+-->
 				<tr>
 					<td>
 						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob die Geschichte des Charakters im Profil sichtbar ist oder nicht.',TITLE,'Geschichte anzeigen',WIDTH,-300);" onmouseout="UnTip();">Geschichte anzeigen</a>
