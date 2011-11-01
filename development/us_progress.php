@@ -45,3 +45,10 @@
     <li><span style="font-weight:bold; color:#FF4500">Quests</span></li>
     <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
 </ul>
+
+<h2>Homepage</h2>
+
+<ul>
+    <li><span style="font-weight:bold; color:green">Character Generation</span></li>
+    <li><span style="font-weight:bold; color:#FF4500">GM Tool</span></li>
+</ul>
