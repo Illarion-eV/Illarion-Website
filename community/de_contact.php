@@ -108,7 +108,6 @@ und um alle die es nicht so mit Regeln haben.</p>
 	<li><a href="?contact=14">Arien Edhel</a></li>
 	<li><a href="?contact=11">Estralis Seborian</a></li>
 	<li><a href="?contact=41">Flux</a></li>
-	<li><a href="?contact=43">Nomos</a></li>
 	<li><a href="?contact=40">Zot</a></li>
 </ul>
 
@@ -426,12 +425,6 @@ und um alle die es nicht so mit Regeln haben.</p>
       case 41: //Flux
          define(_CONTACT_NAME,"Flux",false);
          define(_CONTACT_MAIL,"fluxilla@hotmail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
-         " Quest bezogenen Anfragen helfen kann.",false);
-      break;
-      case 43: //Nomos
-         define(_CONTACT_NAME,"Nomos",false);
-         define(_CONTACT_MAIL,"gmnomos@hotmail.co.uk",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
          " Quest bezogenen Anfragen helfen kann.",false);
       break;
