@@ -107,7 +107,9 @@ logging on. Usually other follow if someone is playing.</p>
 			}
 			else
 			{
-				$show_char = ((int)($chr_settings[$char['chr_playerid']]['settings']&2) == 0);
+                // always show chars
+				// $show_char = ((int)($chr_settings[$char['chr_playerid']]['settings']&2) == 0);
+                $show_char = true;
 				$show_profil = ((int)($chr_settings[$char['chr_playerid']]['settings']&1) > 0);
 			}
 
