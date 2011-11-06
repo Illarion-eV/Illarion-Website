@@ -30,6 +30,14 @@
     <li><span style="font-weight:bold; color:#FF4500">Fraktionen</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
 </ul>
 
+<h3>Karte</h3>
+<ul>
+    <li><span style="font-weight:bold; color:green">Städte</span></li>
+    <li><span style="font-weight:bold; color:green">Dungeons</span></li>
+    <li><span style="font-weight:bold; color:green">Wildnis</span></li>
+    <li><span style="font-weight:bold; color:green">Tutorial</span></li>
+</ul>
+
 <h3>NPCs</h3>
 <ul>
     <li><span style="font-weight:bold; color:#FFA500">Monster</span></li>
@@ -40,6 +48,7 @@
 
 <h3>Sonstiges</h3>
 <ul>
+    <li><span style="font-weight:bold; color:green">Schatzkarten</span></li>
     <li><span style="font-weight:bold; color:#FF4500">Magische Edelsteine</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Bücher</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Quests</span></li>

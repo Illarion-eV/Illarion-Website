@@ -30,6 +30,14 @@
     <li><span style="font-weight:bold; color:#FF4500">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
 </ul>
 
+<h3>Map</h3>
+<ul>
+    <li><span style="font-weight:bold; color:green">Cities</span></li>
+    <li><span style="font-weight:bold; color:green">Dungeons</span></li>
+    <li><span style="font-weight:bold; color:green">Wilderness</span></li>
+    <li><span style="font-weight:bold; color:green">Tutorial</span></li>
+</ul>
+
 <h3>NPCs</h3>
 <ul>
     <li><span style="font-weight:bold; color:#FFA500">Monsters</span></li>
@@ -40,6 +48,7 @@
 
 <h3>Other</h3>
 <ul>
+    <li><span style="font-weight:bold; color:green">Treasure Maps</span></li>
     <li><span style="font-weight:bold; color:#FF4500">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Quests</span></li>
