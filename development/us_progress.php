@@ -19,6 +19,15 @@
     <span style="font-weight:bold; color:green">Complete</span>
 </p>
 
+<h2>Server</h2>
+
+<ul>
+    <li><span style="font-weight:bold; color:green">Lua Binding</span></li>
+    <li><span style="font-weight:bold; color:green">Learning System</span></li>
+    <li><span style="font-weight:bold; color:green">Database Binding</span></li>
+    <li><span style="font-weight:bold; color:green">Client Protocol</span></li>
+</ul>
+
 <h2>Content</h2>
 
 <h3>Systems</h3>

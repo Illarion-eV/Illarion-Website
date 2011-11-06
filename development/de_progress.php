@@ -19,6 +19,15 @@
     <span style="font-weight:bold; color:green">Fertiggestellt</span>
 </p>
 
+<h2>Server</h2>
+
+<ul>
+    <li><span style="font-weight:bold; color:green">Lua-Anbindung</span></li>
+    <li><span style="font-weight:bold; color:green">Lernsystem</span></li>
+    <li><span style="font-weight:bold; color:green">Datenbankschnittstelle</span></li>
+    <li><span style="font-weight:bold; color:green">Client-Protokoll</span></li>
+</ul>
+
 <h2>Inhalt</h2>
 
 <h3>Systeme</h3>
