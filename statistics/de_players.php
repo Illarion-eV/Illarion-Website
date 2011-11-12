@@ -64,7 +64,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 		.PHP_EOL.' FROM "illarionserver"."onlineplayer"'
 		.PHP_EOL.' INNER JOIN "illarionserver"."chars" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."chars"."chr_playerid"'
 		.PHP_EOL.' INNER JOIN "illarionserver"."player" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."player"."ply_playerid"'
-		.PHP_EOL.' WHERE (( SELECT COUNT("illarionserver"."gms"."gm_charid") AS "count" FROM "illarionserver"."gms" WHERE "illarionserver"."gms"."gm_charid" = "illarionserver"."chars"."chr_playerid" AND NOT ("illarionserver"."gms"."gm_rights_server" & 131072) > 0)) = 0'
+		.PHP_EOL.' WHERE (( SELECT COUNT("illarionserver"."gms"."gm_charid") AS "count" FROM "illarionserver"."gms" WHERE "illarionserver"."gms"."gm_charid" = "illarionserver"."chars"."chr_playerid" AND NOT ("illarionserver"."gms"."gm_rights_server" & 131072) > 0)) = 0 AND "illarionserver"."chars"."chr_playerid" >= 100'
 		.PHP_EOL.' ORDER BY "illarionserver"."chars"."chr_race", "illarionserver"."chars"."chr_name"'
 		;
 	}
