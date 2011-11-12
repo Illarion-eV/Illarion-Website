@@ -64,6 +64,23 @@
     <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
 </ul>
 
+<h2>Graphics</h2>
+
+<h3>Characters</h3>
+<ul>
+    <li><span style="font-weight:bold; color:#FFA500">Avatars</span></li>
+    <li><span style="font-weight:bold; color:#FFA500">Paperdolling</span></li>
+    <li><span style="font-weight:bold; color:#FF4500">Monsters</span></li>
+</ul>
+
+<h3>Static</h3>
+<ul>
+    <li><span style="font-weight:bold; color:green">Scenery</span></li>
+    <li><span style="font-weight:bold; color:green">Decoration</span></li>
+    <li><span style="font-weight:bold; color:green">Items</span></li>
+    <li><span style="font-weight:bold; color:green">Tiles</span></li>
+</ul>
+
 <h2>Homepage</h2>
 
 <ul>
