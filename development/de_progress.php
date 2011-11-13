@@ -28,6 +28,20 @@
     <li><span style="font-weight:bold; color:green">Client-Protokoll</span></li>
 </ul>
 
+<h2>Client</h2>
+
+<ul>
+    <li style="font-weight:bold; color:green">Resourcenverwaltung</li>
+    <li style="font-weight:bold; color:green">Server-Protokoll</li>
+    <li style="font-weight:bold; color:green">Sound- und Musikanbindung</li>
+    <li style="font-weight:bold; color:green">Wegesuchen</li>
+    <li style="font-weight:bold; color:#FFA500">Sitzungsverwaltung</li>
+    <li style="font-weight:bold; color:#FF4500">Slick-Grafikengine Anbindung</li>
+    <li style="font-weight:bold; color:#FF4500">NiftyGUI Anbindung</li>
+    <li style="font-weight:bold; color:#FF4500">Verwaltung der Benutzereingaben (Maus, Tastatur)</li>
+    <li style="font-weight:bold; color:#FF4500">Szenenverwaltung</li>
+</ul>
+
 <h2>Inhalt</h2>
 
 <h3>Systeme</h3>
