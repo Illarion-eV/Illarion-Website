@@ -61,7 +61,7 @@
     <li><span style="font-weight:bold; color:#FF4500">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="font-weight:bold; color:#FF4500">Quests</span></li>
-    <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
+    <li><span style="font-weight:bold; color:#FF4500">Tutorial</span></li>
 </ul>
 
 <h2>Graphics</h2>
