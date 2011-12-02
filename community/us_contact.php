@@ -118,7 +118,7 @@ and of players who don't care for the rules.</p>
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a></li>
 	<li><a href="?contact=11">Estralis Seborian</a></li>
-	<li><a href="?contact=41">Flux</a></li>
+	<li><a href="?contact=12">Zak</a></li>
 	<li><a href="?contact=40">Zot</a></li>
 </ul>
 
