@@ -1335,9 +1335,9 @@ class Page {
 			}
 
 			$js = &self::$js;
-			array_unshift(&$js, 'bookmarks');
 			if (!self::checkSSL()) {
-				array_unshift(&$js, 'google_plusone');
+				array_unshift(&$js, 'bookmarks');
+				array_unshift(&$js, 'google');
 			}
 			if (!IllaUser::loggedIn()) {
 				array_unshift(&$js, 'proxy_killer');

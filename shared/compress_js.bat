@@ -83,5 +83,5 @@ java -jar %compressor% --type js --charset utf-8 -o js/wz_tooltip.js js/wz_toolt
 echo js/register.js
 java -jar %compressor% --type js --charset utf-8 -o js/register.js js/register_uncompressed.js
 
-echo js/google_plusone.js
-java -jar %compressor% --type js --charset utf-8 -o js/google_plusone.js js/google_plusone_uncompressed.js
+echo js/google.js
+java -jar %compressor% --type js --charset utf-8 -o js/google.js js/google_uncompressed.js
