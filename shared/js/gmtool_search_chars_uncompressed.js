@@ -117,7 +117,7 @@ function parseResponse( object )
 					}
 					else if (object.childNodes[i].childNodes[k].nodeName == 'id') {
 						id = object.childNodes[i].childNodes[k].firstChild.nodeValue;
-					};
+					}
 					else if (object.childNodes[i].childNodes[k].nodeName == 'server') {
 						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					};
@@ -148,8 +148,7 @@ function parseResponse( object )
 
 function clearChilds(element) {
 	if (element.hasChildNodes()) {
-		while ( element.childNodes.length >= 1 )
-		{
+		while (element.childNodes.length >= 1 ) {
     		element.removeChild( element.firstChild );
 		};
 	};
