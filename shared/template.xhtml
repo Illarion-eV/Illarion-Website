@@ -40,6 +40,7 @@
 		<link href="{SHARED_URL}/css.php?file={CSS}" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="{SHARED_URL}/js.php?file={JS}"></script>
 		{HTTP_ONLY}<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>{/HTTP_ONLY}
+		{HTTP_ONLY}<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>{/HTTP_ONLY}
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
 		<link href="{URL}" rel="top" title="{LANG|Startseite|Startpage}" />
 		<link href="{URL}" rel="start" title="{LANG|Startseite|Startpage}" />
@@ -162,9 +163,9 @@
 									</a>
 								</div>
 								-->
-								<div style="align:center">
-									<div class="g-plusone"></div>
-								</div>
+								{HTTP_ONLY}<div style="align:center">{/HTTP_ONLY}
+								{HTTP_ONLY}	<div class="g-plusone"></div>{/HTTP_ONLY}
+								{HTTP_ONLY}</div>{/HTTP_ONLY}
 							</td>
 							<td rowspan="3" class="vertical_border" />
 						</tr>
