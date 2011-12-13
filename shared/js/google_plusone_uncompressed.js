@@ -1,4 +1,4 @@
-(function() {
+window.onload=function() {
 	var po = document.createElement('script');
 	po.type = 'text/javascript';
 	po.async = true;
@@ -6,4 +6,4 @@
 	
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(po, s);
-})();
+};
