@@ -23,7 +23,7 @@ function initGoogle()
 {
     initGoogleAnalytics();
 	initGooglePlusOne();
-}
+};
 
 if (typeof Prototype != 'undefined')
 {
@@ -32,4 +32,4 @@ if (typeof Prototype != 'undefined')
 else
 {
 	window.onload = initGoogle;
-}
+};
