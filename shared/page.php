@@ -1302,6 +1302,13 @@ class Page {
 			$search_replace[$search_cnt] = date('Y');
 			$search_keywords[++$search_cnt] = '{CURRENT_URI}';
 			$search_replace[$search_cnt] = str_replace('&', '&amp;', $_SERVER['REQUEST_URI']);
+			
+			$search_keywords[++$search_cnt] = '{GOOGLE}';
+			if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
+				$search_replace[$search_cnt] = '<div class="g-plusone"></div>';
+			} else {
+				$search_replace[$search_cnt] = '<object data="'.self::url.'/shared/'.self::$language.'_google.html" type="text/html" width="68px" height="24px">Google +1 button</object>';
+			}
 
 			$css = &self::$css;
 
@@ -1337,7 +1344,9 @@ class Page {
 			$js = &self::$js;
 			if (!self::checkSSL()) {
 				array_unshift(&$js, 'bookmarks');
-				array_unshift(&$js, 'google');
+				if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
+					array_unshift(&$js, 'google');
+				}
 			}
 			if (!IllaUser::loggedIn()) {
 				array_unshift(&$js, 'proxy_killer');
