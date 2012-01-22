@@ -344,8 +344,8 @@ abstract class DatabaseMain {
 }
 
 class DatabaseMySQL extends DatabaseMain {
-	const username = 'www-data';
-	const password = '';
+	const username = 'homepage';
+	const password = '9RmtQ6htLNRU';
 	private $_nameQuote = '`';
 
 	public final function __construct() {
