@@ -695,7 +695,7 @@ class DatabasePostgreSQL extends DatabaseMain {
 	public $_nameQuote = '"';
 
 	const username = 'homepage';
-	const password = 'gTn(jmr6Z(h&nU/Thb5F%';
+	const password = '';
 
 	public final function __construct($database = null) {
 		if ((!$this->_resource = pg_connect('dbname=\'illarion\' user=\'' . DatabasePostgreSQL::username . '\' password=\'' . DatabasePostgreSQL::password . '\'', PGSQL_CONNECT_FORCE_NEW))) {
