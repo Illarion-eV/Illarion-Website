@@ -8,7 +8,7 @@ function SQLQuery($query,$db) {
 
 	// connect to db and keep connection
 	function SQLConnect($db) {
-		$connection = pg_connect("dbname='illarion' user='gmtool' password='Necebpij2'", PGSQL_CONNECT_FORCE_NEW)
+		$connection = pg_connect("dbname='illarion' user='gmtool' password=''", PGSQL_CONNECT_FORCE_NEW)
 			or die ("PostGreSQL Error --> " . pg_last_error($connection));
 			
 		pg_query($connection, 'SET search_path TO '.$db.';');
