@@ -24,7 +24,7 @@ function SQLQuery($query,$db) {
 
 	// connect to db and keep connection
 	function SQLConnect($db) {
-		$connection = pg_connect("host=localhost port=5432 dbname=$db user='gmtool' password='Necebpij2'")
+		$connection = pg_connect("host=localhost port=5432 dbname=$db user='gmtool' password=''")
 			or die ("PostGreSQL Error --> " . pg_last_error($connection));
 		return $connection;
 	}
