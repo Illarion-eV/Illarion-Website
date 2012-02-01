@@ -1365,6 +1365,13 @@ class Page {
 					$search_replace[$search_cnt] = '<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />';
 				}
 			}
+			
+			$search_keywords[++$search_cnt] = '{NO_OPTI}';
+			if (isset($_GET['no_opti'])) {
+				$search_replace[$search_cnt] = '&amp;no_opti=1';
+			} else {
+				$search_replace[$search_cnt] = '';
+			}
 
 			$search_keywords[++$search_cnt] = '{ADDITIONAL_HEADERS}';
 			$search_replace[$search_cnt] = implode(PHP_EOL, self::$additional_headers);
