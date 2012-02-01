@@ -142,9 +142,9 @@ und um alle die es nicht so mit Regeln haben.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Impressum</h3>
+<h2>Impressum</h2>
 
-<p>Illarion e.V.</p>
+<h3>Illarion e.V.</h3>
 
 <p>
 Registergericht: Amtsgericht Kempten<br>
