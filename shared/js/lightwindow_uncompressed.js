@@ -968,8 +968,8 @@ lightwindow.prototype = {
 		if (status) {
 			if (this.windowActive) {
 				this._getScroll();
-				var tempTop = parseFloat($('lightwindow').getStyle('top'));
-				var tempLeft = parseFloat($('lightwindow').getStyle('left'));
+				var tempTop = parseFloat($('lightwindow').getStyle('top'))+this.pagePosition.y;
+				var tempLeft = parseFloat($('lightwindow').getStyle('left'))+this.pagePosition.x;
 				if (isNaN(tempTop)) {
 					tempTop = 0.0;
 				}
@@ -978,8 +978,8 @@ lightwindow.prototype = {
 				}
 				$('lightwindow').setStyle({
 					position: 'absolute',
-					top: tempTop+this.pagePosition.y+'px',
-					left: tempLeft+this.pagePosition.x+'px'
+					top: tempTop+'px',
+					left: tempLeft+'px'
 				});
 			} else {
 				$('lightwindow').setStyle({
@@ -989,8 +989,8 @@ lightwindow.prototype = {
 		} else {
 			if (this.windowActive) {
 				this._getScroll();
-				var tempTop = parseFloat($('lightwindow').getStyle('top'));
-				var tempLeft = parseFloat($('lightwindow').getStyle('left'));
+				var tempTop = parseFloat($('lightwindow').getStyle('top'))-this.pagePosition.y;
+				var tempLeft = parseFloat($('lightwindow').getStyle('left'))-this.pagePosition.x;
 				if (isNaN(tempTop)) {
 					tempTop = 0.0;
 				}
@@ -999,8 +999,8 @@ lightwindow.prototype = {
 				}
 				$('lightwindow').setStyle({
 					position: 'fixed',
-					top: tempTop-this.pagePosition.y+'px',
-					left: tempLeft-this.pagePosition.x+'px'
+					top: tempTop+'px',
+					left: tempLeft+'px'
 				});
 			} else {
 				if ($('lightwindow_iframe')) {
