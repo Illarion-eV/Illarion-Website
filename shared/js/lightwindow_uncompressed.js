@@ -1376,7 +1376,7 @@ lightwindow.prototype = {
 	//  Get the Browser Viewport Dimensions
 	//
 	_browserDimensions : function() {
-		if (false && Prototype.Browser.IE) {
+		if (Prototype.Browser.IE) {
             this.dimensions.viewport.height = document.documentElement.clientHeight;
             this.dimensions.viewport.width = document.documentElement.clientWidth;
         } else {
