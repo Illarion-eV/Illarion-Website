@@ -852,7 +852,6 @@ lightwindow.prototype = {
 		$('lightwindow_previous').onclick = function() {return false;};
 		Event.observe($('lightwindow_next'), 'click', this.navigateWindow.bind(this, 'next'), false);
 		$('lightwindow_next').onclick = function() {return false;};
-
 		if (!this.options.hideGalleryTab) {
 			Event.observe($('lightwindow_galleries_tab'), 'click', this._handleGalleryAnimation.bind(this, true), false);
 			$('lightwindow_galleries_tab').onclick = function() {return false;};
@@ -2076,10 +2075,10 @@ lightwindow.prototype = {
 
 		if (!this.windowActive) {
 			// Position the window
-		   	//$('lightwindow_container').setStyle({
-			//	left: -(this.dimensions.container.width/2)+'px',
-			//	top: -(this.dimensions.container.height/2)+'px'
-			//});
+		   	$('lightwindow_container').setStyle({
+				left: -(this.dimensions.container.width/2)+'px',
+				top: -(this.dimensions.container.height/2)+'px'
+			});
 		}
 	   	$('lightwindow_container').setStyle({
 			height: this.dimensions.container.height+'px',
