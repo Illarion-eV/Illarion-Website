@@ -1357,6 +1357,14 @@ class Page {
 			$js = array_unique($js);
 			$search_keywords[++$search_cnt] = '{JS}';
 			$search_replace[$search_cnt] = implode(',', $js);
+			
+			$search_keywords[++$search_cnt] = '{PAGE_META_HEAD}';
+			$search_replace[$search_cnt] = '';
+			if (self::$browser_name === 'msie' && self::$browser_version == 9) {
+				if (array_search('lightwindow', $js) !== false) {
+					$search_replace[$search_cnt] = '<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />';
+				}
+			}
 
 			$search_keywords[++$search_cnt] = '{ADDITIONAL_HEADERS}';
 			$search_replace[$search_cnt] = implode(PHP_EOL, self::$additional_headers);
