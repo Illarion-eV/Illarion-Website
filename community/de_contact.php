@@ -147,7 +147,7 @@ und um alle die es nicht so mit Regeln haben.</p>
 <h3>Illarion e.V.</h3>
 
 <p>
-Registergericht: Amtsgericht Kempten<br>
+Registergericht: Amtsgericht Kempten<br />
 Registernummer: VR 30767
 </p>
 
