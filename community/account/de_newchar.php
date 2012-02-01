@@ -5,7 +5,6 @@
 
 	$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 
-    echo "<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >";
 	Page::Init();
 	if (!$charid)
 	{
