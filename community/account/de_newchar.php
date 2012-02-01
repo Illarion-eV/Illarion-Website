@@ -6,6 +6,7 @@
 	$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 
 	Page::Init();
+    Page::addAdditionalHeader("<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >");
 	if (!$charid)
 	{
 		$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
