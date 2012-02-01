@@ -1181,7 +1181,16 @@ lightwindow.prototype = {
 
 		}
 
-		var offsetHeight = this._getParameter('lightwindow_top') ? parseFloat(this._getParameter('lightwindow_top'))+this.pagePosition.y : this.dimensions.viewport.height/2+this.pagePosition.y;
+		var offsetHeight = this._getParameter('lightwindow_top');
+		if (offsetHeight) {
+			offsetHeight = parseFloat(offsetHeight);
+		} else {
+			offsetHeight = this.dimensions.viewport.height/2;
+			if (isNaN(offsetHeight)) {
+				offsetHeight = 0.0;
+			}
+		}
+		offsetHeight+=this.pagePosition.y;
 		var offsetWidth = this._getParameter('lightwindow_left') ? parseFloat(this._getParameter('lightwindow_left'))+this.pagePosition.x : this.dimensions.viewport.width/2+this.pagePosition.x;
 
 		// So if a theme has say shadowed edges, they should be consistant and take care of in the contentOffset
