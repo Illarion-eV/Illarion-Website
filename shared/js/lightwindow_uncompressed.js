@@ -193,7 +193,7 @@ lightwindow.prototype = {
 	},
 
 	buildStyles : function(){
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			this.options.skin.main = document.createElement('<div id="lightwindow_container">');
 		} else {
 			this.options.skin.main = document.createElement('div');
@@ -207,7 +207,7 @@ lightwindow.prototype = {
 		var temp5;
 
 		var temp = document.createTextNode(( cur_lang == 'de'?'Schließen':'close'));
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<a id="lightwindow_title_bar_close_link">');
 		} else {
 			temp2 = document.createElement('a');
@@ -215,14 +215,14 @@ lightwindow.prototype = {
 		}
 		temp2.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<span id="lightwindow_title_bar_title">');
 		} else {
 			temp = document.createElement('span');
 			temp.id = 'lightwindow_title_bar_title';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<div id="lightwindow_title_bar_inner">');
 		} else {
 			temp3 = document.createElement('div');
@@ -231,7 +231,7 @@ lightwindow.prototype = {
 		temp3.appendChild(temp2);
 		temp3.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<div id="lightwindow_title_bar">');
 		} else {
 			temp = document.createElement('div');
@@ -240,14 +240,14 @@ lightwindow.prototype = {
 		temp.appendChild(temp3);
 		this.options.skin.main.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<div id="lightwindow_stage">');
 		} else {
 			temp = document.createElement('div');
 			temp.id = 'lightwindow_stage';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<div id="lightwindow_contents">');
 		} else {
 			temp2 = document.createElement('div');
@@ -255,14 +255,14 @@ lightwindow.prototype = {
 		}
 		temp.appendChild(temp2);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<div id="lightwindow_navigation">');
 		} else {
 			temp2 = document.createElement('div');
 			temp2.id = 'lightwindow_navigation';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<a id="lightwindow_previous" href="#">');
 		} else {
 			temp3 = document.createElement('a');
@@ -270,7 +270,7 @@ lightwindow.prototype = {
 			temp3.href = '#';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<span id="lightwindow_previous_title">');
 		} else {
 			temp4 = document.createElement('span');
@@ -279,7 +279,7 @@ lightwindow.prototype = {
 		temp3.appendChild(temp4);
 		temp2.appendChild(temp3);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<a id="lightwindow_next" href="#">');
 		} else {
 			temp3 = document.createElement('a');
@@ -287,7 +287,7 @@ lightwindow.prototype = {
 			temp3.href = '#';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<span id="lightwindow_next_title">');
 		} else {
 			temp4 = document.createElement('span');
@@ -297,7 +297,7 @@ lightwindow.prototype = {
 		temp2.appendChild(temp3);
 
 		/*
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<iframe id="lightwindow_navigation_shim" name="lightwindow_navigation_shim" src="about:blank" frameBorder="0" scrolling="no">');
 		} else {
 			temp3 = document.createElement('iframe');
@@ -311,21 +311,21 @@ lightwindow.prototype = {
 		*/
 		temp.appendChild(temp2);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<div id="lightwindow_galleries">');
 		} else {
 			temp2 = document.createElement('div');
 			temp2.id = 'lightwindow_galleries';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<div id="lightwindow_galleries_tab_container">');
 		} else {
 			temp3 = document.createElement('div');
 			temp3.id = 'lightwindow_galleries_tab_container';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<a id="lightwindow_galleries_tab" href="#">');
 		} else {
 			temp4 = document.createElement('a');
@@ -333,7 +333,7 @@ lightwindow.prototype = {
 			temp4.href = '#';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp5 = document.createElement('<span id="lightwindow_galleries_tab_span">');
 		} else {
 			temp5 = document.createElement('span');
@@ -344,7 +344,7 @@ lightwindow.prototype = {
 		temp4.appendChild(temp5);
 		temp3.appendChild(temp4);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<div id="lightwindow_galleries_list">');
 		} else {
 			temp4 = document.createElement('div');
@@ -355,35 +355,35 @@ lightwindow.prototype = {
 		temp.appendChild(temp2);
 		this.options.skin.main.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<div id="lightwindow_data_slide">');
 		} else {
 			temp = document.createElement('div');
 			temp.id = 'lightwindow_data_slide';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<div id="lightwindow_data_slide_inner">');
 		} else {
 			temp2 = document.createElement('div');
 			temp2.id = 'lightwindow_data_slide_inner';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<div id="lightwindow_data_details">');
 		} else {
 			temp3 = document.createElement('div');
 			temp3.id = 'lightwindow_data_details';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<div id="lightwindow_data_gallery_container">');
 		} else {
 			temp4 = document.createElement('div');
 			temp4.id = 'lightwindow_data_gallery_container';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp5 = document.createElement('<span id="lightwindow_data_gallery_current">');
 		} else {
 			temp5 = document.createElement('span');
@@ -392,7 +392,7 @@ lightwindow.prototype = {
 		temp4.appendChild(temp5);
 		temp4.appendChild( document.createTextNode(( cur_lang == 'de'?' von ':' of ')) );
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp5 = document.createElement('<span id="lightwindow_data_gallery_total">');
 		} else {
 			temp5 = document.createElement('span');
@@ -401,7 +401,7 @@ lightwindow.prototype = {
 		temp4.appendChild(temp5);
 		temp3.appendChild(temp4);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp4 = document.createElement('<div id="lightwindow_data_author_container">');
 		} else {
 			temp4 = document.createElement('div');
@@ -409,7 +409,7 @@ lightwindow.prototype = {
 		}
 		temp4.appendChild( document.createTextNode(( cur_lang == 'de'?'von ':'by ')) );
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp5 = document.createElement('<span id="lightwindow_data_author">');
 		} else {
 			temp5 = document.createElement('span');
@@ -419,7 +419,7 @@ lightwindow.prototype = {
 		temp3.appendChild(temp4);
 		temp2.appendChild(temp3);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp3 = document.createElement('<div id="lightwindow_data_caption">');
 		} else {
 			temp3 = document.createElement('div');
@@ -429,14 +429,14 @@ lightwindow.prototype = {
 		temp.appendChild(temp2);
 		this.options.skin.main.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			this.options.skin.loading = document.createElement('<div id="lightwindow_loading">');
 		} else {
 			this.options.skin.loading = document.createElement('div');
 			this.options.skin.loading.id = 'lightwindow_loading';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<img src="'+url+'/shared/pics/ajax-loading.gif" alt="'+( cur_lang == 'de'?'laden':'loading')+'">');
 		} else {
 			temp = document.createElement('img');
@@ -445,14 +445,14 @@ lightwindow.prototype = {
 		}
 		this.options.skin.loading.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<span>');
 		} else {
 			temp = document.createElement('span');
 		}
 		temp.appendChild( document.createTextNode(( cur_lang == 'de'?'Laden oder ':'Loading or ')) );
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp2 = document.createElement('<a href="#">');
 		} else {
 			temp2 = document.createElement('a');
@@ -464,7 +464,7 @@ lightwindow.prototype = {
 		this.options.skin.loading.appendChild(temp);
 
 		/*
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<iframe id="lightwindow_navigation_shim" name="lightwindow_navigation_shim" src="about:blank" frameBorder="0" scrolling="no">');
 		} else {
 			temp = document.createElement('iframe');
@@ -477,21 +477,21 @@ lightwindow.prototype = {
 		this.options.skin.loading.appendChild(temp);
 		*/
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			this.options.skin.iframe = document.createElement('<html xmlns="http://www.w3.org/1999/xhtml">');
 		} else {
 			this.options.skin.iframe = document.createElement('html');
 			this.options.skin.iframe.xmlns = 'http://www.w3.org/1999/xhtml';
 		}
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			this.options.skin.gallery = document.createElement('<div>');
 		} else {
 			this.options.skin.gallery = document.createElement('div');
 		}
 		this.options.skin.gallery.className = 'lightwindow_galleries_list';
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<h1 id="gallery_title">');
 		} else {
 			temp = document.createElement('h1');
@@ -499,7 +499,7 @@ lightwindow.prototype = {
 		}
 		this.options.skin.gallery.appendChild(temp);
 
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			temp = document.createElement('<ul id="gallery_link_list">');
 		} else {
 			temp = document.createElement('ul');
@@ -689,7 +689,7 @@ lightwindow.prototype = {
 				galleryOutput.firstChild.appendChild( document.createTextNode( unescape(i) ) );
 				for (j in this.galleries[i]) {
 					if (typeof this.galleries[i][j] == 'object') {
-						if (Prototype.Browser.IE) {
+						if (false && Prototype.Browser.IE) {
 							galleryLink = document.createElement('<a id="lightwindow_gallery_'+i+'_'+j+'" href="#">');
 						} else {
 							galleryLink = document.createElement('a');
@@ -806,7 +806,7 @@ lightwindow.prototype = {
 	//
 	_addLightWindowMarkup : function(rebuild) {
 		var overlay;
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			overlay = document.createElement('<div id="lightwindow_overlay">');
 		} else {
 			overlay = document.createElement('div');
@@ -831,7 +831,7 @@ lightwindow.prototype = {
 		}
 
 		var lw;
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			lw = document.createElement('<div id="lightwindow">');
 		} else {
 			lw = document.createElement('div');
@@ -859,7 +859,7 @@ lightwindow.prototype = {
 		}
 
 		// Because we use position absolute, kill the scroll Wheel on animations
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			Event.observe(document, 'mousewheel', this._stopScrolling.bindAsEventListener(this), false);
 		} else {
 			Event.observe(window, 'DOMMouseScroll', this._stopScrolling.bindAsEventListener(this), false);
@@ -1004,7 +1004,7 @@ lightwindow.prototype = {
 	//	Prepare the window for IE.
 	//
 	_prepareIE : function(setup) {
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			var height, overflowX, overflowY;
 			if (setup) {
 				var height = '100%';
@@ -1352,7 +1352,7 @@ lightwindow.prototype = {
 	//  Get the Browser Viewport Dimensions
 	//
 	_browserDimensions : function() {
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
             this.dimensions.viewport.height = document.documentElement.clientHeight;
             this.dimensions.viewport.width = document.documentElement.clientWidth;
         } else {
@@ -1416,7 +1416,7 @@ lightwindow.prototype = {
 	//  Get the outer HTML of an object CROSS BROWSER
 	//
 	/*_outerHTML : function(object) {
- 		if (Prototype.Browser.IE) {
+ 		if (false && Prototype.Browser.IE) {
 			return object.outerHTML;
 		} else {
 			var clone = object.cloneNode(true);
@@ -1430,7 +1430,7 @@ lightwindow.prototype = {
 	//
 	_convertToMarkup : function(object, closeTag) {
 		var markup = this._outerHTML(object).replace('</'+closeTag+'>', '');
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			for (var i = 0; i < object.childNodes.length; i++){
 				markup += this._outerHTML(object.childNodes[i]);
 			}
@@ -1444,7 +1444,7 @@ lightwindow.prototype = {
 	//
 	_appendObject : function(object, closeTag, appendTo) {
 		/*
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			appendTo.innerHTML += this._convertToMarkup(object, closeTag);
 
 			// Fix the Eolas activate thing but only for specified media, for example doing this to a quicktime film breaks it.
@@ -1467,7 +1467,7 @@ lightwindow.prototype = {
 	//
 	_appendIframe : function(scroll) {
 		var iframe;
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			iframe = document.createElement('<iframe id="lightwindow_iframe" name="lightwindow_iframe" src="about:blank" height="100%" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="'+scroll+'">');
 		} else {
 			iframe = document.createElement('iframe');
@@ -1594,7 +1594,7 @@ lightwindow.prototype = {
 	},
 
 	validateAttrib : function( nodeName ) {
-		if (Prototype.Browser.IE) {
+		if (false && Prototype.Browser.IE) {
 			var nodeName2 = nodeName.toLowerCase();
 			switch( nodeName2 ) {
 				case 'accept-charset': return 'acceptCharset'; break;
