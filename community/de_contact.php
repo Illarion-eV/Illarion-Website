@@ -141,6 +141,19 @@ und um alle die es nicht so mit Regeln haben.</p>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
+
+<h2>Impressum</h2>
+
+<h3>Illarion e.V.</h3>
+
+<p>
+Registergericht: Amtsgericht Kempten<br>
+Registernummer: VR 30767
+</p>
+
+<p>E-Mail: committee@illarion.org</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 <?php
    }
 	$contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GET['contact'] : 0);
