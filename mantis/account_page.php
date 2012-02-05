@@ -39,7 +39,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -114,7 +114,7 @@
 			<?php echo lang_get( 'username' ) ?>
 		</td>
 		<td width="75%">
-			<?php echo $u_username ?>
+			<?php echo string_display_line( $u_username ) ?>
 		</td>
 	</tr>
 
@@ -128,7 +128,7 @@
 		</td>
 	</tr>
 
-<!-- Without LDAP -->
+	<!-- Without LDAP -->
 <?php } else {
 	$t_show_update_button = true;
 ?>
@@ -139,44 +139,42 @@
 			<?php echo lang_get( 'username' ) ?>
 		</td>
 		<td width="75%">
-			<?php echo $u_username ?>
+			<?php echo string_display_line( $u_username ) ?>
 		</td>
 	</tr>
 
 	<!-- Password -->
 	<tr <?php echo helper_alternate_class() ?>>
 		<td class="category">
-			<?php 
+			<?php
 				echo lang_get( 'password' );
-				if ( $t_force_pw_reset ) { 
+				if ( $t_force_pw_reset ) {
 			?>
 			<span class="required">*</span>
 			<?php } ?>
 		</td>
 		<td>
-			<input type="password" size="32" maxlength="<?php echo PASSLEN;?>" name="password" />
+			<input type="password" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" name="password" />
 		</td>
 	</tr>
 
 	<!-- Password confirmation -->
 	<tr <?php echo helper_alternate_class() ?>>
 		<td class="category">
-			<?php 
+			<?php
 				echo lang_get( 'confirm_password' );
-				if ( $t_force_pw_reset ) { 
+				if ( $t_force_pw_reset ) {
 			?>
 			<span class="required">*</span>
 			<?php } ?>
 		</td>
 		<td>
-			<input type="password" size="32" maxlength="<?php echo PASSLEN;?>" name="password_confirm" />
+			<input type="password" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" name="password_confirm" />
 		</td>
 	</tr>
 
-<?php
-} // End LDAP conditional
-
-if ( $t_ldap && ON == config_get( 'use_ldap_email' ) ) { ?> <!-- With LDAP Email-->
+<?php } ?>
+	<!-- End LDAP conditional -->
 
 	<!-- Email -->
 	<tr <?php echo helper_alternate_class() ?>>
@@ -184,26 +182,19 @@ if ( $t_ldap && ON == config_get( 'use_ldap_email' ) ) { ?> <!-- With LDAP Email
 			<?php echo lang_get( 'email' ) ?>
 		</td>
 		<td>
-			<?php echo $u_email ?>
-		</td>
-	</tr>
-
-<?php } else { ?> <!-- Without LDAP Email -->
-
-	<!-- Email -->
-	<tr <?php echo helper_alternate_class() ?>>
-		<td class="category">
-			<?php echo lang_get( 'email' ) ?>
-		</td>
-		<td>
-			<?php
+		<?php
+			// With LDAP
+			if ( $t_ldap && ON == config_get( 'use_ldap_email' ) ) {
+				echo string_display_line( $u_email );
+			}
+			// Without LDAP
+			else {
 				$t_show_update_button = true;
 				print_email_input( 'email', $u_email );
-			?>
+			}
+		?>
 		</td>
 	</tr>
-
-<?php } ?> <!-- End LDAP Email conditional -->
 
 	<!-- Realname -->
 	<tr <?php echo helper_alternate_class() ?> valign="top">
@@ -211,14 +202,19 @@ if ( $t_ldap && ON == config_get( 'use_ldap_email' ) ) { ?> <!-- With LDAP Email
 			<?php echo lang_get( 'realname' ) ?>
 		</td>
 		<td>
-<?php
-if ( $t_ldap && ON == config_get( 'use_ldap_realname' ) ) {
-	echo string_display( ldap_realname_from_username( $u_username ) );
-} else {
-	$t_show_update_button = true;
-?>
-			<input type="text" size="32" maxlength="<?php echo REALLEN;?>" name="realname" value="<?php echo string_attribute( $u_realname ) ?>" />
-<?php } ?>
+		<?php
+			// With LDAP
+			if ( $t_ldap && ON == config_get( 'use_ldap_realname' ) ) {
+				echo string_display_line( ldap_realname_from_username( $u_username ) );
+			}
+			// Without LDAP
+			else {
+				$t_show_update_button = true;
+		?>
+			<input type="text" size="32" maxlength="<?php echo DB_FIELD_SIZE_REALNAME;?>" name="realname" value="<?php echo string_attribute( $u_realname ) ?>" />
+		<?php
+			}
+		?>
 		</td>
 	</tr>
 
@@ -285,8 +281,8 @@ if ( $t_ldap && ON == config_get( 'use_ldap_realname' ) ) {
 	</form>
 </div>
 
-<?php 
-} 
+<?php
+}
 # Delete Account Form END
 
 html_page_bottom();

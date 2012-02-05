@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @author Marcello Scata' <marcelloscata at users.sourceforge.net> ITALY
 	 * @link http://www.mantisbt.org
 	 */
@@ -97,8 +97,9 @@
 			history_log_event_special( $f_dest_bug_id, BUG_ADD_RELATIONSHIP, relationship_get_complementary_type( $f_rel_type ), $f_src_bug_id );
 		}
 
-		# update bug last updated (just for the src bug)
+		# update bug last updated for both bugs
 		bug_update_date( $f_src_bug_id );
+		bug_update_date( $f_dest_bug_id );
 
 		# send email notification to the users addressed by both the bugs
 		email_relationship_added( $f_src_bug_id, $f_dest_bug_id, $f_rel_type );

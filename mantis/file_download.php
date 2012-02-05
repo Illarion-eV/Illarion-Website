@@ -18,7 +18,7 @@
 	 * Add file and redirect to the referring page
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -89,7 +89,7 @@
 	# Check access rights
 	switch ( $f_type ) {
 		case 'bug':
-			if ( !file_can_download_bug_attachments( $v_bug_id ) ) {
+			if ( !file_can_download_bug_attachments( $v_bug_id, (int)$v_user_id ) ) {
 				access_denied();
 			}
 			break;

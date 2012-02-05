@@ -17,7 +17,7 @@
 /**
  * @package Tests
  * @subpackage UnitTests
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -432,5 +432,61 @@ class IssueAddTest extends SoapBase {
 		$createdIssue = $this->client->mc_issue_get( $this->userName, $this->password, $issueId );
 		
 		$this->assertEquals( $version['name'], $createdIssue->version );
+	}
+	
+	/**
+	 * Test that the biggest id is correctly retrieved
+	 */
+	public function testGetBiggestId() {
+	    
+	    $firstIssueId = $this->client->mc_issue_add( $this->userName, $this->password, $this->getIssueToAdd( 'IssueAddTest.testGetBiggestId1'));
+        $this->deleteAfterRun( $firstIssueId );
+	    
+	    $secondIssueId = $this->client->mc_issue_add( $this->userName, $this->password, $this->getIssueToAdd( 'IssueAddTest.testGetBiggestId2'));
+	    $this->deleteAfterRun( $secondIssueId );
+	    
+	    $firstIssue = $this->client->mc_issue_get( $this->userName, $this->password, $firstIssueId );
+	    
+	    // this update should trigger this issue's id to be returned as the biggest
+	    // reported as bug #12887
+		$this->client->mc_issue_update( $this->userName, $this->password, $firstIssueId, $firstIssue);
+		
+		$this->assertEquals( $secondIssueId, $this->client->mc_issue_get_biggest_id( $this->userName, $this->password, $this->getProjectId() ));
+	}
+	
+	/**
+	 * A test cases that tests the creation of issues 
+	 * with a note passed in which contains time tracking data.
+	 */
+	public function testCreateIssueWithMiscNote() {
+		
+		$issueToAdd = $this->getIssueToAdd( 'testCreateIssueWithMiscNote' );
+		$issueToAdd['notes'] = array(
+			array(
+				'text' => "first note",
+				'note_type' => 2,
+			    'note_attr' => 'attr_value'
+			)
+		);
+
+		$issueId = $this->client->mc_issue_add(
+			$this->userName,
+			$this->password,
+			$issueToAdd);
+			
+		$this->deleteAfterRun($issueId);
+
+		$issue = $this->client->mc_issue_get(
+			$this->userName,
+			$this->password,
+			$issueId);
+
+		// verify note existence and time tracking data
+		$this->assertEquals( 1, count( $issue->notes ) );
+
+		$note = $issue->notes[0];
+		
+		$this->assertEquals( 2, $note->note_type );
+		$this->assertEquals( 'attr_value', $note->note_attr );
 	}
 }

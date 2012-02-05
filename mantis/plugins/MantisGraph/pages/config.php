@@ -1,6 +1,6 @@
 <?php
 # MantisBT - a php based bugtracking system
-# Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+# Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 # MantisBT is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 2 of the License, or
@@ -60,7 +60,7 @@ function print_font_checked( $p_font_name ) {
 
 ?>
 
-<br/>
+<br />
 <form action="<?php echo plugin_page( 'config_edit' )?>" method="post">
 <?php echo form_security_field( 'plugin_graph_config_edit' ) ?>
 <table align="center" class="width75" cellspacing="1">

@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -43,8 +43,8 @@
 
 	# Confirm with the user
 	helper_ensure_confirmed( lang_get( 'remove_user_sure_msg' ) .
-		'<br/>' . lang_get( 'project_name' ) . ': ' . $t_project_name,
-		lang_get( 'remove_user_button' ) );
+		'<br />' . lang_get( 'project_name' ) . ': ' . $t_project_name,
+		sprintf( lang_get( 'remove_user_from_project_button' ), $t_project_name ) );
 
 	$result = project_remove_user( $f_project_id, $f_user_id );
 

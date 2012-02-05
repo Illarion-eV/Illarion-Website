@@ -19,7 +19,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -139,11 +139,7 @@
 
 		# Produce an error if the field is required but wasn't posted
 		if ( !gpc_isset_custom_field( $t_id, $t_def['type'] ) &&
-			( $t_def['require_' . $t_custom_status_label] ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_ENUM ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_LIST ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_MULTILIST ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_RADIO ) ) {
+			( $t_def['require_' . $t_custom_status_label] ) ) {
 			error_parameters( lang_get_defaulted( custom_field_get_field( $t_id, 'name' ) ) );
 			trigger_error( ERROR_EMPTY_FIELD, ERROR );
 		}

@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@
  * @file
  *
  * @author Als-Holder
+ * @author Purodha
  */
 
 $s_actiongroup_menu_move = 'Verschiebe';
@@ -419,7 +420,8 @@ $s_submit_button = 'Absände';
 $s_profile_updated_msg = 'Profil aktualisiert …';
 $s_my_sponsorship = 'Myy Sponsoreschafte';
 $s_update_sponsorship_button = 'Bezahlstatus ändere';
-$s_no_sponsored = 'Kei vu Dir gsponsereti Probläm gfunde.';
+$s_no_sponsored = 'Kei gsponsereti Probläm gfunde, wu Dir zuegordnet sin.
+';
 $s_own_sponsored = 'Vu Dir gsponsereti Probläm:';
 $s_issues_handled = 'Gsponsereti Probläm, wu Dir zuegordnet sin:';
 $s_no_own_sponsored = 'Du hesch kei Probläm gsponseret.';
@@ -429,7 +431,7 @@ $s_amount = 'Betrag';
 $s_total_owing = 'Usseständ gsamt';
 $s_total_paid = 'bezahlt gsamt';
 $s_sponsor_hide = 'Bezahlt un Erledigt verbärge';
-$s_sponsor_show = 'Alli aszeige';
+$s_sponsor_show = 'Alli aazeige';
 $s_payment_updated = 'Bezahlinformation aktualisiert.';
 $s_account_updated_msg = 'Dyy Konto isch erfolgryych aktualisiert wore …';
 $s_email_updated = 'E-Mail-Adräss erfolgryych aktualisiert';
@@ -439,7 +441,7 @@ $s_password_updated = 'Passwort erfolgryych aktualisiert.';
 $s_multiple_projects = 'Die vu Dir uusgwehlte Probläm ghere zue verschidene Projäkt. D Parameter, wu do unte stehn, berucksichtige d Yystellige vu alle Projäkt. Wänn des imfall falsch isch, versuech e Änderig mit weniger uusgwehlte Probläm.';
 $s_bug_assign_msg = 'S Probläm isch zuegwise wore …';
 $s_new_bug_title = 'Nej Probläm';
-$s_feedback_bug_title = 'Ruckmäldig zum Probläm mache';
+$s_feedback_bug_title = 'Ruckmäldig zum Probläm frage';
 $s_acknowledged_bug_title = 'Probläm anerkänne';
 $s_confirmed_bug_title = 'Probläm bstätige';
 $s_assigned_bug_title = 'Probläm zuewyse';
@@ -680,7 +682,7 @@ $s_plugins_installed = 'Installierti Plugins';
 $s_plugins_available = 'Verfiegbari Plugins';
 $s_plugin_description = 'Bschryybig';
 $s_plugin_author = 'Autor: %1$s';
-$s_plugin_url = 'Website:';
+$s_plugin_url = 'Websyte:';
 $s_plugin_depends = 'Abhängigkeite';
 $s_plugin_no_depends = 'kei Abhängigkeite';
 $s_plugin_priority = 'Priorität';
@@ -828,7 +830,7 @@ $s_project_document_updated = 'Projäkt erfolgryych aktualisiert';
 $s_project_user_added_msg = 'Benutzer zum Projäkt zuegfiegt';
 $s_project_removed_user_msg = 'Benutzer us Projäkt uusegnuu';
 $s_remove_user_sure_msg = 'Soll sää Benutzer wirkli us em Projkt uusegnuu wäre?';
-$s_remove_user_button = 'Benutzer uuseneh';
+$s_remove_user_from_project_button = 'Benutzer us em Projäkt %s uusenee';
 $s_remove_all_users_sure_msg = 'Bisch sicher, ass alli Benutzer vu däm Projäkt witt uuseneh?';
 $s_remove_all_users_button = 'Alli Benutzer uuseneh';
 $s_add_user_title = 'Benutzer zum Projäkt zuegfiegt';
@@ -1001,7 +1003,7 @@ $s_custom_field_type_enum_string = '0:Tekscht,1:Zahle,2:Gleitkommazahle,3:Ufzell
 $s_confirm_used_custom_field_deletion = 'Des Fäld wird zur Zyt vu zmindescht eim Projäkt brucht. Wänn Du wyter machsch, no wäre alli Wärt fir des Fäld fir immer glescht. Dää Vorgang cha nit ruckgängig gmacht wäre. Zum s Fäld nit z lesche, druck bitte uf dr „Zruck“-Chnopf in Dyym Web-Browser. Go wytermache druck bitte uf dr „Fäld lesche“-Chnopf.';
 $s_confirm_custom_field_deletion = 'Witt des benutzerdefiniert Fäld un alli zuegherige Wärt wirkli lesche?';
 $s_field_delete_button = 'Fäld lesche';
-$s_confirm_custom_field_unlinking = 'Bisch sicher, ass des benutzerdefiniert Fäld us em Projäkt witt uuseneh un alli Wärt, wu s din het, witt lesche?';
+$s_confirm_custom_field_unlinking = 'Bisch sicher, ass des benutzerdefiniert Fäld us em Projäkt witt uuseneh. D Wärt wäre nit glescht, solang s benutzerdefiniert Fäld sälber nit glescht wird.';
 $s_field_remove_button = 'Fäld uuseneh';
 $s_hide_status = 'Status uusblände';
 $s_filter_closed = 'Zue';

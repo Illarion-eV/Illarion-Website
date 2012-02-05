@@ -19,7 +19,7 @@
  * @package CoreAPI
  * @subpackage BugnoteAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -123,7 +123,7 @@ function bugnote_is_user_reporter( $p_bugnote_id, $p_user_id ) {
  * @return false|int false or indicating bugnote id added
  * @access public
  */
-function bugnote_add( $p_bug_id, $p_bugnote_text, $p_time_tracking = '0:00', $p_private = false, $p_type = 0, $p_attr = '', $p_user_id = null, $p_send_email = TRUE ) {
+function bugnote_add( $p_bug_id, $p_bugnote_text, $p_time_tracking = '0:00', $p_private = false, $p_type = 0, $p_attr = '', $p_user_id = null, $p_send_email = TRUE, $p_log_history = TRUE) {
 	$c_bug_id = db_prepare_int( $p_bug_id );
 	$c_time_tracking = helper_duration_to_minutes( $p_time_tracking );
 	$c_private = db_prepare_bool( $p_private );
@@ -186,7 +186,8 @@ function bugnote_add( $p_bug_id, $p_bugnote_text, $p_time_tracking = '0:00', $p_
 	bug_update_date( $p_bug_id );
 
 	# log new bug
-	history_log_event_special( $p_bug_id, BUGNOTE_ADDED, bugnote_format_id( $t_bugnote_id ) );
+	if ( TRUE == $p_log_history)
+    	history_log_event_special( $p_bug_id, BUGNOTE_ADDED, bugnote_format_id( $t_bugnote_id ) );
 
 	# if it was FEEDBACK its NEW_ now
 	if ( config_get( 'reassign_on_feedback' ) &&
@@ -589,7 +590,7 @@ function bugnote_format_id( $p_bugnote_id ) {
  */
 function bugnote_stats_get_events_array( $p_bug_id, $p_from, $p_to ) {
 	$c_bug_id = db_prepare_int( $p_bug_id );
-	$c_to = strtotime( $p_to, SECONDS_PER_DAY - 1 ); // @23:59:59
+	$c_to = strtotime( $p_to ) + SECONDS_PER_DAY - 1;
 	$c_from = strtotime( $p_from );
 
 	$t_user_table = db_get_table( 'mantis_user_table' );
@@ -609,12 +610,12 @@ function bugnote_stats_get_events_array( $p_bug_id, $p_from, $p_to ) {
 
 	$t_results = array();
 
-	$query = "SELECT username, SUM(time_tracking) AS sum_time_tracking
+	$query = "SELECT username, realname, SUM(time_tracking) AS sum_time_tracking
 				FROM $t_user_table u, $t_bugnote_table bn
-				WHERE u.id = bn.reporter_id AND
+				WHERE u.id = bn.reporter_id AND bn.time_tracking != 0 AND
 				bn.bug_id = '$c_bug_id'
 				$t_from_where $t_to_where
-			GROUP BY u.id, u.username";
+				GROUP BY u.username, u.realname";
 
 	$result = db_query( $query );
 
@@ -637,7 +638,7 @@ function bugnote_stats_get_events_array( $p_bug_id, $p_from, $p_to ) {
 function bugnote_stats_get_project_array( $p_project_id, $p_from, $p_to, $p_cost ) {
 	$c_project_id = db_prepare_int( $p_project_id );
 
-	$c_to = strtotime( $p_to, SECONDS_PER_DAY - 1); // @23:59:59
+	$c_to = strtotime( $p_to ) + SECONDS_PER_DAY - 1;
 	$c_from = strtotime( $p_from );
 
 	if ( $c_to === false || $c_from === false ) {
@@ -671,11 +672,11 @@ function bugnote_stats_get_project_array( $p_project_id, $p_from, $p_to, $p_cost
 
 	$t_results = array();
 
-	$query = "SELECT username, summary, bn.bug_id, SUM(time_tracking) AS sum_time_tracking
+	$query = "SELECT username, realname, summary, bn.bug_id, SUM(time_tracking) AS sum_time_tracking
 			FROM $t_user_table u, $t_bugnote_table bn, $t_bug_table b
 			WHERE u.id = bn.reporter_id AND bn.time_tracking != 0 AND bn.bug_id = b.id
 			$t_project_where $t_from_where $t_to_where
-			GROUP BY bn.bug_id, u.id, u.username, b.summary
+			GROUP BY bn.bug_id, u.username, u.realname, b.summary
 			ORDER BY bn.bug_id";
 
 	$result = db_query( $query );

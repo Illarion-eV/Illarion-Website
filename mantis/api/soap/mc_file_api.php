@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -32,7 +32,7 @@ function mci_file_write_local( $p_diskfile, $p_content ) {
 	fclose( $t_handle );
 }
 
-function mci_file_add( $p_id, $p_name, $p_content, $p_file_type, $p_table, $p_title = '', $p_desc = '' ) {
+function mci_file_add( $p_id, $p_name, $p_content, $p_file_type, $p_table, $p_title = '', $p_desc = '', $p_user_id = null ) {
 	if( !file_type_check( $p_name ) ) {
 		return new soap_fault( 'Client', '', 'File type not allowed.' );
 	}
@@ -60,6 +60,13 @@ function mci_file_add( $p_id, $p_name, $p_content, $p_file_type, $p_table, $p_ti
 	$c_file_type = db_prepare_string( $p_file_type );
 	$c_title = db_prepare_string( $p_title );
 	$c_desc = db_prepare_string( $p_desc );
+	
+	if( $p_user_id === null ) {
+		$c_user_id = auth_get_current_user_id();
+	} else {
+		$c_user_id = (int)$p_user_id;
+	}
+	
 
 	if( $t_project_id == ALL_PROJECTS ) {
 		$t_file_path = config_get( 'absolute_path_default_upload_folder' );
@@ -103,7 +110,7 @@ function mci_file_add( $p_id, $p_name, $p_content, $p_file_type, $p_table, $p_ti
 					chmod( $t_disk_file_name, config_get( 'attachments_file_permissions' ) );
 				}
 
-				$c_content = '';
+				$c_content = "''";
 			}
 			break;
 		case DATABASE:
@@ -114,9 +121,9 @@ function mci_file_add( $p_id, $p_name, $p_content, $p_file_type, $p_table, $p_ti
 	$t_file_table = db_get_table( 'mantis_' . $p_table . '_file_table' );
 	$c_id = ( 'bug' == $p_table ) ? $c_issue_id : $c_project_id;
 	$query = "INSERT INTO $t_file_table
-			(" . $p_table . "_id, title, description, diskfile, filename, folder, filesize, file_type, date_added, content)
+			(" . $p_table . "_id, title, description, diskfile, filename, folder, filesize, file_type, date_added, content, user_id)
 		VALUES
-			($c_id, '$c_title', '$c_desc', '$c_disk_file_name', '$c_new_file_name', '$c_file_path', $c_file_size, '$c_file_type', '" . db_now() . "', $c_content)";
+			($c_id, '$c_title', '$c_desc', '$c_disk_file_name', '$c_new_file_name', '$c_file_path', $c_file_size, '$c_file_type', '" . db_now() . "', $c_content, $c_user_id)";
 	db_query( $query );
 
 	# get attachment id
@@ -175,9 +182,10 @@ function mci_file_get( $p_file_id, $p_type, $p_user_id ) {
 		$t_project_id = $row['project_id'];
 	} else if ( $p_type == 'bug' ) {
 		$t_bug_id = $row['bug_id'];
+		$t_project_id = bug_get_field( $t_bug_id, 'project_id' );
 	}
 
-	$t_diskfile = $row['diskfile'];
+	$t_diskfile = file_normalize_attachment_path( $row['diskfile'], $t_project_id );
 	$t_content = $row['content'];
 
 	# Check access rights

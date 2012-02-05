@@ -18,7 +18,7 @@
  * @package CoreAPI
  * @subpackage GraphAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -51,12 +51,9 @@ if( OFF == plugin_config_get( 'eczlibrary' ) ) {
 }
 
 function graph_get_font() {
-	$t_font = plugin_config_get( 'font', '' );
+	$t_font = plugin_config_get( 'font', 'arial' );
 
 	if ( plugin_config_get( 'eczlibrary' ) == ON ) {
-		$ttf_dir = '';
-		$t_font = '';
-		
 		$t_font_map = array(
 			'arial' => 'arial.ttf',
 			'verdana' => 'verdana.ttf',
@@ -74,17 +71,15 @@ function graph_get_font() {
 		} else {
 			$t_font = 'arial.ttf';
 		}
-
-		
 		$t_font_path = get_font_path();
 		if( empty($t_font_path) ) {
-			error_text('unable to load font(s)', 'unable to load font(s)');
+			error_text('Unable to read/find font', 'Unable to read/find font');
 		}
-		$f = $t_font_path . $t_font;
-		if( file_exists($f) === false || is_readable($f) === false ) {
-			error_text('unable to read/find font', 'unable to read/find font');
+		$t_font_file = $t_font_path . $t_font;
+		if( file_exists($t_font_file) === false || is_readable($t_font_file) === false ) {
+			error_text('Unable to read/find font', 'Unable to read/find font');
 		}
-		return $f;
+		return $t_font_file;
 	} else {
 		$t_font_map = array(
 			'arial' => FF_ARIAL,

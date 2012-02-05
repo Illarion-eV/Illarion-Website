@@ -21,7 +21,7 @@
  * @package CoreAPI
  * @subpackage PluginAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -123,6 +123,9 @@ function plugin_file( $p_file, $p_redirect = false, $p_basename = null ) {
  * @param string Plugin basename
  */
 function plugin_file_include( $p_filename, $p_basename = null ) {
+    
+    global $g_plugin_mime_types;
+    
 	if( is_null( $p_basename ) ) {
 		$t_current = plugin_get_current();
 	} else {
@@ -133,7 +136,12 @@ function plugin_file_include( $p_filename, $p_basename = null ) {
 	if( false === $t_file_path ) {
 		trigger_error( ERROR_GENERIC, ERROR );
 	}
-
+	
+	$t_extension = pathinfo( $t_file_path, PATHINFO_EXTENSION );
+	if ( $t_extension && array_key_exists( $t_extension , $g_plugin_mime_types ) ) {
+	    header('Content-Type: ' . $g_plugin_mime_types [ $t_extension ] );
+	}
+	
 	readfile( $t_file_path );
 }
 
@@ -228,15 +236,18 @@ function plugin_config_defaults( $p_options ) {
  * @return string Language string
  */
 function plugin_lang_get( $p_name, $p_basename = null ) {
-	if( is_null( $p_basename ) ) {
-		$t_basename = plugin_get_current();
-	} else {
-		$t_basename = $p_basename;
+	if( !is_null( $p_basename ) ) {
+		plugin_push_current( $p_basename );
 	}
 
+	$t_basename = plugin_get_current();
 	$t_name = 'plugin_' . $t_basename . '_' . $p_name;
+	$t_string = lang_get( $t_name );
 
-	return lang_get( $t_name );
+	if( !is_null( $p_basename ) ) {
+		plugin_pop_current();
+	}
+	return $t_string;
 }
 
 function plugin_history_log( $p_bug_id, $p_field_name, $p_old_value, $p_new_value = '', $p_user_id = null, $p_basename = null ) {

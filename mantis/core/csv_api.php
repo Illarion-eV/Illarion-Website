@@ -22,7 +22,7 @@
  * @package CoreAPI
  * @subpackage CSVAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -72,18 +72,17 @@ function csv_get_default_filename() {
  * @access public
  */
 function csv_escape_string( $p_str ) {
+		$t_escaped = str_split( '"' . csv_get_separator() . csv_get_newline() );
+		$t_must_escape = false;
+		while( ( $t_char = current( $t_escaped ) ) !== false && !$t_must_escape ) {
+			$t_must_escape = strpos( $p_str, $t_char ) !== false;
+			next( $t_escaped );
+		}
+		if ( $t_must_escape ) {
+			$p_str = '"' . str_replace( '"', '""', $p_str ) . '"';
+		}
 
-	# enclose strings with separators with quotaiton marks
-	if( strpos( $p_str, csv_get_separator() ) !== false ) {
-		$p_str = '"' . str_replace( '"', '""', $p_str ) . '"';
-	}
-
-	# enclose multi-line strings with quotaiton marks
-	if( strpos( $p_str, "\n" ) !== false ) {
-		$p_str = '"' . str_replace( '"', '""', $p_str ) . '"';
-	}
-
-	return $p_str;
+		return $p_str;
 }
 
 /**
@@ -396,4 +395,14 @@ function csv_format_due_date( $p_due_date ) {
 	if ( $s_date_format === null )
 		$s_date_format = config_get( 'short_date_format' );
 	return csv_escape_string( date( $s_date_format, $p_due_date ) );
+}
+
+/**
+ * return the sponsorship total for an issue
+ * @param int $p_sponsorship_total
+ * @return string
+ * @access public
+ */
+function csv_format_sponsorship_total( $p_sponsorship_total ) {
+	return number_format( $p_sponsorship_total );
 }

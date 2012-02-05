@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -707,7 +707,6 @@ $s_project_document_updated = ' منصوبہ  کامیابی کے ساتھ اپ 
 $s_project_user_added_msg = '  استعمال کر نے والے کامیابی کے ساتھ منصوبہ میں شامل ھو گے ھیں';
 $s_project_removed_user_msg = ' استعمال کر نے والے کامیابی کے ساتھ منصوبہ سے خارج ھو گہے ھیں';
 $s_remove_user_sure_msg = ' کیا آپ واقعی اس  استعمال والے کو خارج کرنا چاھتے ھیں ?';
-$s_remove_user_button = '   استعمال کر نے والے کو ختم کرو';
 $s_remove_all_users_sure_msg = ' کیا آپ واقعی اس منصوبہ کو استعمال والے کو خارج کرنا چاھتے?';
 $s_remove_all_users_button = '   تمام استعمال کر نے  والوں کو خارج کرو';
 $s_add_user_title = ' استعمال کر نے  والوں کو منصوبہ میں جمع کرو';

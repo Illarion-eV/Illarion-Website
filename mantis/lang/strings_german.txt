@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,12 +28,15 @@
  * @author Als-Holder
  * @author Andre Eisenbach, andre@eisenbach.com
  * @author Atrol
+ * @author Ayonik
  * @author Campmaster
+ * @author Diebuche
  * @author Dr. Jürgen Kehrel, jkehrel@kehrel.de
  * @author Heiko Gierer, gierer@rittershaus.de
  * @author Hermann-Josef Beckers, hjb-rheine@t-online.de
  * @author Imre
  * @author KarlReichert
+ * @author Kghbln
  * @author Martin Fuchs, martin-fuchs@gmx.net
  * @author Matthias Bauer, mantis-de@moeffju.de
  * @author Melancholie
@@ -438,7 +441,7 @@ $s_submit_button = 'Absenden';
 $s_profile_updated_msg = 'Profil aktualisiert …';
 $s_my_sponsorship = 'Meine Sponsorenschaften';
 $s_update_sponsorship_button = 'Bezahlstatus ändern';
-$s_no_sponsored = 'Keine von Ihnen gesponserten Einträge gefunden.';
+$s_no_sponsored = 'Keine Ihnen zugewiesenen gesponserten Einträge gefunden.';
 $s_own_sponsored = 'Von Ihnen gesponserte Einträge:';
 $s_issues_handled = 'Gesponserte Einträge, die Ihnen zugeordnet sind:';
 $s_no_own_sponsored = 'Sie haben keine Einträge gesponsert.';
@@ -458,7 +461,7 @@ $s_password_updated = 'Passwort erfolgreich aktualisiert.';
 $s_multiple_projects = 'Die von Ihnen ausgewählten Einträge gehören zu verschiedenen Projekten. Die unten stehenden Parameter berücksichtigen die Einstellungen aller Projekte. Falls das falsch ist, versuchen Sie eine Änderung mit weniger ausgewählten Einträgen.';
 $s_bug_assign_msg = 'Der Eintrag wurde zugewiesen …';
 $s_new_bug_title = 'Neuer Eintrag';
-$s_feedback_bug_title = 'Rückmeldung zum Eintrag machen';
+$s_feedback_bug_title = 'Rückmeldung zum Eintrag erfragen';
 $s_acknowledged_bug_title = 'Eintrag anerkennen';
 $s_confirmed_bug_title = 'Eintrag bestätigen';
 $s_assigned_bug_title = 'Eintrag zuweisen';
@@ -495,7 +498,7 @@ $s_bug_reminder = 'Erinnerung senden';
 $s_reminder_sent_to = 'Erinnerung gesendet an:';
 $s_bug_send_button = 'Absenden';
 $s_reminder = 'Erinnerung';
-$s_reminder_explain = 'Diese Notiz wird an die aufgeführten Empfänger gesandt, die eine Benachrichtigung zu diesem Eintrag wünschten.';
+$s_reminder_explain = 'Diese Notiz wird an die aufgeführten Empfänger gesandt, um eine Rückmeldung zu diesem Eintrag anzufordern.';
 $s_reminder_monitor = 'Diese Empfänger beginnen auch, den Eintrag zu beobachten. Sie können sich abmelden mit Klick auf den „Beobachtung beenden“-Knopf.';
 $s_reminder_store = 'Diese Notiz wird mit dem Eintrag abgespeichert.';
 $s_confirm_sponsorship = 'Bitte bestätigen Sie, dass Sie den Eintrag %1$d mit %2$s sponsern möchten.';
@@ -571,7 +574,7 @@ $s_error_database_version_out_of_date_2 = '<strong>WARNUNG:</strong> Die Datenba
 $s_error_code_version_out_of_date = '<strong>WARNUNG:</strong> Die Datenbank-Struktur ist neuer als die installierte Version. Bitte aktualisieren Sie das Programm.';
 $s_login_page_info = 'Willkommen beim Issue Tracker.';
 $s_login_title = 'Anmeldung';
-$s_save_login = 'Auf diesem Computer dauerhaft angemeldet bleiben';
+$s_save_login = 'Anmeldung in diesem Browser merken';
 $s_secure_session = 'Sichere Sitzung';
 $s_secure_session_long = 'Diese Sitzung ist nur für diese IP-Adresse gültig.';
 $s_choose_project = 'Projekt wählen';
@@ -590,7 +593,7 @@ $s_newer_news_link = 'Neuere Nachrichten';
 $s_older_news_link = 'Ältere Nachrichten';
 $s_archives = 'Archive';
 $s_rss = 'RSS';
-$s_site_information = 'Informationen der Website';
+$s_site_information = 'Informationen zur Website';
 $s_mantis_version = 'MantisBT-Version';
 $s_schema_version = 'Schema-Version';
 $s_site_path = 'Pfad der Website';
@@ -848,7 +851,7 @@ $s_project_document_updated = 'Projekt erfolgreich aktualisiert';
 $s_project_user_added_msg = 'Benutzer zum Projekt hinzugefügt';
 $s_project_removed_user_msg = 'Benutzer aus Projekt entfernt';
 $s_remove_user_sure_msg = 'Soll dieser Benutzer wirklich aus dem Projekt entfernt werden?';
-$s_remove_user_button = 'Benutzer entfernen';
+$s_remove_user_from_project_button = 'Benutzer aus dem Projekt %s entfernen';
 $s_remove_all_users_sure_msg = 'Sind Sie sicher, dass Sie alle Benutzer dieses Projekts entfernen wollen?';
 $s_remove_all_users_button = 'Alle Benutzer entfernen';
 $s_add_user_title = 'Benutzer zum Projekt hinzufügen';
@@ -872,7 +875,7 @@ $s_select_reproducibility = 'Reproduzierbarkeit wählen';
 $s_select_severity = 'Schweregrad wählen';
 $s_or_fill_in = 'ODER ausfüllen';
 $s_assign_to = 'Zuordnung an';
-$s_additional_information = 'Zusätzliche Information';
+$s_additional_information = 'Zusätzliche Informationen';
 $s_submit_report_button = 'Bericht absenden';
 $s_check_report_more_bugs = 'auswählen, um weitere Einträge zu erfassen';
 $s_report_stay = 'Im Eingabemodus bleiben';
@@ -909,15 +912,15 @@ $s_developer_by_resolution = 'Entwickler gruppiert nach Lösungs-Status';
 $s_percentage_fixed = '% behoben';
 $s_percentage_errors = '% fehlerhaft';
 $s_errors = 'Fehlerhaft';
-$s_opened = 'Offen';
+$s_opened = 'Geöffnet';
 $s_resolved = 'Erledigt';
 $s_total = 'Gesamt';
 $s_balance = 'Bilanz';
 $s_most_active = 'Maximale Aktivität';
 $s_score = 'Punktzahl';
 $s_days = 'Tage';
-$s_time_stats = 'Dauer der Fehlerbehebung (Tage)';
-$s_longest_open_bug = 'ältester offener Eintrag';
+$s_time_stats = 'Zeit-Statistik f&uuml;r erledigte Eintr&auml;ge (Tage)';
+$s_longest_open_bug = 'Eintrag mit maximaler Bearbeitungsdauer';
 $s_longest_open = 'Maximale Bearbeitungsdauer';
 $s_average_time = 'durchschnittlich';
 $s_total_time = 'insgesamt';
@@ -1021,7 +1024,7 @@ $s_custom_field_type_enum_string = '0:Text,1:Zahlen,2:Gleitkommazahlen,3:Aufzäh
 $s_confirm_used_custom_field_deletion = 'Dieses Feld wird derzeit von mindestens einem Projekt verwendet. Wenn Sie fortfahren, werden alle Werte für dieses Feld dauerhaft gelöscht. Dieser Vorgang kann nicht rückgängig gemacht werden. Um das Feld nicht zu löschen, klicken Sie bitten den „Zurück“-Knopf in Ihrem Web-Browser. Um fortzufahren, klicken Sie bitten den „Feld löschen“-Knopf.';
 $s_confirm_custom_field_deletion = 'Möchten Sie dieses benutzerdefinierte Feld und alle zugehörigen Werte wirklich löschen?';
 $s_field_delete_button = 'Feld löschen';
-$s_confirm_custom_field_unlinking = 'Sind Sie sicher, dass Sie dieses benutzerdefinierte Feld aus dem Projekt entfernen und alle enthaltenen Werte löschen wollen?';
+$s_confirm_custom_field_unlinking = 'Sind Sie sicher, dass Sie dieses benutzerdefinierte Feld aus dem Projekt löschen möchten? Die Werte werden nicht gelöscht werden, solange das benutzerdefinierte Feld selbst nicht gelöscht wird.';
 $s_field_remove_button = 'Feld entfernen';
 $s_hide_status = 'Status ausblenden';
 $s_filter_closed = 'Geschlossen';
@@ -1180,8 +1183,9 @@ $s_tag_related_issues = 'Gemeinsame Einträge (%1$s)';
 $s_tag_stats_attached = 'Zugeordnete Einträge: %1$s';
 $s_tag_create = 'Tag erstellen';
 $s_show_all_tags = 'ALLE';
-$s_time_tracking_billing_link = 'Abrechnung';
+$s_time_tracking_billing_link = 'Zeiterfassung';
 $s_time_tracking = 'Zeiterfassung';
+$s_time_tracking_time_spent = 'Investierte Zeit:';
 $s_time_tracking_get_info_button = 'Zeiterfassungs-Informationen abfragen';
 $s_time_tracking_cost_per_hour = 'Kosten / Stunde';
 $s_time_tracking_cost = 'Kosten';
@@ -1205,9 +1209,9 @@ $s_update_columns_as_my_default = 'Spalten als Standard für alle Projekte defin
 $s_reset_columns_configuration = 'Spalten-Konfiguration zurücksetzen';
 $s_copy_columns_from = 'Kopiere Spalten von';
 $s_copy_columns_to = 'Kopiere Spalten nach';
-$s_due_date = 'Termin';
+$s_due_date = 'Fälligkeitsdatum';
 $s_overdue = 'überfällig';
-$s_view_account_title = 'Benutzer Information';
+$s_view_account_title = 'Benutzerinformation';
 $s_manage_user = 'Benutzer verwalten';
 $s_install_information = 'MantisBT-Installationsinformationen';
 $s_database_information = 'MantisBT-Datenbankinformationen';

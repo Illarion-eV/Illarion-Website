@@ -17,7 +17,7 @@
 /**
  * Authentication API
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  * @package CoreAPI
  * @subpackage AuthenticationAPI
@@ -329,6 +329,26 @@ function auth_automatic_logon_bypass_form() {
 }
 
 /**
+ * Return the user's password maximum length for the current login method
+ *
+ * @return int
+ * @access public
+ */
+function auth_get_password_max_size() {
+	switch( config_get( 'login_method' ) ) {
+		# Max password size cannot be bigger than the database field
+		case PLAIN:
+		case BASIC_AUTH:
+		case HTTP_AUTH:
+			return DB_FIELD_SIZE_PASSWORD;
+
+		# All other cases, i.e. password is stored as a hash
+		default:
+			return PASSWORD_MAX_SIZE_BEFORE_HASH;
+	}
+}
+
+/**
  * Return true if the password for the user id given matches the given
  * password (taking into account the global login method)
  * @param int $p_user_id User id to check password against
@@ -386,7 +406,7 @@ function auth_does_password_match( $p_user_id, $p_test_password ) {
  * @param string $p_password
  * @param string $p_salt salt, defaults to null
  * @param string $p_method logon method, defaults to null (use config login method)
- * @return string processed password, maximum PASSLEN chars in length
+ * @return string processed password, maximum DB_FIELD_SIZE_PASSWORD chars in length
  * @access public
  */
  function auth_process_plain_password( $p_password, $p_salt = null, $p_method = null ) {
@@ -412,8 +432,8 @@ function auth_does_password_match( $p_user_id, $p_test_password ) {
 			break;
 	}
 
-	# cut this off to PASSLEN cahracters which the largest possible string in the database
-	return utf8_substr( $t_processed_password, 0, PASSLEN );
+	# cut this off to DB_FIELD_SIZE_PASSWORD characters which the largest possible string in the database
+	return utf8_substr( $t_processed_password, 0, DB_FIELD_SIZE_PASSWORD );
 }
 
 /**
@@ -670,11 +690,11 @@ function auth_reauthenticate_page( $p_user_id, $p_username ) {
 <?php
 		echo lang_get( 'reauthenticate_message' );
 	if( $t_error != false ) {
-		echo '<br/><font color="red">', lang_get( 'login_error' ), '</font>';
+		echo '<br /><font color="red">', lang_get( 'login_error' ), '</font>';
 	}
 	?>
 </p>
-<form name="reauth_form" method="post" action="<?php echo form_action_self();?>">
+<form name="reauth_form" method="post" action="<?php echo string_attribute( form_action_self() ) ?>">
 <?php
 	# CSRF protection not required here - user needs to enter password
 	# (confirmation step) before the form is accepted.
@@ -691,12 +711,12 @@ function auth_reauthenticate_page( $p_user_id, $p_username ) {
 
 <tr class="row-1">
 	<td class="category"><?php echo lang_get( 'username' );?></td>
-	<td><input type="text" disabled="disabled" size="32" maxlength="<?php echo USERLEN;?>" value="<?php echo $p_username;?>" /></td>
+	<td><input type="text" disabled="disabled" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" value="<?php echo $p_username;?>" /></td>
 </tr>
 
 <tr class="row-2">
 	<td class="category"><?php echo lang_get( 'password' );?></td>
-	<td><input type="password" name="password" size="16" maxlength="<?php echo PASSLEN;?>" /></td>
+	<td><input type="password" name="password" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" /></td>
 </tr>
 
 <tr>

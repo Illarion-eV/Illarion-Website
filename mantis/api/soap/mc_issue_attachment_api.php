@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -51,7 +51,7 @@ function mc_issue_attachment_add( $p_username, $p_password, $p_issue_id, $p_name
 	if( !access_has_bug_level( config_get( 'upload_bug_file_threshold' ), $p_issue_id, $t_user_id ) ) {
 		return mci_soap_fault_access_denied( $t_user_id );
 	}
-	return mci_file_add( $p_issue_id, $p_name, $p_content, $p_file_type, 'bug' );
+	return mci_file_add( $p_issue_id, $p_name, $p_content, $p_file_type, 'bug', '', '', $t_user_id );
 }
 
 /**

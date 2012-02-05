@@ -19,7 +19,7 @@
  * @package CoreAPI
  * @subpackage JSONAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -36,7 +36,7 @@ require_once( 'url_api.php' );
  */
 function json_url( $p_url, $p_member = null ) {
 	$t_data = url_get( $p_url );
-	$t_json = json_decode( $t_data );
+	$t_json = json_decode( utf8_encode($t_data) );
 
 	if( is_null( $p_member ) ) {
 		return $t_json;

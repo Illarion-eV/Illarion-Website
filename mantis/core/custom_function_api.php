@@ -18,7 +18,7 @@
  * @package CoreAPI
  * @subpackage CustomFunctionAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -56,7 +56,7 @@ function custom_function_default_changelog_print_issue( $p_issue_id, $p_issue_le
 	}
 
 	$t_category = is_blank( $t_category_name ) ? '' : '<b>[' . string_display_line( $t_category_name ) . ']</b> ';
-	echo utf8_str_pad( '', $p_issue_level * 6, '&nbsp;' ), '- ', string_get_bug_view_link( $p_issue_id ), ': ', $t_category, string_display_line_links( $t_bug->summary );
+	echo utf8_str_pad( '', $p_issue_level * 6, '&#160;' ), '- ', string_get_bug_view_link( $p_issue_id ), ': ', $t_category, string_display_line_links( $t_bug->summary );
 
 	if( $t_bug->handler_id != 0 ) {
 		echo ' (', prepare_user_name( $t_bug->handler_id ), ')';
@@ -95,7 +95,7 @@ function custom_function_default_roadmap_print_issue( $p_issue_id, $p_issue_leve
 
 	$t_category = is_blank( $t_category_name ) ? '' : '<b>[' . string_display_line( $t_category_name ) . ']</b> ';
 
-	echo utf8_str_pad( '', $p_issue_level * 6, '&nbsp;' ), '- ', $t_strike_start, string_get_bug_view_link( $p_issue_id ), ': ', $t_category, string_display_line_links( $t_bug->summary );
+	echo utf8_str_pad( '', $p_issue_level * 6, '&#160;' ), '- ', $t_strike_start, string_get_bug_view_link( $p_issue_id ), ': ', $t_category, string_display_line_links( $t_bug->summary );
 
 	if( $t_bug->handler_id != 0 ) {
 		echo ' (', prepare_user_name( $t_bug->handler_id ), ')';
@@ -218,13 +218,13 @@ function custom_function_default_get_columns_to_view( $p_columns_target = COLUMN
 	$t_project_id = helper_get_current_project();
 
 	if( $p_columns_target == COLUMNS_TARGET_CSV_PAGE ) {
-		$t_columns = config_get( 'csv_columns', $t_project_id, $p_user_id );
+		$t_columns = config_get( 'csv_columns', '', $p_user_id, $t_project_id );
 	} else if( $p_columns_target == COLUMNS_TARGET_EXCEL_PAGE ) {
-		$t_columns = config_get( 'excel_columns', $t_project_id, $p_user_id );
+		$t_columns = config_get( 'excel_columns', '', $p_user_id, $t_project_id );
 	} else if( $p_columns_target == COLUMNS_TARGET_VIEW_PAGE ) {
-		$t_columns = config_get( 'view_issues_page_columns', $t_project_id, $p_user_id );
+		$t_columns = config_get( 'view_issues_page_columns', '', $p_user_id, $t_project_id );
 	} else {
-		$t_columns = config_get( 'print_issues_page_columns', $t_project_id, $p_user_id );
+		$t_columns = config_get( 'print_issues_page_columns', '', $p_user_id, $t_project_id );
 	}
 
 	$t_columns = columns_remove_invalid( $t_columns, columns_get_all( $t_project_id ) );
@@ -296,7 +296,7 @@ function custom_function_default_print_column_value( $p_column, $p_bug, $p_colum
 	} else {
 		$t_column_start = '<td>';
 		$t_column_end = '</td>';
-		$t_column_empty = '&nbsp;';
+		$t_column_empty = '&#160;';
 	}
 
 	$t_custom_field = column_get_custom_field_name( $p_column );

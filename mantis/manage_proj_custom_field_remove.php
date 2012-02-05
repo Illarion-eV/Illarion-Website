@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -45,7 +45,7 @@
 
 	# Confirm with the user
 	helper_ensure_confirmed( lang_get( 'confirm_custom_field_unlinking' ) .
-		'<br/>' . lang_get( 'custom_field' ) . ': ' . string_attribute( $t_definition['name'] ),
+		'<br />' . lang_get( 'custom_field' ) . ': ' . string_attribute( $t_definition['name'] ),
 		lang_get( 'field_remove_button' ) );
 
 	if ( $f_return == 'custom_field' ) {

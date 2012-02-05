@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -561,7 +561,7 @@ $s_error_database_version_out_of_date_2 = '<strong>UWAGA!</strong> Struktura baz
 $s_error_code_version_out_of_date = '<strong>UWAGA!</strong> Struktura bazy danych jest nowsza od zainstalowanego kodu. Uaktualnij oprogramowanie.';
 $s_login_page_info = 'Witaj w programie do śledzenia i rozwiązywania zgłoszeń.';
 $s_login_title = 'Logowanie';
-$s_save_login = 'Zapamiętaj mnie na tym komputerze';
+$s_save_login = 'Zapamiętaj moje hasło w tej przeglądarce';
 $s_secure_session = 'Sesja bezpieczna';
 $s_secure_session_long = 'Zezwala wyłącznie na Twoją sesję z tego adresu IP.';
 $s_choose_project = 'Wybierz projekt';
@@ -736,7 +736,7 @@ $s_add_and_edit_version_button = 'Dodaj i edytuj wersję';
 $s_edit_link = 'Edytuj';
 $s_actions = 'Akcje';
 $s_version = 'Wersja/kompilacja';
-$s_timestamp = 'Data/godzina';
+$s_timestamp = 'Sygnatura czasowa';
 $s_update = 'Aktualizuj';
 $s_subprojects = 'Podprojety';
 $s_add_subproject = 'Dodaj jako podprojekt';
@@ -838,7 +838,7 @@ $s_project_document_updated = 'Projekt został pomyślnie zaktualizowany';
 $s_project_user_added_msg = 'Użytkownik został pomyślnie dodany do projektu';
 $s_project_removed_user_msg = 'Użytkownik został pomyślnie usunięty z projektu';
 $s_remove_user_sure_msg = 'Czy na pewno chcesz usunąć tego użytkownika?';
-$s_remove_user_button = 'Usuń użytkownika';
+$s_remove_user_from_project_button = 'Usuń użytkownika z projektu %s';
 $s_remove_all_users_sure_msg = 'Czy na pewno chcesz usunąć wszystkich użytkowników z tego projektu?';
 $s_remove_all_users_button = 'Usuń wszystkich użytkowników';
 $s_add_user_title = 'Dodawanie użytkownika do projektu';
@@ -1012,7 +1012,7 @@ $s_custom_field_type_enum_string = '0:Łańcuch znaków,1:Liczba całkowita,2:Li
 $s_confirm_used_custom_field_deletion = 'To pole jest obecnie połączone co najmniej z jednym projektem. Jeżeli je usuniesz, wszystkie wartości zostaną skasowane. Nie będzie też możliwe odzyskanie danych. Jeżeli nie chcesz usunąć tego pola, kliknij Wstecz w przeglądarce. kliknij przycisk poniżej aby kontynuwać';
 $s_confirm_custom_field_deletion = 'Czy na pewno chcesz usunąć dodatkowe pole i wszystkie powiązane z nim wartości?';
 $s_field_delete_button = 'Usuń pole';
-$s_confirm_custom_field_unlinking = 'Czy na pewno chcesz usunąć (odłączyć) dodatkowe pole z projektu i skasować wszystkie powiązane z nim wartości?';
+$s_confirm_custom_field_unlinking = 'Czy na pewno chcesz usunąć dodatkowe pole z projektu? Wartości nie zostaną usunięte tak długo jak ich dodatkowe pole nie będzie usunięte.';
 $s_field_remove_button = 'Usuń pole';
 $s_hide_status = 'Ukryj status';
 $s_filter_closed = 'Zamknięte';
@@ -1139,7 +1139,7 @@ $s_on_date = 'Dnia';
 $s_on = 'Dnia';
 $s_off = 'Wyłącz';
 $s_wiki = 'Wiki';
-$s_tags = 'Tagi';
+$s_tags = 'Znaczniki';
 $s_tag_details = 'Szczegóły znacznika %1$s';
 $s_tag_id = 'Identyfikator tagu';
 $s_tag_name = 'Nazwa';

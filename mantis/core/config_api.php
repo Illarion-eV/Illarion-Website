@@ -18,7 +18,7 @@
  * @package CoreAPI
  * @subpackage ConfigurationAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -63,7 +63,7 @@ function config_get( $p_option, $p_default = null, $p_user = null, $p_project = 
 	# @@ debug @@ if ($t_bypass_lookup) { echo "bp=$p_option match=$t_match_pattern <br />"; }
 
 	if( !$t_bypass_lookup ) {
-		if( $g_project_override !== null ) {
+		if( $g_project_override != null && $p_project == null ) {
 			$p_project = $g_project_override;
 		}
 		# @@ debug @@ if ( ! db_is_connected() ) { echo "no db "; }
@@ -521,7 +521,7 @@ function config_flush_cache( $p_option = '', $p_user = ALL_USERS, $p_project = A
 # ------------------
 # Checks if an obsolete configuration variable is still in use.  If so, an error
 # will be generated and the script will exit.  This is called from admin_check.php.
-function config_obsolete( $p_var, $p_replace ) {
+function config_obsolete( $p_var, $p_replace = '' ) {
 
 	# @@@ we could trigger a WARNING here, once we have errors that can
 	#     have extra data plugged into them (we need to give the old and
@@ -542,7 +542,7 @@ function config_obsolete( $p_var, $p_replace ) {
 			$t_info = '';
 		}
 
-		print_test_warn_row( $t_description, $t_info, false );
+		print_test_warn_row( $t_description, false, $t_info );
 	}
 }
 

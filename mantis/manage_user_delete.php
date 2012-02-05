@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -54,7 +54,7 @@
 	}
 
 	helper_ensure_confirmed( lang_get( 'delete_account_sure_msg' ) .
-		'<br/>' . lang_get( 'username' ) . ': ' . $t_user['username'],
+		'<br />' . lang_get( 'username' ) . ': ' . $t_user['username'],
 		lang_get( 'delete_account_button' ) );
 
 	user_delete( $f_user_id );

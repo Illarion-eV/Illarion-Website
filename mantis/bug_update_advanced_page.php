@@ -17,7 +17,7 @@
 /**
  * @package MantisBT
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -229,7 +229,7 @@ if ( $tpl_show_reporter ) {
 	}
 
 	# spacer
-	echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+	echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 	echo '</tr>';
 }
@@ -290,7 +290,7 @@ if ( $tpl_show_handler || $tpl_show_due_date ) {
 	}
 	
 	# spacer
-	echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+	echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 	echo '</tr>';
 }
@@ -336,7 +336,7 @@ if ( $tpl_show_priority || $tpl_show_severity || $tpl_show_reproducibility ) {
 
 	# spacer
 	if ( $t_spacer > 0 ) {
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 	}
 
 	echo '</tr>';
@@ -375,7 +375,7 @@ if ( $tpl_show_status || $tpl_show_resolution ) {
 
 	# spacer
 	if ( $t_spacer > 0 ) {
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 	}
 
 	echo '</tr>';
@@ -414,7 +414,7 @@ if ( $tpl_show_projection || $tpl_show_eta ) {
 	}
 
 	# spacer
-	echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+	echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 	echo '</tr>';
 }
@@ -438,7 +438,7 @@ if ( $tpl_show_platform || $tpl_show_os || $tpl_show_os_version ) {
 			print_platform_option_list( $tpl_bug->platform );
 			echo '</select>';
 		} else {
-			projax_autocomplete( 'platform_get_with_prefix', 'platform', array( 'value' => $tpl_bug->platform, 'size' => '16', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
+			projax_autocomplete( 'platform_get_with_prefix', 'platform', array( 'value' => string_attribute( $tpl_bug->platform ), 'size' => '16', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
 		}
 
 		echo '</td>';
@@ -456,7 +456,7 @@ if ( $tpl_show_platform || $tpl_show_os || $tpl_show_os_version ) {
 			print_os_option_list( $tpl_bug->os );
 			echo '</select>';
 		} else {
-			projax_autocomplete( 'os_get_with_prefix', 'os', array( 'value' => $tpl_bug->os, 'size' => '16', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
+			projax_autocomplete( 'os_get_with_prefix', 'os', array( 'value' => string_attribute( $tpl_bug->os ), 'size' => '16', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
 		}
 
 		echo '</td>';
@@ -474,7 +474,7 @@ if ( $tpl_show_platform || $tpl_show_os || $tpl_show_os_version ) {
 			print_os_build_option_list( $tpl_bug->os_build );
 			echo '</select>';
 		} else {
-			projax_autocomplete( 'os_build_get_with_prefix', 'os_build', array( 'value' => $tpl_bug->os_build, 'size' => '16', 'maxlength' => '16', 'tabindex' => helper_get_tab_index_value() ) );
+			projax_autocomplete( 'os_build_get_with_prefix', 'os_build', array( 'value' => string_attribute( $tpl_bug->os_build ), 'size' => '16', 'maxlength' => '16', 'tabindex' => helper_get_tab_index_value() ) );
 		}
 
 		echo '</td>';
@@ -484,7 +484,7 @@ if ( $tpl_show_platform || $tpl_show_os || $tpl_show_os_version ) {
 
 	# spacer
 	if ( $t_spacer > 0 ) {
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 	}
 
 	echo '</tr>';
@@ -519,7 +519,7 @@ if ( $tpl_show_product_version || $tpl_show_product_build ) {
 	}
 
 	# spacer
-	echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+	echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 	echo '</tr>';
 }
@@ -559,7 +559,7 @@ if ( $tpl_show_target_version || $tpl_show_fixed_in_version ) {
 	}
 
 	# spacer
-	echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+	echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 	echo '</tr>';
 }

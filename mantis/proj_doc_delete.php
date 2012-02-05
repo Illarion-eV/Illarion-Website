@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -46,7 +46,7 @@
 
 	# Confirm with the user
 	helper_ensure_confirmed( lang_get( 'confirm_file_delete_msg' ) .
-		'<br/>' . lang_get( 'filename' ) . ': ' . string_display( $t_title ),
+		'<br />' . lang_get( 'filename' ) . ': ' . string_display( $t_title ),
 		lang_get( 'file_delete_button' ) );
 
 	file_delete( $f_file_id, 'project' );

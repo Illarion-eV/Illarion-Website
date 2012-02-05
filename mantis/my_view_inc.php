@@ -16,7 +16,7 @@
 
 /**
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  * @package MantisBT
  */
@@ -49,8 +49,6 @@ if( $t_filter === false ) {
 
 $t_sort = $t_filter['sort'];
 $t_dir = $t_filter['dir'];
-
-$t_checkboxes_exist = false;
 
 $t_icon_path = config_get( 'icon_path' );
 $t_update_bug_threshold = config_get( 'update_bug_threshold' );
@@ -408,7 +406,7 @@ $box_title = lang_get( 'my_view_title_' . $t_box_title );
 	<td class="form-title" colspan="2">
 <?php
 print_link( 'view_all_set.php?type=1&temporary=y&' . $url_link_parameters[$t_box_title], $box_title, false, 'subtle' );
-echo '&nbsp;';
+echo '&#160;';
 print_bracket_link( 'view_all_set.php?type=1&temporary=y&' . $url_link_parameters[$t_box_title], '^', true, 'subtle' );
 
 if( count( $rows ) > 0 ) {
@@ -438,7 +436,9 @@ echo "($v_start - $v_end / $t_bug_count)";
 
 	# Check for attachments
 	$t_attachment_count = 0;
-	if(( file_can_view_bug_attachments( $t_bug->id ) ) ) {
+	# TODO: factor in the allow_view_own_attachments configuration option
+	# instead of just using a global check.
+	if(( file_can_view_bug_attachments( $t_bug->id, null ) ) ) {
 		$t_attachment_count = file_bug_attachment_count( $t_bug->id );
 	}
 

@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -51,8 +51,6 @@
 
 	compress_enable();
 
-	$t_history = history_get_events_array( $f_bug_id );
-
 	$tpl_show_id = in_array( 'id', $t_fields );
 	$tpl_show_project = in_array( 'project', $t_fields );
 	$tpl_show_category = in_array( 'category_id', $t_fields );
@@ -83,6 +81,7 @@
 	$tpl_show_additional_information = in_array( 'additional_info', $t_fields );
 	$tpl_show_tags = in_array( 'tags', $t_fields );
 	$tpl_show_attachments = in_array( 'attachments', $t_fields );
+	$tpl_show_history = access_has_bug_level( config_get( 'view_history_threshold' ), $f_bug_id );
 
 	$tpl_window_title = string_display_line( config_get( 'window_title' ) );
 	$tpl_project_name = $tpl_show_project ? string_display_line( project_get_name( $tpl_bug->project_id ) ) : '';
@@ -185,7 +184,7 @@
 		echo '<td class="print">';
 		print_user_with_subject( $tpl_bug->reporter_id, $f_bug_id );
 		echo '</td>';
-		echo '<td class="print" colspan="4">&nbsp;</td>';
+		echo '<td class="print" colspan="4">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -214,7 +213,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -249,7 +248,7 @@
 		}
 
 		if ( $t_spacer > 0 ) {
-			echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+			echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		}
 
 		echo '</tr>';
@@ -278,7 +277,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -305,7 +304,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -340,7 +339,7 @@
 		}
 
 		if ( $t_spacer > 0 ) {
-			echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+			echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		}
 
 		echo '</tr>';
@@ -369,7 +368,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -396,7 +395,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td class="print" colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td class="print" colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -480,7 +479,7 @@
 			$c_filesize = number_format( $t_attachment['size'] );
 			$c_date_added = date( config_get( 'normal_date_format' ), $t_attachment['date_added'] );
 			if ( isset( $t_attachment['icon'] ) ) {
-				echo '<img src="', $t_attachment['icon']['url'], '" alt="', $t_attachment['icon']['alt'], '" />&nbsp;';
+				echo '<img src="', $t_attachment['icon']['url'], '" alt="', $t_attachment['icon']['alt'], '" />&#160;';
 			}
 
 			echo "$c_filename ($c_filesize) <span class=\"italic\">$c_date_added</span><br />$c_download_url";
@@ -493,31 +492,41 @@
 		echo '</td></tr>';
 	}
 
-	echo '<tr><td class="print-spacer" colspan="6"><hr size="1" /></td></tr>';
+	#
+	# Issue History
+	#
 
-	# ISSUE HISTORY
-	echo '<tr><td class="form-title">', lang_get( 'bug_history' ), '</td></tr>';
+	if ( $tpl_show_history ) {
+		echo '<tr><td class="print-spacer" colspan="6"><hr size="1" /></td></tr>';
 
-	echo '<tr class="print-category">';
-	echo '<td class="row-category-history">', lang_get( 'date_modified' ), '</td>';
-	echo '<td class="row-category-history">', lang_get( 'username' ), '</td>';
-	echo '<td class="row-category-history">', lang_get( 'field' ), '</td>';
-	echo '<td class="row-category-history">', lang_get( 'change' ), '</td>';
-	echo '</tr>';
+		echo '<tr><td class="form-title">', lang_get( 'bug_history' ), '</td></tr>';
 
-	foreach ( $t_history as $t_item ) {
-		echo '<tr class="print">';
-		echo '<td class="print">', $t_item['date'], '</td>';
-		echo '<td class="print">';
-		print_user( $t_item['userid'] );
-		echo '</td>';
-		echo '<td class="print">', string_display( $t_item['note'] ), '</td>';
-		echo '<td class="print">', string_display_line_links( $t_item['change'] ), '</td>';
+		echo '<tr class="print-category">';
+		echo '<td class="row-category-history">', lang_get( 'date_modified' ), '</td>';
+		echo '<td class="row-category-history">', lang_get( 'username' ), '</td>';
+		echo '<td class="row-category-history">', lang_get( 'field' ), '</td>';
+		echo '<td class="row-category-history">', lang_get( 'change' ), '</td>';
 		echo '</tr>';
-	}
 
+		$t_history = history_get_events_array( $f_bug_id );
+		
+		foreach ( $t_history as $t_item ) {
+			echo '<tr class="print">';
+			echo '<td class="print">', $t_item['date'], '</td>';
+			echo '<td class="print">';
+			print_user( $t_item['userid'] );
+			echo '</td>';
+			echo '<td class="print">', string_display( $t_item['note'] ), '</td>';
+			echo '<td class="print">', string_display_line_links( $t_item['change'] ), '</td>';
+			echo '</tr>';
+		}
+	}
+	
 	echo '</table>';
 
 	include( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'print_bugnote_inc.php' ) ;
 
 	last_visited_issue( $f_bug_id );
+
+	html_body_end();
+	html_end();

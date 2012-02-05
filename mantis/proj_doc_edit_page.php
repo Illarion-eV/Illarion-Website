@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -96,7 +96,7 @@
 			$t_href = '<a href="file_download.php?file_id='.$v_id.'&amp;type=doc">';
 			echo $t_href;
 			print_file_icon( $v_filename );
-			echo '</a>&nbsp;' . $t_href . file_get_display_name( $v_filename ) . '</a>';
+			echo '</a>&#160;' . $t_href . file_get_display_name( $v_filename ) . '</a>';
 		?>
 	</td>
 </tr>

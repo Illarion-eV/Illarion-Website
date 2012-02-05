@@ -17,7 +17,7 @@
 /**
  * @package Tests
  * @subpackage UnitTests
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -182,6 +182,33 @@ class FilterTest extends SoapBase {
 		
 		$this->assertEquals( $issueId, $projectIssues[0]->id, "id" );
 	}
+	
+	/**
+	 * Verifies that after the last page no more issues are being returned
+	 */
+	public function testGetIssueHeadersPaged() {
+	    
+	    $issue = $this->getIssueToAdd('FilterTest.getIssueHeadersPaged');
+	    $issueId = $this->client->mc_issue_add($this->userName, $this->password, $issue);
+	    $this->deleteAfterRun($issueId);
+	    
+	    self::assertEquals(1, count($this->client->mc_project_get_issue_headers($this->userName, $this->password, $this->getProjectId(),1, 1 )));
+	    self::assertEquals(0, count($this->client->mc_project_get_issue_headers($this->userName, $this->password, $this->getProjectId(),2, 1 )));
+	}
+	
+	/**
+	 * Verifies that after the last page no more issues are being returned
+	 */
+	public function testGetIssuesPaged() {
+	    
+	    $issue = $this->getIssueToAdd('FilterTest.getIssuesPaged');
+	    $issueId = $this->client->mc_issue_add($this->userName, $this->password, $issue);
+	    $this->deleteAfterRun($issueId);
+	    
+	    self::assertEquals(1, count($this->client->mc_project_get_issues($this->userName, $this->password, $this->getProjectId(),1, 1 )));
+	    self::assertEquals(0, count($this->client->mc_project_get_issues($this->userName, $this->password, $this->getProjectId(),2, 1 )));
+	}
+	
 
 	/**
 	 *

@@ -18,7 +18,7 @@
 	 * This page allows actions to be performed an an array of bugs
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -98,10 +98,11 @@
 			break;
 
 		case 'MOVE':
-			if ( access_has_bug_level( config_get( 'move_bug_threshold' ), $t_bug_id ) ) {
+			$f_project_id = gpc_get_int( 'project_id' );
+			if ( access_has_bug_level( config_get( 'move_bug_threshold' ), $t_bug_id ) &&
+			     access_has_project_level( config_get( 'report_bug_threshold' ), $f_project_id ) ) {
 				/** @todo we need to issue a helper_call_custom_function( 'issue_update_validate', array( $t_bug_id, $t_bug_data, $f_bugnote_text ) ); */
-				$f_project_id = gpc_get_int( 'project_id' );
-				bug_set_field( $t_bug_id, 'project_id', $f_project_id );
+				bug_move( $t_bug_id, $f_project_id );
 				helper_call_custom_function( 'issue_update_notify', array( $t_bug_id ) );
 			} else {
 				$t_failed_ids[$t_bug_id] = lang_get( 'bug_actiongroup_access' );

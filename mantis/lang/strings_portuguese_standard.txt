@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,6 +31,7 @@
  * @author Luís Martins, lmar@ualg.pt
  * @author M42
  * @author Malafaya
+ * @author McDutchie
  * @author Rui Alexandre Coelho, rac@iosoft.pt
  * @author Waldir
  */
@@ -559,7 +560,7 @@ $s_error_database_version_out_of_date_2 = '<strong>Aviso:</strong> A estrutura d
 $s_error_code_version_out_of_date = '<strong>Aviso:</strong> A estrutura da base de dados é mais actual do que o código instalado. Por favor, actualize o código.';
 $s_login_page_info = 'Bem-vindo ao Sistema de Acompanhamento de Problemas';
 $s_login_title = 'Entrar';
-$s_save_login = 'Recordar o meu login neste computador';
+$s_save_login = 'Recordar os meus dados neste computador';
 $s_secure_session = 'Sessão segura';
 $s_secure_session_long = 'Permitir a sessão apenas deste endereço IP.';
 $s_choose_project = 'Escolha um Projecto';
@@ -783,7 +784,7 @@ $s_email_user_updated_msg = 'A sua conta foi actualizada por um administrador. S
 $s_main_link = 'Principal';
 $s_view_bugs_link = 'ver problemas';
 $s_report_bug_link = 'Relatar Problema';
-$s_changelog_link = 'Alterar registo (log)';
+$s_changelog_link = 'Registo de alterações';
 $s_roadmap_link = 'Roadmap';
 $s_summary_link = 'Sumário';
 $s_account_link = 'Conta Pessoal';
@@ -835,7 +836,7 @@ $s_project_document_updated = 'Projecto Actualizado com Sucesso';
 $s_project_user_added_msg = 'Utilizador Adicionado ao Projecto com Sucesso';
 $s_project_removed_user_msg = 'Utilizador Removido do Projecto com Sucesso';
 $s_remove_user_sure_msg = 'Tem Certeza que Deseja Remover o Utilizador ?';
-$s_remove_user_button = 'Remover utilizador';
+$s_remove_user_from_project_button = 'Remover utilizador do projecto %s';
 $s_remove_all_users_sure_msg = 'Tem a certeza que deseja remover todos os utilizadores deste projecto?';
 $s_remove_all_users_button = 'Remover todos os utilizadores';
 $s_add_user_title = 'Adicionar Utilizador ao Projecto';
@@ -1008,7 +1009,7 @@ $s_custom_field_type_enum_string = '0:Cadeia de caracteres,1:Numérico,2:Vírgul
 $s_confirm_used_custom_field_deletion = 'Este campo está actualmente ligado a pelo menos um projecto. Se continuar, todos os valores para este campo serão permanentemente apagados. Esta acção não pode ser desfeita. Se não quer apagar este campo, use o botão \'Voltar\' no seu browser. Para avançar, clique no botão seguinte';
 $s_confirm_custom_field_deletion = 'Tem a certeza que quer apagar este campo personalizado e todos os valores associados?';
 $s_field_delete_button = 'Apagar campo';
-$s_confirm_custom_field_unlinking = 'Tem a certeza que quer remover (desligar) este campo personalizado deste projecto e apagar todos os valores associados?';
+$s_confirm_custom_field_unlinking = 'Tem a certeza que quer desvincular este campo personalizado deste projecto? Os valores associados não serão apagados a não ser que o campo personalizado seja ele próprio eliminado.';
 $s_field_remove_button = 'Remover campo';
 $s_hide_status = 'Esconder estado';
 $s_filter_closed = 'Encerrado(s)';
@@ -1019,7 +1020,7 @@ $s_and_above = 'E acima';
 $s_advanced_filters = 'Filtros avançados';
 $s_simple_filters = 'Filtros simples';
 $s_monitored_by = 'Acompanhado por';
-$s_attachments = 'anexos(s)';
+$s_attachments = 'anexo(s)';
 $s_bytes = 'bytes';
 $s_attachment_missing = 'Anexo em falta';
 $s_attachment_count = 'Contagem de anexos';

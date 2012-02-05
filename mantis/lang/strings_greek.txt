@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,7 @@
  *
  * @author Consta
  * @author Crazymadlover
+ * @author Evropi
  * @author Kostas Vorilas, math1890@yahoo.gr
  * @author Omnipaedista
  * @author ZaDiak
@@ -107,7 +108,7 @@ $s_bug_deleted = 'Θέμα Διαγράφηκε';
 $s_make_private = 'Όρισε Ιδιωτικό';
 $s_make_public = 'Όρισε Δημόσιο';
 $s_create_new_project_link = 'Δημιουργία Νέας Εφαρμογής';
-$s_login_link = 'Σύνδεση';
+$s_login_link = 'Είσοδος';
 $s_select_option = '(επιλέξτε)';
 $s_category_group_bugs_button = 'Ενημέρωση Κατηγορίας';
 $s_hide_button = 'Προβολή επιλεγμένων μόνο';
@@ -304,7 +305,7 @@ $s_fixed_in_version = 'Έκδοση Διόρθωσης';
 $s_target_version = 'Εκδοχή Στόχου';
 $s_votes = 'Ψήφοι';
 $s_summary = 'Περίληψη (μέχρι 64 χαρακτήρες)';
-$s_description = 'Αναλυτική Περιγραφή';
+$s_description = 'Περιγραφή';
 $s_steps_to_reproduce = 'Βήματα για Αναπαραγωγή';
 $s_update_information_button = 'Ενήμερωση Πληροφοριών';
 $s_sticky_issue = 'Θέμα Στο Προσκήνιο';
@@ -326,7 +327,7 @@ $s_closed_bug_button = 'Κλείσιμο Θέματος';
 $s_bugnote_updated_msg = 'Η σημείωση ενημερώθηκε με επιτυχία...';
 $s_edited_on = 'ενημερώθηκε :';
 $s_show_content = 'Εμφάνιση Περιεχομένων';
-$s_click_to_login = 'Σύνδεση';
+$s_click_to_login = 'Είσοδος';
 $s_login_title = 'Είσοδος';
 $s_save_login = 'Αποθήκευση στοιχείων';
 $s_choose_project = 'Εφαρμογή';
@@ -488,7 +489,7 @@ $s_account_deleted_msg = 'Ο λογαριασμός διαγράφηκε...';
 $s_delete_account_sure_msg = 'Είστε σίγουρος πως θέλετε να διαγράψετε το λογαριασμό;';
 $s_prune_accounts_button = 'Μόνιμη διαγραφή';
 $s_edit_user_title = 'Ενημέρωση Χρήστη';
-$s_reset_password_button = 'Μηδενισμός Κωδικού';
+$s_reset_password_button = 'Επαναφορά Κωδικού';
 $s_delete_user_button = 'Διαγραφή Χρήστη';
 $s_reset_password_msg = 'Ο Μηδενισμός Κωδικού στέλνει email επιβεβαίωσης.';
 $s_reset_password_msg2 = 'Ο Μηδενισμός Κωδικού δημιουργεί κενό κωδικό.';
@@ -538,7 +539,6 @@ $s_user_documentation = 'Εγχειρίδιο Χρήστη';
 $s_project_documentation = 'Τεκμηρίωση Εφαρμογής';
 $s_add_file = 'Προσθήκη Αρχείου';
 $s_remove_user_sure_msg = 'Είστε σίγουρος πως επιθυμείτε να αφαιρέσετε τον χρήστη;';
-$s_remove_user_button = 'Αφαίρεση Χρήστη';
 $s_remove_all_users_sure_msg = 'Είστε σίγουρος πως θέλετε να αφαιρέθούν όλοι οι χρήστες;';
 $s_remove_all_users_button = 'Αφαίρεση Όλων των Χρηστών';
 $s_add_user_title = 'Προσθήκη Χρήστη στην Εφαρμογή';

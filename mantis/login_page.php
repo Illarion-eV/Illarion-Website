@@ -20,7 +20,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -121,7 +121,7 @@
 		<?php echo lang_get( 'username' ) ?>
 	</td>
 	<td>
-		<input type="text" name="username" size="28" maxlength="<?php echo USERLEN;?>" value="<?php echo string_attribute( $f_username ); ?>" />
+		<input type="text" name="username" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" value="<?php echo string_attribute( $f_username ); ?>" />
 	</td>
 </tr>
 <tr class="row-2">
@@ -129,7 +129,7 @@
 		<?php echo lang_get( 'password' ) ?>
 	</td>
 	<td>
-		<input type="password" name="password" size="16" maxlength="<?php echo PASSLEN;?>" />
+		<input type="password" name="password" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" />
 	</td>
 </tr>
 <tr class="row-1">
@@ -163,7 +163,7 @@
 <?php
 	echo '<br /><div align="center">';
 	print_signup_link();
-	echo '&nbsp;';
+	echo '&#160;';
 	print_lost_password_link();
 	echo '</div>';
 
@@ -186,11 +186,12 @@
 
 		# Check if the admin directory is available and is readable.
 		$t_admin_dir = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR;
-		if ( is_dir( $t_admin_dir ) && is_executable( $t_admin_dir ) ) {
+		if ( is_dir( $t_admin_dir ) ) {
 			echo '<div class="warning" align="center">', "\n";
 			echo '<p><font color="red">', lang_get( 'warning_admin_directory_present' ), '</font></p>', "\n";
 			echo '</div>', "\n";
-
+		}
+		if ( is_dir( $t_admin_dir ) && is_readable( $t_admin_dir ) && is_executable( $t_admin_dir ) && @file_exists( "$t_admin_dir/." ) ) {
 			# since admin directory and db_upgrade lists are available check for missing db upgrades
 			# Check for db upgrade for versions < 1.0.0 using old upgrader
 			$t_db_version = config_get( 'database_version' , 0 );

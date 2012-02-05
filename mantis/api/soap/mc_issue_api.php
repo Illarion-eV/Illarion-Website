@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -61,6 +61,10 @@ function mc_issue_get( $p_username, $p_password, $p_issue_id ) {
 		return mci_soap_fault_access_denied( $t_user_id );
 	}
 
+	if( !access_has_bug_level( VIEWER, $p_issue_id, $t_user_id ) ){
+	    return mci_soap_fault_access_denied( $t_user_id );
+	}
+
 	$t_bug = bug_get( $p_issue_id, true );
 	$t_issue_data = array();
 
@@ -106,6 +110,7 @@ function mc_issue_get( $p_username, $p_password, $p_issue_id ) {
 	$t_issue_data['relationships'] = mci_issue_get_relationships( $p_issue_id, $t_user_id );
 	$t_issue_data['notes'] = mci_issue_get_notes( $p_issue_id );
 	$t_issue_data['custom_fields'] = mci_issue_get_custom_fields( $p_issue_id );
+	$t_issue_data['monitors'] = mci_account_get_array_by_ids( bug_get_monitors ( $p_issue_id ) );
 	
 	return $t_issue_data;
 }
@@ -233,6 +238,9 @@ function mci_issue_get_attachments( $p_issue_id ) {
 	
 	$t_result = array();
 	foreach( $t_attachment_rows as $t_attachment_row ) {
+		if ( !file_can_view_bug_attachments( $p_issue_id, (int)$t_attachment_row['user_id'] ) ) {
+			continue;
+		}
 		$t_attachment = array();
 		$t_attachment['id'] = $t_attachment_row['id'];
 		$t_attachment['filename'] = $t_attachment_row['filename'];
@@ -240,6 +248,7 @@ function mci_issue_get_attachments( $p_issue_id ) {
 		$t_attachment['content_type'] = $t_attachment_row['file_type'];
 		$t_attachment['date_submitted'] = timestamp_to_iso8601( $t_attachment_row['date_added'] );
 		$t_attachment['download_url'] = mci_get_mantis_path() . 'file_download.php?file_id=' . $t_attachment_row['id'] . '&amp;type=bug';
+		$t_attachment['user_id'] = $t_attachment_row['user_id'];
 		$t_result[] = $t_attachment;
 	}
 
@@ -309,11 +318,66 @@ function mci_issue_get_notes( $p_issue_id ) {
 		$t_bugnote['text'] = $t_value->note;
 		$t_bugnote['view_state'] = mci_enum_get_array_by_id( $t_value->view_state, 'view_state', $t_lang );
 		$t_bugnote['time_tracking'] = $t_has_time_tracking_access ? $t_value->time_tracking : 0;
+		$t_bugnote['note_type'] = $t_value->note_type;
+		$t_bugnote['note_attr'] = $t_value->note_attr;
 		
 		$t_result[] = $t_bugnote;
 	}
 
 	return (count( $t_result ) == 0 ? null : $t_result );
+}
+
+/**
+ * Sets the monitors of the specified issue
+ * 
+ * <p>This functions performs access level checks and only performs operations which would
+ * modify the existing monitors list.</p>
+ * 
+ * @param int $p_issue_id the issue id to set the monitors for
+ * @param int $p_user_id the user which requests the monitor change
+ * @param array $p_monitors An array of arrays with the <em>id</em> field set to the id 
+ *  of the users which should monitor this issue.
+ */
+function mci_issue_set_monitors( $p_issue_id , $p_user_id, $p_monitors ) {
+    
+    $t_existing_monitors = bug_get_monitors( $p_issue_id );
+
+    $t_monitors = array();
+    foreach ( $p_monitors as $t_monitor ) 
+        $t_monitors[] = $t_monitor['id'];
+    
+    foreach ( $t_monitors as $t_user_id ) {
+        
+    	if ( $p_user_id == $t_user_id ) {
+    		if ( ! access_has_bug_level( config_get( 'monitor_bug_threshold' ), $p_issue_id ) )
+    		    continue;
+	    } else {
+	    	if ( !access_has_bug_level( config_get( 'monitor_add_others_bug_threshold' ), $p_issue_id ) )
+	    	    continue;
+	    }
+	        
+       if ( in_array( $p_user_id, $t_existing_monitors) )
+           continue;
+	        
+        bug_monitor( $p_issue_id, $t_user_id);
+    }
+    
+    foreach ( $t_existing_monitors as $t_user_id ) {
+
+    	if ( $p_user_id == $t_user_id ) {
+    		if ( ! access_has_bug_level( config_get( 'monitor_bug_threshold' ), $p_issue_id ) )
+    		    continue;
+	    } else {
+	    	if ( !access_has_bug_level( config_get( 'monitor_delete_others_bug_threshold' ), $p_issue_id ) )
+	    	    continue;
+	    }
+        
+        if ( in_array( $p_user_id, $t_monitors) )
+            continue;
+            
+        bug_unmonitor( $p_issue_id, $t_user_id);
+    }
+                
 }
 
 /**
@@ -366,7 +430,7 @@ function mc_issue_get_biggest_id( $p_username, $p_password, $p_project_id ) {
 			'0' => $t_any,
 		),
 		'dir' => 'DESC',
-		'sort' => 'date_submitted',
+		'sort' => 'id',
 	);
 
 	$t_page_number = 1;
@@ -571,7 +635,7 @@ function mc_issue_add( $p_username, $p_password, $p_issue ) {
 	if( access_has_project_level( config_get( 'roadmap_update_threshold' ), $t_bug_data->project_id, $t_user_id ) ) {
 		$t_bug_data->target_version = isset( $p_issue['target_version'] ) ? $p_issue['target_version'] : '';
 	}
-
+	
 	# omitted:
 	# var $bug_text_id
 	# $t_bug_data->profile_id;
@@ -584,6 +648,8 @@ function mc_issue_add( $p_username, $p_password, $p_issue ) {
 	$t_issue_id = $t_bug_data->create();
 
 	mci_issue_set_custom_fields( $t_issue_id, $p_issue['custom_fields'], false );
+	if ( isset ( $p_issue['monitors'] ) )
+	    mci_issue_set_monitors( $t_issue_id , $t_user_id, $p_issue['monitors'] );
 
 	if( isset( $t_notes ) && is_array( $t_notes ) ) {
 		foreach( $t_notes as $t_note ) {
@@ -592,9 +658,12 @@ function mc_issue_add( $p_username, $p_password, $p_issue ) {
 			} else {
 				$t_view_state = config_get( 'default_bugnote_view_status' );
 			}
+			
+			$note_type = isset ( $t_note['note_type'] ) ? (int) $t_note['note_type'] : BUGNOTE;
+			$note_attr = isset ( $t_note['note_type'] ) ? $t_note['note_attr'] : '';
 
 			$t_view_state_id = mci_get_enum_id_from_objectref( 'view_state', $t_view_state );
-			bugnote_add( $t_issue_id, $t_note['text'], mci_get_time_tracking_from_note( $t_issue_id, $t_note ), $t_view_state_id == VS_PRIVATE, BUGNOTE, '', $t_user_id, FALSE );
+			bugnote_add( $t_issue_id, $t_note['text'], mci_get_time_tracking_from_note( $t_issue_id, $t_note ), $t_view_state_id == VS_PRIVATE, $note_type, $note_attr, $t_user_id, FALSE );
 		}
 	}
 
@@ -629,31 +698,13 @@ function mc_issue_update( $p_username, $p_password, $p_issue_id, $p_issue ) {
 	}
 
 	$t_project_id = mci_get_project_id( $p_issue['project'] );
+	$t_reporter_id = isset( $p_issue['reporter'] ) ? mci_get_user_id( $p_issue['reporter'] )  : $t_user_id ;
 	$t_handler_id = isset( $p_issue['handler'] ) ? mci_get_user_id( $p_issue['handler'] ) : 0;
-	$t_priority_id = isset( $p_issue['priority'] ) ? mci_get_priority_id( $p_issue['priority'] ) : config_get( 'default_bug_priority' );
-	$t_severity_id = isset( $p_issue['severity'] ) ?  mci_get_severity_id( $p_issue['severity'] ) : config_get( 'default_bug_severity' );
-	$t_status_id = isset( $p_issue['status'] ) ? mci_get_status_id( $p_issue['status'] ) : config_get( 'bug_submit_status' );
-	$t_reproducibility_id = isset( $p_issue['reproducibility'] ) ?  mci_get_reproducibility_id( $p_issue['reproducibility'] ) : config_get( 'default_bug_reproducibility' );
-	$t_resolution_id =  isset( $p_issue['resolution'] ) ? mci_get_resolution_id( $p_issue['resolution'] ) : config_get('default_bug_resolution');
-	$t_projection_id = isset( $p_issue['projection'] ) ? mci_get_projection_id( $p_issue['projection'] ) : config_get('default_bug_resolution');
-	$t_eta_id = isset( $p_issue['eta'] ) ? mci_get_eta_id( $p_issue['eta'] ) : config_get('default_bug_eta');
-	$t_view_state_id = isset( $p_issue['view_state'] ) ?  mci_get_view_state_id( $p_issue['view_state'] ) : config_get( 'default_bug_view_status' );
-	$t_reporter_id = isset( $p_issue['reporter'] ) ? mci_get_user_id( $p_issue['reporter'] )  : 0;
 	$t_project = $p_issue['project'];
 	$t_summary = isset( $p_issue['summary'] ) ? $p_issue['summary'] : '';
 	$t_description = isset( $p_issue['description'] ) ? $p_issue['description'] : '';
-	$t_additional_information = isset( $p_issue['additional_information'] ) ? $p_issue['additional_information'] : '';
-	$t_steps_to_reproduce = isset( $p_issue['steps_to_reproduce'] ) ? $p_issue['steps_to_reproduce'] : '';
-	$t_build = isset( $p_issue['build'] ) ? $p_issue['build'] : '';
-	$t_platform = isset( $p_issue['platform'] ) ? $p_issue['platform'] : '';
-	$t_os = isset( $p_issue['os'] ) ? $p_issue['os'] : '';
-	$t_os_build = isset( $p_issue['os_build'] ) ? $p_issue['os_build'] : '';
-	$t_sponsorship_total = isset( $p_issue['sponsorship_total'] ) ? $p_issue['sponsorship_total'] : 0;
-
-	if( $t_reporter_id == 0 ) {
-		$t_reporter_id = $t_user_id;
-	}
-
+	
+	
 	if(( $t_project_id == 0 ) || !project_exists( $t_project_id ) ) {
 		if( $t_project_id == 0 ) {
 			return new soap_fault( 'Client', '', "Project '" . $t_project['name'] . "' does not exist." );
@@ -699,46 +750,52 @@ function mc_issue_update( $p_username, $p_password, $p_issue_id, $p_issue ) {
 		return new soap_fault( 'Client', '', "Mandatory field 'description' is missing." );
 	}
 
-	if ( $t_priority_id == 0 ) {
-		$t_priority_id = config_get( 'default_bug_priority' );
-	}
-
-	if ( $t_severity_id == 0 ) {
-		$t_severity_id = config_get( 'default_bug_severity' );
-	}
-
-	if ( $t_view_state_id == 0 ) {
-		$t_view_state_id = config_get( 'default_bug_view_status' );
-	}
-
-	if ( $t_reproducibility_id == 0 ) {
-		$t_reproducibility_id = config_get( 'default_bug_reproducibility' );
-	}
-
-	$t_bug_data = new BugData;
-	$t_bug_data->id = $p_issue_id;
+	// fields which we expect to always be set
+	$t_bug_data = bug_get( $p_issue_id, true );
 	$t_bug_data->project_id = $t_project_id;
 	$t_bug_data->reporter_id = $t_reporter_id;
 	$t_bug_data->handler_id = $t_handler_id;
-	$t_bug_data->priority = $t_priority_id;
-	$t_bug_data->severity = $t_severity_id;
-	$t_bug_data->reproducibility = $t_reproducibility_id;
-	$t_bug_data->status = $t_status_id;
-	$t_bug_data->resolution = $t_resolution_id;
-	$t_bug_data->projection = $t_projection_id;
 	$t_bug_data->category_id = $t_category_id;
-	$t_bug_data->date_submitted = isset( $v_date_submitted ) ? $v_date_submitted : '';
-	$t_bug_data->last_updated = isset( $v_last_updated ) ? $v_last_updated : '';
-	$t_bug_data->eta = $t_eta_id;
-	$t_bug_data->os = $t_os;
-	$t_bug_data->os_build = $t_os_build;
-	$t_bug_data->platform = $t_platform;
-	$t_bug_data->version = isset( $p_issue['version'] ) ? $p_issue['version'] : '';
-	$t_bug_data->fixed_in_version = isset( $p_issue['fixed_in_version'] ) ? $p_issue['fixed_in_version'] : '';
-	$t_bug_data->build = $t_build;
-	$t_bug_data->view_state = $t_view_state_id;
 	$t_bug_data->summary = $t_summary;
-	$t_bug_data->sponsorship_total = $t_sponsorship_total;
+	$t_bug_data->description = $t_description;
+
+	// fields which might not be set
+	if ( isset ( $p_issue['steps_to_reproduce'] ) )
+		$t_bug_data->steps_to_reproduce = $p_issue['steps_to_reproduce'];
+	if ( isset ( $p_issue['additional_information'] ) )
+		$t_bug_data->additional_information = $p_issue['additional_information'];
+	if ( isset( $p_issue['priority'] ) )
+		$t_bug_data->priority = mci_get_priority_id( $p_issue['priority'] );
+	if ( isset( $p_issue['severity'] ) )
+		$t_bug_data->severity = mci_get_severity_id( $p_issue['severity'] );
+	if ( isset( $p_issue['status'] ) )
+		$t_bug_data->status = mci_get_status_id ( $p_issue['status'] );
+	if ( isset ( $p_issue['reproducibility'] ) )
+		$t_bug_data->reproducibility = mci_get_reproducibility_id( $p_issue['reproducibility'] );
+	if ( isset ( $p_issue['resolution'] ) )
+		$t_bug_data->resolution = mci_get_resolution_id( $p_issue['resolution'] );
+	if ( isset ( $p_issue['projection'] ) )
+		$t_bug_data->projection = mci_get_projection_id( $p_issue['projection'] );
+	if ( isset ( $p_issue['eta'] ) )
+		$t_bug_data->eta = mci_get_eta_id( $p_issue['eta'] );
+	if ( isset ( $p_issue['view_state'] ) )
+		$t_bug_data->view_state = mci_get_view_state_id( $p_issue['view_state'] );
+	if ( isset ( $p_issue['date_submitted'] ) )
+		$t_bug_data->date_submitted = $p_issue['date_submitted'];
+	if ( isset ( $p_issue['date_updated'] ) )
+		$t_bug_data->last_updated = $p_issue['last_updated'];
+	if ( isset ( $p_issue['os'] ) )
+		$t_bug_data->os = $p_issue['os'];
+	if ( isset ( $p_issue['os_build'] ) )
+		$t_bug_data->os_build = $p_issue['os_build'];
+	if ( isset ( $p_issue['build'] ) )
+		$t_bug_data->build = $p_issue['build'];
+	if ( isset ( $p_issue['platform'] ) )
+		$t_bug_data->platform = $p_issue['platform'];
+	if ( isset ( $p_issue['version'] ) )
+		$t_bug_data->version = $p_issue['version'];
+	if ( isset ( $p_issue['fixed_in_version'] ) )
+		$t_bug_data->fixed_in_version = $p_issue['fixed_in_version'];
 
 	if ( isset( $p_issue['due_date'] ) && access_has_global_level( config_get( 'due_date_update_threshold' ) ) ) {
 		$t_bug_data->due_date = mci_iso8601_to_timestamp( $p_issue['due_date'] );
@@ -750,18 +807,13 @@ function mc_issue_update( $p_username, $p_password, $p_issue_id, $p_issue ) {
 		$t_bug_data->target_version = isset( $p_issue['target_version'] ) ? $p_issue['target_version'] : '';
 	}
 
-	# omitted:
-	# var $bug_text_id
-	# $t_bug_data->profile_id;
-	# extended info
-	$t_bug_data->description = $t_description;
-	$t_bug_data->steps_to_reproduce = isset( $t_steps_to_reproduce ) ? $t_steps_to_reproduce : '';
-	$t_bug_data->additional_information = isset( $t_additional_information ) ? $t_additional_information : '';
 
 	# submit the issue
 	$t_is_success = $t_bug_data->update( /* update_extended */ true, /* bypass_email */ true );
 	
 	mci_issue_set_custom_fields( $p_issue_id, $p_issue['custom_fields'], true );
+	if ( isset ( $p_issue['monitors'] ) )
+	    mci_issue_set_monitors( $p_issue_id , $t_user_id, $p_issue['monitors'] );
 
 	if ( isset( $p_issue['notes'] ) && is_array( $p_issue['notes'] ) ) {
 		foreach ( $p_issue['notes'] as $t_note ) {
@@ -773,10 +825,13 @@ function mc_issue_update( $p_username, $p_password, $p_issue_id, $p_issue ) {
 
 			if ( isset( $t_note['id'] ) && ( (int)$t_note['id'] > 0 ) ) {
 				$t_bugnote_id = (integer)$t_note['id'];
+				
+				$t_view_state_id = mci_get_enum_id_from_objectref( 'view_state', $t_view_state );
 
 				if ( bugnote_exists( $t_bugnote_id ) ) {
 					bugnote_set_text( $t_bugnote_id, $t_note['text'] );
 					bugnote_set_view_state( $t_bugnote_id, $t_view_state_id == VS_PRIVATE );
+	$t_eta_id = isset( $p_issue['eta'] ) ? mci_get_eta_id( $p_issue['eta'] ) : config_get('default_bug_eta');
 					bugnote_date_update( $t_bugnote_id );
 					if ( isset( $t_note['time_tracking'] ) )
 						bugnote_set_time_tracking( $t_bugnote_id, mci_get_time_tracking_from_note( $p_issue_id, $t_note ) );
@@ -784,7 +839,10 @@ function mc_issue_update( $p_username, $p_password, $p_issue_id, $p_issue ) {
 			} else {
 				$t_view_state_id = mci_get_enum_id_from_objectref( 'view_state', $t_view_state );
 				
-				bugnote_add( $p_issue_id, $t_note['text'], mci_get_time_tracking_from_note( $p_issue_id, $t_note ), $t_view_state_id == VS_PRIVATE, BUGNOTE, '', $t_user_id, FALSE );
+				$note_type = isset ( $t_note['note_type'] ) ? (int) $t_note['note_type'] : BUGNOTE;
+			    $note_attr = isset ( $t_note['note_type'] ) ? $t_note['note_attr'] : '';
+				
+				bugnote_add( $p_issue_id, $t_note['text'], mci_get_time_tracking_from_note( $p_issue_id, $t_note ), $t_view_state_id == VS_PRIVATE, $note_type, $note_attr, $t_user_id, FALSE );
 			}
 		}
 	}
@@ -867,7 +925,11 @@ function mc_issue_note_add( $p_username, $p_password, $p_issue_id, $p_note ) {
 	}
 	
 	$t_view_state_id = mci_get_enum_id_from_objectref( 'view_state', $t_view_state );
-	return bugnote_add( $p_issue_id, $p_note['text'], mci_get_time_tracking_from_note( $p_issue_id, $p_note ), $t_view_state_id == VS_PRIVATE, BUGNOTE, '', $t_user_id );
+	
+	$note_type = isset ( $p_note['note_type'] ) ? (int) $p_note['note_type'] : BUGNOTE;
+	$note_attr = isset ( $p_note['note_type'] ) ? $p_note['note_attr'] : '';
+
+	return bugnote_add( $p_issue_id, $p_note['text'], mci_get_time_tracking_from_note( $p_issue_id, $p_note ), $t_view_state_id == VS_PRIVATE, $note_type, $note_attr, $t_user_id );
 }
 
 /**
@@ -899,6 +961,62 @@ function mc_issue_note_delete( $p_username, $p_password, $p_issue_note_id ) {
 	}
 
 	return bugnote_delete( $p_issue_note_id );
+}
+
+/**
+ * Update a note
+ *
+ * @param string $p_username  The name of the user trying to add a note to an issue.
+ * param string $p_password  The password of the user.
+ * @param IssueNoteData $p_note  The note to update.
+ * @return true on success, false on failure
+ */
+function mc_issue_note_update( $p_username, $p_password, $p_note ) {
+    $t_user_id = mci_check_login( $p_username, $p_password );
+    
+    if( $t_user_id === false ) {
+        return mci_soap_fault_login_failed();
+    }
+
+    if ( !isset( $p_note['id'] ) || is_blank( $p_note['id'] ) ) {
+        return new soap_fault( 'Client', '', "Issue id must not be blank." );
+    }
+    
+    if ( !isset( $p_note['text'] ) || is_blank( $p_note['text'] ) ) {
+        return new soap_fault( 'Client', '', "Issue note text must not be blank." );
+    }
+    
+    $t_issue_note_id = $p_note['id'];
+
+    if( !bugnote_exists( $t_issue_note_id ) ) {
+        return new soap_fault( 'Server', '', "Issue note '$t_issue_note_id' does not exist." );
+    }
+    
+	$t_issue_id = bugnote_get_field( $t_issue_note_id, 'bug_id' );
+	
+	$t_project_id = bug_get_field( $t_issue_id, 'project_id' );
+
+    if( !mci_has_readwrite_access( $t_user_id, $t_project_id ) ) {
+        return mci_soap_fault_access_denied( $t_user_id );
+    }
+
+    if( !access_has_bug_level( config_get( 'add_bugnote_threshold' ), $t_issue_id, $t_user_id ) ) {
+        return mci_soap_fault_access_denied( $t_user_id, "You do not have access rights to add notes to this issue" );
+    }
+
+    if( bug_is_readonly( $t_issue_id ) ) {
+        return mci_soap_fault_access_denied( $t_user_id, "Issue ' . $t_issue_id . ' is readonly" );
+    }
+
+    if( isset( $p_note['view_state'] )) {
+        $t_view_state = $p_note['view_state'];
+        $t_view_state_id = mci_get_enum_id_from_objectref( 'view_state', $t_view_state );
+        bugnote_set_view_state( $t_issue_note_id, $t_view_state_id );
+    }
+
+    bugnote_set_text( $t_issue_note_id, $p_note['text'] );
+
+    return bugnote_date_update( $t_issue_note_id );
 }
 
 /**
@@ -962,8 +1080,9 @@ function mc_issue_relationship_add( $p_username, $p_password, $p_issue_id, $p_re
 		history_log_event_special( $p_issue_id, BUG_ADD_RELATIONSHIP, $t_rel_type['id'], $t_dest_issue_id );
 		history_log_event_special( $t_dest_issue_id, BUG_ADD_RELATIONSHIP, relationship_get_complementary_type( $t_rel_type['id'] ), $p_issue_id );
 
-		# update bug last updated (just for the src bug)
+		# update bug last updated for both bugs
 		bug_update_date( $p_issue_id );
+		bug_update_date( $t_dest_issue_id );
 
 		# send email notification to the users addressed by both the bugs
 		email_relationship_added( $p_issue_id, $t_dest_issue_id, $t_rel_type['id'] );
@@ -1022,8 +1141,9 @@ function mc_issue_relationship_delete( $p_username, $p_password, $p_issue_id, $p
 	# delete relationship from the DB
 	relationship_delete( $p_relationship_id );
 
-	# update bug last updated (just for the src bug)
+	# update bug last updated
 	bug_update_date( $p_issue_id );
+	bug_update_date ( $t_dest_issue_id );
 
 	# set the rel_type for both bug and dest_bug based on $t_rel_type and on who is the dest bug
 	if( $p_issue_id == $t_bug_relationship_data->src_bug_id ) {

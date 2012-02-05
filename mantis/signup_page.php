@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -54,7 +54,7 @@
 		<?php echo lang_get( 'username' ) ?>:
 	</td>
 	<td width="70%" colspan="2">
-		<input type="text" name="username" size="32" maxlength="<?php echo USERLEN;?>" />
+		<input type="text" name="username" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" />
 	</td>
 </tr>
 <tr class="row-2">
@@ -98,9 +98,9 @@
 ?>
 <tr>
 	<td colspan="3">
-		<br/>
+		<br />
 		<?php echo lang_get( 'signup_info' ) ?>
-		<br/><br/>
+		<br /><br />
 	</td>
 </tr>
 <tr>
@@ -115,7 +115,7 @@
 <?php
 	echo '<br /><div align="center">';
 	print_login_link();
-	echo '&nbsp;';
+	echo '&#160;';
 	print_lost_password_link();
 	echo '</div>';
 

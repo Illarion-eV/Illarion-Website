@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,9 +27,12 @@
  *
  * @author Bernat
  * @author Bernat Pegueroles - bpf@pegueroles.com
+ * @author Martorell
  * @author Paucabot
+ * @author SMP
  * @author Solde
  * @author Ssola
+ * @author Toniher
  */
 
 $s_actiongroup_menu_move = 'Mou';
@@ -464,7 +467,7 @@ $s_file_upload_msg = 'Arxiu penjat';
 $s_upload_file = 'Carrega Arxiu';
 $s_select_file = 'Selecciona Arxiu';
 $s_upload_file_button = 'Carrega Arxiu';
-$s_max_file_size = 'Tamany Màxim';
+$s_max_file_size = 'Mida màxima';
 $s_bug_reopened_msg = 'La incidència ha estat reoberta...';
 $s_reopen_add_bugnote_title = 'Afegeixi una nota per a reobrir la incidència';
 $s_bugnote_add_reopen_button = 'Afegeix nota i reobre la incidència';
@@ -522,6 +525,8 @@ $s_view_revisions = 'Veure revisions';
 $s_revision = 'Revisió';
 $s_revision_by = '%1$s pel %2$s';
 $s_revision_drop = 'Perdre';
+$s_bug_revision_dropped_history = 'S\'ha descartat la revisió de l\'error';
+$s_bugnote_revision_dropped_history = 'S\'ha descartat la revisió de la nota';
 $s_all_revisions = 'Totes les revisions';
 $s_back_to_issue = 'Retorna a l\'incidència';
 $s_confirm_revision_drop = 'Està segur que vol eliminar aquesta revisió de l\'error?';
@@ -554,7 +559,7 @@ $s_error_database_version_out_of_date_2 = '<strong>ATENCIÓ:</strong> L\'estruct
 $s_error_code_version_out_of_date = '<strong>ATENCIÓ:</strong> L\'estructura de la base de dades és més actual que el codi instal·lat. Si us plau actualitzi el codi.';
 $s_login_page_info = 'Benvingut al Gestor d\'Incidències.';
 $s_login_title = 'Inici de sessió';
-$s_save_login = 'Recorda la sessió en aquesta màquina';
+$s_save_login = 'Recorda la contrasenya entre sessions';
 $s_secure_session = 'Sessió Segura';
 $s_secure_session_long = 'Només permet usar la vostra sessió des d\'aquesta adreça IP.';
 $s_choose_project = 'Esculli un Projecte';
@@ -831,7 +836,7 @@ $s_project_document_updated = 'Projecte actualitzat';
 $s_project_user_added_msg = 'Usuari agregat al projecte';
 $s_project_removed_user_msg = 'Usuari eliminat del projecte';
 $s_remove_user_sure_msg = 'Està segur que desitja eliminar aquest usuari?';
-$s_remove_user_button = 'Elimina Usuari';
+$s_remove_user_from_project_button = 'Treure usuari del projecte %s';
 $s_remove_all_users_sure_msg = 'Està segur que vol eliminar tots els usuaris d\'aquest projecte?';
 $s_remove_all_users_button = 'Elimina Tots els Usuaris';
 $s_add_user_title = 'Afegeix un usuari al projecte';
@@ -1005,7 +1010,7 @@ $s_custom_field_type_enum_string = '0:Cadena,1:Numèric,2:Flotant,3:Enumeració,
 $s_confirm_used_custom_field_deletion = 'Aquest camp està enllaçat al menys a un projecte.  Si continua tots els valors per a aquest camp seran esborrats permanentment.  Aquesta acció no pot desfer-se. Si no desitja eliminar el camp, faci clic sobre el botó Enrere del seu navegador.  Per a procedir, faci clic sobre el botó que hi ha sota';
 $s_confirm_custom_field_deletion = 'Està segur que desitja eliminar aquest camp personalitzat i tots els valors associats?';
 $s_field_delete_button = 'Elimina camp';
-$s_confirm_custom_field_unlinking = 'Està segur que vol desenllaçar aquest camp personalitzat del projecte i eliminar tots els valors associats?';
+$s_confirm_custom_field_unlinking = 'Esteu segurs de voler desenllaçar aquest camp personalitzat del projecte? Els valors associats no seran esborrats mentre el camp personalitzat en si no sigui esborrat?';
 $s_field_remove_button = 'Elimina camp';
 $s_hide_status = 'Amagar amb Estat';
 $s_filter_closed = 'Tancat';
@@ -1018,6 +1023,9 @@ $s_simple_filters = 'Filtres simples';
 $s_monitored_by = 'Monitoritzat per';
 $s_attachments = 'adjunt(s)';
 $s_bytes = 'bytes';
+$s_attachment_missing = 'Manca l\'adjunt';
+$s_attachment_count = 'Nombre d\'adjunts';
+$s_view_attachments_for_issue = 'Veure %1$d fitxer adjunt(s) per a l\'edició #%2$d';
 $s_phpmailer_language = 'ca';
 $s_sponsors = '%1$d patrocinador(s)';
 $s_sponsorship_added = 'Patrocinador Afegit';
@@ -1168,6 +1176,9 @@ $s_time_tracking_get_info_button = 'Mostra Informació del Seguiment de Temps';
 $s_time_tracking_cost_per_hour = 'Cost / Hora';
 $s_time_tracking_cost = 'Cost';
 $s_total_time_for_issue = 'Temps total per incidència = %1$s';
+$s_time_tracking_stopwatch_start = 'Inicia';
+$s_time_tracking_stopwatch_stop = 'Atura';
+$s_time_tracking_stopwatch_reset = 'Reinicia';
 $s_access_denied = 'Accés Denegat.';
 $s_twitter_resolved = '%1$d: [%2$s] %3$s (resolt per %4$s a %5$s)';
 $s_twitter_resolved_no_version = '%1$d: [%2$s] %3$s (resolt per %4$s)';

@@ -51,7 +51,7 @@
  * @package CoreAPI
  * @subpackage HTMLAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  * @uses lang_api.php
  */
@@ -350,7 +350,7 @@ function html_css() {
 	}
 
 	# fix for NS 4.x css
-	echo "\t", '<script type="text/javascript" language="JavaScript"><!--', "\n";
+	echo "\t", '<script type="text/javascript"><!--', "\n";
 	echo "\t\t", 'if(document.layers) {document.write("<style>td{padding:0px;}<\/style>")}', "\n";
 	echo "\t", '// --></script>', "\n";
 }
@@ -397,7 +397,7 @@ function html_meta_redirect( $p_url, $p_time = null, $p_sanitize = true ) {
 function html_head_javascript() {
 	if( ON == config_get( 'use_javascript' ) ) {
 		html_javascript_link( 'common.js' );
-		echo '<script language="javascript">var loading_lang = "' . lang_get( 'loading' ) . '";</script>';
+		echo '<script type="text/javascript">var loading_lang = "' . lang_get( 'loading' ) . '";</script>';
 		html_javascript_link( 'ajax.js' );
 
 		global $g_enable_projax;
@@ -600,7 +600,7 @@ function html_footer( $p_file = null ) {
 		$t_version_suffix = config_get_global( 'version_suffix' );
 		echo "\t", '<span class="timer"><a href="http://www.mantisbt.org/" title="Free Web Based Bug Tracker">MantisBT ', MANTIS_VERSION, ( $t_version_suffix ? " $t_version_suffix" : '' ), '</a>', '[<a href="http://www.mantisbt.org/"  title="Free Web Based Bug Tracker" target="_blank">^</a>]</span>', "\n";
 	}
-	echo "\t", '<address>Copyright &copy; 2000 - 2010 MantisBT Group</address>', "\n";
+	echo "\t", '<address>Copyright &copy; 2000 - 2011 MantisBT Group</address>', "\n";
 
 	# only display webmaster email is current user is not the anonymous user
 	if( !is_page_name( 'login_page.php' ) && auth_is_user_authenticated() && !current_user_is_anonymous() ) {
@@ -694,8 +694,8 @@ function prepare_custom_menu_options( $p_config ) {
 	foreach( $t_custom_menu_options as $t_custom_option ) {
 		$t_access_level = $t_custom_option[1];
 		if( access_has_project_level( $t_access_level ) ) {
-			$t_caption = lang_get_defaulted( $t_custom_option[0] );
-			$t_link = $t_custom_option[2];
+			$t_caption = string_html_specialchars( lang_get_defaulted( $t_custom_option[0] ) );
+			$t_link = string_attribute( $t_custom_option[2] );
 			$t_options[] = "<a href=\"$t_link\">$t_caption</a>";
 		}
 	}
@@ -824,7 +824,9 @@ function print_menu() {
 		# Add custom options
 		$t_custom_options = prepare_custom_menu_options( 'main_menu_custom_options' );
 		$t_menu_options = array_merge( $t_menu_options, $t_custom_options );
-		if( config_get( 'time_tracking_enabled' ) && config_get( 'time_tracking_with_billing' ) && access_has_global_level( config_get( 'time_tracking_reporting_threshold' ) ) ) {
+
+		# Time Tracking / Billing
+		if( config_get( 'time_tracking_enabled' ) && access_has_global_level( config_get( 'time_tracking_reporting_threshold' ) ) ) {
 			$t_menu_options[] = '<a href="' . helper_mantis_url( 'billing_page.php">' ) . lang_get( 'time_tracking_billing_link' ) . '</a>';
 		}
 
@@ -840,12 +842,12 @@ function print_menu() {
 
 		if( ON == config_get( 'use_javascript' ) ) {
 			$t_bug_label = lang_get( 'issue_id' );
-			echo "<input type=\"text\" name=\"bug_id\" size=\"10\" class=\"small\" value=\"$t_bug_label\" onfocus=\"if (this.value == '$t_bug_label') this.value = ''\" onblur=\"if (this.value == '') this.value = '$t_bug_label'\" />&nbsp;";
+			echo "<input type=\"text\" name=\"bug_id\" size=\"10\" class=\"small\" value=\"$t_bug_label\" onfocus=\"if (this.value == '$t_bug_label') this.value = ''\" onblur=\"if (this.value == '') this.value = '$t_bug_label'\" />&#160;";
 		} else {
-			echo "<input type=\"text\" name=\"bug_id\" size=\"10\" class=\"small\" />&nbsp;";
+			echo "<input type=\"text\" name=\"bug_id\" size=\"10\" class=\"small\" />&#160;";
 		}
 
-		echo '<input type="submit" class="button-small" value="' . lang_get( 'jump' ) . '" />&nbsp;';
+		echo '<input type="submit" class="button-small" value="' . lang_get( 'jump' ) . '" />&#160;';
 		echo '</form>';
 		echo '</td>';
 		echo '</tr>';
@@ -914,9 +916,9 @@ function print_summary_submenu() {
 	// Plugins menu items
 	// TODO: this would be a call to print_pracket_link but the events returns cooked links so we cant
 	foreach( $t_menu_options as $t_menu_item ) {
-		echo '<span class="bracket-link">[&nbsp;';
+		echo '<span class="bracket-link">[&#160;';
 		echo $t_menu_item;
-		echo '&nbsp;]</span> ';
+		echo '&#160;]</span> ';
 	}
 	echo '</div>';
 }
@@ -967,7 +969,7 @@ function print_manage_menu( $p_page = '' ) {
 	if( access_has_project_level( config_get( 'manage_project_threshold' ) ) ) {
 		print_bracket_link( helper_mantis_url( $t_manage_project_menu_page ), lang_get( 'manage_projects_link' ) );
 	}
-	if( access_has_project_level( config_get( 'tag_edit_threshold' ) ) ) {
+	if( access_has_global_level( config_get( 'tag_edit_threshold' ) ) ) {
 		print_bracket_link( helper_mantis_url( $t_manage_tags_page ), lang_get( 'manage_tags_link' ) );
 	}
 	if( access_has_global_level( config_get( 'manage_custom_fields_threshold' ) ) ) {
@@ -1133,9 +1135,9 @@ function print_account_menu( $p_page = '' ) {
 	// Plugins menu items
 	// TODO: this would be a call to print_pracket_link but the events returns cooked links so we cant
 	foreach( $t_menu_options as $t_menu_item ) {
-		echo '<span class="bracket-link">[&nbsp;';
+		echo '<span class="bracket-link">[&#160;';
 		echo $t_menu_item;
-		echo '&nbsp;]</span> ';
+		echo '&#160;]</span> ';
 	}
 }
 
@@ -1196,9 +1198,9 @@ function print_summary_menu( $p_page = '' ) {
 	// Plugins menu items
 	// TODO: this would be a call to print_pracket_link but the events returns cooked links so we cant
 	foreach( $t_menu_options as $t_menu_item ) {
-		echo '<span class="bracket-link">[&nbsp;';
+		echo '<span class="bracket-link">[&#160;';
 		echo $t_menu_item;
-		echo '&nbsp;]</span> ';
+		echo '&#160;]</span> ';
 	}
 	echo '</div>';
 }
@@ -1260,8 +1262,11 @@ function html_status_percentage_legend() {
 
 	$query = "SELECT status, COUNT(*) AS number
 				FROM $t_mantis_bug_table
-				WHERE $t_specific_where
-				GROUP BY status";
+				WHERE $t_specific_where";
+	if ( !access_has_project_level( config_get( 'private_bug_threshold' ) ) ) {
+		$query .= ' AND view_state < ' . VS_PRIVATE;
+	}
+	$query .= ' GROUP BY status';
 	$result = db_query_bound( $query );
 
 	$t_bug_count = 0;
@@ -1503,8 +1508,6 @@ function html_button_bug_assign_to( $p_bug_id ) {
  * @return null
  */
 function html_button_bug_move( $p_bug_id ) {
-	$t_status = bug_get_field( $p_bug_id, 'status' );
-
 	if( access_has_bug_level( config_get( 'move_bug_threshold' ), $p_bug_id ) ) {
 		html_button( 'bug_actiongroup_page.php', lang_get( 'move_bug_button' ), array( 'bug_arr[]' => $p_bug_id, 'action' => 'MOVE' ) );
 	}
@@ -1626,8 +1629,10 @@ function html_buttons_view_bug_page( $p_bug_id ) {
 		echo '<td class="center">';
 		html_button_bug_assign_to( $p_bug_id );
 		echo '</td>';
+	}
 
-		# Change State button
+	# Change status button/dropdown
+	if ( !$t_readonly || config_get( 'allow_reporter_close' ) ) {
 		echo '<td class="center">';
 		html_button_bug_change_status( $p_bug_id );
 		echo '</td>';
@@ -1671,18 +1676,15 @@ function html_buttons_view_bug_page( $p_bug_id ) {
 		echo '</td>';
 	}
 
-	if( !$t_readonly ) {
+	# MOVE button
+	echo '<td class="center">';
+	html_button_bug_move( $p_bug_id );
+	echo '</td>';
 
-		# MOVE button
-		echo '<td class="center">';
-		html_button_bug_move( $p_bug_id );
-		echo '</td>';
-
-		# DELETE button
-		echo '<td class="center">';
-		html_button_bug_delete( $p_bug_id );
-		echo '</td>';
-	}
+	# DELETE button
+	echo '<td class="center">';
+	html_button_bug_delete( $p_bug_id );
+	echo '</td>';
 
 	helper_call_custom_function( 'print_bug_view_page_custom_buttons', array( $p_bug_id ) );
 

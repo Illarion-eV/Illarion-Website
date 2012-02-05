@@ -19,7 +19,7 @@
  * @package CoreAPI
  * @subpackage HelperAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -227,9 +227,19 @@ function helper_get_current_project_trace() {
 
 	if( null === $t_project_id ) {
 		$t_bottom = current_user_get_pref( 'default_project' );
+		$t_parent = $t_bottom;
 		$t_project_id = Array(
 			$t_bottom,
 		);
+
+		while( true ) {
+			$t_parent = project_hierarchy_get_parent( $t_parent );
+			if( 0 == $t_parent ) {
+				break;
+			}
+			array_unshift($t_project_id, $t_parent);
+		}
+
 	} else {
 		$t_project_id = explode( ';', $t_project_id );
 		$t_bottom = $t_project_id[count( $t_project_id ) - 1];
@@ -289,7 +299,7 @@ function helper_ensure_confirmed( $p_message, $p_button_label ) {
 	print_hr();
 	echo "\n$p_message\n";
 
-	echo '<form method="post" action="' . form_action_self() . "\">\n";
+	echo '<form method="post" action="' . string_attribute( form_action_self() ) . "\">\n";
 	# CSRF protection not required here - user needs to confirm action
 	# before the form is accepted.
 	print_hidden_inputs( gpc_strip_slashes( $_POST ) );

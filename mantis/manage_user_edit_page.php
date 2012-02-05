@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -32,8 +32,7 @@
 	$f_username = gpc_get_string( 'username', '' );
 
 	if ( is_blank( $f_username ) ) {
-		$f_user_id = gpc_get_int( 'user_id' );
-		$t_user_id = $f_user_id;
+		$t_user_id = gpc_get_int( 'user_id' );
 	} else {
 		$t_user_id = user_get_id_by_name( $f_username );
 		if ( $t_user_id === false ) {
@@ -74,26 +73,29 @@
 <!-- Username -->
 <tr <?php echo helper_alternate_class( 1 ) ?>>
 	<td class="category" width="30%">
-		<?php echo lang_get( 'username' ) ?>:
+		<?php echo lang_get( 'username' ) ?>
 	</td>
 	<td width="70%">
-		<input type="text" size="16" maxlength="<?php echo USERLEN;?>" name="username" value="<?php echo $t_user['username'] ?>" />
+		<input type="text" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" name="username" value="<?php echo string_attribute( $t_user['username'] ) ?>" />
 	</td>
 </tr>
 
 <!-- Realname -->
 <tr <?php echo helper_alternate_class( 1 ) ?>>
 	<td class="category" width="30%">
-		<?php echo lang_get( 'realname' ) ?>:
+		<?php echo lang_get( 'realname' ) ?>
 	</td>
 	<td width="70%">
 		<?php
-			if ( !$t_ldap || config_get( 'use_ldap_realname' ) == OFF ) {
+			// With LDAP
+			if ( $t_ldap && ON == config_get( 'use_ldap_realname' ) ) {
+				echo string_display_line( user_get_realname( $t_user_id ) );
+			}
+			// Without LDAP
+			else {
 		?>
-				<input type="text" size="16" maxlength="<?php echo REALLEN;?>" name="realname" value="<?php echo string_attribute( $t_user['realname'] ) ?>" />
+			<input type="text" size="32" maxlength="<?php echo DB_FIELD_SIZE_REALNAME;?>" name="realname" value="<?php echo string_attribute( $t_user['realname'] ) ?>" />
 		<?php
-			} else {
-				echo string_display( user_get_realname( $f_user_id ) );
 			}
 		?>
 	</td>
@@ -102,14 +104,17 @@
 <!-- Email -->
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category">
-		<?php echo lang_get( 'email' ) ?>:
+		<?php echo lang_get( 'email' ) ?>
 	</td>
 	<td>
 		<?php
-			if ( !$t_ldap || config_get( 'use_ldap_email' ) == OFF ) {
+			// With LDAP
+			if ( $t_ldap && ON == config_get( 'use_ldap_email' ) ) {
+				echo string_display_line( user_get_email( $t_user_id ) );
+			}
+			// Without LDAP
+			else {
 				print_email_input( 'email', $t_user['email'] );
-			} else {
-				echo string_display( user_get_email( $f_user_id ) );
 			}
 		?>
 	</td>
@@ -118,7 +123,7 @@
 <!-- Access Level -->
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category">
-		<?php echo lang_get( 'access_level' ) ?>:
+		<?php echo lang_get( 'access_level' ) ?>
 	</td>
 	<td>
 		<select name="access_level">
@@ -136,7 +141,7 @@
 <!-- Enabled Checkbox -->
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category">
-		<?php echo lang_get( 'enabled' ) ?>:
+		<?php echo lang_get( 'enabled' ) ?>
 	</td>
 	<td>
 		<input type="checkbox" name="enabled" <?php check_checked( $t_user['enabled'], ON ); ?> />
@@ -146,7 +151,7 @@
 <!-- Protected Checkbox -->
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category">
-		<?php echo lang_get( 'protected' ) ?>:
+		<?php echo lang_get( 'protected' ) ?>
 	</td>
 	<td>
 		<input type="checkbox" name="protected" <?php check_checked( $t_user['protected'], ON ); ?> />
@@ -171,12 +176,15 @@
 
 <!-- RESET AND DELETE -->
 <div class="border center">
+
 <!-- Reset Button -->
+<?php if( helper_call_custom_function( 'auth_can_change_password', array() ) ) { ?>
 	<form method="post" action="manage_user_reset.php">
 <?php echo form_security_field( 'manage_user_reset' ) ?>
 		<input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
 		<input type="submit" class="button" value="<?php echo lang_get( 'reset_password_button' ) ?>" />
 	</form>
+<?php } ?>
 
 <!-- Delete Button -->
 <?php if ( !( ( user_is_administrator( $t_user_id ) && ( user_count_level( config_get_global( 'admin_site_threshold' ) ) <= 1 ) ) ) ) { ?>
@@ -189,6 +197,7 @@
 <?php } ?>
 </div>
 <br />
+<?php if( !$t_ldap ) { ?>
 <div align="center">
 <?php
 	if ( ( ON == config_get( 'send_reset_password' ) ) && ( ON == config_get( 'enable_email_notification' ) ) ) {
@@ -198,6 +207,7 @@
 	}
 ?>
 </div>
+<?php } ?>
 
 
 <!-- PROJECT ACCESS (if permissions allow) and user is not ADMINISTRATOR -->
@@ -217,7 +227,7 @@
 <!-- Assigned Projects -->
 <tr <?php echo helper_alternate_class( 1 ) ?> valign="top">
 	<td class="category" width="30%">
-		<?php echo lang_get( 'assigned_projects' ) ?>:
+		<?php echo lang_get( 'assigned_projects' ) ?>
 	</td>
 	<td width="70%">
 		<?php print_project_user_list( $t_user['id'] ) ?>
@@ -227,10 +237,10 @@
 <form method="post" action="manage_user_proj_add.php">
 <?php echo form_security_field( 'manage_user_proj_add' ) ?>
 		<input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
-<!-- Unassigend Project Selection -->
+<!-- Unassigned Project Selection -->
 <tr <?php echo helper_alternate_class() ?> valign="top">
 	<td class="category">
-		<?php echo lang_get( 'unassigned_projects' ) ?>:
+		<?php echo lang_get( 'unassigned_projects' ) ?>
 	</td>
 	<td>
 		<select name="project_id[]" multiple="multiple" size="5">
@@ -242,7 +252,7 @@
 <!-- New Access Level -->
 <tr <?php echo helper_alternate_class() ?> valign="top">
 	<td class="category">
-		<?php echo lang_get( 'access_level' ) ?>:
+		<?php echo lang_get( 'access_level' ) ?>
 	</td>
 	<td>
 		<select name="access_level">

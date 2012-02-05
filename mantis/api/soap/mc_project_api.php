@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -22,11 +22,17 @@ function mc_project_get_issues( $p_username, $p_password, $p_project_id, $p_page
 		return mci_soap_fault_access_denied( $t_user_id );
 	}
 
+	$t_orig_page_number = $p_page_number < 1 ? 1 : $p_page_number;
 	$t_page_count = 0;
 	$t_bug_count = 0;
 
 	$t_rows = filter_get_bug_rows( $p_page_number, $p_per_page, $t_page_count, $t_bug_count, null, $p_project_id );
+	
 	$t_result = array();
+	
+	// the page number was moved back, so we have exceeded the actual page number, see bug #12991
+	if ( $t_orig_page_number > $p_page_number )
+	    return $t_result;	
 
 	foreach( $t_rows as $t_issue_data ) {
 		$t_result[] = mci_issue_data_as_array( $t_issue_data, $t_user_id, $t_lang );
@@ -173,7 +179,7 @@ function mc_project_delete_category ($p_username, $p_password, $p_project_id, $p
  * @return bool returns true or false depending on the success of the update action
  */
 
-function mc_project_rename_category_by_name ($p_username, $p_password, $p_project_id, $p_category_name, $p_category_name_new, $p_assigned_to) {
+function mc_project_rename_category_by_name( $p_username, $p_password, $p_project_id, $p_category_name, $p_category_name_new, $p_assigned_to ) {
         $t_user_id = mci_check_login( $p_username, $p_password );
 
         if ( null === $p_assigned_to ) {
@@ -221,17 +227,10 @@ function mc_project_get_versions( $p_username, $p_password, $p_project_id ) {
 	if( !mci_has_readonly_access( $t_user_id, $p_project_id ) ) {
 		return mci_soap_fault_access_denied( $t_user_id );
 	}
-
+	
 	$t_result = array();
 	foreach( version_get_all_rows( $p_project_id, VERSION_ALL ) as $t_version ) {
-		$t_result[] = array(
-			'id' => $t_version['id'],
-			'name' => $t_version['version'],
-			'project_id' => $p_project_id,
-			'date_order' => timestamp_to_iso8601( $t_version['date_order'] ),
-			'description' => mci_null_if_empty( $t_version['description'] ),
-			'released' => $t_version['released'],
-		);
+		$t_result[] = mci_project_version_as_array ( $t_version );
 	}
 
 	return $t_result;
@@ -263,14 +262,7 @@ function mc_project_get_released_versions( $p_username, $p_password, $p_project_
 	$t_result = array();
 
 	foreach( version_get_all_rows( $p_project_id, VERSION_RELEASED ) as $t_version ) {
-		$t_result[] = array(
-			'id' => $t_version['id'],
-			'name' => $t_version['version'],
-			'project_id' => $p_project_id,
-			'date_order' => timestamp_to_iso8601( $t_version['date_order'] ),
-			'description' => mci_null_if_empty( $t_version['description'] ),
-			'released' => $t_version['released'],
-		);
+		$t_result[] = mci_project_version_as_array ( $t_version );
 	}
 
 	return $t_result;
@@ -301,16 +293,8 @@ function mc_project_get_unreleased_versions( $p_username, $p_password, $p_projec
 
 	$t_result = array();
 
-	foreach( version_get_all_rows( $p_project_id, VERSION_FUTURE ) as $t_version ) {
-		$t_result[] = array(
-			'id' => $t_version['id'],
-			'name' => $t_version['version'],
-			'project_id' => $p_project_id,
-			'date_order' => timestamp_to_iso8601( $t_version['date_order'] ),
-			'description' => mci_null_if_empty( $t_version['description'] ),
-			'released' => $t_version['released'],
-		);
-	}
+	foreach( version_get_all_rows( $p_project_id, VERSION_FUTURE ) as $t_version )
+		$t_result[] = mci_project_version_as_array ( $t_version );
 
 	return $t_result;
 }
@@ -334,8 +318,14 @@ function mc_project_version_add( $p_username, $p_password, $p_version ) {
 	$t_name = $p_version['name'];
 	$t_released = $p_version['released'];
 	$t_description = $p_version['description'];
-	$t_date_order = $p_version['date_order'];
-
+	$t_date_order =  $p_version['date_order'];
+	if ( is_blank( $t_date_order ) ) 
+	    $t_date_order = null;
+	else 
+	    $t_date_order = date( "Y-m-d H:i:s", strtotime( $t_date_order ) );
+	
+	$t_obsolete = isset ( $p_version['obsolete'] ) ? $p_version['obsolete'] : false;
+	
 	if ( is_blank( $t_project_id ) ) {
 		return new soap_fault( 'Client', '', 'Mandatory field "project_id" was missing' );
 	}
@@ -365,18 +355,9 @@ function mc_project_version_add( $p_username, $p_password, $p_version ) {
 	} else {
 		$t_released = VERSION_RELEASED;
 	}
-
-	if ( version_add( $t_project_id, $t_name, $t_released, $t_description ) ) {
-		$t_version_id = version_get_id( $t_name, $t_project_id );
-
-		if ( !is_blank( $t_date_order ) ) {
-			$t_version = version_get( $t_version_id );
-			$t_version->date_order = date( "Y-m-d H:i:s", strtotime( $t_date_order ) );
-			version_update( $t_version );
-		}
-
-		return $t_version_id;
-	}
+	
+	if ( version_add( $t_project_id, $t_name, $t_released, $t_description, $t_date_order, $t_obsolete ) )
+		return version_get_id( $t_name, $t_project_id );
 
 	return null;
 }
@@ -410,6 +391,7 @@ function mc_project_version_update( $p_username, $p_password, $p_version_id, $p_
 	$t_released = $p_version['released'];
 	$t_description = $p_version['description'];
 	$t_date_order = $p_version['date_order'];
+	$t_obsolete = isset ( $p_version['obsolete'] ) ? $p_version['obsolete'] : false;
 
 	if ( is_blank( $t_project_id ) ) {
 		return new soap_fault( 'Client', '', 'Mandatory field "project_id" was missing' );
@@ -450,6 +432,7 @@ function mc_project_version_update( $p_username, $p_password, $p_version_id, $p_
 	$t_version_data->description = $t_description;
 	$t_version_data->released = $t_released;
 	$t_version_data->date_order = date( "Y-m-d H:i:s", strtotime( $t_date_order ) );
+	$t_version_data->obsolete = $t_obsolete;
 
 	return version_update( $t_version_data );
 }
@@ -606,7 +589,7 @@ function mc_project_get_attachments( $p_username, $p_password, $p_project_id ) {
 		$t_access_clause = ">= $t_reqd_access ";
 	}
 
-	$query = "SELECT pft.id, pft.project_id, pft.filename, pft.file_type, pft.filesize, pft.title, pft.description, pft.date_added
+	$query = "SELECT pft.id, pft.project_id, pft.filename, pft.file_type, pft.filesize, pft.title, pft.description, pft.date_added, pft.user_id
 		FROM $t_project_file_table pft
 		LEFT JOIN $t_project_table pt ON pft.project_id = pt.id
 		LEFT JOIN $t_project_user_list_table pult
@@ -633,10 +616,29 @@ function mc_project_get_attachments( $p_username, $p_password, $p_project_id ) {
 		$t_attachment['content_type'] = $row['file_type'];
 		$t_attachment['date_submitted'] = timestamp_to_iso8601( $row['date_added'] );
 		$t_attachment['download_url'] = mci_get_mantis_path() . 'file_download.php?file_id=' . $row['id'] . '&amp;type=doc';
+		$t_attachment['user_id'] = $row['user_id'];
 		$t_result[] = $t_attachment;
 	}
 
 	return $t_result;
+}
+
+function mc_project_get_all_subprojects( $p_username, $p_password, $p_project_id ) {
+	$t_user_id = mci_check_login( $p_username, $p_password );
+
+	if( $t_user_id === false ) {
+		return new soap_fault( 'Client', '', 'Access Denied' );
+	}
+
+	if( !project_exists( $p_project_id ) ) {
+		return new soap_fault( 'Client', '', "Project '$p_project_id' does not exist." );
+	}
+
+	if( !mci_has_readonly_access( $t_user_id, $p_project_id ) ) {
+		return mci_soap_fault_access_denied( $t_user_id );
+	}
+
+	return user_get_all_accessible_subprojects( $t_user_id, $p_project_id );
 }
 
 /**
@@ -651,6 +653,24 @@ function mci_project_as_array_by_id( $p_project_id ) {
 	$t_result['name'] = project_get_name( $p_project_id );
 	return $t_result;
 }
+
+/**
+ * Get the id of a project via the project's name.
+ *
+ * @param string $p_username  The name of the user trying to access the versions.
+ * @param string $p_password  The password of the user.
+ * @param string $p_project_name  The name of the project to retrieve.
+ * @return integer  The id of the project with the given name, -1 if there is no such project.
+ */
+function mc_project_get_id_from_name( $p_username, $p_password, $p_project_name ) {
+        $t_user_id = mci_check_login( $p_username, $p_password );
+        if( $t_user_id === false ) {
+                return mci_soap_fault_login_failed();
+        }
+        
+        return project_get_id_by_name ( $p_project_name );
+}
+
 
 ### MantisConnect Administrative Webservices ###
 
@@ -841,12 +861,17 @@ function mc_project_get_issue_headers( $p_username, $p_password, $p_project_id, 
 	if( !mci_has_readonly_access( $t_user_id, $p_project_id ) ) {
 		return mci_soap_fault_access_denied( $t_user_id );
 	}
-
+	
+	$t_orig_page_number = $p_page_number < 1 ? 1 : $p_page_number;
 	$t_page_count = 0;
 	$t_bug_count = 0;
 
 	$t_rows = filter_get_bug_rows( $p_page_number, $p_per_page, $t_page_count, $t_bug_count, null, $p_project_id );
 	$t_result = array();
+	
+	// the page number was moved back, so we have exceeded the actual page number, see bug #12991
+	if ( $t_orig_page_number > $p_page_number )
+	    return $t_result;
 
 	foreach( $t_rows as $t_issue_data ) {
 		$t_id = $t_issue_data->id;

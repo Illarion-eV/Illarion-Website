@@ -19,7 +19,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -56,7 +56,7 @@
 		$t_bug = bug_get( $f_master_bug_id, true );
 
 		# the user can at least update the master bug (needed to add the relationship)...
-		access_ensure_bug_level( config_get( 'update_bug_threshold', null, $t_bug->project_id ), $f_master_bug_id );
+		access_ensure_bug_level( config_get( 'update_bug_threshold', null, null, $t_bug->project_id ), $f_master_bug_id );
 
 		#@@@ (thraxisp) Note that the master bug is cloned into the same project as the master, independent of
 		#       what the current project is set to.
@@ -124,7 +124,9 @@
 		$t_changed_project		= false;
 	}
 
-	$f_report_stay			= gpc_get_bool( 'report_stay', false );
+	$f_report_stay			          = gpc_get_bool( 'report_stay', false );
+	$f_copy_notes_from_parent         = gpc_get_bool( 'copy_notes_from_parent', false);
+	$f_copy_attachments_from_parent   = gpc_get_bool( 'copy_attachments_from_parent', false);
 
 	$t_fields = config_get( 'bug_report_page_fields' );
 	$t_fields = columns_filter_disabled( $t_fields );
@@ -249,7 +251,7 @@
 		</td>
 		<td>
 		<?php
-		    print "<input ".helper_get_tab_index()." type=\"text\" id=\"due_date\" name=\"due_date\" size=\"20\" maxlength=\"10\" value=\"".$t_date_to_display."\" />";
+		    print "<input ".helper_get_tab_index()." type=\"text\" id=\"due_date\" name=\"due_date\" size=\"20\" maxlength=\"16\" value=\"".$t_date_to_display."\" />";
 			date_print_calendar();
 		?>
 		</td>
@@ -289,7 +291,7 @@
 							</select>
 							<?php
 								} else {
-									projax_autocomplete( 'platform_get_with_prefix', 'platform', array( 'value' => $f_platform, 'size' => '32', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
+									projax_autocomplete( 'platform_get_with_prefix', 'platform', array( 'value' => string_attribute( $f_platform ), 'size' => '32', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
 								}
 							?>
 						</td>
@@ -306,7 +308,7 @@
 							</select>
 							<?php
 								} else {
-									projax_autocomplete( 'os_get_with_prefix', 'os', array( 'value' => $f_os, 'size' => '32', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
+									projax_autocomplete( 'os_get_with_prefix', 'os', array( 'value' => string_attribute( $f_os ), 'size' => '32', 'maxlength' => '32', 'tabindex' => helper_get_tab_index_value() ) );
 								}
 							?>
 						</td>
@@ -325,7 +327,7 @@
 								</select>
 							<?php
 								} else {
-									projax_autocomplete( 'os_build_get_with_prefix', 'os_build', array( 'value' => $f_os_build, 'size' => '16', 'maxlength' => '16', 'tabindex' => helper_get_tab_index_value() ) );
+									projax_autocomplete( 'os_build_get_with_prefix', 'os_build', array( 'value' => string_attribute( $f_os_build ), 'size' => '16', 'maxlength' => '16', 'tabindex' => helper_get_tab_index_value() ) );
 								}
 							?>
 						</td>
@@ -498,6 +500,16 @@
 		<td>
 			<?php relationship_list_box( /* none */ -2, "rel_type", false, true ) ?>
 			<?php echo '<b>' . lang_get( 'bug' ) . ' ' . bug_format_id( $f_master_bug_id ) . '</b>' ?>
+		</td>
+	</tr>
+
+	<tr <?php echo helper_alternate_class() ?>>
+		<td class="category">
+			<?php echo lang_get( 'copy_from_parent' ) ?>
+		</td>
+		<td>
+			<label><input <?php echo helper_get_tab_index() ?> type="checkbox" id="copy_notes_from_parent" name="copy_notes_from_parent" <?php check_checked( $f_copy_notes_from_parent ) ?> /> <?php echo lang_get( 'copy_notes_from_parent' ) ?></label>
+			<label><input <?php echo helper_get_tab_index() ?> type="checkbox" id="copy_attachments_from_parent" name="copy_attachments_from_parent" <?php check_checked( $f_copy_attachments_from_parent ) ?> /> <?php echo lang_get( 'copy_attachments_from_parent' ) ?></label>
 		</td>
 	</tr>
 <?php

@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -122,7 +122,8 @@ $l_oServer->wsdl->addComplexType(
 		'size'				=>	array( 'name' => 'size',			'type' => 'xsd:integer', 	'minOccurs' => '0'),
 		'content_type'		=>	array( 'name' => 'content_type',	'type' => 'xsd:string', 	'minOccurs' => '0'),
 		'date_submitted'	=>	array( 'name' => 'date_submitted',	'type' => 'xsd:dateTime', 	'minOccurs' => '0'),
-		'download_url'		=>	array( 'name' => 'download_url',	'type' => 'xsd:anyURI', 	'minOccurs' => '0')
+		'download_url'		=>	array( 'name' => 'download_url',	'type' => 'xsd:anyURI', 	'minOccurs' => '0'),
+		'user_id'		    =>	array( 'name' => 'user_id',			'type' => 'xsd:integer', 	'minOccurs' => '0')
 	)
 );
 
@@ -156,7 +157,8 @@ $l_oServer->wsdl->addComplexType(
 		'size'				=>	array( 'name' => 'size',			'type' => 'xsd:integer', 	'minOccurs' => '0'),
 		'content_type'		=>	array( 'name' => 'content_type',	'type' => 'xsd:string', 	'minOccurs' => '0'),
 		'date_submitted'	=>	array( 'name' => 'date_submitted',	'type' => 'xsd:dateTime', 	'minOccurs' => '0'),
-		'download_url'		=>	array( 'name' => 'download_url',	'type' => 'xsd:anyURI', 	'minOccurs' => '0')
+		'download_url'		=>	array( 'name' => 'download_url',	'type' => 'xsd:anyURI', 	'minOccurs' => '0'),
+		'user_id'		    =>	array( 'name' => 'user_id',			'type' => 'xsd:integer', 	'minOccurs' => '0')
 	)
 );
 
@@ -218,7 +220,9 @@ $l_oServer->wsdl->addComplexType(
 		'view_state'		=>	array( 'name' => 'view_state',		'type' => 'tns:ObjectRef', 'minOccurs' => '0'),
 		'date_submitted'	=>	array( 'name' => 'date_submitted',	'type' => 'xsd:dateTime', 'minOccurs' => '0'),
 		'last_modified'		=>	array( 'name' => 'last_modified',	'type' => 'xsd:dateTime', 'minOccurs' => '0'),
-		'time_tracking'		=> 	array( 'name' => 'time_tracking',	'type' => 'xsd:integer', 'minOccurs' => '0')
+		'time_tracking'		=> 	array( 'name' => 'time_tracking',	'type' => 'xsd:integer', 'minOccurs' => '0'),
+	    'note_type'			=>  array( 'name' => 'note_type',		'type' => 'xsd:integer', 'minOccurs' => '0'),
+		'note_attr'			=>  array( 'name' => 'note_attr',		'type' => 'xsd:string', 'minOccurs' => '0')
 	)
 );
 
@@ -283,7 +287,8 @@ $l_oServer->wsdl->addComplexType(
 		'relationships'				=>	array( 'name' => 'relationships',			'type' => 'tns:RelationshipDataArray', 	'minOccurs' => '0' ),
 		'notes'						=>	array( 'name' => 'notes',					'type' => 'tns:IssueNoteDataArray', 	'minOccurs' => '0' ),
 		'custom_fields'				=>  array( 'name' => 'custom_fields',			'type' => 'tns:CustomFieldValueForIssueDataArray', 	'minOccurs' => '0' ),
-		'due_date'					=>  array( 'name' => 'due_date',				'type' => 'xsd:dateTime', 	'minOccurs' => '0' )
+		'due_date'					=>  array( 'name' => 'due_date',				'type' => 'xsd:dateTime', 	'minOccurs' => '0' ),
+	    'monitors'					=>  array( 'name' => 'monitors',                'type' => 'tns:AccountDataArray', 'minOccurs' => '0')
 	)
 );
 
@@ -395,7 +400,8 @@ $l_oServer->wsdl->addComplexType(
 		'project_id'	=>	array( 'name' => 'project_id',	'type' => 'xsd:integer', 	'minOccurs' => '0' ),
 		'date_order'	=>	array( 'name' => 'date_order',	'type' => 'xsd:dateTime', 	'minOccurs' => '0' ),
 		'description'	=>	array( 'name' => 'description',	'type' => 'xsd:string', 	'minOccurs' => '0' ),
-		'released'		=>	array( 'name' => 'released',	'type' => 'xsd:boolean', 	'minOccurs' => '0' )
+		'released'		=>	array( 'name' => 'released',	'type' => 'xsd:boolean', 	'minOccurs' => '0' ),
+		'obsolete'		=>	array( 'name' => 'obsolete',	'type' => 'xsd:boolean', 	'minOccurs' => '0' )
 	)
 );
 
@@ -427,7 +433,8 @@ $l_oServer->wsdl->addComplexType(
 		'project_id'	=>	array( 'name' => 'project_id',		'type' => 'xsd:integer', 	'minOccurs' => '0' ),
 		'is_public'		=>	array( 'name' => 'is_public',		'type' => 'xsd:boolean', 	'minOccurs' => '0' ),
 		'name'			=>	array( 'name' => 'name',			'type' => 'xsd:string', 	'minOccurs' => '0' ),
-		'filter_string'	=>	array( 'name' => 'filter_string',	'type' => 'xsd:string', 	'minOccurs' => '0' )
+		'filter_string'	=>	array( 'name' => 'filter_string',	'type' => 'xsd:string', 	'minOccurs' => '0' ),
+	    'url'           =>  array( 'name' => 'url',				'type' => 'xsd:string', 	'minOccurs' => '0' )
 	)
 );
 
@@ -887,6 +894,21 @@ $l_oServer->register( 'mc_issue_note_delete',
 	'Delete the note with the specified id.'
 );
 
+### mc_issue_note_update
+$l_oServer->register( 'mc_issue_note_update',
+    array(
+        'username'  =>  'xsd:string',
+        'password'  =>  'xsd:string',
+        'note'      =>  'tns:IssueNoteData'
+    ),
+    array(
+        'return'    =>  'xsd:boolean'
+    ),
+    $t_namespace,
+    false, false, false,
+    'Update a specific note of a specific issue.'
+);
+
 ### mc_issue_relationship_add
 $l_oServer->register( 'mc_issue_relationship_add',
 	array(
@@ -1015,6 +1037,21 @@ $l_oServer->register( 'mc_project_update',
         $t_namespace,
         false, false, false,
         'Update a specific project to the tracker (must have admin privileges)'
+);
+
+### mc_project_get_id_from_name
+$l_oServer->register( 'mc_project_get_id_from_name',
+	array(
+		'username' => 'xsd:string',
+		'password' => 'xsd:string',	
+		'project_name' => 'xsd:string'		
+	),
+	array(
+		'return' => 'xsd:integer'
+	),
+	$t_namespace,
+	false, false, false,
+	'Get the id of the project with the specified name.'
 );
 
 ### mc_project_get_issues
@@ -1254,8 +1291,7 @@ $l_oServer->register( 'mc_project_get_attachments',
 	'Get the attachments that belong to the specified project.'
 );
 
-## mc_project_get_custom_fields
-### mc_project_get_unreleased_versions
+### mc_project_get_custom_fields
 $l_oServer->register( 'mc_project_get_custom_fields',
 	array(
 		'username'		=>	'xsd:string',
@@ -1319,6 +1355,22 @@ $l_oServer->register( 'mc_project_attachment_delete',
 	false, false, false,
 	'Delete the project attachment with the specified id.'
 );
+
+### mc_project_get_subprojects
+$l_oServer->register( 'mc_project_get_all_subprojects',
+    array(
+        'username'    =>  'xsd:string',
+        'password'    =>  'xsd:string',
+        'project_id'  =>  'xsd:integer'
+    ),
+    array(
+        'return'      =>  'tns:StringArray'
+    ),
+    $t_namespace,
+    false, false, false,
+    'Get the subprojects ID of a specific project.'
+);
+
 
 ###
 ###  PUBLIC METHODS (defined in mc_filter_api.php)
@@ -1405,6 +1457,26 @@ $l_oServer->register( 'mc_issue_checkin',
 	$t_namespace,
 	false, false, false,
 	'Notifies MantisBT of a check-in for the issue with the specified id.'
+);
+
+###
+###  PUBLIC METHODS (defined in mc_user_pref_api.php)
+###
+
+### mc_user_pref_get_pref
+$l_oServer->register( 'mc_user_pref_get_pref',
+	array(
+		'username'		=>	'xsd:string',
+		'password'		=>	'xsd:string',
+		'project_id'	=>	'xsd:integer',
+		'pref_name'		=>	'xsd:string'
+	),
+	array(
+		'return'	=>	'xsd:string'
+	),
+	$t_namespace,
+	false, false, false,
+	'Get the value for the specified user preference.'
 );
 
 ###

@@ -17,7 +17,7 @@
 /**
  * Bug API
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  * @package CoreAPI
  * @subpackage BugAPI
@@ -1007,37 +1007,7 @@ function bug_copy( $p_bug_id, $p_target_project_id = null, $p_copy_custom_fields
 
 	# Copy attachments
 	if( $p_copy_attachments ) {
-		$query = 'SELECT * FROM ' . $t_mantis_bug_file_table . ' WHERE bug_id = ' . db_param();
-		$result = db_query_bound( $query, Array( $t_bug_id ) );
-		$t_count = db_num_rows( $result );
-
-		$t_bug_file = array();
-		for( $i = 0;$i < $t_count;$i++ ) {
-			$t_bug_file = db_fetch_array( $result );
-
-			# prepare the new diskfile name and then copy the file
-			$t_file_path = dirname( $t_bug_file['folder'] );
-			$t_new_diskfile_name = $t_file_path . file_generate_unique_name( 'bug-' . $t_bug_file['filename'], $t_file_path );
-			$t_new_file_name = file_get_display_name( $t_bug_file['filename'] );
-			if(( config_get( 'file_upload_method' ) == DISK ) ) {
-				copy( $t_bug_file['diskfile'], $t_new_diskfile_name );
-				chmod( $t_new_diskfile_name, config_get( 'attachments_file_permissions' ) );
-			}
-
-			$query = "INSERT INTO $t_mantis_bug_file_table
-						( bug_id, title, description, diskfile, filename, folder, filesize, file_type, date_added, content )
-						VALUES ( " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ",
-								 " . db_param() . ");";
-			db_query_bound( $query, Array( $t_new_bug_id, $t_bug_file['title'], $t_bug_file['description'], $t_new_diskfile_name, $t_new_file_name, $t_bug_file['folder'], $t_bug_file['filesize'], $t_bug_file['file_type'], $t_bug_file['date_added'], $t_bug_file['content'] ) );
-		}
+	    file_copy_attachments( $t_bug_id , $t_new_bug_id );
 	}
 
 	# Copy users monitoring bug
@@ -1070,6 +1040,36 @@ function bug_copy( $p_bug_id, $p_target_project_id = null, $p_copy_custom_fields
 	}
 
 	return $t_new_bug_id;
+}
+
+/**
+ * Moves an issue from a project to another.
+ * @todo Validate with sub-project / category inheritance scenarios.
+ * @todo Fix #11687: Bugs with attachments that are moved will lose attachments.
+ * @param int p_bug_id The bug to be moved.
+ * @param int p_target_project_id The target project to move the bug to.
+ * @access public
+ */
+function bug_move( $p_bug_id, $p_target_project_id ) {
+	// Move the issue to the new project.
+	bug_set_field( $p_bug_id, 'project_id', $p_target_project_id );
+
+	// Check if the category for the issue is global or not.
+	$t_category_id = bug_get_field( $p_bug_id, 'category_id' );
+	$t_category_project_id = category_get_field( $t_category_id, 'project_id' );
+
+	// If not global, then attempt mapping it to the new project.
+	if ( $t_category_project_id != ALL_PROJECTS && !project_hierarchy_inherit_parent( $p_target_project_id, $t_category_project_id ) ) {
+		// Map by name
+		$t_category_name = category_get_field( $t_category_id, 'name' );
+		$t_target_project_category_id = category_get_id_by_name( $t_category_name, $p_target_project_id, /* triggerErrors */ false );
+		if ( $t_target_project_category_id === false ) {
+			// Use default category after moves, since there is no match by name.
+			$t_target_project_category_id = config_get( 'default_category_for_moves' );
+		}
+
+		bug_set_field( $p_bug_id, 'category_id', $t_target_project_category_id );
+	}
 }
 
 /**
@@ -1353,7 +1353,7 @@ function bug_get_bugnote_stats( $p_bug_id ) {
 /**
  * Get array of attachments associated with the specified bug id.  The array will be
  * sorted in terms of date added (ASC).  The array will include the following fields:
- * id, title, diskfile, filename, filesize, file_type, date_added.
+ * id, title, diskfile, filename, filesize, file_type, date_added, user_id.
  * @param int p_bug_id integer representing bug id
  * @return array array of results or null
  * @access public
@@ -1361,15 +1361,11 @@ function bug_get_bugnote_stats( $p_bug_id ) {
  * @uses file_api.php
  */
 function bug_get_attachments( $p_bug_id ) {
-	if( !file_can_view_bug_attachments( $p_bug_id ) ) {
-		return;
-	}
-
 	$c_bug_id = db_prepare_int( $p_bug_id );
 
 	$t_bug_file_table = db_get_table( 'mantis_bug_file_table' );
 
-	$query = "SELECT id, title, diskfile, filename, filesize, file_type, date_added
+	$query = "SELECT id, title, diskfile, filename, filesize, file_type, date_added, user_id
 		                FROM $t_bug_file_table
 		                WHERE bug_id=" . db_param() . "
 		                ORDER BY date_added";
@@ -1735,6 +1731,41 @@ function bug_monitor( $p_bug_id, $p_user_id ) {
 	email_monitor_added( $p_bug_id, $p_user_id );
 
 	return true;
+}
+
+/**
+ * Returns the list of users monitoring the specified bug
+ * 
+ * @param int $p_bug_id
+ */
+function bug_get_monitors( $p_bug_id ) {
+    
+    if ( ! access_has_bug_level( config_get( 'show_monitor_list_threshold' ), $p_bug_id ) ) {
+        return Array();
+    }
+    
+    
+	$c_bug_id = db_prepare_int( $p_bug_id );
+	$t_bug_monitor_table = db_get_table( 'mantis_bug_monitor_table' );
+	$t_user_table = db_get_table( 'mantis_user_table' );
+
+	# get the bugnote data
+	$query = "SELECT user_id, enabled
+			FROM $t_bug_monitor_table m, $t_user_table u
+			WHERE m.bug_id=" . db_param() . " AND m.user_id = u.id
+			ORDER BY u.realname, u.username";
+	$result = db_query_bound($query, Array( $c_bug_id ) );
+	$num_users = db_num_rows($result);
+
+	$t_users = array();
+	for ( $i = 0; $i < $num_users; $i++ ) {
+		$row = db_fetch_array( $result );
+		$t_users[$i] = $row['user_id'];
+	}
+	
+	user_cache_array_rows( $t_users );
+	
+	return $t_users;
 }
 
 /**

@@ -19,7 +19,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -33,6 +33,27 @@
 	require_once( 'custom_field_api.php' );
 
 	form_security_validate( 'bug_report' );
+
+	$t_project_id = null;
+	$f_master_bug_id = gpc_get_int( 'm_id', 0 );
+	if ( $f_master_bug_id > 0 ) {
+		bug_ensure_exists( $f_master_bug_id );
+		if ( bug_is_readonly( $f_master_bug_id ) ) {
+			error_parameters( $f_master_bug_id );
+			trigger_error( ERROR_BUG_READ_ONLY_ACTION_DENIED, ERROR );
+		}
+		$t_master_bug = bug_get( $f_master_bug_id, true );
+		project_ensure_exists( $t_master_bug->project_id );
+		access_ensure_bug_level( config_get( 'update_bug_threshold', null, null, $t_master_bug->project_id ), $f_master_bug_id );
+		$t_project_id = $t_master_bug->project_id;
+	} else {
+		$f_project_id = gpc_get_int( 'project_id' );
+		project_ensure_exists( $f_project_id );
+		$t_project_id = $f_project_id;
+	}
+	if ( $t_project_id != helper_get_current_project() ) {
+		$g_project_override = $t_project_id;
+	}
 
 	access_ensure_project_level( config_get('report_bug_threshold' ) );
 
@@ -67,8 +88,11 @@
 
 	$f_file					= gpc_get_file( 'file', null ); /** @todo (thraxisp) Note that this always returns a structure */
 															# size = 0, if no file
-	$f_report_stay			= gpc_get_bool( 'report_stay', false );
-	$t_bug_data->project_id			= gpc_get_int( 'project_id' );
+	$f_report_stay			          = gpc_get_bool( 'report_stay', false );
+	$f_copy_notes_from_parent         = gpc_get_bool( 'copy_notes_from_parent', false);
+	$f_copy_attachments_from_parent   = gpc_get_bool( 'copy_attachments_from_parent', false);
+
+	$t_bug_data->project_id			= $t_project_id;
 
 	$t_bug_data->reporter_id		= auth_get_current_user_id();
 
@@ -105,14 +129,11 @@
 
 		# Produce an error if the field is required but wasn't posted
 		if ( !gpc_isset_custom_field( $t_id, $t_def['type'] ) &&
-			( $t_def['require_report'] ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_ENUM ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_LIST ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_MULTILIST ||
-				$t_def['type'] == CUSTOM_FIELD_TYPE_RADIO ) ) {
+			( $t_def['require_report'] ) ) {
 			error_parameters( lang_get_defaulted( custom_field_get_field( $t_id, 'name' ) ) );
 			trigger_error( ERROR_EMPTY_FIELD, ERROR );
 		}
+
 		if ( !custom_field_validate( $t_id, gpc_get_custom_field( "custom_field_$t_id", $t_def['type'], NULL ) ) ) {
 			error_parameters( lang_get_defaulted( custom_field_get_field( $t_id, 'name' ) ) );
 			trigger_error( ERROR_CUSTOM_FIELD_INVALID_VALUE, ERROR );
@@ -135,7 +156,7 @@
 
 	# Handle custom field submission
 	foreach( $t_related_custom_field_ids as $t_id ) {
-		# Do not set custom field value if user has no write access.
+		# Do not set custom field value if user has no write access
 		if( !custom_field_has_write_access( $t_id, $t_bug_id ) ) {
 			continue;
 		}
@@ -168,8 +189,31 @@
 			history_log_event_special( $f_master_bug_id, BUG_ADD_RELATIONSHIP, relationship_get_complementary_type( $f_rel_type ), $t_bug_id );
 			history_log_event_special( $t_bug_id, BUG_ADD_RELATIONSHIP, $f_rel_type, $f_master_bug_id );
 
+			# update relationship target bug last updated
+			bug_update_date( $t_bug_id );
+			
 			# Send the email notification
 			email_relationship_added( $f_master_bug_id, $t_bug_id, relationship_get_complementary_type( $f_rel_type ) );
+		}
+		
+		# copy notes from parent
+		if ( $f_copy_notes_from_parent ) {
+		    
+		    $t_parent_bugnotes = bugnote_get_all_bugnotes( $f_master_bug_id );
+		    
+		    foreach ( $t_parent_bugnotes as $t_parent_bugnote ) {
+		        
+		        $t_private = $t_parent_bugnote->view_state == VS_PRIVATE;
+
+		        bugnote_add( $t_bug_id, $t_parent_bugnote->note, $t_parent_bugnote->time_tracking, 
+		            $t_private, $t_parent_bugnote->note_type, $t_parent_bugnote->note_attr,
+		            $t_parent_bugnote->reporter_id, /* send_email */ FALSE , /* log history */ FALSE);
+		    }
+		}
+		
+		# copy attachments from parent
+		if ( $f_copy_attachments_from_parent ) {
+            file_copy_attachments( $f_master_bug_id, $t_bug_id );
 		}
 	}
 
@@ -202,20 +246,20 @@
 	<p>
 	<form method="post" action="<?php echo string_get_bug_report_url() ?>">
 	<?php # CSRF protection not required here - form does not result in modifications ?>
-		<input type="hidden" name="category_id" 	value="<?php echo $t_bug_data->category_id ?>" />
-		<input type="hidden" name="severity" 		value="<?php echo $t_bug_data->severity ?>" />
-		<input type="hidden" name="reproducibility" 	value="<?php echo $t_bug_data->reproducibility ?>" />
-		<input type="hidden" name="profile_id" 		value="<?php echo $t_bug_data->profile_id ?>" />
-		<input type="hidden" name="platform" 		value="<?php echo $t_bug_data->platform ?>" />
-		<input type="hidden" name="os" 			value="<?php echo $t_bug_data->os ?>" />
-		<input type="hidden" name="os_build" 		value="<?php echo $t_bug_data->os_build ?>" />
-		<input type="hidden" name="product_version" 	value="<?php echo $t_bug_data->version ?>" />
-		<input type="hidden" name="target_version" 	value="<?php echo $t_bug_data->target_version ?>" />
-		<input type="hidden" name="build" 		value="<?php echo $t_bug_data->build ?>" />
-		<input type="hidden" name="report_stay" 	value="1" />
-		<input type="hidden" name="view_state"		value="<?php echo $t_bug_data->view_state ?>" />
-		<input type="hidden" name="due_date"		value="<?php echo $t_bug_data->due_date ?>" />
-		<input type="submit" class="button" 		value="<?php echo lang_get( 'report_more_bugs' ) ?>" />
+		<input type="hidden" name="category_id" value="<?php echo string_attribute( $t_bug_data->category_id ) ?>" />
+		<input type="hidden" name="severity" value="<?php echo string_attribute( $t_bug_data->severity ) ?>" />
+		<input type="hidden" name="reproducibility" value="<?php echo string_attribute( $t_bug_data->reproducibility ) ?>" />
+		<input type="hidden" name="profile_id" value="<?php echo string_attribute( $t_bug_data->profile_id ) ?>" />
+		<input type="hidden" name="platform" value="<?php echo string_attribute( $t_bug_data->platform ) ?>" />
+		<input type="hidden" name="os" value="<?php echo string_attribute( $t_bug_data->os ) ?>" />
+		<input type="hidden" name="os_build" value="<?php echo string_attribute( $t_bug_data->os_build ) ?>" />
+		<input type="hidden" name="product_version" value="<?php echo string_attribute( $t_bug_data->version ) ?>" />
+		<input type="hidden" name="target_version" value="<?php echo string_attribute( $t_bug_data->target_version ) ?>" />
+		<input type="hidden" name="build" value="<?php echo string_attribute( $t_bug_data->build ) ?>" />
+		<input type="hidden" name="report_stay" value="1" />
+		<input type="hidden" name="view_state" value="<?php echo string_attribute( $t_bug_data->view_state ) ?>" />
+		<input type="hidden" name="due_date" value="<?php echo string_attribute( $t_bug_data->due_date ) ?>" />
+		<input type="submit" class="button" value="<?php echo lang_get( 'report_more_bugs' ) ?>" />
 	</form>
 	</p>
 <?php

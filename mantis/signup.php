@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -77,17 +77,17 @@
 <table class="width50" cellspacing="1">
 <tr>
 	<td class="center">
-		<b><?php echo lang_get( 'signup_done_title' ) ?></b><br/>
+		<b><?php echo lang_get( 'signup_done_title' ) ?></b><br />
 		<?php echo "[$f_username - $f_email] " ?>
 	</td>
 </tr>
 <tr>
 	<td>
-		<br/>
+		<br />
 		<?php echo lang_get( 'password_emailed_msg' ) ?>
-		<br /><br/>
+		<br /><br />
 		<?php echo lang_get( 'no_reponse_msg') ?>
-		<br/><br/>
+		<br /><br />
 	</td>
 </tr>
 </table>

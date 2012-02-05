@@ -17,7 +17,7 @@
 /**
  * @package Tests
  * @subpackage UnitTests
- * @copyright Copyright (C) 2010 MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2010-2011 MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -34,15 +34,12 @@ class ProjectTest extends SoapBase {
         * A test case that tests the following:
         * 1. Create a project.
         * 2. Rename the project.
-        */
+        */        
        public function testAddRenameDeleteProject() {
                $projectName = $this->getOriginalNameProject();
                $projectNewName = $this->getNewNameProject();
 
-               $projectDataStructure = array();
-               $projectDataStructure['name'] = $projectName;
-               $projectDataStructure['status'] = "development";
-               $projectDataStructure['view_state'] = 10;
+               $projectDataStructure = $this->newProjectAsArray($projectName);
 
                $projectId = $this->client->mc_project_add(
                        $this->userName,
@@ -78,6 +75,70 @@ class ProjectTest extends SoapBase {
                                $this->assertEquals($projectNewName, $project->name);
                        }
                }
+       }
+        
+       /**
+        * A test case which does the following
+        * 
+        * 1. Create a project
+        * 2. Retrieve the project id by name
+        * 
+        */
+       public function testGetIdFromName() {
+
+               $projectName = 'TestProjectForIdFromName';
+        
+               $projectDataStructure = $this->newProjectAsArray($projectName);
+
+               $projectId = $this->client->mc_project_add(
+                       $this->userName,
+                       $this->password,
+                       $projectDataStructure);
+
+               $this->projectIdToDelete[] = $projectId;
+               
+               $projectIdFromName = $this->client->mc_project_get_id_from_name(
+                       $this->userName,
+                       $this->password,
+                       $projectName);
+
+                $this->assertEquals($projectIdFromName, $projectId);
+       }
+
+       /**
+        * A test case which does the following
+        *
+        * 1. Create a project
+        * 2. Retrieve the subproject ids. Must returns empty array.
+        *
+        */
+       public function testGetSubprojects() {
+               $projectName = $this->getOriginalNameProject();
+               $projectDataStructure = $this->newProjectAsArray($projectName);
+
+               $projectId = $this->client->mc_project_add(
+                       $this->userName,
+                       $this->password,
+                       $projectDataStructure);
+
+               $this->projectIdToDelete[] = $projectId;
+
+               $projectsArray = $this->client->mc_project_get_all_subprojects(
+                       $this->userName,
+                       $this->password,
+                       $projectId);
+
+                $this->assertEquals(0, count($projectsArray));
+       }
+
+       private function newProjectAsArray($projectName) {
+       	
+       	       $projectDataStructure = array();
+               $projectDataStructure['name'] = $projectName;
+               $projectDataStructure['status'] = "development";
+               $projectDataStructure['view_state'] = 10;
+
+               return $projectDataStructure;
        }
 
        protected function tearDown() {

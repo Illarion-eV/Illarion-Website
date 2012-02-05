@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,6 +29,7 @@
  * @author Jan-Bart de Vreede, jvreede@outdare.nl
  * @author Jeroen Latour, jlatour@calaquendi.net
  * @author Klaasjan Brand, kjb@dds.nl
+ * @author McDutchie
  * @author Siebrand
  * @author Siebrand Mazeland, s.mazeland@xs4all.nl
  * @author Tvdm
@@ -203,7 +204,7 @@ $MANTIS_ERROR[ERROR_BUG_NOT_FOUND] = 'Melding %1$d niet gevonden.';
 $MANTIS_ERROR[ERROR_FILTER_NOT_FOUND] = 'Filter %1$s niet gevonden.';
 $MANTIS_ERROR[ERROR_FILTER_TOO_OLD] = 'De filter die u probeert te gebruiken is te oud om bijgewerkt te worden. Maak hem alstublieft opnieuw aan.';
 $MANTIS_ERROR[ERROR_EMAIL_INVALID] = 'Ongeldig e-mailadres.';
-$MANTIS_ERROR[ERROR_EMAIL_DISPOSABLE] = 'Het is niet toegestaan om wegwerpe-mailadressen te te gebruiken.';
+$MANTIS_ERROR[ERROR_EMAIL_DISPOSABLE] = 'Het is niet toegestaan om wegwerp-e-mailadressen te gebruiken.';
 $MANTIS_ERROR[ERROR_USER_PROFILE_NOT_FOUND] = 'Profiel niet gevonden.';
 $MANTIS_ERROR[ERROR_FILE_NOT_ALLOWED] = 'Dat bestandstype mag niet toegevoegd worden.';
 $MANTIS_ERROR[ERROR_FILE_DUPLICATE] = 'Dit bestand bestaat al. Verwijder het bestaande bestand eerst.';
@@ -361,14 +362,14 @@ $s_email_date_submitted = 'Datum aanmelding';
 $s_email_last_modified = 'Gewijzigd op';
 $s_email_summary = 'Samenvatting';
 $s_email_description = 'Beschrijving';
-$s_email_additional_information = 'Additionele information';
+$s_email_additional_information = 'Extra gegevens';
 $s_email_steps_to_reproduce = 'Stappen om te reproduceren';
 $s_account_protected_msg = 'De gebruiker is beveiligd. De instellingen kunnen niet worden gewijzigd.';
 $s_account_removed_msg = 'Uw gebruiker is verwijderd...';
 $s_confirm_delete_msg = 'Weet u zeker dat u uw gebruiker wilt verwijderen?';
 $s_delete_account_button = 'Gebruiker verwijderen';
 $s_manage_profiles_link = 'Profielen';
-$s_change_preferences_link = 'Instellingen';
+$s_change_preferences_link = 'Voorkeuren';
 $s_edit_account_title = 'Instellingen aanpassen';
 $s_username = 'Gebruikersnaam';
 $s_realname = 'Volledige naam';
@@ -564,7 +565,7 @@ $s_secure_session_long = 'Deze sessie alleen geldig laten zijn vanaf dit IP-adre
 $s_choose_project = 'Project kiezen';
 $s_login_button = 'Aanmelden';
 $s_signup_link = 'Nieuwe gebruiker registreren';
-$s_lost_password_link = 'Wachtwoord verloren?';
+$s_lost_password_link = 'Wachtwoord vergeten?';
 $s_select_project_button = 'Project selecteren';
 $s_lost_password_title = 'Wachtwoord opnieuw instellen';
 $s_lost_password_done_title = 'Het wachtwoordbericht is verstuurd';
@@ -681,7 +682,7 @@ $s_configuration_option_value = 'Waarde';
 $s_all_users = 'Alle gebruikers';
 $s_set_configuration_option = 'Optie instellen';
 $s_delete_config_sure_msg = 'Weet u zeker dat u deze instelling wilt verwijderen?';
-$s_configuration_corrupted = 'De instellingendatabase is corrupt geraakt.';
+$s_configuration_corrupted = 'De instellingendatabase is beschadigd.';
 $s_plugin = 'Uitbreiding';
 $s_plugins_installed = 'Geïnstalleerde uitbreidingen';
 $s_plugins_available = 'Beschikbare uitbreidingen';
@@ -718,7 +719,7 @@ $s_project_delete_button = 'Project verwijderen';
 $s_edit_project_title = 'Project aanpassen';
 $s_project_name = 'Projectnaam';
 $s_view_status = 'Zichtbaarheid';
-$s_public = 'Publiek';
+$s_public = 'openbaar';
 $s_private = 'Intern';
 $s_update_project_button = 'Project bijwerken';
 $s_delete_project_button = 'Project verwijderen';
@@ -835,7 +836,7 @@ $s_project_document_updated = 'Het project is aangepast.';
 $s_project_user_added_msg = 'De gebruiker is aan het project toegevoegd.';
 $s_project_removed_user_msg = 'De gebruiker is uit het project verwijderd.';
 $s_remove_user_sure_msg = 'Weet u zeker dat u deze gebruiker wilt verwijderen?';
-$s_remove_user_button = 'Gebruiker verwijderen';
+$s_remove_user_from_project_button = 'Gebruiker uit project %s verwijderen';
 $s_remove_all_users_sure_msg = 'Weet u zeker dat u alle gebruikers uit dit project wilt halen?';
 $s_remove_all_users_button = 'Alle gebruikers verwijderen';
 $s_add_user_title = 'Gebruiker aan project toevoegen';
@@ -859,7 +860,7 @@ $s_select_reproducibility = 'Selecteer reproduceerbaarheid';
 $s_select_severity = 'Selecteer impact';
 $s_or_fill_in = 'OF vul in';
 $s_assign_to = 'Toewijzen aan';
-$s_additional_information = 'Additionele informatie';
+$s_additional_information = 'Extra gegevens';
 $s_submit_report_button = 'Melding toevoegen';
 $s_check_report_more_bugs = 'vink aan om meer meldingen in te voeren';
 $s_report_stay = 'Doorgaan met aanmelden';
@@ -1009,7 +1010,7 @@ $s_custom_field_type_enum_string = '0:String,1:Numeriek,2:Drijvende komma,3:Enum
 $s_confirm_used_custom_field_deletion = 'Op dit moment is dit veld verbonden met tenminste &eacute;&eacute;n project.  Als u doorgaat, worden alle waarden voor dit veld permanent verwijderd.  Deze actie kan niet ongedaan gemaakt worden.  Als u dit veld niet wilt verwijderen, druk dan op de knop "Vorige" in uw browser. Klik op onderstaande knop om door te gaan.';
 $s_confirm_custom_field_deletion = 'Weet u zeker dat u dit gebruikersveld en alle bijbehorende waarden wilt verwijderen?';
 $s_field_delete_button = 'Gebruikersveld verwijderen';
-$s_confirm_custom_field_unlinking = 'Weet u zeker dat u dit gebruikersveld wilt ontkoppelen van het project en alle waarden wilt verwijderen?';
+$s_confirm_custom_field_unlinking = 'Weet u zeker dat u dit aangepaste veld wilt ontkoppelen van het project? De veldwaarden worden niet verwijderd zolang het aangepaste veld zelf niet wordt verwijderd.';
 $s_field_remove_button = 'Gebruikersveld verwijderen';
 $s_hide_status = 'Status verbergen';
 $s_filter_closed = 'Gesloten';
@@ -1057,6 +1058,9 @@ $s_relationship_warning_blocking_bugs_not_resolved_2 = '<b>ATTENTIE</b>. Nog nie
 $s_create_child_bug_button = 'Klonen';
 $s_bug_cloned_to = 'Melding gekloond';
 $s_bug_created_from = 'Melding gemaakt van';
+$s_copy_from_parent = 'Uitgebreide gegevens van bovenliggende melding kopiëren';
+$s_copy_notes_from_parent = 'Opmerkingen kopiëren';
+$s_copy_attachments_from_parent = 'Bijlagen kopiëren';
 $s_viewing_bug_relationship_graph_title = 'Relatiediagram';
 $s_viewing_bug_dependency_graph_title = 'Afhankelijkheidsgrafiek';
 $s_relation_graph = 'Relatiediagram';
@@ -1170,6 +1174,7 @@ $s_tag_create = 'Label aanmaken';
 $s_show_all_tags = 'Alle';
 $s_time_tracking_billing_link = 'Tijdsbesteding';
 $s_time_tracking = 'Tijdsbesteding bijhouden';
+$s_time_tracking_time_spent = 'Bestede tijd:';
 $s_time_tracking_get_info_button = 'Tijdsbesteding ophalen';
 $s_time_tracking_cost_per_hour = 'Tarief / uur';
 $s_time_tracking_cost = 'Kosten';
@@ -1195,7 +1200,7 @@ $s_copy_columns_from = 'Kolommen kopiëren van';
 $s_copy_columns_to = 'Kolommen kopiëren naar';
 $s_due_date = 'Plandatum';
 $s_overdue = 'Uit planning';
-$s_view_account_title = 'Gebruikersinformatie';
+$s_view_account_title = 'Gebruikersgegevens';
 $s_manage_user = 'Gebruiker beheren';
 $s_install_information = 'Installatiegegevens MantisBT';
 $s_database_information = 'Databaseinformatie MantisBT';

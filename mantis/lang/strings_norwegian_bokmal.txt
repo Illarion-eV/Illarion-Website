@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@
 $s_actiongroup_menu_move = 'Flytt til annet prosjekt';
 $s_actiongroup_menu_copy = 'Kopier til annet prosjekt';
 $s_actiongroup_menu_assign = 'Deleger til';
-$s_actiongroup_menu_close = 'Sett status til lukket';
+$s_actiongroup_menu_close = 'Lukk';
 $s_actiongroup_menu_delete = 'Slett';
 $s_actiongroup_menu_resolve = 'Sett status til løst';
 $s_actiongroup_menu_update_priority = 'Endre prioritet';
@@ -483,7 +483,7 @@ $s_to = 'Til';
 $s_sent_you_this_reminder_about = 'sendte deg denne påminnelsen om';
 $s_bug_reminder = 'Send en påminnelse';
 $s_reminder_sent_to = 'Påminnelse sendt til:';
-$s_bug_send_button = 'Sende';
+$s_bug_send_button = 'Send';
 $s_reminder = 'Påminnelse';
 $s_reminder_explain = 'Denne meldingen vil bli sendt til dem som har bedt om tilbakemelding på denne saken.';
 $s_reminder_monitor = 'Disse mottagerne vil også begynne å overvåke denne saken. De kan fjerne seg fra listen ved å bruke Avslutt overvåking-knappen.';
@@ -561,7 +561,7 @@ $s_error_database_version_out_of_date_2 = '<strong>ADVARSEL:</strong> Databasest
 $s_error_code_version_out_of_date = '<strong>ADVARSEL:</strong> Databasestrukturen er mer ajourført enn den installerte koden. Vennligst oppgrader koden.';
 $s_login_page_info = 'Velkommen til bugtracker.';
 $s_login_title = 'Innlogging';
-$s_save_login = 'Husk meg på denne datamaskinen';
+$s_save_login = 'Husk meg i denne nettleseren';
 $s_secure_session = 'Sikker økt';
 $s_secure_session_long = 'Bare tillat økten din å bli brukt fra denne IP-adressen.';
 $s_choose_project = 'Velg prosjekt';
@@ -588,7 +588,7 @@ $s_core_path = 'Filkatalog til Core';
 $s_plugin_path = 'Filbane til tillegssprogram';
 $s_created_user_part1 = 'Bruker opprettet';
 $s_created_user_part2 = 'med tilgangsnivå';
-$s_create_new_account_title = 'Opprette ny konto';
+$s_create_new_account_title = 'Opprett ny konto';
 $s_verify_password = 'Bekrefte passord';
 $s_enabled = 'Aktivert';
 $s_protected = 'Beskyttet';
@@ -609,7 +609,7 @@ $s_manage_threshold_config = 'Arbeidsflyt terskelverdier';
 $s_manage_email_config = 'Epost påminnelser';
 $s_manage_workflow_config = 'Arbeidsflyt';
 $s_manage_tags_link = 'Administrer Innmerkning';
-$s_create_new_account_link = 'Opprett konto';
+$s_create_new_account_link = 'Opprett ny konto';
 $s_projects_link = 'Prosjekter';
 $s_documentation_link = 'Dokumentasjon';
 $s_new_accounts_title = 'Nye kontoer';
@@ -837,7 +837,7 @@ $s_project_document_updated = 'Prosjekt oppdatert OK';
 $s_project_user_added_msg = 'Lagt til ny bruker til prosjektet';
 $s_project_removed_user_msg = 'Fjernet bruker fra prosjektet';
 $s_remove_user_sure_msg = 'Er du sikker på at du ønsker å fjerne brukeren?';
-$s_remove_user_button = 'Fjerne bruker';
+$s_remove_user_from_project_button = 'Fjern bruker fra prosjekt %s';
 $s_remove_all_users_sure_msg = 'Er du sikker på at du ønsker å slette alle brukerne i dette prosjektet?';
 $s_remove_all_users_button = 'Fjern alle brukere';
 $s_add_user_title = 'Legg bruker til prosjekt';
@@ -1010,7 +1010,7 @@ $s_custom_field_type_enum_string = '0:Streng,1:Numerisk,2:Flyttall,3:Oppramsing,
 $s_confirm_used_custom_field_deletion = 'Dette feltet brukes nå av minst ett annet prosjekt. Hvis du fortsetter vil alle verdier for dette feltet bli sletta. Det er ikke mulig å gå tilbake på dette valget. Hvis du ikke vil slette dette feltet, trykk Tilbake-knappen i vevleseren din. For å fortsette, trykk knappen under.';
 $s_confirm_custom_field_deletion = 'Er du sikker på at du vil slette dette feltet og alle dets tilkoblede verdier?';
 $s_field_delete_button = 'Slett felt';
-$s_confirm_custom_field_unlinking = 'Er du sikker på at du ønsker å fjerne koblingen mellom dette skreddersydde feltet og prosjektet og slette alle tilhørende verdier?';
+$s_confirm_custom_field_unlinking = 'Er du sikker på at du ønsker å fjerne koblingen mellom dette egendefinerte feltet og prosjektet? Verdiene vil ikke bli slettet så lenge det egendefinerte feltet ikke blir slettet.';
 $s_field_remove_button = 'Fjerne felt';
 $s_hide_status = 'Skjul status';
 $s_filter_closed = 'Lukket';
@@ -1082,7 +1082,7 @@ $s_update_issue_status = 'Oppdatere saksstatus';
 $s_set_view_status = 'Endre visningsstatus ved rapportering av et nytt problem eller notat';
 $s_update_view_status = 'Endre visningsstatus på eksisterende problem eller notat';
 $s_show_list_of_users_monitoring_issue = 'Se overvåkerliste';
-$s_notes = 'NOTATER';
+$s_notes = 'Notater';
 $s_add_notes = 'Legge til notat';
 $s_update_notes = 'Oppdatere notat';
 $s_delete_note = 'Slette notat';
@@ -1169,8 +1169,9 @@ $s_tag_related_issues = 'Delte saker (%1$s)';
 $s_tag_stats_attached = 'Saker koblet: %1$s';
 $s_tag_create = 'Opprett Innmerkning';
 $s_show_all_tags = 'Alle';
-$s_time_tracking_billing_link = 'Fakturering';
+$s_time_tracking_billing_link = 'Tidssporing';
 $s_time_tracking = 'Tidsstempling';
+$s_time_tracking_time_spent = 'Tid brukt:';
 $s_time_tracking_get_info_button = 'Hente tidsstempling';
 $s_time_tracking_cost_per_hour = 'Kostnad / time';
 $s_time_tracking_cost = 'Kostnad';

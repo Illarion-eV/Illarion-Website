@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -50,7 +50,7 @@
 		<?php echo lang_get( 'username' ) ?>
 	</td>
 	<td width="75%">
-		<input type="text" name="username" size="32" maxlength="<?php echo USERLEN;?>" />
+		<input type="text" name="username" size="32" maxlength="<?php echo DB_FIELD_SIZE_USERNAME;?>" />
 	</td>
 </tr>
 <?php
@@ -61,7 +61,7 @@
 		<?php echo lang_get( 'realname' ) ?>
 	</td>
 	<td>
-		<input type="text" name="realname" size="32" maxlength="<?php echo REALLEN;?>" />
+		<input type="text" name="realname" size="32" maxlength="<?php echo DB_FIELD_SIZE_REALNAME;?>" />
 	</td>
 </tr>
 <?php
@@ -87,7 +87,7 @@
 		<?php echo lang_get( 'password' ) ?>
 	</td>
 	<td>
-		<input type="password" name="password" size="32" maxlength="<?php echo PASSLEN;?>" />
+		<input type="password" name="password" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" />
 	</td>
 </tr>
 <tr <?php echo helper_alternate_class() ?>>
@@ -95,7 +95,7 @@
 		<?php echo lang_get( 'verify_password' ) ?>
 	</td>
 	<td>
-		<input type="password" name="password_verify" size="32" maxlength="<?php echo PASSLEN;?>" />
+		<input type="password" name="password_verify" size="32" maxlength="<?php echo auth_get_password_max_size(); ?>" />
 	</td>
 </tr>
 <?php

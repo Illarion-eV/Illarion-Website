@@ -20,7 +20,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -104,12 +104,12 @@
 			<td class="print">
 				<?php
 				echo print_user( $v3_reporter_id );
-				?>&nbsp;&nbsp;&nbsp;
+				?>&#160;&#160;&#160;
 			</td>
 		</tr>
 		<tr>
 			<td class="print">
-				<?php echo $v3_date_submitted ?>&nbsp;&nbsp;&nbsp;
+				<?php echo $v3_date_submitted ?>&#160;&#160;&#160;
 				<?php if ( $v3_date_submitted != $v3_last_modified ) {
 					echo '<br />(' . lang_get( 'edited_on') . lang_get( 'word_separator' ) . $v3_last_modified . ')';
 				} ?>
@@ -128,7 +128,7 @@
 							$v3_note_attr = utf8_substr( $v3_note_attr, 1, utf8_strlen( $v3_note_attr ) - 2 );
 							$t_to = array();
 							foreach ( explode( '|', $v3_note_attr ) as $t_recipient ) {
-								$t_to[] = user_get_name( $t_recipient );
+								$t_to[] = string_display_line( user_get_name( $t_recipient ) );
 							}
 							echo implode( ', ', $t_to ) . '</div><br />';
 						default:

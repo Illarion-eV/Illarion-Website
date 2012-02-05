@@ -18,7 +18,7 @@
  * @package Tests
  * @subpackage UnitTests
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -33,6 +33,9 @@ class SoapBase extends PHPUnit_Framework_TestCase {
 	protected $client;
 	protected $userName = 'administrator';
 	protected $password = 'root';
+	protected $userId = '1';
+	
+	protected $mantisPath;
 	private   $issueIdsToDelete = array();
 	private   $versionIdsToDelete = array();
 	private   $defaultSoapClientOptions = array(  'trace'      => true,
@@ -54,6 +57,8 @@ class SoapBase extends PHPUnit_Framework_TestCase {
 		       	array_merge($this->defaultSoapClientOptions, $this->extraSoapClientFlags()
 				)		     
 		    );
+	    
+	    $this->mantisPath = substr($GLOBALS['MANTIS_TESTSUITE_SOAP_HOST'], 0, -strlen('api/soap/mantisconnect.php?wsdl'));
     }
     
     /**

@@ -18,7 +18,7 @@
  * @package CoreAPI
  * @subpackage CustomFieldAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -1169,21 +1169,28 @@ function custom_field_validate( $p_field_id, $p_value ) {
 			$t_valid &= ( $p_value == null ) || ( ( $p_value !== false ) && ( $p_value > 0 ) );
 			break;
 		case CUSTOM_FIELD_TYPE_CHECKBOX:
+		case CUSTOM_FIELD_TYPE_MULTILIST:
 			# Checkbox fields can hold a null value (when no checkboxes are ticked)
-			if( $p_value === '' ) {
+			if ( $p_value === '' ) {
 				break;
 			}
+
 			# If checkbox field value is not null then we need to validate it... (note: no "break" statement here!)
-		case CUSTOM_FIELD_TYPE_MULTILIST:
 			$t_values = explode( '|', $p_value );
 			$t_possible_values = custom_field_prepare_possible_values( $row['possible_values'] );
 			$t_possible_values = explode( '|', $t_possible_values );
 			$t_invalid_values = array_diff( $t_values, $t_possible_values );
 			$t_valid &= ( count( $t_invalid_values ) == 0 );
 			break;
-		case CUSTOM_FIELD_TYPE_ENUM:
 		case CUSTOM_FIELD_TYPE_LIST:
+		case CUSTOM_FIELD_TYPE_ENUM:
 		case CUSTOM_FIELD_TYPE_RADIO:
+			# List fields can be empty (when they are not shown on the form or shown with no default values and never clicked)
+			if ( is_blank( $p_value ) ) {
+				break;
+			}
+
+			# If list field value is not empty then we need to validate it... (note: no "break" statement here!)
 			$t_possible_values = custom_field_prepare_possible_values( $row['possible_values'] );
 			$t_values_arr = explode( '|', $t_possible_values );
 			$t_valid &= in_array( $p_value, $t_values_arr );
@@ -1419,8 +1426,6 @@ function print_custom_field_input( $p_field_def, $p_bug_id = null ) {
 			$t_custom_field_value = custom_field_default_to_value( $p_field_def['default_value'], $p_field_def['type'] );
 		}
 	}
-
-	$t_custom_field_value = string_attribute( $t_custom_field_value );
 
 	global $g_custom_field_type_definition;
 	if( isset( $g_custom_field_type_definition[$p_field_def['type']]['#function_print_input'] ) ) {

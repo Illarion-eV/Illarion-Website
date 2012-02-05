@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,6 +29,7 @@
  * @author Fievarsty
  * @author Fryed-peach
  * @author Hosiryuhosi
+ * @author Iwai.masaharu
  * @author Seiji
  * @author Seiji Sogabe, sogabe@alles.or.jp
  * @author Tadashi Jokagi, elf2000@users.sourceforge.net
@@ -181,7 +182,7 @@ $MANTIS_ERROR[ERROR_ACCESS_DENIED] = 'アクセスが拒否されました。';
 $MANTIS_ERROR[ERROR_UPLOAD_FAILURE] = 'ファイルのアップロードに失敗しました。MantisBT がファイルを読めません。プロジェクト管理を確認してください。';
 $MANTIS_ERROR[ERROR_FILE_TOO_BIG] = 'ファイルのアップロードに失敗しました。PHP で設定されているファイルサイズより大きいことが問題です。設定を確認してください。';
 $MANTIS_ERROR[ERROR_GPC_VAR_NOT_FOUND] = 'このページで必須のパラメーター「%1$s」がありません。';
-$MANTIS_ERROR[ERROR_USER_NAME_NOT_UNIQUE] = 'ユーザー名は既に使用されています。戻って別のユーザー名を選択してください。';
+$MANTIS_ERROR[ERROR_USER_NAME_NOT_UNIQUE] = '利用者名は既に使用されています。戻って別の利用者名を選択してください。';
 $MANTIS_ERROR[ERROR_CONFIG_OPT_NOT_FOUND] = '設定項目「%1$s」がありません。';
 $MANTIS_ERROR[ERROR_CONFIG_OPT_CANT_BE_SET_IN_DB] = '設定項目「%1$s」をデータベースに設定することはできません。config_inc.php に設定してください。';
 $MANTIS_ERROR[ERROR_LANG_STRING_NOT_FOUND] = '文字列「%1$s」がありません。';
@@ -307,7 +308,7 @@ $s_sponsorship_enum_string = '0:未払い,1:要求中,2:支払済';
 $s_new_account_subject = 'アカウント登録';
 $s_new_account_greeting = '登録ありがとうございます。あなたのアカウントの名前は「%1$s」です。登録を完了するには、次の URL（単一の行に収まっているか確かめてください）のページを閲覧して自分のパスワードを設定してください。';
 $s_new_account_greeting_admincreated = '利用者 %1$s があなたに「%2$s」という名前のアカウントを作成しました。登録を完了するには、次の URL（単一の行に収まっているか確かめてください）のページを閲覧して自分のパスワードを設定してください。';
-$s_new_account_username = '利用者名:';
+$s_new_account_username = '利用者名：';
 $s_new_account_message = '登録した覚えがなければ、このメッセージを無視してください。';
 $s_new_account_do_not_reply = 'このメッセージに返信しないでください。';
 $s_new_account_email = '電子メール:';
@@ -560,7 +561,7 @@ $s_error_database_version_out_of_date_2 = '<strong>警告:</strong> データベ
 $s_error_code_version_out_of_date = '<strong>警告:</strong> データベースの構造がインストールしたコードより新しいようです。コードをアップグレードしてください。';
 $s_login_page_info = 'MantisBT へようこそ。';
 $s_login_title = 'ログイン';
-$s_save_login = 'このコンピューターにログイン情報を保存する';
+$s_save_login = 'このブラウザーにログイン情報を保存する';
 $s_secure_session = 'セキュア・セッション';
 $s_secure_session_long = 'セッションをこのIPアドレスに限定する。';
 $s_choose_project = 'プロジェクト選択';
@@ -837,7 +838,7 @@ $s_project_document_updated = '更新されました。';
 $s_project_user_added_msg = 'プロジェクトに利用者を追加しました。';
 $s_project_removed_user_msg = 'プロジェクトから利用者を削除しました。';
 $s_remove_user_sure_msg = '本当にこの利用者をプロジェクトから削除しますか？';
-$s_remove_user_button = '利用者を削除';
+$s_remove_user_from_project_button = 'プロジェクト %s から利用者を削除する';
 $s_remove_all_users_sure_msg = 'このプロジェクトからすべての利用者を削除してよろしいですか？';
 $s_remove_all_users_button = '全利用者削除';
 $s_add_user_title = 'プロジェクトへの利用者追加';
@@ -1010,7 +1011,7 @@ $s_custom_field_type_enum_string = '0:文字列,1:整数,2:浮動小数点,3:列
 $s_confirm_used_custom_field_deletion = 'このカスタム項目は、現在1つ以上のプロジェクトで使用されています。<br />もし続行するならば、この項目のすべての値は削除されます。削除したら戻すことはできません。<br />削除したくないなら、ブラウザの戻るボタンを選択してください。続行するなら、下のボタンをクリックしてください。';
 $s_confirm_custom_field_deletion = 'このカスタム項目とすべての設定した値を削除してよろしいですか。';
 $s_field_delete_button = '項目の削除';
-$s_confirm_custom_field_unlinking = 'このカスタム項目をプロジェクトから削除して値を削除してよろしいですか。';
+$s_confirm_custom_field_unlinking = 'このカスタム項目をプロジェクトから削除してもいいですか？カスタム項目自体を削除しない限り、値は削除されません。';
 $s_field_remove_button = '項目の削除';
 $s_hide_status = 'ステータス非表示';
 $s_filter_closed = '完了';

@@ -17,7 +17,7 @@
 /**
  * @package Tests
  * @subpackage UnitTests
- * @copyright Copyright (C) 2002 - 2010  Mantis Team   - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  Mantis Team   - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -28,6 +28,7 @@ require_once dirname(__FILE__) . '/../TestConfig.php';
 
 require_once 'EnumTest.php';
 require_once 'IssueAddTest.php';
+require_once 'IssueMonitorTest.php';
 require_once 'IssueNoteTest.php';
 require_once 'IssueUpdateTest.php';
 require_once 'FilterTest.php';
@@ -36,11 +37,14 @@ require_once 'LoginTest.php';
 require_once 'CategoryTest.php';
 require_once 'CompressionTest.php';
 require_once 'ProjectTest.php';
+require_once 'VersionTest.php';
+require_once 'RelationshipTest.php';
+require_once 'UserTest.php';
 
 /**
  * @package    Tests
  * @subpackage UnitTests
- * @copyright Copyright (C) 2002 - 2010  Mantis Team   - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  Mantis Team   - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 class Soap_AllTests extends PHPUnit_Framework_TestSuite
@@ -61,6 +65,7 @@ class Soap_AllTests extends PHPUnit_Framework_TestSuite
 
         $suite->addTestSuite('EnumTest');
         $suite->addTestSuite('IssueAddTest');
+        $suite->addTestSuite('IssueMonitorTest');
         $suite->addTestSuite('IssueNoteTest');
         $suite->addTestSuite('IssueUpdateTest');
         $suite->addTestSuite('FilterTest');
@@ -68,7 +73,10 @@ class Soap_AllTests extends PHPUnit_Framework_TestSuite
         $suite->addTestSuite('LoginTest');
         $suite->addTestSuite('CategoryTest');
         $suite->addTestSuite('CompressionTest');
-	$suite->addTestSuite('ProjectTest');
+	    $suite->addTestSuite('ProjectTest');
+	    $suite->addTestSuite('VersionTest');
+	    $suite->addTestSuite('RelationshipTest');
+	    $suite->addTestSuite('UserTest');
 
         return $suite;
     }

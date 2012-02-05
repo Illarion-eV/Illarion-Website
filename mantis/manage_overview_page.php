@@ -16,7 +16,7 @@
 
 	/**
 	 * @package MantisBT
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -34,7 +34,7 @@
 	print_manage_menu();
 ?>
 
-<br/>
+<br />
 <table class="width75" align="center" cellspacing="1">
 
 <tr>

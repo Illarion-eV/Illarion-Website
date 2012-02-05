@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -217,7 +217,7 @@ function mci_explode_to_objectref( $p_enumeration_name ) {
 	
 	$t_config_var_name = $p_enumeration_name . '_enum_string';
 	$t_config_var_value = config_get( $t_config_var_name );
-	$t_translated_values = lang_get( $t_config_var_name );
+	$t_translated_values = lang_get( $t_config_var_name, mci_get_user_lang( auth_get_current_user_id() ) );
 
 	$t_enum_values = MantisEnum::getValues( $t_config_var_value );
 	

@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -39,6 +39,10 @@
 	# Ensure that the account to be reset is of equal or lower access to the
 	# current user.
 	access_ensure_global_level( $t_user['access_level'] );
+
+	if ( !helper_call_custom_function( 'auth_can_change_password', array() ) ) {
+		trigger_error( ERROR_LOST_PASSWORD_NOT_ENABLED, ERROR );
+	}
 
 	$t_result = user_reset_password( $f_user_id );
 	$t_redirect_url = 'manage_user_page.php';

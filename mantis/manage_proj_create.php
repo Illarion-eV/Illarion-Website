@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -44,13 +44,6 @@
 
 	if ( 0 != $f_parent_id ) {
 		project_ensure_exists( $f_parent_id );
-	}
-
-	# If the provided path is the same as the default, make the path blank.
-	# This means that if the default upload path is changed, you don't have
-	# to update the upload path for every single project.
-	if ( !strcmp( $f_file_path, config_get( 'absolute_path_default_upload_folder' ) ) ) {
-		$f_file_path = '';
 	}
 
 	$t_project_id = project_create( strip_tags( $f_name ), $f_description, $f_status, $f_view_state, $f_file_path, true, $f_inherit_global );

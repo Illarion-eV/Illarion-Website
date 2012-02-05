@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @author Marcello Scata' <marcelloscata at users.sourceforge.net> ITALY
 	 * @link http://www.mantisbt.org
 	 */
@@ -41,7 +41,7 @@
 		$t_output .= '<tr><td class="form-title" width="40%">' . lang_get( 'perm_rpt_capability' ) . '</td>';
 
 		foreach( $t_access_levels as $t_access_level ) {
-			$t_output .= '<td class="form-title" style="text-align:center">&nbsp;' . MantisEnum::getLabel( lang_get( 'access_levels_enum_string' ), $t_access_level ) . '&nbsp;</td>';
+			$t_output .= '<td class="form-title" style="text-align:center">&#160;' . MantisEnum::getLabel( lang_get( 'access_levels_enum_string' ), $t_access_level ) . '&#160;</td>';
 		}
 
 		$t_output .= '</tr>' . "\n";
@@ -57,7 +57,7 @@
 			if ( $t_access_level >= (int)$p_access_level ) {
 				$t_value = '<img src="images/ok.gif" width="20" height="15" alt="X" title="X" />';
 			} else {
-				$t_value = '&nbsp;';
+				$t_value = '&#160;';
 			}
 
 			$t_output .= '<td class="center">' . $t_value . '</td>';

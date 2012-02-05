@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,6 +38,7 @@ $s_actiongroup_menu_delete = 'Zmazať';
 $s_actiongroup_menu_resolve = 'Vyriešiť';
 $s_actiongroup_menu_update_priority = 'Aktualizovať Prioritu';
 $s_actiongroup_menu_update_status = 'Aktualizovať Stav';
+$s_actiongroup_menu_update_severity = 'Zmeniť stupeň obtiažnosti';
 $s_actiongroup_menu_update_view_status = 'Aktualizovať Stav Zobrazenia';
 $s_actiongroup_menu_update_category = 'Aktualizovať Kategóriu';
 $s_actiongroup_menu_set_sticky = 'Nastaviť/Zrušiť Fixáciu';
@@ -150,6 +151,7 @@ $s_view_status_group_bugs_button = 'Obnoviť zobrazenie problému';
 $s_set_sticky_group_bugs_button = 'Zmeniť Fixáciu';
 $s_fixed_in_version_group_bugs_button = 'Zmeniť "vyriešené vo verzii"';
 $s_target_version_group_bugs_button = 'Zmeniť Cieľovú Verziu';
+$s_update_severity_title = 'Zmeniť stupeň obtiažnosti';
 $s_hide_button = 'Zobraziť iba označené';
 $s_printing_preferences_title = 'Ktoré polia sa budú tlačiť';
 $s_printing_options_link = 'Nastavenia tlače';
@@ -823,7 +825,6 @@ $s_project_document_updated = 'Projekt bol úspešne aktualizovný';
 $s_project_user_added_msg = 'Používateľ bol úspešne priradený k projektu';
 $s_project_removed_user_msg = 'Používateľ bol úspešne odobratý z projektu';
 $s_remove_user_sure_msg = 'Naozaj odobrať tohto používateľa?';
-$s_remove_user_button = 'Odstrániť Užívateľa';
 $s_remove_all_users_sure_msg = 'Naozaj si prajete odobrať všetkých používateľov tohto projektu?';
 $s_remove_all_users_button = 'Odstrániť Všetkých Užívateľov';
 $s_add_user_title = 'Pridať používateľa k projektu';

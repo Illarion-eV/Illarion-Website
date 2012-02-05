@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@
  * @ingroup Language
  * @file
  *
+ * @author McDutchie
  * @author Toliño
  */
 
@@ -45,7 +46,7 @@ $s_actiongroup_menu_update_target_version = 'Actualizar a versión prevista';
 $s_actiongroup_menu_update_fixed_in_version = 'Actualizar a versión arranxada';
 $s_actiongroup_menu_update_product_build = 'Actualizar a compilación do produto';
 $s_actiongroup_menu_add_note = 'Engadir unha nota';
-$s_actiongroup_menu_attach_tags = 'Adxuntar unhas etiquetas';
+$s_actiongroup_menu_attach_tags = 'Anexar unhas etiquetas';
 $s_actiongroup_bugs = 'Problemas seleccionados';
 $s_actiongroup_error_issue_is_readonly = 'O problema é de só lectura.';
 $s_all_projects = 'Todos os proxectos';
@@ -552,7 +553,7 @@ $s_error_database_version_out_of_date_2 = '<strong>ADVERTENCIA:</strong> a estru
 $s_error_code_version_out_of_date = '<strong>ADVERTENCIA:</strong> a estrutura da base de datos está máis actualizada que o código instalado. Por favor, actualice o código.';
 $s_login_page_info = 'Benvido ao sistema de xestión dos problemas.';
 $s_login_title = 'Rexistro';
-$s_save_login = 'Lembrar o meu contrasinal neste ordenador';
+$s_save_login = 'Lembrar o meu contrasinal neste navegador';
 $s_secure_session = 'Sesión segura';
 $s_secure_session_long = 'Permitir que se use a súa sesión soamente desde este enderezo IP.';
 $s_choose_project = 'Elixir o proxecto';
@@ -726,7 +727,7 @@ $s_add_and_edit_version_button = 'Engadir e editar a versión';
 $s_edit_link = 'Editar';
 $s_actions = 'Accións';
 $s_version = 'Versión';
-$s_timestamp = 'Marca de tempo';
+$s_timestamp = 'Data e hora';
 $s_update = 'Actualizar';
 $s_subprojects = 'Subproxectos';
 $s_add_subproject = 'Engadir como un subproxecto';
@@ -742,7 +743,7 @@ $s_name = 'Nome';
 $s_project_updated_msg = 'O proxecto foi actualizado con éxito...';
 $s_version_added_msg = 'A versión foi engadida con éxito...';
 $s_version_deleted_msg = 'A versión foi borrada con éxito...';
-$s_version_delete_sure = 'Está seguro de que quere borrar esta versión?';
+$s_version_delete_sure = 'Está seguro de querer borrar esta versión?';
 $s_delete_version_button = 'Borrar a versión';
 $s_edit_project_version_title = 'Editar a versión do proxecto';
 $s_update_version_button = 'Actualizar a versión';
@@ -828,7 +829,7 @@ $s_project_document_updated = 'Actualización do proxecto exitosa.';
 $s_project_user_added_msg = 'O usuario foi engadido ao proxecto con éxito.';
 $s_project_removed_user_msg = 'O usuario foi eliminado do proxecto con éxito.';
 $s_remove_user_sure_msg = 'Está seguro de querer eliminar este usuario?';
-$s_remove_user_button = 'Eliminar o usuario';
+$s_remove_user_from_project_button = 'Eliminar o usuario do proxecto %s';
 $s_remove_all_users_sure_msg = 'Está seguro de querer eliminar todos os usuarios deste proxecto?';
 $s_remove_all_users_button = 'Borrar todos os usuarios';
 $s_add_user_title = 'Engadir un usuario ao proxecto';
@@ -846,7 +847,7 @@ $s_report_more_bugs = 'Informar de máis problemas';
 $s_submission_thanks_msg = 'Grazas polo seu envío.';
 $s_simple_report_link = 'Informe sinxelo';
 $s_enter_report_details_title = 'Insira os detalles do informe';
-$s_required = 'requirido';
+$s_required = 'obrigatorio';
 $s_select_category = 'Seleccionar a categoría';
 $s_select_reproducibility = 'Seleccionar a reproducibilidade';
 $s_select_severity = 'Seleccionar a severidade';
@@ -854,7 +855,7 @@ $s_or_fill_in = 'OU encha';
 $s_assign_to = 'Asignar a';
 $s_additional_information = 'Información adicional';
 $s_submit_report_button = 'Enviar o informe';
-$s_check_report_more_bugs = 'verificar para informar de máis problemas';
+$s_check_report_more_bugs = 'marcar para informar de máis problemas';
 $s_report_stay = 'Continuar o informe';
 $s_selected_project = 'Proxecto seleccionado';
 $s_valid_project_msg = 'Debe seleccionar un proxecto válido.';
@@ -925,7 +926,7 @@ $s_prev = 'Anterior';
 $s_next = 'Seguinte';
 $s_first = 'Primeiro';
 $s_last = 'Último';
-$s_start_date = 'Data de comezo';
+$s_start_date = 'Data de inicio';
 $s_end_date = 'Data de fin';
 $s_use_date_filters = 'Usar os filtros de data';
 $s_yes = 'Si';
@@ -1002,7 +1003,7 @@ $s_custom_field_type_enum_string = '0:Corda,1:Numérico,2:Flutuar,3:Enumeración
 $s_confirm_used_custom_field_deletion = 'Este campo está actualmente ligado a, polo menos, un proxecto. Se continúa, todos os valores deste campo serán eliminados permanentemente. Esta acción non poderá ser desfeita. Se non desexa borrar este campo, prema no botón "Volver" do seu navegador. Para continuar, prema no botón de embaixo';
 $s_confirm_custom_field_deletion = 'Está seguro de querer eliminar este campo personalizado e todos os valores asociados?';
 $s_field_delete_button = 'Borrar o campo';
-$s_confirm_custom_field_unlinking = 'Está seguro de querer eliminar (desligar) este campo personalizado do proxecto e borrar todos os valores asociados?';
+$s_confirm_custom_field_unlinking = 'Está seguro de querer eliminar (desligar) este campo personalizado do proxecto? Os valores asociados non se borrarán mentres non borre o campo personalizado.';
 $s_field_remove_button = 'Eliminar o campo';
 $s_hide_status = 'Agochar o estado';
 $s_filter_closed = 'Pechado';
@@ -1144,9 +1145,9 @@ $s_tag_delete_button = 'Borrar a etiqueta';
 $s_tag_delete_message = 'Está seguro de querer borrar esta etiqueta?';
 $s_tag_existing = 'Etiquetas existentes';
 $s_tag_none_attached = 'Non se adxuntaron as etiquetas.';
-$s_tag_attach = 'Adxuntar';
-$s_tag_attach_long = 'Adxuntar as etiquetas';
-$s_tag_attach_failed = 'Fallou o proceso de adxuntar a etiqueta.';
+$s_tag_attach = 'Anexar';
+$s_tag_attach_long = 'Anexar as etiquetas';
+$s_tag_attach_failed = 'Fallou o proceso de anexar a etiqueta.';
 $s_tag_detach = 'Separar "1$s"';
 $s_tag_separate_by = '(Separado por "%1$s")';
 $s_tag_invalid_name = 'Nome de etiqueta inválido.';
@@ -1160,8 +1161,9 @@ $s_tag_related_issues = 'Problemas compartidos (%1$s)';
 $s_tag_stats_attached = 'Problemas adxuntos: %1$s';
 $s_tag_create = 'Crear a etiqueta';
 $s_show_all_tags = 'TODAS';
-$s_time_tracking_billing_link = 'Facturación';
+$s_time_tracking_billing_link = 'Seguimento dos tempos';
 $s_time_tracking = 'Seguimento dos tempos';
+$s_time_tracking_time_spent = 'Tempo empregado:';
 $s_time_tracking_get_info_button = 'Obter a información do seguimento dos tempos';
 $s_time_tracking_cost_per_hour = 'Custo/Hora';
 $s_time_tracking_cost = 'Custo';

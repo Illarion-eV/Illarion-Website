@@ -20,7 +20,7 @@
  *
  * @package MantisBT
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -183,9 +183,10 @@ $num_notes = count( $t_bugnotes );
 						$t_to[] = prepare_user_name( $t_recipient );
 					}
 					echo implode( ', ', $t_to ) . '</em><br /><br />';
+					break;
 				case TIME_TRACKING:
 					if ( access_has_bug_level( config_get( 'time_tracking_view_threshold' ), $f_bug_id ) ) {
-						echo '<b><big>', $t_time_tracking_hhmm, '</big></b><br /><br />';
+						echo '<b>', lang_get( 'time_tracking_time_spent' ) . ' ' . $t_time_tracking_hhmm, '</b><br /><br />';
 					}
 					break;
 			}

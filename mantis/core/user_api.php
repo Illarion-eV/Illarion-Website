@@ -19,7 +19,7 @@
  * @package CoreAPI
  * @subpackage UserAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  */
 
 /**
@@ -284,8 +284,8 @@ function user_ensure_realname_valid( $p_realname ) {
 # Return true if it is, false otherwise
 function user_is_name_valid( $p_username ) {
 
-	# The DB field is hard-coded. USERLEN should not be modified.
-	if( utf8_strlen( $p_username ) > USERLEN ) {
+	# The DB field is hard-coded. DB_FIELD_SIZE_USERNAME should not be modified.
+	if( utf8_strlen( $p_username ) > DB_FIELD_SIZE_USERNAME ) {
 		return false;
 	}
 
@@ -815,7 +815,7 @@ function user_get_avatar( $p_user_id, $p_size = 80 ) {
 			$t_gravatar_domain = 'https://secure.gravatar.com/';
 		}
 
-		$t_avatar_url = $t_gravatar_domain . 'avatar.php?gravatar_id=' . md5( $t_email ) . '&default=' . urlencode( $t_default_image ) . '&size=' . $t_size . '&rating=G';
+		$t_avatar_url = $t_gravatar_domain . 'avatar/' . md5( $t_email ) . '?default=' . urlencode( $t_default_image ) . '&size=' . $t_size . '&rating=G';
 		$t_result = array(
 			$t_avatar_url,
 			$t_size,

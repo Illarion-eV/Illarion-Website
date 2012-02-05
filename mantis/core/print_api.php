@@ -19,7 +19,7 @@
  * @package CoreAPI
  * @subpackage PrintAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -47,6 +47,8 @@ require_once( 'last_visited_api.php' );
  * requires file_api
  */
 require_once( 'file_api.php' );
+
+require_once( 'bug_group_action_api.php' );
 
 # --------------------
 # Print the headers to cause the page to redirect to $p_url
@@ -191,9 +193,9 @@ function print_email_input( $p_field_name, $p_email ) {
 
 		# remove the domain part
 		$p_email = preg_replace( '/@' . preg_quote( $t_limit_email_domain, '/' ) . '$/i', '', $p_email );
-		echo '<input type="text" name="' . $p_field_name . '" size="20" maxlength="64" value="' . $p_email . '" />@' . $t_limit_email_domain;
+		echo '<input type="text" name="' . string_attribute( $p_field_name ) . '" size="20" maxlength="64" value="' . string_attribute( $p_email ) . '" />@' . string_display_line( $t_limit_email_domain );
 	} else {
-		echo '<input type="text" name="' . $p_field_name . '" size="32" maxlength="64" value="' . $p_email . '" />';
+		echo '<input type="text" name="' . string_attribute( $p_field_name ) . '" size="32" maxlength="64" value="' . string_attribute( $p_email ) . '" />';
 	}
 }
 
@@ -311,7 +313,7 @@ function print_tag_input( $p_bug_id = 0, $p_string = '' ) {
 function print_tag_option_list( $p_bug_id = 0 ) {
 	$t_rows = tag_get_candidates_for_bug( $p_bug_id );
 
-	echo '<option value="0">', lang_get( 'tag_existing' ), '</option>';
+	echo '<option value="0">', string_html_specialchars( lang_get( 'tag_existing' ) ), '</option>';
 	foreach ( $t_rows as $row ) {
 		$t_string = $row['name'];
 		if ( !empty( $row['description'] ) ) {
@@ -498,7 +500,7 @@ function print_subproject_option_list( $p_parent_id, $p_project_id = null, $p_fi
 			}
 			echo $t_full_id . '"';
 			check_selected( $p_project_id, $t_full_id );
-			echo '>' . str_repeat( '&nbsp;', count( $p_parents ) ) . str_repeat( '&raquo;', count( $p_parents ) ) . ' ' . string_attribute( project_get_field( $t_id, 'name' ) ) . '</option>' . "\n";
+			echo '>' . str_repeat( '&#160;', count( $p_parents ) ) . str_repeat( '&raquo;', count( $p_parents ) ) . ' ' . string_attribute( project_get_field( $t_id, 'name' ) ) . '</option>' . "\n";
 			print_subproject_option_list( $t_id, $p_project_id, $p_filter_project_id, $p_trace, $p_parents );
 		}
 	}
@@ -543,7 +545,7 @@ function print_extended_project_browser( $p_trace = Array(), $p_project_id = nul
 	echo "\t" . 'var spInput = document.form_set_project.project_id;' . "\n";
 	echo "\t" . 'spInput.options.length = 0' . "\n";
 	echo "\t" . 'if (projectVal == "' . ALL_PROJECTS . '") {' . "\n";
-	echo "\t\t" . 'spInput.options[0] = new Option(\'--- All Projects ---\', \'' . ALL_PROJECTS . '\');' . "\n";
+	echo "\t\t" . 'spInput.options[0] = new Option(\'' . lang_get( 'all_projects' ) . '\', \'' . ALL_PROJECTS . '\');' . "\n";
 	echo "\t" . '} else {' . "\n";
 	echo "\t\t" . 'var i = 0;' . "\n";
 	echo "\t\t" . 'var project = subprojects[ projectVal ];' . "\n";
@@ -597,7 +599,7 @@ function print_extended_project_browser_subproject_javascript( $p_trace ) {
 
 	for( $i = 0;$i < $t_project_count;$i++ ) {
 		$t_id = $t_project_ids[$i];
-		$t_name = addslashes( str_repeat(( '&nbsp;' ), $t_level ) . str_repeat(( '&raquo;' ), $t_level ) . ' ' . project_get_field( $t_id, 'name' ) );
+		$t_name = addslashes( str_repeat(( '&#160;' ), $t_level ) . str_repeat(( '&raquo;' ), $t_level ) . ' ' . project_get_field( $t_id, 'name' ) );
 		echo 'subprojects[\'' . $t_top_id . '\'][\'' . $p_trace . ';' . $t_id . '\'] = \'' . $t_name . '\';' . "\n";
 
 		print_extended_project_browser_subproject_javascript( $p_trace . ';' . $t_id );
@@ -683,42 +685,18 @@ function print_category_option_list( $p_category_id = 0, $p_project_id = null ) 
 	}
 }
 
-# Now that categories are identified by numerical ID, we need an old-style name
-# based option list to keep existing filter functionality.
+/**
+ *	Now that categories are identified by numerical ID, we need an old-style name
+ *	based option list to keep existing filter functionality.
+ *	@param string $p_category_name The selected category
+ *	@param mixed $p_project_id A specific project or null
+ */
 function print_category_filter_option_list( $p_category_name = '', $p_project_id = null ) {
-	$t_category_table = db_get_table( 'mantis_category_table' );
-	$t_project_table = db_get_table( 'mantis_project_table' );
+	$t_cat_arr = category_get_filter_list( $p_project_id );
 
-	if( null === $p_project_id ) {
-		$c_project_id = helper_get_current_project();
-	} else {
-		$c_project_id = db_prepare_int( $p_project_id );
-	}
-
-	$t_project_ids = project_hierarchy_inheritance( $c_project_id );
-
-	$t_subproject_ids = array();
-	foreach( $t_project_ids as $t_project_id ) {
-		$t_subproject_ids = array_merge( $t_subproject_ids, current_user_get_all_accessible_subprojects( $t_project_id ) );
-	}
-
-	$t_project_ids = array_merge( $t_project_ids, $t_subproject_ids );
-	$t_project_where = ' project_id IN ( ' . implode( ', ', $t_project_ids ) . ' ) ';
-
-	# grab all categories in the project category table
-	$cat_arr = array();
-	$query = "SELECT DISTINCT name FROM $t_category_table
-				WHERE $t_project_where
-				ORDER BY name";
-	$result = db_query( $query );
-
-	while( $row = db_fetch_array( $result ) ) {
-		$cat_arr[] = $row['name'];
-	}
-	sort( $cat_arr );
-
-	foreach( $cat_arr as $t_name ) {
-		$t_name = string_attribute( $t_name );
+	natcasesort( $t_cat_arr );
+	foreach( $t_cat_arr as $t_cat ) {
+		$t_name = string_attribute( $t_cat );
 		echo '<option value="' . $t_name . '"';
 		check_selected( string_attribute( $p_category_name ), $t_name );
 		echo '>' . $t_name . '</option>';
@@ -969,68 +947,16 @@ function print_language_option_list( $p_language ) {
 	}
 }
 
-# @@@ preliminary support for multiple bug actions.
-function print_all_bug_action_option_list() {
-	$commands = array(
-		'MOVE' => lang_get( 'actiongroup_menu_move' ),
-		'COPY' => lang_get( 'actiongroup_menu_copy' ),
-		'ASSIGN' => lang_get( 'actiongroup_menu_assign' ),
-		'CLOSE' => lang_get( 'actiongroup_menu_close' ),
-		'DELETE' => lang_get( 'actiongroup_menu_delete' ),
-		'RESOLVE' => lang_get( 'actiongroup_menu_resolve' ),
-		'SET_STICKY' => lang_get( 'actiongroup_menu_set_sticky' ),
-		'UP_PRIOR' => lang_get( 'actiongroup_menu_update_priority' ),
-		'EXT_UPDATE_SEVERITY' => lang_get( 'actiongroup_menu_update_severity' ),
-		'UP_STATUS' => lang_get( 'actiongroup_menu_update_status' ),
-		'UP_CATEGORY' => lang_get( 'actiongroup_menu_update_category' ),
-		'VIEW_STATUS' => lang_get( 'actiongroup_menu_update_view_status' ),
-		'EXT_UPDATE_PRODUCT_BUILD' => lang_get( 'actiongroup_menu_update_product_build' ),
-		'EXT_ADD_NOTE' => lang_get( 'actiongroup_menu_add_note' ),
-		'EXT_ATTACH_TAGS' => lang_get( 'actiongroup_menu_attach_tags' ),
-	);
-
-	$t_project_id = helper_get_current_project();
-
-	if( ALL_PROJECTS != $t_project_id ) {
-		$t_user_id = auth_get_current_user_id();
-
-		if( access_has_project_level( config_get( 'update_bug_threshold' ), $t_project_id ) ) {
-			$commands['UP_FIXED_IN_VERSION'] = lang_get( 'actiongroup_menu_update_fixed_in_version' );
-		}
-
-		if( access_has_project_level( config_get( 'roadmap_update_threshold' ), $t_project_id ) ) {
-			$commands['UP_TARGET_VERSION'] = lang_get( 'actiongroup_menu_update_target_version' );
-		}
-
-		$t_custom_field_ids = custom_field_get_linked_ids( $t_project_id );
-
-		foreach( $t_custom_field_ids as $t_custom_field_id ) {
-			# if user has not access right to modify the field, then there is no
-			# point in showing it.
-			if( !custom_field_has_write_access_to_project( $t_custom_field_id, $t_project_id, $t_user_id ) ) {
-				continue;
-			}
-
-			$t_custom_field_def = custom_field_get_definition( $t_custom_field_id );
-			$t_command_id = 'custom_field_' . $t_custom_field_id;
-			$t_command_caption = sprintf( lang_get( 'actiongroup_menu_update_field' ), lang_get_defaulted( $t_custom_field_def['name'] ) );
-			$commands[$t_command_id] = string_display( $t_command_caption );
-		}
-	}
-
-	$t_custom_group_actions = config_get( 'custom_group_actions' );
-
-	foreach( $t_custom_group_actions as $t_custom_group_action ) {
-		# use label if provided to get the localized text, otherwise fallback to action name.
-		if( isset( $t_custom_group_action['label'] ) ) {
-			$commands[$t_custom_group_action['action']] = lang_get_defaulted( $t_custom_group_action['label'] );
-		} else {
-			$commands[$t_custom_group_action['action']] = lang_get_defaulted( $t_custom_group_action['action'] );
-		}
-	}
-
-	while( list( $key, $val ) = each( $commands ) ) {
-		echo '<option value="' . $key . '">' . $val . '</option>';
+/**
+ * Print a dropdown list of all bug actions available to a user for a specified
+ * set of projects.
+ * @param array $p_projects An array containing one or more project IDs
+ * @return null
+ */
+function print_all_bug_action_option_list( $p_project_ids = null ) {
+	$t_commands = bug_group_action_get_commands( $p_project_ids);
+	while( list( $t_action_id, $t_action_label ) = each( $t_commands ) ) {
+		echo '<option value="' . $t_action_id . '">' . $t_action_label . '</option>';
 	}
 }
 
@@ -1348,16 +1274,16 @@ function print_button( $p_action_page, $p_label, $p_args_to_post = null ) {
 
 # print brackets around a pre-prepared link (i.e. '<a href' html tag).
 function print_bracket_link_prepared( $p_link ) {
-	echo '<span class="bracket-link">[&nbsp;' . $p_link . '&nbsp;]</span> ';
+	echo '<span class="bracket-link">[&#160;' . $p_link . '&#160;]</span> ';
 }
 
 # print the bracketed links used near the top
 # if the $p_link is blank then the text is printed but no link is created
 # if $p_new_window is true, link will open in a new window, default false.
 function print_bracket_link( $p_link, $p_url_text, $p_new_window = false, $p_class = '' ) {
-	echo '<span class="bracket-link">[&nbsp;';
+	echo '<span class="bracket-link">[&#160;';
 	print_link( $p_link, $p_url_text, $p_new_window, $p_class );
-	echo '&nbsp;]</span> ';
+	echo '&#160;]</span> ';
 }
 
 # print a HTML link
@@ -1424,9 +1350,9 @@ function print_page_links( $p_page, $p_start, $p_end, $p_current, $p_temp_filter
 
 	# First and previous links
 	print_page_link( $p_page, $t_first, 1, $p_current, $p_temp_filter_id );
-	echo '&nbsp;';
+	echo '&#160;';
 	print_page_link( $p_page, $t_prev, $p_current - 1, $p_current, $p_temp_filter_id );
-	echo '&nbsp;';
+	echo '&#160;';
 
 	# Page numbers ...
 
@@ -1453,20 +1379,20 @@ function print_page_links( $p_page, $p_start, $p_end, $p_current, $p_temp_filter
 			}
 		}
 	}
-	echo implode( '&nbsp;', $t_items );
+	echo implode( '&#160;', $t_items );
 
 	if( $t_last_page < $p_end ) {
 		print( ' ... ' );
 	}
 
 	# Next and Last links
-	echo '&nbsp;';
+	echo '&#160;';
 	if( $p_current < $p_end ) {
 		print_page_link( $p_page, $t_next, $p_current + 1, $p_current, $p_temp_filter_id );
 	} else {
 		print_page_link( $p_page, $t_next, null, null, $p_temp_filter_id );
 	}
-	echo '&nbsp;';
+	echo '&#160;';
 	print_page_link( $p_page, $t_last, $p_end, $p_current, $p_temp_filter_id );
 
 	print( ' ]' );
@@ -1675,7 +1601,7 @@ function get_dropdown( $p_control_array, $p_control_name, $p_match = '', $p_add_
 }
 
 # List the attachments belonging to the specified bug.  This is used from within
-# bug_view_page.php
+# bug_view_inc.php
 function print_bug_attachments_list( $p_bug_id ) {
 	$t_attachments = file_get_visible_attachments( $p_bug_id );
 	$t_attachments_count = count( $t_attachments );
@@ -1694,7 +1620,7 @@ function print_bug_attachments_list( $p_bug_id ) {
 		}
 
 		if ( $t_attachment['can_download'] ) {
-			$t_href_start = "<a href=\"${t_attachment['download_url']}\">";
+			$t_href_start = '<a href="' . string_attribute( $t_attachment['download_url'] ) . '">';
 			$t_href_end = '</a>';
 
 			$t_href_clicket = " [<a href=\"file_download.php?file_id={$t_attachment['id']}&amp;type=bug\" target=\"_blank\">^</a>]";
@@ -1706,18 +1632,20 @@ function print_bug_attachments_list( $p_bug_id ) {
 
 		if ( !$t_attachment['exists'] ) {
 			print_file_icon( $t_file_display_name );
-			echo '&nbsp;<span class="strike">' . $t_file_display_name . '</span>' . lang_get( 'word_separator' ) . '(' . lang_get( 'attachment_missing' ) . ')';
+			echo '&#160;<span class="strike">' . $t_file_display_name . '</span>' . lang_get( 'word_separator' ) . '(' . lang_get( 'attachment_missing' ) . ')';
 		} else {
 			echo $t_href_start;
 			print_file_icon( $t_file_display_name );
-			echo $t_href_end . '&nbsp;' . $t_href_start . $t_file_display_name . $t_href_end . $t_href_clicket . ' (' . $t_filesize . ' ' . lang_get( 'bytes' ) . ') ' . '<span class=\"italic\">' . $t_date_added . '</span>';
+			echo $t_href_end . '&#160;' . $t_href_start . $t_file_display_name . $t_href_end . $t_href_clicket . ' (' . $t_filesize . ' ' . lang_get( 'bytes' ) . ') ' . '<span class="italic">' . $t_date_added . '</span>';
+		}
 
-			if ( $t_attachment['can_delete'] ) {
-				echo '&nbsp;[';
-				print_link( 'bug_file_delete.php?file_id=' . $t_attachment['id'] . form_security_param( 'bug_file_delete' ), lang_get( 'delete_link' ), false, 'small' );
-				echo ']';
-			}
+		if ( $t_attachment['can_delete'] ) {
+			echo '&#160;[';
+			print_link( 'bug_file_delete.php?file_id=' . $t_attachment['id'] . form_security_param( 'bug_file_delete' ), lang_get( 'delete_link' ), false, 'small' );
+			echo ']';
+		}
 
+		if ( $t_attachment['exists'] ) {
 			if ( ( FTP == config_get( 'file_upload_method' ) ) && $t_attachment['exists'] ) {
 				echo ' (' . lang_get( 'cached' ) . ')';
 			}

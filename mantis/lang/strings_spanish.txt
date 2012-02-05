@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,10 +30,12 @@
  * @author Bernardo Hernández - b.magno@terra.es
  * @author Bithunter
  * @author Crazymadlover
+ * @author Fitoschido
  * @author Javier Poveda - javierpoveda@arsystel.com
  * @author Jorge Andrés Brugger - jbrugger@gmx.net
  * @author Locos epraix
  * @author Luis Miguel Cruz Miranda - luismi@b2bi.es
+ * @author McDutchie
  * @author Pablo Corral - PabloCorral@ciudad.com.ar
  * @author Pertile
  * @author Peter17
@@ -46,11 +48,11 @@ $s_actiongroup_menu_assign = 'Asignar';
 $s_actiongroup_menu_close = 'Cerrar';
 $s_actiongroup_menu_delete = 'Borrar';
 $s_actiongroup_menu_resolve = 'Resolver';
-$s_actiongroup_menu_update_priority = 'Cambiar Prioridad';
-$s_actiongroup_menu_update_status = 'Cambiar Estado';
+$s_actiongroup_menu_update_priority = 'Actualizar prioridad';
+$s_actiongroup_menu_update_status = 'Actualizar estado';
 $s_actiongroup_menu_update_severity = 'Actualizar severidad';
-$s_actiongroup_menu_update_view_status = 'Cambiar Visibilidad';
-$s_actiongroup_menu_update_category = 'Cambiar Categoría';
+$s_actiongroup_menu_update_view_status = 'Actualizar visibilidad';
+$s_actiongroup_menu_update_category = 'Actualizar categoría';
 $s_actiongroup_menu_set_sticky = 'Fijar/Desfijar';
 $s_actiongroup_menu_update_field = 'Actualizar %1$s';
 $s_actiongroup_menu_update_target_version = 'Actualizar Previsto para Versión';
@@ -67,7 +69,7 @@ $s_date_order = 'Marca de tiempo';
 $s_print_all_bug_page_link = 'Imprimir Informes';
 $s_csv_export = 'Exportar a CSV';
 $s_excel_export = 'Exportar a Excel';
-$s_login_anonymously = 'Conectarse Anónimamente';
+$s_login_anonymously = 'Iniciar sesión de forma anónima';
 $s_anonymous = 'Anónimo';
 $s_jump_to_bugnotes = 'Ir a Notas';
 $s_public_project_msg = 'Este proyecto es PÚBLICO.  Todos los usuarios tienen acceso al mismo.';
@@ -98,7 +100,7 @@ $s_bug_end_monitor = 'Concluir Monitorización';
 $s_announcement = 'Anuncio';
 $s_stays_on_top = 'Siempre Arriba';
 $s_bugnote_link_title = 'Acceso directo a nota';
-$s_delete_bugnote_button = 'Eliminar Nota';
+$s_delete_bugnote_button = 'Eliminar nota';
 $s_delete_bugnote_sure_msg = '¿Está seguro que desea eliminar esta nota?';
 $s_bug_relationships = 'Relaciones';
 $s_empty_password_sure_msg = 'El usuario tiene una contraseña vacía. ¿Está seguro que es lo que desea?';
@@ -200,7 +202,7 @@ $MANTIS_ERROR[ERROR_USER_BY_NAME_NOT_FOUND] = 'Usuario con nombre "%1$s" no enco
 $MANTIS_ERROR[ERROR_USER_BY_ID_NOT_FOUND] = 'Usuario con id "%1$d" no encontrado.';
 $MANTIS_ERROR[ERROR_AUTH_INVALID_COOKIE] = 'La información de ingreso almacenada por su navegador es incorrecta. Quizá su cuenta ha sido borrada.';
 $MANTIS_ERROR[ERROR_USER_PREFS_NOT_FOUND] = 'No se encontraron preferencias para este usuario.';
-$MANTIS_ERROR[ERROR_NEWS_NOT_FOUND] = 'Nnoticia no encontrada.';
+$MANTIS_ERROR[ERROR_NEWS_NOT_FOUND] = 'Noticia no encontrada.';
 $MANTIS_ERROR[ERROR_USER_CREATE_PASSWORD_MISMATCH] = 'La contraseña no pasó la verificación.';
 $MANTIS_ERROR[ERROR_GPC_ARRAY_EXPECTED] = 'Se esperaba una matriz, pero se ha recibido una cadena de caracteres para %1$s.';
 $MANTIS_ERROR[ERROR_GPC_ARRAY_UNEXPECTED] = 'Se esperaba una cadena de caracteres pero se ha recibido una matriz para %1$s.';
@@ -562,7 +564,7 @@ $s_error_database_version_out_of_date_2 = '<strong>ATENCIÓN:</strong> La estruc
 $s_error_code_version_out_of_date = '<strong>ATENCIÓN:</strong> La estructura de la base de datos está más actualizada que el código de la instalación. Por favor actualice el código.';
 $s_login_page_info = 'Bienvenido al Gestor de Incidencias.';
 $s_login_title = 'Inicio de sesión';
-$s_save_login = 'Recordar información de inicio de sesión';
+$s_save_login = 'Recordar información de inicio de sesión en este equipo';
 $s_secure_session = 'Sesión Segura';
 $s_secure_session_long = 'Permitir que su sesión sólo sea utilizada desde esta dirección IP.';
 $s_choose_project = 'Seleccionar Proyecto';
@@ -839,7 +841,7 @@ $s_project_document_updated = 'Proyecto actualizado';
 $s_project_user_added_msg = 'Usuario agregado al proyecto';
 $s_project_removed_user_msg = 'Usuario eliminado del proyecto';
 $s_remove_user_sure_msg = '¿Está seguro que desea eliminar este usuario?';
-$s_remove_user_button = 'Eliminar usuario';
+$s_remove_user_from_project_button = 'Quitar usuario del proyecto %s';
 $s_remove_all_users_sure_msg = '¿Está seguro que desea eliminar a todos los usuarios de este proyecto?';
 $s_remove_all_users_button = 'Eliminar todos los usuarios';
 $s_add_user_title = 'Agregar usuario al proyecto';
@@ -1013,7 +1015,7 @@ $s_custom_field_type_enum_string = '0:Cadena,1:Numérico,2:Flotante,3:Enumeraci�
 $s_confirm_used_custom_field_deletion = 'Este campo está vinculado al menos a un proyecto.  Si continúa todos los valores para este campo serán borrados permanentemente.  Esta acción no puede deshacerse.  Si no desea eliminar el campo, haga click sobre el botón Atrás de su navegador.  Para proceder, haga click sobre el botón que aparece abajo';
 $s_confirm_custom_field_deletion = '¿Está seguro que desea eliminar este campo personalizado y todos los valores asociados?';
 $s_field_delete_button = 'Eliminar campo';
-$s_confirm_custom_field_unlinking = '¿Está seguro que desea desvincular este campo del proyecto y eliminar todos los valores asociados?';
+$s_confirm_custom_field_unlinking = '¿Está seguro que desea desvincular este campo personalizado del proyecto? Los valores no se eliminarán siempre y cuando el campo personalizado en sí no sea eliminado.';
 $s_field_remove_button = 'Eliminar campo';
 $s_hide_status = 'Ocultar con Estado';
 $s_filter_closed = 'Cerrado';
@@ -1035,7 +1037,7 @@ $s_sponsorship_added = 'Patrocinador añadido';
 $s_sponsorship_updated = 'Patrocinador actualizado';
 $s_sponsorship_deleted = 'Patrocinador borrado';
 $s_sponsorship_paid = 'Patrocinador liquidado';
-$s_sponsorship_more_info = 'Más información sobre el patrocinador';
+$s_sponsorship_more_info = 'Más información sobre el patrocinio';
 $s_sponsorship_total = 'Total patrocinado';
 $s_changelog = 'Log de cambios';
 $s_changelog_empty = 'Información de cambios no disponible';
@@ -1172,8 +1174,9 @@ $s_tag_related_issues = 'Incidencias Compartidas (%1$s)';
 $s_tag_stats_attached = 'Incidencias Adjuntas: %1$s';
 $s_tag_create = 'Crear etiqueta';
 $s_show_all_tags = 'TODO';
-$s_time_tracking_billing_link = 'Facturación';
+$s_time_tracking_billing_link = 'Seguimiento de Tiempos';
 $s_time_tracking = 'Seguimiento de Tiempos';
+$s_time_tracking_time_spent = 'Tiempo empleado:';
 $s_time_tracking_get_info_button = 'Obtener información de seguimiento de tiempos';
 $s_time_tracking_cost_per_hour = 'Costo/Hora';
 $s_time_tracking_cost = 'Costo';

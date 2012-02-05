@@ -18,7 +18,7 @@
  * @package MantisBT
  * @version $Id$
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  Mantis Team   - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  Mantis Team   - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -126,7 +126,7 @@ print_recently_visited();
 
 ?>
 
-<br/>
+<br />
 <table class="width100" cellspacing="1">
 
 <tr>

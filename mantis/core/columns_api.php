@@ -18,7 +18,7 @@
  * @package CoreAPI
  * @subpackage ColumnsAPI
  * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
 
@@ -310,7 +310,7 @@ function column_get_title( $p_column ) {
  * @access public
  */
 function columns_ensure_valid( $p_field_name, $p_columns_to_validate, $p_columns_all ) {
-	$t_columns_all_lower = array_map( 'strtolower', $p_columns_all );
+	$t_columns_all_lower = array_map( 'utf8_strtolower', $p_columns_all );
 
 	# Check for invalid fields
 	foreach( $p_columns_to_validate as $t_column ) {
@@ -346,7 +346,7 @@ function columns_ensure_valid( $p_field_name, $p_columns_to_validate, $p_columns
  * @access public
  */
 function columns_remove_invalid( $p_columns, $p_columns_all ) {
-	$t_columns_all_lower = array_values( array_map( 'strtolower', $p_columns_all ) );
+	$t_columns_all_lower = array_values( array_map( 'utf8_strtolower', $p_columns_all ) );
 	$t_columns = array();
 
 	foreach( $p_columns as $t_column ) {
@@ -367,7 +367,7 @@ function columns_remove_invalid( $p_columns, $p_columns_all ) {
  * @access public
  */
 function print_column_title_selection( $p_sort, $p_dir, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
-	echo '<td> &nbsp; </td>';
+	echo '<td> &#160; </td>';
 }
 
 /**
@@ -379,7 +379,7 @@ function print_column_title_selection( $p_sort, $p_dir, $p_columns_target = COLU
  * @access public
  */
 function print_column_title_edit( $p_sort, $p_dir, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
-	echo '<td> &nbsp; </td>';
+	echo '<td> &#160; </td>';
 }
 
 /**
@@ -836,14 +836,27 @@ function print_column_title_overdue( $p_sort, $p_dir, $p_columns_target = COLUMN
  * @access public
  */
 function print_column_selection( $p_bug, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
-	global $t_checkboxes_exist, $t_update_bug_threshold;
+	global $g_checkboxes_exist;
 
 	echo '<td>';
-	if( access_has_bug_level( $t_update_bug_threshold, $p_bug->id ) ) {
-		$t_checkboxes_exist = true;
+	if( access_has_any_project( config_get( 'report_bug_threshold', null, null, $p_bug->project_id ) ) ||
+		# !TODO: check if any other projects actually exist for the bug to be moved to
+		access_has_project_level( config_get( 'move_bug_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		# !TODO: factor in $g_auto_set_status_to_assigned == ON
+		access_has_project_level( config_get( 'update_bug_assign_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'update_bug_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'delete_bug_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		# !TODO: check to see if the bug actually has any different selectable workflow states
+		access_has_project_level( config_get( 'update_bug_status_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'set_bug_sticky_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'change_view_status_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'add_bugnote_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'tag_attach_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
+		access_has_project_level( config_get( 'roadmap_update_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ) {
+		$g_checkboxes_exist = true;
 		printf( "<input type=\"checkbox\" name=\"bug_arr[]\" value=\"%d\" />", $p_bug->id );
 	} else {
-		echo "&nbsp;";
+		echo "&#160;";
 	}
 	echo '</td>';
 }
@@ -902,7 +915,7 @@ function print_column_edit( $p_bug, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE
 		echo '" alt="' . lang_get( 'update_bug_button' ) . '"';
 		echo ' title="' . lang_get( 'update_bug_button' ) . '" /></a>';
 	} else {
-		echo '&nbsp;';
+		echo '&#160;';
 	}
 
 	echo '</td>';
@@ -986,7 +999,7 @@ function print_column_bugnotes_count( $p_bug, $p_columns_target = COLUMNS_TARGET
 			echo '</span>';
 		}
 	} else {
-		echo '&nbsp;';
+		echo '&#160;';
 	}
 
 	echo '</td>';
@@ -1003,8 +1016,10 @@ function print_column_attachment_count( $p_bug, $p_columns_target = COLUMNS_TARG
 	global $t_icon_path;
 
 	# Check for attachments
+	# TODO: factor in the allow_view_own_attachments configuration option
+	# instead of just using a global check.
 	$t_attachment_count = 0;
-	if( file_can_view_bug_attachments( $p_bug->id ) ) {
+	if( file_can_view_bug_attachments( $p_bug->id, null ) ) {
 		$t_attachment_count = file_bug_attachment_count( $p_bug->id );
 	}
 
@@ -1020,7 +1035,7 @@ function print_column_attachment_count( $p_bug, $p_columns_target = COLUMNS_TARG
 			echo "<a href=\"$t_href\" title=\"$t_href_title\">$t_attachment_count</a>";
 		}
 	} else {
-		echo ' &nbsp; ';
+		echo ' &#160; ';
 	}
 
 	echo "</td>\n";
@@ -1298,7 +1313,7 @@ function print_column_view_state( $p_bug, $p_columns_target = COLUMNS_TARGET_VIE
 		$t_view_state_text = lang_get( 'private' );
 		echo '<img src="' . $t_icon_path . 'protected.gif" alt="' . $t_view_state_text . '" title="' . $t_view_state_text . '" />';
 	} else {
-		echo '&nbsp;';
+		echo '&#160;';
 	}
 
 	echo '</td>';
@@ -1314,7 +1329,7 @@ function print_column_view_state( $p_bug, $p_columns_target = COLUMNS_TARGET_VIE
 function print_column_due_date( $p_bug, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
 	if ( !access_has_bug_level( config_get( 'due_date_view_threshold' ), $p_bug->id ) ||
 		date_is_null( $p_bug->due_date ) ) {
-		echo '<td>&nbsp;</td>';
+		echo '<td>&#160;</td>';
 		return;
 	}
 
@@ -1348,7 +1363,7 @@ function print_column_overdue( $p_bug, $p_columns_target = COLUMNS_TARGET_VIEW_P
 		$t_overdue_text_hover = $t_overdue_text . '. Due date was: ' . string_display_line( date( config_get( 'short_date_format' ), $p_bug->due_date ) );
 		echo '<img src="' . $t_icon_path . 'overdue.png" alt="' . $t_overdue_text . '" title="' . $t_overdue_text_hover . '" />';
 	} else {
-		echo '&nbsp;';
+		echo '&#160;';
 	}
 
 	echo '</td>';

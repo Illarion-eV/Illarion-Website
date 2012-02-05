@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,6 +30,7 @@
  * @author Alexander Leschinsky aml@lair.pp.ru
  * @author Alexey Chumakov alex@chumakov.ru
  * @author Amdei
+ * @author Eleferen
  * @author EugeneZelenko
  * @author Ferrer
  * @author Kirill
@@ -181,7 +182,7 @@ $MANTIS_ERROR[ERROR_DUPLICATE_FILE] = 'Дубликат файла. Сначал
 $MANTIS_ERROR[ERROR_DUPLICATE_PROJECT] = 'Проект с таким названием уже существует.';
 $MANTIS_ERROR[ERROR_EMPTY_FIELD] = 'Обязательное поле \'%1$s\' не заполнено. Пожалуйста, проверьте правильность заполнения.';
 $MANTIS_ERROR[ERROR_PROTECTED_ACCOUNT] = 'Эта учетная запись защищена. Вы не сможете получить к ней доступ, пока защита не снята.';
-$MANTIS_ERROR[ERROR_ACCESS_DENIED] = 'Доступ запрещен.';
+$MANTIS_ERROR[ERROR_ACCESS_DENIED] = 'Доступ запрещён.';
 $MANTIS_ERROR[ERROR_UPLOAD_FAILURE] = 'Загрузка файла не удалась. Файл недоступен для MantisBT. Проверьте настройки проекта.';
 $MANTIS_ERROR[ERROR_FILE_TOO_BIG] = 'Загрузка файла не удалась. Скорее всего, размер файла был больше, чем разрешенный в данной конфигурации PHP.';
 $MANTIS_ERROR[ERROR_GPC_VAR_NOT_FOUND] = 'Не найден параметр "%1$s", обязательный для этой страницы.';
@@ -562,7 +563,7 @@ $s_error_database_version_out_of_date_2 = '<strong>ПРЕДУПЛЕЖДЕНИЕ:
 $s_error_code_version_out_of_date = '<strong>ПРЕДУПРЕЖДЕНИЕ:</strong> Структура базы данных более новой версии, нежели чем установленное приложение.  Пожалуйста, обновите приложение.';
 $s_login_page_info = 'Добро пожаловать в систему отслеживания инцидентов.';
 $s_login_title = 'Вход';
-$s_save_login = 'Помнить мою учётную запись на этом компьютере';
+$s_save_login = 'Помнить мой логин на этом компьютере';
 $s_secure_session = 'Защищенная сессия';
 $s_secure_session_long = 'Доступ к этой сессии будет только для данного IP-адреса (не рекомендуется для плохих средств связи где возможны частые обновления ip-адреса).';
 $s_choose_project = 'Выбор проекта';
@@ -839,7 +840,7 @@ $s_project_document_updated = 'Проект изменен';
 $s_project_user_added_msg = 'Пользователь успешно добавлен в проект.';
 $s_project_removed_user_msg = 'Пользователь удален из проекта.';
 $s_remove_user_sure_msg = 'Вы уверены, что хотите удалить этого пользователя?';
-$s_remove_user_button = 'Удалить пользователя';
+$s_remove_user_from_project_button = 'Удалить пользователя из проекта %s';
 $s_remove_all_users_sure_msg = 'Вы уверены, что хотите удалить всех пользователей этого проекта?';
 $s_remove_all_users_button = 'Удалить всех пользователей';
 $s_add_user_title = 'Добавление пользователя в проект';
@@ -1013,7 +1014,7 @@ $s_custom_field_type_enum_string = '0:строка,1:целое,2:веществ
 $s_confirm_used_custom_field_deletion = 'Это поле связано как минимум с одним проектом. Если продолжить, все значения для этого поля будут безвозвратно удалены. Такое действие отменить невозможно. Если вы не хотите удалять это поле, нажмите кнопку \'Назад\' своего браузера.  Для удаления нажмите кнопку, показанную ниже.';
 $s_confirm_custom_field_deletion = 'Вы уверены, что хотите удалить это поле и все связанные с ним значения?';
 $s_field_delete_button = 'Удалить поле';
-$s_confirm_custom_field_unlinking = 'Вы уверены, что хотите удалить (отвязать) это настраиваемое поле из проекта с удалением всех введенных значений?';
+$s_confirm_custom_field_unlinking = 'Вы уверены, что хотите отвязать это настраиваемое поле от проекта? Значения не будут удалены, пока не удалено настраиваемое поле?';
 $s_field_remove_button = 'Удалить поле';
 $s_hide_status = 'Скрыть состояние';
 $s_filter_closed = 'Закрытые';
@@ -1172,8 +1173,9 @@ $s_tag_related_issues = 'Общие инциденты (%1$s)';
 $s_tag_stats_attached = 'Прикрепленные инциденты: %1$s';
 $s_tag_create = 'Создать метку';
 $s_show_all_tags = 'ВСЕ';
-$s_time_tracking_billing_link = 'Расчеты';
+$s_time_tracking_billing_link = 'Учёт времени';
 $s_time_tracking = 'Учет времени';
+$s_time_tracking_time_spent = 'Затраченное время:';
 $s_time_tracking_get_info_button = 'Получить сведения об учете времени';
 $s_time_tracking_cost_per_hour = 'Цена / час';
 $s_time_tracking_cost = 'Цена';

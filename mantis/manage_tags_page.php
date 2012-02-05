@@ -16,7 +16,7 @@
 
 /**
  * @package MantisBT
- * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  * @link http://www.mantisbt.org
  */
  /**
@@ -32,7 +32,7 @@ require_once( 'tag_api.php' );
 require_once( 'user_pref_api.php' );
 require_once( 'form_api.php' );
 
-access_ensure_global_level( config_get( 'tag_view_threshold' ) );
+access_ensure_global_level( config_get( 'tag_edit_threshold' ) );
 
 compress_enable();
 
@@ -126,14 +126,18 @@ $t_result = db_query_bound( $t_query, $t_where_params, $t_per_page, $t_offset );
 
 ?>
 
-<br/>
+<br />
 
 <!--  Tag Table Start -->
 <table class="width100" cellspacing="1">
 	<tr>
 		<td class="form-title" colspan="4">
-			<?php echo lang_get( 'manage_tags_link' ) ?> [<?php echo $t_total_tag_count ?>]
-			<?php print_link( '#tagcreate', lang_get( 'tag_create' ) ) ?>
+			<?php
+				echo lang_get( 'manage_tags_link' ) . ' [' . $t_total_tag_count . '] ';
+				if ( $t_can_edit ) {
+					print_link( '#tagcreate', lang_get( 'tag_create' ) );
+				}
+			?>
 		</td>
 	</tr>
 	<tr class="row-category">

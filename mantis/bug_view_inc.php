@@ -20,7 +20,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -169,7 +169,7 @@
 	$tpl_projection = $tpl_show_projection ? string_display_line( get_enum_element( 'projection', $tpl_bug->projection ) ) : '';
 	$tpl_show_eta = in_array( 'eta', $t_fields );
 	$tpl_eta = $tpl_show_eta ? string_display_line( get_enum_element( 'eta', $tpl_bug->eta ) ) : '';
-	$tpl_show_attachments = in_array( 'attachments', $t_fields ) && ( ( $tpl_bug->reporter_id == auth_get_current_user_id() ) || access_has_bug_level( config_get( 'view_attachments_threshold' ), $f_bug_id ) );
+	$tpl_show_attachments = in_array( 'attachments', $t_fields );
 	$tpl_can_attach_tag = $tpl_show_tags && !$tpl_force_readonly && access_has_bug_level( config_get( 'tag_attach_threshold' ), $f_bug_id );
 	$tpl_show_category = in_array( 'category_id', $t_fields );
 	$tpl_category = $tpl_show_category ? string_display_line( category_full_name( $tpl_bug->category_id ) ) : '';
@@ -186,7 +186,7 @@
 	$tpl_show_summary = in_array( 'summary', $t_fields );
 	$tpl_show_description = in_array( 'description', $t_fields );
 
-	$tpl_summary = $tpl_show_summary ? string_display_line_links( bug_format_summary( $f_bug_id, SUMMARY_FIELD ) ) : '';
+	$tpl_summary = $tpl_show_summary ? bug_format_summary( $f_bug_id, SUMMARY_FIELD ) : '';
 	$tpl_description = $tpl_show_description ? string_display_links( $tpl_bug->description ) : '';
 	$tpl_steps_to_reproduce = $tpl_show_steps_to_reproduce ? string_display_links( $tpl_bug->steps_to_reproduce ) : '';
 	$tpl_additional_information = $tpl_show_additional_information ? string_display_links( $tpl_bug->additional_information ) : '';
@@ -206,7 +206,7 @@
 
 	echo $tpl_form_title;
 
-	echo '&nbsp;<span class="small">';
+	echo '&#160;<span class="small">';
 
 	# Jump to Bugnotes
 	print_bracket_link( "#bugnotes", lang_get( 'jump_to_bugnotes' ) );
@@ -246,11 +246,11 @@
 		$t_index = array_search( $f_bug_id, $t_bugslist );
 		if ( false !== $t_index ) {
 			if ( isset( $t_bugslist[$t_index-1] ) ) {
-				print_bracket_link( 'bug_view_page.php?bug_id='.$t_bugslist[$t_index-1], '&lt;&lt;' );
+				print_bracket_link( 'view.php?id='.$t_bugslist[$t_index-1], '&lt;&lt;' );
 			}
 
 			if ( isset( $t_bugslist[$t_index+1] ) ) {
-				print_bracket_link( 'bug_view_page.php?bug_id='.$t_bugslist[$t_index+1], '&gt;&gt;' );
+				print_bracket_link( 'view.php?id='.$t_bugslist[$t_index+1], '&gt;&gt;' );
 			}
 		}
 		echo '</span></td>';
@@ -338,7 +338,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 		echo '</tr>';
 	}
@@ -353,10 +353,14 @@
 		$t_spacer = 2;
 
 		# Handler
-		echo '<td class="category">', lang_get( 'assigned_to' ), '</td>';
-		echo '<td>';
-		print_user_with_subject( $tpl_bug->handler_id, $tpl_bug_id );
-		echo '</td>';
+		if ( $tpl_show_handler ) {
+			echo '<td class="category">', lang_get( 'assigned_to' ), '</td>';
+			echo '<td>';
+			print_user_with_subject( $tpl_bug->handler_id, $tpl_bug_id );
+			echo '</td>';
+		} else {
+			$t_spacer += 2;
+		}
 
 		# Due Date
 		if ( $tpl_show_due_date ) {
@@ -371,7 +375,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -410,7 +414,7 @@
 
 		# spacer
 		if ( $t_spacer > 0 ) {
-			echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+			echo '<td colspan="', $t_spacer, '">&#160;</td>';
 		}
 
 		echo '</tr>';
@@ -443,7 +447,7 @@
 
 		# spacer
 		if ( $t_spacer > 0 ) {
-			echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+			echo '<td colspan="', $t_spacer, '">&#160;</td>';
 		}
 
 		echo '</tr>';
@@ -474,7 +478,7 @@
 			$t_spacer += 2;
 		}
 
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 		echo '</tr>';
 	}
 
@@ -512,7 +516,7 @@
 		}
 
 		if ( $t_spacer > 0 ) {
-			echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+			echo '<td colspan="', $t_spacer, '">&#160;</td>';
 		}
 
 		echo '</tr>';
@@ -544,7 +548,7 @@
 		}
 
 		# spacer
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 		echo '</tr>';
 	}
@@ -576,7 +580,7 @@
 		}
 
 		# spacer
-		echo '<td colspan="', $t_spacer, '">&nbsp;</td>';
+		echo '<td colspan="', $t_spacer, '">&#160;</td>';
 
 		echo '</tr>';
 	}

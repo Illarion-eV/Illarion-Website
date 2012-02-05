@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -55,10 +55,9 @@
 	list( $t_sort, ) = explode( ',', $t_filter['sort'] );
 	list( $t_dir, ) = explode( ',', $t_filter['dir'] );
 
-	$t_checkboxes_exist = false;
+	$g_checkboxes_exist = false;
 
 	$t_icon_path = config_get( 'icon_path' );
-	$t_update_bug_threshold = config_get( 'update_bug_threshold' );
 
 	# Improve performance by caching category data in one pass
 	if ( helper_get_current_project() > 0 ) {
@@ -129,11 +128,11 @@
 
 		<span class="floatleft small"> <?php
 				# -- Print and Export links --
-				echo '&nbsp;';
+				echo '&#160;';
 				print_bracket_link( 'print_all_bug_page.php', lang_get( 'print_all_bug_page_link' ) );
-				echo '&nbsp;';
+				echo '&#160;';
 				print_bracket_link( 'csv_export.php', lang_get( 'csv_export' ) );
-				echo '&nbsp;';
+				echo '&#160;';
 				print_bracket_link( 'excel_xml_export.php', lang_get( 'excel_export' ) );
 
 				$t_event_menu_options = $t_links = event_signal( 'EVENT_MENU_FILTER' );
@@ -145,7 +144,9 @@
 						}
 
 						foreach ( $t_callback_menu_options as $t_menu_option ) {
-							print_bracket_link_prepared( $t_menu_option );
+						    if ( $t_menu_option ) {
+							    print_bracket_link_prepared( $t_menu_option );
+						    }
 						}
 					}
 				}
@@ -194,7 +195,7 @@
 			if ( ( 0 == $t_row->sticky ) && $t_in_stickies ) {	# demarcate stickies, if any have been shown
 ?>
                <tr>
-                       <td class="left" colspan="<?php echo count( $t_columns ); ?>" bgcolor="#999999">&nbsp;</td>
+                       <td class="left" colspan="<?php echo count( $t_columns ); ?>" bgcolor="#999999">&#160;</td>
                </tr>
 <?php
 				$t_in_stickies = false;
@@ -224,19 +225,19 @@
 		<td class="left" colspan="<?php echo $col_count; ?>">
 			<span class="floatleft">
 <?php
-		if ( $t_checkboxes_exist && ON == config_get( 'use_javascript' ) ) {
+		if ( $g_checkboxes_exist && ON == config_get( 'use_javascript' ) ) {
 			echo "<input type=\"checkbox\" name=\"all_bugs\" value=\"all\" onclick=\"checkall('bug_action', this.form.all_bugs.checked)\" /><span class=\"small\">" . lang_get( 'select_all' ) . '</span>';
 		}
 
-		if ( $t_checkboxes_exist ) {
+		if ( $g_checkboxes_exist ) {
 ?>
 			<select name="action">
-				<?php print_all_bug_action_option_list() ?>
+				<?php print_all_bug_action_option_list( $t_unique_project_ids ) ?>
 			</select>
 			<input type="submit" class="button" value="<?php echo lang_get( 'ok' ); ?>" />
 <?php
 		} else {
-			echo '&nbsp;';
+			echo '&#160;';
 		}
 ?>			</span>
 			<span class="floatright small">

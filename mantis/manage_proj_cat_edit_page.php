@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -77,7 +77,7 @@
 </tr>
 <tr>
 	<td>
-		&nbsp;
+		&#160;
 	</td>
 	<td>
 		<input type="submit" class="button" value="<?php echo lang_get( 'update_category_button' ) ?>" />
@@ -92,7 +92,8 @@
 <div class="border center">
 	<form method="post" action="manage_proj_cat_delete.php">
 		<?php echo form_security_field( 'manage_proj_cat_delete' ) ?>
-		<input type="hidden" name="category_id" value="<?php echo string_attribute( $f_category_id ) ?>" />
+		<input type="hidden" name="id" value="<?php echo string_attribute( $f_category_id ) ?>" />
+		<input type="hidden" name="project_id" value="<?php echo string_attribute( $f_project_id ) ?>" />
 		<input type="submit" class="button" value="<?php echo lang_get( 'delete_category_button' ) ?>" />
 	</form>
 </div>

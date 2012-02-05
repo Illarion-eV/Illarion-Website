@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -552,7 +552,7 @@ $s_error_database_version_out_of_date_2 = '<strong>BABALA:</strong> Maaaring wal
 $s_error_code_version_out_of_date = '<strong>BABALA:</strong> Mas napapanahon ang kayarian ng kalipunan ng dato kaysa nakaluklok na kodigo. Paki-isapanahon ang kodigo.';
 $s_login_page_info = 'Maligayang Pagdating sa Tagapagtugaygay ng Bakas ng Labas.';
 $s_login_title = 'Lumagda';
-$s_save_login = 'Tandaan ang paglagda ko sa kompyuter na ito';
+$s_save_login = 'Tandaan ang lagda kong papasok sa pantingin-tinging ito';
 $s_secure_session = 'Tiwasay na Pulong';
 $s_secure_session_long = 'Pahintulutan ang nakalaang panahon mo na magamit lamang mula sa adres ng IP na ito.';
 $s_choose_project = 'Pumili ng Proyekto';
@@ -828,7 +828,7 @@ $s_project_document_updated = 'Matagumpay ang pagsasapanahon ng proyekto.';
 $s_project_user_added_msg = 'Matagumpay na naidagdag sa proyekto ang tagagamit.';
 $s_project_removed_user_msg = 'Matagumpay na natanggal mula sa proyekto ang tagagamit.';
 $s_remove_user_sure_msg = 'Nakatitiyak ka bang nais mong tanggalin ang tagagamit na ito?';
-$s_remove_user_button = 'Tanggalin ang Tagagamit';
+$s_remove_user_from_project_button = 'Tanggalan ang Tagagamit mula sa Proyektong %s';
 $s_remove_all_users_sure_msg = 'Nakatitiyak ka bang nais mong tanggalin mula sa proyektong ito ang lahat ng mga tagagamit?';
 $s_remove_all_users_button = 'Tanggalin ang Lahat ng mga Tagagamit';
 $s_add_user_title = 'Idagdag sa Proyekto ang Tagagamit';
@@ -1001,7 +1001,7 @@ $s_custom_field_type_enum_string = '0:Bagting,1:Numeriko/Bilang,2:Nakalutang,3:E
 $s_confirm_used_custom_field_deletion = 'Pangkasalukuyang nakakawing ang hanay na ito sa kahit na isang proyekto lamang. Pampamalagian na ang pagbura sa hanay kapag ipinagpatuloy mo ang lahat ng mga halaga.  Hindi na mababawi pa ang galaw na ito kapag naisakatuparan na. Kung hindi mo nais burahin ang hanay na ito, pindutin ang pindutang Bumalik (\'\'Back\'\') na nasa iyong pantingin-tingin (\'\'browser\'\'). Upang magpatuloy, pindutin ang pindutang nasa ibaba';
 $s_confirm_custom_field_deletion = 'Nakatitiyak ka bang nais mong burahin ang pasadyang hanay na ito at lahat ng nakaugnay na mga halaga?';
 $s_field_delete_button = 'Burahin ang Hanay';
-$s_confirm_custom_field_unlinking = 'Nakatitiyak ka bang nais mong tanggalin (huwag ikawing) ang pasadyang hanay na ito mula sa proyekto at burahin ang lahat ng nakaugnay na mga halaga?';
+$s_confirm_custom_field_unlinking = 'Nakatitiyak ka bang nais mong tanggalin ang kawing ng pasadyang hanay na ito mula sa proyekto?  Ang mga halaga ay hindi buburahin basta\'t ang pasadyang hanay mismo ay hindi nabubura.';
 $s_field_remove_button = 'Tanggalin ang Hanay';
 $s_hide_status = 'Itago ang Kalagayan';
 $s_filter_closed = 'Nakasara na';

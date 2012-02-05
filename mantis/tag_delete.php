@@ -16,7 +16,7 @@
 
 	/**
 	 * @package MantisBT
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -42,4 +42,4 @@
 
 	form_security_purge( 'tag_delete' );
 
-	print_successful_redirect( config_get( 'default_home_page' ) );
+	print_successful_redirect( 'manage_tags_page.php' );

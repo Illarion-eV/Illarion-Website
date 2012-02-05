@@ -1,6 +1,6 @@
 <?php
 # MantisConnect - A webservice interface to Mantis Bug Tracker
-# Copyright (C) 2004-2010  Victor Boctor - vboctor@users.sourceforge.net
+# Copyright (C) 2004-2011  Victor Boctor - vboctor@users.sourceforge.net
 # This program is distributed under dual licensing.  These include
 # GPL and a commercial licenses.  Victor Boctor reserves the right to
 # change the license of future releases.
@@ -165,21 +165,13 @@ function mci_null_if_empty( $p_value ) {
 }
 
 /**
- * Gets the url for MantisBT.  This is based on the 'path' config variable in MantisBT.  However,
- * the default value for 'path' does not work properly when access from within MantisConnect.
- * This internal function fixes this bug.
+ * Gets the url for MantisBT.
  *
  * @return MantisBT URL terminated by a /.
  */
 function mci_get_mantis_path() {
-	$t_path = config_get( 'path' );
-	$t_dir = basename( dirname( __FILE__ ) );
-
-	# for some reason str_replace() doesn't work when DIRECTORY_SEPARATOR (/) is in the search
-	# string.
-	$t_path = str_replace( $t_dir . '/', '', $t_path );
-
-	return $t_path;
+    
+	return config_get( 'path' );
 }
 
 # Given a enum string and num, return the appropriate localized string
@@ -271,6 +263,14 @@ function mci_filter_db_get_available_queries( $p_project_id = null, $p_user_id =
 	for( $i = 0;$i < $query_count;$i++ ) {
 		$row = db_fetch_array( $result );
 		if(( $row['user_id'] == $t_user_id ) || db_prepare_bool( $row['is_public'] ) ) {
+
+		    $t_filter_detail = explode( '#', $row['filter_string'], 2 );
+		    if ( !isset($t_filter_detail[1]) ) {
+		    	continue;
+		    }
+        	$t_filter = unserialize( $t_filter_detail[1] );
+	        $t_filter = filter_ensure_valid_filter( $t_filter );
+		    $row['url'] = filter_get_url( $t_filter );
 			$t_overall_query_arr[$row['name']] = $row;
 		}
 	}
@@ -289,6 +289,24 @@ function mci_category_as_array_by_id( $p_category_id ) {
 	$t_result['id'] = $p_category_id;
 	$t_result['name'] = category_get_name( $p_category_id );
 	return $t_result;
+}
+
+/**
+ * Transforms a version array into an array suitable for marshalling into ProjectVersionData
+ * 
+ * @param array $p_version
+ */
+function mci_project_version_as_array( $p_version ) {
+    
+    return array(
+			'id' => $p_version['id'],
+			'name' => $p_version['version'],
+			'project_id' => $p_version['project_id'],
+			'date_order' => timestamp_to_iso8601( $p_version['date_order'] ),
+			'description' => mci_null_if_empty( $p_version['description'] ),
+			'released' => $p_version['released'],
+		    'obsolete' => $p_version['obsolete']
+		);
 }
 
 /**

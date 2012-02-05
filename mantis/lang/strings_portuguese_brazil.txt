@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -561,7 +561,7 @@ $s_error_database_version_out_of_date_2 = '<strong>AVISO:</strong> A estrutura d
 $s_error_code_version_out_of_date = '<strong>AVISO:</strong> A estrutura da base de dados está mais atualizada que o código instalado. Por favor atualize o código.';
 $s_login_page_info = 'Bem-vindo ao Gerenciador de Casos.';
 $s_login_title = 'Entrar';
-$s_save_login = 'Recordar o meu login neste computador';
+$s_save_login = 'Recordar os meus dados neste computador';
 $s_secure_session = 'Sessão Segura';
 $s_secure_session_long = 'Somente permitir que sua sessão seja utilizada a partir deste endereço IP.';
 $s_choose_project = 'Escolher Projeto';
@@ -608,7 +608,7 @@ $s_manage_config_link = 'Gerenciar Configuração';
 $s_manage_threshold_config = 'Limiares do Fluxo de Trabalho';
 $s_manage_email_config = 'Notificações por E-Mail';
 $s_manage_workflow_config = 'Transições de Fluxo de Trabalho';
-$s_manage_tags_link = 'Gerenciar Etiquetas';
+$s_manage_tags_link = 'Gerenciar Marcadores';
 $s_create_new_account_link = 'Criar Nova Conta';
 $s_projects_link = 'Projetos';
 $s_documentation_link = 'Documentação';
@@ -837,7 +837,7 @@ $s_project_document_updated = 'Projeto atualizado com sucesso';
 $s_project_user_added_msg = 'Usuário adicionado com sucesso ao projeto';
 $s_project_removed_user_msg = 'Usuário removido com sucesso do projeto';
 $s_remove_user_sure_msg = 'Você tem certeza que deseja remover este usuário?';
-$s_remove_user_button = 'Remover Usuário';
+$s_remove_user_from_project_button = 'Remover Usuário do Projeto %s';
 $s_remove_all_users_sure_msg = 'Você tem certeza que deseja remover todos os usuários deste projeto?';
 $s_remove_all_users_button = 'Remover Todos os Usuários';
 $s_add_user_title = 'Adicionar usuário ao projeto';
@@ -1005,12 +1005,12 @@ $s_custom_field_require_closed = 'Requerido no fechamento';
 $s_link_custom_field_to_project_title = 'Vincular Campo Personalizado ao projeto';
 $s_link_custom_field_to_project_button = 'Vincular Campo Personalizado';
 $s_linked_projects = 'Projetos Vinculados';
-$s_custom_field_sequence = 'Seqüência';
+$s_custom_field_sequence = 'Sequência';
 $s_custom_field_type_enum_string = '0:String,1:Numérico,2:Ponto-flutuante,3:Enumeração,4:E-Mail,5:Caixa de Marcação,6:Lista,7:Lista de seleção múltipla,8:Data,9:Botão de seleção';
 $s_confirm_used_custom_field_deletion = 'Este campo atualmente está ligado a pelo menos um projeto.  Se você continuar, todos os valores para este campo serão apagados permanentemente.  Esta ação não pode ser desfeita.  Se você não deseja apagar este campo, clique no botão Voltar de seu navegador.  Para continuar, clique no botão abaixo.';
 $s_confirm_custom_field_deletion = 'Você tem certeza que deseja apagar este campo personalizado e todos os seus valores associados?';
 $s_field_delete_button = 'Apagar Campo';
-$s_confirm_custom_field_unlinking = 'Você tem certeza que deseja remover (desvincular) este campo personalizado do projeto e apagar todos os valores associados?';
+$s_confirm_custom_field_unlinking = 'Você tem certeza que deseja remover (desvincular) este campo personalizado do projeto? Os valores não serão eliminados visto que o campo personalizado por si só não é eliminado.';
 $s_field_remove_button = 'Remover Campo';
 $s_hide_status = 'Ocultar Status';
 $s_filter_closed = 'Fechado';
@@ -1137,7 +1137,7 @@ $s_on_date = 'Em';
 $s_on = 'ligado';
 $s_off = 'Desligar';
 $s_wiki = 'Wiki';
-$s_tags = 'Etiquetas';
+$s_tags = 'Marcadores';
 $s_tag_details = 'Detalhes do marcador: %1$s';
 $s_tag_id = 'ID do Marcador';
 $s_tag_name = 'Nome';
@@ -1167,10 +1167,11 @@ $s_tag_history_renamed = 'Marcador Renomeado';
 $s_tag_related = 'Marcadores Relacionados';
 $s_tag_related_issues = 'Casos compartilhados (%1$s)';
 $s_tag_stats_attached = 'Casos relacionados: %1$s';
-$s_tag_create = 'Criar Etiqueta';
+$s_tag_create = 'Criar Marcador';
 $s_show_all_tags = 'TODAS';
 $s_time_tracking_billing_link = 'Fatura';
 $s_time_tracking = 'Acompanhamento de tempo';
+$s_time_tracking_time_spent = 'Tempo gasto:';
 $s_time_tracking_get_info_button = 'Obter informações de acompanhamento de tempo';
 $s_time_tracking_cost_per_hour = 'Custo / Hora';
 $s_time_tracking_cost = 'Custo';

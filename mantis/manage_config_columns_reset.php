@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -28,9 +28,6 @@
 	require_once( 'config_api.php' );
 
 	form_security_validate( 'manage_config_columns_reset' );
-
-	auth_ensure_user_authenticated();
-	auth_reauthenticate();
 
 	$t_user_id = auth_get_current_user_id();
 

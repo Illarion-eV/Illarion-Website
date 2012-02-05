@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -95,7 +95,7 @@
 					file_delete_local( $t_disk_file_name );
 				}
 				if ( !move_uploaded_file( $v_tmp_name, $t_disk_file_name ) ) {
-					trigger_error( FILE_MOVE_FAILED, ERROR );
+					trigger_error( ERROR_FILE_MOVE_FAILED, ERROR );
 				}
 				chmod( $t_disk_file_name, config_get( 'attachments_file_permissions' ) );
 

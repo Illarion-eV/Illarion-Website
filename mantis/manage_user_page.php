@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -153,7 +153,7 @@
 		$t_where = db_helper_compare_days("" . db_now() . "","date_created","<= $days_old");
 	} else {
 		$c_prefix = db_prepare_string($f_filter);
-		$t_where = "(username like '$c_prefix%')";
+		$t_where = "(UPPER(username) LIKE '$c_prefix%')";
 	}
 
 	$p_per_page = 50;
@@ -319,7 +319,7 @@
 		if ( $u_protected ) {
 			echo " $t_lock_image";
 		} else {
-			echo '&nbsp;';
+			echo '&#160;';
 		}
           ?>
         </td>
@@ -336,7 +336,7 @@
 			<span class="small">
 				<?php
 					/* @todo hack - pass in the hide inactive filter via cheating the actual filter value */
-					print_page_links( 'manage_user_page.php', 1, $t_page_count, (int)$f_page_number, $c_filter . $t_hide_filter);
+					print_page_links( 'manage_user_page.php', 1, $t_page_count, (int)$f_page_number, $c_filter . $t_hide_filter . "&sort=$c_sort&dir=$c_dir");
 				?>
 			</span>
 		</td>

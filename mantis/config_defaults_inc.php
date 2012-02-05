@@ -28,7 +28,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -112,9 +112,15 @@
 			$t_host = 'localhost';
 		}
 
-		$t_path = str_replace( basename( $_SERVER['PHP_SELF'] ), '', $_SERVER['PHP_SELF'] );
-		$t_path = basename( $t_path ) == "admin" ? dirname( $t_path ) . DIRECTORY_SEPARATOR : $t_path;
-		$t_path = basename( $t_path ) == "soap" ? dirname( dirname( $t_path ) ) . DIRECTORY_SEPARATOR : $t_path;
+		$t_self = $_SERVER['SCRIPT_NAME'];
+		$t_self = trim( str_replace( "\0", '', $t_self ) );
+		$t_path = str_replace( basename( $t_self ), '', $t_self );
+		$t_path = basename( $t_path ) == "admin" ? dirname( $t_path ) . '/' : $t_path;
+		$t_path = basename( $t_path ) == "soap" ? dirname( dirname( $t_path ) ) . '/' : $t_path;
+		if ( strpos( $t_path, '&#' ) ) {
+			echo 'Can not safely determine $g_path. Please set $g_path manually in config_inc.php';
+			die;
+		}
 
 		$t_url	= $t_protocol . '://' . $t_host . $t_path;
 
@@ -591,6 +597,7 @@
 		'amharic',
 		'arabic',
 		'arabicegyptianspoken',
+		'belarusian_tarask',
 		'breton',
 		'bulgarian',
 		'catalan',
@@ -610,6 +617,7 @@
 		'hebrew',
 		'hungarian',
 		'icelandic',
+		'interlingua',
 		'italian',
 		'japanese',
 		'korean',
@@ -635,6 +643,7 @@
 		'turkish',
 		'ukrainian',
 		'urdu',
+		'vietnamese',
 		'volapuk',
 	);
 
@@ -647,6 +656,7 @@
 		'am' => 'amharic',
 		'ar' => 'arabic',
 		'arz' => 'arabicegyptianspoken',
+		'be, be-tarask' => 'belarusian_tarask',
 		'bg' => 'bulgarian',
 		'br' => 'breton',
 		'ca' => 'catalan',
@@ -665,6 +675,7 @@
 		'he' => 'hebrew',
 		'hu' => 'hungarian',
 		'hr' => 'croatian',
+		'ia' => 'interlingua',
 		'is' => 'icelandic',
 		'it-ch, it' => 'italian',
 		'ja' => 'japanese',
@@ -689,6 +700,7 @@
 		'tl' => 'tagalog',
 		'tr' => 'turkish',
 		'uk' => 'ukrainian',
+		'vi' => 'vietnamese',
 		'vo' => 'volapuk',
 	);
 
@@ -1147,6 +1159,13 @@
 	$g_default_bug_eta = ETA_NONE;
 
 	/**
+	 * Default global category to be used when an issue is moved from a project to another
+	 * that doesn't have a category with a matching name.  The default is 1 which is the "General"
+	 * category that is created in the default database.
+	 */
+	$g_default_category_for_moves = 1;
+
+	/**
 	 *
 	 * @global int $g_default_limit_view
 	 */
@@ -1591,7 +1610,7 @@
 	 * do NOT include tags that have parameters (eg. <font face="arial">)
 	 * @global string $g_html_valid_tags
 	 */
-	$g_html_valid_tags		= 'p, li, ul, ol, br, pre, i, b, u, em';
+	$g_html_valid_tags		= 'p, li, ul, ol, br, pre, i, b, u, em, strong';
 
 	/**
 	 * These are the valid html tags for single line fields (e.g. issue summary).
@@ -1599,7 +1618,7 @@
 	 * do NOT include tags that have parameters (eg. <font face="arial">)
 	 * @global string $g_html_valid_tags_single_line
 	 */
-	$g_html_valid_tags_single_line		= 'i, b, u, em';
+	$g_html_valid_tags_single_line		= 'i, b, u, em, strong';
 
 	/**
 	 * maximum length of the description in a dropdown menu (for search)
@@ -1637,17 +1656,23 @@
 	 **************************/
 
 	/**
+	 * Specifies the LDAP or Active Directory server to connect to, and must be
+	 * provided as an URI
+	 * - Protocol is optional, can be one of ldap or ldaps, defaults to ldap
+	 * - Port number is optional, and defaults to 389. If this doesn't work, try
+	 *   using one of the following standard port numbers: 636 (ldaps); for Active
+	 *   Directory Global Catalog forest-wide search, use 3268 (ldap) or 3269 (ldaps)
+	 *
+	 * Examples of valid URI:
+	 *
+	 *   ldap.example.com
+	 *   ldap.example.com:3268
+	 *   ldap://ldap.example.com/
+	 *   ldaps://ldap.example.com:3269/
 	 *
 	 * @global string $g_ldap_server
 	 */
-	$g_ldap_server			= 'ldaps://ldap.example.com.au/';
-
-	/**
-	 * LDAP port (default 389).  If this doesn't work, try 636.
-	 *
-	 * @global integer $g_ldap_port
-	 */
-	$g_ldap_port			= 389;
+	$g_ldap_server			= 'ldap.example.com';
 
 	/**
 	 *
@@ -2481,8 +2506,10 @@
 
 	/**
 	 * login method
-	 * CRYPT or PLAIN or MD5 or LDAP or BASIC_AUTH
-	 * You can simply change this at will. MantisBT will try to figure out how the passwords were encrypted.
+	 * MD5, LDAP, BASIC_AUTH or HTTP_AUTH.
+	 * Note: you may not be able to easily switch encryption methods, so this
+	 * should be carefully chosen at install time. However, MantisBT will attempt
+	 * to "fall back" to older methods if possible.
 	 * @global int $g_login_method
 	 */
 	$g_login_method				= MD5;
@@ -2760,7 +2787,7 @@
 
 	/**
 	 * --- cookie prefix ---------------
-	 * set this to a unique identifier.  No spaces.
+	 * set this to a unique identifier.  No spaces or periods.
 	 * @global string $g_cookie_prefix
 	 */
 	$g_cookie_prefix		= 'MANTIS';
@@ -3644,6 +3671,21 @@
 	 * @global int $g_manage_plugin_threshold
 	 */
 	$g_manage_plugin_threshold = ADMINISTRATOR;
+	
+	
+	/**
+	 * A mapping of file extensions to mime types, used when serving resources from plugins
+	 * 
+	 * @global array $g_plugin_mime_types
+	 */
+	$g_plugin_mime_types = array(
+	    'css' => 'text/css',
+	    'js'  => 'text/javascript',
+	    'gif' => 'image/gif',
+	    'png' => 'image/png',
+	    'jpg' => 'image/jpeg',
+	    'jpeg' => 'image/jpeg'
+	);
 
 	/************
 	 * Due Date *

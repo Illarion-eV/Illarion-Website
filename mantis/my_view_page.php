@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -66,19 +66,17 @@
 ?>
 
 <div align="center">
-<table class="hide" border="0" cellspacing="3" cellpadding="0">
-
 <?php
 	$t_status_legend_position = config_get( 'status_legend_position' );
 
 	if ( $t_status_legend_position == STATUS_LEGEND_POSITION_TOP || $t_status_legend_position == STATUS_LEGEND_POSITION_BOTH ) {
-		echo '<tr>';
-		echo '<td colspan="2">';
 		html_status_legend();
-		echo '</td>';
-		echo '</tr>';
+		echo '<br />';
 	}
+?>
+<table class="hide" border="0" cellspacing="3" cellpadding="0">
 
+<?php
 	$t_number_of_boxes = count ( $t_boxes );
 	$t_boxes_position = config_get( 'my_view_boxes_fixed_position' );
 	$t_counter = 0;
@@ -124,11 +122,6 @@
 					include 'my_view_inc.php';
 					echo '</td></tr>';
 				}
-
-				# for odd number of box display one empty table cell in second column
-				if ( ( $t_counter == $t_number_of_boxes ) && 1 == $t_counter%2 ) {
-					echo '<td valign="top" width="50%"></td></tr>';
-				}
 			}
 			else if ( OFF == $t_boxes_position ) {
 				# start new table row and column for first box
@@ -149,25 +142,28 @@
 				if ( $t_counter == ceil ($t_number_of_boxes/2) ) {
 					echo '</td>';
 				}
-
-				# close the table row after all of the boxes
-				if ( $t_counter == $t_number_of_boxes ) {
-					echo '</td></tr>';
-				}
 			}
 		}
 	}
 
-	if ( $t_status_legend_position == STATUS_LEGEND_POSITION_BOTTOM || $t_status_legend_position == STATUS_LEGEND_POSITION_BOTH ) {
-		echo '<tr>';
-		echo '<td colspan="2">';
-		html_status_legend();
-		echo '</td>';
-		echo '</tr>';
+
+	# Close the box groups depending on the layout mode and whether an empty cell
+	# is required to pad the number of cells in the last row to the full width of
+	# the table.
+	if ( ON == $t_boxes_position && $t_counter == $t_number_of_boxes && 1 == $t_counter%2 ) {
+		echo '<td valign="top" width="50%"></td></tr>';
+	} else if ( OFF == $t_boxes_position && $t_counter == $t_number_of_boxes ) {
+		echo '</td></tr>';
 	}
+
 ?>
 
 </table>
+<?php
+	if ( $t_status_legend_position == STATUS_LEGEND_POSITION_BOTTOM || $t_status_legend_position == STATUS_LEGEND_POSITION_BOTH ) {
+		html_status_legend();
+	}
+?>
 </div>
 
 <?php

@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -88,7 +88,7 @@
 	# Tidy up this row
 	if ( ( $t_column_count > 0 ) && ( $t_column_count < $t_max_column_count ) ) {
 		for ( $i = $t_column_count; $i < $t_max_column_count; $i++ ) {
-			print '<td>&nbsp;</td>';
+			print '<td>&#160;</td>';
 		}
 		print '</tr>';
 	}

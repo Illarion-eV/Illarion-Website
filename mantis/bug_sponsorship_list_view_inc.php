@@ -20,7 +20,7 @@
 	 *
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 
@@ -68,7 +68,7 @@
 
 			$t_details_url = lang_get( 'sponsorship_process_url' );
 			if ( !is_blank( $t_details_url ) ) {
-				echo '&nbsp;[<a href="' . $t_details_url . '" target="_blank">'
+				echo '&#160;[<a href="' . $t_details_url . '" target="_blank">'
 					. lang_get( 'sponsorship_more_info' ) . '</a>]';
 			}
 		?>
@@ -144,7 +144,7 @@
 
 			$t_details_url = lang_get( 'sponsorship_process_url' );
 			if ( !is_blank( $t_details_url ) ) {
-				echo '&nbsp;[<a href="' . $t_details_url . '" target="_blank">'
+				echo '&#160;[<a href="' . $t_details_url . '" target="_blank">'
 					. lang_get( 'sponsorship_more_info' ) . '</a>]';
 			}
 

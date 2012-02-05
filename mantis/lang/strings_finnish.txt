@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -559,13 +559,13 @@ $s_error_database_version_out_of_date_2 = '<strong>Varoitus:</strong> Tietokanna
 $s_error_code_version_out_of_date = '<strong>Varoitus:</strong> Tietokannan rakenne on uudempi kuin päivitettävä applikaatio. Ole hyvä, ja päivitä applikaatio uudempaan.';
 $s_login_page_info = 'Tervetuloa projektitapahtumaseurantaan.';
 $s_login_title = 'Kirjaudu sisään';
-$s_save_login = 'Muista kirjautumiseni tällä koneella';
+$s_save_login = 'Muista kirjautumiseni tällä selaimella';
 $s_secure_session = 'Suojattu istunto';
 $s_secure_session_long = 'Salli istunnon käyttö vain tästä IP-osoitteesta.';
 $s_choose_project = 'Valitse projekti';
 $s_login_button = 'Kirjaudu sisään';
 $s_signup_link = 'Rekisteröi uusi käyttäjätunnus';
-$s_lost_password_link = 'Oletko unohtanut salasanasi?';
+$s_lost_password_link = 'Unohditko salasanasi?';
 $s_select_project_button = 'Valitse projekti';
 $s_lost_password_title = 'Uusi unohtunut salasana';
 $s_lost_password_done_title = 'Salasanaviesti lähetetty';
@@ -836,7 +836,7 @@ $s_project_document_updated = 'Projekti päivitetty onnistuneesti';
 $s_project_user_added_msg = 'Käyttäjä onnistuneesti lisätty tähän projektiin';
 $s_project_removed_user_msg = 'Käyttäjä onnistuneesti poistettu tästä projektista';
 $s_remove_user_sure_msg = 'Oletko varma, että haluat poistaa tämän käyttäjätunnuksen?';
-$s_remove_user_button = 'Poista käyttäjä';
+$s_remove_user_from_project_button = 'Poista käyttäjä projektista %s';
 $s_remove_all_users_sure_msg = 'Oletko varma, että haluat poistaa kaikki käyttäjät tästä projektista?';
 $s_remove_all_users_button = 'Poista kaikki käyttäjät';
 $s_add_user_title = 'Lisää käyttäjä projektiin';
@@ -1009,7 +1009,7 @@ $s_custom_field_type_enum_string = '0:Merkkijono,1:Numeerinen,2:Liukuluku,3:Jouk
 $s_confirm_used_custom_field_deletion = 'Tämä kenttä on liitetty ainakin yhteen projektiin.  Jos jatkat, kaikki tähän kenttään liitetyt arvot poistetaan. Tätä komentoa ei voida jälkeenpäin kumota.  Jos et halua poistaa tätä kenttää, paina selaimesi Takaisin-painiketta.  Jatkaaksesi, paina allaolevaa painiketta';
 $s_confirm_custom_field_deletion = 'Oletko varma, että haluat poistaa tämän mukautetun kentän ja kaikki siihen liitetyt arvot?';
 $s_field_delete_button = 'Poista kenttä';
-$s_confirm_custom_field_unlinking = 'Oletko varma, että haluat poistaa tämän mukautetun kentän projektista sekä kaikki mukautettuun kenttään syötetyt arvot?';
+$s_confirm_custom_field_unlinking = 'Haluatko varmasti irroittaa tämän mukautetun kentän tästä projektista? Arvoja ei poisteta, kunhan itse mukautettua kenttää ei poisteta.';
 $s_field_remove_button = 'Poista kenttä';
 $s_hide_status = 'Piilota tila';
 $s_filter_closed = 'Suljettu';

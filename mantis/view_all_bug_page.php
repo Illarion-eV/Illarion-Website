@@ -17,7 +17,7 @@
 	/**
 	 * @package MantisBT
 	 * @copyright Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
-	 * @copyright Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+	 * @copyright Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
 	 * @link http://www.mantisbt.org
 	 */
 	 /**
@@ -51,9 +51,11 @@
 		$t_users_handlers[] = $rows[$i]->handler_id;
 		$t_project_ids[] = $rows[$i]->project_id;
 	}
-	user_cache_array_rows( array_unique( $t_users_handlers ) );
-	project_cache_array_rows( array_unique( $t_project_ids ) );
-	
+	$t_unique_users_handlers = array_unique( $t_users_handlers );
+	$t_unique_project_ids = array_unique( $t_project_ids );
+	user_cache_array_rows( $t_unique_users_handlers );
+	project_cache_array_rows( $t_unique_project_ids );
+
 	gpc_set_cookie( config_get( 'bug_list_cookie' ), implode( ',', $t_bugslist ) );
 
 	compress_enable();

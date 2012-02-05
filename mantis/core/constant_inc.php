@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with MantisBT.  If not, see <http://www.gnu.org/licenses/>.
 
-define( 'MANTIS_VERSION', '1.2.3' );
+define( 'MANTIS_VERSION', '1.2.8' );
 
 # --- constants -------------------
 # magic numbers
@@ -521,8 +521,11 @@ define( 'PHPMAILER_METHOD_SENDMAIL',	1 );
 define( 'PHPMAILER_METHOD_SMTP',		2 );
 
 # Lengths - NOTE: these may represent hard-coded values in db schema and should not be changed.
-define( 'USERLEN', 32);
-define( 'REALLEN', 64);
-define( 'PASSLEN', 32);
+define( 'DB_FIELD_SIZE_USERNAME', 32);
+define( 'DB_FIELD_SIZE_REALNAME', 64);
+define( 'DB_FIELD_SIZE_PASSWORD', 32);
+
+# Maximum size for the user's password when storing it as a hash
+define( 'PASSWORD_MAX_SIZE_BEFORE_HASH', 1024 );
 
 define( 'SECONDS_PER_DAY', 86400 );

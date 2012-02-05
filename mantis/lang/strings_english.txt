@@ -2,7 +2,7 @@
 /** MantisBT - a php based bugtracking system
  *
  * Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
- * Copyright (C) 2002 - 2010  MantisBT Team - mantisbt-dev@lists.sourceforge.net
+ * Copyright (C) 2002 - 2011  MantisBT Team - mantisbt-dev@lists.sourceforge.net
  *
  * MantisBT is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1084,9 +1084,9 @@ $s_project_user_added_msg = 'Successfully added user to project.';
 # proj_user_delete.php
 $s_project_removed_user_msg = 'Successfully removed user from project.';
 
-# proj_user_delete_page.php
+# manage_user_proj_delete.php
 $s_remove_user_sure_msg = 'Are you sure you wish to remove this user?';
-$s_remove_user_button = 'Remove User';
+$s_remove_user_from_project_button = 'Remove User from Project %s';
 $s_remove_all_users_sure_msg = 'Are you sure you wish to remove all the users of this project?';
 $s_remove_all_users_button = 'Remove All Users';
 
@@ -1306,7 +1306,7 @@ $s_confirm_used_custom_field_deletion = 'This field is currently linked to at le
 $s_confirm_custom_field_deletion = 'Are you sure you want to delete this custom field and all associated values?';
 $s_field_delete_button = 'Delete Field';
 
-$s_confirm_custom_field_unlinking = 'Are you sure you want to remove (unlink) this custom field from the project and delete all associated values?';
+$s_confirm_custom_field_unlinking = 'Are you sure you want to unlink this custom field from the project? The values will not be deleted as long as the custom field itself is not deleted.';
 $s_field_remove_button = 'Remove Field';
 
 $s_hide_status = 'Hide Status';
@@ -1372,6 +1372,9 @@ $s_relationship_warning_blocking_bugs_not_resolved_2 = '<b>Attention:</b> Not al
 $s_create_child_bug_button = 'Clone';
 $s_bug_cloned_to = 'Issue cloned';
 $s_bug_created_from = 'Issue generated from';
+$s_copy_from_parent = 'Copy extended data from parent issue';
+$s_copy_notes_from_parent = 'Copy bug notes';
+$s_copy_attachments_from_parent = 'Copy attachments';
 
 # Relationship Graphs
 $s_viewing_bug_relationship_graph_title = 'Relationship Graph';
@@ -1503,8 +1506,9 @@ $s_tag_create = 'Create Tag';
 $s_show_all_tags = 'All';
 
 # Time Tracking
-$s_time_tracking_billing_link = 'Billing';
+$s_time_tracking_billing_link = 'Time Tracking';
 $s_time_tracking = 'Time tracking';
+$s_time_tracking_time_spent = 'Time spent:';
 $s_time_tracking_get_info_button = 'Get Time Tracking Information';
 $s_time_tracking_cost_per_hour = 'Cost / Hour';
 $s_time_tracking_cost = 'Cost';
