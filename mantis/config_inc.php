@@ -34,11 +34,11 @@
 # detailed comments.
 
 # --- Database Configuration ---
-$g_hostname      = "localhost";
-$g_db_username   = "homepage";
-$g_db_password   = "9RmtQ6htLNRU";
-$g_database_name = "website";
-$g_db_type       = "mysqli";
+$g_hostname = '';
+$g_db_type = 'pgsql';
+$g_database_name = 'illarion';
+$g_db_username = 'mantis';
+$g_db_password = '';
 
 # --- Anonymous Access / Signup ---
 $g_allow_signup				= ON;
