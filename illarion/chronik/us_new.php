@@ -12,7 +12,7 @@
 		exit();
 	}
 
-	$db =& Database::getMySQL();
+	$db =& Database::getPostgreSQL( 'homepage' );
 
 	$old_id = ( isset( $_GET['entry'] ) ? (int)$_GET['entry'] : false );
 
@@ -29,8 +29,8 @@
 	if ($old_id)
 	{
 		$query = 'SELECT *'
-		.PHP_EOL.' FROM `homepage_chronik`'
-		.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $old_id )
+		.PHP_EOL.' FROM chronicle'
+		.PHP_EOL.' WHERE id = '.$db->Quote( $old_id )
 		;
 		$db->setQuery( $query );
 		$old_entry = $db->loadAssocRow();
@@ -45,10 +45,10 @@
 		Page::setTitle( array( 'Chronicle', 'Edit entry' ) );
 		Page::setDescription( 'edit a entry in the chronicle' );
 
-		$text_de = ( is_null( $old_entry['chronik_note_de'] ) ? '' : (string)$old_entry['chronik_note_de'] );
-		$text_us = ( is_null( $old_entry['chronik_note_en'] ) ? '' : (string)$old_entry['chronik_note_en'] );
+		$text_de = ( is_null( $old_entry['note_de'] ) ? '' : (string)$old_entry['note_de'] );
+		$text_us = ( is_null( $old_entry['note_en'] ) ? '' : (string)$old_entry['note_en'] );
 
-		$illa_date = IllaDateTime::IllaDatestampToDate( $old_entry['chronik_date'] );
+		$illa_date = IllaDateTime::IllaDatestampToDate( $old_entry['date'] );
 		$illa_time = IllaDateTime::mkIllaTimestamp( 0, 0, 0, $illa_date['month'], $illa_date['day'], $illa_date['year'] );
 		$rl_timestamp = IllaDateTime::TimestampWithOffset( IllaDateTime::IllaTimeToRLTime( $illa_time ) );
 		$day_rl = (int)date('d',$rl_timestamp);

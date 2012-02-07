@@ -36,25 +36,25 @@
 			$date = IllaDateTime::mkIllaDatestamp( $illa_time['month'], $illa_time['day'], $illa_time['year'] );
 		}
 
-		$db =& Database::getMySQL();
+		$db =& Database::getPostgreSQL( 'homepage' );
 
 		if (isset( $_POST['id'] ) && is_numeric( $_POST['id'] ))
 		{
 			$old_id = (int)$_POST['id'];
 
 			$query = 'SELECT COUNT(*)'
-			.PHP_EOL.' FROM `homepage_chronik`'
-			.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $old_id )
+			.PHP_EOL.' FROM chronicle'
+			.PHP_EOL.' WHERE id = '.$db->Quote( $old_id )
 			;
 			$db->setQuery( $query );
 			if ( $db->loadResult() == 1 )
 			{
-				$query = 'UPDATE `homepage_chronik`'
-				.PHP_EOL.' SET `chronik_note_de` = '.$db->Quote( $text_de ).','
-				.PHP_EOL.' `chronik_note_en` = '.$db->Quote( $text_us ).','
-				.PHP_EOL.' `chronik_date` = '.$db->Quote( $date ).','
-				.PHP_EOL.' `chronik_author` = '.$db->Quote( $author )
-				.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $old_id )
+				$query = 'UPDATE chronicle'
+				.PHP_EOL.' SET note_de = '.$db->Quote( $text_de ).','
+				.PHP_EOL.' note_en = '.$db->Quote( $text_us ).','
+				.PHP_EOL.' date = '.$db->Quote( $date ).','
+				.PHP_EOL.' author = '.$db->Quote( $author )
+				.PHP_EOL.' WHERE id = '.$db->Quote( $old_id )
 				;
 				$db->setQuery( $query );
 				$db->query();
@@ -67,7 +67,7 @@
 		}
 		else
 		{
-			$query = 'INSERT INTO `homepage_chronik` (`chronik_author`,`chronik_date`,`chronik_note_de`,`chronik_note_en`)'
+			$query = 'INSERT INTO chronicle (author,date,note_de,note_en)'
 			.PHP_EOL.' VALUES ('.$db->Quote( $author ).','.$db->Quote( $date ).','.$db->Quote( $text_de ).','.$db->Quote( $text_us ).')'
 			;
 			$db->setQuery( $query );

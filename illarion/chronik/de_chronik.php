@@ -10,7 +10,7 @@
 
 	define( 'YEARS_PER_PAGE', 4 );
 
-	$db =& Database::getMySQL();
+	$db =& Database::getPostgreSQL( 'homepage' );
 
 	$curr_date  = IllaDateTime::IllaDatestampToDate();
 	$first_year = ( isset($_GET['start']) && is_numeric($_GET['start']) ? (int)$_GET['start'] : $curr_date['year'] );
@@ -18,10 +18,10 @@
 	$first_date = IllaDateTime::mkIllaDatestamp( 1, 1, $first_year-YEARS_PER_PAGE+1 );
 	$last_date = IllaDateTime::mkIllaDatestamp( 16, 5, $first_year );
 
-	$query = 'SELECT COUNT(*) AS `entries`, FLOOR(`chronik_date`/365)-10000 AS `year`, FLOOR((`chronik_date`%365)/24)+1 AS `month`, COUNT(*)*2-(COUNT(`chronik_note_en`)+COUNT(`chronik_note_de`)) AS `missing_translations`'
-	.PHP_EOL.'FROM `homepage_chronik`'
-	.PHP_EOL.'WHERE `chronik_date` >= '.$db->Quote( $first_date ).' AND `chronik_date` <= '.$db->Quote( $last_date )
-	.PHP_EOL.'GROUP BY `year`, `month`'
+	$query = 'SELECT COUNT(*) AS entries, FLOOR(date/365)-10000 AS year, FLOOR((date%365)/24)+1 AS month, COUNT(*)*2-(COUNT(note_en)+COUNT(note_de)) AS missing_translations'
+	.PHP_EOL.'FROM chronicle'
+	.PHP_EOL.'WHERE date >= '.$db->Quote( $first_date ).' AND date <= '.$db->Quote( $last_date )
+	.PHP_EOL.'GROUP BY year, month'
 	;
 	$db->setQuery( $query );
 	$entry_count = $db->loadAssocList();
