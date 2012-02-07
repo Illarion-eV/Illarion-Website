@@ -6,13 +6,13 @@
 	$lang = ( $_GET['lang'] == 'de' ? 'de' : 'us' );
 	$cnt = ( is_numeric($_GET['cnt']) ? (int)$_GET['cnt'] : 0 );
 	echo $cnt,'|';
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
 
-	$query = "SELECT `name`"
-	. "\n FROM `homepage_badname`"
+	$query = "SELECT name"
+	. "\n FROM badname"
 	;
-	$mySQL->setQuery( $query );
-	$bad_names = $mySQL->loadResultArray();
+	$db_hp->setQuery( $query );
+	$bad_names = $db_hp->loadResultArray();
 
 	foreach ($bad_names as $bad_name)
 	{

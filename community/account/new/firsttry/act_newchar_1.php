@@ -96,13 +96,13 @@
 			return;
 		}
 
-		$mySQL =& Database::getMySQL();
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
 
-		$query = 'SELECT `name`'
-		.PHP_EOL.' FROM `homepage_badname`'
+		$query = 'SELECT name'
+		.PHP_EOL.' FROM badname'
 		;
-		$mySQL->setQuery( $query );
-		$bad_names = $mySQL->loadResultArray();
+		$db_hp->setQuery( $query );
+		$bad_names = $db_hp->loadResultArray();
 
 		foreach ($bad_names as $bad_name)
 		{
