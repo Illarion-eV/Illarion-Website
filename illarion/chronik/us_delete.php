@@ -21,10 +21,10 @@
 		exit();
 	}
 
-	$query = 'SELECT chronicle.date, chronicle.note_de, chronicle.note_en, accounts.account.acc_login, accounts.account.acc_name'
+	$query = 'SELECT chronicle.date, chronicle.note_de, chronicle.note_en, account.acc_login, account.acc_name'
 	.PHP_EOL.' FROM chronicle'
-	.PHP_EOL.' INNER JOIN accounts.account ON chronicle.author = accounts.account.acc_id'
-	.PHP_EOL.' WHERE accounts.account.acc_id = '.$db->Quote( $entry_id )
+	.PHP_EOL.' INNER JOIN account ON chronicle.author = account.acc_id'
+	.PHP_EOL.' WHERE account.acc_id = '.$db->Quote( $entry_id )
 	;
 	$db->setQuery( $query );
 	$entry = $db->loadAssocRow();

@@ -27,9 +27,9 @@
 	$db =& Database::getPostgreSQL( 'homepage' );
 
 	// search query
-	$query = 'SELECT chronicle.note_de AS note, chronicle.date, accounts.account.acc_login, accounts.account.acc_name'
+	$query = 'SELECT chronicle.note_de AS note, chronicle.date, account.acc_login, account.acc_name'
 	.PHP_EOL.' FROM chronicle'
-	.PHP_EOL.' INNER JOIN accounts.account ON accounts.account.acc_id = chronicle.author'
+	.PHP_EOL.' INNER JOIN account ON account.acc_id = chronicle.author'
 	.PHP_EOL.' WHERE LOWER(note_de) LIKE '.$db->Quote( '%'.$searchterm.'%' )
 	.PHP_EOL.' ORDER BY date DESC'
 	;

@@ -22,9 +22,9 @@
 	$start_date = IllaDateTime::mkIllaDatestamp( $date['month'], 1, $date['year'] );
 	$end_date = IllaDateTime::mkIllaDatestamp( $date['month'], ($date['month']==16 ? 5 : 24), $date['year'] );
 
-	$query = 'SELECT chronicle.id, chronicle.note_de AS note, chronicle.note_en AS translation, chronicle.date, accounts.account.acc_name, accounts.account.acc_login'
+	$query = 'SELECT chronicle.id, chronicle.note_de AS note, chronicle.note_en AS translation, chronicle.date, account.acc_name, account.acc_login'
 	.PHP_EOL.' FROM chronicle'
-	.PHP_EOL.' INNER JOIN accounts.account ON accounts.account.acc_id = chronicle.author'
+	.PHP_EOL.' INNER JOIN account ON account.acc_id = chronicle.author'
 	.PHP_EOL.' WHERE chronicle.date >= '.$db->Quote( $start_date )
 	.PHP_EOL.' AND chronicle.date <= '.$db->Quote( $end_date )
 	.PHP_EOL.' ORDER BY chronicle.date ASC'
