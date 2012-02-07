@@ -72,26 +72,17 @@
     //echo "</pre>";
 
 
-	// MYSQL ABFRAGE UM ZU SEHEN WELCHE FLAGS GESETZT SIND
-	//
-	$mysql=& Database::getMySQL();
-	// CHAR IDs IN EIN ZUSÄTZLICHES ARRAY ZIEHEN
+	$db_hp=& Database::getPostgreSQL( 'homepage' );
 	$char_ids = $db->loadResultArray( 1 );
 
-	$query = "SELECT `char_id`,`settings`"
-    	. "\n FROM `homepage_character_details`"
-        . "\n WHERE `char_id` IN (".implode(',',$char_ids).")"
+	$query = "SELECT character_details.char_id, character_details.settings"
+    	. "\n FROM character_details"
+        . "\n WHERE char_id IN (".implode(',',$char_ids).")"
     ;
 
-	$mysql->setQuery( $query );
-	//echo $mysql->getQuery();
-    //echo "ende";
-	$char_settings=$mysql->loadAssocList(char_id);
+	$db_hp->setQuery( $query );
+	$char_settings=$db_hp->loadAssocList(char_id);
 	
-    //echo "<pre>";
-    //print_r ($char_settings);
-    //echo "</pre>";
-
 	//  ENDE DB KRAM
 
 	// Start der Ausgabe

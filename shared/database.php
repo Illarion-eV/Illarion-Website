@@ -14,6 +14,7 @@ class Database {
 	private static $postgre_accounts;
 	private static $postgre_illarionserver;
 	private static $postgre_testserver;
+	private static $postgre_homepage;
 	private static $disabled = false;
 
 	public function Database() {
@@ -59,6 +60,12 @@ class Database {
 			}
 			$pointer = &self::$postgre_testserver;
 			return $pointer;
+		} elseif ($server == 'homepage') {
+			if (!is_object(self::$postgre_homepage)) {
+				self::$postgre_homepage = new DatabasePostgreSQL('homepage');
+			}
+			$pointer = &self::$postgre_homepage;
+			return $pointer;
 		}
 	}
 
@@ -77,6 +84,9 @@ class Database {
 		}
 		if (is_object(self::$postgre_testserver)) {
 			self::$postgre_testserver = null;
+		}
+		if (is_object(self::$postgre_homepage)) {
+			self::$postgre_homepage = null;
 		}
 		self::$disabled = true;
 	}
@@ -113,6 +123,12 @@ class Database {
 			$pgSQL_time += self::$postgre_testserver->_query_time;
 			$pgSQL_parse += self::$postgre_testserver->_parse_time;
 			$pgSQL_queries .= self::$postgre_testserver->_query_list;
+		}
+		if (is_object(self::$postgre_homepage)) {
+			$pgSQL_cnt += self::$postgre_homepage->_query_cnt;
+			$pgSQL_time += self::$postgre_homepage->_query_time;
+			$pgSQL_parse += self::$postgre_homepage->_parse_time;
+			$pgSQL_queries .= self::$postgre_homepage->_query_list;
 		}
 		return array(
 			'mysql_queries' => $mySQL_cnt,

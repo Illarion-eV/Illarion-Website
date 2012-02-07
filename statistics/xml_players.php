@@ -29,13 +29,13 @@
 			$charids[] = $char['chr_playerid'];
 		}
 
-		$mySQL =& Database::getMySQL();
-		$query = 'SELECT `char_id`, `settings`, `votes_count`, `votes_result`'
-		.PHP_EOL.'FROM `homepage_character_details`'
-		.PHP_EOL.'WHERE `char_id` IN ('.implode(',',$charids).')'
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
+		$query = 'SELECT character_details.char_id, character_details.settings, character_details.votes_count, character_details.votes_result'
+		.PHP_EOL.'FROM character_details'
+		.PHP_EOL.'WHERE char_id IN ('.implode(',',$charids).')'
 		;
-		$mySQL->setQuery( $query );
-		$chr_settings = $mySQL->loadAssocList( 'char_id' );
+		$db_hp->setQuery( $query );
+		$chr_settings = $db_hp->loadAssocList( 'char_id' );
 
 		$current_race = -1;
 		$anything = false;

@@ -27,14 +27,14 @@
 
 	$cancel = false;
 	$path = Page::getMediaRootPath().'/characterpictures/';
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
 	if (isset($_POST['picture']) || isset($_FILES['picture']))
 	{
-		$query = 'SELECT `picture`'
-		.PHP_EOL.' FROM `homepage_character_details`'
-		.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid );
-		$mySQL->setQuery( $query );
-		$picture = $mySQL->loadResult();
+		$query = 'SELECT picture'
+		.PHP_EOL.' FROM character_details'
+		.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid );
+		$db_hp->setQuery( $query );
+		$picture = $db_hp->loadResult();
 		$query = false;
 		if ($picture)
 		{
@@ -51,9 +51,9 @@
 			else
 			{
 				@unlink($path.'preview/'.$picture);
-				$query = 'UPDATE `homepage_character_details`'
-				.PHP_EOL.' SET `picture` = NULL'
-				.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid );
+				$query = 'UPDATE character_details'
+				.PHP_EOL.' SET picture = NULL'
+				.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid );
 				$message = (Page::isGerman() ? 'Das Bild wurde gelöscht.' : 'The picture was deleted.');
 			}
 		}
@@ -130,11 +130,11 @@
 				imagedestroy($image);
 				imagedestroy($new_image);
 
-				$query = 'UPDATE `homepage_character_details`'
-				.PHP_EOL.' SET `picture` = '.$mySQL->Quote( $filename )
-				. ', `picture_height` = '.$mySQL->Quote( $pic_height )
-				. ', `picture_width` = '.$mySQL->Quote( $pic_width )
-				.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+				$query = 'UPDATE character_details'
+				.PHP_EOL.' SET picture = '.$db_hp->Quote( $filename )
+				. ', picture_height = '.$db_hp->Quote( $pic_height )
+				. ', picture_width = '.$db_hp->Quote( $pic_width )
+				.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 				;
 
 				$message = (Page::isGerman() ? 'Das Bild wurde erfolgreich hochgeladen.' : 'The picture was successfully uploaded.');
@@ -144,8 +144,8 @@
 
 	if ($query)
 	{
-		$mySQL->setQuery( $query );
-		$mySQL->query();
+		$db_hp->setQuery( $query );
+		$db_hp->query();
 		Messages::add( $message, 'info' );
 	}
 ?>

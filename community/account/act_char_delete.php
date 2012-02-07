@@ -38,15 +38,15 @@
     $pgSQL->setQuery( $query );
     $name = $pgSQL->loadResult();
 
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
 
 	if ($status == 30)
 	{
-		$query = 'INSERT INTO `homepage_badname`(`name`)'
-		.PHP_EOL.' VALUES ('.$mySQL->Quote( $name ).')'
+		$query = 'INSERT INTO badname(name)'
+		.PHP_EOL.' VALUES ('.$db_hp->Quote( $name ).')'
 		;
-		$mySQL->setQuery( $query );
-		$mySQL->query();
+		$db_hp->setQuery( $query );
+		$db_hp->query();
 	}
 
 	$query = 'INSERT INTO '.$server.'.deleted_chars (dc_acc_id, dc_char_id, dc_char_name)'
@@ -93,18 +93,18 @@
 	$pgSQL->query();
 	$pgSQL->Commit();
 
-	$mySQL->Begin();
-	$query = 'DELETE FROM `homepage_character_details`'
-	.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $_POST['charid'] )
+	$db_hp->Begin();
+	$query = 'DELETE FROM character_details'
+	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $_POST['charid'] )
 	;
-	$mySQL->setQuery( $query );
-	$mySQL->query();
-	$query = 'DELETE FROM `homepage_character_votes`'
-	.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $_POST['charid'] )
+	$db_hp->setQuery( $query );
+	$db_hp->query();
+	$query = 'DELETE FROM character_votes'
+	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $_POST['charid'] )
 	;
-	$mySQL->setQuery( $query );
-	$mySQL->query();
-	$mySQL->Commit();
+	$db_hp->setQuery( $query );
+	$db_hp->query();
+	$db_hp->Commit();
 
 	Messages::add((Page::isGerman() ? 'Dein Charakter wurde gelöscht.' : 'Your character was deleted.'), 'info');
 ?>

@@ -7,26 +7,26 @@
 		exit("Error - Character ID not transmitted");
 	}
 
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
 	$query = "SELECT COUNT(*)"
-	. "\n FROM `homepage_character_details`"
-	. "\n WHERE `char_id` = ".$mySQL->Quote( $charid )
-	. "\n AND (`settings` & 1) > 0"
+	. "\n FROM character_details"
+	. "\n WHERE char_id = ".$db_hp->Quote( $charid )
+	. "\n AND (settings & 1) > 0"
 	;
-	$mySQL->setQuery( $query );
+	$db_hp->setQuery( $query );
 
-	if ($mySQL->loadResult() != 1)
+	if ($db_hp->loadResult() != 1)
 	{
 		exit("Profil not found");
 	}
 
-	$query = "SELECT `vote`"
-	. "\n FROM `homepage_character_votes`"
-	. "\n WHERE `user_id` = ".$mySQL->Quote( IllaUser::$ID )
-	. "\n AND `char_id` = ".$mySQL->Quote( $charid )
+	$query = "SELECT vote"
+	. "\n FROM character_votes"
+	. "\n WHERE user_id = ".$db_hp->Quote( IllaUser::$ID )
+	. "\n AND char_id = ".$db_hp->Quote( $charid )
 	;
-	$mySQL->setQuery( $query );
-	$vote = $mySQL->loadResult();
+	$db_hp->setQuery( $query );
+	$vote = $db_hp->loadResult();
 
 	if (!$vote && $vote !== 0)
 	{

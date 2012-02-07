@@ -17,7 +17,7 @@
 			return false;
 		}
 
-		$mySQL =& Database::getMySQL();
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
 
 		if ($server == 'testserver')
 		{
@@ -25,25 +25,25 @@
 		}
 		else
 		{
-			$query = 'SELECT `picture`'
-			.PHP_EOL.' FROM `homepage_character_details`'
-			.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+			$query = 'SELECT picture'
+			.PHP_EOL.' FROM character_details'
+			.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 			;
-			$mySQL->setQuery( $query );
-			$char_details = $mySQL->loadAssocRow();
+			$db_hp->setQuery( $query );
+			$char_details = $db_hp->loadAssocRow();
 			if (!count($char_details))
 			{
-				$query = 'INSERT INTO `homepage_character_details` ( `char_id` )'
-				.PHP_EOL.' VALUES ( '.$mySQL->Quote( $charid ).' )'
+				$query = 'INSERT INTO character_details ( char_id )'
+				.PHP_EOL.' VALUES ( '.$db_hp->Quote( $charid ).' )'
 				;
-				$mySQL->setQuery( $query );
-				$mySQL->query();
+				$db_hp->setQuery( $query );
+				$db_hp->query();
 
-				$query = 'SELECT `picture`'
-				.PHP_EOL.' FROM `homepage_character_details`'
-				.PHP_EOL.'WHERE `char_id` = '.$mySQL->Quote( $charid );
-				$mySQL->setQuery( $query );
-				$char_details = $mySQL->loadAssocRow();
+				$query = 'SELECT picture'
+				.PHP_EOL.' FROM character_details'
+				.PHP_EOL.'WHERE char_id = '.$db_hp->Quote( $charid );
+				$db_hp->setQuery( $query );
+				$char_details = $db_hp->loadAssocRow();
 			}
 			$chardata['picture'] = $char_details['picture'];
 			unset($char_details);

@@ -205,11 +205,11 @@
 			{
 				list( $picture['width'], $picture['height'] ) = getimagesize( $filename_hardware );
 
-				$db =& Database::getMySQL();
-				$query = 'UPDATE `homepage_character_details`'
-				.PHP_EOL.' SET `picture_height` = '.$db->Quote( $picture['height'] )
-				. ', `picture_width` = '.$db->Quote( $picture['width'] )
-				.PHP_EOL.' WHERE `char_id` = '.$db->Quote( $charid )
+				$db =& Database::getMyPostgreSQL( 'homepage' );
+				$query = 'UPDATE character_details'
+				.PHP_EOL.' SET picture_height = '.$db->Quote( $picture['height'] )
+				. ', picture_width = '.$db->Quote( $picture['width'] )
+				.PHP_EOL.' WHERE char_id = '.$db->Quote( $charid )
 				;
 				$db->setQuery( $query );
 				$db->query();
@@ -254,13 +254,13 @@
 
 	function loadMySQLProfile( $charid )
 	{
-		$mySQL =& Database::getMySQL();
-		$query = 'SELECT `description_de`, `description_us`, `story_de`, `story_us`, `picture`, `picture_width`, `picture_height`, `votes_count`, `votes_result`, `settings`'
-		.PHP_EOL.' FROM `homepage_character_details`'
-		.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
+		$query = 'SELECT description_de, description_us, story_de, story_us, picture, picture_width, picture_height, votes_count, votes_result, settings'
+		.PHP_EOL.' FROM character_details'
+		.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
-		$profil = $mySQL->loadAssocRow();
+		$db_hp->setQuery( $query );
+		$profil = $db_hp->loadAssocRow();
 
 		if ( is_null( $profil ) || !count($profil))
 		{
@@ -339,15 +339,15 @@
 
 	function getOwnRating( $charid )
 	{
-		$mySQL =& Database::getMySQL();
-		$query = 'SELECT `vote`'
-		.PHP_EOL.' FROM `homepage_character_votes`'
-		.PHP_EOL.' WHERE `user_id` = '.$mySQL->Quote( IllaUser::$ID )
-		.PHP_EOL.' AND `char_id` = '.$mySQL->Quote( $charid )
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
+		$query = 'SELECT vote'
+		.PHP_EOL.' FROM character_votes'
+		.PHP_EOL.' WHERE user_id = '.$db_hp->Quote( IllaUser::$ID )
+		.PHP_EOL.' AND char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
+		$db_hp->setQuery( $query );
 
-		if ( is_null( $result = $mySQL->loadResult() ) )
+		if ( is_null( $result = $db_hp->loadResult() ) )
 		{
 			return false;
 		}
@@ -367,46 +367,46 @@
 			Messages::add( ( Page::isGerman() ? 'Ungültige Bewertung. Die Bewertung die abgegeben wurde liegt außerhalb der Richtlinien.' : 'Invalid voting. The voting is beyond the given limits.' ), 'error' );
 			return false;
 		}
-		$mySQL =& Database::getMySQL();
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
 		$query = 'SELECT COUNT(*)'
-		.PHP_EOL.' FROM `homepage_character_votes`'
-		.PHP_EOL.' WHERE `user_id` = '.$mySQL->Quote( IllaUser::$ID )
-		.PHP_EOL.' AND `char_id` = '.$mySQL->Quote( $charid )
+		.PHP_EOL.' FROM character_votes'
+		.PHP_EOL.' WHERE user_id = '.$db_hp->Quote( IllaUser::$ID )
+		.PHP_EOL.' AND char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
-		if ($mySQL->loadResult())
+		$db_hp->setQuery( $query );
+		if ($db_hp->loadResult())
 		{
-			$query = 'UPDATE `homepage_character_votes`'
-			.PHP_EOL.' SET `vote` = '.$mySQL->Quote( $vote )
-			.PHP_EOL.' WHERE `user_id` = '.$mySQL->Quote( IllaUser::$ID )
-			.PHP_EOL.' AND `char_id` = '.$mySQL->Quote( $charid )
+			$query = 'UPDATE character_votes'
+			.PHP_EOL.' SET vote = '.$db_hp->Quote( $vote )
+			.PHP_EOL.' WHERE user_id = '.$db_hp->Quote( IllaUser::$ID )
+			.PHP_EOL.' AND char_id = '.$db_hp->Quote( $charid )
 			;
 		}
 		else
 		{
-			$query = 'INSERT INTO `homepage_character_votes`(`user_id`,`char_id`,`vote`)'
-			.PHP_EOL.' VALUES ('.$mySQL->Quote( IllaUser::$ID ).','.$mySQL->Quote( $charid ).','.$mySQL->Quote( $vote ).')'
+			$query = 'INSERT INTO character_votes (user_id, char_id, vote)'
+			.PHP_EOL.' VALUES ('.$db_hp->Quote( IllaUser::$ID ).','.$db_hp->Quote( $charid ).','.$db_hp->Quote( $vote ).')'
 			;
 		}
-		$mySQL->setQuery( $query );
-		$mySQL->query();
+		$db_hp->setQuery( $query );
+		$db_hp->query();
 
-		$query = 'SELECT SUM(`vote`), COUNT(*)'
-		.PHP_EOL.' FROM `homepage_character_votes`'
-		.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+		$query = 'SELECT SUM(vote), COUNT(*)'
+		.PHP_EOL.' FROM character_votes'
+		.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
+		$db_hp->setQuery( $query );
 
-		list($rating, $count) = $mySQL->loadRow();
+		list($rating, $count) = $db_hp->loadRow();
 		$rating = round($rating/$count);
 
-		$query = 'UPDATE `homepage_character_details`'
-		.PHP_EOL.' SET `votes_count` = '.$mySQL->Quote( $count )
-		.        ' , `votes_result` = '.$mySQL->Quote( $rating )
-		.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+		$query = 'UPDATE character_details'
+		.PHP_EOL.' SET votes_count = '.$db_hp->Quote( $count )
+		.        ' , votes_result = '.$db_hp->Quote( $rating )
+		.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
-		$mySQL->query();
+		$db_hp->setQuery( $query );
+		$db_hp->query();
 
 		Messages::add(( Page::isGerman() ? 'Profil wurde bewertet.' : 'Profile got rated.' ), 'info' );
 		return true;

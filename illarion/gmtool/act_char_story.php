@@ -37,15 +37,15 @@
 	$story_de = $_POST['story_de'];
 	$story_us = $_POST['story_us'];
 
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getMySQL( 'homepage' );
 
-	$query = "UPDATE `homepage_character_details`"
-	. "\n SET `story_de` = ".$mySQL->Quote( $story_de )
-	. ", `story_us` = ".$mySQL->Quote( $story_us )
-	. "\n WHERE `char_id` =".$mySQL->Quote( $charid )
+	$query = "UPDATE character_details"
+	. "\n SET story_de = ".$db_hp->Quote( $story_de )
+	. ", story_us = ".$db_hp->Quote( $story_us )
+	. "\n WHERE char_id =".$db_hp->Quote( $charid )
 	;
-	$mySQL->setQuery( $query );
-	$mySQL->query();
+	$db_hp->setQuery( $query );
+	$db_hp->query();
 
 	Messages::add( (Page::isGerman() ? 'Die Geschichte wurde erfolgreich gespeichert.' : 'The story was successfully saved.'), 'info' );
 ?>

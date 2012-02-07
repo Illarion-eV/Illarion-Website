@@ -30,13 +30,13 @@
 	{
 		exit('Character not found');
 	}
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `picture`'
-	.PHP_EOL.' FROM `homepage_character_details`'
-	.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
+	$query = 'SELECT picture'
+	.PHP_EOL.' FROM character_details'
+	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 	;
-	$mySQL->setQuery( $query );
-	$picture = $mySQL->loadResult();
+	$db_hp->setQuery( $query );
+	$picture = $db_hp->loadResult();
 	if (!$picture)
 	{
 		$picture = false;

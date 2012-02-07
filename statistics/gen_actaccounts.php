@@ -7,7 +7,6 @@
 		define( 'TODAY_TIMESTAMP', mktime(0,0,0,date('m'),date('d'),date('Y') ) );
 	}
 
-	$mySQL =& Database::getMySQL();
 	$pgSQL =& Database::getPostgreSQL();
 
 	// Connect informations needed for the statistic

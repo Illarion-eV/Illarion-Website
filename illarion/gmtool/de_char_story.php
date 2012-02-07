@@ -36,13 +36,13 @@
 		exit();
 	}
 
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `story_de`, `story_us`'
-	.PHP_EOL.' FROM `homepage_character_details`'
-	.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
+	$query = 'SELECT story_de, story_us'
+	.PHP_EOL.' FROM character_details`'
+	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 	;
-	$mySQL->setQuery( $query );
-	list($story_de, $story_us) = $mySQL->loadRow();
+	$db_hp->setQuery( $query );
+	list($story_de, $story_us) = $db_hp->loadRow();
 
 	$story_de = ( $story_de ? htmlspecialchars($story_de) : '' );
 	$story_us = ( $story_us ? htmlspecialchars($story_us) : '' );

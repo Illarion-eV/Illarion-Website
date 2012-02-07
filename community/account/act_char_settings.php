@@ -26,13 +26,13 @@
 	$value += ( $_POST['show_story']    == 1 ? 4 : 0 );
 	$value += ( $_POST['show_birthday'] == 1 ? 8 : 0 );
 
-	$mySQL =& Database::getMySQL();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
 
-	$query = "UPDATE `homepage_character_details`"
-	. "\n SET `settings` = ".$mySQL->Quote( $value )
-	. "\n WHERE `char_id` = ".$mySQL->Quote( $_GET['charid'] );
-	$mySQL->setQuery( $query );
-	$mySQL->query();
+	$query = "UPDATE character_details"
+	. "\n SET settings = ".$db_hp->Quote( $value )
+	. "\n WHERE char_id = ".$db_hp->Quote( $_GET['charid'] );
+	$db_hp->setQuery( $query );
+	$db_hp->query();
 
 	Messages::add( (Page::isGerman() ? 'Die Einstellungen wurden gespeichert.' : 'All settings were saved.'), 'info' );
 ?>

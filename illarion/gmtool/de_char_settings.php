@@ -30,12 +30,12 @@
 	{
 		exit('Charakter wurde nicht gefunden');
 	}
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `settings`'
-	.PHP_EOL.' FROM `homepage_character_details`'
-	.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid );
-	$mySQL->setQuery( $query );
-	$settings = $mySQL->loadResult();
+	$db_hp =& Database::getPostgreSQL( 'homepage' );
+	$query = 'SELECT settings'
+	.PHP_EOL.' FROM character_details'
+	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid );
+	$db_hp->setQuery( $query );
+	$settings = $db_hp->loadResult();
 
 	$show_profil   = ( (int)($settings&1) > 0 );
 	$show_online   = ( (int)($settings&2) == 0 );

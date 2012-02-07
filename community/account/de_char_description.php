@@ -42,13 +42,13 @@
 
 	if ($server == 'illarionserver')
 	{
-		$mySQL =& Database::getMySQL();
-		$query = 'SELECT `description_de`, `description_us`'
-		.PHP_EOL.' FROM `homepage_character_details`'
-		.PHP_EOL.' WHERE `char_id` = '.$mySQL->Quote( $charid )
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
+		$query = 'SELECT description_de, description_us'
+		.PHP_EOL.' FROM character_details'
+		.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
-		list($descriptions['long_de'], $descriptions['long_us']) = $mySQL->loadRow();
+		$db_hp->setQuery( $query );
+		list($descriptions['long_de'], $descriptions['long_us']) = $db_hp->loadRow();
 	}
 
 	$descriptions['short_de'] = ( $descriptions['short_de'] ? htmlspecialchars($descriptions['short_de']) : '' );

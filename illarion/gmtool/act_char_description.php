@@ -35,15 +35,15 @@
 		$long_de = $_POST['long_de'];
 		$long_us = $_POST['long_us'];
 
-		$mySQL =& Database::getMySQL();
+		$db_hp =& Database::getPostgreSQL( 'homepage' );
 
-		$query = "UPDATE `homepage_character_details`"
-		. "\n SET `description_de` = ".$mySQL->Quote( $long_de )
-		. ", `description_us` = ".$mySQL->Quote( $long_us )
-		. "\n WHERE `char_id` =".$mySQL->Quote( $charid )
+		$query = "UPDATE character_details"
+		. "\n SET description_de = ".$db_hp->Quote( $long_de )
+		. ", description_us = ".$db_hp->Quote( $long_us )
+		. "\n WHERE char_id =".$db_hp->Quote( $charid )
 		;
-		$mySQL->setQuery( $query );
-		$mySQL->query();
+		$db_hp->setQuery( $query );
+		$db_hp->query();
 	}
 
 	$query = "UPDATE chars"
