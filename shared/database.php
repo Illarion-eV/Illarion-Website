@@ -723,7 +723,7 @@ class DatabasePostgreSQL extends DatabaseMain {
 		parent::__construct();
 		
 		if ($database != null) {
-			pg_query($this->_resource, 'SET search_path TO ' . $database);
+			pg_query($this->_resource, 'SET search_path TO ' . $database . ', accounts');
 		}
 	}
 
