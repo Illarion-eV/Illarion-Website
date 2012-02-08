@@ -84,29 +84,6 @@
 		}
 	}
 
-	
-
-/*
-
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `id`, `name_us` AS `name`'
-	.PHP_EOL.' FROM `homepage_startplace`'
-	.( $newbieOnly ? PHP_EOL.' WHERE `newbie` = 1' : '')
-	.PHP_EOL.' ORDER BY `id` ASC'
-	;
-	$mySQL->setQuery( $query );
-	$start_places = $mySQL->loadAssocList();
-
-	$query = 'SELECT `id`, `name_us` AS `name`'
-	.PHP_EOL.' FROM `homepage_startpack`'
-	.PHP_EOL.' WHERE `race` IN (-1,'.$mySQL->Quote( $race ).')'
-	;
-	$mySQL->setQuery( $query );
-	$start_packs = $mySQL->loadAssocList();
-
-
-*/
-
 
     $query = 'SELECT spl_id, spl_name_us AS name'
     .PHP_EOL.' FROM accounts.startplace'

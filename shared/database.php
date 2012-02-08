@@ -724,6 +724,8 @@ class DatabasePostgreSQL extends DatabaseMain {
 		
 		if ($database != null) {
 			pg_query($this->_resource, 'SET search_path TO ' . $database . ', accounts');
+		} else {
+			pg_query($this->_resource, 'SET search_path TO homepage, accounts');
 		}
 	}
 

@@ -68,13 +68,13 @@
 	calculateLimits( &$limits );
 	$limit_text = generateLimitTexts( $limits );
 
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `name_de` AS `name`, `str`, `agi`, `dex`, `con`, `int`, `per`, `wil`, `ess`'
-	.PHP_EOL.' FROM `homepage_attribtemp`'
-	.PHP_EOL.' ORDER BY `id`'
+	$db =& Database::getPostgreSQL( 'homepage' );
+	$query = 'SELECT name_de AS name, str, agi, dex, con, int, per, wil, ess'
+	.PHP_EOL.' FROM attribtemp'
+	.PHP_EOL.' ORDER BY id'
 	;
-	$mySQL->setQuery( $query );
-	$templates = $mySQL->loadAssocList();
+	$db->setQuery( $query );
+	$templates = $db->loadAssocList();
 
 	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 

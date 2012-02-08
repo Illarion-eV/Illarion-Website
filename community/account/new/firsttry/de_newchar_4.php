@@ -84,21 +84,21 @@
 		}
 	}
 
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `id`, `name_de` AS `name`'
-	.PHP_EOL.' FROM `homepage_startplace`'
-	.( $newbieOnly ? PHP_EOL.' WHERE `newbie` = 1' : '')
-	.PHP_EOL.' ORDER BY `id` ASC'
+	$db =& Database::getPostgreSQL( 'homepage' );
+	$query = 'SELECT id, name_de AS name'
+	.PHP_EOL.' FROM startplace'
+	.( $newbieOnly ? PHP_EOL.' WHERE newbie = 1' : '')
+	.PHP_EOL.' ORDER BY id ASC'
 	;
-	$mySQL->setQuery( $query );
-	$start_places = $mySQL->loadAssocList();
+	$db->setQuery( $query );
+	$start_places = $db->loadAssocList();
 
-	$query = 'SELECT `id`, `name_de` AS `name`'
-	.PHP_EOL.' FROM `homepage_startpack`'
-	.PHP_EOL.' WHERE `race` IN (-1,'.$mySQL->Quote( $race ).')'
+	$query = 'SELECT id, name_de AS name'
+	.PHP_EOL.' FROM startpack'
+	.PHP_EOL.' WHERE race IN (-1,'.$db->Quote( $race ).')'
 	;
-	$mySQL->setQuery( $query );
-	$start_packs = $mySQL->loadAssocList();
+	$db->setQuery( $query );
+	$start_packs = $db->loadAssocList();
 
 	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 

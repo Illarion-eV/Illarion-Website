@@ -1,37 +1,37 @@
 <?php
 	if (isset($_POST['email']))
 	{
-		$mySQL =& Database::getMySQL();
+		$db =& Database::getPostgreSQL( 'homepage' );
 
-		$query = 'SELECT `id`, `name`, `email`'
-		.PHP_EOL.' FROM `homepage_user`'
-		.PHP_EOL.' WHERE `email` = '.$mySQL->Quote( $_POST['email'] )
+		$query = 'SELECT acc_id, acc_login, acc_email'
+		.PHP_EOL.' FROM account'
+		.PHP_EOL.' WHERE acc_email = '.$db->Quote( $_POST['email'] )
 		;
-		$mySQL->setQuery( $query );
+		$db->setQuery( $query );
 
-		list($id,$name,$email) = $mySQL->loadRow();
+		list($id,$name,$email) = $db->loadRow();
 
 		if ((int)$id)
 		{
-		    $mySQL->setQuery( 'SELECT COUNT(*) FROM `homepage_mail_cert` WHERE `id` = '.$mySQL->Quote((int)$id).' AND `type` = 0' );
-		    if ($mySQL->loadResult())
+		    $db->setQuery( 'SELECT COUNT(*) FROM mail_cert WHERE id = '.$db->Quote((int)$id).' AND type = 0' );
+		    if ($db->loadResult())
 		    {
 		        Messages::add( (Page::isGerman() ? 'Der Account wurde noch nicht aktiviert.' : 'The account was not activated yet.'), 'error' );
 		    }
 		    else
 		    {
-				$mySQL->setQuery('DELETE FROM `homepage_mail_cert` WHERE `id` = '.$mySQL->Quote($id).' AND `type` = 1');
-				$mySQL->query();
+				$db->setQuery('DELETE FROM mail_cert WHERE id = '.$db->Quote($id).' AND type = 1');
+				$db->query();
 				
 		        $valid_key = '';
     			do
     			{
     				$valid_key = md5( rand( 0,100000000 ) . microtime() );
-    				$mySQL->setQuery( 'SELECT COUNT(*) FROM `homepage_mail_cert` WHERE `key` = '.$mySQL->Quote($valid_key).' AND `type` = 1' );
-    			} while ($mySQL->loadResult());
+    				$db->setQuery( 'SELECT COUNT(*) FROM mail_cert WHERE key = '.$db->Quote($valid_key).' AND type = 1' );
+    			} while ($db->loadResult());
 
-    			$mySQL->setQuery( 'INSERT INTO `homepage_mail_cert` VALUES ('.$mySQL->Quote($id).','.$mySQL->Quote($valid_key).',1)');
-    			$mySQL->query();
+    			$db->setQuery( 'INSERT INTO mail_cert VALUES ('.$db->Quote($id).','.$db->Quote($valid_key).',1)');
+    			$db->query();
     			$mail = new PHPMailer();
     			$mail->IsMail();
     			$mail->IsHTML(false);
@@ -79,16 +79,16 @@
 	}
 	elseif (isset($_POST['passwd']))
 	{
-		$mySQL =& Database::getMySQL();
+		$db =& Database::getPostgreSQL( 'homepage' );
 
-		$query = 'SELECT `id`'
-		.PHP_EOL.' FROM `homepage_mail_cert`'
-		.PHP_EOL.' WHERE `key` = '.$mySQL->Quote( $_POST['id'] )
-		.PHP_EOL.' AND `type` = 1'
+		$query = 'SELECT id'
+		.PHP_EOL.' FROM mail_cert'
+		.PHP_EOL.' WHERE key = '.$db->Quote( $_POST['id'] )
+		.PHP_EOL.' AND type = 1'
 		;
-		$mySQL->setQuery( $query );
+		$db->setQuery( $query );
 
-		$accid = (int)$mySQL->loadResult();
+		$accid = (int)$db->loadResult();
 		if (!$accid)
 		{
 			Messages::add( (Page::isGerman() ? 'Schlüssel ungültig!' : 'Key invalid!'), 'error' );
@@ -100,23 +100,15 @@
 			{
 				$pass = crypt(stripslashes($pass), '$1$illarion1');
 
-				$query = 'UPDATE `homepage_user`'
-				.PHP_EOL.' SET `passwd` = '.$mySQL->Quote( $pass )
-				.PHP_EOL.' WHERE `id` = '.$mySQL->Quote( $accid )
-				;
-				$mySQL->setQuery( $query );
-				$mySQL->query();
-				$mySQL->setQuery( 'DELETE FROM `homepage_mail_cert` WHERE `key` = '.$mySQL->Quote($_POST['id']).' AND `type` = 1' );
-				$mySQL->query();
-
-				$pgSQL =& Database::getPostgreSQL( 'accounts' );
+				$db->setQuery( 'DELETE FROM mail_cert WHERE key = '.$db->Quote($_POST['id']).' AND type = 1' );
+				$db->query();
 
 				$query = 'UPDATE account'
-				.PHP_EOL.' SET acc_passwd = '.$pgSQL->Quote( $pass )
-				.PHP_EOL.' WHERE acc_id = '.$pgSQL->Quote( $accid )
+				.PHP_EOL.' SET acc_passwd = '.$db->Quote( $pass )
+				.PHP_EOL.' WHERE acc_id = '.$db->Quote( $accid )
 				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
+				$db->setQuery( $query );
+				$db->query();
 				Messages::add( (Page::isGerman() ? 'Das Passwort wurde geändert.' : 'The password was changed.'), 'info' );
 			}
 			else

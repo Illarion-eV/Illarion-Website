@@ -110,11 +110,6 @@ class IllaUser {
 
 		$sessiondata = unserialize(stripslashes($sessiondata));
 
-/*
-		$db = &Database::getMySQL();
-		$db->setQuery('SELECT COUNT(*) FROM `homepage_session_keys` WHERE `key_id` = ' . $db->Quote($sessiondata['key']) . ' AND `user_id` = ' . $db->Quote($sessiondata['id']));
-		if ($db->loadResult() != 1) {
-*/
 		$pgSQL = &Database::getPostgreSQL();
 
         $pgSQL->setQuery('SELECT COUNT(*) FROM homepage.session_keys WHERE ses_key_id = ' . $pgSQL->Quote($sessiondata['key']) . ' AND ses_user_id = ' . $pgSQL->Quote($sessiondata['id']));
@@ -149,45 +144,10 @@ class IllaUser {
             self::$time_offset = ($user['acc_timeoffset'] / 100);
             self::$dst = ($user['acc_dst'] == 1);
             self::$paid = false;
-            self::StoreToMySQL();
             self::StoreToPostgreSQL();
             self::writeOriginalValues();
          }
 
-/*
-		$query = 'SELECT `username`, `name`, `email`, UNIX_TIMESTAMP(`lastseen`) AS `lastseen`, `lastip`, `state`, `charlimit`, `paid`, `passwd`, `length`, `weight`, `time_offset`, `allowed_races`, `allowed_applies`, `dst`'
-		 . PHP_EOL . ' FROM `homepage_user`'
-		 . PHP_EOL . ' WHERE `id` = ' . $db->Quote($sessiondata['id']) ;
-		$db->setQuery($query);
-		$user = $db->loadAssocRow();
-		if (!is_null($user)) {
-			$pgSQL = &Database::getPostgreSQL('accounts');
-			$query = 'SELECT "acc_lang"'
-			 . PHP_EOL . ' FROM "account"'
-			 . PHP_EOL . ' WHERE "acc_id" = ' . $pgSQL->Quote($sessiondata['id']);
-			$pgSQL->setQuery($query);
-			self::$ID = $sessiondata['id'];
-			self::$username = $user['username'];
-			self::$name = ($user['name'] ? $user['name'] : $user['username']);
-			self::$email = $user['email'];
-			self::$lastseen = $user['lastseen'];
-			self::$lastip = self::decode_ip($user['lastip']);
-			self::$state = $user['state'];
-			self::$charlimit = $user['charlimit'];
-			self::$paid = ($user['paid'] == 1);
-			self::$length = $user['length'];
-			self::$weight = $user['weight'];
-			self::$time_offset = ($user['time_offset'] / 100);
-			self::$allowed_races = explode(',', $user['allowed_races']);
-			self::$allowed_applies = explode(',', $user['allowed_applies']);
-			self::$passwd = $user['passwd'];
-			self::$lang = ($pgSQL->loadResult() == 0 ? 'de' : 'us');
-			self::$dst = ($user['dst'] == 1);
-			self::writeOriginalValues();
-			self::StoreToMySQL();
-			self::StoreToPostgreSQL();
-		}
-*/
 
 		if (!self::IPfine() || self::$state != 3) {
 			self::logout();
@@ -209,11 +169,6 @@ class IllaUser {
 		$pgSQL->setQuery('DELETE FROM homepage.session_keys WHERE ses_user_id = ' . $pgSQL->Quote(self::$ID));
         $pgSQL->query();
 
-/*
-		$db = &Database::getMySQL();
-		$db->setQuery('DELETE FROM `homepage_session_keys` WHERE `user_id` = ' . $db->Quote(self::$ID));
-		$db->query();
-*/
 		setcookie('illarion_hp', '', time() - 3600, '/');
 		session_destroy();
 		self::$ID = - 1;
@@ -260,10 +215,10 @@ class IllaUser {
 		if (is_null(self::$found_groups)) {
 			
 
-			$db = &Database::getMySQL();
-			$query = 'SELECT `right_id`, `group_id`'
-			 . PHP_EOL . ' FROM `homepage_user_rights`'
-			 . PHP_EOL . ' WHERE `user_id` = ' . $db->Quote(self::$ID) ;
+			$db = &Database::getPostgreSQL();
+			$query = 'SELECT ar_right_id, ar_group_id'
+			 . PHP_EOL . ' FROM account_rights'
+			 . PHP_EOL . ' WHERE ar_user_id = ' . $db->Quote(self::$ID) ;
 			$db->setQuery($query);
 			$rights_groups = $db->loadAssocList();
 
@@ -272,11 +227,11 @@ class IllaUser {
 			self::$found_rights = array();
 
 			foreach ($rights_groups as $right_group) {
-				if (!is_null($right_group['right_id'])) {
-					self::$found_rights[ $right_group['right_id'] ] = true;
+				if (!is_null($right_group['ar_right_id'])) {
+					self::$found_rights[ $right_group['ar_right_id'] ] = true;
 				}
-				if (!is_null($right_group['group_id'])) {
-					self::$found_groups[ $right_group['group_id'] ] = true;
+				if (!is_null($right_group['ar_group_id'])) {
+					self::$found_groups[ $right_group['ar_group_id'] ] = true;
 				}
 			}
 		}
@@ -343,7 +298,6 @@ class IllaUser {
 			return false;
 		}
 		$pgSQL = &Database::getPostgreSQL();
-		$mySQL = &Database::getMySQL();
 
 		$query = 'SELECT COUNT(*)'
 		 . PHP_EOL . ' FROM "accounts"."account"'
@@ -371,17 +325,15 @@ class IllaUser {
 			$pgSQL->setQuery($query);
 			self::$ID = $pgSQL->loadResult();
 		}
-		self::StoreToMySQL();
 		self::StoreToPostgreSQL();
 
-		$mySQL = &Database::getMySQL();
 		do {
 			$valid_key = md5(rand(0, 100000000) . microtime());
-			$mySQL->setQuery('SELECT COUNT(*) FROM `homepage_mail_cert` WHERE `key` = ' . $mySQL->Quote($valid_key) . ' AND `type` = 0');
-		} while ($mySQL->loadResult());
+			$pgSQL->setQuery('SELECT COUNT(*) FROM mail_cert WHERE key = ' . $pgSQL->Quote($valid_key) . ' AND type = 0');
+		} while ($pgSQL->loadResult());
 
-		$mySQL->setQuery('INSERT INTO `homepage_mail_cert` VALUES (' . $mySQL->Quote(self::$ID) . ',' . $mySQL->Quote($valid_key) . ',0)');
-		$mySQL->query();
+		$pgSQL->setQuery('INSERT INTO mail_cert VALUES (' . $pgSQL->Quote(self::$ID) . ',' . $pgSQL->Quote($valid_key) . ',0)');
+		$pgSQL->query();
 		$mail = new PHPMailer();
 		$mail->IsMail();
 		$mail->IsHTML(false);
@@ -422,17 +374,14 @@ class IllaUser {
 			return false;
 		}
 
-		$db = &Database::getMySQL();
-		$db->setQuery('SELECT `id` FROM `homepage_mail_cert` WHERE `key` = ' . $db->Quote($key) . ' AND `type` = 0');
+		$db = &Database::getPostgreSQL();
+		$db->setQuery('SELECT id FROM mail_cert WHERE key = ' . $db->Quote($key) . ' AND type = 0');
 		$id = $db->loadResult();
 		if ($id) {
-			$db->setQuery('UPDATE `homepage_user` SET `state` = 3 WHERE `id` = ' . $db->Quote($id));
+			$db->setQuery('UPDATE account SET acc_state = 3 WHERE acc_id = ' . $db->Quote($id));
 			$db->query();
-			$db->setQuery('DELETE FROM `homepage_mail_cert` WHERE `key` = ' . $db->Quote($key) . ' AND `type` = 0');
+			$db->setQuery('DELETE FROM mail_cert WHERE key = ' . $db->Quote($key) . ' AND type = 0');
 			$db->query();
-			$pgSQL = &Database::getPostgreSQL();
-			$pgSQL->setQuery('UPDATE "accounts"."account" SET "acc_state" = 3 WHERE "acc_id" = ' . $pgSQL->Quote($id));
-			$pgSQL->query();
 			return true;
 		}
 		return false;
@@ -452,18 +401,6 @@ class IllaUser {
         $pgSQL->setQuery('INSERT INTO homepage.session_keys VALUES (' . $pgSQL->Quote(self::$key) . ',' . $pgSQL->Quote(self::$ID) . ',' . $pgSQL->Quote($_SERVER['REMOTE_ADDR']) . ',' . $pgSQL->Quote(time()) . ')');
         $pgSQL->query();
 		
-
-/*
-		$db = &Database::getMySQL();
-		$db->setQuery('DELETE FROM `homepage_session_keys` WHERE `user_id` = ' . $db->Quote(self::$ID));
-		$db->query();
-		do {
-			self::$key = md5(rand(0, 100000000) . microtime());
-			$db->setQuery('SELECT COUNT(*) FROM `homepage_session_keys` WHERE `key_id` = ' . $db->Quote(self::$key));
-		} while ($db->loadResult());
-		$db->setQuery('INSERT INTO `homepage_session_keys` VALUES (' . $db->Quote(self::$key) . ',' . $db->Quote(self::$ID) . ',' . $db->Quote(self::encode_ip($_SERVER['REMOTE_ADDR'])) . ',' . $db->Quote(time()) . ')');
-		$db->query();
-*/
 		$sessiondata['id'] = self::$ID;
 		$sessiondata['key'] = self::$key;
 		$sessiondata['autolog'] = $remember_me;
@@ -503,78 +440,7 @@ class IllaUser {
 		if (self::$ID == - 1) {
 			return false;
 		}
-		self::StoreToMySQL();
 		self::StoreToPostgreSQL();
-	}
-
-	private static function StoreToMySQL() {
-		self::encrypt_pw();
-		$db = &Database::getMySQL();
-		$db->setQuery('SELECT COUNT(*) FROM `homepage_user` WHERE `id` = ' . $db->Quote(self::$ID));
-		if ($db->loadResult() != 0) {
-			$allowed_races = implode(',', array_unique(self::$allowed_races));
-			$allowed_applies = implode(',', array_unique(self::$allowed_applies));
-			$update_parts = array();
-			if (self::$original_values['username'] != self::$username) {
-				$update_parts[] = '`username` = ' . $db->Quote(self::$username);
-			} ;
-			if (self::$original_values['name'] != self::$name) {
-				$update_parts[] = '`name` = ' . $db->Quote(self::$name);
-			} ;
-			if (self::$original_values['email'] != self::$email) {
-				$update_parts[] = '`email` = ' . $db->Quote(self::$email);
-			} ;
-			if (self::$original_values['lastip'] != $_SERVER['REMOTE_ADDR']) {
-				$update_parts[] = '`lastip` = ' . $db->Quote(self::encode_ip($_SERVER['REMOTE_ADDR']));
-			} ;
-			if (self::$original_values['state'] != self::$state) {
-				$update_parts[] = '`state` = ' . $db->Quote(self::$state);
-			} ;
-			if (self::$original_values['charlimit'] != self::$charlimit) {
-				$update_parts[] = '`charlimit` = ' . $db->Quote(self::$charlimit);
-			} ;
-			if (self::$original_values['paid'] != self::$paid) {
-				$update_parts[] = '`paid` = ' . $db->Quote((self::$paid ? 1 : 0));
-			} ;
-			if (self::$original_values['passwd'] != self::$passwd) {
-				$update_parts[] = '`passwd` = ' . $db->Quote(self::$passwd);
-			} ;
-			if (self::$original_values['length'] != self::$length) {
-				$update_parts[] = '`length` = ' . $db->Quote(self::$length);
-			} ;
-			if (self::$original_values['weight'] != self::$weight) {
-				$update_parts[] = '`weight` = ' . $db->Quote(self::$weight);
-			} ;
-			if (self::$original_values['time_offset'] != self::$time_offset) {
-				$update_parts[] = '`time_offset` = ' . $db->Quote(self::$time_offset * 100);
-			} ;
-			if (self::$original_values['dst'] != self::$dst) {
-				$update_parts[] = '`dst` = ' . $db->Quote((self::$dst ? 1 : 0));
-			} ;
-			if (self::$original_values['allowed_races'] != $allowed_races) {
-				$update_parts[] = '`allowed_races` = ' . $db->Quote($allowed_races);
-			} ;
-			if (self::$original_values['allowed_applies'] != $allowed_applies) {
-				$update_parts[] = '`allowed_applies` = ' . $db->Quote($allowed_applies);
-			} ;
-			if (!count($update_parts)) {
-				$update_parts[] = '`id` = `id`';
-			}
-			$update_parts = implode(PHP_EOL . ' , ', $update_parts);
-
-			$query = 'UPDATE `homepage_user`'
-			 . PHP_EOL . ' SET ' . $update_parts
-			 . PHP_EOL . ' WHERE `id` = ' . $db->Quote(self::$ID) ;
-		}else {
-			$query = 'INSERT INTO `homepage_user`(`id`,`username`,`name`,`email`,`lastip`,`state`,`charlimit`,`paid`,`passwd`)'
-			 . PHP_EOL . ' VALUES(' . $db->Quote(self::$ID) . ',' . $db->Quote(self::$username) . ',' . $db->Quote(self::$name) . ',' . $db->Quote(self::$email)
-			 . ',' . $db->Quote(self::encode_ip(self::$lastip)) . ',' . $db->Quote(self::$state) . ',' . $db->Quote(self::$charlimit)
-			 . ',' . $db->Quote((self::$paid ? 1 : 0)) . ',' . $db->Quote(self::$passwd) . ')' ;
-		}
-		$db->setQuery($query);
-		if (!$db->query()) {
-			echo $db->stderr(true);
-		}
 	}
 
 	private static function StoreToPostgreSQL() {
@@ -646,13 +512,13 @@ class IllaUser {
 	}
 
 	private static function IPfine() {
-		$mySQL = &Database::getMySQL();
+		$db = &Database::getPostgreSQL();
 		$query = 'SELECT COUNT(*)'
-		 . PHP_EOL . ' FROM `homepage_bans`'
-		 . PHP_EOL . ' WHERE `ip` = ' . $mySQL->Quote(self::encode_ip($_SERVER['REMOTE_ADDR']))
-		 . PHP_EOL . ' AND `until` IS NULL' ;
-		$mySQL->setQuery($query);
-		if ($mySQL->loadResult()) {
+		 . PHP_EOL . ' FROM bans'
+		 . PHP_EOL . ' WHERE ip = ' . $db->Quote(self::encode_ip($_SERVER['REMOTE_ADDR']))
+		 . PHP_EOL . ' AND until IS NULL' ;
+		$db->setQuery($query);
+		if ($db->loadResult()) {
 			return false;
 		}
 		return true;

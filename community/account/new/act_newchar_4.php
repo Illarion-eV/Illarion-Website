@@ -115,13 +115,13 @@
 			}
 		}
 
-		$mySQL =& Database::getMySQL();
-		$query = 'SELECT `pos_x`, `pos_y`, `pos_z`, `face_to`, `newbie`'
-		.PHP_EOL.' FROM `homepage_startplace`'
-		.( $newbieOnly ? PHP_EOL.' WHERE `newbie` = 1 AND `id` = '.$mySQL->Quote($location) : PHP_EOL.' WHERE `id` = '.$mySQL->Quote($location))
+		$db =& Database::getPostgreSQL( 'homepage' );
+		$query = 'SELECT pos_x, pos_y, pos_z, face_to, newbie'
+		.PHP_EOL.' FROM startplace'
+		.( $newbieOnly ? PHP_EOL.' WHERE newbie = 1 AND id = '.$db->Quote($location) : PHP_EOL.' WHERE id = '.$db->Quote($location))
 		;
-		$mySQL->setQuery( $query );
-		$position = $mySQL->loadAssocRow();
+		$db->setQuery( $query );
+		$position = $db->loadAssocRow();
 
 		if (!count($position))
 		{
@@ -150,11 +150,11 @@
 			$pgSQL->query();
 		}
 
-		$query = 'SELECT `name_file`'
-		.PHP_EOL.' FROM `homepage_startpack`'
-		.PHP_EOL.' WHERE `id` = '.$mySQL->Quote( $package );
-		$mySQL->setQuery( $query );
-		$filename = Page::getRootPath().'/community/account/startpacks/'.$mySQL->loadResult();
+		$query = 'SELECT name_file'
+		.PHP_EOL.' FROM startpack'
+		.PHP_EOL.' WHERE id = '.$db->Quote( $package );
+		$db->setQuery( $query );
+		$filename = Page::getRootPath().'/community/account/startpacks/'.$db->loadResult();
 
 		if (!is_file($filename))
 		{

@@ -12,24 +12,6 @@
 	$name = urldecode($_POST['name']);
 	$pass = crypt(stripslashes(urldecode($_POST['passwd'])), '$1$illarion1');
 
-
-
-
-/* MOEP
-	$mySQL = &Database::getMySQL();
-	$query = 'SELECT `id`'
-	.PHP_EOL.'FROM `homepage_user`'
-	.PHP_EOL.' WHERE `username` = ' . $mySQL->Quote($name)
-	.PHP_EOL.' AND `passwd` = ' . $mySQL->Quote($pass)
-	;
-	$mySQL->setQuery($query);
-	$id = $mySQL->loadResult();
-	
-	if (is_null($id)) {
-		echo '<error id="1">Account not found</error>';
-        exit;
-	}
-*/
 	$illarionserver = &Database::getPostgreSQL('illarionserver');
 	$testserver = &Database::getPostgreSQL('testserver');
 	$accounts = &Database::getPostgreSQL('accounts');

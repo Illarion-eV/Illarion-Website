@@ -97,7 +97,6 @@ The Illarion Staff
 http://illarion.org
 TXT;
 
-	$mySQL =& Database::getMySQL();
 	$pgsql =& Database::getPostgreSQL();
 
 	// Collect and send a mail to every player that was not online the last time 28 days ago
@@ -110,12 +109,12 @@ TXT;
 	$pgsql->setQuery( $query );
 	$last_played_accs = $pgsql->loadResultArray();
 
-	$query = 'SELECT `id`, `username`, `name`, `email`'
-	.PHP_EOL.' FROM `homepage_user`'
-	.PHP_EOL.' WHERE `id` IN('.implode(',',$last_played_accs).')'
+	$query = 'SELECT acc_id, acc_login, acc_name, acc_email'
+	.PHP_EOL.' FROM account'
+	.PHP_EOL.' WHERE acc_id IN('.implode(',',$last_played_accs).')'
 	;
-	$mySQL->setQuery( $query );
-	$email_targets = $mySQL->loadAssocList();
+	$pgsql->setQuery( $query );
+	$email_targets = $pgsql->loadAssocList();
 	
 	// Collect and send a mail to every player that was not online the last time 28 days ago
 	$query = 'SELECT DISTINCT "chr1"."chr_accid"'
@@ -127,38 +126,38 @@ TXT;
 	$pgsql->setQuery( $query );
 	$very_old_accs = $pgsql->loadResultArray();
 
-	$query = 'SELECT `id`, `username`, `name`, `email`'
-	.PHP_EOL.' FROM `homepage_user`'
-	.PHP_EOL.' WHERE `id` IN('.implode(',',$very_old_accs).')'
+	$query = 'SELECT acc_id, acc_login, acc_name, acc_email'
+	.PHP_EOL.' FROM account'
+	.PHP_EOL.' WHERE acc_id IN('.implode(',',$very_old_accs).')'
 	;
-	$mySQL->setQuery( $query );
-	$email_targets_very_old = $mySQL->loadAssocList();
+	$pgsql->setQuery( $query );
+	$email_targets_very_old = $pgsql->loadAssocList();
 
-	$query = 'SELECT `homepage_user`.`id`, `homepage_user`.`username`, `homepage_user`.`name`, `homepage_user`.`email`, `homepage_mail_cert`.`key`'
-	.PHP_EOL.' FROM `homepage_user`'
-	.PHP_EOL.' INNER JOIN `homepage_mail_cert` ON `homepage_mail_cert`.`id` = `homepage_user`.`id`'
-	.PHP_EOL.' WHERE `homepage_user`.`lastseen` >= '.$mySQL->Quote( date( 'Y-m-d', TODAY_TIMESTAMP-(60*60*24*4) ) )
-	.PHP_EOL.' AND `homepage_user`.`lastseen` < '.$mySQL->Quote( date( 'Y-m-d', TODAY_TIMESTAMP-(60*60*24*3) ) )
-	.PHP_EOL.' AND `homepage_mail_cert`.`type` = 0'
-	.PHP_EOL.' AND `homepage_user`.`recv_inact_mails` = 0'
+	$query = 'SELECT acc_id, acc_login, acc_name, acc_email, mail_cert.key'
+	.PHP_EOL.' FROM account'
+	.PHP_EOL.' INNER JOIN mail_cert ON mail_cert.id = acc_id'
+	.PHP_EOL.' WHERE acc_lastseen >= '.$pgsql->Quote( date( 'Y-m-d', TODAY_TIMESTAMP-(60*60*24*4) ) )
+	.PHP_EOL.' AND acc_lastseen < '.$pgsql->Quote( date( 'Y-m-d', TODAY_TIMESTAMP-(60*60*24*3) ) )
+	.PHP_EOL.' AND mail_cert.type = 0'
+	.PHP_EOL.' AND acc_recv_inact_mails = 0'
 	;
-	$mySQL->setQuery( $query );
-	$email_targets_notactive = $mySQL->loadAssocList();
+	$pgsql->setQuery( $query );
+	$email_targets_notactive = $pgsql->loadAssocList();
 
 	$accounts_overall = array_merge($last_played_accs, $very_old_accs);
 	
 	foreach ($email_targets_notactive as $acc)
 	{
-		$accounts_overall[] = $acc['id'];
+		$accounts_overall[] = $acc['acc_id'];
 	}
 	$accounts_overall = array_unique($accounts_overall);
 	
-	$query = 'UPDATE `homepage_user`'
-	.PHP_EOL.' SET `recv_inact_mails` = `recv_inact_mails` + 1'
-	.PHP_EOL.' WHERE `id` IN ('.implode(',',$accounts_overall).')'
+	$query = 'UPDATE account'
+	.PHP_EOL.' SET acc_recv_inact_mails = acc_recv_inact_mails + 1'
+	.PHP_EOL.' WHERE acc_id IN ('.implode(',',$accounts_overall).')'
 	;
-	$mySQL->setQuery( $query );
-	$mySQL->query();
+	$pgsql->setQuery( $query );
+	$pgsql->query();
 
 	$query = 'SELECT "acc_id", "acc_lang"'
 	.PHP_EOL.' FROM "accounts"."account"'
@@ -173,7 +172,7 @@ TXT;
     {	
 		foreach($email_targets as $poss_target)
 		{
-			$mail_data = explode('@',strtolower($poss_target['email']));
+			$mail_data = explode('@',strtolower($poss_target['acc_email']));
 			$real_mail_targets[] = $poss_target;
 		}
     }
@@ -184,7 +183,7 @@ TXT;
 	{
 		foreach($email_targets_very_old as $poss_target)
 		{
-			$mail_data = explode('@',strtolower($poss_target['email']));
+			$mail_data = explode('@',strtolower($poss_target['acc_email']));
 			$real_mail_targets_very_old[] = $poss_target;
 		}
 	}
@@ -195,7 +194,7 @@ TXT;
     {	
 		foreach($email_targets_notactive as $poss_target)
 		{
-			$mail_data = explode('@',strtolower($poss_target['email']));
+			$mail_data = explode('@',strtolower($poss_target['acc_email']));
 			$real_mail_targets_inactive[] = $poss_target;
 		}
     }
@@ -229,18 +228,18 @@ TXT;
 		}
 		
 	    $mail->ClearAddresses();
-	    $mail->AddAddress( $target['email'], ($target['name'] ? $target['name'] : $target['username']) );
-		if ($languages[$target['id']]['acc_lang'] == 0)
+	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Inaktiver Account';
 		    $mail->Body = $de_inactive;
-			$targets_inactive.= '<li>'.$target['email'].'(g)';
+			$targets_inactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Inactive account';
 	        $mail->Body = $us_inactive;
-			$targets_inactive.= '<li>'.$target['email'].'(e)';
+			$targets_inactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{
@@ -264,18 +263,18 @@ TXT;
 		}
 		
 	    $mail->ClearAddresses();
-	    $mail->AddAddress( $target['email'], ($target['name'] ? $target['name'] : $target['username']) );
-		if ($languages[$target['id']]['acc_lang'] == 0)
+	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Illarion vermisst dich!';
 		    $mail->Body = $de_veryinactive;
-			$targets_veryinactive.= '<li>'.$target['email'].'(g)';
+			$targets_veryinactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Illarion misses you!';
 	        $mail->Body = $us_veryinactive;
-			$targets_veryinactive.= '<li>'.$target['email'].'(e)';
+			$targets_veryinactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{
@@ -298,18 +297,18 @@ TXT;
 		}
 		
         $mail->ClearAddresses();
-	    $mail->AddAddress( $target['email'], ($target['name'] ? $target['name'] : $target['username']) );
-		if ($languages[$target['id']]['acc_lang'] == 0)
+	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Nicht aktivierter Account';
 	        $mail->Body = sprintf( $de_notactivated, $target['key'] );
-			$targets_activation.= '<li>'.$target['email'].'(g)';
+			$targets_activation.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Unactivated account';
 		    $mail->Body = sprintf( $us_notactivated, $target['key'] );
-			$targets_activation.= '<li>'.$target['email'].'(e)';
+			$targets_activation.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{

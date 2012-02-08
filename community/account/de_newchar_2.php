@@ -71,16 +71,6 @@
 	$limit_text = generateLimitTexts( $limits );
 
 
-/*
-	$mySQL =& Database::getMySQL();
-	$query = 'SELECT `name_de` AS `name`, `str`, `agi`, `dex`, `con`, `int`, `per`, `wil`, `ess`'
-	.PHP_EOL.' FROM `homepage_attribtemp`'
-	.PHP_EOL.' ORDER BY `id`'
-	;
-	$mySQL->setQuery( $query );
-	$templates = $mySQL->loadAssocList();
-*/
-
 	$query = 'SELECT attr_name_de AS name, attr_str, attr_agi, attr_dex, attr_con, attr_int, attr_per, attr_wil, attr_ess'
 			.PHP_EOL.' FROM accounts.attribtemp'
 			.PHP_EOL.' ORDER BY attr_id'
