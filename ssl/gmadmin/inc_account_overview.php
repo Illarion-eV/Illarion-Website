@@ -82,7 +82,7 @@
 	// Checks if update is triggered
 	switch($_GET[update]) {
 		case "general":
-			sqlquery("UPDATE account SET acc_passwd='$_POST[acc_passwd]', acc_maxchars='$_POST[charlimit]', acc_email='$_POST[acc_email]', acc_allowunlimit='".( $_POST['nolimits']=="nolimits" ? "t" : "f" )."' WHERE acc_id=$_GET[accountid]","accounts");
+			sqlquery("UPDATE account SET acc_passwd='$_POST[acc_passwd]', acc_maxchars='$_POST[charlimit]', acc_email='$_POST[acc_email]' WHERE acc_id=$_GET[accountid]","accounts");
 	    break;
 		case "sendmail":
 			mail($_POST[mailto],$_POST[subject],$_POST[textarea],"From: <$_POST[mailfrom]>");
@@ -372,7 +372,6 @@ The Illarion Gamemasters",
 									    $content.="<tr><td>&nbsp;</td></tr>\n";
                            }
          $content=$content."<tr><td>Language</td><td>".VarLanguage($account[0][acc_lang])."</td></tr>
-									<tr><td>Disable attribut limits</td><td><input type='checkbox' name='nolimits' value='nolimits'".( $account[0][acc_allowunlimit]=='t' ? " checked" : "" )."></td></tr>
 									<tr><td>Character Limit</td><td><input type='text' name='charlimit' value='".$account[0][acc_maxchars]."'></td></tr>";
 			if (count($multiacc)>0) {
 				$content=$content."<tr><td>&nbsp;</td></tr><tr><td colspan='2'>This account is allowed to login with the same IP as the followling accounts:";
