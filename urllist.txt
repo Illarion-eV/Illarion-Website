@@ -292,7 +292,6 @@ http://illarion.org/community/us_timeconverter.php
 http://illarion.org/illarion/chronik/us_chronik.php
 http://illarion.org/illarion/calendar/us_calendar.php
 http://illarion.org/statistics/us_history_of_players.php
-http://illarion.org/illarion/creatures/us_bck_30.php
 http://illarion.org/illarion/races/us_story.php
 http://illarion.org/illarion/goetter/us_bck_10.php
 http://illarion.org/development/us_about_project.php
@@ -335,7 +334,6 @@ http://illarion.org/development/de_item.php
 http://illarion.org/illarion/illachars/de_illachars.php
 http://illarion.org/media/screenshots/preview/dji10.jpg
 http://illarion.org/development/de_about_project.php
-http://illarion.org/illarion/creatures/de_bck_30.php
 http://illarion.org/illarion/races/de_story.php
 http://illarion.org/illarion/chronik/us_chronik.php?start=27
 http://illarion.org/illarion/background/de_overview.php
@@ -904,12 +902,8 @@ http://illarion.org/development/images/ice_axe.png
 http://illarion.org/development/images/dagger_blue_glow.png
 http://illarion.org/development/images/dagger_glow.png
 http://illarion.org/development/images/dark_spiked_bow.png
-http://illarion.org/illarion/creatures/insect.gif
-http://illarion.org/illarion/creatures/mummie.gif
 http://illarion.org/community/us_fanart.php?coll=6
 http://illarion.org/media/fanart/illa_rl_2008_1/t_10.05.2008_22_58_33.JPG
-http://illarion.org/illarion/creatures/rotworm.gif
-http://illarion.org/illarion/creatures/demon.gif
 http://illarion.org/community/us_fanart.php?coll=5
 http://illarion.org/illarion/races/us_halflings.php
 http://illarion.org/illarion/races/us_humans.php
