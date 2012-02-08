@@ -15,27 +15,27 @@ $stack = (isset($_POST['stack']) ? urldecode($_POST['stack']) : 'not set');
 $exception = (isset($_POST['exception']) ? ': '.urldecode($_POST['exception']) : '');
 
     
-$db = Database::getMySQL();
+$db = Database::getPostgreSQL();
 	
 // fetch the correct project ID
 $query = '';
 $appname = '';
 if (strcmp($application, 'Illarion Client') == 0) {
-	$query = 'SELECT `id`'
-	.PHP_EOL.' FROM `mantis_project_table`'
-	.PHP_EOL.' WHERE `name` = "Illarion Client"'
+	$query = 'SELECT id'
+	.PHP_EOL.' FROM mantis.mantis_project_table'
+	.PHP_EOL.' WHERE name = "Illarion Client"'
 	;
 	$appname = 'Illarion Client';
 } elseif (strcmp($application, 'Illarion Mapeditor') == 0) {
-	$query = 'SELECT `id`'
-	.PHP_EOL.' FROM `mantis_project_table`'
-	.PHP_EOL.' WHERE `name` = "Illarion Mapeditor"'
+	$query = 'SELECT id'
+	.PHP_EOL.' FROM mantis.mantis_project_table'
+	.PHP_EOL.' WHERE name = "Illarion Mapeditor"'
 	;
 	$appname = 'Illarion Mapeditor';
 } elseif (strcmp($application, 'Illarion easyNPC') == 0) {
-	$query = 'SELECT `id`'
-	.PHP_EOL.' FROM `mantis_project_table`'
-	.PHP_EOL.' WHERE `name` = "Illarion easyNPC Editor"'
+	$query = 'SELECT id'
+	.PHP_EOL.' FROM mantis.mantis_project_table'
+	.PHP_EOL.' WHERE name = "Illarion easyNPC Editor"'
 	;
 	$appname = 'Illarion easyNPC Editor';
 } else {
@@ -56,9 +56,9 @@ $text = 'This is a bug report insert as result to a crash of the "'.$appname.'".
 .PHP_EOL.$stack;
 
 // get the ID of the reporting user
-$query = 'SELECT `id`'
-.PHP_EOL.' FROM `mantis_user_table`'
-.PHP_EOL.' WHERE `username` = "Java Reporting System"'
+$query = 'SELECT id'
+.PHP_EOL.' FROM mantis.mantis_user_table'
+.PHP_EOL.' WHERE username = "Java Reporting System"'
 ;
 $db->setQuery($query);
 $reporterId = $db->loadResult();
@@ -67,12 +67,12 @@ echo PHP_EOL;
 
 // Checking for dublicated
 $query = 'SELECT COUNT(*)'
-.PHP_EOL.'FROM `mantis_bug_table`'
-.PHP_EOL.'INNER JOIN `mantis_bug_text_table` ON `mantis_bug_table`.`bug_text_id` = `mantis_bug_text_table`.`id`'
-.PHP_EOL.'WHERE `mantis_bug_table`.`status` != 90'
-.PHP_EOL.'AND `mantis_bug_table`.`project_id` = '.$db->Quote($projectId)
-.PHP_EOL.'AND `mantis_bug_table`.`reporter_id` = '.$db->Quote($reporterId)
-.PHP_EOL.'AND `mantis_bug_text_table`.`description` LIKE '.$db->Quote($text);
+.PHP_EOL.'FROM mantis.mantis_bug_table'
+.PHP_EOL.'INNER JOIN mantis.mantis_bug_text_table ON mantis.mantis_bug_table.bug_text_id = mantis.mantis_bug_text_table.id'
+.PHP_EOL.'WHERE mantis.mantis_bug_table.status != 90'
+.PHP_EOL.'AND mantis.mantis_bug_table.project_id = '.$db->Quote($projectId)
+.PHP_EOL.'AND mantis.mantis_bug_table.reporter_id = '.$db->Quote($reporterId)
+.PHP_EOL.'AND mantis.mantis_bug_text_table.description LIKE '.$db->Quote($text);
 $db->setQuery($query);
 
 if ($db->loadResult() > 0) {
@@ -93,7 +93,7 @@ echo 'No dublicate.';
 // insert the bug report
 $db->Begin();
 
-$query = 'INSERT INTO `mantis_bug_table` (`project_id`, `reporter_id`, `date_submitted`, `last_updated`, `severity`, `summary`, `os`, `version`)'
+$query = 'INSERT INTO mantis.mantis_bug_table (project_id, reporter_id, date_submitted, last_updated, severity, summary, os, version)'
 .PHP_EOL.' VALUES ('.$db->Quote($projectId).', '.$db->Quote($reporterId).', UNIX_TIMESTAMP(NOW()), UNIX_TIMESTAMP(NOW()), 70, '.$db->Quote('Automated Crash Report'.$exception).', '.$db->Quote($os).', '.$db->Quote($version).')'
 ;
 $db->setQuery($query);
@@ -110,7 +110,7 @@ if ($db->getErrorNum() != 0) {
 
 $reportId = $db->insertid();
 
-$query = 'INSERT INTO `mantis_bug_text_table` (`description`, `steps_to_reproduce`, `additional_information`)'
+$query = 'INSERT INTO mantis.mantis_bug_text_table (description, steps_to_reproduce, additional_information)'
 .PHP_EOL.' VALUES ('.$db->Quote($text).', "", "")'
 ;
 $db->setQuery($query);
@@ -127,9 +127,9 @@ if ($db->getErrorNum() != 0) {
 
 $reportTextId = $db->insertid();
 
-$query = 'UPDATE `mantis_bug_table`'
-.PHP_EOL.' SET `bug_text_id` = '.$db->Quote($reportTextId)
-.PHP_EOL.' WHERE `id` = '.$db->Quote($reportId)
+$query = 'UPDATE mantis.mantis_bug_table'
+.PHP_EOL.' SET bug_text_id = '.$db->Quote($reportTextId)
+.PHP_EOL.' WHERE id = '.$db->Quote($reportId)
 ;
 $db->setQuery($query);
 $db->query();

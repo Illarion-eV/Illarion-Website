@@ -13,8 +13,8 @@
 <?php if ($id == -1): ?>
 
 <?php
-	$db = Database::getMySQL();
-	$db->setQuery('SELECT `id`, `date`, `os`, `version`, `thread` FROM `homepage_client_crash`');
+	$db = Database::getPostgreSQL();
+	$db->setQuery('SELECT id, date, os, version, thread FROM client_crash');
 	$results = $db->loadAssocList();
 ?>
 <h1>Client Abstürze - Übersicht</h1>
@@ -48,8 +48,8 @@
 <?php else: ?>
 
 <?php
-	$db = Database::getMySQL();
-	$db->setQuery('SELECT `id`, `date`, `os`, `version`, `thread`, `stack` FROM `homepage_client_crash` WHERE `id` = '.$db->Quote($id));
+	$db = Database::getPostgreSQL();
+	$db->setQuery('SELECT id, date, os, version, thread, stack FROM client_crash WHERE id = '.$db->Quote($id));
 	$result = $db->loadAssocRow();
 ?>
 
