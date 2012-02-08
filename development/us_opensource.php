@@ -12,8 +12,8 @@
 
 <?php Page::cap('I'); ?>
 
-<p>llarion is developed as Open Source Software. The sources of the Java software
-and the server are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a> and are thus free for public usage. This page
+<p>llarion is developed as Open Source Software. The sources of Java software
+and server are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a> and are thus free for public usage. This page
 offers a list where you can find the current development repositories of Illarion.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
