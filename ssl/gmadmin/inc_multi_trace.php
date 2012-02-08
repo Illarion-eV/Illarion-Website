@@ -17,7 +17,7 @@
   $illa_connection = SQLConnect("illarionserver");
   $acco_connection = SQLConnect("accounts");
 
-  $accounts = SQLQueryCon("SELECT acc_id,acc_login,acc_passwd,acc_email,acc_lastip,acc_altpasswd,acc_newmail FROM account WHERE acc_state=3 AND acc_id NOT IN (666,667) ORDER BY acc_id DESC OFFSET ".$_POST['start']." LIMIT ".$_POST['end'],$acco_connection);
+  $accounts = SQLQueryCon("SELECT acc_id,acc_login,acc_passwd,acc_email,acc_lastip,acc_newmail FROM account WHERE acc_state=3 AND acc_id NOT IN (666,667) ORDER BY acc_id DESC OFFSET ".$_POST['start']." LIMIT ".$_POST['end'],$acco_connection);
   $acccount = SQLQueryCon("SELECT COUNT(acc_id) as hits FROM account WHERE acc_state=3 AND acc_id NOT IN (666,667)",$acco_connection);
   foreach($accounts as $key=>$acc) {
     $multiacc=false;
