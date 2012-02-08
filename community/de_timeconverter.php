@@ -131,7 +131,7 @@
 <h2>Aus der lokalen Zeit umrechnen</h2>
 
 <p>Die richtige Funktionalität dieser Umrechnung ist davon abhängig, dass deine Zeitzone in deinem Account eingestellt ist. Wird keine Umrechnung
-vorgenommen, so zeigt diese Seite die aktuelle Zeit. Dies kann als Überprüfung dienen ob
+vorgenommen, so zeigt diese Seite die aktuelle Zeit. Hiermit kannst du auch überprüfen, ob
 deine lokale Zeitzone richtig eingestellt ist.</p>
 
 <form action="<?php echo Page::getURL(); ?>/community/de_timeconverter.php" method="post">
