@@ -128,11 +128,10 @@
 <?php endif; ?>
 
 <?php if ($show_input): ?>
-<h2>Aus der Lokalen Zeit umrechnen</h2>
+<h2>Aus der lokalen Zeit umrechnen</h2>
 
-<p>Die richtige Funktionalität dieser Umrechnung ist davon abhängig das die Einstellungen
-in deinem Account richtig auf deine Zeitzone eingestellt sind. Wenn keine Umrechnung
-vorgenommen zeigt diese Seite die aktuelle Zeit. Dies kann als Überprüfung dienen ob
+<p>Die richtige Funktionalität dieser Umrechnung ist davon abhängig, dass deine Zeitzone in deinem Account eingestellt ist. Wird keine Umrechnung
+vorgenommen, so zeigt diese Seite die aktuelle Zeit. Dies kann als Überprüfung dienen ob
 deine lokale Zeitzone richtig eingestellt ist.</p>
 
 <form action="<?php echo Page::getURL(); ?>/community/de_timeconverter.php" method="post">
@@ -205,9 +204,9 @@ deine lokale Zeitzone richtig eingestellt ist.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Aus der Server Zeit umrechnen</h2>
+<h2>Aus der Serverzeit umrechnen</h2>
 
-<p>Die aktuelle Zeit des Servers ist im Augenblick in der Zeitzone: GMT+<?php echo ((int)date( 'O', time() ))/100; ?></p>
+<p>Der Server befindet sich im Augenblick in der Zeitzone GMT+<?php echo ((int)date( 'O', time() ))/100; ?></p>
 
 <form action="<?php echo Page::getURL(); ?>/community/de_timeconverter.php" method="post">
 	<table style="width:100%;">
