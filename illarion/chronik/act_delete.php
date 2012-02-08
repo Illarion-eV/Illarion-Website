@@ -9,17 +9,17 @@
 		{
 			$entry_id = (int)$_POST['id'];
 
-			$db =& Database::getMySQL();
+			$db =& Database::getPostgreSQL( 'homepage' );
 
 			$query = 'SELECT COUNT(*)'
-			.PHP_EOL.' FROM `homepage_chronik`'
-			.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $entry_id )
+			.PHP_EOL.' FROM chronicle'
+			.PHP_EOL.' WHERE id = '.$db->Quote( $entry_id )
 			;
 			$db->setQuery( $query );
 			if ( $db->loadResult() == 1 )
 			{
-				$query = 'DELETE FROM `homepage_chronik`'
-				.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $entry_id )
+				$query = 'DELETE FROM chronicle'
+				.PHP_EOL.' WHERE id = '.$db->Quote( $entry_id )
 				;
 				$db->setQuery( $query );
 				$db->query();

@@ -24,14 +24,14 @@
 	Page::setFirstPage( Page::getURL().'/illarion/chronik/de_chronik.php' );
 	Page::setNextPage( Page::getURL().'/illarion/chronik/de_chronik.php' );
 
-	$db =& Database::getMySQL();
+	$db =& Database::getPostgreSQL( 'homepage' );
 
 	// search query
-	$query = 'SELECT `homepage_chronik`.`chronik_note_de` AS `chronik_note`, `homepage_chronik`.`chronik_date`, `homepage_user`.`username`, `homepage_user`.`name`'
-	.PHP_EOL.' FROM `homepage_chronik`'
-	.PHP_EOL.' INNER JOIN `homepage_user` ON `homepage_user`.`id` = `homepage_chronik`.`chronik_author`'
-	.PHP_EOL.' WHERE LOWER(`chronik_note_de`) LIKE '.$db->Quote( '%'.$searchterm.'%' )
-	.PHP_EOL.' ORDER BY `chronik_date` DESC'
+	$query = 'SELECT chronicle.note_de AS note, chronicle.date, account.acc_login, account.acc_name'
+	.PHP_EOL.' FROM chronicle'
+	.PHP_EOL.' INNER JOIN account ON account.acc_id = chronicle.author'
+	.PHP_EOL.' WHERE LOWER(note_de) LIKE '.$db->Quote( '%'.$searchterm.'%' )
+	.PHP_EOL.' ORDER BY date DESC'
 	;
 	$db->setQuery( $query );
 	$search_results = $db->loadAssocList();
@@ -65,12 +65,12 @@
 <?php endif; ?>
 
 <?php
-	$entry_date = IllaDateTime::IllaDatestampToDate( $entry['chronik_date'] );
+	$entry_date = IllaDateTime::IllaDatestampToDate( $entry['date'] );
 ?>
 <h4><?php echo $entry_date['day'],'. ',IllaDateTime::getMonthName( $entry_date['month'] ),' ',$entry_date['year']; ?></h4>
 <p>
-	<?php echo preg_replace( '/(\S*'.$searchterm.'\S*)/mi', '<b>\1</b>', $entry['chronik_note'] ); ?>
-	<div class="right">verfasst von <?php echo ( strlen( $entry['name'] ) > 0 ? $entry['name'] : $entry['username'] ); ?></div>
+	<?php echo preg_replace( '/(\S*'.$searchterm.'\S*)/mi', '<b>\1</b>', $entry['note'] ); ?>
+	<div class="right">verfasst von <?php echo ( strlen( $entry['acc_name'] ) > 0 ? $entry['acc_name'] : $entry['acc_login'] ); ?></div>
 </p>
 
 <?php endforeach; ?>

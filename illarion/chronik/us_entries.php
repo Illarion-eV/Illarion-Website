@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	$db = Database::getMySQL( );
+	$db = Database::getPostgreSQL( 'homepage' );
 
 	$date = ( isset( $_GET['date'] ) && is_numeric( $_GET['date'] ) ? (int)$_GET['date'] : false );
 	if (!$date)
@@ -22,21 +22,21 @@
 	$start_date = IllaDateTime::mkIllaDatestamp( $date['month'], 1, $date['year'] );
 	$end_date = IllaDateTime::mkIllaDatestamp( $date['month'], ($date['month']==16 ? 5 : 24), $date['year'] );
 
-	$query = 'SELECT `homepage_chronik`.`chronik_id`, `homepage_chronik`.`chronik_note_en` AS `chronik_note`, `homepage_chronik`.`chronik_note_de` AS `chronik_traslation`, `homepage_chronik`.`chronik_date`, `homepage_user`.`name`, `homepage_user`.`username`'
-	.PHP_EOL.' FROM `homepage_chronik`'
-	.PHP_EOL.' INNER JOIN `homepage_user` ON `homepage_user`.`id` = `homepage_chronik`.`chronik_author`'
-	.PHP_EOL.' WHERE `homepage_chronik`.`chronik_date` >= '.$db->Quote( $start_date )
-	.PHP_EOL.' AND `homepage_chronik`.`chronik_date` <= '.$db->Quote( $end_date )
-	.PHP_EOL.' ORDER BY `homepage_chronik`.`chronik_date` ASC'
+	$query = 'SELECT chronicle.id, chronicle.note_en AS note, chronicle.note_de AS translation, chronicle.date, account.acc_name, account.acc_login'
+	.PHP_EOL.' FROM chronicle'
+	.PHP_EOL.' INNER JOIN account ON account.acc_id = chronicle.author'
+	.PHP_EOL.' WHERE chronicle.date >= '.$db->Quote( $start_date )
+	.PHP_EOL.' AND chronicle.date <= '.$db->Quote( $end_date )
+	.PHP_EOL.' ORDER BY chronicle.date ASC'
 	;
 	$db->setQuery( $query );
 	$entries = $db->loadAssocList();
 
 	Page::setFirstPage( Page::getURL().'/illarion/chronik/us_chronik.php' );
 
-	$query = 'SELECT MIN(`chronik_date`) AS `last`, MAX(`chronik_date`) AS `next`'
-	.PHP_EOL.' FROM `homepage_chronik`'
-	.PHP_EOL.' WHERE `homepage_chronik`.`chronik_date` < '.$db->Quote( $start_date )
+	$query = 'SELECT MIN(date) AS last, MAX(date) AS next'
+	.PHP_EOL.' FROM chronicle'
+	.PHP_EOL.' WHERE chronicle.date < '.$db->Quote( $start_date )
 	;
 	$db->setQuery( $query );
 	$next_last = $db->loadAssocRow();
@@ -54,9 +54,9 @@
 		Page::setNextPage( Page::getURL().'/illarion/chronik/us_entries.php?date='.$last_date );
 	}
 
-	$query = 'SELECT MIN(`chronik_date`)'
-	.PHP_EOL.' FROM `homepage_chronik`'
-	.PHP_EOL.' WHERE `homepage_chronik`.`chronik_date` > '.$db->Quote( $end_date )
+	$query = 'SELECT MIN(date)'
+	.PHP_EOL.' FROM chronicle'
+	.PHP_EOL.' WHERE chronicle.date > '.$db->Quote( $end_date )
 	;
 	$db->setQuery( $query );
 	$prev = $db->loadResult();
@@ -84,25 +84,25 @@ endif;
 <?php foreach( $entries as $entry ): ?>
 
 <?php
-$entry_date = IllaDateTime::IllaDatestampToDate( $entry['chronik_date'] );
+$entry_date = IllaDateTime::IllaDatestampToDate( $entry['date'] );
 ?>
 <h5>
 	<?php if( IllaUser::auth('chronic_edit') ): ?>
-	<a class="float_right" style="font-size:10pt;" href="<?php echo Page::getURL(); ?>/illarion/chronik/us_delete.php?entry=<?php echo  $entry['chronik_id']; ?>">[Delete entry]</a>
-	<a class="float_right" style="font-size:10pt;" href="<?php echo Page::getURL(); ?>/illarion/chronik/us_new.php?entry=<?php echo  $entry['chronik_id']; ?>">[Edit entry]</a>
+	<a class="float_right" style="font-size:10pt;" href="<?php echo Page::getURL(); ?>/illarion/chronik/us_delete.php?entry=<?php echo  $entry['id']; ?>">[Delete entry]</a>
+	<a class="float_right" style="font-size:10pt;" href="<?php echo Page::getURL(); ?>/illarion/chronik/us_new.php?entry=<?php echo  $entry['id']; ?>">[Edit entry]</a>
 	<?php endif; ?>
 	<?php echo $entry_date['day'],'. ',IllaDateTime::getMonthName( $entry_date['month'] ),' ',$entry_date['year']; ?>
 </h5>
 
-<?php if( !$entry['chronik_note'] ): ?>
+<?php if( !$entry['note'] ): ?>
 <p class="italic">No english version avaiable.</p>
-<p><?php echo $entry['chronik_traslation']; ?></p>
+<p><?php echo $entry['translation']; ?></p>
 <?php else: ?>
-<p><?php echo $entry['chronik_note']; ?></p>
+<p><?php echo $entry['note']; ?></p>
 <?php endif; ?>
 <div class="right">
-	composed by <?php echo ( strlen( $entry['name'] ) > 0 ? $entry['name'] : $entry['username'] ); ?>
-	<?php if( IllaUser::auth('chronic_edit') && !$entry['chronik_traslation'] ): ?>
+	composed by <?php echo ( strlen( $entry['acc_name'] ) > 0 ? $entry['acc_name'] : $entry['acc_login'] ); ?>
+	<?php if( IllaUser::auth('chronic_edit') && !$entry['translation'] ): ?>
 		(Translation missing!)
 	<?php endif; ?>
 </div>

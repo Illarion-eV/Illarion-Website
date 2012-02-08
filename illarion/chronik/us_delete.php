@@ -10,7 +10,7 @@
 		exit();
 	}
 
-	$db =& Database::getMySQL();
+	$db =& Database::getPostgreSQL( 'homepage' );
 
 	$entry_id = ( isset( $_GET['entry'] ) ? (int)$_GET['entry'] : false );
 
@@ -21,10 +21,10 @@
 		exit();
 	}
 
-	$query = 'SELECT `homepage_chronik`.`chronik_date`, `homepage_chronik`.`chronik_note_de`, `homepage_chronik`.`chronik_note_en`, `homepage_user`.`username`, `homepage_user`.`name`'
-	.PHP_EOL.' FROM `homepage_chronik`'
-	.PHP_EOL.' INNER JOIN `homepage_user` ON `homepage_chronik`.`chronik_author` = `homepage_user`.`id`'
-	.PHP_EOL.' WHERE `chronik_id` = '.$db->Quote( $entry_id )
+	$query = 'SELECT chronicle.date, chronicle.note_de, chronicle.note_en, account.acc_login, account.acc_name'
+	.PHP_EOL.' FROM chronicle'
+	.PHP_EOL.' INNER JOIN account ON chronicle.author = account.acc_id'
+	.PHP_EOL.' WHERE chronicle.id = '.$db->Quote( $entry_id )
 	;
 	$db->setQuery( $query );
 	$entry = $db->loadAssocRow();
@@ -50,26 +50,26 @@
 <h2>The entry that is about to be deleted</h2>
 
 <?php
-	$entry_date = IllaDateTime::IllaDatestampToDate( $entry['chronik_date'] );
+	$entry_date = IllaDateTime::IllaDatestampToDate( $entry['date'] );
 ?>
 
 <h4><?php echo $entry_date['day'],'. ',IllaDateTime::getMonthName( $entry_date['month'] ),' ',$entry_date['year']; ?></h4>
 
-<?php if( !is_null( $entry['chronik_note_de'] ) ): ?>
+<?php if( !is_null( $entry['note_de'] ) ): ?>
 <h6>German entry</h6>
 <p>
-	<?php echo $entry['chronik_note_de']; ?>
+	<?php echo $entry['note_de']; ?>
 </p>
 <?php endif; ?>
 
-<?php if( !is_null( $entry['chronik_note_en'] ) ): ?>
+<?php if( !is_null( $entry['note_en'] ) ): ?>
 <h6>English entry</h6>
 <p>
-	<?php echo $entry['chronik_note_en']; ?>
+	<?php echo $entry['note_en']; ?>
 </p>
 <?php endif; ?>
 
-<div class="right">composed by <?php echo ( strlen( $entry['name'] ) > 0 ? $entry['name'] : $entry['username'] ); ?></div>
+<div class="right">composed by <?php echo ( strlen( $entry['acc_name'] ) > 0 ? $entry['acc_name'] : $entry['acc_login'] ); ?></div>
 
 <h2>Delete entry</h2>
 
