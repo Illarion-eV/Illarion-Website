@@ -32,7 +32,7 @@ easyNPC-Editor, den easyQuest-Editor und den Map-Editor.</p>
 <h1>Server-Entwicklung</h1>
 
 <p>Die Server-Entwicklung befasst sich mit der Entwicklung der C++-Serversoftware,
-welche auf dem Illarion-Server läuft und das eigentliche Spiel steuert.</p>
+welche auf der eigentlichen Hardware läuft. Alle Clients verbinden sich mit dem Server, welcher im Wesentlichen das Spiel steuert.</p>
 
 <ul>
 	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions Entwicklungsstrang</a> (Hauptspeicher)</li>
