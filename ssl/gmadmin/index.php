@@ -219,7 +219,7 @@ break;
         // Pages von GMs gelöscht
 
         if ($_GET['action'] == "update") {
-            SQLQuery("UPDATE gmpager SET pager_status=$_POST[folder],pager_gm=$current_gm_id,pager_note='$_POST[comment]' WHERE oid='$_GET[pageid]';","illarionserver");
+            SQLQuery("UPDATE gmpager SET pager_status=$_POST[folder],pager_gm=$current_gm_id,pager_note='".pg_escape_string($_POST[comment])."' WHERE oid='$_GET[pageid]';","illarionserver");
             switch($_POST[folder]){
                 case 0: $_GET[submod] = "new"; break;
                 case 1: $_GET[submod] = "inwork"; break;

@@ -203,28 +203,28 @@ break;
 				include("inc_page_new.php");
 				/*
 				$_GET[submod]="new";
-				$pages=sqlquery("UPDATE gmpager SET pager_status=0,pager_gm=$current_gm_id,pager_note='$_POST[comment]' WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
+				$pages=sqlquery("UPDATE gmpager SET pager_status=0,pager_gm=$current_gm_id,pager_note='".pg_escape_string($_POST[comment])."' WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
 				*/
 				break;
 			case "in work": 
 				include("inc_page_inwork.php");
 				/*
 				$_GET[submod]="inwork";
-				$pages=sqlquery("UPDATE gmpager SET pager_status=1,pager_gm=$current_gm_id,pager_note='$_POST[comment]'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
+				$pages=sqlquery("UPDATE gmpager SET pager_status=1,pager_gm=$current_gm_id,pager_note='".pg_escape_string($_POST[comment])."'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
 				*/
 				break;
 			case "done": 
 				include("inc_page_done.php");
 				/*
 				$_GET[submod]="done";
-				$pages=sqlquery("UPDATE gmpager SET pager_status=2,pager_gm=$current_gm_id,pager_note='$_POST[comment]'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
+				$pages=sqlquery("UPDATE gmpager SET pager_status=2,pager_gm=$current_gm_id,pager_note='".pg_escape_string($_POST[comment])."'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
 				*/
 				break;
 			case "archive": 
 				include("inc_page_trash.php");
 				/*
 				$_GET[submod]="trash";
-				$pages=sqlquery("UPDATE gmpager SET pager_status=3,pager_gm=$current_gm_id,pager_note='$_POST[comment]'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
+				$pages=sqlquery("UPDATE gmpager SET pager_status=3,pager_gm=$current_gm_id,pager_note='".pg_escape_string($_POST[comment])."'  WHERE pager_time='".$_GET[ptime]."' AND pager_user=$_GET[puser]","illarionserver");
 				*/
 				break;
 		}
