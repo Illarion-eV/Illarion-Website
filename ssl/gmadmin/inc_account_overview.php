@@ -312,7 +312,7 @@
 				  if ($account_id[acc_lang]=="0")
 				  {
 					mail($account_id[acc_email],"Multi Accounts",
-					"Lieber Spieler,\n\nwir bedauern Dir mitteilen zu müssen, dass Dein Account \"".$account."\" gesperrt wurde. Der automatische Multi-Account-Tracer hat einen weiteren Account gefunden, der anscheinend Dir gehört.\nNach den Illarion-Regeln ist es einer Person nicht erlaubt, mehr als einen Account zu haben. Du kannst die Regeln hier nachlesen:\n
+					"Lieber Spieler,\n\nwir bedauern Dir mitteilen zu müssen, dass Dein Account \"".$account_id[acc_login]."\" gesperrt wurde. Der automatische Multi-Account-Tracer hat einen weiteren Account gefunden, der anscheinend Dir gehört.\nNach den Illarion-Regeln ist es einer Person nicht erlaubt, mehr als einen Account zu haben. Du kannst die Regeln hier nachlesen:\n
 http://illarion.org/illarion/de_rules.php\n
 Falls eine weitere Person neben Dir Deine Internetverbindung zum Spielen von Illarion benutzt, bitten wir Dich, dies den Gamemastern mitzuteilen. Du kannst einfach auf diese E-Mail antworten oder Dich direkt an einen Gamemaster Deiner Wahl wenden, damit Dein Account entsperrt wird.\n\n
 Deine Illarion Gamemaster",
@@ -321,7 +321,7 @@ Deine Illarion Gamemaster",
 				  else
 				  {
                   	mail($account_id[acc_email],"Multi Accounts",
-                    "Dear player,\n\nwe regret to tell you that your account \"".$account."\" is hereby banned. The automated multi account tracer detected another account that is probably owned by you. \nThe Illarion rules forbid one person having more than one account. You can review the rules here:\n
+                    "Dear player,\n\nwe regret to tell you that your account \"".$account_id[acc_login]."\" is hereby banned. The automated multi account tracer detected another account that is probably owned by you. \nThe Illarion rules forbid one person having more than one account. You can review the rules here:\n
 http://illarion.org/illarion/us_rules.php\n
 In case another person uses your internet connection to play Illarion, you have to inform the gamemasters about this. You can reply to this e-mail or contact a gamemaster of your choice to get your account unbanned.\n\n
 Yours,\n
