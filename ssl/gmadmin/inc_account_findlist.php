@@ -11,14 +11,14 @@
 
 		// search for accound name
 		case "name":
-			$sqlcount=sqlquery("SELECT COUNT(*) FROM account WHERE acc_login LIKE '$_POST[searchvalue]'","accounts");
-			$acc=sqlquery("SELECT * FROM account WHERE acc_login LIKE '$_POST[searchvalue]' LIMIT 30","accounts");
+			$sqlcount=sqlquery("SELECT COUNT(*) FROM account WHERE acc_login LIKE '".pg_escape_string($_POST[searchvalue])."'","accounts");
+			$acc=sqlquery("SELECT * FROM account WHERE acc_login LIKE '".pg_escape_string($_POST[searchvalue])."' LIMIT 30","accounts");
 		break;
 
 		// search for accound email address
 		case "mail":
-			$sqlcount=sqlquery("SELECT COUNT(*) FROM account WHERE acc_email LIKE '$_POST[searchvalue]'","accounts");
-			$acc=sqlquery("SELECT * FROM account WHERE acc_email LIKE '$_POST[searchvalue]' LIMIT 30","accounts");
+			$sqlcount=sqlquery("SELECT COUNT(*) FROM account WHERE acc_email LIKE '".pg_escape_string($_POST[searchvalue])."'","accounts");
+			$acc=sqlquery("SELECT * FROM account WHERE acc_email LIKE '".pg_escape_string($_POST[searchvalue])."' LIMIT 30","accounts");
 		break;
 
 		// search for accound status
@@ -29,7 +29,7 @@
 
 		// search for a specific char included in an account
 		case "char":
-			$acc=sqlquery("SELECT chr_accid FROM chars WHERE chr_name LIKE '$_POST[searchvalue]'","illarionserver");
+			$acc=sqlquery("SELECT chr_accid FROM chars WHERE chr_name LIKE '".pg_escape_string($_POST[searchvalue])."'","illarionserver");
 			$chr_accid=$acc[0][chr_accid];
 			$sqlcount=sqlquery("SELECT COUNT(*) FROM account WHERE acc_id = $chr_accid","accounts");
 			$acc=sqlquery("SELECT * FROM account WHERE acc_id = $chr_accid LIMIT 30", "accounts");

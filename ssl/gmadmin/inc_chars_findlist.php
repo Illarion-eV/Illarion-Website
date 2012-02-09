@@ -11,8 +11,8 @@
 
 		// Looking for character name
 		case "charname":
-			$sqlcount=sqlquery("SELECT COUNT(*) FROM chars WHERE chr_name LIKE '$_POST[searchvalue]'",$_POST[servertype]);
-			$chars=sqlquery("SELECT * FROM chars WHERE chr_name LIKE '$_POST[searchvalue]' LIMIT 30",$_POST[servertype]);
+			$sqlcount=sqlquery("SELECT COUNT(*) FROM chars WHERE chr_name LIKE '".pg_escape_string($_POST[searchvalue])."'",$_POST[servertype]);
+			$chars=sqlquery("SELECT * FROM chars WHERE chr_name LIKE '".pg_escape_string($_POST[searchvalue])."' LIMIT 30",$_POST[servertype]);
 		break;
 
 		// Looking for account ID

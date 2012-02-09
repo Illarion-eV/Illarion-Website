@@ -72,7 +72,7 @@ function SQLQuery($query,$db) {
 	// *** FUNKTION - Accountliste nach Namen
 	function ViewAccountsByName($name) {
 			$name=checkstring($name);
-			$accountlist=SQLQuery("SELECT * FROM account WHERE acc_login LIKE '$name'", "accounts");
+			$accountlist=SQLQuery("SELECT * FROM account WHERE acc_login LIKE '".pg_escape_string($name)."'", "accounts");
 	}
 
 	// FUNCTION VARLANGUAGE
