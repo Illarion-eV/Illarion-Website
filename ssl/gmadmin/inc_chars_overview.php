@@ -14,12 +14,13 @@
 			SQLQuery("UPDATE chars SET chr_accid=".$_POST[characcout]." WHERE chr_playerid=$_GET[playerid]",$_GET[servertype]);
 		} else {					
 		    // Update table "char"
+            $db =& Database::getPostgreSQL()
 		    sqlquery("UPDATE chars SET 
-										chr_name='".$_POST[chr_name]."',						
+										chr_name='".db->getEscaped($_POST[chr_name])."',						
 										chr_race='".$_POST[chr_race]."', 						
 										chr_sex='".$_POST[chr_sex]."', 						
-										chr_suffix='".$_POST[chr_suffix]."', 				
-										chr_prefix='".$_POST[chr_prefix]."' 				
+										chr_suffix='".db->getEscaped($_POST[chr_suffix])."', 				
+										chr_prefix='".db->getEscaped$_POST[chr_prefix])."' 				
 													WHERE chr_playerid=$_GET[playerid]",$_GET[servertype]);
 		
 		    // Update table "player"
