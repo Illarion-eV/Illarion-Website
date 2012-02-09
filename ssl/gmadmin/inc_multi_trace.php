@@ -25,7 +25,7 @@
 	$ipparts = explode(".",$acc[acc_lastip]);
 	$query="SELECT account.acc_id ".
     "FROM account ".
-    "WHERE ((account.acc_passwd='$acc[acc_passwd]' AND account.acc_lastip LIKE '$ipparts[0].%.%.%') OR account.acc_email='$acc[acc_email]' OR account.acc_lastip='$acc[acc_lastip]') AND account.acc_state=3 AND account.acc_id NOT IN (666,667,$acc[acc_id]) ".
+    "WHERE ((account.acc_passwd='$acc[acc_passwd]' AND HOST(account.acc_lastip) LIKE '$ipparts[0].%.%.%') OR account.acc_email='$acc[acc_email]' OR account.acc_lastip='$acc[acc_lastip]') AND account.acc_state=3 AND account.acc_id NOT IN (666,667,$acc[acc_id]) ".
     "AND ((SELECT count(legtimulti.acc_id_1) as hits FROM legtimulti WHERE (legtimulti.acc_id_1=$acc[acc_id] AND legtimulti.acc_id_2=account.acc_id) OR (legtimulti.acc_id_2=$acc[acc_id] AND legtimulti.acc_id_1=account.acc_id)) = 0);";
     //echo $query."<br>";
 	$accsfound = SQLQueryCon($query,$acco_connection);
