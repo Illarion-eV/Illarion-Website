@@ -14,7 +14,6 @@
 			SQLQuery("UPDATE chars SET chr_accid=".$_POST[characcout]." WHERE chr_playerid=$_GET[playerid]",$_GET[servertype]);
 		} else {					
 		    // Update table "char"
-            $db =& Database::getPostgreSQL()
 		    sqlquery("UPDATE chars SET 
 										chr_name='".pg_escape_string($_POST[chr_name])."',						
 										chr_race='".$_POST[chr_race]."', 						
