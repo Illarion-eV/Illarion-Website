@@ -30,8 +30,8 @@
 
 	$query = 'SELECT "acc_id"'
 	.PHP_EOL.' FROM "account"'
-	.PHP_EOL.' WHERE "acc_id" = ' . db->Quote($ids['chr_accid'])
-	.PHP_EOL.' AND "acc_passwd" = ' . db->Quote($pass)
+	.PHP_EOL.' WHERE "acc_id" = ' . $db->Quote($ids['chr_accid'])
+	.PHP_EOL.' AND "acc_passwd" = ' . $db->Quote($pass)
 	;
 	$db->setQuery($query);
 	
@@ -44,7 +44,7 @@
 
 	$query = 'SELECT "qpg_progress"'
 	.PHP_EOL.' FROM "questprogress"'
-	.PHP_EOL.' WHERE "qpg_userid" = '.$db->Quote($ids['chr_playerid']);
+	.PHP_EOL.' WHERE "qpg_userid" = '.$db->Quote($ids['chr_playerid'])
     .PHP_EOL.' AND "qpg_questid" = '.$db->Quote($quest);
 	$db->setQuery($query);
 
@@ -56,8 +56,8 @@
     } else {
         $query = 'UPDATE "questprogress"'
         .PHP_EOL.' SET "qpg_progress" = ' . $db->Quote($status)
-        .PHP_EOL.' WHERE "qpg_userid" = '.$db->Quote($ids['chr_playerid']);
-        .PHP_EOL.' AND "qpg_questid" = '.$db->Quote($quest);
+        .PHP_EOL.' WHERE "qpg_userid" = ' . $db->Quote($ids['chr_playerid'])
+        .PHP_EOL.' AND "qpg_questid" = ' . $db->Quote($quest);
     }
     $db->setQuery($query);
     $db->query();
