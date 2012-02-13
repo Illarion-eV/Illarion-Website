@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	
 	//Page::setXML('application/xml');
-	Page::Init();
+	//Page::Init();
 	
 	if (!isset($_POST['character']) || !isset($_POST['password']) || !isset($_POST['questid']) || !isset($_POST['queststatus'])) {
 		echo 'E_MISS';
@@ -18,7 +18,7 @@
 
 	$query = 'SELECT "chr_accid", "chr_playerid"'
     .PHP_EOL.' FROM "chars"'
-    .PHP_EOL.' WHERE "chr_name" = '. $accounts->Quote($char)
+    .PHP_EOL.' WHERE "chr_name" = '. $db->Quote($char)
 	;
     $db->setQuery($query);
 	$ids = $db->loadAssocRow();
