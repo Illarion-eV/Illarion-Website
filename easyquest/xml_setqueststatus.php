@@ -1,9 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	
-	Page::setXML('application/xml');
-	Page::Init();
-	
 	if (!isset($_POST['character']) || !isset($_POST['password']) || !isset($_POST['questid']) || !isset($_POST['queststatus'])) {
 		echo 'E_MISS';
 		exit;
