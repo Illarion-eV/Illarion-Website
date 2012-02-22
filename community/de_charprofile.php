@@ -62,7 +62,7 @@
 
 	prepareBirthday( $pg_profil['ply_dob'] );
 
-	$online_state = ( $settings['show_online'] ? getOnlineState( $charid ) : 2 );
+	$online_state = getOnlineState( $charid );
 	$description = prepareTexts( $my_profil['description_de'], $my_profil['description_us'] );
 	$story = ( $settings['show_story'] ? prepareTexts( $my_profil['story_de'], $my_profil['story_us'] ) : false );
 	$picture = preparePicture( $charid, $my_profil['picture'], $pg_profil['chr_race'], $pg_profil['chr_sex'], $my_profil['picture_width'], $my_profil['picture_height'] );
