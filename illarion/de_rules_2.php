@@ -300,7 +300,7 @@ Das Erstellen von sinnlosen oder themenfremden Beiträgen ist zu unterlassen.</p
 <h2>Zusatzprogramme</h2>
 
 <p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
-so einen Vorteil für den Spieler bewirken, sind nicht gestattet.</p>
+so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
