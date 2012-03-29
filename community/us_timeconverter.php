@@ -130,7 +130,7 @@
 <?php if ($show_input): ?>
 <h2>Convert based on the local time</h2>
 
-<p>The convertion from the local time requires the correct setting of the local timezone
+<p>The conversion from the local time requires the correct setting of the local timezone
 in your account. If this setting was not set correctly this function can't work. If you
 are unsure about your correct timezone set it as you think it fits and look at this page
 without any time recalculation done. If your setting is correct your current local time

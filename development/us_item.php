@@ -43,7 +43,7 @@
   <tr>
    <td><? InsertPicture("poison_axe.png") ?></td>
    <td>poisened executioner's axe</td>
-   <td>This heavy weapon, generelly refered to as &bdquo; executioner's axe, &ldquo; is commonly used in Albar and Gynk for executions.  Using it in combat it is simply too inert. The axe has been poisoned, since the axe alone is obviously not enough to behead the delinquent. No, to ensure that he is really going to die from it, the weapon has to be poisoned as well.</td>
+   <td>This heavy weapon, generally referred to as an &bdquo; executioner's axe, &ldquo; is commonly used in Albar and Gynk for executions.  Using it in combat it is simply too inert. The axe has been poisoned, since the axe alone is obviously not enough to behead the delinquent. No, to ensure that he is really going to die from it, the weapon has to be poisoned as well.</td>
   </tr>
   <tr>
    <td><? InsertPicture("round_axe_blue.png"); ?></td>
@@ -80,7 +80,7 @@
   <tr>
    <td><? InsertPicture("dagger_blue_glow.png"); ?></td>
    <td>magical dagger</td>
-   <td>Appaerantly a magical dagger.</td>
+   <td>Apparently a magical dagger.</td>
   </tr>
   <tr>
    <td><? InsertPicture("dagger_glow.png"); ?></td>
@@ -118,7 +118,7 @@
   <tr><td colspan="3"><h2 class="center">clubs, wands and maces</h2></td></tr>
   <tr>
    <td><? InsertPicture("morningstar.png"); ?></td>
-   <td>morining star</td>
+   <td>morning star</td>
    <td>It is a morning star. If one of these meets you, it suddenly becomes night and you will see many twinkling stars.</td>
   </tr>
   <tr>
@@ -146,7 +146,7 @@
   <tr>
    <td><? InsertPicture("salkamaerian_officer_armor.png"); ?></td>
    <td>salkamaerian officer's armor</td>
-   <td>A heavy, skillfully ornamented plate armor as worn by salkamar officers and paladins.</td>
+   <td>A heavy and skilfully ornamented plate armor as worn by salkamar officers and paladins.</td>
   </tr>
   <tr>
    <td><? InsertPicture("albarian_noble_armor.png"); ?></td>
@@ -166,7 +166,7 @@
   <tr>
    <td><? InsertPicture("drowarmor.png"); ?></td>
    <td>drow armor</td>
-   <td>A blackened armor with some magical runes, but no elementary effect can be recognized. The fearsome structure seems unpractical but the cruel looking shoulder blades seem to prevent beheadings and to daunt enemies. Since drow abjured the gods and were cursed for it, it does not seem to be a good idea to wear that thing.</td>
+   <td>A blackened armor with some magical runes, but no elementary effect can be recognized. The fearsome structure seems impractical but the cruel looking shoulder blades seem to prevent beheadings and to daunt enemies. Since drows abjured the gods and were cursed for it, it does not seem to be a good idea to wear that thing.</td>
   </tr>
   <tr><td style="text-align:right;" colspan="3"><?php insert_go_to_top_link(); ?></td></tr>
   <tr><td colspan="3"><h2 class="center">helmets and other armorparts</h2></td></tr>
@@ -184,7 +184,7 @@
   <tr>
    <td><? InsertPicture("2302.png"); ?></td>
    <td>gynkese mercenarie's helmet</td>
-   <td>A helmet of the kind that gynkesian mercenarie's wear. They prefer a solid grid for protection which does not hinder sight too much.</td>
+   <td>A helmet of the kind that gynkesian mercenaries wear. They prefer a solid grid for protection which does not hinder sight too much.</td>
   </tr>
   <tr>
    <td><? InsertPicture("2291.png"); ?></td>
@@ -194,10 +194,10 @@
   <tr>
    <td><? InsertPicture("shield_red.png"); ?></td>
    <td>mosaic shield</td>
-   <td>A shield with a tesselated surface made of different metal plates. The small plates overlap towards the outer bounds so that strikes will deflected to the sides rather than to the face or the legs of the fighter.</td>
+   <td>A shield with a tessellated surface made of different metal plates. The small plates overlap towards the outer bounds so that strikes will deflected to the sides rather than to the face or the legs of the fighter.</td>
   </tr>
   <tr><td style="text-align:right;" colspan="3"><?php insert_go_to_top_link(); ?></td></tr>
-  <tr><td colspan="3"><h2 class="center">clothes and accesoires</h2></td></tr>
+  <tr><td colspan="3"><h2 class="center">Clothes and Accessories</h2></td></tr>
   <tr>
    <td><? InsertPicture("schlapphutbraun.png"); ?></td>
    <td>hat</td>
@@ -206,7 +206,7 @@
   <tr>
    <td><? InsertPicture("cloak_black.png"); ?></td>
    <td>black cult robe</td>
-   <td>Robes of this kind are wornr from black-cultists - followers of a Bjolmur- or Cherasscult which is dangerous and forbidden in all cultures of Illarion.</td>
+   <td>Robes of this kind are worn by black-cultists - followers of a Bjolmur- or Cherasscult which is dangerous and forbidden in all cultures of Illarion.</td>
   </tr>
   <tr>
    <td><? InsertPicture("kleid.png"); ?></td>
@@ -216,7 +216,7 @@
   <tr>
    <td><? InsertPicture("icebirdamulet.png"); ?></td>
    <td>charm of the icebird</td>
-   <td>A nifty, shiny looking amulet. You often see it worn by elfs or pansys without armor, so it's propably useful for mages.</td>
+   <td>A nifty, shiny looking amulet. You often see it worn by elves or pansies without armor, so it's probably useful for mages.</td>
   </tr>
   <tr>
    <td><? InsertPicture("cloak_white2.png"); ?></td>
@@ -228,12 +228,12 @@
   <tr>
    <td><? InsertPicture("apfeltorte.png"); ?></td>
    <td>apple pie</td>
-   <td>Halflings love it, elfs say that it's too sweet, and it's not raw enough for lizards.</td>
+   <td>Halflings love it, elves say that it's too sweet, and it's not raw enough for lizards.</td>
   </tr>
   <tr>
    <td><? InsertPicture("dish_rabbit.png"); ?></td>
    <td>rabbit dish</td>
-   <td>A harmonious combination of fresh herbs and rabbit meet.</td>
+   <td>A harmonious combination of fresh herbs and rabbit meat.</td>
   </tr>
   <tr>
    <td><? InsertPicture("brot.png"); ?></td>
@@ -282,7 +282,7 @@
   <tr>
    <td><? InsertPicture("bottle_full1.png"); ?></td>
    <td>full bottle</td>
-   <td>A glas bottle with a practical hamper - probably filled with rum or tasty, strong dwarven beer.</td>
+   <td>A glass bottle with a practical hamper - probably filled with rum or tasty, strong dwarven beer.</td>
   </tr>
   <tr>
    <td><? InsertPicture("brownpotion.png"); ?></td>

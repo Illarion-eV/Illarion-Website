@@ -7,8 +7,8 @@
 ?>
 
 <h2>
-	<a class="float_left" href='/general/us_faq_concept.php'>Game concept - FAQ</a>
-	<a class="float_right" href='/general/us_faq_graphic.php'>Graphic - FAQ</a>
+	<a class="float_left" href='/general/us_faq_concept.php'>Game Concept - FAQ</a>
+	<a class="float_right" href='/general/us_faq_graphic.php'>Graphics - FAQ</a>
 	<a class="clr" style="display:block;"></a>
 </h2>
 

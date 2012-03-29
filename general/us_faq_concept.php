@@ -37,7 +37,7 @@
 	instead lead the life of a fictional character feeling, saying and thinking what he would. In
 	the case of Illarion, the world is a medieval fantasy realm with orcs, dwarves magic and
 	monsters. Your character could be a renowned warrior, a potent mage, a rich craftsman, or
-	even a poor beggar groveling in the gutter. The choice is all yours. An important aspect of
+	even a poor beggar grovelling in the gutter. The choice is all yours. An important aspect of
 	role playing is the character interaction that is bound to happen. Whether you are a merchant
 	offering his wares, A pompous baron oppressing the peasants, or a warrior seeking to prove
 	his worth; Become your character. Speak, think and act as he/she would. If you are a peasant,

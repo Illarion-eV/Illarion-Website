@@ -26,10 +26,10 @@
 
    <p>ome players have a special Gamemaster character. These uphold the rules of Illarion, and may
    punish any and all infractions severely, or even pass it on to the admins. Lying to or
-   decieveing a Gamemaster, regarding rule offenders and bugs/errors is strictly forbidden.
+   deceiving a Gamemaster, regarding rule offenders and bugs/errors is strictly forbidden.
    Furthermore, if a Gamemaster is busy or discussing game relevant matters, he should only be
-   disturbed in urgent cases. The names of other characters of a Gamemaster are witheld, and will
-   only be released when speciffically requested by the Gamemaster
+   disturbed in urgent cases. The names of other characters of a Gamemaster are withheld, and will
+   only be released when specifically requested by the Gamemaster
    herself/himself.</p>
 
    <?php insert_go_to_top_link(); ?>

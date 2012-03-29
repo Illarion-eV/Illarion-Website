@@ -24,9 +24,10 @@
 <h2>Content</h2>
 <ul>
 	<li><a class="hidden" href="#1">General information</a></li>
-	<li><a class="hidden" href="#2">Gamemaster</a></li>
-	<li><a class="hidden" href="#3">General contacts</a></li>
-	<li><a class="hidden" href="#4">Personal contacts</a></li>
+	<li><a class="hidden" href="#2">Community Managers</a></li>
+	<li><a class="hidden" href="#3">Gamemasters</a></li>
+	<li><a class="hidden" href="#4">General contacts</a></li>
+	<li><a class="hidden" href="#5">Personal contacts</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -34,79 +35,83 @@
 <h2><a name="1"></a>General information</h2>
 
 <?php echo Page::cap('Q'); ?>
-<p>uestions may arise when you play Illarion, so we have created a list of
+<p>uestions and issues may arise when you play Illarion, so we have created a list of
 relevant email addresses to which you can send your inquiries, bug reports,
 wishes and such. As there are quite a few people working on Illarion, we have
 divided the addresses into different categories, so that each mail is sent to
 the appropriate people. Therefore, you should make sure you send your e-mails
-to the right address, as they will otherwise probably just be ignored.</p>
+to the right address as they will otherwise probably just be ignored.</p>
 
 <p>Make sure you have already read the
 <a href="<?php echo Page::getURL(); ?>/general/us_faq_graphic.php">Graphic-FAQ</a>,
 <a href="<?php echo Page::getURL(); ?>/general/us_faq_concept.php">Concepts-FAQ</a>,
 <a href="<?php echo Page::getURL(); ?>/general/us_faq_technic.php">Technical-FAQ</a> or even checked
 out the <a href= "<?php echo Page::getURL(); ?>/community/forums/">Forum</a> before
-you write us your mails, as the answer to your problem may well be there,
-and it is an annoyance for us to answer the same questions again and
+you write to us as the answer to your problem may well be there
+and it is frustrating at times for us to answer the same questions again and
 again.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Gamemaster</h2>
+<h2><a name="2"></a>Community Managers</h2>
 
 <?php echo Page::cap('S'); ?>
-<p>ome players have a special Gamemaster character. These uphold the rules of Illarion, and may
-punish any and all infractions severely, or even pass it on to the admins. Lying to or
-decieveing a Gamemaster, regarding rule offenders and bugs/errors is strictly forbidden.
-Furthermore, if a Gamemaster is busy or discussing game relevant matters, he should only be
-disturbed in urgent cases. The names of other characters of a Gamemaster are witheld, and will
-only be released when speciffically requested by the Gamemaster
-herself/himself.</p>
+<p>ome players are known as "Community Managers" (CM).
+These players duties include assisting new players and also helping resolve issues and conflicts between players.
+They should be the first people to turn to for a non-technical issue that may arise. </p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>General contacts</h2>
+<h2><a name="3"></a>Gamemasters</h2>
+
+<?php echo Page::cap('S'); ?>
+<p>ome players have a special Gamemaster (GM) character. These uphold the rules of Illarion and may
+punish any and all infractions severely or they may even pass it on to the admins. Lying to or
+deceiving a Gamemaster regarding rule offences and bugs/errors is strictly forbidden.
+Furthermore, if a Gamemaster is busy or discussing game relevant matters they should only be
+disturbed in urgent cases. The names of other characters of a Gamemaster are withheld, and will
+only be released when specifically requested by the Gamemaster personally.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<h2><a name="4"></a>General contacts</h2>
 
 <ul>
-	<li><a href="?contact=1">Account requests</a> - every question
-	concerning your account fit in here.</li>
+	<li><a href="?contact=1">Account requests</a> - Questions with regards to Account issues.</li>
 
-	<li><a href="?contact=2">Webmaster contact</a> - Every question concerning
-	the website goes here</li>
+	<li><a href="?contact=2">Webmaster contact</a> - Questions with regards to Website issues.</li>
 
-	<li><a href="?contact=3">Reporting players</a> - here you can report
-	players, who break the rules of Illarion</li>
+	<li><a href="?contact=3">Reporting players</a> - To report a player breaking the rules.</li>
 
-	<li><a href="?contact=4">Reporting gamemasters</a> - here you can
-	complain about gamemasters if it is needed</li>
+	<li><a href="?contact=4">Reporting gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
 
 	<li><a href="?contact=5">RPG requests</a> - If you need gamemaster support
-	for a quest you can mail to this adress. A better alternative however is
+	for a quest you can mail to this address. A better alternative however is
 	to seek direct contact with a gamemaster. You will find their addresses
-	further below at the <a class="hidden" href="#3">personal contacts</a>
+	further below at the <a class="hidden" href="#5">Personal Contacts</a> section.
 	</li>
 
-	<li><a href="?contact=6">Character requests</a> - all requests concerning
+	<li><a href="?contact=6">Character requests</a> - All requests concerning
 	your character go here.</li>
 
-	<li><a href="?contact=7">Bug reports</a> - mistakes and errors you locate
-	within the game, can be reported here. But it's better to report them
+	<li><a href="?contact=7">Bug reports</a> - Mistakes and errors you locate
+	within the game, can be reported here. However, it is better to report them
 	on the <a href="../mantis/">Mantis-Bugtracker</a>.</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Personal contacts</h2>
+<h2><a name="5"></a>Personal contacts</h2>
 
-<?php echo Page::cap('S'); ?>
-<p>ome players have a special Gamemaster character. These uphold the rules
-of Illarion, and may punish any and all infractions severely, or even pass
-it on to the admins. Lying to or decieveing a Gamemaster, regarding rule
-offenders and bugs/errors is strictly forbidden. Furthermore, if a
-Gamemaster is busy or discussing game relevant matters, he should only be
-disturbed in urgent cases. The names of other characters of a Gamemaster
-are witheld, and will only be released when speciffically requested by the
-Gamemaster herself/himself.</p>
+<h3>Community Managers</h3>
+
+<p>These players assist new players and help resolve issues between players.</p>
+
+<ul>
+<li>Achae Eanstray - English speaking Community Manager</li>
+<li>Athian - English speaking Community Manager</li>
+<li>Djironnyma - German speaking Community Manager</li>
+</ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -129,15 +134,14 @@ and of players who don't care for the rules.</p>
 <p>These are the developers of Illarion and their responsibilities</p>
 
 <ul>
-	<li><a href="?contact=16">Alatar</a> - webmaster, server administrator
-	</li>
-	<li><a href="?contact=33">Ardian</a> - scripts</li>
-	<li><a href="?contact=21">Lennier</a> - map</li>
-	<li><a href="?contact=22">martin</a> - scripts, server, graphic</li>
-	<li><a href="?contact=23">Nitram</a> - client, scripts, homepage</li>
-	<li><a href="?contact=31">pharse</a> - scripts</li> server administrator
-	<li><a href="?contact=25">Vilarion</a> - scripts, server, server administrator</li>
-	<li><a href="?contact=40">Zot</a> - map</li>
+	<li><a href="?contact=16">Alatar</a> - Webmaster, Server Administrator</li>
+	<li><a href="?contact=33">Ardian</a> - Scripts</li>
+	<li><a href="?contact=21">Lennier</a> - Map</li>
+	<li><a href="?contact=22">Martin</a> - Scripts, Server, Graphics</li>
+	<li><a href="?contact=23">Nitram</a> - Client, Scripts, Homepage</li>
+	<li><a href="?contact=31">pharse</a> - Scripts, Server Administrator</li>
+	<li><a href="?contact=25">Vilarion</a> - Scripts, Server, Server Administrator</li>
+	<li><a href="?contact=40">Zot</a> - Maps</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -162,7 +166,7 @@ and of players who don't care for the rules.</p>
          define(_CONTACT_MAIL,"accounts@illarion.org",false);
          define(_CONTACT_DETAILS,"All questions concerning the accounts ".
          "will be answered here. Don't forget to note down your account ".
-         "name in the email if the problem is about a existing account else".
+         "name in the email if the problem is about a existing account or else".
          " we can't help you.<br />To make sure that it is your account, ".
          "you need to send this mail from the e-mail address you used to ".
          "register your account",false);
@@ -186,7 +190,7 @@ and of players who don't care for the rules.</p>
          define(_CONTACT_NAME,"Reporting gamemasters",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
          define(_CONTACT_DETAILS,"In the situation that a gamemaster abused".
-         " his or her powers to support or punish a player in an unproper".
+         " his or her powers to support or punish a player in an improper".
          " way you can report this here. Those reports are handled by a".
          " impartial person.",false);
       break;
@@ -294,8 +298,8 @@ and of players who don't care for the rules.</p>
          "designer and takes care for the developing of the map. Questions ".
          "about the map are to be directed to him.",false);
       break;
-      case 22: //martin
-         define(_CONTACT_NAME,"martin",false);
+      case 22: //Martin
+         define(_CONTACT_NAME,"Martin",false);
          define(_CONTACT_MAIL,"martin@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a server- and script-".
          "developer. Furthermore he takes care of the graphics. Questions ".

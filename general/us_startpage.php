@@ -12,10 +12,10 @@
 
 <?php Page::cap('I'); ?>
 <p>llarion is a free, graphical fantasy game that focuses on true roleplaying. Come and
-join the world of Illarion. You'll fully emmerse yourself in this world, as though your
+join the world of Illarion. You'll fully immerse yourself in this world, as though your
 character is a real being. All of the characters around you will behave as real people
 in this independent, mysterious world. They'll tell you about magicians, ghosts and
-fairies in some of the most unbelieveable stories and rumors. Pick a race you would like
+fairies in some of the most undeliverable stories and rumors. Pick a race you would like
 to play: human, dwarf, halfling, elf? Maybe an orc? Or even a lizardman?</p>
 
 <p>Please don't expect experience points or other numbers inside the game which reveal
@@ -30,7 +30,7 @@ to speak the common language of Illarion to make themselves understood.</p>
 Windows) and the guarantee that you will never, ever, pay anything for this game. To
 ensure this we founded a registered society and it became contractual in the statute.
 Illarion has been online since February 2000 and is always being developed by
-programmers and volunteers to satisify the wishes of the player community.</p>
+programmers and volunteers to satisfy the wishes of the player community.</p>
 
 <p>Even you can't resist the magic of this world!</p>
 

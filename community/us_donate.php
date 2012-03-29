@@ -89,7 +89,7 @@ Illarion e.V. Martin Völkel.</p>
 	<li>Germany</li>
 </ul>
 
-<p>Also there is every half year a RL meeting for the staff members and players of
+<p>Also there is every half year a RL (Real Life) meeting for the staff members and players of
 Illarion. This meetings are held in Germany. Its also possible to donate something
 there. Details about this meetings can be found on the
 <a href="<?php echo Page::getURL(); ?>/community/forums/">forum</a>.</p>

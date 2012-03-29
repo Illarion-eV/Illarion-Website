@@ -35,7 +35,7 @@
     <li style="font-weight:bold; color:green">Server Protocol</li>
     <li style="font-weight:bold; color:green">Sound- und Music handling</li>
     <li style="font-weight:bold; color:green">Pathfinding</li>
-    <li style="font-weight:bold; color:#FFA500">Session managment</li>
+    <li style="font-weight:bold; color:#FFA500">Session management</li>
     <li style="font-weight:bold; color:#FFA500">Slick-Graphicengine binding</li>
     <li style="font-weight:bold; color:#FFA500">Szene graph management</li>
     <li style="font-weight:bold; color:#FF4500">NiftyGUI binding</li>

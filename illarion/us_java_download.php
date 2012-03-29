@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
 	Page::setTitle( 'Download' );
-	Page::setDescription( 'Download of the lastest version of the Illarion client and some details about the installation' );
+	Page::setDescription( 'Download of the latest version of the Illarion client and some details about the installation' );
 	Page::setKeywords( array( 'Download', 'Client', 'Program' ) );
 
     Page::setXHTML();
@@ -19,13 +19,13 @@
 	<li><a href="<?php echo Page::getURL(); ?>/illarion/manual_us.pdf">Read the manual</a>(PDF, 1MB)</li>
 </ul>
 
-<p>In order to play, you have to <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">create an account</a> and create a character afterwards.</p>
+<p>In order to play, you have to <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">create an account</a> and create a character before you launch the client.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2>Create and view characters</h2>
 
-<p>In your account you can review your existing characters and create new ones.</p>
+<p>In your account page you can review/delete your existing characters and create new ones.</p>
 
 <ul>
 	<li><a href='<?php echo Page::getURL(); ?>/community/account/us_charlist.php'>Character account</a></li>
@@ -60,12 +60,12 @@
 <p>Download the Illarion client here.</p>
 <p>The initial download size is about 34MB, when the client is updated, only those parts will be downloaded that have actually changed, mostly around 500kB-5MB. Updates will be detected and installed automatically.</p>
 <p>During installation you must confirm that you want to trust a certificate from "Thawte Consulting". Just confirm this dialog. Upon the first launch the client will ask you for a folder to store your characters' data in (e.g. maps). Just select a folder of your choice. If you have played before, you can also select your existing character directory. The data of your existing characters will be imported (backup is recommended!).</p>
-<p>If the client does not start up, make sure you have an up to date Java Runtime Enviroment installed.</p>
+<p>If the client does not start up, make sure you have an up to date Java Runtime Environment (JRE) installed.(At this time JRE 1.6 is supported. 7 isn't)</p>
 <ul>
    <li><a href="<?php echo Page::getURL(); ?>/illarion/download/illarion_client.jnlp">Online Installation</a> (latest version, Windows, Linux, Solaris and MacOS X, 34MB)</li>
-   <li><a href="http://jdl.sun.com/webapps/getjava/BrowserRedirect?locale=us&amp;host=java.com">Java Runtime Enviroment</a> (from java.com)</li>
+   <li><a href="http://jdl.sun.com/webapps/getjava/BrowserRedirect?locale=us&amp;host=java.com">Java Runtime Environment</a> (from java.com)</li>
 </ul>
 
-<p>In case there are any problems during the installation, feel free to ask for help using the IRC chat or the board. There are barely problems that can't be solved.</p>
+<p>In case there are any problems during the installation, feel free to ask for help using the IRC chat or the board. There are barely any problems that can't be solved.</p>
 
 <?php Page::insert_go_to_top_link(); ?>

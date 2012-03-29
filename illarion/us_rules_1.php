@@ -29,7 +29,7 @@ be respectful, considerate and to be lenient with one another.</p>
 
 <?php Page::cap('I'); ?>
 <p>Illarion is a true roleplaying game. Your character is not your avatar in
-another world and his gain and loss is not yours. Seperate yourself from your
+another world and his gain and loss is not yours. Separate yourself from your
 character and let him have flaws and commit mistakes. Players commit mistakes
 once in a while, too. Be lenient towards the mistakes of other players, nobody
 is perfect, not even you. If you cannot stand the behaviour of another player,

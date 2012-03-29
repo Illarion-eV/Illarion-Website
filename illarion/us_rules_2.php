@@ -55,7 +55,7 @@ borrowed, exchanged or sold. The owner of an account is responsible for all
 actions of his characters, even if an unauthorised person got access to it.</p>
 
 <p>If two players want to log in using the same internet connection, they have
-to inform the Illarion staff about this.</p>
+to inform the Illarion staff about this prior to creating both accounts.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -71,8 +71,8 @@ character. In addition, the following types of names are not allowed:</p>
   <li>Names of mythology, religion etc. (Buddha, Jesus Christus, Osiris)</li>
   <li>Well known names from literature, TV, movies etc. (Gandalf, Legolas, Harry
   Potter, Mononoke)</li>
-  <li>Names containing a title (Sir Yaran, King Kuno). You can add titles ingame
-  seperatly</li>
+  <li>Names containing a title (Sir Yaran, King Kuno). You can add titles in-game
+  separately</li>
 </ul>
 
 <p>In addition the following guidelines apply:</p>
@@ -80,7 +80,7 @@ character. In addition, the following types of names are not allowed:</p>
 <ul>
     <li>A name has to contain at least a first name and can also have a surname,
     which is recommended</li>
-    <li>The name has to be pronouncable, so it should contain vowels</li>
+    <li>The name has to be pronounceable, so it should contain vowels</li>
     <li>Lizardmen can have unpronounceable names but they should sound like
     being lizard language (decision of the gamemasters)</li>
     <li>Name affixes like "el", "al" etc (ie el'Chitarim al Kazar) can start
@@ -102,9 +102,9 @@ the character creation in the account system. It's not allowed to roleplay any
 mixed-race characters. The only exception is half elves (elf/human) which
 properties (language, attributes) are limited to one of the parent races.</p>
 
-<p>A gamemaster's permission is needed for all magical and divine interventions
+<p>A gamemasters permission is needed for all magical and divine interventions
 that cannot be realised by the engine. This especially holds true for magical
-and divine rituals which grant an effect, as well as for all forms of artifact
+and divine rituals which grant an effect, as well as for all forms of artefact
 magic as long as it does not get its effects from the engine.</p>
 
 <p>The application for a ritual should contain a description of the ritual, the
@@ -131,11 +131,11 @@ character right in front of a town guard, even if the guard is only a NPC.</p>
 <p>Actions of a character must not be adapted to the technical environment of
 the engine to maximise success. Characters have to react on external influences
 and must not be kept idle in the game. To evade unwanted situations that could
-have bad consquences for a character by logging out of the game is
+have bad consequences for a character by logging out of the game is
 forbidden.</p>
 
 <p>When a character is knocked down or 'killed' (s)he will suffer from injuries
-which should be played out. In case of a knockout there are light injuries, in
+which should be played out. In case of a knock-out there are light injuries, in
 the case of death severe ones. The wounds should be played out until the health
 points are fully restored.</p>
 
@@ -160,7 +160,7 @@ or affect each other directly. This is needed to avoid conflicts of interest.</p
 <h2>Out of character (OOC)</h2>
 
 <p>Out of character is everything that is not backed up by actions or thoughts
-of a character ingame. Decisions or actions in game should never be motivated by
+of a character in-game. Decisions or actions in game should never be motivated by
 OOC influence, e.g. because of dislike for the other player. To call for help
 via means not present in the game (e.g. messengers) is strictly forbidden. It is
 also not allowed to use knowledge which the player has but the character
@@ -204,7 +204,7 @@ characters and leave no room for reaction are forbidden.</p>
 
 <p>The purposeful attacking of a character without clearly traceable and
 reasonable roleplaying reason is forbidden. Immediate killing of a character
-right after resurrection ("reskilling") is not allowed.</p>
+right after resurrection ("res-killing") is not allowed.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -262,7 +262,7 @@ It is also not allowed to change an attribute to a value smaller than 5 or bigge
 <h2>Gamemaster</h2>
 
 <p>Gamemasters help players, host events and keep the peace in the game. Lying
-to a gamemaster or keeping back informations about rule violations or bugs is
+to a gamemaster or keeping back information about rule violations or bugs is
 forbidden. The names of player characters of a gamemaster or another staff
 member must not be published without approbation to guarantee his privacy.</p>
 

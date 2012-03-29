@@ -23,9 +23,10 @@
 <h2>Inhalt</h2>
 <ul>
 	<li><a class="hidden" href="#1">Allgemeine Informationen</a></li>
-	<li><a class="hidden" href="#2">Gamemaster</a></li>
-	<li><a class="hidden" href="#3">Allgemeine Kontakte</a></li>
-	<li><a class="hidden" href="#4">Persönliche Kontakte</a></li>
+	<li><a class="hidden" href="#2">Community-Manager</a></li>
+	<li><a class="hidden" href="#3">Gamemaster</a></li>
+	<li><a class="hidden" href="#4">Allgemeine Kontakte</a></li>
+	<li><a class="hidden" href="#5">Persönliche Kontakte</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -51,7 +52,16 @@ der Weiterentwicklung von Illarion.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Gamemaster</h2>
+<h2><a name="2"></a>Community-Manager</h2>
+
+<?php echo Page::cap('E'); ?>
+<p>inige Spieler werden als "Community Manager" (CM) bekannt.
+Zu den Aufgaben dieser Spieler gehört es neuen Spielern zu helfen und Probleme oder Konflikte zwischen den Spielern zu lösen.
+Sie sollten die ersten sein an die man sich bei nicht technischen Problemen wenden kann.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+</h2><h2><a name="3"></a>Gamemaster</h2>
 
 <?php echo Page::cap('E'); ?>
 <p>inige Spieler haben den Status eines Gamemasters für einen speziellen Charakter. Diese sind
@@ -65,7 +75,7 @@ werden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>Allgemeine Kontakte</h2>
+<h2><a name="4"></a>Allgemeine Kontakte</h2>
 
 <ul>
 	<li><a href="?contact=1">Accountanfragen</a> - alle Fragen bezüglich
@@ -97,7 +107,19 @@ werden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Persönliche Kontakte</h2>
+<h2><a name="5"></a>Persönliche Kontakte</h2>
+
+<h3>Community-Manager</h3>
+
+<p>Dies Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
+
+<ul>
+	<li>Achae Eanstray - Englischsprachige Community Managerin</li>
+	<li>Athian - Englischsprachiger Community Manager</li>
+	<li>Djironnyma - Deutschsprachiger Community Manager</li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <h3>Gamemasters</h3>
 

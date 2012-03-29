@@ -22,7 +22,7 @@
 
    <p>The simplest way to cover our expenses in a predictable way is your Illarion society support membership for only 10 Euro per year. Because both sides should have a benefit, we thought about advantages for those members.</p>
 
-   <p>As fundamental idea we don't want to offer any ingame advantages, because this would be just a premium game account for people who are able to pay.</p>
+   <p>As fundamental idea we don't want to offer any in-game advantages, because this would be just a premium game account for people who are able to pay.</p>
 
    <p>The following benefits are available for support members on <a href="http://illarion.org/community/de_contact.php?contact=25">request</a> right now:</p>
    <ul>
@@ -31,7 +31,7 @@
       <li>An own guild forum at forum.illarion.org (with group leader and moderator rights)</li>
    </ul>
 
-   <p>This list could be changed anytime (we already have more ideas), but there is no redress in law to get these benefits.</p>
+   <p>This list could be changed at any time (we already have more ideas), but there is no redress in law to get these benefits.</p>
 
    <p>To become a member, just fill out the form and send it to us:</p>
    <ul>

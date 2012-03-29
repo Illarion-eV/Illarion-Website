@@ -38,7 +38,7 @@ do not vanish after a short time or become inactive too fast.</p>
 	<li>Every guild has a probation time of three weeks in which its members and
 	the activity of the guild is monitored, to see if the guild is beneficial
 	for the game.</li>
-	<li>When a guild becomes inactive, and therefor has not enough active
+	<li>When a guild becomes inactive, and therefore has not enough active
 	members, the property of the guild will either decay or be taken over by
 	another guild.</li>
 	<li>New guilds have to be approved by a gamemaster.</li>
@@ -90,11 +90,11 @@ evaluate if the guild fits into the world of Illarion.</p>
 	<li>Set goals, missions, spirit and purpose of the guild: This point is
 	especially important. The goals serve a long time motivation for the members
 	and should be set accordingly. Guilds, whose only goal is to build houses
-	will categorially be rejected. The spirit and purpose of the guild should
+	will categorically be rejected. The spirit and purpose of the guild should
 	especially display how the new guild differs from any existing guild and how
 	it adds to the enhancement of the game.</li>
 	<li>Eventual extra informations about the guild like functions and positions
-	within the guild. This is wholely optional, but it might be good to think
+	within the guild. This is wholly optional, but it might be good to think
 	about these kind of things before founding your guild.</li>
 </ul>
 
@@ -105,7 +105,7 @@ evaluate if the guild fits into the world of Illarion.</p>
 <p>In the next step you guild needs to be checked. For that you should send the
 complete concept as well as the <b>exact</b> names of the first members to a
 gamemaster, who will read it and accept the guild or not. When the guild is
-accepted you can start a thread on the guildboard. If the concept will be made
+accepted you can start a thread on the guild-board. If the concept will be made
 public or not is the choice of the guild leader.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -114,7 +114,7 @@ public or not is the choice of the guild leader.</p>
 
 <p>During probation, which lasts about three weeks, the members of the new guild
 will be watched more closely. If the members stand out with inadequate roleplay
-or rulebreaking behavior, it could mean the end of the guild. The guild will
+or rule-breaking behavior, it could mean the end of the guild. The guild will
 also have to show that it can keep the members active.</p>
 
 <p>If there are no problems during probation, the group gets the status of a

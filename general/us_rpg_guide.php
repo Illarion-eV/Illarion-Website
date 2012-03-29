@@ -20,9 +20,9 @@ roleplayers.</p>
 	<li><a class="hidden" href="#3">Your name</a></li>
 	<li><a class="hidden" href="#4">Know your character!</a></li>
 	<li><a class="hidden" href="#5">Character creation</a></li>
-	<li><a class="hidden" href="#6">Athmosphere breaks</a></li>
+	<li><a class="hidden" href="#6">Atmosphere breaks</a></li>
 	<li><a class="hidden" href="#7">Out of character (OOC) vs. In Character (IC)</a></li>
-	<li><a class="hidden" href="#8">OOC knowledge / Charakter seperation</a></li>
+	<li><a class="hidden" href="#8">OOC knowledge / Character separation</a></li>
 	<li><a class="hidden" href="#9">#me</a></li>
 	<li><a class="hidden" href="#10">Player/character level</a></li>
 	<li><a class="hidden" href="#11">Take part in others roleplay</a></li>
@@ -62,7 +62,7 @@ added things like magic, strange peoples (elves, dwarves, ...) and a lot of gods
 We thought about a time, before complex machines were created. Besides these changes, the normal
 rules of nature apply like on the earth. The world is currently restricted to one island. If the
 population grows and time passes, we will add other islands, which are, of course, already known
-of and the poplulation of Illarion maintains contact to them.</p>
+of and the population of Illarion maintains contact to them.</p>
 
 <?php insert_go_to_top_link(); ?>
 
@@ -72,7 +72,7 @@ of and the poplulation of Illarion maintains contact to them.</p>
 
 <p>Choose a name, as it might be used in a land like Illarion. SuperHero666 will not be a good
 choice. In fact a character with this name will be deleted without further notice. Names like
-Gandalf and Aragorn sound more fitting - but only on the first view. Generaly the names are
+Gandalf and Aragorn sound more fitting - but only on the first view. Generally the names are
 good, if they had been created on your own. If you have taken these names from a book or film,
 you should be aware of one fact: Other players will know these names too, and have a certain
 expectation for people having this name. If someone is called Gandalf, all other players will
@@ -91,7 +91,7 @@ must be fulfilled can be found on the website.</p>
 <p>There is no script, so there are no fixed roles. Therefore choose a role that you always
 wanted to play. The only important thing is, that it fits to the setting of Illarion. An
 engineer of the arms industry would not fit in, while a medieval blacksmith would.<br />
-Once you have choosen a person, you should think about his personal background. The motivation
+Once you have chosen a person, you should think about his personal background. The motivation
 of your character should be derived from your background: What are your goals? What do you like
 or hate?<br />
 If you are talking to other people, you should be able to answer questions without a lot of
@@ -118,7 +118,7 @@ manner that brings the most advantages from the rules system (it is changing oft
 
 <p><a name="6"></a></p>
 
-<h2>Athmosphere breaks</h2>
+<h2>Atmosphere breaks</h2>
 
 <p>Imagine watching a film: A child is walking through the dark forest towards its home. Fog is
 lying on the small path. Trees are creaking, shadows of branches moving in the wind form various
@@ -131,7 +131,7 @@ stay as it is. The same applies to roleplaying, with the exception that we can't
 scene again. It must be right the first time. The microphone that was reaching into the picture
 is in our case perhaps a character, who's player lets him talk like this "One moment -
 my telephone is ringing - I will be back in two minutes!". The situation could even be
-worse, imagine this: A mushrom vendor is lamenting to a customer about her misfortune that the
+worse, imagine this: A mushroom vendor is lamenting to a customer about her misfortune that the
 new taxes of the count doesn't leave her enough money to buy her little ill daughter some
 medicine from the druid. The customer then replies: "Talking about medicine - Do you know a
 website where I can get a free virus scanner?"</p>
@@ -145,11 +145,11 @@ website where I can get a free virus scanner?"</p>
 <p>IC refers to everything that is said from one character to another. OOC is used for
 everything said by a character on the screen, but that is directed from the player of this
 character to another characters player. The question if someone wants to trade 20 apples against
-some sheep cheese whould be something IC while the sentence "I must leave, I have to watch
+some sheep cheese would be something IC while the sentence "I must leave, I have to watch
 Star-Trek now." is clearly OOC.<br />
-OOC should be avoided generaly. If it can't be avoided (you are showing a program bug to a
+OOC should be avoided generally. If it can't be avoided (you are showing a program bug to a
 programmer for instance), keep it as short as possible and do it in a place, where no other
-characters are roleplaying. Additionally mark your OOC sentences to avoid missunderstandings.
+characters are roleplaying. Additionally mark your OOC sentences to avoid misunderstandings.
 Mark them by placing the sentence in brackets or add "OOC: " in front. ( "((If I
 click here with the mouse, it crashes))" or "OOC: I must leave"). If the OOC talk
 involves only two persons it should be whispered (add a "#w" in front of the
@@ -164,7 +164,7 @@ answer" instead of "I will send it to you via email".</p>
 
 <p><a name="8"></a></p>
 
-<h2>OOC knowledge / Charakter seperation</h2>
+<h2>OOC knowledge / Character separation</h2>
 
 <p>Who is taking an active role in the game will use the boards on our website for sure. You
 will find a lot of information there. You should only use this information in game, if you
@@ -195,7 +195,7 @@ You should use this only to describe what others should realy be able to see. Th
 can't be seen. More appropriate would be a sentence like this: "Udolpho looks at
 Melmoth and shows a superior smile around his lips.".<br />
 #me-commands are important under many circumstances, to overcome technical drawbacks. On the
-screen you can't see or hear when a weapon is drawn. Therfore the opponent has no
+screen you can't see or hear when a weapon is drawn. Therefore the opponent has no
 preparation time. The sentence "Udolpho draws his weapon and points at Melmoth." would
 be useful.</p>
 
@@ -205,10 +205,10 @@ be useful.</p>
 
 <h2>Player/character level</h2>
 
-<p>Learn to seperate between these two levels. When a dwarf calls an orc a stinky beast, it
+<p>Learn to separate between these two levels. When a dwarf calls an orc a stinky beast, it
 would be a conflict between the dwarf and the orc, not between the player of the dwarf and the
 player of the orc. If the orc player changes to another of his characters, that is a dwarf too,
-both dwarfs could be close friends. This seperation also counts for the boards on the website. A
+both dwarfs could be close friends. This separation also counts for the boards on the website. A
 misunderstanding of both levels often leads to a disgusting battle between players on the
 boards.</p>
 
@@ -218,7 +218,7 @@ boards.</p>
 
 <h2>Take part in others roleplay</h2>
 
-<p>In a game like this all your companions are controled by real players and not by a computer.
+<p>In a game like this all your companions are controlled by real players and not by a computer.
 Therefore they have the same wishes and rights like you. If you want them to react on your
 characters actions, do the same for them. If everyone is only playing his own game, you can also
 play a single player computer game. So if a group of three people catches you from behind and
@@ -260,9 +260,9 @@ drink in the tavern till the lights go out. If someone is drunk, he can of cours
 around, even if the server doesn't force him to.<br />
 In another online game that I played once, there was no possibility to build houses. We piled up
 parcels to form walls and used flour to symbolize a sand coast. The result was a town with
-several dozend villagers, shops and a castle that reached over many screen widths (with towers,
+several dozen villagers, shops and a castle that reached over many screen widths (with towers,
 a throne room and many luxuries). So don't let yourself be limited.<br />
-On the other hand there are logical borders, that aren't yet technicaly realized. For
+On the other hand there are logical borders, that aren't yet technically realized. For
 example you can dig in the ground with your shovel, even if the shovel is placed in your
 backpack instead of your hand. Also you can walk around always wearing your full armor and a
 whole lot of weapons without someone noticing. It is up to you, to set yourself a limit here and
@@ -275,9 +275,9 @@ the shovel in the hand to dig.</p>
 
 <h2>Always friendly?</h2>
 
-<p>The players of Illarion are manualy selected, so the most of them are so friendly, that they
-overdo it a bit. Act as your characters nature is. Therfore the most person may have the one or
-other outburst of rage - without conflicts it would be boring. A wide spread bad habbit is, to
+<p>The players of Illarion are manually selected, so the most of them are so friendly, that they
+overdo it a bit. Act as your characters nature is. Therefore the most person may have the one or
+other outburst of rage - without conflicts it would be boring. A wide spread bad habit is, to
 give a lot of gifts to new players. This has a few drawbacks, because it takes the fun out of
 the game for the new player, even if he is happy at the beginning. For many players it is a
 motivation to achieve wealth in the game that attracts them. If they get a complete high-end
@@ -289,7 +289,7 @@ roleplay and give him impulses what to do. The good stuff you are doing to him c
 something evil...<br />
 It is extremely annoying, if characters that are supposed to be evil (by their background
 story), quit their evil business for a while to meet with the simple people for a beer in the
-tavern and give away presents to their enemies and have a nice smalltalk or watch a stage play
+tavern and give away presents to their enemies and have a nice small-talk or watch a stage play
 on the market place. The day after they will be murdering and devastating through the village
 again and will be hunted by everyone. If you want to play an evil guy, be aware from the
 beginning that you will exclude yourself from the "normal", peace loving society.</p>
@@ -328,7 +328,7 @@ not, without looking at the person that carries out this action.</p>
 made many friends and enemies in your Illarion life. They have gotten used to a specific
 behaviour of your character and they have some memories together with you. When you trade your
 character, the new owner will neither have the same behaviour or language nor know about the
-common memories with the characters old friends. Therfore he can't go on with his life
+common memories with the characters old friends. Therefore he can't go on with his life
 correctly and is irritating other players. The same applies for giving away a character for a
 short time.</p>
 
@@ -342,9 +342,9 @@ short time.</p>
 players. Therefore we have made the death in Illarion less serious but still hurting. You will
 be able to keep on playing with some losses. The only permanent death is sentenced by
 gamemasters, if they find you with a massive rule violation. Therefore players shouldn't
-make themselfs the law and enforce it on their own. So if you are taking revenge on someone and
+make themselves the law and enforce it on their own. So if you are taking revenge on someone and
 have to kill him because of the seriousness of his guilt, kill him only once. It is not possible
-to explain logicaly why someone has to die more than once for the same guilt, so only kill him a
+to explain logically why someone has to die more than once for the same guilt, so only kill him a
 second time when he has earned the death again. Also be warned that this "multi
 killing" is forbidden by the rules and you have to face the consequences if a gamemaster
 catches you.</p>
@@ -357,8 +357,8 @@ catches you.</p>
 
 <p>To avoid loosing the feeling for roleplaying now and then, keep on roleplaying even if no
 other character is present. You can moan and wipe the sweat from your head when you are chucking
-wood, even if noone is there, that can see this good show. If you don't do it, you will only
-be working mechanicaly and will get bored. You will not be able to start roleplaying fast enough
+wood, even if no-one is there, that can see this good show. If you don't do it, you will only
+be working mechanically and will get bored. You will not be able to start roleplaying fast enough
 if other players come closer.</p>
 
 <?php insert_go_to_top_link(); ?>
@@ -377,7 +377,7 @@ that enables him to kill without regret. Even a lunatic would not kill randomly.
 story, how he got mad and perhaps there are some situations that provoke an outburst of rage.
 All this must be logically from the persons background story.<br />
 People tend to think of murderers if they think of "evil", even if a murder is perhaps
-the most seldom crime. What about tricksters? Thieves? Rowdys? Schemers? Spys? Road robbers?
+the most seldom crime. What about tricksters? Thieves? Rowdys? Schemers? Spies? Road robbers?
 Blackmailers? Kidnappers? Badmouthing about the merchant concurrents? Conflicts between
 neighbours? Peasants that put vermin in the barns of other peasants? Isn't it more pleasing
 to infiltrate a guild, sell their secrets and set them against another guild, to get rid of two

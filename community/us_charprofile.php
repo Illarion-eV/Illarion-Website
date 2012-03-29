@@ -9,11 +9,11 @@
     if (!isset($_GET['id']))
 	{
         Page::setTitle( 'Character profiles' );
-		Page::setDescription( 'This page shows character profiles, but the searched character profile was not found or a other error occured.' );
+		Page::setDescription( 'This page shows character profiles, but the searched character profile was not found or a other error occurred.' );
 
 		echo '<h1>Character profile</h1>';
-		echo '<h2>An error occured</h2>';
-		echo '<p>The selected character profile was not found. Eigther the player disabled ';
+		echo '<h2>An error occurred</h2>';
+		echo '<p>The selected character profile was not found. Either the player disabled ';
 		echo 'the profile or the page was called with a invalid link.</p>';
 		exit();
 	}

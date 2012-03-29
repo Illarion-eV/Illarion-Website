@@ -13,7 +13,7 @@ Page::Init();
 <h2>Introduction</h2>
 
 <p>The purpose of this page is to give basic instructions on how to
-create graphics for Illarion should you be interesed in helping us out.
+create graphics for Illarion should you be interested in helping us out.
 Remember, Illarion is a free game and was build from scratch by unpaid
 university students. We're unable to offer any remuneration to your work
 besides credit and much appreciation. (It also makes a nice portfolio
@@ -43,7 +43,7 @@ game. All these steps will be given to you with this page.</p>
 <h2>Image sizes and orientation</h2>
 
 <p>In general, the weight in bytes of an image is unimportant. However,
-the size and width must absolutly fit the width of a tile in Illarion
+the size and width must absolutely fit the width of a tile in Illarion
 (see below image).</p>
 
 <p style="text-align: center;"><img
@@ -103,11 +103,11 @@ Autodesk Maya 2009:</p>
 	selector on the right (CTRL+A)</li>
 	<li>In the smaller menu right above the scene, select "View", then
 	"Predefined Bookmarks" and finally "Perspective" to set your camera at
-	the default perspective position. Be sure not to move, rorate or pan
+	the default perspective position. Be sure not to move, rotate or pan
 	your camera at this point. If you do by accident, simply go back into
 	"View", "Predefined Bookmarks" and "Perspective" again.</li>
 	<li>On the right, in the attributes selector, find a tab that says
-	"cameraShape1" (or the name of your chamera followed by Shape). If you
+	"cameraShape1" (or the name of your camera followed by Shape). If you
 	can not see said tabs, press CTRL+A to switch to the attribute editor.</li>
 	<li>In the cameraShape tab, scroll down the options until you find
 	"Orthographic views". Press the little triangle next to it to reveal
@@ -121,16 +121,16 @@ Autodesk Maya 2009:</p>
 
 <p>If you need to move the camera again, instead of unlocking the
 attribute and having to start all over again, simply right-click on the
-little camera icon right under the "View" menu und choose "perspective"
-or any other camera of your choice beside the one you've just setup.</p>
+little camera icon right under the "View" menu and choose "perspective"
+or any other camera of your choice beside the one you've just set up.</p>
 
 <p>Before you render however, or to preview what your object looks like
-in the "Illarion orthographic cam" (that you've just setup), simply
-right-click on the camera icon again and choose the camera you've setup
+in the "Illarion orthographic cam" (that you've just set up), simply
+right-click on the camera icon again and choose the camera you've set up
 again. It must be the selected one before you render.</p>
 
 <p>Ensure to render your scene with the resolution of 320x240. At this
-resolution one default sqare on the Maya grid is the equivalent of an
+resolution one default square on the Maya grid is the equivalent of an
 Illarion tile.</p>
 
 <p>It is suggested that you use Maya Software with Production Quality to

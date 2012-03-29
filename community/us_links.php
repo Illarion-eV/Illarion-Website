@@ -29,9 +29,9 @@ Page::Init();
 	<a rel="external" href="http://home.pages.at/liza/GR/index.htm">Link to the homepage of the Order of the Grey Rose</a>
 	<br /><br />
 	We, the knights of the Grey Rose, think highly of honour and loyalty. We live with a
-	strict code wich is the base for our guild and our behaviour. We strive for peace and
+	strict code which is the base for our guild and our behaviour. We strive for peace and
 	order between all beings. We select our squires as carefully as we select our
-	knights, wich are choosen from among our squires. In our stronghold (HP) you can
+	knights, which are chosen from among our squires. In our stronghold (HP) you can
 	find out more about us and our goals. Every visitor who wants to look around in peace
 	is warmly welcome.
 </p>
@@ -46,7 +46,7 @@ Page::Init();
 	Order are: upbuilding and keeping law and order; keeping the balance in all things,
 	neutrality and harmony; keeping and enhancing knowledge, history and scholarship.
 	While the "Scribes" of the Order act as scholars, philosophers, tacticians, bards or
-	judges, the "Templars" of the order are fighters or fighter mages, lawkeepers,
+	judges, the "Templars" of the order are fighters or fighter mages, law-keepers,
 	soldiers, judges or paladins. Templars and Scribes follow the Grey Codex. Accepted
 	as members are only those who have proven as honorable and worthy.
 </p>
@@ -64,8 +64,8 @@ Page::Init();
 	<a rel="external" href="http://www.moonsilver.de">Link to the homepage of Moonsilver</a>
 	<br /><br />
 	This is a site with the background story of Illarion. Here you will find the
-	description of the gods and races, the history of the gods, information concering the
-	calender, descriptions of professions and much more. Take your time and have a look
+	description of the gods and races, the history of the gods, information concerning the
+	calendar, descriptions of professions and much more. Take your time and have a look
 	at the content, as it is helpful for the game.
 </p>
 

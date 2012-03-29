@@ -11,7 +11,7 @@
 <h2>Hints</h2>
 
 <p>On this page is a Java Applet that establishes a connection to the Quakenet IRC
-Servernetwork and enters the Illarion Chatroom. In this chat the
+Server network and enters the Illarion Chatroom. In this chat the
 <a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> as well as
 the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 
