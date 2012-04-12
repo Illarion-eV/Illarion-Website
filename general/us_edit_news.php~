@@ -124,7 +124,7 @@ regard to lingual content.</p>
 <p>Lists can be made thus: <strong>&lt;ul&gt;&lt;li &gt;list item 1&lt;/li&gt;&lt;li &gt;list
 item 2&lt;/li&gt;&lt;/ul&gt;</strong></p>
 
-<p>The simplest thing todo is just to preview your posts before submitting
+<p>The simplest thing to do is just to preview your posts before submitting
 them.</p>
 
 <?php insert_go_to_top_link(); ?>
