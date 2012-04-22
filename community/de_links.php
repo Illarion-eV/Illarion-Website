@@ -27,7 +27,7 @@
 
 <img class="float_left" src="<?php echo Page::getURL(); ?>/community/pic_greyrose.de.jpg" alt="Graue Rose" />
 <p>
-	<a rel="external" href="http://home.pages.at/liza/GR/index.htm">Link zur Homepage des Ordens der Grauen Rose</a>
+	<a rel="external" href="http://www.graurose.de">Link zur Homepage des Ordens der Grauen Rose</a>
 	<br /><br />
 	Die Graue Rose ist ein Ritterzirkel, der mit dem Orden des Grauen Lichts verbündet
 	ist. Unsere Geschichte in Illarion reicht weit zurück. Wir Ritter halten viel von
