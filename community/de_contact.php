@@ -46,18 +46,18 @@ gegebenenfalls auf!</p>
 <a href="<?php echo Page::getURL(); ?>/general/de_faq_concept.php">Konzept-FAQ</a>,
 <a href="<?php echo Page::getURL(); ?>/general/de_faq_technic.php">Technik-FAQ</a> oder in den
 verschiedenen Bereichen des
-<a href= "<?php echo Page::getURL(); ?>/community/forums">Forum</a> beantwortet
+<a href= "<?php echo Page::getURL(); ?>/community/forums">Forums</a> beantwortet
 wurde oder dort gestellt werden kann. Dies spart uns wertvolle Zeit für
-der Weiterentwicklung von Illarion.</p>
+die Weiterentwicklung von Illarion.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2><a name="2"></a>Community-Manager</h2>
 
 <?php echo Page::cap('E'); ?>
-<p>inige Spieler werden als "Community Manager" (CM) bekannt.
+<p>inige Spieler sind "Community-Manager" (CM).
 Zu den Aufgaben dieser Spieler gehört es neuen Spielern zu helfen und Probleme oder Konflikte zwischen den Spielern zu lösen.
-Sie sollten die ersten sein an die man sich bei nicht technischen Problemen wenden kann.</p>
+Sie sollten die ersten sein, an die man sich bei nicht technischen Problemen wendet.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -69,7 +69,7 @@ dafür zuständig für Ordnung zu sorgen und können selbst Strafen zur Durchset
 verhängen, bzw. diese durch den Administrator ausführen lassen. Das Belügen/Täuschen eines
 Gamemasters in Bezug auf Regelverstöße und Programmfehler ist verboten. Ist ein Gamemaster
 offensichtlich gerade mit Arbeit beschäftigt oder in ein wichtiges, spielrelevantes Gespräch
-vertieft, soll er nur in dringenden Fällen gestört werden. Die Namen weiterer Charaktere eines
+vertieft, sollte er nur in dringenden Fällen gestört werden. Die Namen weiterer Charaktere eines
 Gamemasters dürfen nicht gegen seinen Willen weitergegeben
 werden.</p>
 
@@ -111,12 +111,12 @@ werden.</p>
 
 <h3>Community-Manager</h3>
 
-<p>Dies Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
+<p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-	<li>Achae Eanstray - Englischsprachige Community Managerin</li>
-	<li>Athian - Englischsprachiger Community Manager</li>
-	<li>Djironnyma - Deutschsprachiger Community Manager</li>
+	<li>Achae Eanstray - Englischsprachige Community-Managerin</li>
+	<li>Athian - Englischsprachiger Community-Manager</li>
+	<li>Djironnyma - Deutschsprachiger Community-Manager</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
