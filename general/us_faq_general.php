@@ -83,7 +83,7 @@
 		The client is 35MB. With a slow connection, this might take a while to download. From time to time, the installation stalls for a while but please be patient, the download will continue automatically. Use the time and read the forums and other FAQs
 	<br /><br />
 	<li class="question"><a name="4"><b>Why isn't the game starting?</b></a></li>
-		If the game is installed and launched correctly but fails to start please check the <a href="http://illarion.org/community/forums/viewforum.php?f=3&sid=242eca57695d6d0ac04e9160ef8cf46b" >Support Forums</a> for any known issues. Also make sure you launch the .jnlp file with Java Webstart.
+		If the game is installed and launched correctly but fails to start please check the <a href="http://illarion.org/community/forums/viewforum.php?f=3" >Support Forums</a> for any known issues. Also make sure you launch the .jnlp file with Java Webstart.
 	<br /><br />
 	<li class="question"><a name="5"><b>How do I log into the game?</b></a></li>
 	Once you have <a href="http://illarion.org/community/account/us_charlist.php" >created your character</a> you need to log onto the client with the relevant character's name that you want to play (names are case sensitive) and your account password
