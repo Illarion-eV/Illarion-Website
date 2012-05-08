@@ -24,7 +24,7 @@ may be installed on the user's computer. Client, easyNPC Editor, easyQuest Edito
 are developed with Java.</p>
 
 <ul>
-	<li><a href="https://github.com/mkaring/Illarion-Java">Nitrams development branch</a> (main repository)</li>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Java">Official development branch</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -34,5 +34,5 @@ are developed with Java.</p>
 actual hardware. All clients connect to the server program, which essentially controls the game.</p>
 
 <ul>
-	<li><a href="https://github.com/vilarion/Illarion-Server">Vilarions development branch</a> (main repository)</li>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Server">Official development branch</a></li>
 </ul>
