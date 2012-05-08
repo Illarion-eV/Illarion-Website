@@ -21,7 +21,7 @@ if ($if_last_mod >= $last_mod && $if_not_match == $etag) {
 	exit;
 }
 header("HTTP/1.0 200 OK");
-header('Content-type: text/css; charset: UTF-8');
+header('Content-type: text/css; charset=UTF-8');
 
 $content = '';
 $size = 0;
