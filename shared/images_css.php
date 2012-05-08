@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	header('HTTP/1.0 200 OK');
-   header('Content-type: text/css; charset: UTF-8');
+   header('Content-type: text/css; charset=UTF-8');
 
    $lang = ( isset( $_GET['lang'] ) && $_GET['lang'] == 'us' ? 'us' : 'de' );
 

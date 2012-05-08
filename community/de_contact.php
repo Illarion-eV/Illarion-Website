@@ -1,32 +1,32 @@
 <?php
    /*
-    * Contact Page of Illarion
-    *
-    * @author Martin Karing <nitram@illarion.org>
-    * @copyright 2006, Illarion e.V.
-    * @version 1.0 GERMAN
-    *
-    */
-	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
-	include 'inc.contact.php';
-	
-	Page::setTitle( 'Kontakt' );
-	Page::setDescription( 'Hier stehen alle Möglichkeiten mit dem Illarion Teamin Verbindung zu treten.' );
-	Page::setKeywords( array( 'Kontakt', 'E-Mail', 'email', 'Email' ) );
-	Page::Init();
-	Page::setXHTML();
+* Contact Page of Illarion
+*
+* @author Martin Karing <nitram@illarion.org>
+* @copyright 2006, Illarion e.V.
+* @version 1.0 GERMAN
+*
+*/
+include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+include 'inc.contact.php';
 
-	function MainForm() {
+Page::setTitle( 'Kontakt' );
+Page::setDescription( 'Hier stehen alle Möglichkeiten mit dem Illarion Teamin Verbindung zu treten.' );
+Page::setKeywords( array( 'Kontakt', 'E-Mail', 'email', 'Email' ) );
+Page::Init();
+Page::setXHTML();
+
+function MainForm() {
 ?>
 <h1>Kontakt zu Illarion</h1>
 
 <h2>Inhalt</h2>
 <ul>
-	<li><a class="hidden" href="#1">Allgemeine Informationen</a></li>
-	<li><a class="hidden" href="#2">Community-Manager</a></li>
-	<li><a class="hidden" href="#3">Gamemaster</a></li>
-	<li><a class="hidden" href="#4">Allgemeine Kontakte</a></li>
-	<li><a class="hidden" href="#5">Persönliche Kontakte</a></li>
+<li><a class="hidden" href="#1">Allgemeine Informationen</a></li>
+<li><a class="hidden" href="#2">Community-Manager</a></li>
+<li><a class="hidden" href="#3">Gamemaster</a></li>
+<li><a class="hidden" href="#4">Allgemeine Kontakte</a></li>
+<li><a class="hidden" href="#5">Persönliche Kontakte</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -78,31 +78,31 @@ werden.</p>
 <h2><a name="4"></a>Allgemeine Kontakte</h2>
 
 <ul>
-	<li><a href="?contact=1">Accountanfragen</a> - alle Fragen bezüglich
-	deines Accounts, können hier gestellt werden</li>
+<li><a href="?contact=1">Accountanfragen</a> - alle Fragen bezüglich
+deines Accounts, können hier gestellt werden</li>
 
-	<li><a href="?contact=2">Kontakt zum Webmaster</a> - Fragen bezüglich
-	der Webseite, können hier gestellt werden</li>
+<li><a href="?contact=2">Kontakt zum Webmaster</a> - Fragen bezüglich
+der Webseite, können hier gestellt werden</li>
 
-	<li><a href="?contact=3">Spieler melden</a> - Spieler, die die Regeln
-	von Illarion verletzt haben, können hier gemeldet werden</li>
+<li><a href="?contact=3">Spieler melden</a> - Spieler, die die Regeln
+von Illarion verletzt haben, können hier gemeldet werden</li>
 
-	<li><a href="?contact=4">Gamemaster melden</a> - hier kann man, so es
-	nötig ist, sich über das Verhalten und Vorgehen eines
-	Gamemasters beschweren</li>
+<li><a href="?contact=4">Gamemaster melden</a> - hier kann man, so es
+nötig ist, sich über das Verhalten und Vorgehen eines
+Gamemasters beschweren</li>
 
-	<li><a href="?contact=5">RPG-Anfragen</a> - sollte die Unterstützung
-	eines Gamemasters für ein Quest benötigt werden, kann hier
-	darum gebeten werden. Allerdings ist es besser sich direkt an einen
-	Gamemaster zu wenden. Siehe <a class="hidden" href="#3">Persönliche
-	Kontakte</a></li>
+<li><a href="?contact=5">RPG-Anfragen</a> - sollte die Unterstützung
+eines Gamemasters für ein Quest benötigt werden, kann hier
+darum gebeten werden. Allerdings ist es besser sich direkt an einen
+Gamemaster zu wenden. Siehe <a class="hidden" href="#3">Persönliche
+Kontakte</a></li>
 
-	<li><a href="?contact=6">Charakteranfragen</a> - alle Anfragen
-	bezüglich der Charaktere sind hier richtig.</li>
+<li><a href="?contact=6">Charakteranfragen</a> - alle Anfragen
+bezüglich der Charaktere sind hier richtig.</li>
 
-	<li><a href="?contact=7">Fehlermeldungen</a> - Fehler im Spiel
-	können hier gemeldet werden. Oder im <a href="../mantis/">
-	Mantis-Bugtracker</a>.</li>
+<li><a href="?contact=7">Fehlermeldungen</a> - Fehler im Spiel
+können hier gemeldet werden. Oder im <a href="../mantis/">
+Mantis-Bugtracker</a>.</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -114,9 +114,9 @@ werden.</p>
 <p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-	<li>Achae Eanstray - Englischsprachige Community-Managerin</li>
-	<li>Athian - Englischsprachiger Community-Manager</li>
-	<li>Djironnyma - Deutschsprachiger Community-Manager</li>
+<li>Achae Eanstray - Englischsprachige Community-Managerin</li>
+<li>Athian - Englischsprachiger Community-Manager</li>
+<li>Djironnyma - Deutschsprachiger Community-Manager</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -127,10 +127,10 @@ werden.</p>
 und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
-	<li><a href="?contact=14">Arien Edhel</a></li>
-	<li><a href="?contact=11">Estralis Seborian</a></li>
-	<li><a href="?contact=12">Zak</a></li>
-	<li><a href="?contact=40">Zot</a></li>
+<li><a href="?contact=14">Arien Edhel</a></li>
+<li><a href="?contact=11">Estralis Seborian</a></li>
+<li><a href="?contact=12">Zak</a></li>
+<li><a href="?contact=40">Zot</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -140,16 +140,16 @@ und um alle die es nicht so mit Regeln haben.</p>
 <p>Das sind die Entwickler von Illarion und ihre Aufgaben.</p>
 
 <ul>
-	<li><a href="?contact=16">Alatar</a> - Webmaster, Serveradministration
-	</li>
-	<li><a href="?contact=33">Ardian</a> - Skripte</li>
-	<li><a href="?contact=21">Lennier</a> - Karte</li>
-	<li><a href="?contact=22">martin</a> - Skripte, Server, Grafik</li>
-	<li><a href="?contact=23">Nitram</a> - Client, Skripte, Homepage</li>
-	<li><a href="?contact=23">Kadiya</a> - Skripte, Homepage</li>
-	<li><a href="?contact=31">pharse</a> - Skripte</li>
-	<li><a href="?contact=25">Vilarion</a> - Skripte, Server, Serveradministration</li>
-	<li><a href="?contact=40">Zot</a> - Karte</li>
+<li><a href="?contact=16">Alatar</a> - Webmaster, Serveradministration
+</li>
+<li><a href="?contact=33">Ardian</a> - Skripte</li>
+<li><a href="?contact=21">Lennier</a> - Karte</li>
+<li><a href="?contact=22">martin</a> - Skripte, Server, Grafik</li>
+<li><a href="?contact=23">Nitram</a> - Client, Skripte, Homepage</li>
+<li><a href="?contact=23">Kadiya</a> - Skripte, Homepage</li>
+<li><a href="?contact=31">pharse</a> - Skripte</li>
+<li><a href="?contact=25">Vilarion</a> - Skripte, Server, Serveradministration</li>
+<li><a href="?contact=40">Zot</a> - Karte</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -157,9 +157,9 @@ und um alle die es nicht so mit Regeln haben.</p>
 <h3>Vereinsvorstand Illarion e.V.</h3>
 
 <ul>
-	<li><a href="?contact=25">Vilarion</a> - Vorsitzender</li>
-	<li><a href="?contact=28">Aragon</a> - Kassenwart</li>
-	<li><a href="?contact=21">Lennier</a> - Schriftführer</li>
+<li><a href="?contact=25">Vilarion</a> - Vorsitzender</li>
+<li><a href="?contact=28">Aragon</a> - Kassenwart</li>
+<li><a href="?contact=21">Lennier</a> - Schriftführer</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -178,7 +178,7 @@ Registernummer: VR 30767
 <?php Page::insert_go_to_top_link(); ?>
 <?php
    }
-	$contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GET['contact'] : 0);
+$contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GET['contact'] : 0);
    switch($contact) {
       case 1: // Accountanfragen
          define(_CONTACT_NAME,"Accountanfragen",false);
@@ -274,7 +274,7 @@ Registernummer: VR 30767
          "Charakter verwaltet, Rassenbewerbungen bearbeitet und Neulingen ".
          "hilft.",false);
       break;
-	  case 12: //Zak
+case 12: //Zak
          define(_CONTACT_NAME,"Zak",false);
          define(_CONTACT_MAIL,"zak@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der ".
