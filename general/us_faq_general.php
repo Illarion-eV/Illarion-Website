@@ -49,9 +49,7 @@ Page::Init();
 	<li><a class="hidden" href="#21">How can I contribute to Illarion?</a></li>
 </ul>
 
-<?php 
-insert_go_to_top_link(); 
-?>
+<?php insert_go_to_top_link(); ?>
 <BR />
 
 
