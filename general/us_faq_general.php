@@ -49,7 +49,9 @@ Page::Init();
 	<li><a class="hidden" href="#21">How can I contribute to Illarion?</a></li>
 </ul>
 
-<?php insert_go_to_top_link(); ?>
+<?php 
+insert_go_to_top_link(); 
+?>
 <BR />
 
 
@@ -67,7 +69,7 @@ Page::Init();
 		<b>CPU:</b> <br />500 MHz and better<br /><br />
 		A Java 1.5 runtime environment or higher (preferably 1.6 as 1.7 is not officially supported yet)<br /><br />
 
-		Windows Vista does not support the free graphics standard openGL by default. Therefore Illarion will not run with the graphics drivers included with Vista. With a better graphics driver from your graphics card manufacturer including openGL support, everything should work.<br /><br />
+		Windows Vista does not support the free graphics standard OpenGL by default. Therefore Illarion will not run with the graphics drivers included with Vista. With a better graphics driver from your graphics card manufacturer including OpenGL support, everything should work.<br /><br />
 
 	<li class="question"><a name="2"><b>Where can I download the game?</b></a></li>
 		On the <a href="http://grumpy-old-dudes.net/illarion/us_java_download.php">Download page of the website</a>. It will then download and install Illarion. You will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.
