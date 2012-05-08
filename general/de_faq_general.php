@@ -69,16 +69,16 @@ Page::Init();
        Windows Vista unterstützt den freien Grafikstandard OpenGL nicht. Daher läuft Illarion nicht mit den bei Vista mitgelieferten Grafiktreibern. Mit einem aktuellen Grafiktreiber inklusive OpenGL Unterstützung vom Hersteller der Grafikkarte sollten keine Probleme auftauchen.<br /><br />
 
        <li class="question"><a name="2"><b>Wo kann ich das Spiel herunterladen?</b></a></li>
-       Auf der <a href="http://grumpy-old-dudes.net/illarion/de_java_download.php">Download-Seite der Homepage</a>. Hier kannst du den Spielclient herunterladen und installieren. Du wirst dazu aufgefordert, ein Verzeichnis zu wählen, in dem Charakterdaten gespeichert werden. Es ist ratsam, einen Ordner zu wählen, den du auch wiederfindest.
+       Auf der <a href="http://illarion.org/illarion/de_java_download.php">Download-Seite der Homepage</a>. Hier kannst du den Spielclient herunterladen und installieren. Du wirst dazu aufgefordert, ein Verzeichnis zu wählen, in dem Charakterdaten gespeichert werden. Es ist ratsam, einen Ordner zu wählen, den du auch wiederfindest.
        <br /><br />
        <li class="question"><a name="3"><b>Der Download dauert viel zu lange!</b></a></li>
        Der Spielclient umfasst 35 MB. Mit einer langsamen Internetverbindung kann es eine Weile dauern, diese Datenmenge herunterzuladen. Mitunter pausiert der Download auch, in diesem Fall habe einfach Geduld, der Download wird automatisch fortgesetzt. Nutze die Zeit um dir die Informationen im Forum oder auf der Homepage durchzulesen.
        <br /><br />
        <li class="question"><a name="4"><b>Das Spiel startet nicht!</b></a></li>
-       Wenn das Spiel installiert ist und korrekt aufgerufen wurde, dennoch aber nicht startet, schau doch bitte auf dem <a href="http://grumpy-old-dudes.net/community/forums/viewforum.php?f=3" >Support-Forum</a> nach, ob es bereits eine Lösung für dein Problem gibt. Stelle in jedem Fall sicher, dass du die .jnlp Datei mit Java Webstart startest.
+       Wenn das Spiel installiert ist und korrekt aufgerufen wurde, dennoch aber nicht startet, schau doch bitte auf dem <a href="http://illarion.org/community/forums/viewforum.php?f=3" >Support-Forum</a> nach, ob es bereits eine Lösung für dein Problem gibt. Stelle in jedem Fall sicher, dass du die .jnlp Datei mit Java Webstart startest.
        <br /><br />
        <li class="question"><a name="5"><b>Wie logge ich mich ein?</b></a></li>
-       Nachdem du <a href="http://grumpy-old-dudes.net/community/account/de_charlist.php" >einen Charakter erstellt hast</a>, logge dich mit dem Client in das Spiel ein. Gib hierzu den Charakternamen (Groß- und Kleinschreibung beachten) und dein Accountpasswort ein.
+       Nachdem du <a href="http://illarion.org/community/account/de_charlist.php" >einen Charakter erstellt hast</a>, logge dich mit dem Client in das Spiel ein. Gib hierzu den Charakternamen (Groß- und Kleinschreibung beachten) und dein Accountpasswort ein.
     </ul>
 
 <?php insert_go_to_top_link(); ?>
@@ -129,7 +129,7 @@ Page::Init();
        Eine Person kann man nicht einfach auf ein paar Zahlen reduzieren. Stell dir vor, du sitzt auf einer Bank und lauschst einem Gespräch. Einer sagt: "Ich habe meine Lauffertigkeit gestern auf 40 gesteigert und bin in Level 43 aufgestiegen.". Diese Person würdest du wohl auslachen. Für Illarion gilt das selbe; man kann nur grob anhand eines Balkens in der Fertigkeitenliste abschätzen, wie gut man ist, insbesondere im Vergleich zu anderen. Sicherlich wäre es einfacher, genaue Werte anzugeben, aber dieses Spiel wurde einzig und alleine für das Rollenspiel entwickelt.
        <br /><br />
        <li class="question"><a name="17"><b>Wie kann ich anderen Spielern im Spiel eine Botschaft zukommen lassen?</b></a></li>
-       Gar nicht. Wie sollte sowas in einer mittelalterlichen Welt gehen? Es gab keine Lautsprecheranlagen, Funkgeräte oder Handys. Es war schlichtweg nicht möglich. Mächtige Magier können vielleicht eines Tages die Kraft der Telepathie nutzen, aber sowas ist derzeit noch nicht geplant. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="http://grumpy-old-dudes.net/community/forums/index.php" >Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.
+       Gar nicht. Wie sollte sowas in einer mittelalterlichen Welt gehen? Es gab keine Lautsprecheranlagen, Funkgeräte oder Handys. Es war schlichtweg nicht möglich. Mächtige Magier können vielleicht eines Tages die Kraft der Telepathie nutzen, aber sowas ist derzeit noch nicht geplant. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="http://illarion.org/community/forums/index.php" >Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.
        <br /><br />
        <li class="question"><a name="18"><b>Was ist "Power Gaming" und ist es erlaubt?</b></a></li>
        "Power Gaming" (PG) beschreibt Aktionen von Spielcharakteren, die keinem realistischem Verhaltensmuster folgen. Ein Beispiel hierfür wäre es, seinen Charakter vor anderen zu verstecken, nur um sich auf eine einzelne Tätigkeit zu konzentrieren (Handwerk oder meist das Trainieren von Kampffertigkeiten) und um diese Fertigkeit so schnell es geht zu steigern.<br />
@@ -149,7 +149,7 @@ Page::Init();
 
 <ul>
        <li class="question"><a name="20"><b>Ich habe einen Fehler gefunden oder habe einen Vorschlag. Wie melde ich sowas?</b></a></li>
-       Am besten benutzt du zum Melden von Fehlern oder Vorschlägen <a href="http://grumpy-old-dudes.net/mantis/index.php" >Mantis</a>. Dies ist das Fehlerverwaltungssystem der Entwickler. Fehler und Vorschläge werden am Forum gerne übersehen, daher verwende nicht das Forum für solche Zwecke.
+       Am besten benutzt du zum Melden von Fehlern oder Vorschlägen <a href="http://illarion.org/mantis/index.php" >Mantis</a>. Dies ist das Fehlerverwaltungssystem der Entwickler. Fehler und Vorschläge werden am Forum gerne übersehen, daher verwende nicht das Forum für solche Zwecke.
        <br /><br />
        <li class="question"><a name="21"><b>Wie kann ich Illarion helfen?</b></a></li>
        Illarion kann man auf vielerlei Arten unterstützen. Von finanzieller Unterstützung über Hilfe bei der Entwicklung des Spiels oder einfach nur Werbung auf anderen Seiten machen ist vieles möglich.
