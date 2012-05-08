@@ -26,7 +26,7 @@ Page::Init();
 
 <img class="float_left" src="<?php echo Page::getURL(); ?>/community/pic_greyrose.de.jpg" alt="Grey Rose" />
 <p>
-	<a rel="external" href="http://home.pages.at/liza/GR/index.htm">Link to the homepage of the Order of the Grey Rose</a>
+	<a rel="external" href="http://www.graurose.de">Link to the homepage of the Order of the Grey Rose (German Only)</a>
 	<br /><br />
 	We, the knights of the Grey Rose, think highly of honour and loyalty. We live with a
 	strict code which is the base for our guild and our behaviour. We strive for peace and
@@ -40,7 +40,7 @@ Page::Init();
 
 <img class="float_left" src="<?php echo Page::getURL(); ?>/community/pic_greylight-order.de.vu.jpg" alt="Grey Light" />
 <p>
-	<a rel="external" href="http://www.greylight.de">Link to the homepage of the Order of the Grey Light</a>
+	<a rel="external" href="http://greylight.foren-city.de/forum,19,-das-graue-licht-the-grey-order.html">Link to the homepage of the Order of the Grey Light</a>
 	<br /><br />
 	The oldest organisation of illarion is the Order of the Grey Light. Goals of the
 	Order are: upbuilding and keeping law and order; keeping the balance in all things,
@@ -66,7 +66,7 @@ Page::Init();
 	This is a site with the background story of Illarion. Here you will find the
 	description of the gods and races, the history of the gods, information concerning the
 	calendar, descriptions of professions and much more. Take your time and have a look
-	at the content, as it is helpful for the game.
+	at the content as it is helpful for the game.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
