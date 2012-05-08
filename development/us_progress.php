@@ -13,8 +13,8 @@
 
 <p>
     Legend:
-    <span style="font-weight:bold; color:#8B0000">Planned</span>,
-    <span style="font-weight:bold; color:#FF4500">Work-In-Progress</span>,
+    <span style="font-weight:bold; color:#000000">Planned</span>,
+    <span style="font-weight:bold; color:#8B0000">Work-In-Progress</span>,
     <span style="font-weight:bold; color:#285917">Testing</span>,
     <span style="font-weight:bold; color:#152B85">Complete</span>
 </p>
@@ -38,8 +38,8 @@
     <li style="font-weight:bold; color:#285917">Session management</li>
     <li style="font-weight:bold; color:#285917">Slick-Graphicengine binding</li>
     <li style="font-weight:bold; color:#285917">Szene graph management</li>
-    <li style="font-weight:bold; color:#FF4500">NiftyGUI binding</li>
-    <li style="font-weight:bold; color:#FF4500">User input management (mouse, keyboard)</li>
+    <li style="font-weight:bold; color:#8B0000">NiftyGUI binding</li>
+    <li style="font-weight:bold; color:#8B0000">User input management (mouse, keyboard)</li>
 </ul>
 
 <h2>Content</h2>
@@ -47,10 +47,10 @@
 <h3>Systems</h3>
 <ul>
     <li><span style="font-weight:bold; color:#285917">Crafting</span></li>
-    <li><span style="font-weight:bold; color:#FF4500">Fighting</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
-    <li><span style="font-weight:bold; color:#FF4500">Alchemy</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5791">Jupiter</a></li>
-    <li><span style="font-weight:bold; color:#FF4500">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span style="font-weight:bold; color:#FF4500">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Fighting</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Alchemy</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5791">Jupiter</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
 </ul>
 
 <h3>Map</h3>
@@ -66,16 +66,16 @@
     <li><span style="font-weight:bold; color:#285917">Monsters</span></li>
     <li><span style="font-weight:bold; color:#285917">Guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
     <li><span style="font-weight:bold; color:#285917">Mules</span></li>
-    <li><span style="font-weight:bold; color:#8B0000">Traders</span></li>
+    <li><span style="font-weight:bold; color:#000000">Traders</span></li>
 </ul>
 
 <h3>Other</h3>
 <ul>
     <li><span style="font-weight:bold; color:#152B85">Treasure Maps</span></li>
-    <li><span style="font-weight:bold; color:#FF4500">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
-    <li><span style="font-weight:bold; color:#FF4500">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
-    <li><span style="font-weight:bold; color:#FF4500">Quests</span></li>
-    <li><span style="font-weight:bold; color:#FF4500">Tutorial</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
+    <li><span style="font-weight:bold; color:#8B0000">Quests</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
 </ul>
 
 <h2>Graphics</h2>
@@ -84,7 +84,7 @@
 <ul>
     <li><span style="font-weight:bold; color:#285917">Avatars</span></li>
     <li><span style="font-weight:bold; color:#285917">Paperdolling</span></li>
-    <li><span style="font-weight:bold; color:#FF4500">Monsters</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">Monsters</span></li>
 </ul>
 
 <h3>Static</h3>
@@ -99,5 +99,5 @@
 
 <ul>
     <li><span style="font-weight:bold; color:#152B85">Character Generation</span></li>
-    <li><span style="font-weight:bold; color:#FF4500">GM Tool</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">GM Tool</span></li>
 </ul>
