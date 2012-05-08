@@ -70,16 +70,16 @@ Page::Init();
 		Windows Vista does not support the free graphics standard OpenGL by default. Therefore Illarion will not run with the graphics drivers included with Vista. With a better graphics driver from your graphics card manufacturer including OpenGL support, everything should work.<br /><br />
 
 	<li class="question"><a name="2"><b>Where can I download the game?</b></a></li>
-		On the <a href="http://grumpy-old-dudes.net/illarion/us_java_download.php">Download page of the website</a>. It will then download and install Illarion. You will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.
+		On the <a href="http://illarion.org/illarion/us_java_download.php">Download page of the website</a>. It will then download and install Illarion. You will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.
 	<br /><br />
 	<li class="question"><a name="3"><b>Why does downloading take so long?</b></a></li>
 		The client is 35MB. With a slow connection, this might take a while to download. From time to time, the installation stalls for a while but please be patient, the download will continue automatically. Use the time and read the forums and other FAQs
 	<br /><br />
 	<li class="question"><a name="4"><b>Why isn't the game starting?</b></a></li>
-		If the game is installed and launched correctly but fails to start please check the <a href="http://grumpy-old-dudes.net/community/forums/viewforum.php?f=3" >Support Forums</a> for any known issues. Also make sure you launch the .jnlp file with Java Webstart.
+		If the game is installed and launched correctly but fails to start please check the <a href="http://illarion.org/community/forums/viewforum.php?f=3" >Support Forums</a> for any known issues. Also make sure you launch the .jnlp file with Java Webstart.
 	<br /><br />
 	<li class="question"><a name="5"><b>How do I log into the game?</b></a></li>
-	Once you have <a href="http://grumpy-old-dudes.net/community/account/us_charlist.php" >created your character</a> you need to log onto the client with the relevant character's name that you want to play (names are case sensitive) and your account password
+	Once you have <a href="http://illarion.org/community/account/us_charlist.php" >created your character</a> you need to log onto the client with the relevant character's name that you want to play (names are case sensitive) and your account password
 </ul>
 
 <?php insert_go_to_top_link(); ?>
@@ -129,7 +129,7 @@ Page::Init();
 		A person cannot be reduced to a numerical value. Just imagine, you sit on a bench somewhere and overhear a conversation. A person says "I increased my running skill to level 40 yesterday, and levelled up to level 43." I am sure you would laugh pretty hard at that person. Well, the same holds in Illarion. You can see rough values in the form of a bar graph in the skill list (and you can always compare yourself roughly to other people). It would be simpler to have a precise skill system, but this game was created in the spirit of role playing.
 	<br /><br />
 	<li class="question"><a name="17"><b>How do I send global chat messages?</b></a></li>
-		You can't. How would you do that in medieval times anyway? There were no P.A. systems, radios, or cell phones. Such things were impossible. We might grant powerful mages a special ability to communicate by telepathy, but nothing is planned yet. If you need to spread a message, you can always hire another player as a messenger or use the <a href="http://grumpy-old-dudes.net/community/forums/index.php" >Forums</a> to leave messages on the town walls.
+		You can't. How would you do that in medieval times anyway? There were no P.A. systems, radios, or cell phones. Such things were impossible. We might grant powerful mages a special ability to communicate by telepathy, but nothing is planned yet. If you need to spread a message, you can always hire another player as a messenger or use the <a href="http://illarion.org/community/forums/index.php" >Forums</a> to leave messages on the town walls.
 	<br /><br />
 	<li class="question"><a name="18"><b>What is "Power Gaming" and is it allowed?</b></a></li>
 		Power Gaming (PGing) is a term used to describe a characters actions in the game that don't necessarily follow a realistic pattern of behaviour. An example of this would be to hide your character away from other players so that you can focus on a single task (such as crafting or training a particular combat skill) in order to master it faster than you would do otherwise.<br />
@@ -147,7 +147,7 @@ Page::Init();
 
 <ul>
 	<li class="question"><a name="20"><b>I found a bug or have a request. How do I report it?</b></a></li>
-		The best way to report a bug or request features for the game or website is to use <a href="http://grumpy-old-dudes.net/mantis/index.php" >Mantis</a> which is the Bug Reporting system used by the developers. Do not post bugs and feature requests in the forum as there is a chance they may not be seen.
+		The best way to report a bug or request features for the game or website is to use <a href="http://illarion.org/mantis/index.php" >Mantis</a> which is the Bug Reporting system used by the developers. Do not post bugs and feature requests in the forum as there is a chance they may not be seen.
 	<br /><br />
 	<li class="question"><a name="21"><b>How can I contribute to Illarion?</b></a></li>
 		There are many ways in which you can contribute to Illarion. You could provide financial support, assist with the development of the game or help promote the game on external sites.
