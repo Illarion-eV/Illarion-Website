@@ -1,6 +1,6 @@
 <?php
 include ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
-Page::setTitle( 'Rules' );
+Page::setTitle( 'FAQ' );
 Page::setDescription( 'Frequently asked questions and answers relevant to the game of Illarion.' );
 Page::setKeywords( array( 'FAQ, Questions, General' ) );
 Page::Init();
