@@ -4,7 +4,7 @@
 
 	if (!IllaUser::auth('news'))
 	{
-		Messages::add( 'Access denieded', 'error');
+		Messages::add( 'Access denied', 'error');
 		include_once( "us_news.php" );
 		exit();
 	}
