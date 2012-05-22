@@ -14,7 +14,6 @@
 	Page::setDescription( 'Here you find all informations needed to get in contact with the Illarion staff.' );
 	Page::setKeywords( array( 'Contact', 'E-Mail', 'email', 'Email' ) );
 	Page::Init();
-	Page::setXHTML();
 
    function MainForm() {
 ?>
@@ -111,6 +110,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <li>Achae Eanstray - English speaking Community Manager</li>
 <li>Athian - English speaking Community Manager</li>
 <li>Djironnyma - German speaking Community Manager</li>
+<li>Skamato - German speaking Community Manager</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -123,6 +123,7 @@ and of players who don't care for the rules.</p>
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a></li>
 	<li><a href="?contact=11">Estralis Seborian</a></li>
+	<li><a href="?contact=42">Face</a></li>
 	<li><a href="?contact=12">Zak</a></li>
 	<li><a href="?contact=40">Zot</a></li>
 </ul>
@@ -422,6 +423,12 @@ and of players who don't care for the rules.</p>
       case 41: //Flux
          define(_CONTACT_NAME,"Flux",false);
          define(_CONTACT_MAIL,"fluxilla@hotmail.com",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
+         " Quest bezogenen Anfragen helfen kann.",false);
+      break;
+      case 42: //Face
+         define(_CONTACT_NAME,"Face",false);
+         define(_CONTACT_MAIL,"face4lyf@live.com",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
          " Quest bezogenen Anfragen helfen kann.",false);
       break;
