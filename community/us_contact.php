@@ -13,6 +13,7 @@
 	Page::setTitle( 'Contact' );
 	Page::setDescription( 'Here you find all informations needed to get in contact with the Illarion staff.' );
 	Page::setKeywords( array( 'Contact', 'E-Mail', 'email', 'Email' ) );
+	Page::setXHTML();
 	Page::Init();
 
    function MainForm() {

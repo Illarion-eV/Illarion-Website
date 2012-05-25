@@ -13,6 +13,7 @@ include 'inc.contact.php';
 Page::setTitle( 'Kontakt' );
 Page::setDescription( 'Hier stehen alle Möglichkeiten mit dem Illarion Teamin Verbindung zu treten.' );
 Page::setKeywords( array( 'Kontakt', 'E-Mail', 'email', 'Email' ) );
+Page::setXHTML();
 Page::Init();
 
 function MainForm() {
