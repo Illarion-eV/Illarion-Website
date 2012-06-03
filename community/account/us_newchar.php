@@ -109,6 +109,8 @@
 
 <h2>The three steps to get a new character</h2>
 
+<h3>Notice to new players: Mages and Druids require a lot of development including assistance from other players so are not ideal "First Characters".</h3>
+
 <table style="width:100%">
 	<tr>
 		<td style="width:130px;">
