@@ -61,7 +61,7 @@ Sie sollten die ersten sein, an die man sich bei nicht technischen Problemen wen
 
 <?php Page::insert_go_to_top_link(); ?>
 
-</h2><h2><a name="3"></a>Gamemaster</h2>
+<h2><a name="3"></a>Gamemaster</h2>
 
 <?php echo Page::cap('E'); ?>
 <p>inige Spieler haben den Status eines Gamemasters für einen speziellen Charakter. Diese sind
