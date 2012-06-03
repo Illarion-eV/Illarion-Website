@@ -108,24 +108,6 @@
 <p class="char_online_2">Onlinestate hidden</p>
 <?php endif; ?>
 
-<div class="rating">
-	<div class="title">Profile rating:</div>
-	<?php if ($my_profil['votes_count'] == 0): ?>
-	<div class="description">No rating avaiable</div>
-	<?php else: ?>
-	<?php showRatingPictures($my_profil['votes_result']); ?>
-	<div class="description"><?php echo $my_profil['votes_result']; ?>/10 with <?php echo $my_profil['votes_count'],($my_profil['votes_count'] == 1 ? ' vote' : ' votes'); ?></div>
-	<?php endif; ?>
-	<?php if (IllaUser::loggedIn() && IllaUser::$ID != $pg_profil['chr_accid']): ?>
-	<div>
-		<a href="<?php echo Page::getURL(); ?>/community/us_rate_profile.php?profile=<?php echo dechex($charid); ?>" onclick="myLightWindow.activateWindow({href:this.href,height:150,width:400,title:'Rate the profile of <?php echo str_replace('\'','\\\'',$pg_profil['chr_name']); ?>'});return false;">
-			Own rating<?php echo ( is_int( $ownrating ) ? ' ('.$ownrating.'/10)' : '' ); ?>
-		</a>
-	</div>
-	<?php endif; ?>
-</div>
-<div class="clr"></div>
-
 <?php Page::insert_go_to_top_link(); ?>
 
 <?php if ($description): ?>
