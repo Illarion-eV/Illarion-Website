@@ -31,15 +31,15 @@
 <h2>Client</h2>
 
 <ul>
-    <li style="font-weight:bold; color:#152B85">Resource management</li>
+    <li style="font-weight:bold; color:#152B85">Resource Management</li>
     <li style="font-weight:bold; color:#152B85">Server Protocol</li>
-    <li style="font-weight:bold; color:#152B85">Sound- und Music handling</li>
+    <li style="font-weight:bold; color:#152B85">Sound And Music Handling</li>
     <li style="font-weight:bold; color:#152B85">Pathfinding</li>
-    <li style="font-weight:bold; color:#285917">Session management</li>
-    <li style="font-weight:bold; color:#285917">Slick-Graphicengine binding</li>
-    <li style="font-weight:bold; color:#285917">Szene graph management</li>
-    <li style="font-weight:bold; color:#8B0000">NiftyGUI binding</li>
-    <li style="font-weight:bold; color:#8B0000">User input management (mouse, keyboard)</li>
+    <li style="font-weight:bold; color:#285917">Session Management</li>
+    <li style="font-weight:bold; color:#285917">Slick Graphic Engine Binding</li>
+    <li style="font-weight:bold; color:#285917">Scene Graph Management</li>
+    <li style="font-weight:bold; color:#8B0000">NiftyGUI Binding</li>
+    <li style="font-weight:bold; color:#8B0000">User Input Management (mouse, keyboard)</li>
 </ul>
 
 <h2>Content</h2>
