@@ -108,7 +108,7 @@
 <p class="char_online_2">Onlinestate hidden</p>
 <?php endif; ?>
 
-<?php Page::insert_go_to_top_link(); ?>
+<div class="clr"></div>
 
 <?php if ($description): ?>
 <h2>Description of the character</h2>
