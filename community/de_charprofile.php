@@ -109,7 +109,7 @@
 <p class="char_online_2">Onlinestatus verborgen</p>
 <?php endif; ?>
 
-<?php Page::insert_go_to_top_link(); ?>
+<div class="clr"></div>
 
 <?php if ($description): ?>
 <h2>Beschreibung des Charakters</h2>
