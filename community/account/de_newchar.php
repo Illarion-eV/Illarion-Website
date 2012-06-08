@@ -109,6 +109,8 @@
 
 <h2>Drei Schritte zu einem neuen Charakter für Illarion</h2>
 
+<h3>Hinweis für neue Spieler: Magier und Druiden erfordern einiges an Arbeit, einschließlich der Hilfe anderer Spieler. Daher sind diese keine idealen ersten Charaktere.</h3>
+
 <table style="width:100%">
 	<tr>
 		<td style="width:130px;">
