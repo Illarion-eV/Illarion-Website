@@ -11,34 +11,42 @@
 <h1>Willkommen auf Illarion!</h1>
 
 <?php Page::cap('I'); ?>
-<p>llarion ist ein kostenloses, grafisches Fantasy-Spiel, welches seinen Schwerpunkt auf
-echtes Rollenspiel legt. Komm und tauch in die Welt Illarions ein! Du interagierst mit
-anderen Spielern und Deiner Umgebung als ob Du mitten in dieser Welt lebtest. Alle
-Charaktere um Dich herum werden sich wie echte Wesen dieser eigenständigen,
-geheimnisvollen Welt verhalten. Sie werden Dir von Zauberern, Geistern, Fabelwesen und
-den unglaublichsten Geschichten und Gerüchten berichten. Entscheide Dich für eine
-Rasse, die du spielen möchtest: Mensch, Zwerg, Halbling, Elf. Vielleicht ein Ork? Oder
-gar ein Echsenwesen?</p>
+<p>llarion ist ein kostenloses Online-Rollenspiel in einer klassischen Fantasy-
+Welt. Das Spiel wird von einer Gruppe von Freiwilligen entwickelt und betreut um 
+der Spielerschaft ein unvergleichliches Rollenspielerlebnis zu ermöglichen. In 
+der Welt sind Charaktere mehr als ein Abbild deiner Selbst, sie sind echte Wesen 
+mit einem eigenen Leben. Als Spieler Illarions ist es deine Aufgabe, den 
+Charakteren genau dieses Leben einzuhauchen.</p>
 
-<p>Bitte erwarte keine Erfahrungspunkte oder andere Zahlen im Spiel, die Dir verraten,
-wie gut Deine Fähigkeiten sind. Folge einfach der Rolle die Du spielen möchtest,
-dann wirst Du merken, ob du als Kämpfer gegen die Kreaturen Illarions immer furchtloser
-und geschickter wirst, der angesehenste Meisterschmied der Stadt oder gar der
-beliebteste Barkeeper - denn Übung macht den Meister. Druiden und Zauberer wird eine
-geheimnisvolle Magie, basierend auf Kräutern, anderen Pflanzen und Runen erwarten.
-Darüber hinaus spricht jede Rasse ihre eigene Sprache, aber alle beherrschen auch die
-gemeinsame Sprache Illarions, um sich über Rassengrenzen hinweg verständigen zu
-können.</p>
+<p>Die Entscheidungen, die du 
+während des Spiels triffst, haben einen echten Einfluss auf die Welt um dich 
+herum und prägen diese. Deine Taten bestimmen die Ereignisse, die einmal die 
+Seiten der Geschichtsbücher Illarions füllen werden. Alle Charaktere, denen du 
+begegnen wirst, werden sich genauso verhalten: Sie sind lebendige, atmende Wesen 
+einer geheimnisvollen Welt. Jeder Charakter hat seine eigene Vergangenheit, 
+Ziele, Persönlichkeit, Stärken und Schwächen. Du wirst viele einzigartige Leute 
+treffen: Krieger, Händler, Elfen und Echsenwesen. Welche Rolle wirst du spielen? 
+Dein Charakter ist nur den Grenzen deiner Vorstellungskraft 
+unterworfen.</p>
 
-<p>Wir bieten unseren eigenen Server, einen Java-Client, der unter Windows und Linux
-läuft und die Garantie, dass Du nie etwas für dieses Spiel bezahlen musst. Um
-dies sicher zu stellen, haben wir einen Verein gegründet, der dies in seiner
-Satzung festschreibt. Illarion ist seit Februar 2000 online und wird ständig von
-freiwilligen Programmierern und Helfern weiterentwickelt und so den Wünschen der
-Spielerschaft angepasst.</p>
+<p>Vielleicht wirst du die Diebesgilde unterwandern, dich in 
+der Hierarchieleiter hinaufarbeiten nur, um die gesamte Organisation wie ein 
+Kartenhaus zusammenfallen zu lassen. Oder du wirst ein frommer Priester, der 
+neue Jünger für einen der vielen Götter aus Illarions Pantheon konvertiert. Du 
+kannst auch den Weg eines gefürchteten Kriegers einschlagen, der für Ruhm und 
+Ehre oder auch einfach aus Profitgier kämpft.</p>
 
-<p>Auch Du wirst Dich dem Zauber dieser Welt nicht entziehen können!</p>
-
+<p>Illarion nähert sich 
+derzeit der Veröffentlichung des so genannten "Very Big Updates" (VBU). Dieses 
+Update wird alle Spielbereiche betreffen, die Karte deutlich erweitern und 
+unzählige neue Features einführen oder bestehende Systeme gründlich 
+überarbeiten. Ebenso werden viele lange bestehende Spielfehler ausgemerzt. Damit 
+das VBU noch in diesem Jahr veröffentlicht werden kann wird ein Großteil der 
+Entwicklungskapazitäten auf dieses Ziel verwandt. Für die derzeitige 
+Spielversion werden zwingend nötige Patches erstellt aber es ist möglich, dass 
+im Spiel noch Fehler verbleiben. Bei Problemen bist du gerne im offiziellen 
+Illarion-Chat willkommen in dem sofortige Hilfe verfügbar ist.</p>
+    
 <p class="center">
 	<a href="<?php echo Page::getURL(); ?>/general/map_of_illarion.jpg" style="margin-right:20px;">
 		<img src="<?php echo Page::getCurrentURL(); ?>/general/t_map_of_illarion.jpg" width="120" height="85" alt="Karte von Illarion" />

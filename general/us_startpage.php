@@ -11,28 +11,38 @@
 <h1>Welcome to the world of Illarion!</h1>
 
 <?php Page::cap('I'); ?>
-<p>llarion is a free, graphical fantasy game that focuses on true roleplaying. Come and
-join the world of Illarion. You'll fully immerse yourself in this world, as though your
-character is a real being. All of the characters around you will behave as real people
-in this independent, mysterious world. They'll tell you about magicians, ghosts and
-fairies in some of the most undeliverable stories and rumors. Pick a race you would like
-to play: human, dwarf, halfling, elf? Maybe an orc? Or even a lizardman?</p>
+<p>llarion is a free, online roleplaying game with a high fantasy setting. The 
+game is maintained and developed by a group of volunteers who are dedicated to 
+providing the community with a true roleplaying experience. Within our world, a 
+character is more than just an avatar; they are real people, living out their 
+lives. As an Illarion player, it is your role to breathe that life into your 
+character.</p>
 
-<p>Please don't expect experience points or other numbers inside the game which reveal
-your skills. Just follow the role you want to play, in time you will see whether you
-become a great warrior, fighting against the various evils of Illarion, or the most
-respected master smith of the town. Perhaps even the most popular barkeeper because
-practice makes perfect. Druids and magicians will cast mysterious spells with herbs and
-runes. In addition to all of this, each race speaks its own language but all are able
-to speak the common language of Illarion to make themselves understood.</p>
+<p>The decisions that you make while playing Illarion will actually impact and 
+shape the world around you. Your actions will determine the events that will one 
+day fill the pages of Illarion's history books. All of the characters that you 
+shall encounter during your time here are just like yours: living, breathing 
+inhabitants of this mysterious world. Each character has their own past, goals, 
+flaws, strengths and personality. You will come across countless unique and 
+interesting individuals: soldiers, merchants, elves and lizardmen. What role 
+will you play? Your character is limited only by the bounds of your 
+imagination.</p>
 
-<p>We are offering our own server, a Java client (which can be used with Linux or
-Windows) and the guarantee that you will never, ever, pay anything for this game. To
-ensure this we founded a registered society and it became contractual in the statute.
-Illarion has been online since February 2000 and is always being developed by
-programmers and volunteers to satisfy the wishes of the player community.</p>
+<p>Perhaps you will infiltrate the lowly ranks of a thieves guild, worming your 
+way up through the organisation, only to bring it crumbling down around you from 
+within. Perhaps you will be a devout priest, driven to convert new followers to 
+one of the many gods in Illarion's diverse pantheon. Or perhaps you will become 
+a feared warrior, fighting for glory, honour or just filthy lucre.</p>
 
-<p>Even you can't resist the magic of this world!</p>
+<p>Illarion is currently nearing the release of the so-called "Very Big Update" 
+(VBU). This update will completely overhaul the current game engine, greatly 
+expanding the map, while adding countless new features, reworking many of the 
+existing systems, and fixing numerous long-term bugs and issues. In order to 
+bring you the VBU before the end of this year, the majority of development 
+resources have been diverted away from the current build of Illarion. While 
+necessary bugfixes will be implemented, it is possible that you will still 
+encounter issues while playing. If so, we encourage you to join us in the 
+official Illarion chat, where live assistance is generally available.</p>
 
 <p class="center">
 	<a href="<?php echo Page::getURL(); ?>/general/map_of_illarion.jpg" style="margin-right:20px;">
