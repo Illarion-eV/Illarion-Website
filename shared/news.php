@@ -113,14 +113,15 @@ class News {
 		} elseif ($type == 'rss') {
 			echo '<item>';
 			echo '<title>', htmlspecialchars($news['title_' . $lang]), '</title>';
-			echo '<pubDate>', date('r', $news['published_at']), '</pubDate>';
+			echo '<pubDate>', date(DATE_RSS, $news['published_at']), '</pubDate>';
 			echo '<description>';
 			echo '<![CDATA[';
 			echo preg_replace('/(\n\r)|(\r\n)|(\n|\r)/', '<br />', $news['content_' . $lang]);
 			echo ']]>';
 			echo '</description>';
 			echo '<link>', Page::getURL(), '/general/', $lang, '_news.php?news=', $news['id'], '#news_', $news['id'], '</link>';
-			echo '<guid>', Page::getURL(), '/general/', $lang, '_news.php?news=', $news['id'], '#news_', $news['id'], '</guid>';
+			echo '<guid isPermaLink="false">news_', $news['id'], '</guid>';
+			echo '<author>', $news['name'], '</author>';
 			echo '<dc:creator>', $news['name'], '</dc:creator>';
 			echo '</item>';
 		} elseif ($type == 'short_html') {

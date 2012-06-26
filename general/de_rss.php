@@ -27,15 +27,17 @@
 	Page::setXML( 'application/rss+xml' );
 	Page::Init();
 ?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
 		<title>News von Illarion</title>
-		<link><?php echo Page::getURL(); ?></link>
+		<link><?php echo Page::getURL(); ?>/general/de_rss.php</link>
 		<description>Die aktuellen Nachrichten des Online-Rollenspiels Illarion</description>
-		<language>DE-de</language>
-		<copyright>Illarion</copyright>
-		<lastBuildDate><?php echo date( 'r', $time ); ?></lastBuildDate>
-		<atom:link href="<?php echo Page::getURL() ?>/general/de_rss.php" rel="self" type="application/rss+xml" />
+		<language>de-de</language>
+		<copyright>Illarion e.V.</copyright>
+		<lastBuildDate><?php echo date(DATE_RSS, $time ); ?></lastBuildDate>
+		<pubDate><?php echo date(DATE_RSS, $time ); ?></pubDate>
+		<managingEditor>webmaster@illarion.org</managingEditor>
+		<webMaster>webmaster@illarion.org</webMaster>
 		<?php News::show( $news_list, 'rss' ); ?>
 	</channel>
 </rss>
