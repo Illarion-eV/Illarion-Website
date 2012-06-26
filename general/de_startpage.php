@@ -11,8 +11,8 @@
 <h1>Willkommen auf Illarion!</h1>
 
 <?php Page::cap('I'); ?>
-<p>llarion ist ein kostenloses Online-Rollenspiel in einer klassischen Fantasy-
-Welt. Das Spiel wird von einer Gruppe von Freiwilligen entwickelt und betreut um 
+<p>llarion ist ein kostenloses Online-Rollenspiel in einer klassischen Fantasy-Welt.
+Das Spiel wird von einer Gruppe von Freiwilligen entwickelt und betreut um 
 der Spielerschaft ein unvergleichliches Rollenspielerlebnis zu ermöglichen. In 
 der Welt sind Charaktere mehr als ein Abbild deiner Selbst, sie sind echte Wesen 
 mit einem eigenen Leben. Als Spieler Illarions ist es deine Aufgabe, den 
