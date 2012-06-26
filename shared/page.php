@@ -1211,8 +1211,9 @@ class Page {
 
 		if (self::$page_type === 2) {
 			$output = '<?xml version="1.0" encoding="utf-8"?>';
-			if (self::$browser_name !== 'msie' || self::$browser_version != 7 || self::$xml_content_type != 'application/rss+xml') {
-				$output .= '<!DOCTYPE page [ <!ENTITY nbsp "&amp;nbsp;"> ]>';
+			if (self::$xml_content_type == 'application/rss+xml') {
+				/* Replace the hard html spaces with text ones. Those work better in RSS. */
+				$content = str_replace('&nbsp;', ' ', $content);
 			}
 			$output .= $content;
 
