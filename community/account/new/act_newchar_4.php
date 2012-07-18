@@ -62,13 +62,6 @@
 			return;
 		}
 
-		$location = ( isset($_POST['location']) && is_numeric($_POST['location']) ? (int)$_POST['location'] : 0 );
-		if (!$location)
-		{
-			Messages::add((Page::isGerman()?'Keine Startposition ausgewählt.':'No starting position was selected.'),'error');
-			return;
-		}
-
 		$package = ( isset($_POST['sel_pack']) &&  is_numeric($_POST['sel_pack']) ? (int)$_POST['sel_pack'] : 0 );
 		if (!$package)
 		{
