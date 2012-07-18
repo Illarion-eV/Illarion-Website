@@ -115,32 +115,6 @@
 			}
 		}
 
-		$db =& Database::getPostgreSQL( 'homepage' );
-		$query = 'SELECT pos_x, pos_y, pos_z, face_to, newbie'
-		.PHP_EOL.' FROM startplace'
-		.( $newbieOnly ? PHP_EOL.' WHERE newbie = 1 AND id = '.$db->Quote($location) : PHP_EOL.' WHERE id = '.$db->Quote($location))
-		;
-		$db->setQuery( $query );
-		$position = $db->loadAssocRow();
-
-		if (!count($position))
-		{
-			Messages::add((Page::isGerman()?'Startposition nicht gefunden.':'Starting position was not found.'),'error');
-			return;
-		}
-
-		$pgSQL->Begin();
-
-		$query = 'UPDATE player'
-		.PHP_EOL.' SET ply_posx = '.$pgSQL->Quote( $position['pos_x'] )
-		. ', ply_posy = '.$pgSQL->Quote( $position['pos_y'] )
-		. ', ply_posz = '.$pgSQL->Quote( $position['pos_z'] )
-		. ', ply_faceto = '.$pgSQL->Quote( $position['face_to'] )
-		.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
-		;
-		$pgSQL->setQuery( $query );
-		$pgSQL->query();
-
 		if ($position['newbie'])
 		{
 			$query = 'INSERT INTO playerlteffects (plte_playerid, plte_effectid, plte_nextcalled, plte_lastcalled, plte_numbercalled)'

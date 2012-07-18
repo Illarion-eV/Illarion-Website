@@ -84,14 +84,6 @@ else
 	}
 }
 
-$query = 'SELECT spl_id, spl_name_de AS name'
-	.PHP_EOL.' FROM accounts.startplace'
-.( $newbieOnly ? PHP_EOL.' WHERE spl_newbie = 1' : '')
-	.PHP_EOL.' ORDER BY spl_id ASC'
-	;
-$pgSQL->setQuery( $query );
-$start_places = $pgSQL->loadAssocList();
-
 $query = 'SELECT spa_id, spa_name_de AS name'
 	.PHP_EOL.' FROM accounts.startpack'
 .PHP_EOL.' WHERE spa_race IN (-1,'.$pgSQL->Quote( $race ).')'
@@ -113,21 +105,8 @@ Page::addJavaScript( 'newchar_3' );
 			Wähle also einfach das Paket, das Dir für den Anfang am meisten zusagt.</p>
 
 	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
-	<h2>Startposition</h2>
-		<p>
-			<?php if (count($start_places)>1): ?>
-			<select name="location" id="location">
-				<?php foreach($start_places as $place): ?>
-				<option value="<?php echo $place['spl_id']; ?>"><?php echo $place['name']; ?></option>
-				<?php endforeach; ?>
-			</select>
-			<?php else: ?>
-			<input type="hidden" name="location" value="<?php echo $start_places[0]['spl_id']; ?>" />
-			<?php echo $start_places[0]['name']; ?>
-			<?php endif; ?>
-		</p>
 
-		<h2>Startausrüstung</h2>
+		<h2>Startausrüstung und Fähigkeiten</h2>
 
 		<select name="startpack" id="startpack">
 			<?php foreach($start_packs as $pack): ?>
