@@ -143,8 +143,8 @@
 
 		if ($position['newbie'])
 		{
-			$query = 'INSERT INTO playerlteffects (plte_playerid, plte_effectid, plte_nextcalled, plte_lastcalled, plte_numbercalled, plte_position)'
-			.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, 100, 0, 0, 1 )'
+			$query = 'INSERT INTO playerlteffects (plte_playerid, plte_effectid, plte_nextcalled, plte_lastcalled, plte_numbercalled)'
+			.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, 100, 0, 0 )'
 			;
 			$pgSQL->setQuery( $query );
 			$pgSQL->query();
