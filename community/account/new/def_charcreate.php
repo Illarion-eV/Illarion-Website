@@ -537,10 +537,10 @@ function getHumanFemaleHairArray($lang="")
 	{
 		return array(
 			HUMAN_FEMALE_HAIR_0 => "--No hair--",
-			HUMAN_FEMALE_HAIR_1 => "hair 1",
-			HUMAN_FEMALE_HAIR_4 => "hair 2",
-			HUMAN_FEMALE_HAIR_7 => "hair 3",
-			HUMAN_FEMALE_HAIR_8 => "hair 4"
+			HUMAN_FEMALE_HAIR_1 => "Medium Length Hair",
+			HUMAN_FEMALE_HAIR_4 => "Pinned Up Hair",
+			HUMAN_FEMALE_HAIR_7 => "Long Open Hair",
+			HUMAN_FEMALE_HAIR_8 => "Long Braided Hair"
 		);
 	}
 }
@@ -560,9 +560,9 @@ function getHumanMaleHairArray($lang="")
 	{
 		return array(
 			HUMAN_MALE_HAIR_0 => "--No hair--",
-		    HUMAN_MALE_HAIR_1 => "hair 1",
-		    HUMAN_MALE_HAIR_2 => "hair 2",
-		    HUMAN_MALE_HAIR_3 => "hair 3"
+		    HUMAN_MALE_HAIR_1 => "Short Hair",
+		    HUMAN_MALE_HAIR_2 => "Medium Length Hair",
+		    HUMAN_MALE_HAIR_3 => "Long Hair"
 		);
 	}
 
@@ -586,12 +586,12 @@ function getHumanBeardArray($lang="")
 	{
 		return array(
 			HUMAN_BEARD_0 => "--No beard--",
-		    HUMAN_BEARD_1 => "beard 1",
-		    HUMAN_BEARD_3 => "beard 2",
-		    HUMAN_BEARD_4 => "beard 3",
-		    HUMAN_BEARD_5 => "beard 4",
-		    HUMAN_BEARD_6 => "beard 5",
-		    HUMAN_BEARD_8 => "beard 6"
+		    HUMAN_BEARD_1 => "Short Beard",
+		    HUMAN_BEARD_3 => "Goatee Beard",
+		    HUMAN_BEARD_4 => "Square Beard",
+		    HUMAN_BEARD_5 => "Thin Beard",
+		    HUMAN_BEARD_6 => "Long Beard",
+		    HUMAN_BEARD_8 => "Mutton Chops"
 		);
 	}
 }
