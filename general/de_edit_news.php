@@ -1,6 +1,5 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
-	include_once( "inc_news.php" );
 
 	if (!IllaUser::auth('news'))
 	{
