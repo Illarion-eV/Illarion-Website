@@ -109,7 +109,7 @@
 				<option value="<?php echo $i; ?>"<?php echo ($dob['day'] == $i ? ' selected="selected"' : '' ); ?>><?php echo $i; ?>.</option>
 				<?php endfor; ?>
 			</select>
-			&nbsp;&nbsp;&nbsp;
+			&#160;&#160;&#160;
 			<select name="month" id="month" style="margin-left:10px;">
 				<?php for ($i = 1;$i <= 16;$i++): ?>
 				<option value="<?php echo $i; ?>"<?php echo ($dob['month'] == $i ? ' selected="selected"' : '' ); ?>><?php echo IllaDateTime::getMonthName( $i ); ?></option>
