@@ -1,8 +1,8 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_accountmenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_account_chars.php' );
+	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_topmenu.php' );
+	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_accountmenu.php' );
+	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_account_chars.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
@@ -10,6 +10,15 @@
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
+
+    Page::setTitle( array( 'GM-Tool', 'Charakterliste', $account_name ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht über alle Charaktere die im Account "'.$account_name.'" eingetragen sind.' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Charaktere', 'Übersicht', $account_name ) );
+
+    Page::addCSS( array( 'menu', 'gmtool' ) );
+
+    Page::setXHTML();
+    Page::Init();
 
 	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
 	if (!$accid)
@@ -28,15 +37,6 @@
 	}
 
 	$charlist = getChars( $accid );
-
-	Page::setTitle( array( 'GM-Tool', 'Charakterliste', $account_name ) );
-	Page::setDescription( 'Hier befindet sich eine Übersicht über alle Charaktere die im Account "'.$account_name.'" eingetragen sind.' );
-	Page::setKeywords( array( 'GM-Tool', 'Account', 'Charaktere', 'Übersicht', $account_name ) );
-
-	Page::addCSS( array( 'menu', 'gmtool' ) );
-
-	Page::setXHTML();
-	Page::Init();
 ?>
 
 <h1>Charakterliste - <?php echo $account_name; ?></h1>
@@ -52,12 +52,12 @@
 <table style="width:100%;">
 	<thead>
 		<tr>
-			<th style="width:90px">ID</th>
+			<th style="width:90px;">ID</th>
 			<th>Name</th>
-			<th style="width:100px">Rasse</th>
-			<th style="width:70px">Geschlecht</th>
-			<th style="width:150px">Status</th>
-			<th style="width:80px">Server</th>
+			<th style="width:100px;">Rasse</th>
+			<th style="width:70px;">Geschlecht</th>
+			<th style="width:150px;">Status</th>
+			<th style="width:80px;">Server</th>
 		</tr>
 	</thead>
 	<tbody>
