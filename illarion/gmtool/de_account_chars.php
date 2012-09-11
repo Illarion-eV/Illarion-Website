@@ -61,7 +61,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php if (count($loglist) == 0)
+		<?php if (count($charlist) == 0)
         { ?>
             <tr><td style='height:50px;text-align:center;' colspan='6'>Es wurden keine Charaktere gefunden.</td></tr>
 	    <?php } else { ?>
