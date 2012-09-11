@@ -3,7 +3,7 @@
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/illarion_data.php' );
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_accountmenu.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_account_notes.php' );
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_account.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
@@ -11,6 +11,15 @@
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
+
+    Page::setTitle( array( 'GM-Tool', 'Account', $account_data['acc_login'] ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht die Notizen zu dem Account "'.$account_data['acc_login'].'"' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Notizen', $account_data['acc_login'] ) );
+
+    Page::addCSS( array( 'menu', 'gmtool' ) );
+
+    Page::setXHTML();
+    Page::Init();
 
 	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
 	if (!$accid)
@@ -28,12 +37,8 @@
 		exit();
 	}
 
-	list($notes,$warnings) = getNotes( $accid );
+//	list($notes,$warnings) = getNotes( $accid );
 
-	create_header( 'Illarion - GM-Tool - Notizen und Warnungen - '.$account_name,
-	'Auf dieser Seite könnten die Notizen und Warnungen von '.$account_name.' eingesehen werden',
-	'GM-Tool, Account, Notizen, Warnungen, '.$account_name, '', 'menu,gmtool', '', true );
-	include_header();
 ?>
 
 <h1>Notizen und Warnungen - <?php echo $account_name; ?></h1>
@@ -48,26 +53,6 @@
 
 <h2>Notizen</h2>
 
-<?php if (count($notes)): ?>
-<dl class="gmtool_notes">
-	<?php foreach( $notes as $note ): ?>
-	<dt>
-		<?php echo date( 'd.m.Y H:i', $note['unixtime'] ),' - ',$note['name']; ?>
-		<?php if ($note['type'] == 1): ?>
-		-
-		<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" style="display:inline;">
-			<input type="hidden" name="action" value="account_notes" />
-			<input type="hidden" name="method" value="remove" />
-			<input type="hidden" name="id" value="<?php echo $note['id']; ?>" />
-			<input type="submit" name="submit" value="Löschen" />
-		</form>
-		<?php endif; ?>
-	</dt>
-	<dd><?php echo $note['message']; ?></dd>
-	<?php endforeach; ?>
-</dl>
-<?php endif; ?>
-
 <form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" id="note_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
@@ -80,24 +65,6 @@
 
 <h2>Verwarnungen</h2>
 
-<?php if (count($warnings)): ?>
-<dl class="gmtool_notes">
-	<?php foreach( $warnings as $warn ): ?>
-	<dt>
-		<?php echo date( 'd.m.Y H:i', $warn['unixtime'] ),' - ',$warn['name']; ?>
-		-
-		<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" style="display:inline;">
-			<input type="hidden" name="action" value="account_notes" />
-			<input type="hidden" name="method" value="remove" />
-			<input type="hidden" name="id" value="<?php echo $note['id']; ?>" />
-			<input type="submit" name="submit" value="Löschen" />
-		</form>
-	</dt>
-	<dd><?php echo $warn['message']; ?></dd>
-	<?php endforeach; ?>
-</dl>
-<?php endif; ?>
-
 <form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" id="warn_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
@@ -108,4 +75,3 @@
 	</p>
 </form>
 
-<?php include_footer(); ?>

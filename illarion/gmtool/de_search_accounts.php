@@ -26,7 +26,7 @@
 <h2>Suchparameter für die Suche nach einem Account</h2>
 
 <fieldset>
-	<legend>Suche nachX</legend>
+	<legend>Suche nach</legend>
 	<input type="checkbox" name="limit_to_state" id="limit_to_state" onclick="performSearch();" />
 	<label for="limit_to_state">Suche auf Accounts mit folgendem Status begrenzen:</label>
 	<select name="status" id="status" onchange="performSearch();">

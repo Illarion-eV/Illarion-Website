@@ -1,14 +1,15 @@
 <?php
 	function getAccountName( $accid )
 	{
-		$mySQL =& Database::getMySQL();
+		$account =& Database::getPostgreSQL( 'accounts' );
+//		$mySQL =& Database::getMySQL();
 
-		$query = 'SELECT `username`'
-		.PHP_EOL.'FROM `homepage_user`'
-		.PHP_EOL.'WHERE `id` = '.$mySQL->Quote( $accid )
+		$query = 'SELECT acc_name'
+		.PHP_EOL.'FROM account'
+		.PHP_EOL.'WHERE acc_id = '.$account->Quote( $accid )
 		;
-		$mySQL->setQuery( $query );
-		$account_name = $mySQL->loadResult();
+		$account->setQuery( $query );
+		$account_name = $account->loadResult();
 
 		return $account_name;
 	}

@@ -9,6 +9,8 @@
 		$entries[2] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_account_chars.php?id='.$accid, 'name'=>( $language == 'de' ? 'Charaktere' : 'Characters' ) );
 		$entries[3] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_account_status.php?id='.$accid, 'name'=>( $language == 'de' ? 'Status' : 'State' ) );
 		$entries[4] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_account_notes.php?id='.$accid, 'name'=>( $language == 'de' ? 'Notizen' : 'Notes' ) );
+		$entries[5] = array( 'link'=>$url.'/illarion/gmtool/'.$language.'_account_log.php?id='.$accid, 'name'=>( $language == 'de' ? 'Log' : 'Log' ) );
+
 ?>
 <div class="menu">
 	<ul class="menu_top">

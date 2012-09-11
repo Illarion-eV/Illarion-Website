@@ -15,48 +15,42 @@
 		exit();
 	}
 
-	$new_name   = ( strlen($_POST['name']) > 0 ? (string)$_POST['name'] : null );
-	$new_mail   = ( strlen($_POST['email']) > 0 ? (string)$_POST['email'] : false );
-	$new_limit  = ( isset($_POST['charlimit']) ? (int)$_POST['charlimit'] : false );
-	$new_length = ( (int)$_POST['length'] == 0 ? 0 : 1 );
-	$new_weight = ( (int)$_POST['weight'] == 0 ? 0 : 1 );
-	$new_lang   = ( (int)$_POST['lang'] == 0 ? 0 : 1 );
-	$new_dst    = ( (int)$_POST['dst'] == 0 ? 0 : 1 );
+	$new_name   = ( strlen($_POST['acc_name']) > 0 ? (string)$_POST['acc_name'] : null );
+	$new_mail   = ( strlen($_POST['acc_email']) > 0 ? (string)$_POST['acc_email'] : false );
+	$new_limit  = ( isset($_POST['acc_maxchars']) ? (int)$_POST['acc_maxchars'] : false );
+	$new_lang   = ( (int)$_POST['acc_lang'] == 0 ? 0 : 1 );
+	$new_dst    = ( (int)$_POST['acc_dst'] == 0 ? 0 : 1 );
+	$new_weight = $_POST['acc_weight'];
+	$new_length = $_POST['acc_length'];
 
 	$new_offset = ( is_numeric($_POST['timezone']) ? (float)$_POST['timezone'] : 0 );
 	$new_offset = (int)($new_offset*100);
 
-	$new_passwd = ( strlen($_POST['passwd']) > 0 ? (string)$_POST['passwd'] : false );
+	$new_passwd = ( strlen($_POST['acc_passwd']) > 0 ? (string)$_POST['acc_passwd'] : false );
 	if ($new_passwd && substr($new_passwd,0,12) != '$1$illarion$')
 	{
 		$new_passwd = crypt(stripslashes($new_passwd), '$1$illarion1');
 	}
 
-	$mySQL =& Database::getMySQL();
 	$pgSQL =& Database::getPostgreSQL( 'accounts' );
 
-	$query = "UPDATE `homepage_user`"
-	. "\n SET `name` = ".$mySQL->Quote( $new_name )
-	. ( $new_mail ? ", `email` = ".$mySQL->Quote( $new_mail ) : '' )
-	. ( $new_limit ? ", `charlimit` = ".$mySQL->Quote( $new_limit ) : '' )
-	. ", `length` = ".$mySQL->Quote( $new_length )
-	. ", `weight` = ".$mySQL->Quote( $new_weight )
-	. ", `time_offset` = ".$mySQL->Quote( $new_offset )
-	. ", `dst` = ".$mySQL->Quote( $new_dst )
-	. ", `lastseen` = `lastseen`"
-	. ( $new_limit ? ", `passwd` = ".$mySQL->Quote( $new_passwd ) : '' )
-	. "\n WHERE `id` = ".$mySQL->Quote( $accid )
-	;
-	$mySQL->setQuery( $query );
-
 	$query = "UPDATE account"
-	. "\n SET acc_lang = ".$pgSQL->Quote( $new_lang )
-	. ", acc_passwd = ".$pgSQL->Quote( $new_passwd )
-	. "\n WHERE acc_id = ".$pgSQL->Quote( $accid )
+	. "\n SET acc_name = ".$pgSQL->Quote( $new_name )
+		. ( $new_mail ? ", acc_email = ".$pgSQL->Quote( $new_mail ) : '' )
+		. ( $new_limit ? ", acc_maxchars = ".$pgSQL->Quote( $new_limit ) : '' )
+		. ", acc_length = ".$pgSQL->Quote( $new_length )
+		. ", acc_weight = ".$pgSQL->Quote( $new_weight )
+		. ", acc_timeoffset = ".$pgSQL->Quote( $new_offset )
+		. ", acc_lang = ".$pgSQL->Quote( $new_lang )	
+		. ", acc_dst = ".$pgSQL->Quote( $new_dst )
+		. ", acc_lastseen = acc_lastseen"
+		. ( $new_limit ? ", acc_passwd = ".$pgSQL->Quote( $new_passwd ) : '' )
+		. "\n WHERE acc_id = ".$pgSQL->Quote( $accid )
 	;
+
 	$pgSQL->setQuery( $query );
 
-	if ($mySQL->query() && $pgSQL->query())
+	if ($pgSQL->query())
 	{
 		Messages::add(($language=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
 	}
