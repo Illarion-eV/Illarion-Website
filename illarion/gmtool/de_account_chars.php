@@ -61,15 +61,20 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($charlist as $key=>$char): ?>
-		<tr class="row<?php echo (($key+1)%2); ?>">
-			<td><?php echo $char['chr_playerid']; ?></td>
-			<td><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $char['chr_playerid']; ?>"><?php echo $char['chr_name']; ?></a></td>
-			<td><?php echo IllarionData::getRaceName($char['chr_race']); ?></td>
-			<td><?php echo IllarionData::getSexName($char['chr_sex']); ?></td>
-			<td><?php echo IllarionData::getCharacterStatusName($char['chr_status']); ?></td>
-			<td><?php echo $char['chr_server']; ?></td>
-		</tr>
-		<?php endforeach; ?>
+		<?php if (count($loglist) == 0)
+        { ?>
+            <tr><td style='height:50px;text-align:center;' colspan='6'>Es wurden keine Charaktere gefunden.</td></tr>
+	    <?php } else { ?>
+			<?php foreach ($charlist as $key=>$char): ?>
+			<tr class="row<?php echo (($key+1)%2); ?>">
+				<td><?php echo $char['chr_playerid']; ?></td>
+				<td><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?id=<?php echo $char['chr_playerid']; ?>"><?php echo $char['chr_name']; ?></a></td>
+				<td><?php echo IllarionData::getRaceName($char['chr_race']); ?></td>
+				<td><?php echo IllarionData::getSexName($char['chr_sex']); ?></td>
+				<td><?php echo IllarionData::getCharacterStatusName($char['chr_status']); ?></td>
+				<td><?php echo $char['chr_server']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+		<?php } ?>
 	</tbody>
 </table>

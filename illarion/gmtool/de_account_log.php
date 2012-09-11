@@ -38,11 +38,6 @@
 
 	$loglist = getLogs( $accid );
 
-/*
-	echo "<pre>";
-	print_r($loglist);
-	echo "</pre>";
-*/
 ?>
 
 <h1>Accountlog - <?php echo $account_name; ?></h1>
@@ -65,15 +60,20 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($loglist as $key=>$log): ?>
-		<?php $class = ( $log['al_type']==2) ? "rowerror" : "row".(($key+1)%2); ?>
-        <tr class="<?php echo $class; ?>">
-            <td><?php echo $log['al_id']; ?></td>
-            <td><?php echo convertDBTime($log['al_time']); ?></td>
-            <td class='center'><?php echo $log['acc_name']; ?></td>
-            <td><?php echo $log['al_message']; ?></td>
-            <td class='center'><?php echo getLogTypeString($log['al_type']); ?></td>
-        </tr>
-        <?php endforeach; ?>
+		<?php if (count($loglist) == 0)
+		{ ?> 
+			<tr><td style='height:50px;text-align:center;' colspan='5'>Es wurden keine Logdateien gefunden.</td></tr>
+	<?php } else { ?>
+        	<?php foreach ($loglist as $key=>$log): ?>
+			<?php $class = ( $log['al_type']==2) ? "rowerror" : "row".(($key+1)%2); ?>
+        	<tr class="<?php echo $class; ?>">
+        	    <td><?php echo $log['al_id']; ?></td>
+        	    <td><?php echo convertDBTime($log['al_time']); ?></td>
+        	    <td class='center'><?php echo $log['acc_name']; ?></td>
+        	    <td><?php echo $log['al_message']; ?></td>
+        	    <td class='center'><?php echo getLogTypeString($log['al_type']); ?></td>
+        	</tr>
+        	<?php endforeach; ?>
+		<?php } ?>
     </tbody>
 </table>
