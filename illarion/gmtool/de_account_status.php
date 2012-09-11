@@ -3,7 +3,7 @@
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/illarion_data.php' );
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_accountmenu.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_account_status.php' );
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_account.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
@@ -11,6 +11,16 @@
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
+
+    Page::setTitle( array( 'GM-Tool', 'Account', $account_data['acc_login'] ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht den Status des Accounts "'.$account_data['acc_login'].'"' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Einstellungen', $account_data['acc_login'] ) );
+
+    Page::addCSS( array( 'menu', 'gmtool' ) );
+
+    Page::setXHTML();
+    Page::Init();
+
 
 	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
 	if (!$accid)
@@ -20,18 +30,13 @@
 		exit();
 	}
 
-	list($account_name,$account_state) = getAccountData( $accid );
+	list($account_name,$account_state) = getAccountNameAndState( $accid );
 	if (!$account_name || !strlen($account_name))
 	{
 		Messages::add('Account wurde nicht gefunden', 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
-
-	create_header( 'Illarion - GM-Tool - Status - '.$account_name,
-	'Auf dieser Seite kann der Status des Accounts '.$account_name.' eingesehen werden',
-	'GM-Tool, Account, Status, '.$account_name, '', 'menu,gmtool', '', true );
-	include_header();
 ?>
 
 <h1>Status - <?php echo $account_name; ?></h1>
@@ -65,4 +70,3 @@
 	</p>
 </form>
 
-<?php include_footer(); ?>

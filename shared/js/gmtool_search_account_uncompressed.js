@@ -119,6 +119,19 @@ function parseResponse( object )
 				return document.createTextNode( 'No accounts fit the search parameters.' );
 			};
 		}
+		else if (object.nodeName == 'debug') {
+			var text = '';
+			var info ='';
+			for(var i=0;i<object.childNodes.length; i++ ) {
+                if (object.childNodes[i].nodeName == 'text') {
+                    text = object.childNodes[i].firstChild.nodeValue;
+                }
+				else if (object.childNodes[i].nodeName == 'info') {
+                    info = object.childNodes[i].firstChild.nodeValue;
+                };
+			}
+            return document.createTextNode( text+'-'+info );
+		}
 		else if (object.nodeName == 'accounts') {
 			var output = document.createElement( 'div' );
 			var index = 0;

@@ -126,7 +126,7 @@ button:focus {
 }
 
 select {
-	background: #231002 url(pics/silver.gif) repeat scroll 0 0;
+	background: #000 url(pics/uebbg.jpg) repeat scroll 0 0;
 	border:1px solid #492020;
 	color:#DBD9CC;
 	text-decoration:none;
@@ -144,10 +144,6 @@ select.disabled {
 	background: #231002 url(pics/uebbg.jpg) repeat scroll 0 0;
 	border:1px solid #777777;
 	color:#777777;
-}
-
-select.disabled {
-	background-image: url(pics/silver.gif);
 }
 
 input.no_style {
@@ -296,6 +292,9 @@ tr.row0 td {
 
 tr.row1 td {
 	background: transparent none scroll repeat 0 0;
+}
+tr.rowerror td {
+	background:transparent url(pics/background_error.png) repeat scroll 0 0;
 }
 
 /*
