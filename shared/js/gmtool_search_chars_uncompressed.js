@@ -122,11 +122,15 @@ function parseResponse( object )
 						server = object.childNodes[i].childNodes[k].firstChild.nodeValue;
 					};
 				};
+				var servername = '[RS]';
+				if (server > 0) { servername = '[TS]'; }
 				var temp = document.createElement( 'li' );
+				temp.appendChild( document.createTextNode( servername ) );
+				temp.appendChild( document.createTextNode( ' ' ) );
 				temp.appendChild( document.createTextNode( id ) );
 				temp.appendChild( document.createTextNode( ' - ' ) );
 				var temp2 = document.createElement( 'a' );
-				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_character.php?id='+id+'&server='+server;
+				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_character.php?charid='+id+'&server='+server;
 				temp2.appendChild( document.createTextNode( name ) );
 				temp.appendChild( temp2 );
 				result.appendChild( temp );

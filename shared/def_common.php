@@ -322,6 +322,36 @@ define ('CHAR_STATUS_TEMP_BANNED',				31 );
  */
 define ('CHAR_STATUS_INFORMATION_INCOMPLETE',	40 );
 
+// Logtype fuer account_log
+/**
+ * Logtype: Statusaenderung account
+ */
+define ('ACC_LOG_TYPE_ACC_STATUS',      		0 );
+
+/**
+ * Logtype: Notiz zu Account
+ */
+define ('ACC_LOG_TYPE_ACC_NOTE',      			1 );
+
+/**
+ * Logtype: Verwarnung zu Account
+ */
+define ('ACC_LOG_TYPE_ACC_ADMONISHMENT',      	2 );
+
+/**
+ * Logtype: Statusaenderung Charakter
+ */
+define ('ACC_LOG_TYPE_CHAR_STATUS',        		3 );
+
+/**
+ * Logtype: Notiz zu Charakter
+ */
+define ('ACC_LOG_TYPE_CHAR_NOTE',             	4 );
+
+/**
+ * Logtype: Verwarnung zu Charakter
+ */
+define ('ACC_LOG_TYPE_CHAR_ADMONISHMENT',  		5 );
 
 
 function getGenderArray($lang="")
@@ -462,7 +492,7 @@ function getCharStatusArray($lang="")
 		    CHAR_STATUS_JAILED => "Eingesperrt",
 		    CHAR_STATUS_TEMP_JAILED => "Temporär eingesperrt",
 		    CHAR_STATUS_BANNED => "Gebannt",
-		    CHAR_STATUS_TEMP_BANNED => "Tempprär gebannt",
+		    CHAR_STATUS_TEMP_BANNED => "Temporär gebannt",
 		    CHAR_STATUS_INFORMATION_INCOMPLETE => "Informationen unvollständig"
 		);
 	}

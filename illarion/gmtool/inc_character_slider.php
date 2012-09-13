@@ -122,14 +122,7 @@
 		});
 		<?php } ?>
 	};
-	if (typeof myLightWindow != 'undefined')
-	{
-		myLightWindow.addEventOnReady( init1 );
-	}
-	else
-	{
 		window.addEventListener("load", init1, false);
-	}
 ]]></script>
 	<?php
 	}
@@ -179,14 +172,7 @@
 			}
 		});
 	};
-	if (typeof myLightWindow != 'undefined')
-	{
-		myLightWindow.addEventOnReady( init2 );
-	}
-	else
-	{
 		window.addEventListener("load", init2, false);
-	}
 ]]></script>
 	<?php
 	}
@@ -335,14 +321,7 @@
 		});
 	};
 
-	if (typeof myLightWindow != 'undefined')
-	{
-		myLightWindow.addEventOnReady( init3 );
-	}
-	else
-	{
 		window.addEventListener("load", init3, false);
-	};
 ]]></script>
 	<?php
 	}

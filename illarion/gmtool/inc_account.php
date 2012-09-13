@@ -22,11 +22,11 @@
 		return $account_data;
 	}
 
-    function getAccountNameAndState( $accid )
+    function getAccountLoginAndState( $accid )
     {
         $account =& Database::getPostgreSQL( 'accounts' );
 
-        $query = 'SELECT acc_name, acc_state'
+        $query = 'SELECT acc_login, acc_state'
         .PHP_EOL.'FROM account'
         .PHP_EOL.'WHERE acc_id = '.$account->Quote( $accid )
         ;
@@ -36,6 +36,19 @@
         return $account_data;
     }
 
+	function getAccountLogin( $accid )
+    {
+        $account =& Database::getPostgreSQL( 'accounts' );
+
+		$query = 'SELECT acc_login'
+        .PHP_EOL.'FROM account'
+        .PHP_EOL.'WHERE acc_id = '.$account->Quote( $accid )
+        ;
+        $account->setQuery( $query );
+        $account_login = $account->loadResult();
+
+        return $account_login;
+    }
 
     function getAccountName( $accid )
     {
@@ -97,11 +110,17 @@
 
     function getLogTypeString($id) {
         switch ($id) {
-            case 0: return (Page::isGerman() ? 'Status' : 'status');
+            case 0: return (Page::isGerman() ? 'Status' : 'Status');
                 break;
             case 1: return (Page::isGerman() ? 'Info' : 'info');
                 break;
 			case 2: return (Page::isGerman() ? 'Verwarnung' : 'Admonishment');
+                break;
+			case 3: return (Page::isGerman() ? 'Status' : 'Status');
+                break;
+			case 4: return (Page::isGerman() ? 'Info' : 'Info');
+                break;
+			case 5: return (Page::isGerman() ? 'Verwarnung' : 'Admonishment');
                 break;
             default: return (Page::isGerman() ? '': 'unknown');
         }

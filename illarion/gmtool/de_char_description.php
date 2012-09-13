@@ -13,12 +13,13 @@
 		exit();
 	}
 
+	Page::Init();	
+
 	$pgSQL =& Database::getPostgreSQL( $server );
 
 	$query = 'SELECT COUNT(*)'
 	.PHP_EOL.' FROM chars'
-	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-	.PHP_EOL.' AND chr_playerid = '.$pgSQL->Quote( $charid )
+	.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
 	;
 	$pgSQL->setQuery( $query );
 
@@ -29,14 +30,12 @@
 		exit();
 	}
 
-	Page::Init();
-
 	$descriptions = array();
 	$query = 'SELECT chr_name, chr_shortdesc_de, chr_shortdesc_us'
 	.PHP_EOL.' FROM chars'
-	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-	.PHP_EOL.' AND chr_playerid = '.$pgSQL->Quote( $charid )
+	.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
 	;
+
 	$pgSQL->setQuery( $query );
 	list($charname, $descriptions['short_de'], $descriptions['short_us']) = $pgSQL->loadRow();
 
@@ -50,11 +49,12 @@
 		$db_hp->setQuery( $query );
 		list($descriptions['long_de'], $descriptions['long_us']) = $db_hp->loadRow();
 	}
-
-	$descriptions['short_de'] = ( $descriptions['short_de'] ? htmlspecialchars($descriptions['short_de']) : '' );
-	$descriptions['short_us'] = ( $descriptions['short_us'] ? htmlspecialchars($descriptions['short_us']) : '' );
-	$descriptions['long_de']  = ( $descriptions['long_de']  ? htmlspecialchars($descriptions['long_de'])  : '' );
-	$descriptions['long_us']  = ( $descriptions['long_us']  ? htmlspecialchars($descriptions['long_us'])  : '' );
+	
+	// value from post overwrite
+	$descriptions['short_de'] = ( isset($_POST['short_de']) ? htmlspecialchars($_POST['short_de']) : ( $descriptions['short_de'] ? htmlspecialchars($descriptions['short_de']) : '' ) );
+    $descriptions['short_us'] = ( isset($_POST['short_us']) ? htmlspecialchars($_POST['short_us']) : ( $descriptions['short_us'] ? htmlspecialchars($descriptions['short_us']) : '' ) );
+    $descriptions['long_de']  = ( isset($_POST['long_de'])  ? htmlspecialchars($_POST['long_de'])  : ( $descriptions['long_de']  ? htmlspecialchars($descriptions['long_de'])  : '' ) );
+    $descriptions['long_us']  = ( isset($_POST['long_us'])  ? htmlspecialchars($_POST['long_us'])  : ( $descriptions['long_us']  ? htmlspecialchars($descriptions['long_us'])  : '' ) );
 
 	Page::setTitle( array( 'Account', 'Charakterbeschreibung', $charname ) );
 	Page::setDescription( 'Auf dieser Seite kann die Beschreibung des Charakters geändert werden.' );

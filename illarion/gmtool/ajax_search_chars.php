@@ -14,7 +14,7 @@
 	$status = (array_key_exists ($_POST['state'], getCharStatusArray()) ? $_POST['state'] : false );
 	$race   = ( $_POST['race'] > -1  ? $_POST['race'] : false );
 	$sex    = ( $_POST['sex'] == 0 || $_POST['sex'] == 1 ? $_POST['sex'] : false );
-	$online = ( $_POST['online'] == 0 || $_POST['online'] == 1 ? $_POST['online'] : false );
+	$online = ( $_POST['online'] == 1 || $_POST['online'] == 0 ? $_POST['online'] : false );
 
 	$search_acc = ($_POST['acc'] != 0);
 	$search_email = ($_POST['email'] != 0);
@@ -31,7 +31,7 @@
 		exit();
 	}
 
-	$account        =& Database::getMySQL();
+	$account        =& Database::getPostgreSQL( 'accounts' );
 	$illarionserver =& Database::getPostgreSQL( 'illarionserver' );
 	$testserver     =& Database::getPostgreSQL( 'testserver' );
 
@@ -40,19 +40,19 @@
 	{
 		if ($numeric_search)
 		{
-			$search_for[] = '`id` = '.$account->Quote( $search );
+			$search_for[] = 'acc_id = '.$account->Quote( $search );
 		}
-		$search_for[] = '`name` LIKE '.$account->Quote( '%'.$search.'%' );
-		$search_for[] = '`username` LIKE '.$account->Quote( '%'.$search.'%' );
+		$search_for[] = 'acc_name LIKE '.$account->Quote( '%'.$search.'%' );
+		$search_for[] = 'acc_login LIKE '.$account->Quote( '%'.$search.'%' );
 	}
 	if ($search_email)
 	{
-		$search_for[] = '`email` LIKE '.$account->Quote( '%'.$search.'%' );
+		$search_for[] = 'acc_email LIKE '.$account->Quote( '%'.$search.'%' );
 	}
 	if (count($search_for))
 	{
-		$query = "SELECT `id`"
-		. "\n FROM `homepage_user`"
+		$query = "SELECT acc_id"
+		. "\n FROM account"
 		. "\n WHERE ".implode( " OR ", $search_for );
 		$account->setQuery( $query );
 		$acc_list = $account->loadResultArray();
@@ -102,7 +102,8 @@
 	}
 	if ($online !== false)
 	{
-		$where[] = '( ( SELECT COUNT(*) FROM onlineplayer WHERE on_playerid = chr_playerid ) = '.( $online === 0 ? 0 : 1).')';
+		
+		$where[] = '( (SELECT COUNT(*) FROM onlineplayer WHERE chr_playerid = on_playerid) = '.$online.' )';
 	}
 	if ($acc_list)
 	{
@@ -114,6 +115,7 @@
 	. "\n AND (".implode( ' OR ', $or ).")";
 	;
 	$query = "SELECT COUNT(*)".$subquery;
+	$moep = $query;
 	$count = 0;
 	if ($server === -1 || $server === 0)
 	{

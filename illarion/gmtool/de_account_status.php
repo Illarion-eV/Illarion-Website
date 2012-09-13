@@ -12,9 +12,9 @@
 		exit();
 	}
 
-    Page::setTitle( array( 'GM-Tool', 'Account', $account_data['acc_login'] ) );
-    Page::setDescription( 'Hier befindet sich eine Übersicht den Status des Accounts "'.$account_data['acc_login'].'"' );
-    Page::setKeywords( array( 'GM-Tool', 'Account', 'Einstellungen', $account_data['acc_login'] ) );
+    Page::setTitle( array( 'GM-Tool', 'Account' ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht den Status des Accounts' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Einstellungen' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
 
@@ -30,8 +30,8 @@
 		exit();
 	}
 
-	list($account_name,$account_state) = getAccountNameAndState( $accid );
-	if (!$account_name || !strlen($account_name))
+	list($account_login,$account_state) = getAccountLoginAndState( $accid );
+	if (!$account_login || !strlen($account_login))
 	{
 		Messages::add('Account wurde nicht gefunden', 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
@@ -39,7 +39,7 @@
 	}
 ?>
 
-<h1>Status - <?php echo $account_name; ?></h1>
+<h1>Status - <?php echo $account_login; ?></h1>
 
 <?php include_menu(); ?>
 

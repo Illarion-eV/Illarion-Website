@@ -12,9 +12,9 @@
 		exit();
 	}
 
-    Page::setTitle( array( 'GM-Tool', 'Account', $account_data['acc_login'] ) );
-    Page::setDescription( 'Hier befindet sich eine Übersicht die Notizen zu dem Account "'.$account_data['acc_login'].'"' );
-    Page::setKeywords( array( 'GM-Tool', 'Account', 'Notizen', $account_data['acc_login'] ) );
+    Page::setTitle( array( 'GM-Tool', 'Account' ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht die Notizen zu dem Account' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Notizen' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
 
@@ -29,19 +29,17 @@
 		exit();
 	}
 
-	$account_name = getAccountName( $accid );
-	if (!$account_name || !strlen($account_name))
+	$account_login = getAccountLogin( $accid );
+	if (!$account_login || !strlen($account_login))
 	{
 		Messages::add('Account wurde nicht gefunden', 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
-//	list($notes,$warnings) = getNotes( $accid );
-
 ?>
 
-<h1>Notizen und Warnungen - <?php echo $account_name; ?></h1>
+<h1>Notizen und Warnungen - <?php echo $account_login; ?></h1>
 
 <?php include_menu(); ?>
 

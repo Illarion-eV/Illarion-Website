@@ -18,12 +18,11 @@
 		exit();
 	}
 
-	$pgSQL =& Database::getPostgreSQL( $server );
+	$pgSQL =& Database::getPostgreSQL( );
 
 	$query = "SELECT COUNT(*)"
-	. "\n FROM chars"
-	. "\n WHERE chr_accid = ".$pgSQL->Quote( IllaUser::$ID )
-	. "\n AND chr_playerid = ".$pgSQL->Quote( $charid )
+	. "\n FROM ".$server.".chars"
+	. "\n WHERE chr_playerid = ".$pgSQL->Quote( $charid )
 	;
 	$pgSQL->setQuery( $query );
 
@@ -37,15 +36,14 @@
 	$story_de = $_POST['story_de'];
 	$story_us = $_POST['story_us'];
 
-	$db_hp =& Database::getMySQL( 'homepage' );
-
-	$query = "UPDATE character_details"
-	. "\n SET story_de = ".$db_hp->Quote( $story_de )
-	. ", story_us = ".$db_hp->Quote( $story_us )
-	. "\n WHERE char_id =".$db_hp->Quote( $charid )
+	$query = "UPDATE homepage.character_details"
+	. "\n SET story_de = ".$pgSQL->Quote( $story_de )
+	. ", story_us = ".$pgSQL->Quote( $story_us )
+	. "\n WHERE char_id =".$pgSQL->Quote( $charid )
 	;
-	$db_hp->setQuery( $query );
-	$db_hp->query();
+
+	$pgSQL->setQuery( $query );
+	$pgSQL->query();
 
 	Messages::add( (Page::isGerman() ? 'Die Geschichte wurde erfolgreich gespeichert.' : 'The story was successfully saved.'), 'info' );
 ?>

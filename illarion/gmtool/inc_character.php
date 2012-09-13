@@ -7,6 +7,7 @@
 					.PHP_EOL."chars.chr_accid,"
 					.PHP_EOL."chars.chr_playerid,"
 					.PHP_EOL."chars.chr_status,"
+					.PHP_EOL."chars.chr_statustime,"
 					.PHP_EOL."chars.chr_lastsavetime,"
 					.PHP_EOL."chars.chr_lastip,"
 					.PHP_EOL."chars.chr_name,"
@@ -40,4 +41,28 @@
 		return $char_data;
 	}
 
+	function getCharStatusData($charid, $server)
+	{
+		$pgSQL =& Database::getPostgreSQL();
+
+		$query = "SELECT "
+			.PHP_EOL."chars.chr_name,"
+			.PHP_EOL."chars.chr_status,"
+			.PHP_EOL."chars.chr_statustime,"
+			.PHP_EOL."chars.chr_statusgm,"
+			.PHP_EOL."chars.chr_statusreason "
+			.PHP_EOL."FROM ".$server.".chars "
+			.PHP_EOL."WHERE chr_playerid = ".$pgSQL->Quote( $charid)
+			;
+
+		$pgSQL->setQuery( $query );
+        $status_data = $pgSQL->loadAssocRow();
+
+		return $status_data;
+	}
+
+	function tempStatusTimeForm()
+	{ 
+		echo "moep";	
+	}
 ?>
