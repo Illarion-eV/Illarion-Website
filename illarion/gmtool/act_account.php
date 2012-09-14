@@ -1,17 +1,17 @@
 <?php
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add(($language=='de'?'Zugriff verweigert':'Access denieded'), 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add((Page::isGerman()?'Zugriff verweigert':'Access denieded'), 'error');
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 
 	if (!$accid)
 	{
-		Messages::add(($language=='de'?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add((Page::isGerman()?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
@@ -52,10 +52,10 @@
 
 	if ($pgSQL->query())
 	{
-		Messages::add(($language=='de'?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
+		Messages::add((Page::isGerman()?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
 	}
 	else
 	{
-		Messages::add(($language=='de'?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
+		Messages::add((Page::isGerman()?'Fehler beim speichern der Daten':'Error while saving data'), 'error');
 	}
 ?>

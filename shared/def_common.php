@@ -326,32 +326,86 @@ define ('CHAR_STATUS_INFORMATION_INCOMPLETE',	40 );
 /**
  * Logtype: Statusaenderung account
  */
-define ('ACC_LOG_TYPE_ACC_STATUS',      		0 );
+define ('ACC_LOG_TYPE_STATUS',      		0 );
 
 /**
  * Logtype: Notiz zu Account
  */
-define ('ACC_LOG_TYPE_ACC_NOTE',      			1 );
+define ('ACC_LOG_TYPE_NOTE',      			1 );
 
 /**
  * Logtype: Verwarnung zu Account
  */
-define ('ACC_LOG_TYPE_ACC_ADMONISHMENT',      	2 );
+define ('ACC_LOG_TYPE_ADMONISHMENT',      	2 );
 
 /**
  * Logtype: Statusaenderung Charakter
  */
-define ('ACC_LOG_TYPE_CHAR_STATUS',        		3 );
+define ('CHAR_LOG_TYPE_STATUS',        		0 );
 
 /**
  * Logtype: Notiz zu Charakter
  */
-define ('ACC_LOG_TYPE_CHAR_NOTE',             	4 );
+define ('CHAR_LOG_TYPE_NOTE',             	1 );
 
 /**
  * Logtype: Verwarnung zu Charakter
  */
-define ('ACC_LOG_TYPE_CHAR_ADMONISHMENT',  		5 );
+define ('CHAR_LOG_TYPE_ADMONISHMENT',  		2 );
+
+/**
+ * Logtype: Attributaenderung zu Charakter
+ */
+define ('CHAR_LOG_TYPE_CHANGE_ATTRIB',       4 );
+
+/**
+ * Logtype: Skillaenderung zu Charakter
+ */
+define ('CHAR_LOG_TYPE_CHANGE_SKILL',       5 );
+
+// Skillclasses
+/**
+ * Skillclass: language
+ */
+define ('SKILL_CLASS_LANGUAGE',       		1 );
+
+/**
+ * Skillclass: crafting
+ */
+define ('SKILL_CLASS_CRAFTING',             2 );
+
+/**
+ * Skillclass: magic
+ */
+define ('SKILL_CLASS_MAGIC',             	3 );
+
+/**
+ * Skillclass: misc
+ */
+define ('SKILL_CLASS_MISC',                4 );
+
+/**
+ * Skillclass: fighting
+ */
+define ('SKILL_CLASS_FIGHTING',             5 );
+
+/**
+ * Skillclass: druid
+ */
+define ('SKILL_CLASS_DRUID',             	6 );
+
+/**
+ * Skillclass: priest
+ */
+define ('SKILL_CLASS_PRIEST',             	7 );
+
+/**
+ * Skillclass: bard
+ */
+define ('SKILL_CLASS_BARD',             	8 );
+
+
+
 
 
 function getGenderArray($lang="")

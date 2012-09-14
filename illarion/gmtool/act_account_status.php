@@ -3,26 +3,32 @@
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add(($language=='de'?'Zugriff verweigert':'Access denieded'), 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add((Page::isGerman()?'Zugriff verweigert':'Access denieded'), 'error');
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 
 	if (!$accid)
 	{
-		Messages::add(($language=='de'?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add((Page::isGerman()?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
 	$new_status = ( is_numeric($_POST['status']) ? (int)$_POST['status'] : null );
 	$new_reason   = ( strlen($_POST['reason']) > 0 ? (string)$_POST['reason'] : '' );
 
-	if ( !is_null( $new_status ) )
-	{
+    $error = 0;
+    if (strlen($new_reason) <= 10)
+    {
+        Messages::add( (Page::isGerman() ? 'Die Begründung muss mindestens 10 Zeichen lang sein.' : 'The reason must be have at least 10 characters.'), 'error' );
+        $error = 1;
+    }
 
+    if ( !is_null( $new_status ) && $error == 0 )
+    {
 		$pgSQL =& Database::getPostgreSQL( 'accounts' );
 		
 		$query = 'SELECT acc_state'
@@ -48,7 +54,7 @@
 			$pgSQL->setQuery( $query );
 			$pgSQL->query();
 
-			Messages::add(($language=='de'?'Status wurde geändert':'State got changed'), 'info');
+			Messages::add((Page::isGerman()?'Status wurde geändert':'State got changed'), 'info');
 		}
 	}
 

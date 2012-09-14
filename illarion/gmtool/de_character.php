@@ -6,7 +6,7 @@
 
 	if (!IllaUser::auth('gmtool_chars'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -25,7 +25,7 @@
 
 	if (!$charid)
 	{
-		Messages::add('Charakter ID wurde nicht richtig übergeben', 'error');
+		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transfered correctly'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -34,7 +34,7 @@
 
 	if (!$char_data || !count($char_data))
 	{
-		Messages::add('Charakter wurde nicht gefunden', 'error');
+		Messages::add( (Page::isGerman() ? 'Charakter wurde nicht gefunden' : 'Character not found'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -61,7 +61,7 @@
 			<dt>Account ID</dt>
 			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Account Name</dt>
-			<dd><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?id=<?php echo $char_data['chr_accid']; ?>">
+			<dd><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?accid=<?php echo $char_data['chr_accid']; ?>">
 				<?php echo $char_data['acc_name']; ?>
 				</a>
 				(<?php echo $char_data['acc_email']; ?>)

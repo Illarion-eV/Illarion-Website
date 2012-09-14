@@ -1,30 +1,30 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_topmenu.php' );
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_accountmenu.php' );
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_account.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_accountmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_account.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
 
-	Page::setTitle( array( 'GM-Tool', 'Account', $account_data['acc_login'] ) );
-    Page::setDescription( 'Hier befindet sich eine Übersicht die Einstellungen des Accounts "'.$account_data['acc_login'].'"' );
-    Page::setKeywords( array( 'GM-Tool', 'Account', 'Status', $account_data['acc_login'] ) );
+	Page::setTitle( array( 'GM-Tool', 'Account',  ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht die Einstellungen des Accounts' );
+    Page::setKeywords( array( 'GM-Tool', 'Account', 'Einstellungen' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
 
     Page::setXHTML();
     Page::Init();
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 	if (!$accid)
 	{
-		Messages::add('Account ID wurde nicht richtig übergeben', 'error');
+		Messages::add( (Page::isGerman() ? 'Account ID wurde nicht richtig übergeben' : 'Account ID was not transfered correctly'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -33,7 +33,7 @@
 	$account_data = getAccountData( $accid );
 	if (!$account_data || !count($account_data))
 	{
-		Messages::add('Account wurde nicht gefunden', 'error');
+		Messages::add( (Page::isGerman() ? 'Account wurde nicht gefunden' : 'Account not found'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -47,7 +47,9 @@
 
 <?php include_account_menu( $account_data['acc_id'], 1 ); ?>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?id=<?php echo $account_data['acc_id']; ?>" method="post">
+<div class="spacer"></div>
+
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?accid=<?php echo $account_data['acc_id']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
 			<dt>Account ID</dt>

@@ -8,8 +8,8 @@
 
 	if (!$charid)
 	{
-		Messages::add('Charakter ID wurde nicht richtig übertragen.', 'error' );
-		include_once('de_charlist.php');
+		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transfered correctly'), 'error' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_charlist.php' );
 		exit();
 	}
 
@@ -25,8 +25,8 @@
 
 	if (!$pgSQL->loadResult())
 	{
-		Messages::add('Charakter wurde nicht gefunden.', 'error' );
-		include_once('de_charlist.php');
+		Messages::add( (Page::isGerman() ? 'Charakter wurde nicht gefunden' : 'Character not found'), 'error' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_charlist.php' );
 		exit();
 	}
 

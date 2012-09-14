@@ -159,7 +159,7 @@ function parseResponse( object )
 				temp.appendChild( document.createTextNode( id ) );
 				temp.appendChild( document.createTextNode( ' - ' ) );
 				var temp2 = document.createElement( 'a' );
-				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_account.php?id='+id;
+				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_account.php?accid='+id;
 				temp2.appendChild( document.createTextNode( name ) );
 				temp.appendChild( temp2 );
 				result.appendChild( temp );

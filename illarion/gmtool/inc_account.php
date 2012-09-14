@@ -108,6 +108,31 @@
         return array_merge( $charlist, $testSQL->loadAssocList() );
     }
 
+	function getAccountRightsAndGroups($accid)
+	{
+/*
+		$pgSQL =& Database::getPostgreSQL( 'accounts' );
+
+		$query = "SELECT account_rights., "
+                    .PHP_EOL."account.acc_name, "
+                    .PHP_EOL."account_log.al_id, "
+                    .PHP_EOL."account_log.al_time, "
+                    .PHP_EOL."account_log.al_message, "
+                    .PHP_EOL."account_log.al_type "
+                .PHP_EOL."FROM account_log "
+                .PHP_EOL."INNER JOIN account ON account_log.al_gm_id = account.acc_id "
+                .PHP_EOL."WHERE account_log.al_user_id = ".$pgSQL->Quote( $accid)
+                .PHP_EOL."ORDER BY account_log.al_time DESC";
+
+        $pgSQL->setQuery( $query );
+        $loglist = $pgSQL->loadAssocList();
+
+        return array($right_list, $group_list);
+*/
+		return array("moep","moep1");
+
+	}
+
     function getLogTypeString($id) {
         switch ($id) {
             case 0: return (Page::isGerman() ? 'Status' : 'Status');
@@ -116,16 +141,9 @@
                 break;
 			case 2: return (Page::isGerman() ? 'Verwarnung' : 'Admonishment');
                 break;
-			case 3: return (Page::isGerman() ? 'Status' : 'Status');
-                break;
-			case 4: return (Page::isGerman() ? 'Info' : 'Info');
-                break;
-			case 5: return (Page::isGerman() ? 'Verwarnung' : 'Admonishment');
-                break;
             default: return (Page::isGerman() ? '': 'unknown');
         }
     }
-
 
 	function decode_ip($int_ip)
 	{

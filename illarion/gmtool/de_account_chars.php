@@ -1,12 +1,12 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_topmenu.php' );
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_accountmenu.php' );
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_account.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_accountmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_account.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -20,17 +20,17 @@
     Page::setXHTML();
     Page::Init();
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 	if (!$accid)
 	{
-		Messages::add('Account ID wurde nicht richtig übergeben', 'error');
+		Messages::add( (Page::isGerman() ? 'Account ID wurde nicht richtig übergeben' : 'Account ID was not transfered correctly'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 	$account_login = getAccountLogin( $accid );
 	if (!$account_login || !strlen($account_login))
 	{
-		Messages::add('Account wurde nicht gefunden', 'error');
+		Messages::add( (Page::isGerman() ? 'Account wurde nicht gefunden' : 'Account not found'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -67,7 +67,8 @@
             <tr><td style='height:50px;text-align:center;' colspan='6'>Es wurden keine Charaktere gefunden.</td></tr>
 	    <?php } else { ?>
 			<?php foreach ($charlist as $key=>$char): ?>
-			<tr class="row<?php echo (($key+1)%2); ?>">
+			<?php $class = ( in_array($char['chr_status'],array(CHAR_STATUS_BANNED, CHAR_STATUS_TEMP_BANNED,CHAR_STATUS_JAILED,CHAR_STATUS_TEMP_JAILED))) ? "rowerror" : "row".(($key+1)%2); ?>
+            <tr class="<?php echo $class; ?>">
 				<td><?php echo $char['chr_playerid']; ?></td>
 				<td><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?charid=<?php echo $char['chr_playerid']; ?>"><?php echo $char['chr_name']; ?></a></td>
 				<td><?php echo IllarionData::getRaceName($char['chr_race']); ?></td>

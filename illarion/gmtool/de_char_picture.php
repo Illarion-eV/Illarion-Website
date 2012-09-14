@@ -1,12 +1,13 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
-	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_character_settings.php' );
+	includeWrapper::includeOnce(  Page::getRootPath().'/illarion/gmtool/inc_character_settings.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? false : true );
 
 	if ( !$server )
 	{
 		exit('Abgeschalten für Testserver Charaktere.');
+		
 	}
 
 	Page::setXML();

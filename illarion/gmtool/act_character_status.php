@@ -64,21 +64,8 @@
 			$pgSQL->setQuery( $query );
 			$pgSQL->query();
 
-			$query = "INSERT INTO account_log "
-					.PHP_EOL."(al_user_id, "
-					.PHP_EOL."al_gm_id, "
-					.PHP_EOL."al_time, "
-					.PHP_EOL."al_message, "
-					.PHP_EOL."al_type)"
-					.PHP_EOL."VALUES (".$pgSQL->Quote( $accid )
-					.PHP_EOL.", ".$pgSQL->Quote( IllaUser::$ID )
-					.PHP_EOL.", ".CURRENT_TIMESTAMP
-					.PHP_EOL.", ".$pgSQL->Quote( $msg )
-					.PHP_EOL.", ".ACC_LOG_TYPE_CHAR_STATUS.")";
-
-			$pgSQL->setQuery( $query );
-			$pgSQL->query();
-
+			writeCharLog($accid, $charid, IllaUser::$ID, $msg, CHAR_LOG_TYPE_STATUS, $server);
+			
 			Messages::add( (Page::isGerman() ?'Status wurde geändert':'State got changed'), 'info');
 		}
 

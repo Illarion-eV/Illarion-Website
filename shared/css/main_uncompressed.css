@@ -91,6 +91,15 @@ a.tooltip:focus {
 	text-decoration:none;
 }
 
+a.none,
+a.none:link,
+a.none:visited,
+a.none:active,
+a.none:hover,
+a.none:focus {
+	text-decoration:none;
+}
+
 b, .bold, strong,
 b *, .bold *, strong * {
 	font-weight: bold;

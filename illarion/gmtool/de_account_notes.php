@@ -1,14 +1,14 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/illarion_data.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_accountmenu.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_account.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/shared/illarion_data.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_accountmenu.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_account.php' );
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
@@ -21,19 +21,19 @@
     Page::setXHTML();
     Page::Init();
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 	if (!$accid)
 	{
-		Messages::add('Account ID wurde nicht richtig übergeben', 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add( (Page::isGerman() ? 'Account ID wurde nicht richtig übergeben' : 'Account ID was not transfered correctly'), 'error' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
 	$account_login = getAccountLogin( $accid );
 	if (!$account_login || !strlen($account_login))
 	{
-		Messages::add('Account wurde nicht gefunden', 'error');
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		Messages::add( (Page::isGerman() ? 'Account wurde nicht gefunden' : 'Account not found'), 'error' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
@@ -51,7 +51,7 @@
 
 <h2>Notizen</h2>
 
-<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" id="note_form">
+<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="note_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
 		<input type="submit" value="Neue Notiz eintragen" name="submit" />
@@ -63,7 +63,7 @@
 
 <h2>Verwarnungen</h2>
 
-<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?id=<?php echo $accid; ?>" method="post" id="warn_form">
+<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="warn_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
 		<input type="submit" value="Neue Verwarnung eintragen" name="submit" />

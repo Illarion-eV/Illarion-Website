@@ -7,7 +7,7 @@
 
 	if (!IllaUser::auth('gmtool_chars'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -33,7 +33,7 @@
 
 	if (!$charid)
 	{
-		Messages::add('Charakter ID wurde nicht richtig übergeben', 'error');
+		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transfered correctly'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -44,15 +44,10 @@
 
 	if (!$char_data || !count($char_data))
 	{
-		Messages::add('Charakter wurde nicht gefunden', 'error');
+		Messages::add( (Page::isGerman() ? 'Charakter wurde nicht gefunden' : 'Character not found'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
-/*
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-*/
 
 ?>
 <h1>Charakterdetails - <?php echo $char_data['chr_name']; ?></h1>
@@ -71,6 +66,7 @@ echo "</pre>";
 	</div>
 
 	<div>
+		<?php if ($server == "illarionserver") : ?>
         <dl>
             <dd>
                 <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:300,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
@@ -79,9 +75,11 @@ echo "</pre>";
             </dd>
             <dt>&nbsp;</dt>
             <dd>
+			<?php if ($server == "illarionserver") : ?>
                 <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
                         Bild des Charakters bearbeiten
                 </a>
+			<?php endif ?>
             </dd>
             <dt>&nbsp;</dt>
             <dd>
@@ -96,6 +94,7 @@ echo "</pre>";
                 </a>
             </dd>
         </dl>
+	<?php endif ?>
     </div>
 </div>
 
