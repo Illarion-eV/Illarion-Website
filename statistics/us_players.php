@@ -26,7 +26,7 @@ anyway because this makes it usually easier to find errors.</p>
 <?php endif; ?>
 
 <h2>
-	<span class="float_left">Overview (State: <?php echo strftime( '%d. %B %Y %H:%M%p', IllaDateTime::TimestampWithOffset() ) ?>)</span>
+	<span class="float_left">Overview (State: <?php echo strftime( '%d. %B %Y %H:%M:%S', IllaDateTime::TimestampWithOffset() ) ?> <?php echo strtolower(strftime( '%p', IllaDateTime::TimestampWithOffset() )) ?>)</span>
 	<span class="float_right"><?php echo IllaDateTime::IllaTimestampToTime( 'dS F Y - h:i:s a' ); ?></span>
 	<a class="clr" style="display:block;"></a>
 </h2>
