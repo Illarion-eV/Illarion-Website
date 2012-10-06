@@ -537,10 +537,10 @@ function getHumanFemaleHairArray($lang="")
 	{
 		return array(
 			HUMAN_FEMALE_HAIR_0 => "--No hair--",
-			HUMAN_FEMALE_HAIR_1 => "hair 1",
-			HUMAN_FEMALE_HAIR_4 => "hair 2",
-			HUMAN_FEMALE_HAIR_7 => "hair 3",
-			HUMAN_FEMALE_HAIR_8 => "hair 4"
+			HUMAN_FEMALE_HAIR_1 => "Medium Length Hair",
+			HUMAN_FEMALE_HAIR_4 => "Pinned Up Hair",
+			HUMAN_FEMALE_HAIR_7 => "Long Open Hair",
+			HUMAN_FEMALE_HAIR_8 => "Long Braided Hair"
 		);
 	}
 }
@@ -560,9 +560,9 @@ function getHumanMaleHairArray($lang="")
 	{
 		return array(
 			HUMAN_MALE_HAIR_0 => "--No hair--",
-		    HUMAN_MALE_HAIR_1 => "hair 1",
-		    HUMAN_MALE_HAIR_2 => "hair 2",
-		    HUMAN_MALE_HAIR_3 => "hair 3"
+		    HUMAN_MALE_HAIR_1 => "Short Hair",
+		    HUMAN_MALE_HAIR_2 => "Medium Length Hair",
+		    HUMAN_MALE_HAIR_3 => "Long Hair"
 		);
 	}
 
@@ -586,12 +586,12 @@ function getHumanBeardArray($lang="")
 	{
 		return array(
 			HUMAN_BEARD_0 => "--No beard--",
-		    HUMAN_BEARD_1 => "beard 1",
-		    HUMAN_BEARD_3 => "beard 2",
-		    HUMAN_BEARD_4 => "beard 3",
-		    HUMAN_BEARD_5 => "beard 4",
-		    HUMAN_BEARD_6 => "beard 5",
-		    HUMAN_BEARD_8 => "beard 6"
+		    HUMAN_BEARD_1 => "Short Beard",
+		    HUMAN_BEARD_3 => "Goatee Beard",
+		    HUMAN_BEARD_4 => "Square Beard",
+		    HUMAN_BEARD_5 => "Thin Beard",
+		    HUMAN_BEARD_6 => "Long Beard",
+		    HUMAN_BEARD_8 => "Mutton Chops"
 		);
 	}
 }
@@ -610,10 +610,10 @@ function getHalflingFemaleHairArray($lang="")
 	else
 	{
 		return array(
-		    HALFLING_FEMALE_HAIR_1 => "hair 1",
-		    HALFLING_FEMALE_HAIR_2 => "hair 2",
-		    HALFLING_FEMALE_HAIR_4 => "hair 3",
-		 	HALFLING_FEMALE_HAIR_9 => "hair 4"
+		    HALFLING_FEMALE_HAIR_1 => "Medium Length Hair",
+		    HALFLING_FEMALE_HAIR_2 => "Medium Bushy Hair",
+		    HALFLING_FEMALE_HAIR_4 => "Pinned Up",
+		 	HALFLING_FEMALE_HAIR_9 => "Ponytail"
 		);
 	}
 }
@@ -630,8 +630,8 @@ function getHalflingMaleHairArray($lang="")
 	else
 	{
 		return array(
-		    HALFLING_MALE_HAIR_1 => "hair 1",
-		    HALFLING_MALE_HAIR_2 => "hair 2"
+		    HALFLING_MALE_HAIR_1 => "Short Hair",
+		    HALFLING_MALE_HAIR_2 => "Medium Length Hair"
 		);
 	}
 }
@@ -670,10 +670,10 @@ function getDwarfFemaleHairArray($lang="")
 	{
 		return array(
 			DWARF_FEMALE_HAIR_0 => "--No hair--",
-		    DWARF_FEMALE_HAIR_1 => "hair 1",
-		    DWARF_FEMALE_HAIR_4 => "hair 2",
-		    DWARF_FEMALE_HAIR_7 => "hair 3",
-		    DWARF_FEMALE_HAIR_9 => "hair 4"
+		    DWARF_FEMALE_HAIR_1 => "Braided Hair",
+		    DWARF_FEMALE_HAIR_4 => "Pinned Up Hair",
+		    DWARF_FEMALE_HAIR_7 => "Long Untied Hair",
+		    DWARF_FEMALE_HAIR_9 => "Ponytail"
 
 		);
 	}
@@ -694,9 +694,9 @@ function getDwarfMaleHairArray($lang="")
 	{
 		return array(
 			DWARF_MALE_HAIR_0 => "--No hair--",
-			DWARF_MALE_HAIR_1 => "hair 1",
-			DWARF_MALE_HAIR_2 => "hair 2",
-			DWARF_MALE_HAIR_3 => "hair 3"
+			DWARF_MALE_HAIR_1 => "Short Hair",
+			DWARF_MALE_HAIR_2 => "Long Hair(1)",
+			DWARF_MALE_HAIR_3 => "Long Hair(2)"
 		);
 	}
 }
@@ -716,9 +716,9 @@ function getDwarfBeardArray($lang="")
 	{
 		return array(
 		    DWARF_BEARD_0 => "--No beard--",
-		    DWARF_BEARD_1 => "beard 1",
-		    DWARF_BEARD_2 => "beard 2",
-		    DWARF_BEARD_4 => "beard 3",
+		    DWARF_BEARD_1 => "Short Beard",
+		    DWARF_BEARD_2 => "Long Beard",
+		    DWARF_BEARD_4 => "Long Thick Beard",
 		);
 	}
 }
@@ -836,11 +836,11 @@ function getLizardMaleHairArray($lang="")
 	{
 		return array(
 			LIZARD_MALE_HAIR_0 => "--No crown--",
-			LIZARD_MALE_HAIR_1 => "crown 1",
-			LIZARD_MALE_HAIR_2 => "crown 2",
-			LIZARD_MALE_HAIR_4 => "crown 3",
-		    LIZARD_MALE_HAIR_5 => "crown 4",
-			LIZARD_MALE_HAIR_6 => "crown 5"
+			LIZARD_MALE_HAIR_1 => "Single Crown",
+			LIZARD_MALE_HAIR_2 => "Double Crown",
+			LIZARD_MALE_HAIR_4 => "Spiked Crest",
+		    LIZARD_MALE_HAIR_5 => "Rounded Crown",
+			LIZARD_MALE_HAIR_6 => "Spiked Collar"
 		);
 	}
 }
@@ -958,11 +958,11 @@ function getOrcMaleHairArray($lang="")
 	{
 		return array(
 			ORC_MALE_HAIR_0 => "--No hair",
-			ORC_MALE_HAIR_1 => "hair 1",
-		    ORC_MALE_HAIR_2 => "hair 2",
-			ORC_MALE_HAIR_3 => "hair 3",
-			ORC_MALE_HAIR_4 => "hair 4",
-			ORC_MALE_HAIR_5 => "hair 5"
+			ORC_MALE_HAIR_1 => "Short Hair",
+		    ORC_MALE_HAIR_2 => "Ponytail",
+			ORC_MALE_HAIR_3 => "Very Messy Hair",
+			ORC_MALE_HAIR_4 => "Messy Hair",
+			ORC_MALE_HAIR_5 => "Longer Ponytail"
 		);
 	}
 }
@@ -1093,10 +1093,10 @@ function getElfFemaleHairArray($lang="")
 	else
 	{
 		return array(
-			ELF_FEMALE_HAIR_1 => "hair 1",
-			ELF_FEMALE_HAIR_4 => "hair 2",
-		    ELF_FEMALE_HAIR_7 => "hair 3",
-		    ELF_FEMALE_HAIR_8 => "hair 4"
+			ELF_FEMALE_HAIR_1 => "Medium Length Hair",
+			ELF_FEMALE_HAIR_4 => "Pinned Up Hair",
+		    ELF_FEMALE_HAIR_7 => "Long Hair",
+		    ELF_FEMALE_HAIR_8 => "Ponytail"
 		);
 	}
 }
@@ -1113,8 +1113,8 @@ function getElfMaleHairArray($lang="")
 	else
 	{
 		return array(
-		    ELF_MALE_HAIR_1 => "hair 1",
-		    ELF_MALE_HAIR_2 => "hair 2",
+		    ELF_MALE_HAIR_1 => "Short Hair",
+		    ELF_MALE_HAIR_2 => "Medium Length Hair",
 		);
 	}
 }

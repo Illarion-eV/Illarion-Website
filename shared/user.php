@@ -26,8 +26,13 @@ class IllaUser {
 	public static $clean_pw = '';
 	public static $lang = 'de';
 	private static $key = '';
-	private static $found_rights = null;
-	private static $found_groups = null;
+	//private static $found_rights = null;
+	//private static $found_groups = null;
+	public static $found_rights = null;
+    public static $found_groups = null;
+	public static $moep1 = null;
+	public static $moep2 = null;
+
 	private static $original_values = array();
 
 	public static final function login($username, $plain_pw, $remember_me) {
@@ -194,58 +199,44 @@ class IllaUser {
 		return true;
 	}
 
-	public static final function auth($name) {
-		global $_RIGHTS;
+	public static final function auth($name) 
+	{
 		if (!self::loggedIn()) {
-			return false;
+            return false;
+        }
+
+		$pgSQL = &Database::getPostgreSQL();
+
+		// rechte_id aus der DN
+		$query = "SELECT r_id FROM rights WHERE r_key_name = ".$pgSQL->Quote($name);
+		$pgSQL->setQuery($query);
+        $r_id = $pgSQL->loadResult();
+
+		// Rechtestring aus den Gruppen des Anwenders
+		$query = "SELECT g_rights FROM groups, account_groups WHERE g_id = ag_group_id AND ag_acc_id = ".$pgSQL->Quote(self::$ID);
+		$pgSQL->setQuery($query);
+        $right_strings = $pgSQL->loadAssocList();
+
+		foreach ($right_strings as $right_string)
+		{
+			$expl_r_array[] = explode(",", $right_string['g_rights']);
 		}
-		if (is_null($_RIGHTS)) {
-			includeWrapper::requireOnce(Page::getRootPath() . '/shared/rights_groups.php');
-			if (is_null($_RIGHTS)) {
-				return false;
+		$acc_rights = array();
+		foreach ($expl_r_array as $r_array)
+		{
+			foreach ($r_array as $right)
+			{
+				$acc_rights[$right] = $right;
 			}
 		}
 
-		if (!isset($_RIGHTS[$name])) {
-			trigger_error('UserManager Error: Right identificator "' . $name . '" not found.', E_USER_NOTICE);
-			return false;
-		}
-		$right = $_RIGHTS[$name];
-
-		if (is_null(self::$found_groups)) {
-			
-
-			$db = &Database::getPostgreSQL();
-			$query = 'SELECT ar_right_id, ar_group_id'
-			 . PHP_EOL . ' FROM account_rights'
-			 . PHP_EOL . ' WHERE ar_user_id = ' . $db->Quote(self::$ID) ;
-			$db->setQuery($query);
-			$rights_groups = $db->loadAssocList();
-
-
-			self::$found_groups = array();
-			self::$found_rights = array();
-
-			foreach ($rights_groups as $right_group) {
-				if (!is_null($right_group['ar_right_id'])) {
-					self::$found_rights[ $right_group['ar_right_id'] ] = true;
-				}
-				if (!is_null($right_group['ar_group_id'])) {
-					self::$found_groups[ $right_group['ar_group_id'] ] = true;
-				}
-			}
-		}
-
-		if (isset(self::$found_rights[$right[0]]) && self::$found_rights[$right[0]] == true) {
+		if (in_array($r_id, $acc_rights))
+		{
 			return true;
 		}
-
-		if (is_array($right[3]) && count($right[3]) > 0) {
-			foreach ($right[3] as $group) {
-				if (isset(self::$found_groups[$group]) && self::$found_groups[$group] == true) {
-					return true;
-				}
-			}
+		else
+		{
+			return false;
 		}
 
 		return false;

@@ -10,8 +10,7 @@
 
 	$query = "SELECT COUNT(*)"
 	. "\n FROM chars"
-	. "\n WHERE chr_accid = ".$pgSQL->Quote( IllaUser::$ID )
-	. "\n AND chr_playerid = ".$pgSQL->Quote( $_GET['charid'] )
+	. "\n WHERE chr_playerid = ".$pgSQL->Quote( $_GET['charid'] )
 	;
 	$pgSQL->setQuery( $query );
 

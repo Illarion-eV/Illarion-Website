@@ -65,8 +65,7 @@
 <ul>
     <li><span style="font-weight:bold; color:#285917">Monsters</span></li>
     <li><span style="font-weight:bold; color:#285917">Guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span style="font-weight:bold; color:#285917">Mules</span></li>
-    <li><span style="font-weight:bold; color:#000000">Traders</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">Traders</span></li>
 </ul>
 
 <h3>Other</h3>
@@ -75,7 +74,7 @@
     <li><span style="font-weight:bold; color:#8B0000">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#8B0000">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="font-weight:bold; color:#8B0000">Quests</span></li>
-    <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
+    <li><span style="font-weight:bold; color:#152B85">Tutorial</span></li>
 </ul>
 
 <h2>Graphics</h2>

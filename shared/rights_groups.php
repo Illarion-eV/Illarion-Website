@@ -16,7 +16,7 @@ $_RIGHTS = array(
 	'quests' => array(11, 'User is allowed to create and edit quests', 'Nutzer darf Quests anlegen und ändern', array(1, 2, 4)),
 	'errors' => array(12, 'User is allowed to view extended error output', 'Nutzer darf zusätzliche Fehlerausgaben einsehen', array(1)),
 	'build_edit' => array(13, 'User is allowed to edit the building rules', 'Nutzer darf die Bauregeln bearbeiten', array(1)),
-	'gmtool_change_rights' => array(14, 'User is allowed to change homepage rights', 'Nutzer darf die Rechte für Homepage ändern', array(1))
+	'gmtool_change_rights' => array(14, 'User is allowed to change homepage user rights', 'Nutzer darf die Benutzerrechte für Homepage ändern', array(1))
 	);
 
 $_GROUPS = array(1 => array('admin', 'admin'),

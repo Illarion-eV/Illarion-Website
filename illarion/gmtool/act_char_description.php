@@ -11,10 +11,10 @@
 		exit();
 	}
 
-	$pgSQL =& Database::getPostgreSQL( $server );
+	$pgSQL =& Database::getPostgreSQL( );
 
 	$query = "SELECT COUNT(*)"
-	. "\n FROM chars"
+	. "\n FROM ".$server.".chars"
 	. "\n WHERE chr_accid = ".$pgSQL->Quote( IllaUser::$ID )
 	. "\n AND chr_playerid = ".$pgSQL->Quote( $charid )
 	;
@@ -27,32 +27,73 @@
 		exit();
 	}
 
-	$short_de = ( strlen($_POST['short_de'])>3 ? substr($_POST['short_de'],0,255) : '' );
-	$short_us = ( strlen($_POST['short_us'])>3 ? substr($_POST['short_us'],0,255) : '' );
-
-	if ($server == 'illarionserver')
+	$error = false;
+	// check short_desc_de
+	if (strlen($_POST['short_de']) > 0)
 	{
-		$long_de = $_POST['long_de'];
-		$long_us = $_POST['long_us'];
-
-		$db_hp =& Database::getPostgreSQL( 'homepage' );
-
-		$query = "UPDATE character_details"
-		. "\n SET description_de = ".$db_hp->Quote( $long_de )
-		. ", description_us = ".$db_hp->Quote( $long_us )
-		. "\n WHERE char_id =".$db_hp->Quote( $charid )
-		;
-		$db_hp->setQuery( $query );
-		$db_hp->query();
+		if (strlen($_POST['short_de']) < 3 )
+		{	
+			$msg_de="Die Kurzbeschreibung muss mindestens 4 Zeichen lang sein.";
+			$msg_us="Short description must be at least 4 characters."; 
+			$error = true;
+		}
+		elseif (strlen($_POST['short_de']) >= 255)
+		{
+			$msg_de="Die Kurzbeschreibung darf höchstens 255 Zeichen lang sein.";
+			$msg_us="Short description should be maximal 255 characters.";
+			$error = true;
+		}
 	}
+	// check short_desc_us
+    if (strlen($_POST['short_us']) > 0)
+    {
+        if (strlen($_POST['short_us']) < 3 )
+        {
+			$msg_de="Die Kurzbeschreibung muss mindestens 4 Zeichen lang sein.";
+            $msg_us="Short description must be at least 4 characters.";
+            $error = true;
+        }
+        elseif (strlen($_POST['short_us']) >= 255)
+        {
+			$msg_de="Die Kurzbeschreibung darf höchstens 255 Zeichen lang sein.";
+            $msg_us="Short description should be maximal 255 characters.";
+            $error = true;
+        }
+    }
+	
 
-	$query = "UPDATE chars"
-	. "\n SET chr_shortdesc_de = ".$pgSQL->Quote( $short_de )
-	. ", chr_shortdesc_us = ".$pgSQL->Quote( $short_us )
-	. "\n WHERE chr_playerid =".$pgSQL->Quote( $charid )
-	;
-	$pgSQL->setQuery( $query );
-	$pgSQL->query();
+	if ($error)
+	{
+		Messages::add( (Page::isGerman() ? $msg_de : $msg_us), 'error' );
+	}
+	else
+	{
+		echo "INSERT DE: ".$short_de.", US: ".$short_us."<br/>";
 
-	Messages::add( (Page::isGerman() ? 'Deine Beschreibungen wurden erfolgreich gespeichert.' : 'Your descriptions were successfully saved.'), 'info' );
+		if ($server == 'illarionserver')
+		{
+			$long_de = $_POST['long_de'];
+			$long_us = $_POST['long_us'];
+			$short_de = $_POST['short_de'];
+            $short_us = $_POST['short_us'];
+
+			$query = "UPDATE homepage.character_details"
+			. "\n SET description_de = ".$pgSQL->Quote( $long_de )
+			. ", description_us = ".$pgSQL->Quote( $long_us )
+			. "\n WHERE char_id =".$pgSQL->Quote( $charid )
+			;
+			$pgSQL->setQuery( $query );
+			$pgSQL->query();
+		}
+
+		$query = "UPDATE ".$server.".chars"
+		. "\n SET chr_shortdesc_de = ".$pgSQL->Quote( $short_de )
+		. ", chr_shortdesc_us = ".$pgSQL->Quote( $short_us )
+		. "\n WHERE chr_playerid =".$pgSQL->Quote( $charid )
+		;
+		$pgSQL->setQuery( $query );
+		$pgSQL->query();
+
+		Messages::add( (Page::isGerman() ? 'Deine Beschreibungen wurden erfolgreich gespeichert.' : 'Your descriptions were successfully saved.'), 'info' );
+	}
 ?>

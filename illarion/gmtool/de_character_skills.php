@@ -2,91 +2,73 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_topmenu.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_charactermenu.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character_attributs.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character.php' );
 
 	Page::Init();
 
 	if (!IllaUser::auth('gmtool_chars'))
 	{
-		Messages::add('Zugriff verweigert', 'error');
+		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
+	$type = ( isset( $_GET['filter'] )  && is_numeric($_GET['filter']) ? (int)$_GET['filter'] : 0 );
+
 
 	if (!$charid)
 	{
-		Messages::add('Charakter ID wurde nicht richtig übergeben', 'error');
+		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transfered correctly'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
 
-	$char_data = getCharData( $charid, $server );
+	Page::setTitle( array( 'GM-Tool', 'Charakter' ) );
+    Page::setDescription( 'Hier befindet sich eine Übersicht die Skills des Charakters' );
+    Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen' ) );
 
-	if (!$char_data || !count($char_data))
-	{
-		Messages::add('Charakter wurde nicht gefunden', 'error');
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
-		exit();
-	}
+    Page::addCSS( array( 'menu', 'gmtool' ) );
 
-	$count = ($char_data['ply_strength']+$char_data['ply_dexterity']+$char_data['ply_constitution']+$char_data['ply_agility']+$char_data['ply_intelligence']+$char_data['ply_perception']+$char_data['ply_willpower']+$char_data['ply_essence']);
+    Page::setXHTML();
+    Page::Init();
 
-	Page::setTitle( array( 'GM-Tool', 'Charakter', $char_data['chr_name'] ) );
-	Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters "'.$char_data['chr_name'].'"' );
-	Page::setKeywords( array( 'GM-Tool', 'Charakter', 'Informationen', $char_data['chr_name'] ) );
+	$char_name = getCharName($charid, $server);
+	$char_skills = getCharSkills( $charid, $server, $type );
 
-	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addCSS( array( 'menu', 'gmtool' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow') );
+	$skill_list = getSkillList( $server, $type);
 
-	Page::setXHTML();
-	Page::Init();
-
+/*
+echo "<pre>";
+    print_r($char_skills);
+	print_r($skill_list);
+    echo "</pre>";
+*/
 ?>
 
-<h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
+<h1>Charakter - <?php echo $char_name; ?></h1>
 
 <?php include_menu(); ?>
 
 <div class="spacer"></div>
 
-<?php include_character_menu( $charid, 1, $_GET['server'] ); ?>
+<?php include_character_menu( $charid, 4, $_GET['server'] ); ?>
 
 <div class="spacer"></div>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_attributs.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
-	<table>
-		<td>Name</td><input type="text" size="10" name="xxx" value="<?php echo "xxx"; ?>" /><td>Setzen</td><td>Löschen</td>
-	</table>
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>&amp;filter=<?php echo $_GET['filter']; ?>" method="post">
 	<div>
-		<dl class="gmtool">
-			<dt>Stärke</dt>
-			<dd><input type="text" name="strength" value="<?php echo $char_data['ply_strength']; ?>" /></dd>
-			<dt>Geschicklichkeit</dt>
-			<dd><input type="text" name="dexterity" value="<?php echo $char_data['ply_dexterity']; ?>" /></dd>
-			<dt>Ausdauer</dt>
-			<dd><input type="text" name="constitution" value="<?php echo $char_data['ply_constitution']; ?>" /></dd>
-			<dt>Schnelligkeit</dt>
-			<dd><input type="text" name="agility" value="<?php echo $char_data['ply_agility']; ?>" /></dd>
-			<dt>Intelligenz</dt>
-			<dd><input type="text" name="intelligence" value="<?php echo $char_data['ply_intelligence']; ?>" /></dd>
-			<dt>Wahrnehmung</dt>
-			<dd><input type="text" name="perception" value="<?php echo $char_data['ply_perception']; ?>" /></dd>
-			<dt>Willenskraft</dt>
-			<dd><input type="text" name="willpower" value="<?php echo $char_data['ply_willpower']; ?>" /></dd>
-			<dt>Essenz</dt>
-			<dd><input type="text" name="essence" value="<?php echo $char_data['ply_essence']; ?>" /></dd>
-			<dt>&nbsp;</dt>
-			<dd>&nbsp;</dd>
-			<dt>Gesamt</dt>
-			<dd><input type="text" name="count" value="<?php echo $count; ?>" /></dd>
-
-		</dl>
-		<div class="spacer" />
-		<input type="submit" name="submit" value="Änderungen speichern" />
-		<input type="hidden" name="action" value="character_attributs" />
-	</div>
+	<dl class="gmtool">
+		<?php foreach($skill_list as $key=>$skill) : ?>
+            <dt><?php echo (Page::isGerman() ? $skill['skill_name_de'] : $skill['skill_name_us']); ?></dt>
+            <dd><input type="text" name="<?php echo $key; ?>" value="<?php echo (isset($char_skills[$key]) ? $char_skills[$key] : "0");?>" /></dd>
+		<?php endforeach ?>
+	</dl>
+	<div class="spacer" />
+        <input type="submit" name="submit" value="Änderungen speichern" />
+        <input type="hidden" name="action" value="character_skills" />
+    </div>
 </form>
+
+

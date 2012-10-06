@@ -1,1 +1,200 @@
-var currentlySearching=false;var searchAgain=false;function performSearch(){if(!currentlySearching){currentlySearching=true}else{searchAgain=true;return}var b="";if(!($("limit_to_state").checked)){b="state=-1"}else{b="state="+$("status").value}b+="&search="+encodeURIComponent($("search").value);if($("search_in_account").checked){b+="&acc=1"}else{b+="&acc=0"}if($("search_in_email").checked){b+="&email=1"}else{b+="&email=0"}if($("search_in_char").checked){b+="&char=1"}else{b+="&char=0"}$("search_title").firstChild.setStyle({background:"transparent url("+url+"/shared/pics/ajax-loading-small-invert.gif) no-repeat scroll center center"});var a=new Ajax.Request(url+"/illarion/gmtool/ajax_search_accounts.php",{method:"post",parameters:b,evalJS:false,onComplete:function(c){var d=$("output_area");if(Object.isUndefined(c.responseXML)){addOrReplaceChild(d,document.createTextNode("Error - Invalid XML"))}else{addOrReplaceChild(d,parseResponse(c.responseXML))}currentlySearching=false;if(searchAgain){searchAgain=false;performSearch()}else{$("search_title").firstChild.setStyle({background:""})}}})}function parseResponse(f){if(f.nodeType==9){if(f.childNodes.length>0){for(var g=0;g<f.childNodes.length;g++){if(f.childNodes[g].nodeType!=10&&f.childNodes[g].nodeType!=7){return parseResponse(f.childNodes[g])}}}}else{if(f.nodeType==1){if(f.nodeName=="manyHits"){var m=0;var j=0;for(var g=0;g<f.childNodes.length;g++){if(f.childNodes[g].nodeName=="found"){m=f.childNodes[g].firstChild.nodeValue}else{if(f.childNodes[g].nodeName=="max"){j=f.childNodes[g].firstChild.nodeValue}}}if(cur_lang=="de"){return document.createTextNode(m+" von "+j+" Accounts entsprechen der Suche. Bitte gib genauere Suchparameter an.")}else{return document.createTextNode(m+" of "+j+" accounts fit the search. Please specify your search parameters more exactly.")}}else{if(f.nodeName=="nothing"){if(cur_lang=="de"){return document.createTextNode("Keine Accounts entsprechen den Suchparametern.")}else{return document.createTextNode("No accounts fit the search parameters.")}}else{if(f.nodeName=="accounts"){var d=document.createElement("div");var h=0;var n=null;for(var g=0;g<f.childNodes.length;g++){if(f.childNodes[g].nodeName!="account"){continue}if(h==0){n=document.createElement("ul");n.style.cssText="float:left;margin-right:10px;"}var a="";var c="";for(var e=0;e<f.childNodes[g].childNodes.length;e++){if(f.childNodes[g].childNodes[e].nodeName=="name"){a=f.childNodes[g].childNodes[e].firstChild.nodeValue}else{if(f.childNodes[g].childNodes[e].nodeName=="id"){c=f.childNodes[g].childNodes[e].firstChild.nodeValue}}}var l=document.createElement("li");l.appendChild(document.createTextNode(c));l.appendChild(document.createTextNode(" - "));var b=document.createElement("a");b.href=url+"/illarion/gmtool/"+cur_lang+"_account.php?id="+c;b.appendChild(document.createTextNode(a));l.appendChild(b);n.appendChild(l);h++;if(h==10){d.appendChild(n);h=0}}if(h>0){d.appendChild(n)}return d}}}}}}function clearChilds(a){if(a.hasChildNodes()){while(a.childNodes.length>=1){a.removeChild(a.firstChild)}}}function addOrReplaceChild(a,b){if(a.firstChild){a.replaceChild(b,a.firstChild)}else{a.appendChild(b)}};
+var currentlySearching = false;
+var searchAgain = false;
+function performSearch()
+{
+	if (!currentlySearching)
+	{
+		currentlySearching = true;
+	}
+	else
+	{
+		searchAgain = true;
+		return;
+	};
+	var params = '';
+	if (!($('limit_to_state').checked))
+	{
+		params = 'state=-1';
+	}
+	else
+	{
+		params = 'state='+$('status').value;
+	};
+	params+= '&search='+encodeURIComponent( $('search').value );
+	if ($('search_in_account').checked)
+	{
+		params+= '&acc=1';
+	}
+	else
+	{
+		params+= '&acc=0';
+	};
+	if ($('search_in_email').checked)
+	{
+		params+= '&email=1';
+	}
+	else
+	{
+		params+= '&email=0';
+	};
+	if ($('search_in_char').checked)
+	{
+		params+= '&char=1';
+	}
+	else
+	{
+		params+= '&char=0';
+	};
+	$('search_title').firstChild.setStyle({
+		background: 'transparent url('+url+'/shared/pics/ajax-loading-small-invert.gif) no-repeat scroll center center'
+	});
+	var newAJAX = new Ajax.Request(
+		url+'/illarion/gmtool/ajax_search_accounts.php', {
+			method: 'post',
+			parameters: params,
+			evalJS: false,
+			onComplete: function(response)
+			{
+				var output_area = $('output_area');
+				if (Object.isUndefined(response.responseXML))
+				{
+					addOrReplaceChild( output_area, document.createTextNode( 'Error - Invalid XML' ) );
+				}
+				else
+				{
+					addOrReplaceChild( output_area, parseResponse( response.responseXML ) );
+				};
+				currentlySearching = false;
+				if (searchAgain)
+				{
+					searchAgain = false;
+					performSearch();
+				}
+				else
+				{
+					$('search_title').firstChild.setStyle({
+						background: ''
+					});
+				}
+			}
+		}
+	);
+};
+
+function parseResponse( object )
+{
+	if ( object.nodeType == 9 ) {
+		if (object.childNodes.length > 0) {
+			for( var i = 0;i<object.childNodes.length; i++ ) {
+			    if (object.childNodes[i].nodeType != 10 && object.childNodes[i].nodeType != 7) {
+			    	return parseResponse( object.childNodes[i] );
+				};
+			};
+		};
+	}
+	else if ( object.nodeType == 1 ) {
+		if (object.nodeName == 'manyHits') {
+			var found = 0;
+			var max = 0;
+			for(var i=0;i<object.childNodes.length; i++ ) {
+				if (object.childNodes[i].nodeName == 'found') {
+					found = object.childNodes[i].firstChild.nodeValue;
+				}
+				else if (object.childNodes[i].nodeName == 'max') {
+					max = object.childNodes[i].firstChild.nodeValue;
+				};
+			};
+			if (cur_lang == 'de') {
+				return document.createTextNode( found+' von '+max+' Accounts entsprechen der Suche. Bitte gib genauere Suchparameter an.' );
+			}
+			else {
+				return document.createTextNode( found+' of '+max+' accounts fit the search. Please specify your search parameters more exactly.' );
+			};
+		}
+		else if (object.nodeName == 'nothing') {
+			if (cur_lang == 'de') {
+				return document.createTextNode( 'Keine Accounts entsprechen den Suchparametern.' );
+			}
+			else {
+				return document.createTextNode( 'No accounts fit the search parameters.' );
+			};
+		}
+		else if (object.nodeName == 'debug') {
+			var text = '';
+			var info ='';
+			for(var i=0;i<object.childNodes.length; i++ ) {
+                if (object.childNodes[i].nodeName == 'text') {
+                    text = object.childNodes[i].firstChild.nodeValue;
+                }
+				else if (object.childNodes[i].nodeName == 'info') {
+                    info = object.childNodes[i].firstChild.nodeValue;
+                };
+			}
+            return document.createTextNode( text+'-'+info );
+		}
+		else if (object.nodeName == 'accounts') {
+			var output = document.createElement( 'div' );
+			var index = 0;
+			var result = null;
+			for(var i=0;i<object.childNodes.length; i++ ) {
+				if (object.childNodes[i].nodeName != 'account') {
+					continue;
+				};
+				if (index == 0)
+				{
+					result = document.createElement( 'ul' );
+					result.style.cssText = 'float:left;margin-right:10px;';
+				};
+				var name = '';
+				var id = '';
+				for(var k=0;k<object.childNodes[i].childNodes.length; k++ ) {
+					if (object.childNodes[i].childNodes[k].nodeName == 'name') {
+						name = object.childNodes[i].childNodes[k].firstChild.nodeValue;
+					}
+					else if (object.childNodes[i].childNodes[k].nodeName == 'id') {
+						id = object.childNodes[i].childNodes[k].firstChild.nodeValue;
+					};
+				};
+				var temp = document.createElement( 'li' );
+				temp.appendChild( document.createTextNode( id ) );
+				temp.appendChild( document.createTextNode( ' - ' ) );
+				var temp2 = document.createElement( 'a' );
+				temp2.href=url+'/illarion/gmtool/'+cur_lang+'_account.php?accid='+id;
+				temp2.appendChild( document.createTextNode( name ) );
+				temp.appendChild( temp2 );
+				result.appendChild( temp );
+				index++;
+				if (index == 10)
+				{
+					output.appendChild( result );
+					index = 0;
+				};
+			};
+			if (index > 0)
+			{
+				output.appendChild( result );
+			};
+			return output;
+		};
+	};
+};
+
+function clearChilds(element) {
+	if (element.hasChildNodes()) {
+		while ( element.childNodes.length >= 1 )
+		{
+    		element.removeChild( element.firstChild );
+		};
+	};
+};
+
+function addOrReplaceChild( element, child ) {
+	if (element.firstChild)
+	{
+		element.replaceChild( child, element.firstChild );
+	}
+	else
+	{
+		element.appendChild( child );
+	};
+};

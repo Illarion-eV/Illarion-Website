@@ -22,6 +22,11 @@
 
 	Page::setXHTML();
 	Page::Init();
+
+	echo "<pre>";
+	print_r(IllaUser::$moep1);
+	print_r(IllaUser::$moep2);
+	echo "</pre>";
 ?>
 <h1>GM-Tool</h1>
 
@@ -43,41 +48,40 @@
 <div style="height:15px;"></div>
 <?php endif; ?>
 
-<?php if (IllaUser::auth('gmtool_raceapplys') || IllaUser::auth('gmtool_namecheck')): ?>
-<fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(3109); ?>) scroll no-repeat 15px center;">
-	<legend>Account Arbeit</legend>
-	<ul style="list-style-type:none;padding-left:50px;">
-		<?php if (IllaUser::auth('gmtool_change_rights')): ?>
-			<li><a href="<?php echo $url; ?>/illarion/gmtool/de_rights.php">Berechtigungen bearbeiten</a></li>
-		<?php endif; ?>
-	</ul>
+<?php if (IllaUser::auth('gmtool_pages')): ?>
+<fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(2745); ?>) scroll no-repeat 15px center;">
+    <legend>GM Pages</legend>
+    <ul style="list-style-type:none;padding-left:50px;">
+        <li>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=0">Neue GM Pages</a>
+            <?php if ( $pendingwork['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
+                (<?php echo $pendingwork['pages_new']; ?>)
+            </span>
+        </li>
+        <li>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=1">GM Pages in Arbeit</a>
+            <span>(<?php echo $pendingwork['pages_inwork']; ?>)</span>
+        </li>
+        <li>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=2">GM Pages fertig</a>
+            <span>(<?php echo $pendingwork['pages_done']; ?>)</span>
+        </li>
+        <li>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=3">GM Pages im Archiv</a>
+            <span>(<?php echo $pendingwork['pages_archiv']; ?>)</span>
+        </li>
+    </ul>
 </fieldset>
 
 <div style="height:15px;"></div>
 <?php endif; ?>
 
-<?php if (IllaUser::auth('gmtool_pages')): ?>
-<fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(2745); ?>) scroll no-repeat 15px center;">
-	<legend>GM Pages</legend>
-	<ul style="list-style-type:none;padding-left:50px;">
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=0">Neue GM Pages</a>
-			<?php if ( $pendingwork['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
-				(<?php echo $pendingwork['pages_new']; ?>)
-			</span>
-		</li>
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=1">GM Pages in Arbeit</a>
-			<span>(<?php echo $pendingwork['pages_inwork']; ?>)</span>
-		</li>
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=2">GM Pages fertig</a>
-			<span>(<?php echo $pendingwork['pages_done']; ?>)</span>
-		</li>
-		<li>
-			<a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=3">GM Pages im Archiv</a>
-			<span>(<?php echo $pendingwork['pages_archiv']; ?>)</span>
-		</li>
+
+<?php if (IllaUser::auth('gmtool_gms')): ?>
+<fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(3109); ?>) scroll no-repeat 15px center;">
+	<legend>Admin Tools</legend>
+		<ul style="list-style-type:none;padding-left:50px;">
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/de_gms.php">Gamemaster bearbeiten</a></li>
 	</ul>
 </fieldset>
 <?php endif; ?>

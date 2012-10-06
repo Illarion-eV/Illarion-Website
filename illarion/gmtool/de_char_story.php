@@ -20,12 +20,11 @@
 		exit();
 	}
 
-	$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
+	$pgSQL =& Database::getPostgreSQL( );
 
 	$query = 'SELECT chr_name'
-	.PHP_EOL.' FROM chars'
-	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-	.PHP_EOL.' AND chr_playerid = '.$pgSQL->Quote( $charid )
+	.PHP_EOL.' FROM illarionserver.chars'
+	.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
 	;
 	$pgSQL->setQuery( $query );
 
@@ -36,23 +35,24 @@
 		exit();
 	}
 
-	$db_hp =& Database::getPostgreSQL( 'homepage' );
-	$query = 'SELECT story_de, story_us'
-	.PHP_EOL.' FROM character_details`'
-	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
-	;
-	$db_hp->setQuery( $query );
-	list($story_de, $story_us) = $db_hp->loadRow();
-
-	$story_de = ( $story_de ? htmlspecialchars($story_de) : '' );
-	$story_us = ( $story_us ? htmlspecialchars($story_us) : '' );
-
 	Page::setTitle( array( 'Account', 'Charaktergeschichte', $charname ) );
-	Page::setDescription( 'Auf dieser Seite kann die Geschichte des Charakters geändert werden' );
-	Page::setKeywords( 'Charakter', 'Account', 'Details', $charname );
+    Page::setDescription( 'Auf dieser Seite kann die Geschichte des Charakters geändert werden' );
+    Page::setKeywords( 'Charakter', 'Account', 'Details', $charname );
 
-	Page::setXHTML();
-	Page::Init();
+    Page::setXHTML();
+    Page::Init();
+
+
+	$query = 'SELECT story_de, story_us'
+	.PHP_EOL.' FROM homepage.character_details'
+	.PHP_EOL.' WHERE char_id = '.$pgSQL->Quote( $charid )
+	;
+	$pgSQL->setQuery( $query );
+	list($story_de, $story_us) = $pgSQL->loadRow();
+
+	$story_de = ( isset($_POST['story_de']) ? htmlspecialchars($_POST['story_de']) : ( $story_de ? htmlspecialchars($story_de) : '' ) );
+    $story_us = ( isset($_POST['story_us']) ? htmlspecialchars($_POST['story_us']) : ( $story_us ? htmlspecialchars($story_us) : '' ) );
+
 ?>
 
 <h1>Charaktergeschichte</h1>

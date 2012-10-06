@@ -62,13 +62,6 @@
 			return;
 		}
 
-		$location = ( isset($_POST['location']) && is_numeric($_POST['location']) ? (int)$_POST['location'] : 0 );
-		if (!$location)
-		{
-			Messages::add((Page::isGerman()?'Keine Startposition ausgewählt.':'No starting position was selected.'),'error');
-			return;
-		}
-
 		$package = ( isset($_POST['sel_pack']) &&  is_numeric($_POST['sel_pack']) ? (int)$_POST['sel_pack'] : 0 );
 		if (!$package)
 		{
@@ -116,39 +109,8 @@
 		}
 
 		$db =& Database::getPostgreSQL( 'homepage' );
-		$query = 'SELECT pos_x, pos_y, pos_z, face_to, newbie'
-		.PHP_EOL.' FROM startplace'
-		.( $newbieOnly ? PHP_EOL.' WHERE newbie = 1 AND id = '.$db->Quote($location) : PHP_EOL.' WHERE id = '.$db->Quote($location))
-		;
-		$db->setQuery( $query );
-		$position = $db->loadAssocRow();
-
-		if (!count($position))
-		{
-			Messages::add((Page::isGerman()?'Startposition nicht gefunden.':'Starting position was not found.'),'error');
-			return;
-		}
-
+		
 		$pgSQL->Begin();
-
-		$query = 'UPDATE player'
-		.PHP_EOL.' SET ply_posx = '.$pgSQL->Quote( $position['pos_x'] )
-		. ', ply_posy = '.$pgSQL->Quote( $position['pos_y'] )
-		. ', ply_posz = '.$pgSQL->Quote( $position['pos_z'] )
-		. ', ply_faceto = '.$pgSQL->Quote( $position['face_to'] )
-		.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
-		;
-		$pgSQL->setQuery( $query );
-		$pgSQL->query();
-
-		if ($position['newbie'])
-		{
-			$query = 'INSERT INTO playerlteffects (plte_playerid, plte_effectid, plte_nextcalled, plte_lastcalled, plte_numbercalled, plte_position)'
-			.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, 100, 0, 0, 1 )'
-			;
-			$pgSQL->setQuery( $query );
-			$pgSQL->query();
-		}
 
 		$query = 'SELECT name_file'
 		.PHP_EOL.' FROM startpack'
@@ -171,22 +133,11 @@
 			{
 				foreach($group->skill as $skill)
 				{
-					if ($position['newbie'])
-					{
-						$query = 'INSERT INTO playerlteffectvalues (pev_playerid, pev_effectid, pev_name, pev_value)'
-						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, '.$pgSQL->Quote( $skill->name ).', '.$pgSQL->Quote( $skill->value ).')'
-						;
-						$pgSQL->setQuery( $query );
-						$pgSQL->query();
-					}
-					else
-					{
-						$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $skill->name ).', '.$pgSQL->Quote( $group->value ).', '.$pgSQL->Quote( $skill->value ).')'
-						;
-						$pgSQL->setQuery( $query );
-						$pgSQL->query();
-					}
+					$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
+					.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $skill->name ).', '.$pgSQL->Quote( $group->value ).', '.$pgSQL->Quote( $skill->value ).')'
+					;
+					$pgSQL->setQuery( $query );
+					$pgSQL->query();
 				}
 			}
 		}
@@ -250,42 +201,11 @@
 
 	   foreach($xmlC->obj_data->pack[0]->items[0]->item as $item )
 		{
-			if ($position['newbie'])
-			{
-				$query = 'INSERT INTO playerlteffectvalues (pev_playerid, pev_effectid, pev_name, pev_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, '.$pgSQL->Quote( 'itemid_'.$item->linenumber ).', '.$pgSQL->Quote( $item->id ).')'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-				$query = 'INSERT INTO playerlteffectvalues (pev_playerid, pev_effectid, pev_name, pev_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, '.$pgSQL->Quote( 'itemdata_'.$item->linenumber ).', '.$pgSQL->Quote( $item->data ).')'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-				$query = 'INSERT INTO playerlteffectvalues (pev_playerid, pev_effectid, pev_name, pev_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, '.$pgSQL->Quote( 'itemnumber_'.$item->linenumber ).', '.$pgSQL->Quote( $item->number ).')'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-				$query = 'INSERT INTO playerlteffectvalues (pev_playerid, pev_effectid, pev_name, pev_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 13, '.$pgSQL->Quote( 'itemquality_'.$item->linenumber ).', '.$pgSQL->Quote( $item->qual ).')'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-				$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality, pit_data)'
-				.PHP_EOL.' VALUES ( 0,'.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 0, 0, 0, 0)'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-			}
-			else
-			{
-				$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality, pit_data)'
-				.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $item->id ).', '.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 5, '.$pgSQL->Quote( $item->number ).', '.$pgSQL->Quote( $item->qual ).', '.$pgSQL->Quote( $item->data ).')'
-				;
-				$pgSQL->setQuery( $query );
-				$pgSQL->query();
-			}
+			$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality, pit_data)'
+			.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $item->id ).', '.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 5, '.$pgSQL->Quote( $item->number ).', '.$pgSQL->Quote( $item->qual ).', '.$pgSQL->Quote( $item->data ).')'
+			;
+			$pgSQL->setQuery( $query );
+			$pgSQL->query();
 		}
 
 		$account =& Database::getPostgreSQL( 'accounts' );

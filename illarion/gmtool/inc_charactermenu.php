@@ -1,36 +1,68 @@
 <?php
-	function include_character_menu( $charid, $active, $server )
+
+    function include_character_menu( $charid, $active, $server )
+    {
+
+        $entries = array();
+		$params = "?charid=".$charid."&amp;server=".$server;
+
+        $entries[1] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Informationen' : 'Informations' ) );
+			$entries[1]['sub'][] = array( 'link'=>getUrlString('character.php').$params, 'name'=>( Page::isGerman() ? 'Allgemeines' : 'General' ) );
+			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_settings.php').$params, 'name'=>( Page::isGerman() ? 'Einstellungen' : 'Settings' ) );
+			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_log.php').$params, 'name'=>( Page::isGerman() ? 'Log' : 'Log' ) );
+        $entries[2] = array( 'link'=>getUrlString('character_status.php').$params, 'name'=>( Page::isGerman() ? 'Status' : 'Status' ) );
+        $entries[3] = array( 'link'=>getUrlString('character_attributs.php').$params, 'name'=>( Page::isGerman() ? 'Attribute' : 'Attributs' ) );
+        $entries[4] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Skills' : 'Skills' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_LANGUAGE, 'name'=>( Page::isGerman() ? 'Sprachen' : 'Language' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_FIGHTING, 'name'=>( Page::isGerman() ? 'Kampf' : 'Fighting' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_MAGIC, 'name'=>( Page::isGerman() ? 'Magie' : 'Magic' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_CRAFTING, 'name'=>( Page::isGerman() ? 'Handwerk' : 'Crafting' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_DRUID, 'name'=>( Page::isGerman() ? 'Druiden' : 'Druidic' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_BARD, 'name'=>( Page::isGerman() ? 'Barden' : 'Bard' ) );
+			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_MISC, 'name'=>( Page::isGerman() ? 'Sonstiges' : 'Other' ) );
+        $entries[5] = array( 'link'=>getUrlString('character_runes.php').$params, 'name'=>( Page::isGerman() ? 'Runen' : 'Runes' ) );
+
+		echo "<div class='menu'>";
+			echo "<ul class='menu_top'>";
+			foreach($entries as $key=>$entry)
+			{
+				if (isset($entry['sub']))
+				{
+					$i=1;
+					$count = count($entry['sub']);
+					echo "<li".($active==$key ? " class='selected'" : "").">";
+					echo "<a class='none'>".$entry['name']."</a>";
+        			echo "<ul>";
+					foreach ($entry['sub'] as $sub)
+					{
+						echo (($i==$count) ? "<li class='last'>" : "<li>");
+						$i++;
+            			echo "<a class='none' href='".$sub['link']."'>".$sub['name']."</a>";
+            			echo "</li>";
+					}
+        			echo "</ul>";
+    				echo "</li>";
+				}
+				else
+				{
+					echo "<li".($active==$key ? " class='selected'" : "").">";
+					echo "<a class='none' ".($active==$key ? "" : " href='".$entry['link']."'").">";
+						echo $entry['name'];
+					echo "</a></li>";
+				}	
+			}
+			echo "</ul>";
+		echo "</div>";
+
+		return;
+	}
+
+	function getUrlString($file)
 	{
 		global $url;
-		global $language;
-?>
+        global $language;
 
-<div class="menu">
-	<ul class="menu_top">
-		<li>
-			<a class="none" ><?php echo ( $language == 'de' ? 'Informationen' : 'Informations' ); ?></a>
-			<ul>
-			<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Allgemeines' : 'General' ); ?></a></li>
-				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Einstellungen' : 'Settings' ); ?></a></li>
-			</ul>
-		</li>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Status' : 'Status' ); ?></a></li>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_attributs.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Attribute' : 'Attributs' ); ?></a></li>
-		<li>
-			<a class="none" ><?php echo ( $language == 'de' ? 'Skills' : 'Skills' ); ?></a>
-			<ul>
-			<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=0"><?php echo ( $language == 'de' ? 'Sprachen' : 'Language' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=1"><?php echo ( $language == 'de' ? 'Kampf' : 'Fighting' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=2"><?php echo ( $language == 'de' ? 'Magie' : 'Magic' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=3"><?php echo ( $language == 'de' ? 'Handwerk' : 'Crafting' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=4"><?php echo ( $language == 'de' ? 'Druiden' : 'Druidic' ); ?></a></li>
-				<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=5"><?php echo ( $language == 'de' ? 'Barden' : 'Bard' ); ?></a></li>
-				<li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>&amp;filter=6"><?php echo ( $language == 'de' ? 'Sonstiges' : 'Others' ); ?></a></li>
-			</ul>
-		</li>
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_character_runes.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $server; ?>"><?php echo ( $language == 'de' ? 'Runen' : 'Runes' ); ?></a></li>
+		$url_string = $url."/illarion/gmtool/".$language."_".$file;
 
-	</ul>
-</div>
-
-<?php } ?>
+		return $url_string;
+	} 

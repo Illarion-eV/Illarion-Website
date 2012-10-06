@@ -1,12 +1,17 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	includeWrapper::includeOnce(  Page::getRootPath().'/illarion/gmtool/inc_character_settings.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? false : true );
 
 	if ( !$server )
 	{
 		exit('Abgeschalten für Testserver Charaktere.');
+		
 	}
+
+	Page::setXML();
+    Page::Init();
 
 	if ( !isset( $_GET['charid'] ) || !is_numeric ($_GET['charid'] ) )
 	{
@@ -17,26 +22,8 @@
 		$charid = (int)$_GET['charid'];
 	}
 
-	$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
+	$picture = getPicture($charid);
 
-	$query = 'SELECT COUNT(*)'
-	.PHP_EOL.' FROM chars'
-	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-	.PHP_EOL.' AND chr_playerid = '.$pgSQL->Quote( $charid )
-	;
-	$pgSQL->setQuery( $query );
-
-	if (!$pgSQL->loadResult())
-	{
-		exit('Charakter nicht gefunden');
-	}
-	$db_hp =& Database::getPostgreSQL( 'homepage' );
-	$query = 'SELECT picture'
-	.PHP_EOL.' FROM character_details'
-	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
-	;
-	$db_hp->setQuery( $query );
-	$picture = $db_hp->loadResult();
 	if (!$picture)
 	{
 		$picture = false;
@@ -66,9 +53,6 @@
 			}
 		}
 	}
-
-	Page::setXML();
-	Page::Init();
 ?>
 
 <div>

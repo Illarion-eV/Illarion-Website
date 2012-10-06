@@ -16,9 +16,7 @@
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
-
-
-
+	
 	$newdata['name'] 		= ( strlen($_POST['name']) > 0 ? (string)$_POST['name'] : null );
 	$newdata['prefix']   	= (string)$_POST['prefix'];
 	$newdata['suffix']  	= (string)$_POST['suffix'];
@@ -29,19 +27,26 @@
 	$newdata['posx']		= (strlen($_POST['posx']) > 0   ? (int)$_POST['posx'] : false);
 	$newdata['posy']		= (strlen($_POST['posy']) > 0 ? (int)$_POST['posy'] : false);
 	$newdata['posz']		= (strlen($_POST['posz']) > 0 ? (int)$_POST['posz'] : false);
+	
 
 	$pgSQL =& Database::getPostgreSQL();
 
 	$error = 0;
 
-	// Namenscheck : Gibt es den Namen schon?
-	$query = "SELECT count(*) FROM ".$server.".chars WHERE chr_name = ".$pgSQL->Quote( $newdata['name'] );
-	$pgSQL->setQuery( $query );
-
-	if ($pgSQL->loadResult() != 0)
+	// name changed?
+	$query = "SELECT chr_name FROM ".$server.".chars WHERE chr_playerid = ".$pgSQL->Quote( $_POST['char_id'] );
+    $pgSQL->setQuery( $query );
+	if (! $pgSQL->loadResult() == $newdata['name'] )
 	{
-		Messages::add((IllaUser::$lang=='de'?'Der Charactername ist bereits vergeben':'Character is already in use'), 'error');
-		$error = 1;
+		// does name exists?
+		$query = "SELECT count(*) FROM ".$server.".chars WHERE chr_name = ".$pgSQL->Quote( $newdata['name'] );
+		$pgSQL->setQuery( $query );
+
+		if ($pgSQL->loadResult() != 0)
+		{
+			Messages::add((IllaUser::$lang=='de'?'Der Charactername ist bereits vergeben':'Character is already in use'), 'error');
+			$error = 1;
+		}
 	}
 
 	if ($error == 0)

@@ -1,12 +1,17 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	includeWrapper::includeOnce( $_SERVER['DOCUMENT_ROOT'].'/illarion/gmtool/inc_character_settings.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? false : true );
 
 	if (!$server)
 	{
-		exit('Abgeschalten für Testserver-Charaktere');
+		exit('Abgeschaltet für Testserver-Charaktere');
 	}
+
+    Page::setXML();
+    Page::Init();
+
 
 	if ( !isset( $_GET['charid'] ) || !is_numeric( $_GET['charid'] ) )
 	{
@@ -17,33 +22,7 @@
 		$charid = (int)$_GET['charid'];
 	}
 
-	$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
-
-	$query = 'SELECT COUNT(*)'
-	.PHP_EOL.' FROM chars'
-	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-	.PHP_EOL.' AND chr_playerid = '.$pgSQL->Quote( $charid )
-	;
-	$pgSQL->setQuery( $query );
-
-	if (!$pgSQL->loadResult())
-	{
-		exit('Charakter wurde nicht gefunden');
-	}
-	$db_hp =& Database::getPostgreSQL( 'homepage' );
-	$query = 'SELECT settings'
-	.PHP_EOL.' FROM character_details'
-	.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid );
-	$db_hp->setQuery( $query );
-	$settings = $db_hp->loadResult();
-
-	$show_profil   = ( (int)($settings&1) > 0 );
-	$show_online   = ( (int)($settings&2) == 0 );
-	$show_story    = ( (int)($settings&4) > 0 );
-	$show_birthday = ( (int)($settings&8) > 0 );
-
-	Page::setXML();
-	Page::Init();
+	$char_settings = getCharSettings($charid);
 ?>
 <div>
 	<h2>Einstellungen anpassen</h2>
@@ -56,26 +35,12 @@
 						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob das Profil des Charakters für andere sichtbar ist.',TITLE,'Profil anzeigen',WIDTH,-300);" onmouseout="UnTip();">Profil anzeigen</a>
 					</td>
 					<td style="width:30%;">
-						<input type="radio" value="0" id="show_profil0" name="show_profil"<?php echo ( $show_profil ? '' : ' checked="checked"' ); ?> />
+						<input type="radio" value="0" id="show_profil0" name="show_profil"<?php echo ( $char_settings['show_profil'] ? '' : ' checked="checked"' ); ?> />
 						<label for="show_profil0">verbergen</label>
 					</td>
 					<td>
-						<input type="radio" value="1" id="show_profil1" name="show_profil"<?php echo ( $show_profil ? ' checked="checked"' : '' ); ?> />
+						<input type="radio" value="1" id="show_profil1" name="show_profil"<?php echo ( $char_settings['show_profil'] ? ' checked="checked"' : '' ); ?> />
 						<label for="show_profil1">anzeigen</label>
-					</td>
-				</tr>
-
-				<tr>
-					<td>
-						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob dieser Charakter auf der Onlineliste erscheint oder nicht.',TITLE,'Onlinestatus anzeigen',WIDTH,-300);" onmouseout="UnTip();">Onlinestatus anzeigen</a>
-					</td>
-					<td>
-						<input type="radio" value="0" id="show_online0" name="show_online"<?php echo ( $show_online ? '' : ' checked="checked"' ); ?> />
-						<label for="show_online0">verbergen</label>
-					</td>
-					<td>
-						<input type="radio" value="1" id="show_online1" name="show_online"<?php echo ( $show_online ? ' checked="checked"' : '' ); ?> />
-						<label for="show_online1">anzeigen</label>
 					</td>
 				</tr>
 
@@ -84,11 +49,11 @@
 						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob die Geschichte des Charakters im Profil sichtbar ist oder nicht.',TITLE,'Geschichte anzeigen',WIDTH,-300);" onmouseout="UnTip();">Geschichte anzeigen</a>
 					</td>
 					<td>
-						<input type="radio" value="0" id="show_story0" name="show_story"<?php echo ( $show_story ? '' : ' checked="checked"' ); ?> />
+						<input type="radio" value="0" id="show_story0" name="show_story"<?php echo ( $char_settings['show_story'] ? '' : ' checked="checked"' ); ?> />
 						<label for="show_story0">verbergen</label>
 					</td>
 					<td>
-						<input type="radio" value="1" id="show_story1" name="show_story"<?php echo ( $show_story ? ' checked="checked"' : '' ); ?> />
+						<input type="radio" value="1" id="show_story1" name="show_story"<?php echo ( $char_settings['show_story'] ? ' checked="checked"' : '' ); ?> />
 						<label for="show_story1">anzeigen</label>
 					</td>
 				</tr>
@@ -98,11 +63,11 @@
 						<a title="" class="tooltip" onmouseover="Tip('Diese Option legt fest, ob der Geburtstag das Charakters im Kalender von Illarion und im Profil angezeigt wird oder nicht.',TITLE,'Geburtstag anzeigen',WIDTH,-300);" onmouseout="UnTip();">Geburtstag anzeigen</a>
 					</td>
 					<td class="paramlist_value">
-						<input type="radio" value="0" id="show_birthday0" name="show_birthday"<?php echo ( $show_birthday ? '' : ' checked="checked"' ); ?> />
+						<input type="radio" value="0" id="show_birthday0" name="show_birthday"<?php echo ( $char_settings['show_birthday'] ? '' : ' checked="checked"' ); ?> />
 						<label for="show_birthday0">verbergen</label>
 					</td>
 					<td>
-						<input type="radio" value="1" id="show_birthday1" name="show_birthday"<?php echo ( $show_birthday ? ' checked="checked"' : '' ); ?> />
+						<input type="radio" value="1" id="show_birthday1" name="show_birthday"<?php echo ( $char_settings['show_birthday'] ? ' checked="checked"' : '' ); ?> />
 						<label for="show_birthday1">anzeigen</label>
 					</td>
 				</tr>
