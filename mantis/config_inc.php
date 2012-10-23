@@ -86,3 +86,6 @@ $g_source_control_fixed_regexp = '/\bfix(?:ed|es)\s+(?:bug|issue)?\s*[#]{0,1}(\d
 
 # --- Others ---
 $g_default_home_page = 'my_view_page.php';	# Set to name of page to go to after login
+
+# -- Hide fields ---
+$g_enable_profiles = OFF;
