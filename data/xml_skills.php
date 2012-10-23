@@ -55,5 +55,5 @@
 		echo '    <skill id="', $skill['skl_skill_id'], '" german="', $skill['skl_name_german'], '" english="', $skill['skl_name_german'], '" />', PHP_EOL;
 	}
 	echo '  </group>', PHP_EOL;
-	echo '<skills>', PHP_EOL;
+	echo '</skills>', PHP_EOL;
 ?>
