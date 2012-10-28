@@ -46,13 +46,13 @@
 			}
 			else
 			{
-				echo '  <group id="', $groupData['skg_group_id'], '" german="', $groupData['skg_name_german'], '" english="', $groupData['skg_name_english'], '">', PHP_EOL;
+				echo '  <group id="', $groupData['skg_group_id'],'" german="', $groupData['skg_name_german'], '" english="', $groupData['skg_name_english'], '">', PHP_EOL;
 			}
 			
 			$currentGroup = $skill['skl_group_id'];
 		}
 		
-		echo '    <skill id="', $skill['skl_skill_id'], '" german="', $skill['skl_name_german'], '" english="', $skill['skl_name_english'], '" />', PHP_EOL;
+		echo '    <skill id="', $skill['skl_skill_id'], '" name="', $skill['skl_name'], '" german="', $skill['skl_name_german'], '" english="', $skill['skl_name_english'], '" />', PHP_EOL;
 	}
 	echo '  </group>', PHP_EOL;
 	echo '</skills>', PHP_EOL;
