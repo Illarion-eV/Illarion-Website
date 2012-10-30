@@ -149,6 +149,10 @@ class SourcePlugin extends MantisPlugin {
 		$p_text = preg_replace_callback( '/(?:([sv]):([^:\n\t]+):([^:\n\t\s]+):)/i', 'Source_Changeset_Link_Callback', $p_text );
 		return $p_text;
 	}
+	
+	function plugin_callback_Source_schema() {
+		return schema();
+	}
 
 	function schema() {
 		return array(
