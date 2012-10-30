@@ -23,6 +23,8 @@ plugins/*
 !plugins/MantisCoreFormatting
 !plugins/MantisGraph
 !plugins/XmlImportExport
+!plugins/Source
+!plugins/SourceGitHub
 
 # IDE/Editor temporary files
 *~
