@@ -7,6 +7,7 @@
     .PHP_EOL.' FROM common'
     .PHP_EOL.' LEFT OUTER JOIN itemname'
     .PHP_EOL.' ON "com_itemid" = "itn_itemid"'
+    .PHP_EOL.' ORDER BY "com_itemid"'
 	;
     $testserver->setQuery($query);
 	$common = $testserver->loadAssocList();
@@ -14,7 +15,7 @@
     echo '/NOP/',PHP_EOL;
 	if (!is_null($common)) {
 	   foreach($common as $key=>$item) {
-	       echo '0,0,1,',$item['com_itemid'],',0,0,0,',$item['com_weight'],',0,0,0,"',$item['itn_german'],'","',$item['itn_english'],',0,',PHP_EOL;
+	       echo '0,0,1,',$item['com_itemid'],',0,0,0,',$item['com_weight'],',0,0,0,"',$item['itn_german'],'","',$item['itn_english'],'",0,',PHP_EOL;
 	   }
 	}
 ?>
