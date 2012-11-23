@@ -1,8 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	
-	Page::Init();
-	
 	$testserver = &Database::getPostgreSQL('testserver');
 
 	$query = 'SELECT "com_itemid", "com_weight", "itn_german", "itn_english"'
