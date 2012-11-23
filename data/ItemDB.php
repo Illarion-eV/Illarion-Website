@@ -4,7 +4,9 @@
 	$testserver = &Database::getPostgreSQL('testserver');
 
 	$query = 'SELECT "com_itemid", "com_weight", "itn_german", "itn_english"'
-    .PHP_EOL.' FROM "common", "itemname"'
+    .PHP_EOL.' FROM "common"'
+    .PHP_EOL.' LEFT OUTER JOIN "itemname"'
+    .PHP_EOL.' ON com_itemid = itn_itemid"'
 	;
     $testserver->setQuery($query);
 	$common = $testserver->loadAssocList();
