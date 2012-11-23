@@ -14,7 +14,7 @@
     echo '/NOP/',PHP_EOL;
 	if (!is_null($common)) {
 	   foreach($common as $key=>$item) {
-	       echo '0,0,1,',$item['com_itemid'],',0,0,0,',$item['com_weight'],',0,0,0,"',$item['itn_german'],'","',$item['itn_english'],'",0,',PHP_EOL;
+	       echo $key,',0,1,',$item['com_itemid'],',0,0,0,',$item['com_weight'],',0,0,0,"',$item['itn_german'],'","',$item['itn_english'],'",0,',PHP_EOL;
 	   }
 	}
 ?>
