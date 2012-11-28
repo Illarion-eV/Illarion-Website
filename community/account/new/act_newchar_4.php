@@ -133,11 +133,19 @@
 			{
 				foreach($group->skill as $skill)
 				{
-					$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-					.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $skill->name ).', '.$pgSQL->Quote( $group->value ).', '.$pgSQL->Quote( $skill->value ).')'
+					$query = 'SELECT skl_skill_id FROM testserver.skills'
+					.PHP_EOL.' WHERE skl_name LIKE '.$pgSQL->Quote($skill->name).' OR skl_name_german LIKE '.$pgSQL->Quote($skill->name).' OR skl_name_english LIKE '.$pgSQL->Quote($skill->name)
 					;
 					$pgSQL->setQuery( $query );
-					$pgSQL->query();
+					$skill_id = $pgSQL->loadResult()
+					
+					if (isset($skill_id) && ($skill_id >= 0)) {
+						$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
+						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( skill_id ).', '.$pgSQL->Quote( $skill->value ).')'
+						;
+						$pgSQL->setQuery( $query );
+						$pgSQL->query();
+					}
 				}
 			}
 		}
