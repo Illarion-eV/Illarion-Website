@@ -150,7 +150,7 @@
 			}
 		}
 
-		$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+		$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 		.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 0, 100)'
 		;
 		$pgSQL->setQuery( $query );
@@ -159,32 +159,32 @@
 		switch( $race )
 		{
 			case 0:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 1, 100)'
 				;
 			break;
 			case 1:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 2, 100)'
 				;
 			break;
 			case 2:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 4, 100)'
 				;
 			break;
 			case 3:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 3, 100)'
 				;
 			break;
 			case 4:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 5, 100)'
 				;
 			break;
 			case 5:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 6, 100)'
 				;
 			break;
