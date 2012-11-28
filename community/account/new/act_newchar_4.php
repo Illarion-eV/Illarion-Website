@@ -139,7 +139,7 @@
 					
 					if (isset($skill_id) && ($skill_id >= 0)) {
 						$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
-						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( skill_id ).', '.$pgSQL->Quote( $skill->value ).')'
+						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $skill_id ).', '.$pgSQL->Quote( $skill->value ).')'
 						;
 						$pgSQL->setQuery( $query );
 						$pgSQL->query();
