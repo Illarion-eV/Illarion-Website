@@ -150,8 +150,8 @@
 			}
 		}
 
-		$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-		.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'common language\', 1, 100)'
+		$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+		.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 0, 100)'
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
@@ -159,48 +159,33 @@
 		switch( $race )
 		{
 			case 0:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'human language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 1, 100)'
 				;
 			break;
 			case 1:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'dwarf language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 2, 100)'
 				;
 			break;
 			case 2:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'halfling language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 4, 100)'
 				;
 			break;
 			case 3:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'elf language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 3, 100)'
 				;
 			break;
 			case 4:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'orc language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 5, 100)'
 				;
 			break;
 			case 5:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'lizard language\', 1, 100)'
-				;
-			break;
-			case 6:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'gnome language\', 1, 100)'
-				;
-			break;
-			case 7:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'fairy language\', 1, 100)'
-				;
-			break;
-			case 8:
-				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_type, psk_value)'
-				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', \'goblin language\', 1, 100)'
+				$query = 'INSERT INTO playerskills (psk_playerid, psk_name, psk_value)'
+				.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 6, 100)'
 				;
 			break;
 		}
