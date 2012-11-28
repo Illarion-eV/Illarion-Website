@@ -1,8 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	checkAndUpdateChar();
-
 	function checkAndUpdateChar()
 	{
 		if (!IllaUser::loggedIn())
@@ -125,7 +123,7 @@
 		}
 
 		$xmlC = new XmlC( 'UTF-8' );
-	   $xmlC->Set_XML_data( file_get_contents( $filename ) );
+	    $xmlC->Set_XML_data( file_get_contents( $filename ) );
 
 		foreach($xmlC->obj_data->pack[0]->skills[0]->group as $group )
 		{
@@ -228,4 +226,6 @@
 		}
 		$pgSQL->Commit();
 	}
+
+	checkAndUpdateChar();
 ?>
