@@ -185,7 +185,7 @@
 		<div>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_2" />
-				<input type="submit" name="submit" value="Daten speichern" />
+				<input type="submit" name="submit" value="Save data" />
 			</p>
 		</div>
 
