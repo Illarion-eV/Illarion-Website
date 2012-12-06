@@ -68,7 +68,7 @@ calculateLimits( &$limits );
 $limit_text = generateLimitTexts( $limits );
 
 $db =& Database::getPostgreSQL( 'homepage' );
-$query = 'SELECT name_de AS name, str, agi, dex, con, int, per, wil, ess'
+$query = 'SELECT name_us AS name, str, agi, dex, con, int, per, wil, ess'
 .PHP_EOL.' FROM attribtemp'
 .PHP_EOL.' ORDER BY id'
 ;
