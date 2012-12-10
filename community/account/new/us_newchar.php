@@ -240,7 +240,7 @@
 </table>
 
 <?php if ($step == 5): ?>
-<h1 style="color:#007f00;">Character creation is done! Have fun!</h1>
+<h1 style="color:#007f00;">Character creation is done! Have&nbsp;fun!</h1>
 
 <h2>So what now?</h2>
 
