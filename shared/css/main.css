@@ -135,7 +135,7 @@ button:focus {
 }
 
 select {
-	background: #000 url(pics/uebbg.jpg) repeat scroll 0 0;
+	background: #231002 url(pics/uebbg.jpg) repeat scroll 0 0;
 	border:1px solid #492020;
 	color:#DBD9CC;
 	text-decoration:none;
