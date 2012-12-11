@@ -1,7 +1,0 @@
-Subject: Benutzerkonto aktiviert
-
-Hallo {USERNAME},
-
-dein Benutzerkonto auf „{SITENAME}“ wurde jetzt aktiviert. Du kannst dich nun mit dem Benutzernamen und dem Passwort anmelden, die du mit der letzten Mail erhalten hast.
-
-{EMAIL_SIG}
