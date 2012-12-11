@@ -129,7 +129,15 @@
 	}
 	else
 	{
-		window.addEventListener("load", init1, false);
+	    if (window.addEventListener)
+	    {
+		    window.addEventListener("load", init1, false);
+		}
+		else
+		{
+		    // IE8 compatibility
+		    window.attachEvent("onload", init1);
+		}
 	}
 /* ]]> */
 </script>
@@ -188,7 +196,15 @@
 	}
 	else
 	{
-		window.addEventListener("load", init2, false);
+		if (window.addEventListener)
+	    {
+		    window.addEventListener("load", init2, false);
+		}
+		else
+		{
+		    // IE8 compatibility
+		    window.attachEvent("onload", init2);
+		}
 	}
     /* ]]> */
 </script>
@@ -346,7 +362,15 @@
 	}
 	else
 	{
-		window.addEventListener("load", init3, false);
+		if (window.addEventListener)
+	    {
+		    window.addEventListener("load", init3, false);
+		}
+		else
+		{
+		    // IE8 compatibility
+		    window.attachEvent("onload", init3);
+		}
 	};
     /* ]]> */
     </script>
