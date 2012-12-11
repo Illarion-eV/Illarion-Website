@@ -39,6 +39,16 @@
 		<script type="text/javascript">url='{URL}'; cur_lang='{LANGUAGE}';</script>
 		<link href="{SHARED_URL}/css.php?file={CSS}{NO_OPTI}" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="{SHARED_URL}/js.php?file={JS}{NO_OPTI}"></script>
+		<!-- Piwik -->
+		<script type="text/javascript" src="{URL}/piwik/piwik.js" />
+		<script type="text/javascript">
+		try {
+			var piwikTracker = Piwik.getTracker("{URL}/piwik/piwik.php", 1);
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<!-- End Piwik Tracking Code -->
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
 		<link href="{URL}" rel="top" title="{LANG|Startseite|Startpage}" />
 		<link href="{URL}" rel="start" title="{LANG|Startseite|Startpage}" />
@@ -194,5 +204,6 @@
 
 			{DEBUG}
 		</div>
+		<noscript><img src="{URL}/piwik/piwik.php?idsite=1" style="border:0px;height:0px;width:0px;" alt="" /></noscript>
 	</body>
 </html>
