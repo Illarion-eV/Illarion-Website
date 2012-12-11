@@ -91,7 +91,8 @@
 	{
 		$values = array( 'weight', 'bodyheight' );
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript">
+    /* <![CDATA[ */
 	init1 = function()
 	{
 		<?php foreach( $values as $name ) { ?>
@@ -130,7 +131,8 @@
 	{
 		window.addEventListener("load", init1, false);
 	}
-]]></script>
+/* ]]> */
+</script>
 	<?php
 	}
 
@@ -142,7 +144,8 @@
 			$default = floor(($limit['minage']+$limit['maxage'])/2);
 		}
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript">
+    /* <![CDATA[ */
 	init2 = function()
 	{
 		var change_month_age = function()
@@ -187,14 +190,16 @@
 	{
 		window.addEventListener("load", init2, false);
 	}
-]]></script>
+    /* ]]> */
+</script>
 	<?php
 	}
 
 	function include_attribute_js( $limit )
 	{
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript">
+    /* <![CDATA[ */
 	init3 = function()
 	{
 		<?php
@@ -343,7 +348,8 @@
 	{
 		window.addEventListener("load", init3, false);
 	};
-]]></script>
+    /* ]]> */
+    </script>
 	<?php
 	}
 
