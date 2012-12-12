@@ -90,8 +90,9 @@
 	function include_heightweight_js( $limit )
 	{
 		$values = array( 'weight', 'bodyheight' );
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init1 = function()
 	{
 		<?php foreach( $values as $name ) { ?>
@@ -137,7 +138,7 @@
 		    window.attachEvent("onload", init1);
 		}
 	}
-]]></script>
+<?php if ($enable_cdata): ?>]]><?php endif; ?></script>
 	<?php
 	}
 
@@ -148,8 +149,10 @@
 		{
 			$default = floor(($limit['minage']+$limit['maxage'])/2);
 		}
+		
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init2 = function()
 	{
 		var change_month_age = function()
@@ -201,14 +204,15 @@
 		    window.attachEvent("onload", init2);
 		}
 	}
-]]></script>
+<?php if ($enable_cdata): ?>]]><?php endif; ?></script>
 	<?php
 	}
 
 	function include_attribute_js( $limit )
 	{
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
 	?>
-<script type="text/javascript"><![CDATA[
+<script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init3 = function()
 	{
 		<?php
@@ -364,7 +368,7 @@
 		    window.attachEvent("onload", init3);
 		}
 	};
-]]></script>
+<?php if ($enable_cdata): ?>]]><?php endif; ?></script>
 <?php
 	}
 
