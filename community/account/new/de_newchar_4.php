@@ -109,12 +109,10 @@ Page::addJavaScript( 'newchar_3' );
 		<h2>Startausrüstung und Fähigkeiten</h2>
 
 		<select name="startpack" id="startpack" onchange="selectStartpack();return false;">
-			<?php $first = true; ?>
 			<?php foreach($start_packs as $pack): ?>
-			<option value="<?php echo $pack['spa_id']; ?>" <?php if ($first) { $first = false; echo ' selected="selected"'; } ?>><?php echo $pack['name']; ?></option>
+			<option value="<?php echo $pack['spa_id']; ?>"><?php echo $pack['name']; ?></option>
 			<?php endforeach; ?>
 		</select>
-		<button onclick="selectStartpack();return false;" style="margin-right:20px;">Anzeigen</button>
 		<span id="loading" style="display:none;">
 			<img src="<?php echo Page::getImageURL(); ?>/ajax-loading-small.gif" style="height:16px;width:16px;margin-right:10px;" alt="Laden..." />
 			Wird geladen...
