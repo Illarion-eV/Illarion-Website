@@ -134,7 +134,6 @@
 		}
 		else
 		{
-		    // IE8 compatibility
 		    window.attachEvent("onload", init1);
 		}
 	}
@@ -199,7 +198,6 @@
 		}
 		else
 		{
-		    // IE8 compatibility
 		    window.attachEvent("onload", init2);
 		}
 	}
@@ -363,7 +361,6 @@
 		}
 		else
 		{
-		    // IE8 compatibility
 		    window.attachEvent("onload", init3);
 		}
 	};
