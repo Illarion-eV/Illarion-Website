@@ -90,7 +90,7 @@
 	function include_heightweight_js( $limit )
 	{
 		$values = array( 'weight', 'bodyheight' );
-		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 8 );
 	?>
 <script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init1 = function()
@@ -150,7 +150,7 @@
 			$default = floor(($limit['minage']+$limit['maxage'])/2);
 		}
 		
-		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 8 );
 	?>
 <script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init2 = function()
@@ -210,7 +210,7 @@
 
 	function include_attribute_js( $limit )
 	{
-		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 7 );
+		$enable_cdata = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 8 );
 	?>
 <script type="text/javascript"><?php if ($enable_cdata): ?><![CDATA[<?php endif; ?>
 	init3 = function()
