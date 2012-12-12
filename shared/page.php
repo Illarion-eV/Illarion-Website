@@ -791,7 +791,7 @@ class Page {
 	static public function setXHTML() {
 		self::$page_type = 0;
 		
-		if (!canXHTML()) {
+		if (!self::canXHTML()) {
 			return null;
 		}
 		
