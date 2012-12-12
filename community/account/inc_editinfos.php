@@ -91,11 +91,7 @@
 	{
 		$values = array( 'weight', 'bodyheight' );
 	?>
-<?php if (Page::canXHTML()): ?>
-<script type="text/javascript"><![CDATA[
-<?php else: ?>
-<script type="text/javascript">
-<?php endif; ?>
+<script type="text/javascript"><?php if (Page::canXHTML()): ?><![CDATA[<?php endif; ?>
 	init1 = function()
 	{
 		<?php foreach( $values as $name ) { ?>
@@ -142,11 +138,7 @@
 		    window.attachEvent("onload", init1);
 		}
 	}
-<?php if (Page::canXHTML()): ?>
-]]></script>
-<?php else: ?>
-</script>
-<?php endif; ?>
+<?php if (Page::canXHTML()): ?>]]><?php endif; ?></script>
 	<?php
 	}
 
@@ -158,11 +150,7 @@
 			$default = floor(($limit['minage']+$limit['maxage'])/2);
 		}
 	?>
-<?php if (Page::canXHTML()): ?>
-<script type="text/javascript"><![CDATA[
-<?php else: ?>
-<script type="text/javascript">
-<?php endif; ?>
+<script type="text/javascript"><?php if (Page::canXHTML()): ?><![CDATA[<?php endif; ?>
 	init2 = function()
 	{
 		var change_month_age = function()
@@ -215,22 +203,14 @@
 		    window.attachEvent("onload", init2);
 		}
 	}
-<?php if (Page::canXHTML()): ?>
-]]></script>
-<?php else: ?>
-</script>
-<?php endif; ?>
+<?php if (Page::canXHTML()): ?>]]><?php endif; ?></script>
 	<?php
 	}
 
 	function include_attribute_js( $limit )
 	{
 	?>
-<?php if (Page::canXHTML()): ?>
-<script type="text/javascript"><![CDATA[
-<?php else: ?>
-<script type="text/javascript">
-<?php endif; ?>
+<script type="text/javascript"><?php if (Page::canXHTML()): ?><![CDATA[<?php endif; ?>
 	init3 = function()
 	{
 		<?php
@@ -387,12 +367,8 @@
 		    window.attachEvent("onload", init3);
 		}
 	};
-<?php if (Page::canXHTML()): ?>
-]]></script>
-<?php else: ?>
-</script>
-<?php endif; ?>
-	<?php
+<?php if (Page::canXHTML()): ?>]]><?php endif; ?></script>
+<?php
 	}
 
 	function calculateAge( $dobStamp )
