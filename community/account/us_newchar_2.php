@@ -78,7 +78,7 @@
     $templates = $pgSQL->loadAssocList();
 
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+	$enable_lightwindow = Page::canXHTML();
 
 	if ($enable_lightwindow)
 	{
