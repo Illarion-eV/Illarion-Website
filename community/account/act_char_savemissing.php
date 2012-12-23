@@ -1,5 +1,8 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
 
 	processSave();
 
@@ -16,7 +19,7 @@
 
     	$charid = $pgSQL->Quote( $_POST['charid'] );
 
-    	$query = "SELECT chr_status, chr_race, ply_dob"
+    	$query = "SELECT chr_status, chr_race, chr_sex, ply_dob"
     	. "\n FROM chars"
     	. "\n INNER JOIN player ON ply_playerid = chr_playerid"
     	. "\n WHERE chr_accid = ".$pgSQL->Quote( IllaUser::$ID )
@@ -100,6 +103,37 @@
     		$query[] = 'ply_dob = '.$pgSQL->Quote( $illa_day_stamp );
     		$query[] = 'ply_age = '.$pgSQL->Quote( $age );
     	}
+		
+		// ID von Haare und Bart extrahieren
+		$hair_id = substr($_POST['hairvalue'], 6);
+		$beard_id = substr($_POST['beardvalue'], 7);
+
+		// Skincode in RGB umwandeln
+		$hex_red = substr($_POST['skincolor'], 1, 2);
+		$hex_green = substr($_POST['skincolor'], 3, 2);
+		$hex_blue = substr($_POST['skincolor'], 5, 2);
+		$skin_red = hexdec($hex_red);
+		$skin_green = hexdec($hex_green);
+		$skin_blue = hexdec($hex_blue);
+
+		// Haircode in RGB umwandeln
+		$hex_red = substr($_POST['haircolor'], 1, 2);
+		$hex_green = substr($_POST['haircolor'], 3, 2);
+		$hex_blue = substr($_POST['haircolor'], 5, 2);
+		$hair_red = hexdec($hex_red);
+		$hair_green = hexdec($hex_green);
+		$hair_blue = hexdec($hex_blue);
+		
+		$query[] = 'ply_hair = '.$pgSQL->Quote( $hair_id );
+		$query[] = 'ply_beard = '.$pgSQL->Quote( $beard_id );
+		
+		$query[] = 'ply_hairred = '.$pgSQL->Quote( $hair_red );
+		$query[] = 'ply_hairgreen = '.$pgSQL->Quote( $hair_green );
+		$query[] = 'ply_hairblue = '.$pgSQL->Quote( $hair_blue );
+		
+		$query[] = 'ply_skinred = '.$pgSQL->Quote( $skin_red );
+		$query[] = 'ply_skingreen = '.$pgSQL->Quote( $skin_green );
+		$query[] = 'ply_skinblue = '.$pgSQL->Quote( $skin_blue );
 
     	$query = "UPDATE player"
     	. "\n SET ".implode( ', ', $query )

@@ -20,7 +20,7 @@
 
 	$pgSQL =& Database::getPostgreSQL( $server );
 
-	$query = 'SELECT chr_name, chr_race, chr_sex, chr_status, ply_body_height, ply_weight, ply_dob, ply_age'
+	$query = 'SELECT chr_name, chr_race, chr_sex, chr_status, ply_body_height, ply_weight, ply_dob, ply_age, ply_hair, ply_beard, ply_skinred, ply_skingreen, ply_skinblue, ply_hairred, ply_hairgreen, ply_hairblue'
 	.PHP_EOL.' FROM player'
 	.PHP_EOL.' INNER JOIN chars ON chr_playerid = ply_playerid'
 	.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( (int)$_GET['charid'] )
@@ -87,10 +87,15 @@
 	$skincolors = char_create::getSkinColors($race);
 	$hairvalues = char_create::getHairValues($race, $sex, IllaUser::$lang);
 	$beardvalues = char_create::getBeardValues($race, IllaUser::$lang);
-	$start_hair_value  = "_hair_1";
-	$start_beard_value = "_beard_0";
-	$start_skin_color  = $skincolors[mt_rand(0,41)];
-	$start_hair_color  = $haircolors[mt_rand(0,41)];
+	$start_hair_value  = "_hair_".$char_data["ply_hair"];
+	$start_beard_value = "_beard_".$char_data["ply_beard"];
+	if ($char_data["ply_skinred"] == "0") {
+		$start_skin_color  = $skincolors[mt_rand(0,41)];
+		$start_hair_color  = $haircolors[mt_rand(0,41)];
+	} else {
+		$start_skin_color  = "#".strtoupper(dechex($char_data["ply_skinred"]).dechex($char_data["ply_skingreen"]).dechex($char_data["ply_skinblue"]));
+		$start_hair_color  = "#".strtoupper(dechex($char_data["ply_hairred"]).dechex($char_data["ply_hairgreen"]).dechex($char_data["ply_hairblue"]));
+	}
 ?>
 <div>
 	<h1>Fehlende Informationen</h1>

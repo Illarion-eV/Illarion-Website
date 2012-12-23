@@ -12,9 +12,6 @@
 	Page::setDescription( 'Auf dieser Seite bekommst du eine Übersicht über alle Charaktere die du hast' );
 	Page::setKeywords( array( 'Charaktere', 'Account', 'Übersicht' ) );
 
-	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
-
 	Page::setXHTML();
 	Page::Init();
 
