@@ -105,7 +105,7 @@ Page::addJavaScript( 'newchar_3' );
 			gain further skills and new equipment. The selection of the first equipment package has no real influence on the further game.
 			So just choose the package you like most.</p>
 
-	<form action="<?php echo Page::getURL(); ?>/community/account/new/us_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
+	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
 
 		<h2>Start equipment and skills</h2>
 

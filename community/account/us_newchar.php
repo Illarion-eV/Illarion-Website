@@ -138,7 +138,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 2): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_2.php<?php echo $ident; ?>">
+			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_2.php<?php echo $ident; ?>">
 				Step 2
 			</a>
 			<?php elseif ($step > 2): ?>
@@ -173,7 +173,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 3): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_3.php<?php echo $ident; ?>">
+			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_3.php<?php echo $ident; ?>">
 				Step 3
             </a>
             <?php elseif ($step > 3): ?>
@@ -206,7 +206,7 @@
     <tr>
         <td>
             <?php if ($step == 4): ?>
-            <a href="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_4.php<?php echo $ident; ?>">
+            <a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php<?php echo $ident; ?>">
 				Step 4
 			</a>
 			<?php elseif ($step > 4): ?>

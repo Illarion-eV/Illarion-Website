@@ -88,7 +88,7 @@ Page::addJavaScript( 'slider' );
 
 <p>You have to put in the attributes of your character here. You should think well about this, because the attributes will not change anymore in the game.</p>
 <div>
-	<form action="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attributes</h2>
 

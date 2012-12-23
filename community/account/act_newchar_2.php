@@ -1,5 +1,5 @@
 <?php
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
 
 	checkAndUpdateChar();
 

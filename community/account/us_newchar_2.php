@@ -6,8 +6,8 @@
 	Page::Init();
 
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
@@ -86,7 +86,7 @@
 
 <p>At this point you can design your character</p>
 
-<form action="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 	<div>
 		<h2>Informations</h2>
 		<table style="width:100%;">

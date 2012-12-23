@@ -104,7 +104,7 @@ Page::addJavaScript( 'newchar_3' );
 			neue Ausrüstung bekommen. Die Wahl dieser Startausrüstung schränkt den weiteren Verlauf des Spiels nicht ein.
 			Wähle also einfach das Paket, das Dir für den Anfang am meisten zusagt.</p>
 
-	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
+	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
 
 		<h2>Startausrüstung und Fähigkeiten</h2>
 

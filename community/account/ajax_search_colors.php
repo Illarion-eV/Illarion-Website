@@ -7,8 +7,8 @@
 		exit();
 	}
 
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/inc_charcreate.php' );
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/new/def_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charcreate.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
 
 	Page::setXML();
 	Page::Init();

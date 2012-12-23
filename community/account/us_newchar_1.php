@@ -47,7 +47,7 @@
 <p>At this point you have to type in the name, race and gender of your character
 The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</a> could be usefull.</p>
 
-<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/new/us_newchar_1.php">
+<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/us_newchar_1.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
