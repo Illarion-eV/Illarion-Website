@@ -1,159 +1,191 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	if (!IllaUser::loggedIn())
-	{
-		header('HTTP/1.0 401 Unauthorized');
-		exit();
-	}
+IllaUser::requireLogin();
 
-	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
-	$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
-	if (!$charid)
-	{
-		exit('Fehler - Charakter ID wurde nicht richtig übergeben.');
-	}
+Page::Init();
 
-	$pgSQL =& Database::getPostgreSQL();
+includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
 
-	$query = 'SELECT chr_race, chr_status'
-	.PHP_EOL.' FROM '.$server.'.chars'
+$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+$charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
+if (!$charid)
+{
+	exit('Fehler - Charakter ID wurde nicht richtig übergeben.');
+}
+
+$pgSQL =& Database::getPostgreSQL( $server );
+
+$query = 'SELECT chr_race, chr_sex'
+	.PHP_EOL.' FROM chars'
 	.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
 	.PHP_EOL.' AND chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
 	;
-	$pgSQL->setQuery( $query );
-	list( $race, $status ) = $pgSQL->loadRow();
+$pgSQL->setQuery( $query );
+list( $race, $sex ) = $pgSQL->loadRow();
 
-	if ($race === null || $race === false)
-	{
-		header('HTTP/1.0 401 Unauthorized');
-		exit();
-	}
+if ($race === null || $race === false)
+{
+	Messages::add( 'Charakter wurde nicht gefunden.', 'error' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/de_charlist.php' );
+	exit();
+}
 
-	if ($status != 3 && $status != 5 && $status != 7 && $status != 8)
-	{
-		exit('Fehler - Falscher Charakterstatus.');
-	}
+$query = 'SELECT COUNT(*)'
+.PHP_EOL.' FROM player'
+.PHP_EOL.'WHERE ply_playerid = '.$pgSQL->Quote( $charid )
+.PHP_EOL.' AND ply_strength != 0'
+;
+$pgSQL->setQuery( $query );
+if ($pgSQL->loadResult())
+{
+	exit('Fehler - Werte wurden bereits gesetzt');
+}
 
-	$query = 'SELECT COUNT(*)'
-	.PHP_EOL.' FROM '.$server.'.player'
-	.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
-	;
-	$pgSQL->setQuery( $query );
-	if (!$pgSQL->loadResult())
-	{
-		exit("Fehler - Daten nicht gesetzt.");
-	}
+$account =& Database::getPostgreSQL( 'accounts' );
 
-	if ($server == 'testserver')
-	{
-		$newbieOnly = false;
-	}
-	else
-	{
-		$query = 'SELECT COUNT(*)'
-		.PHP_EOL.' FROM '.$server.'.chars'
-		.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-		.PHP_EOL.' AND chr_status NOT IN (3,5,7,8)'
-		;
-		$pgSQL->setQuery( $query );
-		$char_count = $pgSQL->loadResult();
-		if (!$char_count)
-		{
-			$newbieOnly = true;
-		}
-		else
-		{
-			$query = 'SELECT COUNT(*)'
-			.PHP_EOL.' FROM '.$server.'.chars'
-			.PHP_EOL.' INNER JOIN '.$server.'.questprogress ON qpg_userid = chr_playerid'
-			.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-			.PHP_EOL.' AND qpg_questid = 2'
-			.PHP_EOL.' AND qpg_progress > 0'
-			.PHP_EOL.' AND chr_status NOT IN (3,5,7,8)'
-			;
-			$pgSQL->setQuery( $query );
-			if ($char_count>$pgSQL->loadResult())
-			{
-				$newbieOnly = false;
-			}
-			else
-			{
-				$newbieOnly = true;
-			}
-		}
-	}
+$query = 'SELECT *'
+.PHP_EOL.' FROM raceattr'
+.PHP_EOL.' WHERE id IN ( -1, '.$account->Quote( $race ).' )'
+.PHP_EOL.' ORDER BY id DESC'
+;
+$account->setQuery( $query, 0, 1 );
+$limits = $account->loadAssocRow();
 
+$limits['curr_agility'] = $limits['minagility'];
+$limits['curr_strength'] = $limits['minstrength'];
+$limits['curr_constitution'] = $limits['minconstitution'];
+$limits['curr_dexterity'] = $limits['mindexterity'];
+$limits['curr_perception'] = $limits['minperception'];
+$limits['curr_willpower'] = $limits['minwillpower'];
+$limits['curr_intelligence'] = $limits['minintelligence'];
+$limits['curr_essence'] = $limits['minessence'];
+$limits['curr_remaining'] = $limits['maxattribs'] - ( $limits['curr_agility']+$limits['curr_strength']+$limits['curr_constitution']+$limits['curr_dexterity']+$limits['curr_perception']+$limits['curr_willpower']+$limits['curr_intelligence']+$limits['curr_essence'] );
+$limits['minremaining'] = 0;
+$limits['maxremaining'] = $limits['maxattribs'];
 
-	$query = 'SELECT spl_id, spl_name_de AS name'
-    .PHP_EOL.' FROM accounts.startplace'
-	.( $newbieOnly ? PHP_EOL.' WHERE spl_newbie = 1' : '')
-	.PHP_EOL.' ORDER BY spl_id ASC'
-    ;
-    $pgSQL->setQuery( $query );
-	$start_places = $pgSQL->loadAssocList();
+calculateLimits( &$limits );
+$limit_text = generateLimitTexts( $limits );
 
-	$query = 'SELECT spa_id, spa_name_de AS name'
-    .PHP_EOL.' FROM accounts.startpack'
-	.PHP_EOL.' WHERE spa_race IN (-1,'.$pgSQL->Quote( $race ).')'
-    ;
-    $pgSQL->setQuery( $query );
-    $start_packs = $pgSQL->loadAssocList();
+$db =& Database::getPostgreSQL( 'homepage' );
+$query = 'SELECT name_de AS name, str, agi, dex, con, int, per, wil, ess'
+.PHP_EOL.' FROM attribtemp'
+.PHP_EOL.' ORDER BY id'
+;
+$db->setQuery( $query );
+$templates = $db->loadAssocList();
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+Page::setXHTML();
+Page::addJavaScript( 'prototype' );
+Page::addJavaScript( 'effects' );
+Page::addCSS( 'slider' );
+Page::addJavaScript( 'slider' );
 
-	if ($enable_lightwindow)
-	{
-		Page::setXML();
-	}
-	else
-	{
-		Page::setXHTML();
-		Page::addJavaScript( 'prototype' );
-		Page::addJavaScript( 'newchar_3' );
-	}
-	Page::Init();
 ?>
+
+<h1>Neuen Charakter erstellen</h1>
+
+<h2>Schritt 3</h2>
+<p>Hier kannst Du die Attribute Deines Charakters festlegen. Die Attribute verändern sich im Spiel nicht mehr. Überlege also möglichst genau, wie Du sie wählst.</p>
 <div>
-	<h1>Schritt 3</h1>
+	<form action="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+		<div>
+			<h2>Attribute</h2>
 
-	<h2>Startposition</h2>
-
-
-	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="package" id="package">
-		<p>
-			<?php if (count($start_places)>1): ?>
-			<select name="location" id="location">
-				<?php foreach($start_places as $place): ?>
-				<option value="<?php echo $place['spl_id']; ?>"><?php echo $place['name']; ?></option>
-				<?php endforeach; ?>
-			</select>
-			<?php else: ?>
-			<input type="hidden" name="location" value="<?php echo $start_places[0]['spl_id']; ?>" />
-			<?php echo $start_places[0]['name']; ?>
-			<?php endif; ?>
-		</p>
-
-		<h2>Startausrüstung</h2>
-
-		<select name="startpack" id="startpack">
-			<?php foreach($start_packs as $pack): ?>
-			<option value="<?php echo $pack['spa_id']; ?>"><?php echo $pack['name']; ?></option>
-			<?php endforeach; ?>
-		</select>
-		<button onclick="selectStartpack();return false;" style="margin-right:20px;">Anzeigen</button>
-		<span id="loading" style="display:none;">
-			<img src="<?php echo Page::getImageURL(); ?>/ajax-loading-small.gif" style="height:16px;width:16px;margin-right:10px;" alt="Laden..." />
-			Wird geladen...
-		</span>
-
-		<div id="startpack_area"></div>
-
-		<p style="text-align:center;padding:10px;">
-			<input type="hidden" name="sel_pack" id="sel_pack" value="" />
-			<input type="hidden" name="action" value="newchar_3" />
-			<button onclick="document.forms.package.submit();" disabled="disabled" class="disabled" id="submit_button" style="margin-right:10px;">Daten absenden</button>
-			<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
-		</p>
+			<table style="width:100%">
+				<tbody>
+					<tr>
+						<td>
+							Attributpakete
+						</td>
+						<td style="width:423px;">
+							<select id="attrib_pack">
+								<option>Keins</option>
+								<?php foreach($templates as $template): ?>
+								<option value="<?php echo $template['str'],'|',$template['agi'],'|',$template['dex'],'|',$template['con'],'|',$template['int'],'|',$template['per'],'|',$template['wil'],'|',$template['ess']; ?>"><?php echo $template['name']; ?></option>
+								<?php endforeach; ?>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Stärke (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+						</td>
+						<td style="width:423px;">
+							<?php include_slider( $limits, 'strength' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Schnelligkeit (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'agility' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Ausdauer (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'constitution' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Geschicklichkeit (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'dexterity' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Intelligenz (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'intelligence' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Wahrnehmung (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'perception' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Willenskraft (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'willpower' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Essenz (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+						</td>
+						<td>
+							<?php include_slider( $limits, 'essence' ); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Restliche Punkte
+						</td>
+						<td>
+							<?php include_slider( $limits, 'remaining' ); ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<?php include_attribute_js( $limits ); ?>
+			<p style="text-align:center;padding-bottom:10px;">
+				<input type="hidden" name="action" value="newchar_3" />
+				<input type="submit" name="submit" value="Daten speichern" />
+			</p>
+		</div>
 	</form>
 </div>

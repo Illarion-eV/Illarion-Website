@@ -52,9 +52,21 @@
 		.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
 		;
 		$pgSQL->setQuery( $query );
+
 		if ($pgSQL->loadResult() == 1)
 		{
 			$step = 3;
+			$query = 'SELECT COUNT(*)'
+			.PHP_EOL.' FROM player'
+			.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
+			.PHP_EOL.' AND ply_dob > 0'
+			;
+			$pgSQL->setQuery( $query );
+
+			if ($pgSQL->loadResult() > 0)
+			{
+				$step = 4;
+			}
 			$query = 'SELECT COUNT(*)'
 			.PHP_EOL.' FROM playerskills'
 			.PHP_EOL.' WHERE psk_playerid = '.$pgSQL->Quote( $charid )
@@ -62,7 +74,7 @@
 			$pgSQL->setQuery( $query );
 			if ($pgSQL->loadResult() > 0)
 			{
-				$step = 4;
+				$step = 5;
 			}
 			else
 			{
@@ -73,7 +85,7 @@
 				$pgSQL->setQuery( $query );
 				if ($pgSQL->loadResult() > 0)
 				{
-					$step = 4;
+					$step = 5;
 				}
 			}
 		}
@@ -84,7 +96,7 @@
 	Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
 	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow', 'charcreate_search_color' ) );
 
 	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
 
@@ -107,38 +119,20 @@
 
 <h1>Neuen Charakter erstellen</h1>
 
-<h2>Drei Schritte zu einem neuen Charakter für Illarion</h2>
-
-<h3>Hinweis für neue Spieler: Magier und Druiden erfordern einiges an Arbeit, einschließlich der Hilfe anderer Spieler. Daher sind diese keine idealen ersten Charaktere.</h3>
+<h2>Vier Schritte zu einem neuen Charakter für Illarion</h2>
 
 <table style="width:100%">
 	<tr>
 		<td style="width:130px;">
-			<?php if ($step == 1): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar_1.php"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 1', 350, 380 ); ?>"<?php endif; ?> style="font-size:18pt;">
-				Schritt 1
-			</a>
-			<?php else: ?>
 			<span style="color:#007f00;">
 				Schritt 1
 			</span>
-			<?php endif; ?>
 		</td>
 		<td>
 			&nbsp;&nbsp;&nbsp;
 		</td>
 		<td>
-			<?php if ($step == 1): ?>
-			Klicke auf den Link "Schritt 1" um diesen Teil der Charaktererstellung
-			durchzuführen. Hier musst Du Name, Rasse und Geschlecht des Charakters
-			festlegen. Bitte beachte dazu die
-			<a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a>
-			von Illarion. Hilfreich kann auch die
-			<a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a>
-			sein.
-			<?php else: ?>
 			Schritt 1 wurde richtig ausgeführt.
-			<?php endif; ?>
 		</td>
 	</tr>
 	<tr>
@@ -147,7 +141,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 2): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar_2.php<?php echo $ident; ?>"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 2', 600, 750 ); ?>"<?php endif; ?> style="font-size:18pt;">
+			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_2.php<?php echo $ident; ?>">
 				Schritt 2
 			</a>
 			<?php elseif ($step > 2): ?>
@@ -166,9 +160,7 @@
 		<td>
 			<?php if ($step == 2): ?>
 			Klicke auf den Link "Schritt 2" um diesen Teil der Charaktererstellung
-			durchzuführen. Hier kannst Du die Attribute Deines Charakters festlegen.
-			Die Attribute verändern sich im Spiel nicht mehr. Überlege also möglichst
-			genau, wie Du sie wählst.
+			durchzuführen. Hier kannst Du das Aussehen Deines Charakters festlegen.
 			<?php elseif ($step > 2): ?>
 			Schritt 2 wurde richtig ausgeführt.
 			<?php else: ?>
@@ -182,16 +174,51 @@
 	<tr>
 		<td>
 			<?php if ($step == 3): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar_3.php<?php echo $ident; ?>"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 3', 450, 550 ); ?>"<?php endif; ?> style="font-size:18pt;">
+			<a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_3.php<?php echo $ident; ?>">
 				Schritt 3
+            </a>
+            <?php elseif ($step > 3): ?>
+            <span style="color:#007f00;">
+                Schritt 3
+            </span>
+            <?php else: ?>
+            <span style="color:#7f0000;">
+                Schritt 3
+            </span>
+            <?php endif; ?>
+        </td>
+        <td>
+            &nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+            <?php if ($step == 3): ?>
+            Klicke auf den Link "Schritt 3" um diesen Teil der Charaktererstellung
+            durchzuführen. Hier kannst Du die Attribute Deines Charakters festlegen.
+            Die Attribute verändern sich im Spiel nicht mehr. Überlege also möglichst
+            genau, wie Du sie wählst.
+            <?php elseif ($step > 3): ?>
+            Schritt 3 wurde richtig ausgeführt.
+            <?php else: ?>
+            Schritt 3 kann nicht ausgeführt werden, solange Schritt 2 noch aussteht.
+            <?php endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <?php if ($step == 4): ?>
+            <a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_4.php<?php echo $ident; ?>">
+				Schritt 4
 			</a>
-			<?php elseif ($step > 3): ?>
+			<?php elseif ($step > 4): ?>
 			<span style="color:#007f00;">
-				Schritt 3
+				Schritt 4
 			</span>
 			<?php else: ?>
 			<span style="color:#7f0000;">
-				Schritt 3
+				Schritt 4
 			</span>
 			<?php endif; ?>
 		</td>
@@ -199,24 +226,24 @@
 			&nbsp;&nbsp;&nbsp;
 		</td>
 		<td>
-			<?php if ($step == 3): ?>
-			Klicke auf den Link "Schritt 3" um diesen Teil der Charaktererstellung
+			<?php if ($step == 4): ?>
+			Klicke auf den Link "Schritt 4" um diesen Teil der Charaktererstellung
 			durchzuführen. Hier wählst Du die Startausrüstung und die Anfangsfähigkeiten
 			Deines Charakters. Im Laufe des Spiel wirst Du neue Fähigkeiten lernen und
 			neue Ausrüstung bekommen. Die Wahl dieser Startausrüstung schränkt den
 			weiteren Verlauf des Spiels nicht ein. Wähle also einfach das Paket, dass Dir für den
 			Anfang am meisten zusagt.
-			<?php elseif ($step > 3): ?>
-			Schritt 3 wurde richtig ausgeführt.
+			<?php elseif ($step > 4): ?>
+			Schritt 4 wurde richtig ausgeführt.
 			<?php else: ?>
-			Schritt 3 kann nicht ausgeführt werden, solange Schritt 2 noch aussteht.
+			Schritt 4 kann nicht ausgeführt werden, solange Schritt 3 noch aussteht.
 			<?php endif; ?>
 		</td>
 	</tr>
 </table>
 
-<?php if ($step == 4): ?>
-<h1 style="color:#007f00;">Charaktererstellung ist abgeschlossen. Viel Spaß!</h1>
+<?php if ($step == 5): ?>
+<h1 style="color:#007f00;">Charaktererstellung ist abgeschlossen. Viel&nbsp;Spaß!</h1>
 
 <h2>Wie gehts weiter?</h2>
 
