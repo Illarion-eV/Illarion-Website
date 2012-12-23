@@ -11,7 +11,7 @@ function skinColorChange(image, color)
 	});
 
 	var newAJAX = new Ajax.Request(
-		url+'/community/account/new/ajax_search_colors.php',
+		url+'/community/account/ajax_search_colors.php',
 		{
 			method: 'post',
 			parameters: params,
@@ -59,7 +59,7 @@ function hairChange(image, color)
 	});
 
 	var newAJAX = new Ajax.Request(
-		url+'/community/account/new/ajax_search_colors.php',
+		url+'/community/account/ajax_search_colors.php',
 		{
 			method: 'post',
 			parameters: params,
