@@ -10,6 +10,9 @@
 
 <h1>Willkommen auf Illarion!</h1>
 
+<p style="font-weight:bold">Illarion wird aktuell auf eine neue Version aktualisiert.
+Bitte achte auf die Neuigkeiten um den aktuellen Status zu erfahren.</p>
+
 <?php Page::cap('I'); ?>
 <p>llarion ist ein kostenloses Online-Rollenspiel in einer klassischen Fantasy-Welt.
 Das Spiel wird von einer Gruppe von Freiwilligen entwickelt und betreut um 
