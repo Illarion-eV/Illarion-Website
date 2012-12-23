@@ -77,6 +77,7 @@
 		Page::addJavaScript( array( 'prototype', 'effects' ) );
 		Page::addCSS( 'slider' );
 		Page::addJavaScript( 'slider' );
+		Page::addJavaScript( 'charcreate_search_color' );
 	}
 	Page::Init();
 	

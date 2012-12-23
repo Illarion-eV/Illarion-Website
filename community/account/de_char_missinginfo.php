@@ -67,7 +67,7 @@
 		$limit_text = generateLimitTexts( $limits );
 	}
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+	$enable_lightwindow = false;
 
 	if ($enable_lightwindow)
 	{
@@ -79,6 +79,7 @@
 		Page::addJavaScript( array( 'prototype', 'effects' ) );
 		Page::addCSS( 'slider' );
 		Page::addJavaScript( 'slider' );
+		Page::addJavaScript( 'charcreate_search_color' );
 	}
 	Page::Init();
 	
