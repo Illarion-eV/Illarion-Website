@@ -29,7 +29,7 @@
 	$pgSQL->setQuery( $query );
 	$char_data = $pgSQL->loadAssocRow();
 
-	if ( $char_data['ply_dob'] > 0 && $char_data['chr_status'] != 40 )
+	if ( $char_data == null || ($char_data['ply_dob'] > 0 && $char_data['chr_status'] != 40))
 	{
 		header('HTTP/1.0 401 Unauthorized');
 		exit();
