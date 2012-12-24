@@ -6,15 +6,17 @@
 
 	$db =& Database::getPostgreSQL();
 	
+	$server = (isset($_GET['server']) && $_GET['server'] == 1 ? "testserver" : "illarionserver");
+	
 	$query = 'SELECT "skl_skill_id", "skl_group_id", "skl_name", "skl_name_german", "skl_name_english"'
-	.PHP_EOL.'FROM "testserver"."skills"'
+	.PHP_EOL.'FROM "'.$server.'"."skills"'
 	.PHP_EOL.'ORDER BY "skl_group_id"'
 	;
 	$db->setQuery( $query );
 	$skillList = $db->loadAssocList();
 
 	$query = 'SELECT "skg_group_id", "skg_name_german", "skg_name_english"'
-	.PHP_EOL.'FROM "testserver"."skillgroups"'
+	.PHP_EOL.'FROM "'.$server.'"."skillgroups"'
 	.PHP_EOL.'ORDER BY "skg_group_id"'
 	;
 	$db->setQuery( $query );
