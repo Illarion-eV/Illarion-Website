@@ -162,7 +162,7 @@ Java eingebunden werden.</p>
 <p>Im ersten Schritt musst du die Stammzertifikate von cacert herunterladen.</p>
 
 <p>
-	<a href="http://www.cacert.org/index.php?id=3&lang=de">
+	<a href="http://www.cacert.org/index.php?id=3&amp;lang=de">
 		Downloadseite von cacert (externe Seite)
 	</a>
 </p>
