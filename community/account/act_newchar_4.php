@@ -106,13 +106,13 @@
 			}
 		}
 
-		$db =& Database::getPostgreSQL( 'homepage' );
+		$db =& Database::getPostgreSQL( 'accounts' );
 		
 		$pgSQL->Begin();
 
-		$query = 'SELECT name_file'
+		$query = 'SELECT spa_name_file'
 		.PHP_EOL.' FROM startpack'
-		.PHP_EOL.' WHERE id = '.$db->Quote( $package );
+		.PHP_EOL.' WHERE spa_id = '.$db->Quote( $package );
 		$db->setQuery( $query );
 		$filename = Page::getRootPath().'/community/account/startpacks/'.$db->loadResult();
 
