@@ -122,7 +122,7 @@
 	<tr>
  		<td style="width:130px;">
 			<?php if ($step == 1): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_1.php"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Character creation step 1', 350, 380 ); ?>"<?php endif; ?> style="font-size:25px;">
+			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_1.php" style="font-size:18pt;">
 				Step 1
 			</a>
 			<?php else: ?>
@@ -154,7 +154,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 2): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_2.php<?php echo $ident; ?>">
+			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_2.php<?php echo $ident; ?>" style="font-size:18pt;">
 				Step 2
 			</a>
 			<?php elseif ($step > 2): ?>
@@ -189,7 +189,7 @@
 	<tr>
 		<td>
 			<?php if ($step == 3): ?>
-			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_3.php<?php echo $ident; ?>">
+			<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_3.php<?php echo $ident; ?>" style="font-size:18pt;">
 				Step 3
             </a>
             <?php elseif ($step > 3): ?>
@@ -222,7 +222,7 @@
     <tr>
         <td>
             <?php if ($step == 4): ?>
-            <a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php<?php echo $ident; ?>">
+            <a href="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php<?php echo $ident; ?>" style="font-size:18pt;">
 				Step 4
 			</a>
 			<?php elseif ($step > 4): ?>
