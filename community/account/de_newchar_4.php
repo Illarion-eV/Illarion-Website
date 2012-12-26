@@ -85,7 +85,7 @@ else
 }
 
 $query = 'SELECT "stp_id", "stp_german" AS "name"'
-.PHP_EOL.' FROM "'.$server.'"."skillpacks"'
+.PHP_EOL.' FROM "'.$server.'"."startpacks"'
 .PHP_EOL.' WHERE 1=1';
 $pgSQL->setQuery($query);
 $start_packs = $pgSQL->loadAssocList();
