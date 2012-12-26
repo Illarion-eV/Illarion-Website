@@ -123,17 +123,33 @@
 
 <table style="width:100%">
 	<tr>
-		<td style="width:130px;">
-			<span style="color:#007f00;">
+ 		<td style="width:130px;">
+			<?php if ($step == 1): ?>
+			<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar_1.php"<?php if ($enable_lightwindow): ?> onclick="<?php JSBuilder::Lightwindow_activate( null, 'Charaktererstellung Schritt 1', 350, 380 ); ?>"<?php endif; ?> style="font-size:18pt;">
 				Schritt 1
-			</span>
-		</td>
-		<td>
-			&nbsp;&nbsp;&nbsp;
-		</td>
-		<td>
-			Schritt 1 wurde richtig ausgeführt.
-		</td>
+			</a>
+			<?php else: ?>
+ 			<span style="color:#007f00;">
+ 				Schritt 1
+ 			</span>
+			<?php endif; ?>
+ 		</td>
+ 		<td>
+ 			&nbsp;&nbsp;&nbsp;
+ 		</td>
+ 		<td>
+			<?php if ($step == 1): ?>
+			Klicke auf den Link "Schritt 1" um diesen Teil der Charaktererstellung
+			durchzufÃ¼hren. Hier musst Du Name, Rasse und Geschlecht des Charakters
+			festlegen. Bitte beachte dazu die
+			<a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a>
+			von Illarion. Hilfreich kann auch die
+			<a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a>
+			sein.
+			<?php else: ?>
+			Schritt 1 wurde richtig ausgefÃ¼hrt.
+			<?php endif; ?>
+ 		</td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
