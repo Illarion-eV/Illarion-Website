@@ -38,7 +38,7 @@
     .PHP_EOL.' WHERE "stp_id" = '.$pgSQL->Quote($packId);
     $pgSQL->setQuery($query);
 	
-	if ($pgSQL->getResult() == 0)
+	if ($pgSQL->loadResult() == 0)
 	{
 		exit('<error>no such package: '.$packId.'</error>');
 	}
