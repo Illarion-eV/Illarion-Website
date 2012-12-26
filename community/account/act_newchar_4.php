@@ -192,8 +192,8 @@
 
 	   foreach($xmlC->obj_data->pack[0]->items[0]->item as $item )
 		{
-			$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality, pit_data)'
-			.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $item->id ).', '.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 5, '.$pgSQL->Quote( $item->number ).', '.$pgSQL->Quote( $item->qual ).', '.$pgSQL->Quote( $item->data ).')'
+			$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality)'
+			.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $item->id ).', '.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 5, '.$pgSQL->Quote( $item->number ).', '.$pgSQL->Quote( $item->qual ).')'
 			;
 			$pgSQL->setQuery( $query );
 			$pgSQL->query();
