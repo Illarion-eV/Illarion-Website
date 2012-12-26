@@ -54,7 +54,7 @@
 	$query = 'SELECT "spi_item_id" AS "itemid", '.($language == 'de' ? '"itn_german"' : '"itn_english"').' AS "name"'
     .PHP_EOL.' FROM "'.$server.'"."startpack_items"'
     .PHP_EOL.' INNER JOIN "'.$server.'"."itemname" ON "spi_item_id" = "itn_itemid"'
-    .PHP_EOL.' WHERE "spi_id" = 0'
+    .PHP_EOL.' WHERE "spi_id" = '.$pgSQL->Quote($packId)
     .PHP_EOL.' ORDER BY "spi_linenumber" ASC';
     $pgSQL->setQuery($query);
 	$items = $pgSQL->loadAssocList();
