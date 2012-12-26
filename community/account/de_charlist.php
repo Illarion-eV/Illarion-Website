@@ -23,7 +23,7 @@
 		Page::addJavaScript( 'slider' );
 	}
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+	$enable_lightwindow = false;
 ?>
 
 <h1>Charakterliste</h1>
