@@ -140,14 +140,14 @@
  		<td>
 			<?php if ($step == 1): ?>
 			Klicke auf den Link "Schritt 1" um diesen Teil der Charaktererstellung
-			durchzufÃ¼hren. Hier musst Du Name, Rasse und Geschlecht des Charakters
+			durchzuführen. Hier musst Du Name, Rasse und Geschlecht des Charakters
 			festlegen. Bitte beachte dazu die
 			<a href="<?php echo Page::getURL(); ?>/illarion/de_name_rules.php">Namensregeln</a>
 			von Illarion. Hilfreich kann auch die
 			<a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a>
 			sein.
 			<?php else: ?>
-			Schritt 1 wurde richtig ausgefÃ¼hrt.
+			Schritt 1 wurde richtig ausgeführt.
 			<?php endif; ?>
  		</td>
 	</tr>
