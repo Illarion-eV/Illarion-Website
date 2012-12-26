@@ -1,6 +1,4 @@
 <?php
-	error_reporting(E_ALL);
-	
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	
 	if (!isset($_GET['startpack']) || !is_numeric($_GET['startpack']))
@@ -30,7 +28,10 @@
 	
 	$server = ($server == 0) ? 'illarionserver' : 'testserver';
 	
-	$pgSQL =& Database::getPostgreSQL();
+	Page::setXML('application/xml');
+	Page::Init();
+	
+	$pgSQL = &Database::getPostgreSQL();
 	
 	$query = 'SELECT COUNT(*)'
     .PHP_EOL.' FROM "'.$server.'"."startpacks"'
@@ -57,9 +58,6 @@
     .PHP_EOL.' ORDER BY "spi_linenumber" ASC';
     $pgSQL->setQuery($query);
 	$items = $pgSQL->loadAssocList();
-	
-	Page::setXML();
-	Page::Init();
 ?>
 <pack>
 	<skills>
