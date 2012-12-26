@@ -193,15 +193,15 @@ verwenden um die Installation durchzuführen. Wenn Java richtig installiert ist
 befindet sich dieses Programm im path.</p>
 
 <p><pre>
-$ keytool -keystore $/PFAD/ZUM/CACERTS/KEYSTORE
-	-storepass changeit -import
-	-trustcacerts -v
-	-alias cacertclass1
+$ keytool -keystore $/PFAD/ZUM/CACERTS/KEYSTORE \
+	-storepass changeit -import \
+	-trustcacerts -v \
+	-alias cacertclass1 \
 	-file root.crt
-$ keytool -keystore $/PFAD/ZUM/CACERTS/KEYSTORE
-	-storepass changeit -import
-	-trustcacerts -v
-	-alias cacertclass3
+$ keytool -keystore $/PFAD/ZUM/CACERTS/KEYSTORE \
+	-storepass changeit -import \
+	-trustcacerts -v \
+	-alias cacertclass3 \
 	-file class3.crt
 </pre></p>
 
