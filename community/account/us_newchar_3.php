@@ -67,10 +67,10 @@ $limits['maxremaining'] = $limits['maxattribs'];
 calculateLimits( &$limits );
 $limit_text = generateLimitTexts( $limits );
 
-$db =& Database::getPostgreSQL( 'homepage' );
-$query = 'SELECT name_us AS name, str, agi, dex, con, int, per, wil, ess'
+$db =& Database::getPostgreSQL( 'accounts' );
+$query = 'SELECT attr_name_us AS attr_name, attr_str, attr_agi, attr_dex, attr_con, attr_int, attr_per, attr_wil, attr_ess'
 .PHP_EOL.' FROM attribtemp'
-.PHP_EOL.' ORDER BY id'
+.PHP_EOL.' ORDER BY attr_id'
 ;
 $db->setQuery( $query );
 $templates = $db->loadAssocList();
