@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <pack>
 	<skills>
 	    <group value="1"> <!-- Language -->
@@ -10,10 +10,9 @@
 		<group value="4"> <!-- Misc -->
 		</group>
 		<group value="5"> <!-- Fighting -->
-			<skill name="puncture weapons" value="7" />
-			<skill name="distance weapons" value="5" />
-			<skill name="dodge" value="5" />
-			<skill name="tactics" value="5" />
+			<skill name="distance weapons" value="10"/>
+			<skill name="puncture weapons" value="5"/>
+			<skill name="tactics" value="5"/>
 		</group>
 		<group value="6"> <!-- Druid -->
 		</group>
@@ -23,24 +22,24 @@
 		</group>
 	</skills>
 	<items>
-		<item id="97"   linenumber="1"  number="1"   qual="333" data="0" /> <!-- bag -->
-		<item id="0"    linenumber="2"  number="1"   qual="0"   data="0" /> <!-- helmet -->
-		<item id="62"   linenumber="3"  number="1"   qual="233" data="0" /> <!-- amulett -->
-		<item id="364"  linenumber="4"  number="1"   qual="322" data="0" /> <!-- armor -->
-		<item id="48"   linenumber="5"  number="1"   qual="233" data="0" /> <!-- gloves -->
-		<item id="2740" linenumber="6"  number="1"   qual="566" data="0" /> <!-- left hand -->
-		<item id="0"    linenumber="7"  number="1"   qual="0"   data="0" /> <!-- right hand -->
-		<item id="0"    linenumber="8"  number="1"   qual="0"   data="0" /> <!-- left finger -->
-		<item id="0"    linenumber="9"  number="1"   qual="0"   data="0" /> <!-- right finger -->
-		<item id="366"  linenumber="10" number="1"   qual="321" data="0" /> <!-- trousers -->
-		<item id="369"  linenumber="11" number="1"   qual="333" data="0" /> <!-- shoes -->
-		<item id="0"    linenumber="12" number="1"   qual="0"   data="0" /> <!-- cape -->
-		<item id="3076" linenumber="13" number="120" qual="333" data="0" /> <!-- belt 1 -->
-		<item id="2708" linenumber="14" number="1"   qual="288" data="0" /> <!-- belt 2 -->
-		<item id="306"  linenumber="15" number="5"   qual="333" data="0" /> <!-- belt 3 -->
-		<item id="3051" linenumber="16" number="5"   qual="333" data="0" /> <!-- belt 4 -->
-		<item id="64"   linenumber="17" number="250" qual="233" data="0" /> <!-- belt 5 -->
-		<item id="322"  linenumber="18" number="40"  qual="233" data="0" /> <!-- belt 6 -->
+		<item id="97" linenumber="1" number="1" qual="333" data="0"/> <!-- bag -->
+		<item id="830" linenumber="2" number="1" qual="566" data="0"/> <!-- helmet -->
+		<item id="0" linenumber="3" number="1" qual="0" data="0"/> <!-- amulett -->
+		<item id="809" linenumber="4" number="1" qual="566" data="0"/> <!-- armor -->
+		<item id="2295" linenumber="5" number="1" qual="566" data="0"/> <!-- gloves -->
+		<item id="65" linenumber="6" number="1" qual="566" data="0"/> <!-- left hand -->
+		<item id="64" linenumber="7" number="200" qual="566" data="0"/> <!-- right hand -->
+		<item id="0" linenumber="8" number="1" qual="0" data="0"/> <!-- left finger -->
+		<item id="0" linenumber="9" number="1" qual="0" data="0"/> <!-- right finger -->
+		<item id="823" linenumber="10" number="1" qual="566" data="0"/> <!-- trousers -->
+		<item id="369" linenumber="11" number="1" qual="566" data="0"/> <!-- shoes -->
+		<item id="0" linenumber="12" number="1" qual="0" data="0"/> <!-- cape -->
+		<item id="3077" linenumber="13" number="25" qual="333" data="0"/> <!-- belt 1 -->
+		<item id="391" linenumber="14" number="1" qual="566" data="0"/> <!-- belt 2 -->
+		<item id="306" linenumber="15" number="5" qual="333" data="0"/> <!-- belt 3 -->
+		<item id="49" linenumber="16" number="5" qual="333" data="0"/> <!-- belt 4 -->
+		<item id="27" linenumber="17" number="1" qual="566" data="0"/> <!-- belt 5 -->
+		<item id="0" linenumber="18" number="1" qual="0" data="0"/> <!-- belt 6 -->
 	</items>
 	<magic>
 		<type>0</type>
