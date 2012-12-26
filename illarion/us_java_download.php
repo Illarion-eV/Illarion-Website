@@ -1,71 +1,206 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
+   include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-	Page::setTitle( 'Download' );
-	Page::setDescription( 'Download of the latest version of the Illarion client and some details about the installation' );
-	Page::setKeywords( array( 'Download', 'Client', 'Program' ) );
+   Page::setTitle( 'Download' );
+   Page::setDescription( 'Download the latest version of the Illarion-Client and details concerning the installation' );
+   Page::setKeywords( array( 'Download', 'Client', 'Programm' ) );
 
-    Page::setXHTML();
-    Page::Init();
+   Page::setXHTML();
+   Page::Init();
 ?>
 <h1>Play Illarion</h1>
 
-<p>The current version is V1.21</p>
+<p>The latest client-version is V1.22</p>
 
 <h2>Start game</h2>
 
 <ul>
-	<li><a href="<?php echo Page::getURL(); ?>/illarion/download/illarion_client.jnlp">Play!</a></li>
-	<li><a href="<?php echo Page::getURL(); ?>/illarion/manual_us.pdf">Read the manual</a>(PDF, 1MB)</li>
+  <li><a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_client.jnlp">Play!</a></li>
 </ul>
 
-<p>In order to play, you have to <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">create an account</a> and create a character before you launch the client.</p>
+<p>To be able to play, you must
+<a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">create an account</a>
+and after that create a character.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Create and view characters</h2>
+<h2>Create or view a character</h2>
 
-<p>In your account page you can review/delete your existing characters and create new ones.</p>
+<p>On your account you can view your characters or create new ones.</p>
 
 <ul>
-	<li><a href='<?php echo Page::getURL(); ?>/community/account/us_charlist.php'>Character account</a></li>
+  <li><a href='<?php echo Page::getURL(); ?>/community/account/us_charlist.php'>Maintain character</a></li>
 </ul>
 
-<p>If your new character is not found upon login, check whether you have distributed all points of his/her attributes already and chosen a starting package.</p>
+<p>In case your character can't be found when trying to log in, make sure you
+have spent all of the attributes points and selected a starting package.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2>Download client</h2>
 
 <h3>System requirements</h3>
+
+<h4>Minimum</h4>
+<ul>
+  <li>Operating System:
+    <ul>
+      <li>Windows 2000, XP, XP 64-bit, Vista, Vista 64-bit, 7, 7 64-bit</li>
+      <li>Linux</li>
+      <li>MacOS X 10.6 or more recent</li>
+    </ul>
+  </li>
+  <li>Graphics card: 64MB memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>CPU: Duel-core processor with 1,4 GHz</li>
+  <li>Java 6</li>
+</ul>
+
+<h4>Recommended</h4>
 <ul>
   <li>Operating system:
     <ul>
-      <li>Windows 98, ME, 2000, XP, XP 64bit, Vista, Vista 64bit, 7, 7 64bit</li>
-      <li>Linux Kernel 2.4.20 or newer (32bit und 64bit)</li>
-      <li>MacOS X 10.4 Tiger, 10.5 Leopard, 10.6 Snow Leopard</li>
-      <li>Solaris 8, 9, 10 (only 32bit)</li>
+      <li>Windows XP, Vista, Vista 64-bit, 7, 7 64-bit</li>
+      <li>Linux</li>
+      <li>MacOS X 10.65 or more recent</li>
     </ul>
   </li>
-  <li>Graphic card: 32MB memory, driver with openGL support</li>
-  <li>CPU: 700 MHz and better</li>
-  <li>A Java 1.5 runtime environment or higher</li>
+  <li>Graphics card: 128MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>CPU: Duel-core processor with 2,0 GHz</li>
+  <li>Java 7 (64-bit Version of 64-bit operating system)</li>
 </ul>
 
-<p>Windows Vista, Windows 7 and the most Linux version do not have a graphic driver with OpenGL installed out of the box. Such a driver can be downloaded and installed from the homepage of
-    the vendor of your graphic card.</p>
+<h4>Note</h4>
+
+<p>Windows Vista, Windows 7 and most Linux versions don't have drivers
+supporting OpenGL hardware acceleration installed by default. Drivers that
+support this feature can be found on your graphics card manufacturers
+website.</p>
 
 <h3>Installation</h3>
 
-<p>Download the Illarion client here.</p>
-<p>The initial download size is about 34MB, when the client is updated, only those parts will be downloaded that have actually changed, mostly around 500kB-5MB. Updates will be detected and installed automatically.</p>
-<p>During installation you must confirm that you want to trust a certificate from "Thawte Consulting". Just confirm this dialog. Upon the first launch the client will ask you for a folder to store your characters' data in (e.g. maps). Just select a folder of your choice. If you have played before, you can also select your existing character directory. The data of your existing characters will be imported (backup is recommended!).</p>
-<p>If the client does not start up, make sure you have an up to date Java Runtime Environment (JRE) installed.(At this time JRE 1.6 is supported. 7 isn't)</p>
+<p>The installation takes several steps. First a tool will start up, to help
+you through the installation of the client. This program will download the
+client for you and keep it up to date.</p>
+
+<p>For the Client and the download to work, Java Runtime Environment is needed.
+If you're not sure whether or not, you have the latest version installed, or
+any version at all, you should download the latest version. Java is freely
+provided by Oracle.</p>
+
+<p><a href="http://java.com">Java downloadpage (external page)</a></p>
+
+<p>To start the client installation, you click on the
+&quot;Online-installation&quot; link. The file downloaded by that
+(illarion_client.jnlp) is a Java-webstart file and should be run by your Java
+Runtime Environment.</p>
+
+<p>When starting the &quot;Illarion Client&quot; a warning message, concerning
+a potential security risk may appear. This message may <b>for now</b> be
+ignored. With that Java wants to point out, that this application will access
+your computer, which is necessary for the client files to be saved on your
+machine.</p>
+
+<p>
+	<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_client.jnlp">
+		Online-installation
+	</a>
+</p>
+
+<p>If there should be problems during the installation or start of the client,
+please ask for help on the IRC chat or the forum. There's almost no problem,
+we can't find a solution for.</p>
+
+<h2>Additional applications</h2>
+
+<p>Next to the Illarion client, Illarion is providing additional applications
+for you to use. These are mainly used for further development of Illarion. For
+more information, please ask on the IRC chat.</p>
+
 <ul>
-   <li><a href="<?php echo Page::getURL(); ?>/illarion/download/illarion_client.jnlp">Online Installation</a> (latest version, Windows, Linux, Solaris and MacOS X, 34MB)</li>
-   <li><a href="http://jdl.sun.com/webapps/getjava/BrowserRedirect?locale=us&amp;host=java.com">Java Runtime Environment</a> (from java.com)</li>
+	<li>
+		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_download.jnlp">
+			Illarion-starter
+		</a>
+		(With this application, all other applications can be started, including the client itself.)
+	</li>
+	<li>
+		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_easynpc.jnlp">
+			Illarion easyNPC-Editor
+		</a>
+	</li>
+	<li>
+		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_easyquest.jnlp">
+			Illarion easyQuest-Editor
+		</a>
+	</li>
+	<li>
+		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_mapeditor.jnlp">
+			Illarion Map-Editor
+		</a>
+	</li>
 </ul>
 
-<p>In case there are any problems during the installation, feel free to ask for help using the IRC chat or the board. There are barely any problems that can't be solved.</p>
+<h2>Solve certificate error</h2>
+
+<p>Upon starting the Illarion applications, a message appears saying, that
+the certificate the applications has been signed with cannot be verified or
+has not been signed by a trusted certification authority.</p>
+
+<p>This error appears, because Illarion uses CAcert as the certification
+authority. Java however, has not listed CAcert as a trustworthy certification
+authority yet.</p>
+
+<p>For the Illarion certificate to be verified and the validity to be ensured,
+the according certificate must be embedded in Java.</p>
+
+<h3>Downloading the root certificates</h3>
+
+<p>First you have to download the root certificates from CAcert.</p>
+
+<p>
+	<a href="http://www.cacert.org/index.php?id=3&amp;lang=de">
+		Downloadpage of CAcert (external page)
+	</a>
+</p>
+
+<p>From this page download the &quot;Class 1 PKI-Key&quot; and the
+&quot;Class 3 PKI-Key&quot; each in &quot;PEM Format&quot;.
+Further installation is depending on your operating system.</p>
+
+<h3>Windows</h3>
+
+<p>On Windows, open Windows Control Panel and look for the entry
+&quot;Java&quot;. In the window that will open, choose the
+&quot;Security&quot; tab and click on the &quot;Certificates&quot; button. In
+the new window, choose &quot;Signer-CA&quot; as &quot;Certificate type&quot;
+entry. Use the &quot;Import&quot; button to install the certificate that have
+been downloaded.</p>
+
+<p>When you're done close all windows. With that, all certificates should get
+verified correctly.</p>
+
+<h3>Linux</h3>
+
+<p>On Linux it is best to use the ;keytool&quot; from Java, to perform the
+installation. If Java is installed correctly, the program should be in this
+path.</p>
+
+<p><pre>
+$ keytool -keystore $/PATH/TO/CACERTS/KEYSTORE \
+	-storepass changeit -import \
+	-trustcacerts -v \
+	-alias cacertclass1 \
+	-file root.crt
+$ keytool -keystore $/PATH/TO/CACERTS/KEYSTORE \
+	-storepass changeit -import \
+	-trustcacerts -v \
+	-alias cacertclass3 \
+	-file class3.crt
+</pre></p>
+
+<p>Mostly the Keystore can be found here:</p>
+<ul>
+	<li>/usr/lib/jvm/java-$VERSION/jre/lib/security/cacerts</li>
+</ul>
 
 <?php Page::insert_go_to_top_link(); ?>

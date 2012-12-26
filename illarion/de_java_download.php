@@ -32,7 +32,9 @@ und danach einen Charakter anlegen.</p>
   <li><a href='<?php echo Page::getURL(); ?>/community/account/de_charlist.php'>Charaktere pflegen</a></li>
 </ul>
 
-<p>Falls Dein neuer Charakter beim Einloggen nicht gefunden wird, prüfe ob Du schon alle Punkte auf die Attribute verteilt hast und ein Startpacket ausgewählt hast.</p>
+<p>Falls Dein neuer Charakter beim Einloggen nicht gefunden wird, prüfe ob
+du schon alle Punkte auf die Attribute verteilt hast und ein Startpacket
+ausgewählt hast.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -149,17 +151,17 @@ besagt, dass das Zertifikat mit dem die Anwendungen signiert wurden nicht
 überprüft werden kann oder nicht von einer vertrauten Zertifizierungsstelle
 unterschieben wurde.</p>
 
-<p>Dieser Fehler kommt daher das bei Illarion cacert als Zertifizierungsstelle
-verwendet wird. Cacert ist bei Java allerdings noch nicht in der Liste der
+<p>Dieser Fehler kommt daher, dass bei Illarion CAcert als Zertifizierungsstelle
+verwendet wird. CAcert ist bei Java allerdings noch nicht in der Liste der
 vertrauenswürdigen Zertifizierungsstellen.</p>
 
 <p>Damit das Zertifikat von Illarion geprüft werden kann und die Echtheit der
-Anwendungen sichergestellt werden kann muss das entsprechende Zertifikat in
+Anwendungen sichergestellt werden kann, muss das entsprechende Zertifikat in
 Java eingebunden werden.</p>
 
 <h3>Download der Stammzertifikate</h3>
 
-<p>Im ersten Schritt musst du die Stammzertifikate von cacert herunterladen.</p>
+<p>Im ersten Schritt musst du die Stammzertifikate von CAcert herunterladen.</p>
 
 <p>
 	<a href="http://www.cacert.org/index.php?id=3&amp;lang=de">
@@ -174,7 +176,7 @@ Die weitere Installation ist abhängig vom verwendeten Betriebssyste.</p>
 <h3>Windows</h3>
 
 <p>Unter Windows öffne die Systemsteuerung und suche dort nach dem Eintrag
-&quot;Java&quot;. Wähle in dem Fenster das sich öffnet den Tab
+&quot;Java&quot;. Wähle in dem Fenster, das sich öffnet den Tab
 &quot;Sicherheit&quot; und drücke dort auf den Knopf &quot;Zertifikate&quot;.
 In dem neuen Fenster kannst du als &quot;Zertifikatstyp&quot; den Eintrag
 &quot;Signaturgeber-CA&quot; auswählen. Benutze den Knopf
