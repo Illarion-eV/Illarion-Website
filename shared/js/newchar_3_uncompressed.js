@@ -1,5 +1,7 @@
 function selectStartpack( ) {
-	var target = url+'/community/account/startpacks/compress.php?file='+$('startpack').value;
+	var target = url+'/community/account/xml_startpack.php?startpack='+$('startpack').value;
+	target += '&language='+( cur_lang == 'de' ? 'de' : 'us' );
+	target += '&server='+$('serverId').value;
 	$('loading').setStyle({ display: 'inline' });
 	new Ajax.Request(target, {
 		method: 'get',
@@ -32,16 +34,14 @@ function selectStartpack( ) {
 								temp = document.createElement('ul');
 								showed_title = true;
 							};
-							for( var k = 0;k<skill_list[i].childNodes.length;k++ ) {
-								var temp2 = document.createElement('li');
-								temp2.appendChild( document.createTextNode( getAttributeValue( skill_list[i].childNodes[k].attributes, ( cur_lang == 'de' ? 'name_de' : 'name' ) ) ) );
-								temp2 = Element.extend(temp2);
-								temp2.setStyle({
-									cssFloat: 'left',
-									width: '33%'
-								});
-								temp.appendChild( temp2 );
-							};
+							var temp2 = document.createElement('li');
+							temp2.appendChild( document.createTextNode( getAttributeValue( skill_list[i].attributes, 'name' ) ) );
+							temp2 = Element.extend(temp2);
+							temp2.setStyle({
+								cssFloat: 'left',
+								width: '33%'
+							});
+							temp.appendChild( temp2 );
 						};
 					};
 					if (showed_title) {
@@ -63,7 +63,7 @@ function selectStartpack( ) {
 							};
 							temp = document.createElement('img');
 							temp.src = url+'/shared/pics/items/'+getAttributeValue(item_list[i].attributes, 'id')+'.png';
-							temp.alt = document.createTextNode( getAttributeValue( item_list[i].attributes, ( cur_lang == 'de' ? 'name_de' : 'name_us' ) ) );
+							temp.alt = document.createTextNode( getAttributeValue( item_list[i].attributes, 'name' ) );
 							temp = Element.extend(temp);
 							temp.setStyle({
 								margin : '5px'

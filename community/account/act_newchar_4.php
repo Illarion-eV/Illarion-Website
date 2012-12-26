@@ -110,43 +110,22 @@
 		
 		$pgSQL->Begin();
 
-		$query = 'SELECT spa_name_file'
-		.PHP_EOL.' FROM startpack'
-		.PHP_EOL.' WHERE spa_id = '.$db->Quote( $package );
+		$query = 'SELECT COUNT(*)'
+		.PHP_EOL.' FROM "'.$server'"."startpacks"'
+		.PHP_EOL.' WHERE "stp_id" = '.$db->Quote( $package );
 		$db->setQuery( $query );
-		$filename = Page::getRootPath().'/community/account/startpacks/'.$db->loadResult();
-
-		if (!is_file($filename))
+		if ($db->loadResult() == 0)
 		{
 			Messages::add((Page::isGerman()?'Startpaket nicht gefunden.':'Starting package was not found.'),'error');
 			return;
 		}
-
-		$xmlC = new XmlC( 'UTF-8' );
-	    $xmlC->Set_XML_data( file_get_contents( $filename ) );
-
-		foreach($xmlC->obj_data->pack[0]->skills[0]->group as $group )
-		{
-			if ($group->skill)
-			{
-				foreach($group->skill as $skill)
-				{
-					$query = 'SELECT skl_skill_id FROM testserver.skills'
-					.PHP_EOL.' WHERE skl_name LIKE '.$pgSQL->Quote($skill->name).' OR skl_name_german LIKE '.$pgSQL->Quote($skill->name).' OR skl_name_english LIKE '.$pgSQL->Quote($skill->name)
-					;
-					$pgSQL->setQuery( $query );
-					$skill_id = $pgSQL->loadResult();
-					
-					if (isset($skill_id) && ($skill_id >= 0)) {
-						$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
-						.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $skill_id ).', '.$pgSQL->Quote( $skill->value ).')'
-						;
-						$pgSQL->setQuery( $query );
-						$pgSQL->query();
-					}
-				}
-			}
-		}
+		
+		$query = 'INSERT INTO "'.$server'"."playerskills" ("psk_playerid", "psk_skill_id", "psk_value")'
+		.PHP_EOL.' SELECT '.$pgSQL->Quote( $charid ).', "spk_skill_id", "spk_value"'
+		.PHP_EOL.'   FROM "'.$server'"."startpack_skills"'
+		.PHP_EOL.'   WHERE "spk_id" = '.$db->Quote( $package );
+		$db->setQuery( $query );
+		$db->query();
 
 		$query = 'INSERT INTO playerskills (psk_playerid, psk_skill_id, psk_value)'
 		.PHP_EOL.' VALUES ('.$pgSQL->Quote( $charid ).', 0, 100)'
@@ -189,41 +168,22 @@
 		}
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
-
-	   foreach($xmlC->obj_data->pack[0]->items[0]->item as $item )
-		{
-			$query = 'INSERT INTO playeritems (pit_itemid, pit_playerid, pit_linenumber, pit_in_container, pit_depot, pit_wear, pit_number, pit_quality)'
-			.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $item->id ).', '.$pgSQL->Quote( $charid ).', '.$pgSQL->Quote( $item->linenumber ).', 0, 0, 5, '.$pgSQL->Quote( $item->number ).', '.$pgSQL->Quote( $item->qual ).')'
-			;
-			$pgSQL->setQuery( $query );
-			$pgSQL->query();
-		}
-
-		$account =& Database::getPostgreSQL( 'accounts' );
-		$query = 'SELECT story_needed'
-		.PHP_EOL.' FROM raceattr'
-		.PHP_EOL.' WHERE id IN (-1,'.$account->Quote( $race ).')'
-		.PHP_EOL.' ORDER BY id DESC'
+		
+		$query = 'INSERT INTO "'.$server'"."playeritems" ("pit_itemid", "pit_playerid", "pit_linenumber", "pit_wear", "pit_number", "pit_quality")'
+		.PHP_EOL.'  SELECT "spi_item_id", '.$pgSQL->Quote( $charid ).', "spi_linenumber", "com_agingspeed", "spi_number", "spi_quality"'
+		.PHP_EOL.'    FROM "'.$server'"."startpack_items"'
+		.PHP_EOL.'    INNER JOIN "'.$server'"."common" ON "spi_item_id" = "com_itemid"'
+		.PHP_EOL.'    WHERE "spi_id" = '.$db->Quote( $package );
+		$pgSQL->setQuery( $query );
+		$pgSQL->query();
+		
+		$query = 'UPDATE "'.$server'"."chars"'
+		.PHP_EOL.' SET "chr_status" = 0'
+		.PHP_EOL.' WHERE "chr_playerid" = '.$pgSQL->Quote( $charid )
 		;
-		$account->setQuery( $query );
-		if ($account->loadResult() == 't')
-		{
-			$query = 'UPDATE chars'
-			.PHP_EOL.' SET chr_status = 4'
-			.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
-			;
-			$pgSQL->setQuery( $query );
-			$pgSQL->query();
-		}
-		else
-		{
-			$query = 'UPDATE chars'
-			.PHP_EOL.' SET chr_status = 0'
-			.PHP_EOL.' WHERE chr_playerid = '.$pgSQL->Quote( $charid )
-			;
-			$pgSQL->setQuery( $query );
-			$pgSQL->query();
-		}
+		$pgSQL->setQuery( $query );
+		$pgSQL->query();
+		
 		$pgSQL->Commit();
 	}
 

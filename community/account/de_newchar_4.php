@@ -84,11 +84,10 @@ else
 	}
 }
 
-$query = 'SELECT spa_id, spa_name_de AS name'
-	.PHP_EOL.' FROM accounts.startpack'
-.PHP_EOL.' WHERE spa_race IN (-1,'.$pgSQL->Quote( $race ).')'
-	;
-$pgSQL->setQuery( $query );
+$query = 'SELECT "stp_id", "stp_german" AS "name"'
+.PHP_EOL.' FROM "'.$server.'"."skillpacks"'
+.PHP_EOL.' WHERE 1=1';
+$pgSQL->setQuery($query);
 $start_packs = $pgSQL->loadAssocList();
 
 Page::setXHTML();
@@ -110,7 +109,7 @@ Page::addJavaScript( 'newchar_3' );
 
 		<select name="startpack" id="startpack" onchange="selectStartpack();return false;">
 			<?php foreach($start_packs as $pack): ?>
-			<option value="<?php echo $pack['spa_id']; ?>"><?php echo $pack['name']; ?></option>
+			<option value="<?php echo $pack['stp_id']; ?>"><?php echo $pack['name']; ?></option>
 			<?php endforeach; ?>
 		</select>
 		<span id="loading" style="display:none;">
@@ -122,6 +121,7 @@ Page::addJavaScript( 'newchar_3' );
 
 		<p style="text-align:center;padding:10px;">
 			<input type="hidden" name="sel_pack" id="sel_pack" value="" />
+			<input type="hidden" name="serverId" id="serverId" value="<?php echo ($server == 'illarionserver' ? '0' : '1'); ?>" />
 			<input type="hidden" name="action" value="newchar_4" />
 			<input type="submit" name="submit_button" id="submit_button" value="Daten speichern" />
 		</p>

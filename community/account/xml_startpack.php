@@ -59,7 +59,7 @@
     $pgSQL->setQuery($query);
 	$items = $pgSQL->loadAssocList();
 ?>
-<pack>
+<pack id="<?php echo $packId; ?>">
 	<skills>
 		<?php foreach ($skills as $skillName): ?>
 		<skill name="<?php echo $skillName; ?>" />
