@@ -88,7 +88,7 @@ The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</
 					<td>Server:</td>
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
-							<!--<option value="0">Gameserver</option>  Spielserver fuer die neue charerschaffung deaktiviert-->
+							<option value="0">Gameserver</option>
 							<option value="1">Testserver</option>
 						</select>
 					</td>
