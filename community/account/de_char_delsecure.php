@@ -23,7 +23,7 @@
 		exit('Charakter wurde nicht gefunden.');
 	}
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+	$enable_lightwindow = false;
 
 	if ($enable_lightwindow)
 	{
