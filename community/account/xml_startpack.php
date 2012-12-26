@@ -1,9 +1,12 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	
+	Page::setXML('application/xml');
+	Page::Init();
+	
 	if (!isset($_GET['startpack']) || !is_numeric($_GET['startpack']))
 	{
-		exit("No startpack selected");
+		exit("<error>No startpack selected</error>");
 	}
 	
 	$packId = (int)$_GET['startpack'];
@@ -28,9 +31,6 @@
 	
 	$server = ($server == 0) ? 'illarionserver' : 'testserver';
 	
-	Page::setXML('application/xml');
-	Page::Init();
-	
 	$pgSQL = &Database::getPostgreSQL();
 	
 	$query = 'SELECT COUNT(*)'
@@ -40,7 +40,7 @@
 	
 	if ($pgSQL->getResult() == 0)
 	{
-		exit('no such package: '.$packId);
+		exit('<error>no such package: '.$packId.'</error>');
 	}
 	
 	$query = 'SELECT '.($language == 'de' ? '"skl_name_german"' : '"skl_name_english"').' AS "name"'
