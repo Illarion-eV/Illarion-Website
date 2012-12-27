@@ -26,23 +26,21 @@ function selectStartpack( ) {
 				if (pack.childNodes[j].nodeName == 'skills') {
 					var skill_list = pack.childNodes[j].childNodes;
 					for( var i = 0;i<skill_list.length;i++ ) {
-						if (skill_list[i].childNodes.length) {
-							if (!showed_title) {
-								temp = document.createElement('h3');
-								temp.appendChild( document.createTextNode( 'Skills' ) );
-								output_area.appendChild( temp );
-								temp = document.createElement('ul');
-								showed_title = true;
-							};
-							var temp2 = document.createElement('li');
-							temp2.appendChild( document.createTextNode( getAttributeValue( skill_list[i].attributes, 'name' ) ) );
-							temp2 = Element.extend(temp2);
-							temp2.setStyle({
-								cssFloat: 'left',
-								width: '33%'
-							});
-							temp.appendChild( temp2 );
+						if (!showed_title) {
+							temp = document.createElement('h3');
+							temp.appendChild( document.createTextNode( 'Skills' ) );
+							output_area.appendChild( temp );
+							temp = document.createElement('ul');
+							showed_title = true;
 						};
+						var temp2 = document.createElement('li');
+						temp2.appendChild( document.createTextNode( getAttributeValue( skill_list[i].attributes, 'name' ) ) );
+						temp2 = Element.extend(temp2);
+						temp2.setStyle({
+							cssFloat: 'left',
+							width: '33%'
+						});
+						temp.appendChild( temp2 );
 					};
 					if (showed_title) {
 						output_area.appendChild( temp );
