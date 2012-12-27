@@ -122,7 +122,7 @@
 		
 		$query = 'INSERT INTO "'.$server.'"."playerskills" ("psk_playerid", "psk_skill_id", "psk_value")'
 		.PHP_EOL.' SELECT '.$pgSQL->Quote( $charid ).', "spk_skill_id", "spk_value"'
-		.PHP_EOL.'   FROM "'.$server'"."startpack_skills"'
+		.PHP_EOL.'   FROM "'.$server.'"."startpack_skills"'
 		.PHP_EOL.'   WHERE "spk_id" = '.$db->Quote( $package );
 		$db->setQuery( $query );
 		$db->query();
@@ -171,8 +171,8 @@
 		
 		$query = 'INSERT INTO "'.$server.'"."playeritems" ("pit_itemid", "pit_playerid", "pit_linenumber", "pit_wear", "pit_number", "pit_quality")'
 		.PHP_EOL.'  SELECT "spi_item_id", '.$pgSQL->Quote( $charid ).', "spi_linenumber", "com_agingspeed", "spi_number", "spi_quality"'
-		.PHP_EOL.'    FROM "'.$server'"."startpack_items"'
-		.PHP_EOL.'    INNER JOIN "'.$server'"."common" ON "spi_item_id" = "com_itemid"'
+		.PHP_EOL.'    FROM "'.$server.'"."startpack_items"'
+		.PHP_EOL.'    INNER JOIN "'.$server.'"."common" ON "spi_item_id" = "com_itemid"'
 		.PHP_EOL.'    WHERE "spi_id" = '.$db->Quote( $package );
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
