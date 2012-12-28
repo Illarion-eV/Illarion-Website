@@ -15,7 +15,7 @@
 <h2>Start game</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_client.jnlp">Play!</a></li>
+  <li><a href="<?php echo Page::getURL(); ?>/media/java/illarion_client.jnlp">Play!</a></li>
 </ul>
 
 <p>To be able to play, you must
