@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <screenshots>
     <group index="0" gName="Aktuelle Screenshots" eName="Current Screenshots">
+        <screenshot filename="first_after_vbu.png" gName="Nummer 1 nach dem Update" eName="Number 1 after the update" />
         <screenshot filename="yewdale.png" gName="Ausflug nach Yewdale" eName="Excursion to Yewdale" />
     </group>
 	<group index="1" gName="Alter Java-Client" eName="Old Java Client">
