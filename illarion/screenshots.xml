@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <screenshots>
     <group index="0" gName="Aktuelle Screenshots" eName="Current Screenshots">
-        <screenshot filename="story1.png" gName="Ein erwartete Gesellschaft" eName="Expected company" />
+        <screenshot filename="yewdale.png" gName="Ausflug nach Yewdale" eName="Excursion to Yewdale" />
+    </group>
+	<group index="1" gName="Alter Java-Client" eName="Old Java Client">
+	    <screenshot filename="story1.png" gName="Ein erwartete Gesellschaft" eName="Expected company" />
         <screenshot filename="story2.png" gName="Geschwätz und Schwänze" eName="Tales and tails" />
         <screenshot filename="story3.png" gName="Vom Regen überrascht" eName="Caught in the rain" />
         <screenshot filename="story4.png" gName="Eine geheimnisvolle Höhle" eName="A mysterious cave" />
         <screenshot filename="story5.png" gName="Des Magiers letztes Gefecht" eName="Last stand of the magician" />
-    </group>
-	<group index="1" gName="Java-Client Screenshots" eName="Java Client Screenshots">
 		<screenshot filename="undeads.jpg" gName="Die Toten halten den Weg" eName="The dead protect the way" />
 		<screenshot filename="screenshot04.jpg" gName="Heiliger Tempel" eName="Holy temple" />
 		<screenshot filename="screenshot06.jpg" gName="Der Drachenhort" eName="The dragon's lair" />
