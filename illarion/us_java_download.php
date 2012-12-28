@@ -15,7 +15,7 @@
 <h2>Start game</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_client.jnlp">Play!</a></li>
+  <li><a href="<?php echo Page::getURL(); ?>/media/java/illarion_client.jnlp">Play!</a></li>
 </ul>
 
 <p>To be able to play, you must
@@ -101,7 +101,7 @@ your computer, which is necessary for the client files to be saved on your
 machine.</p>
 
 <p>
-	<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_client.jnlp">
+	<a href="<?php echo Page::getURL(); ?>/media/java/illarion_client.jnlp">
 		Online-installation
 	</a>
 </p>
@@ -118,23 +118,23 @@ more information, please ask on the IRC chat.</p>
 
 <ul>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_download.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_download.jnlp">
 			Illarion-starter
 		</a>
 		(With this application, all other applications can be started, including the client itself.)
 	</li>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_easynpc.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_easynpc.jnlp">
 			Illarion easyNPC-Editor
 		</a>
 	</li>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_easyquest.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_easyquest.jnlp">
 			Illarion easyQuest-Editor
 		</a>
 	</li>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/illarion/media/java/illarion_mapeditor.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapeditor.jnlp">
 			Illarion Map-Editor
 		</a>
 	</li>
