@@ -1,66 +1,40 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	Page::setTitle( 'Ein kostenloses Online Rollenspiel' );
+	Page::setTitle( 'Das kostenlose Online-Rollenspiel' );
 	Page::setDescription( 'Illarion ist ein kostenloses Online-Rollenspiel in einer mittelalterlichen Fantasy Umgebung mit dem Schwerpunkt auf echtes Rollenspiel.' );
 	Page::setKeywords( array( 'Startseite', 'Neuigkeiten' ) );
 	Page::setXHTML();
 	Page::Init();
 ?>
 
-<h1>Willkommen auf Illarion!</h1>
+<h1>Willkommen in Illarion!</h1>
 
 <p style="font-weight:bold">Illarion wird aktuell auf eine neue Version aktualisiert.
 Bitte achte auf die Neuigkeiten um den aktuellen Status zu erfahren.</p>
 
-<?php Page::cap('I'); ?>
-<p>llarion ist ein kostenloses Online-Rollenspiel in einer klassischen Fantasy-Welt.
-Das Spiel wird von einer Gruppe von Freiwilligen entwickelt und betreut um 
-der Spielerschaft ein unvergleichliches Rollenspielerlebnis zu ermöglichen. In 
-der Welt sind Charaktere mehr als ein Abbild deiner Selbst, sie sind echte Wesen 
-mit einem eigenen Leben. Als Spieler Illarions ist es deine Aufgabe, den 
-Charakteren genau dieses Leben einzuhauchen.</p>
+<?php Page::cap('D'); ?>
+<p>ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete
+    die Reiche, Flüchtlinge aller Völker strömen in die Bastionen der
+    Menschheit im Land Illarion, die verschont geblieben sind von den
+    Entbehrungen der vergangenen Tage. Sechs Edelsteine der Macht waren den
+    Fürsten dieser Bastionen zur Verwahrung gegeben; doch Missgunst, Verrat und
+    Neid sind die alltäglichen Geißeln der Macht.</p>
 
-<p>Die Entscheidungen, die du 
-während des Spiels triffst, haben einen echten Einfluss auf die Welt um dich 
-herum und prägen diese. Deine Taten bestimmen die Ereignisse, die einmal die 
-Seiten der Geschichtsbücher Illarions füllen werden. Alle Charaktere, denen du 
-begegnen wirst, werden sich genauso verhalten: Sie sind lebendige, atmende Wesen 
-einer geheimnisvollen Welt. Jeder Charakter hat seine eigene Vergangenheit, 
-Ziele, Persönlichkeit, Stärken und Schwächen. Du wirst viele einzigartige Leute 
-treffen: Krieger, Händler, Elfen und Echsenwesen. Welche Rolle wirst du spielen? 
-Dein Charakter ist nur den Grenzen deiner Vorstellungskraft 
-unterworfen.</p>
+<p>Illarion ist ein kostenloses Online-Rollenspiel, welches seinen Schwerpunkt
+    auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
+    lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
+    verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
+    Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben
+    als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester
+    der Götter.</p>
 
-<p>Vielleicht wirst du die Diebesgilde unterwandern, dich in 
-der Hierarchieleiter hinaufarbeiten nur, um die gesamte Organisation wie ein 
-Kartenhaus zusammenfallen zu lassen. Oder du wirst ein frommer Priester, der 
-neue Jünger für einen der vielen Götter aus Illarions Pantheon konvertiert. Du 
-kannst auch den Weg eines gefürchteten Kriegers einschlagen, der für Ruhm und 
-Ehre oder auch einfach aus Profitgier kämpft.</p>
+<p>Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer
+    offenen, persistenten Spielwelt. Deine Entscheidungen und Taten formen und
+    gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher
+    füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 
-<p>Illarion nähert sich 
-derzeit der Veröffentlichung des so genannten "Very Big Updates" (VBU). Dieses 
-Update wird alle Spielbereiche betreffen, die Karte deutlich erweitern und 
-unzählige neue Features einführen oder bestehende Systeme gründlich 
-überarbeiten. Ebenso werden viele lange bestehende Spielfehler ausgemerzt. Damit 
-das VBU noch in diesem Jahr veröffentlicht werden kann wird ein Großteil der 
-Entwicklungskapazitäten auf dieses Ziel verwandt. Für die derzeitige 
-Spielversion werden zwingend nötige Patches erstellt aber es ist möglich, dass 
-im Spiel noch Fehler verbleiben. Bei Problemen bist du gerne im offiziellen 
-Illarion-Chat willkommen in dem sofortige Hilfe verfügbar ist.</p>
-    
-<p class="center">
-	<a href="<?php echo Page::getURL(); ?>/general/map_of_illarion.jpg" style="margin-right:20px;">
-		<img src="<?php echo Page::getCurrentURL(); ?>/general/t_map_of_illarion.jpg" width="120" height="85" alt="Karte von Illarion" />
-	</a>
-	<a href="<?php echo Page::getURL(); ?>/general/map_of_gobaith.jpg" style="margin-left:20px;">
-		<img src="<?php echo Page::getCurrentURL(); ?>/general/t_map_of_gobaith.jpg" width="120" height="85" alt="Karte von Gobaith" />
-	</a>
-	<br />
-	<span style="margin-right:20px;">Karte von Illarion</span>
-	<span style="margin-left:20px;">Karte von Gobaith</span>
-</p>
+<p>Illarion - Welche Rolle wirst du spielen?</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
