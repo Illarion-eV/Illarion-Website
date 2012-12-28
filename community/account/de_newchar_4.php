@@ -108,6 +108,7 @@ Page::addJavaScript( 'newchar_3' );
 		<h2>Startausrüstung und Fähigkeiten</h2>
 
 		<select name="startpack" id="startpack" onchange="selectStartpack();return false;">
+			<option value="-1">Kein Paket gewählt</option>
 			<?php foreach($start_packs as $pack): ?>
 			<option value="<?php echo $pack['stp_id']; ?>"><?php echo $pack['name']; ?></option>
 			<?php endforeach; ?>

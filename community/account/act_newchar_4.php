@@ -60,8 +60,8 @@
 			return;
 		}
 
-		$package = ( isset($_POST['sel_pack']) &&  is_numeric($_POST['sel_pack']) ? (int)$_POST['sel_pack'] : 0 );
-		if (!$package)
+		$package = ( isset($_POST['sel_pack']) &&  is_numeric($_POST['sel_pack']) ? (int)$_POST['sel_pack'] : -1 );
+		if ($package == -1)
 		{
 			Messages::add((Page::isGerman()?'Kein Startpaket ausgewählt.':'No starting package was selected.'),'error');
 			return;
