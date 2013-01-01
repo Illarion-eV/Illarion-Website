@@ -121,9 +121,9 @@
 		}
 		
 		$query = 'INSERT INTO "'.$server.'"."playerskills" ("psk_playerid", "psk_skill_id", "psk_value")'
-		.PHP_EOL.' SELECT '.$pgSQL->Quote( $charid ).', "spk_skill_id", "spk_value"'
+		.PHP_EOL.' SELECT '.$pgSQL->Quote( $charid ).', "sps_skill_id", "sps_skill_value"'
 		.PHP_EOL.'   FROM "'.$server.'"."startpack_skills"'
-		.PHP_EOL.'   WHERE "spk_id" = '.$db->Quote( $package );
+		.PHP_EOL.'   WHERE "sps_id" = '.$db->Quote( $package );
 		$db->setQuery( $query );
 		$db->query();
 
