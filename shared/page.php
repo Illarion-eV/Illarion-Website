@@ -791,19 +791,33 @@ class Page {
 	static public function setXHTML() {
 		self::$page_type = 0;
 		
-		if (isset($_SERVER['HTTP_ACCEPT']) && !stristr($_SERVER['HTTP_ACCEPT'], 'application/xhtml+xml')) {
-			return null;
-		}
-		
-		if (self::getBrowserName() == 'msie' && self::getBrowserVersion() <= 6) {
-			return null;
-		}
-		
-		if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != $_SERVER['REMOTE_ADDR']) {
+		if (!self::canXHTML()) {
 			return null;
 		}
 		
 		self::$page_type = 1;
+	}
+	
+	/**
+	* Check if the browser supports the xHTML mode of the homepage
+	*
+	* @return true in case the the xHTML mode can be activated
+	* @access public
+	*/
+	static public function canXHTML() {
+		if (isset($_SERVER['HTTP_ACCEPT']) && !stristr($_SERVER['HTTP_ACCEPT'], 'application/xhtml+xml')) {
+			return false;
+		}
+		
+		if (self::getBrowserName() == 'msie' && self::getBrowserVersion() <= 7) {
+			return false;
+		}
+		
+		if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != $_SERVER['REMOTE_ADDR']) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	/**

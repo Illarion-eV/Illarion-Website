@@ -12,9 +12,6 @@
 	Page::setDescription( 'Auf dieser Seite bekommst du eine Übersicht über alle Charaktere die du hast' );
 	Page::setKeywords( array( 'Charaktere', 'Account', 'Übersicht' ) );
 
-	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
-	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
-
 	Page::setXHTML();
 	Page::Init();
 
@@ -26,7 +23,7 @@
 		Page::addJavaScript( 'slider' );
 	}
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+	$enable_lightwindow = false;
 ?>
 
 <h1>Charakterliste</h1>
@@ -49,10 +46,6 @@
 				&nbsp;
 				<?php else: ?>
 				<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">Neuen Charakter erstellen</a>
-				<?php endif; ?>
-
-				<?php if (IllaUser::auth('testserver')): ?>
-				<br/><a href="<?php echo Page::getURL(); ?>/community/account/new/de_newchar_1.php">Neuen Testserver-Charakter erstellen</a>
 				<?php endif; ?>
 			</td>
 		</tr>

@@ -65,8 +65,7 @@
 <ul>
     <li><span style="font-weight:bold; color:#285917">Monster</span></li>
     <li><span style="font-weight:bold; color:#285917">Wachen</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span style="font-weight:bold; color:#285917">Maultiere</span></li>
-    <li><span style="font-weight:bold; color:#000000">Händler</span></li>
+    <li><span style="font-weight:bold; color:#8B0000">Händler</span></li>
 </ul>
 
 <h3>Sonstiges</h3>
@@ -75,7 +74,7 @@
     <li><span style="font-weight:bold; color:#8B0000">Magische Edelsteine</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
     <li><span style="font-weight:bold; color:#8B0000">Bücher</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span style="font-weight:bold; color:#8B0000">Quests</span></li>
-    <li><span style="font-weight:bold; color:#8B0000">Tutorial</span></li>
+    <li><span style="font-weight:bold; color:#152B85">Tutorial</span></li>
 </ul>
 
 <h2>Grafik</h2>

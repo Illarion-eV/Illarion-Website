@@ -1,5 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	
+	includeWrapper::includeOnce(Page::getRootPath().'/community/account/inc_register.php');
 
 	if (isset($_GET['activate']))
 	{
@@ -18,32 +20,25 @@
 
 	if (isset($_POST['submit']))
 	{
-		IllaUser::$username = trim(stripslashes($_POST['username']));
-		if (isset($_POST['name']))
+		if (isTorRequest())
 		{
-			IllaUser::$name = trim(stripslashes($_POST['name']));
+			Messages::add('TOR-Proxynetzwerk erkannt! Registrierung nicht gestattet.', 'error');
 		}
 		else
 		{
-			IllaUser::$name = IllaUser::$username;
-		}
-		if ($_POST['passwd'] == $_POST['passwd2'])
-		{
-			IllaUser::$clean_pw = trim($_POST['passwd']);
-		}
-		IllaUser::$email = $_POST['email'];
-		IllaUser::$lang = ( isset( $_POST['language'] ) && (int)$_POST['language'] == 1 ? 'us' : 'de' );
+			applyUserData();
 
-		if ( IllaUser::register() )
-		{
-			Messages::add('Registrierung war erfolgreich. Du bekommst jetzt eine E-Mail, mit der Du den Account aktivieren kannst.', 'info');
+			if ( IllaUser::register() )
+			{
+				Messages::add('Registrierung war erfolgreich. Du bekommst jetzt eine E-Mail, mit der Du den Account aktivieren kannst.', 'info');
+				includeWrapper::includeOnce( Page::getRootPath().'/general/de_startpage.php' );
+				exit();
+			}
+			else
+			{
+				Messages::add('Registrierung fehlgeschlagen.', 'error');
+			}
 		}
-		else
-		{
-			Messages::add('Registrierung fehlgeschlagen.', 'error');
-		}
-		includeWrapper::includeOnce( Page::getRootPath().'/general/de_startpage.php' );
-		exit();
 	}
 
 	Page::setTitle( array( 'Account', 'Registrieren' ) );
@@ -72,6 +67,12 @@ Account zu aktivieren.</p>
 
 <p>Damit dieses Formular benutzt werden kann, muss der Browser JavaScript unterstützen
 </p>
+
+<?php if (isTorRequest()): ?>
+<p style="font-weight:bold;">Die Homepage hat erkannt, dass du das
+TOR-Proxynetzwerk verwendest. Eine Registrierung bei Illarion ist nur dann
+möglich, wenn du diesen Proxy ausschaltest.</p>
+<?php endif; ?>
 
 <h2>Account Informationen</h2>
 

@@ -1,0 +1,12 @@
+community/characterpictures
+community/forums
+community/wiki
+mantis/
+media/
+piwik/
+ssl/*_backup_of_illarion.tar
+ssl/general
+ssl/mediawiki
+ssl/piwik
+ssl/shared
+php_errors.log

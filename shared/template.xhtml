@@ -36,11 +36,19 @@
 		<meta name="DC.Coverage.Spatial" content="{META_DC_LAND}" />
 		<meta name="DC.Coverage.Temporal" content="{META_DC_TIME}" />
 		<meta name="DC.Rights" content="{META_RIGHTS}" />
-		<meta name="verify-v1" content="954gFSpcTFMpOTi8pEGX3W8R8qGxuuqROj5UoM7jQps=" />
-		<script type="text/javascript">url='{URL}'; cur_lang='{LANGUAGE}'; window.___gcfg = {lang: '{LANG|de|en-GB}'};</script>
+		<script type="text/javascript">url='{URL}'; cur_lang='{LANGUAGE}';</script>
 		<link href="{SHARED_URL}/css.php?file={CSS}{NO_OPTI}" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="{SHARED_URL}/js.php?file={JS}{NO_OPTI}"></script>
-		{HTTP_ONLY}<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>{/HTTP_ONLY}
+		<!-- Piwik -->
+		<script type="text/javascript" src="{URL}/piwik/piwik.js" />
+		<script type="text/javascript">
+		try {
+			var piwikTracker = Piwik.getTracker("{URL}/piwik/piwik.php", 1);
+			piwikTracker.trackPageView();
+			piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+		</script>
+		<!-- End Piwik Tracking Code -->
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
 		<link href="{URL}" rel="top" title="{LANG|Startseite|Startpage}" />
 		<link href="{URL}" rel="start" title="{LANG|Startseite|Startpage}" />
@@ -61,7 +69,7 @@
         			    <a href="{HTTP_URL}/community/account/{LANGUAGE}_register.php"></a>
         			</div>
         			<div class="start_game">
-    			        <a href="{HTTP_URL}/illarion/download/illarion_client.jnlp"></a>
+    			        <a href="{HTTP_URL}/media/java/illarion_client.jnlp"></a>
     			    </div>
     			</div>
     		</div>
@@ -163,9 +171,6 @@
 									</a>
 								</div>
 								-->
-								{HTTP_ONLY}<div style="text-align:center">{/HTTP_ONLY}
-								{HTTP_ONLY}	{GOOGLE}{/HTTP_ONLY}
-								{HTTP_ONLY}</div>{/HTTP_ONLY}
 							</td>
 							<td rowspan="3" class="vertical_border" />
 						</tr>
@@ -199,5 +204,6 @@
 
 			{DEBUG}
 		</div>
+		<div><noscript><p><img src="{URL}/piwik/piwik.php?idsite=1" style="border:0px;height:0px;width:0px;" alt="" /></p></noscript></div>
 	</body>
 </html>

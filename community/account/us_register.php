@@ -1,5 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	
+	includeWrapper::includeOnce(Page::getRootPath().'/community/account/inc_register.php');
 
 	if (isset($_GET['activate']))
 	{
@@ -18,32 +20,25 @@
 
 	if (isset($_POST['submit']))
 	{
-		IllaUser::$username = trim(stripslashes($_POST['username']));
-		if (isset($_POST['name']))
+		if (isTorRequest())
 		{
-			IllaUser::$name = trim(stripslashes($_POST['name']));
+			Messages::add('TOR proxy network detected! Registration rejected.', 'error');
 		}
 		else
 		{
-			IllaUser::$name = IllaUser::$username;
-		}
-		if ($_POST['passwd'] == $_POST['passwd2'])
-		{
-			IllaUser::$clean_pw = trim($_POST['passwd']);
-		}
-		IllaUser::$email = $_POST['email'];
-		IllaUser::$lang = ( isset( $_POST['language'] ) && (int)$_POST['language'] == 0 ? 'de' : 'us' );
+			applyUserData();
 
-		if ( IllaUser::register() )
-		{
-			Messages::add('Register successfully. Now you get an email you can use to activate your account.', 'info');
+			if ( IllaUser::register() )
+			{
+				Messages::add('Register successfully. Now you get an email you can use to activate your account.', 'info');
+				includeWrapper::includeOnce( Page::getRootPath().'/general/us_startpage.php' );
+				exit();
+			}
+			else
+			{
+				Messages::add('Register failed', 'error');
+			}
 		}
-		else
-		{
-			Messages::add('Register failed', 'error');
-		}
-		includeWrapper::includeOnce( Page::getRootPath().'/general/us_startpage.php' );
-		exit();
 	}
 
 	Page::setTitle( array( 'Account', 'Create a new Account' ) );
@@ -71,6 +66,12 @@ needs to be valid, because an email is send to this address with a link in it to
 account.</p>
 
 <p>To use that page it is needed that the used browser supports JavaScript.</p>
+
+<?php if (isTorRequest()): ?>
+<p style="font-weight:bold;">The homepage detected that you are using a proxy
+server of the TOR network. You have to disable this proxy to be allowed to
+register at Illarion.</p>
+<?php endif; ?>
 
 <h2>Account details</h2>
 

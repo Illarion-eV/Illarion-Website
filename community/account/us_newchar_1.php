@@ -1,11 +1,9 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	if (!IllaUser::loggedIn())
-	{
-		header('HTTP/1.0 401 Unauthorized');
-		exit();
-	}
+	IllaUser::requireLogin();
+
+	Page::Init();
 
 	$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
 	$query = 'SELECT COUNT(*)'
@@ -31,35 +29,30 @@
 		exit('Error - Character limit reached.');
 	}
 
-	if (!count(IllaUser::$allowed_races))
-	{
-		exit('Error - No races allowed.');
-	}
+	Page::setTitle( array( 'Account', 'Create new character' ) );
+	Page::setDescription( 'On this page you can create a new character for Illarion' );
+	Page::setKeywords( array( 'Character', 'new', 'create' ) );
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+   Page::addJavaScript( array( 'prototype', 'effects'));
+   Page::addJavaScript( 'newchar_1');
 
-	if ($enable_lightwindow)
-	{
-		Page::setXML();
-	}
-	else
-	{
-		Page::setXHTML();
-		Page::addJavaScript( 'prototype' );
-		Page::addJavaScript( 'newchar_1' );
-	}
-	Page::Init();
+   Page::setXHTML();
+
 ?>
 
-<div>
-	<h1>Step 1</h1>
+<h1>Create a new character</h1>
 
-	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/us_newchar.php">
+<h2>Step 1</h2>
+
+<p>At this point you have to type in the name, race and gender of your character
+The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</a> could be usefull.</p>
+
+<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/us_newchar_1.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
 					<td style="width:45%;vertical-align:top;" rowspan="2">
-						Name:<br />check the<a href="<?php echo Page::getURL(); ?>/illarion/us_name_rules.php">name rules</a>
+						Name:<br />check the <a href="<?php echo Page::getURL(); ?>/illarion/us_name_rules.php">name rules</a>
 					</td>
 					<td>
 						<input type="text" name="charname" id="charname" value="" style="width:98%;" onkeyup="checkCharname();return true;" />
@@ -79,13 +72,12 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Sex:</td>
+					<td>Gender:</td>
 					<td>
 						<select name="sex" style="width:100%;">
 							<option value="0">male</option>
 							<option value="1">female</option>
 						</select>
-						<input type="hidden" name="action" value="newchar_1" />
 					</td>
 				</tr>
 				<?php if (count($servers) == 2): ?>
@@ -97,6 +89,7 @@
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
 							<option value="0">Gameserver</option>
+							<option value="1">Testserver</option>
 						</select>
 					</td>
 				</tr>
@@ -123,9 +116,8 @@
 				<?php endif; ?>
 			</tbody>
 		</table>
-	</form>
 	<p style="text-align:center;">
-		<button onclick="document.forms.char_form.submit()" name="submit" id="submit" style="margin-right:10px;">Send</button>
-		<?php if($enable_lightwindow): ?><button onclick="window.parent.myLightWindow.deactivate();return false;" style="margin-left:10px;">Cancel</button><?php endif; ?>
+		<input type="hidden" name="action" value="newchar_1" />
+		<input type="submit" name="submit" id="submit" value="Send" />
 	</p>
-</div>
+	</form>

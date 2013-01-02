@@ -1,11 +1,9 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	if (!IllaUser::loggedIn())
-	{
-		header('HTTP/1.0 401 Unauthorized');
-		exit();
-	}
+	IllaUser::requireLogin();
+
+	Page::Init();
 
 	$pgSQL =& Database::getPostgreSQL( 'illarionserver' );
 	$query = 'SELECT COUNT(*)'
@@ -31,30 +29,25 @@
 		exit('Fehler - Charakterlimit erreicht.');
 	}
 
-	if (!count(IllaUser::$allowed_races))
-	{
-		exit('Fehler - keine Zulassung für Rassenerstellung.');
-	}
+   Page::setTitle( array( 'Account', 'Neuen Charakter erstellen' ) );
+   Page::setDescription( 'Auf dieser Seite kannst Du einen neuen Charakter für Illarion erstellen' );
+   Page::setKeywords( array( 'Charaktere', 'Neu', 'erstellen' ) );
 
-	$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+   Page::addJavaScript( array( 'prototype', 'effects'));
+   Page::addJavaScript( 'newchar_1');
 
-	if ($enable_lightwindow)
-	{
-		Page::setXML();
-	}
-	else
-	{
-		Page::setXHTML();
-		Page::addJavaScript( 'prototype' );
-		Page::addJavaScript( 'newchar_1' );
-	}
-	Page::Init();
+   Page::setXHTML();
+
 ?>
 
-<div>
-	<h1>Schritt 1</h1>
+<h1>Neuen Charakter erstellen</h1>
 
-	<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">
+<h2>Schritt 1</h2>
+
+<p>Hier musst Du Name, Rasse und Geschlecht des Charakters festlegen.
+Hilfreich kann dabei die <a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a> sein.</p>
+
+<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar_1.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
@@ -85,7 +78,6 @@
 							<option value="0">männlich</option>
 							<option value="1">weiblich</option>
 						</select>
-						<input type="hidden" name="action" value="newchar_1" />
 					</td>
 				</tr>
 				<?php if (count($servers) == 2): ?>
@@ -97,6 +89,7 @@
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
 							<option value="0">Spielserver</option>
+							<option value="1">Testserver</option>
 						</select>
 					</td>
 				</tr>
@@ -123,9 +116,8 @@
 				<?php endif; ?>
 			</tbody>
 		</table>
-	</form>
 	<p style="text-align:center;">
-		<button onclick="document.forms.char_form.submit()" name="submit" id="submit" style="margin-right:10px;">Eintragen</button>
-		<?php if($enable_lightwindow): ?><button onclick="window.parent.myLightWindow.deactivate();return false;" style="margin-left:10px;">Abbrechen</button><?php endif; ?>
+		<input type="hidden" name="action" value="newchar_1" />
+		<input type="submit" name="submit" id="submit" value="Daten speichern" />
 	</p>
-</div>
+	</form>

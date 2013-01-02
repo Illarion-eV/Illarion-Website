@@ -53,7 +53,7 @@
 	{
 		$id = $character['ident'];
 		$name = $character['chr_name'];
-		$enable_lightwindow = !( Page::getBrowserName() == 'msie' && Page::getBrowserVersion() <= 6 );
+		$enable_lightwindow = false;
 		switch ($character['chr_status'])
 		{
 			case 3: // pending creation
