@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
+
 	checkAndCreateChar();
 
 	function checkAndCreateChar()
