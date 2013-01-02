@@ -143,6 +143,7 @@
 		$query = 'INSERT INTO chars (chr_accid,chr_playerid,chr_status,chr_race,chr_sex,chr_name)'
 		.PHP_EOL.' VALUES('.$pgSQL->Quote( IllaUser::$ID ).', generate_charid(), 3, '.$pgSQL->Quote( $race ).', '.$pgSQL->Quote( $sex ).', '.$pgSQL->Quote( $name ).')'
 		;
+
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
 
@@ -152,6 +153,15 @@
 		;
 		$pgSQL->setQuery( $query );
 		$charid = $pgSQL->loadResult();
+
+		// aktion mitloggen
+		$msg = "[NEW CHAR]Name: ".$name." - ID: ".$charid;
+		$db =& Database::getPostgreSQL( );
+		$query = 'INSERT INTO accounts.account_log (al_user_id, al_gm_id,  al_time, al_message, al_type)'
+				.PHP_EOL.' VALUES ('.$db->Quote( IllaUser::$ID ).','.$db->Quote( IllaUser::$ID ).', CURRENT_TIMESTAMP, '.$db->Quote($msg).',0)';
+
+            $db->setQuery( $query );
+            $db->query();	
 
 		if (!$charid)
 		{
