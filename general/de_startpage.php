@@ -10,9 +10,6 @@
 
 <h1>Willkommen in Illarion!</h1>
 
-<p style="font-weight:bold">Illarion wird aktuell auf eine neue Version aktualisiert.
-Bitte achte auf die Neuigkeiten um den aktuellen Status zu erfahren.</p>
-
 <?php Page::cap('D'); ?>
 <p>ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete
     die Reiche, Flüchtlinge aller Völker strömen in die Bastionen der

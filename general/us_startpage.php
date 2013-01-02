@@ -10,9 +10,6 @@
 
 <h1>Welcome to Illarion!</h1>
 
-<p style="font-weight:bold">Illarion is currently being updated to a new version.
-Please have a look at the news to keep track of the status of this update.</p>
-
 <?php Page::cap('T'); ?>
 <p>he world is in turmoil. The Second Coming of the Elder Gods has shaken the
     realms to their core. Refugees flock to the bastions of the land Illarion
