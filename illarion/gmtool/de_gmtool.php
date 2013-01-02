@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_gmtool.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_pages.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/shared/def_gmtool.php' );
 
 	if (!IllaUser::loggedIn())
 	{
@@ -14,7 +15,7 @@
 		exit();
 	}
 
-	$pendingwork = getPendingWork();
+	$pagecount = countGmPages();
 
 	Page::setTitle( array( 'GM-Tool', 'Übersicht' ) );
 	Page::setDescription( 'Auf dieser Seite findest du eine Übersicht über alle Funktionen die das GM Tool dir zur Verfügung stellt.' );
@@ -23,10 +24,6 @@
 	Page::setXHTML();
 	Page::Init();
 
-	echo "<pre>";
-	print_r(IllaUser::$moep1);
-	print_r(IllaUser::$moep2);
-	echo "</pre>";
 ?>
 <h1>GM-Tool</h1>
 
@@ -53,22 +50,25 @@
     <legend>GM Pages</legend>
     <ul style="list-style-type:none;padding-left:50px;">
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=0">Neue GM Pages</a>
-            <?php if ( $pendingwork['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
-                (<?php echo $pendingwork['pages_new']; ?>)
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">Neu</a>
+            <?php if ( $pagecount['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
+                (<?php echo $pagecount['pages_new']; ?>)
             </span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=1">GM Pages in Arbeit</a>
-            <span>(<?php echo $pendingwork['pages_inwork']; ?>)</span>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_IN_WORK; ?>">In Arbeit</a>
+            <span>(<?php echo $pagecount['pages_in_work']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=2">GM Pages fertig</a>
-            <span>(<?php echo $pendingwork['pages_done']; ?>)</span>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_DONE; ?>">Erledigt</a>
+            <span>(<?php echo $pagecount['pages_done']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=3">GM Pages im Archiv</a>
-            <span>(<?php echo $pendingwork['pages_archiv']; ?>)</span>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_ARCHIVE; ?>">Archiv</a>
+            <span>(<?php echo $pagecount['pages_archiv']; ?>)</span>
+        </li>
+		<li>
+            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages_log.php">Log</a>
         </li>
     </ul>
 </fieldset>

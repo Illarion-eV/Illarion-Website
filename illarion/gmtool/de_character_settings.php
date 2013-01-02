@@ -12,8 +12,7 @@
 		exit();
 	}
 
-	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character_settings.php' );
-    includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character_slider.php' );
+	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_character.php' );
 
 	Page::setTitle( array( 'GM-Tool', 'Charakter' ) );
     Page::setDescription( 'Hier befindet sich eine Übersicht die Daten des Charakters' );
@@ -21,8 +20,7 @@
 
     Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
     Page::addCSS( array( 'menu', 'gmtool' ) );
-	Page::addCSS( 'slider' );
-    Page::addJavaScript( array( 'prototype', 'effects', 'slider', 'lightwindow') );
+    Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow') );
 
     Page::setXHTML();
     Page::Init();
@@ -40,7 +38,6 @@
 
 	$char_data = getCharData( $charid, $server );
 	$char_pic =	getPictureData($charid);
-	$slider_info = getCharSilderInfos($charid, $server);
 
 	if (!$char_data || !count($char_data))
 	{
@@ -98,55 +95,3 @@
     </div>
 </div>
 
-	<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
-
-            <table style="width:100%;">
-                <tbody>
-                    <tr>
-                        <td>
-                            Gewicht: <?php echo $slider_info['limit_text']['weight']; ?>
-                        </td>
-                        <td style="width:423px;">
-                            <?php include_slider( $slider_info['limits'], 'weight' ); ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Größe: <?php echo $slider_info['limit_text']['height']; ?>
-                        </td>
-                        <td>
-                            <?php include_slider( $slider_info['limits'], 'bodyheight' ); ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Alter: <?php echo $slider_info['limits']['minage']; ?> Jahre bis <?php echo $slider_info['limits']['maxage']; ?> Jahre
-                        </td>
-                        <td>
-                            <?php include_slider( $slider_info['limits'], 'age' ); ?>
-                            <p>
-                                Geburtsdatum:
-                                <select name="day" id="day" style="width:50px;margin-right:10px;">
-                                    <?php for ($i = 1;$i <= 24;++$i): ?>
-                                    <option value="<?php echo $i; ?>"<?php echo ($slider_info['dob']['day'] == $i ? ' selected="selected"' : '' ); ?>><?php echo $i; ?>.</option>
-                                    <?php endfor; ?>
-                                </select>
-                                <select name="month" id="month" style="margin-left:10px;">
-                                    <?php for ($i = 1;$i <= 16;++$i): ?>
-                                    <option value="<?php echo $i; ?>"<?php echo ($slider_info['dob']['month'] == $i ? ' selected="selected"' : '' ); ?>><?php echo IllaDateTime::getMonthName( $i ); ?></option>
-                                    <?php endfor; ?>
-                                </select>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <?php include_heightweight_js( $slider_info['limits'] ); ?>
-            <?php include_age_js( $slider_info['limits'] ); ?>
-
-		<div class="spacer" />
-		<div style='text-align:center;'>
-        <input type="submit" name="submit" value="Änderungen speichern" />
-        <input type="hidden" name="action" value="character_settings" />
-		</div>
-	</form>

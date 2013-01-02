@@ -108,29 +108,76 @@
         return array_merge( $charlist, $testSQL->loadAssocList() );
     }
 
-	function getAccountRightsAndGroups($accid)
+    function getRightArray()
 	{
-/*
-		$pgSQL =& Database::getPostgreSQL( 'accounts' );
+		$rights = array();
 
-		$query = "SELECT account_rights., "
-                    .PHP_EOL."account.acc_name, "
-                    .PHP_EOL."account_log.al_id, "
-                    .PHP_EOL."account_log.al_time, "
-                    .PHP_EOL."account_log.al_message, "
-                    .PHP_EOL."account_log.al_type "
-                .PHP_EOL."FROM account_log "
-                .PHP_EOL."INNER JOIN account ON account_log.al_gm_id = account.acc_id "
-                .PHP_EOL."WHERE account_log.al_user_id = ".$pgSQL->Quote( $accid)
-                .PHP_EOL."ORDER BY account_log.al_time DESC";
+		$pgSQL =& Database::getPostgreSQL( );
 
+		$query = "SELECT * FROM accounts.rights";
+		$pgSQL->setQuery( $query );
+
+		$rights = $pgSQL->loadAssocList();
+		
+		foreach ($rights as $right)
+		{
+			$xrights[$right['r_id']] = $right;	
+		}
+
+		return $xrights;
+	}
+    function getGroupArray()
+	{
+        $groups = array();
+		
+        $pgSQL =& Database::getPostgreSQL( );
+
+        $query = "SELECT * FROM accounts.groups ORDER BY g_id DESC";
         $pgSQL->setQuery( $query );
-        $loglist = $pgSQL->loadAssocList();
 
-        return array($right_list, $group_list);
-*/
-		return array("moep","moep1");
+        $groups = $pgSQL->loadAssocList();
 
+		foreach ($groups as $group)
+        {
+            $xgroups[$group['g_id']] = $group;
+        }
+
+        return $xgroups;
+    }
+
+	function getAccGroups($accid)
+	{
+		$acc_groups = array();
+
+		$pgSQL =& Database::getPostgreSQL( );
+
+        $query = "SELECT * FROM accounts.account_groups WHERE ag_acc_id = ".$pgSQL->Quote($accid);
+        $pgSQL->setQuery( $query );
+
+        $acc_groups = $pgSQL->loadAssocList();
+		
+		foreach ($acc_groups as $acc_group)
+        {
+            $xacc_groups[$acc_group['ag_group_id']] = $acc_group['ag_group_id'];
+        }
+
+		return $xacc_groups;
+	}
+
+	function getRightStringList($string)
+	{
+		$newstring = "";
+		$rights = getRightArray();
+
+		$expl = explode(",", $string);
+		
+		foreach($expl as $r_id)
+		{	
+			$lang = (Page::isGerman() ? "de" : "us");
+			$newstring .= "<span class='bold' title='".$rights[$r_id]['r_desc_'.$lang]."'>".$rights[$r_id]['r_name_'.$lang]."</span><br/>";
+		}
+
+		return $newstring;		
 	}
 
     function getLogTypeString($id) {

@@ -41,8 +41,9 @@
 
 /*
 echo "<pre>";
-    print_r($char_skills);
-	print_r($skill_list);
+//    print_r($char_skills);
+//	print_r($skill_list);
+print_r(getSkillGroupList($server));
     echo "</pre>";
 */
 ?>
@@ -61,13 +62,17 @@ echo "<pre>";
 	<div>
 	<dl class="gmtool">
 		<?php foreach($skill_list as $key=>$skill) : ?>
-            <dt><?php echo (Page::isGerman() ? $skill['skill_name_de'] : $skill['skill_name_us']); ?></dt>
+            <dt><?php echo (Page::isGerman() ? $skill['skl_name_german'] : $skill['skl_name_english']); ?></dt>
             <dd><input type="text" name="<?php echo $key; ?>" value="<?php echo (isset($char_skills[$key]) ? $char_skills[$key] : "0");?>" /></dd>
 		<?php endforeach ?>
 	</dl>
 	<div class="spacer" />
+		<?php if (count($skill_list) > 0 ) : ?>
         <input type="submit" name="submit" value="Änderungen speichern" />
         <input type="hidden" name="action" value="character_skills" />
+		<?php else :?>
+		<p class='center'> Es wurden keine Skills in dieser Kategorie gefunden</p>
+		<?php endif ?>
     </div>
 </form>
 

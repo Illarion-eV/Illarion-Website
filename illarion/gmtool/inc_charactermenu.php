@@ -2,24 +2,23 @@
 
     function include_character_menu( $charid, $active, $server )
     {
-
-        $entries = array();
+		$servername = ( $server == '1' ? 'testserver' : 'illarionserver');
+		$skill_groups = getSkillGroupList($servername);		
+		$entries = array();
 		$params = "?charid=".$charid."&amp;server=".$server;
 
         $entries[1] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Informationen' : 'Informations' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character.php').$params, 'name'=>( Page::isGerman() ? 'Allgemeines' : 'General' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_settings.php').$params, 'name'=>( Page::isGerman() ? 'Einstellungen' : 'Settings' ) );
+			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_style.php').$params, 'name'=>( Page::isGerman() ? 'Aussehen' : 'Style' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_log.php').$params, 'name'=>( Page::isGerman() ? 'Log' : 'Log' ) );
         $entries[2] = array( 'link'=>getUrlString('character_status.php').$params, 'name'=>( Page::isGerman() ? 'Status' : 'Status' ) );
         $entries[3] = array( 'link'=>getUrlString('character_attributs.php').$params, 'name'=>( Page::isGerman() ? 'Attribute' : 'Attributs' ) );
         $entries[4] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Skills' : 'Skills' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_LANGUAGE, 'name'=>( Page::isGerman() ? 'Sprachen' : 'Language' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_FIGHTING, 'name'=>( Page::isGerman() ? 'Kampf' : 'Fighting' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_MAGIC, 'name'=>( Page::isGerman() ? 'Magie' : 'Magic' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_CRAFTING, 'name'=>( Page::isGerman() ? 'Handwerk' : 'Crafting' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_DRUID, 'name'=>( Page::isGerman() ? 'Druiden' : 'Druidic' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_BARD, 'name'=>( Page::isGerman() ? 'Barden' : 'Bard' ) );
-			$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.SKILL_CLASS_MISC, 'name'=>( Page::isGerman() ? 'Sonstiges' : 'Other' ) );
+			foreach ($skill_groups as $key => $group)
+			{
+				$entries[4]['sub'][] = array( 'link'=>getUrlString('character_skills.php').$params.'&amp;filter='.$key, 'name'=>( Page::isGerman() ? $group['skg_name_german'] : $group['skg_name_english'] ) );
+			}
         $entries[5] = array( 'link'=>getUrlString('character_runes.php').$params, 'name'=>( Page::isGerman() ? 'Runen' : 'Runes' ) );
 
 		echo "<div class='menu'>";
@@ -56,7 +55,7 @@
 
 		return;
 	}
-
+	
 	function getUrlString($file)
 	{
 		global $url;

@@ -34,8 +34,8 @@ echo "<pre>";
     print_r($new_data);
 	echo "olddata:";
     print_r($old_data);
-//	echo "skill_list:";
-  //  print_r($skill_list);
+	echo "skill_list:";
+    print_r($skill_list);
 echo "</pre>";
 */
 	// validate
@@ -45,7 +45,7 @@ echo "</pre>";
 		if ($new_value != $old_data[$key])
 		{
 			$diff_data[$key] = $new_value;
-			$msg .= "[".$skill_list[$key]['skill_key_name'].":".$old_data[$key]." to ".$new_value."]";
+			$msg .= "[".$skill_list[$key]['skl_name'].": ".$old_data[$key]." to ".$new_value."]";
 		}
 
 		// check: Ist wert größer als 100 oder kleiner als 0?
@@ -72,18 +72,18 @@ echo "</pre>";
 		if ($value==0)
 		{
 			// loeschen
-			$query = "DELETE FROM ".$server.".playerskills WHERE psk_playerid = ".$pgSQL->Quote( $charid )." AND psk_name = ".$pgSQL->Quote( $skill_list[$key]['skill_key_name']);
+			$query = "DELETE FROM ".$server.".playerskills WHERE psk_playerid = ".$pgSQL->Quote( $charid )." AND psk_skill_id = ".$pgSQL->Quote( $key );
 		}
 		elseif ($old_data[$key]==0)
 		{
 			// neu 
-			$query = "INSERT INTO ".$server.".playerskills (psk_playerid, psk_name, psk_type, psk_value) "
-					.PHP_EOL."VALUES (".$pgSQL->Quote( $charid).",".$pgSQL->Quote( $skill_list[$key]['skill_key_name']).",".$pgSQL->Quote($type).",".$pgSQL->Quote($value).")"; 
+			$query = "INSERT INTO ".$server.".playerskills (psk_playerid, psk_skill_id, psk_value) "
+					.PHP_EOL."VALUES (".$pgSQL->Quote( $charid).",".$pgSQL->Quote( $key).",".$pgSQL->Quote($value).")"; 
 		}
 		else
 		{
 			// update
-			$query = "UPDATE ".$server.".playerskills SET psk_value = ".$pgSQL->Quote( $value )." WHERE psk_playerid = ".$pgSQL->Quote( $charid )." AND psk_name = ".$pgSQL->Quote( $skill_list[$key]['skill_key_name']);
+			$query = "UPDATE ".$server.".playerskills SET psk_value = ".$pgSQL->Quote( $value )." WHERE psk_playerid = ".$pgSQL->Quote( $charid )." AND psk_skill_id = ".$pgSQL->Quote( $key );
 		}
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
@@ -98,7 +98,7 @@ echo "</pre>";
     $pgSQL->setQuery( $query );
     $accid = $pgSQL->loadResult();
 
-	$msg = "Change Attributes: ".$msg;
+	$msg = "Change Skill: ".$msg;
     writeCharLog($accid, $charid, IllaUser::$ID, $msg, CHAR_LOG_TYPE_CHANGE_SKILL, $server);
 
     Messages::add((Page::isGerman()?'Änderungen wurden gespeichert':'Changes got saved'), 'info');

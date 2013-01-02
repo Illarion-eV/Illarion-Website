@@ -1,6 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
-	includeWrapper::includeOnce(  Page::getRootPath().'/illarion/gmtool/inc_character_settings.php' );
+	includeWrapper::includeOnce(  Page::getRootPath().'/illarion/gmtool/inc_character.php' );
 
 	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? false : true );
 

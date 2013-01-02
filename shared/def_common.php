@@ -404,8 +404,26 @@ define ('SKILL_CLASS_PRIEST',             	7 );
  */
 define ('SKILL_CLASS_BARD',             	8 );
 
+// Magietypen
+/**
+ * Typ: Magier
+ */
+define ('CAST_TYPE_MAGE',             	0 );
 
+/**
+ * Magietyp: Priester
+ */
+define ('CAST_TYPE_PRIEST',               1 );
 
+/**
+ * Typ: Barden
+ */
+define ('CAST_TYPE_BARD',               2 );
+
+/**
+ * Typ: Druiden
+ */
+define ('CAST_TYPE_DRUID',               4 );
 
 
 function getGenderArray($lang="")
@@ -424,6 +442,29 @@ function getGenderArray($lang="")
 		    GENDER_FEMALE => "Female",
 		);
 	}
+}
+
+function getCastTypeArray($lang="")
+{
+	if ($lang == "de")
+    {
+        return array(
+            CAST_TYPE_MAGE => "Magier",
+            CAST_TYPE_PRIEST => "Priester",
+			CAST_TYPE_BARD => "Barden",
+            CAST_TYPE_DRUID => "Druiden"
+        );
+    }
+    else
+    {
+        return array(
+			CAST_TYPE_MAGE => "Mage",
+            CAST_TYPE_PRIEST => "Pries",
+            CAST_TYPE_BARD => "Bard",
+            CAST_TYPE_DRUID => "Druid"
+        );
+    }
+
 }
 
 function getRaceArray($lang="")
