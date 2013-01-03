@@ -34,19 +34,17 @@
 		header('HTTP/1.0 401 Unauthorized');
 		exit();
 	}
-
-	$account =& Database::getPostgreSQL( 'accounts' );
 	
 	$race = $char_data['chr_race'];
 	$sex = $char_data['chr_sex'];
 
-	$query = 'SELECT minage, maxage, minweight, maxweight, minbodyheight, maxbodyheight'
-	.PHP_EOL.' FROM raceattr'
-	.PHP_EOL.' WHERE id IN ( -1, '.$account->Quote( $race ).' )'
-	.PHP_EOL.' ORDER BY id DESC'
+	$query = 'SELECT "minage", "maxage", "minweight", "maxweight", "minbodyheight", "maxbodyheight"'
+	.PHP_EOL.' FROM "'.$server.'"."raceattr"'
+	.PHP_EOL.' WHERE "id" IN ( -1, '.$pgSQL->Quote( $race ).' )'
+	.PHP_EOL.' ORDER BY "id" DESC'
 	;
-	$account->setQuery( $query, 0, 1 );
-	$limits = $account->loadAssocRow();
+	$pgSQL->setQuery( $query, 0, 1 );
+	$limits = $pgSQL->loadAssocRow();
 
 	$limits['curr_weight'] = $char_data['ply_weight'];
 	$limits['curr_bodyheight'] = $char_data['ply_body_height'];

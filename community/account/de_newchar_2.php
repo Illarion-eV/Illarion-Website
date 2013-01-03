@@ -44,15 +44,13 @@
 		exit('Fehler - Werte wurden bereits gesetzt');
 	}
 
-	$account =& Database::getPostgreSQL( 'accounts' );
-
 	$query = 'SELECT *'
-	.PHP_EOL.' FROM raceattr'
-	.PHP_EOL.' WHERE id IN ( -1, '.$account->Quote( $race ).' )'
-	.PHP_EOL.' ORDER BY id DESC'
+	.PHP_EOL.' FROM "'.$server.'"."raceattr"'
+	.PHP_EOL.' WHERE "id" IN ( -1, '.$pgSQL->Quote($race).' )'
+	.PHP_EOL.' ORDER BY "id" DESC'
 	;
-	$account->setQuery( $query, 0, 1 );
-	$limits = $account->loadAssocRow();
+	$pgSQL->setQuery( $query, 0, 1 );
+	$limits = $pgSQL->loadAssocRow();
 
 	$limits['curr_weight'] = 0;
 	$limits['curr_bodyheight'] = 0;

@@ -33,16 +33,14 @@
     		return;
     	}
 
-    	$account =& Database::getPostgreSQL( 'accounts' );
-
-    	$query = "SELECT minage, maxage, minweight, maxweight, minbodyheight, maxbodyheight"
-    	. "\n FROM raceattr"
-    	. "\n WHERE id IN ( -1, ".$account->Quote( $chardata['chr_race'] )." )"
-    	. "\n ORDER BY id DESC"
-    	. "\n LIMIT 1"
+    	$query = 'SELECT "minage", "maxage", "minweight", "maxweight", "minbodyheight", "maxbodyheight"'
+    	.PHP_EOL.' FROM "'.$server.'"."raceattr"'
+    	.PHP_EOL.' WHERE "id" IN ( -1, '.$pgSQL->Quote( $chardata['chr_race'] ).' )'
+    	.PHP_EOL.' ORDER BY "id" DESC'
+    	.PHP_EOL.' LIMIT 1'
     	;
-    	$account->setQuery( $query );
-    	$limits = $account->loadAssocRow();
+    	$pgSQL->setQuery( $query );
+    	$limits = $pgSQL->loadAssocRow();
 
     	$query = array();
     	if ( $chardata['chr_status'] == 40 )
