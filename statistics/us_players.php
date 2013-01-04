@@ -86,7 +86,7 @@ logging on. Usually other follow if someone is playing.</p>
 			$charids[] = $char['chr_playerid'];
 		}
 
-		$query = 'SELECT character_details.char_id, character_details.settings, character_details.votes_count, character_details.votes_result'
+		$query = 'SELECT character_details.char_id, character_details.settings'
 		.PHP_EOL.' FROM character_details'
 		.PHP_EOL.' WHERE char_id IN ('.implode( ',', $charids ).')'
 		;
@@ -158,11 +158,7 @@ logging on. Usually other follow if someone is playing.</p>
 			{
 				if ($show_profil)
 				{
-					if ($chr_settings[$char['chr_playerid']]['votes_count'] == 0)
-					{
-						$chr_settings[$char['chr_playerid']]['votes_result'] = 5;
-					}
-					$content[$current_list] .= '<a class="rating'.$chr_settings[$char['chr_playerid']]['votes_result'].'" href="'.Page::getURL().'/community/us_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
+					$content[$current_list] .= '<a href="'.Page::getURL().'/community/us_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
 				}
 				else
 				{
@@ -173,11 +169,7 @@ logging on. Usually other follow if someone is playing.</p>
 			{
 				if ($show_profil)
 				{
-					if ($chr_settings[$char['chr_playerid']]['votes_count'] == 0)
-					{
-						$chr_settings[$char['chr_playerid']]['votes_result'] = 5;
-					}
-					$content[$current_list] .= '<a class="hidden rating'.$chr_settings[$char['chr_playerid']]['votes_result'].'" href="'.Page::getURL().'/community/us_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
+					$content[$current_list] .= '<a class="hidden" href="'.Page::getURL().'/community/us_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
 				}
 				else
 				{

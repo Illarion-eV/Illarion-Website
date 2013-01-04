@@ -30,7 +30,7 @@
 		}
 
 		$db_hp =& Database::getPostgreSQL( 'homepage' );
-		$query = 'SELECT character_details.char_id, character_details.settings, character_details.votes_count, character_details.votes_result'
+		$query = 'SELECT character_details.char_id, character_details.settings'
 		.PHP_EOL.'FROM character_details'
 		.PHP_EOL.'WHERE char_id IN ('.implode(',',$charids).')'
 		;
@@ -87,19 +87,7 @@
 				}
 			}
 			$anything = true;
-			$ranking = 'N/A';
-			if ($show_profil)
-			{
-				if ($chr_settings[$char['chr_playerid']]['votes_count'] == 0)
-				{
-					$ranking = 5;
-				}
-				else
-				{
-					$ranking = $chr_settings[$char['chr_playerid']]['votes_result'];
-				}
-			}
-			echo '<char id="',dechex( $char['chr_playerid'] ),'" profil="',( $show_profil ? 'yes' : 'no' ),'" ranking="'.$ranking.'">',$char['chr_name'],'</char>';
+			echo '<char id="',dechex( $char['chr_playerid'] ),'" profil="',( $show_profil ? 'yes' : 'no' ),'">',$char['chr_name'],'</char>';
 		}
 		if ($anything)
 		{
