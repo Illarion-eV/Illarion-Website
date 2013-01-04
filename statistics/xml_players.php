@@ -49,7 +49,8 @@
 			}
 			else
 			{
-				$show_char = ((int)($chr_settings[$char['chr_playerid']]['settings']&2) == 0);
+				//$show_char = ((int)($chr_settings[$char['chr_playerid']]['settings']&2) == 0);
+				$show_char = true;
 				$show_profil = ((int)($chr_settings[$char['chr_playerid']]['settings']&1) > 0);
 			}
 
