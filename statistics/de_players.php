@@ -86,7 +86,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 		}
 
 
-		$query = 'SELECT character_details.char_id, character_details.settingst'
+		$query = 'SELECT character_details.char_id, character_details.settings'
 		.PHP_EOL.' FROM character_details'
 		.PHP_EOL.' WHERE char_id IN ('.implode( ',', $charids ).')'
 		;
