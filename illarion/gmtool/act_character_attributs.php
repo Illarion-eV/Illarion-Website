@@ -87,6 +87,7 @@
 						.PHP_EOL."ply_playerid = ".$pgSQL->Quote( $charid );
 
 			$pgSQL->setQuery( $query );
+			$pgSQL->query();
 			writeCharLog($accid, $charid, IllaUser::$ID, $msg, CHAR_LOG_TYPE_CHANGE_ATTRIB, $server);
 
 			Messages::add((Page::isGerman()?'Änderungen wurden gespeichert':'Changes got saved'), 'info');
