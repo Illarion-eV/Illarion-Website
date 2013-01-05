@@ -55,12 +55,12 @@
 			<dt>Account ID</dt>
 			<dd><?php echo $account_data['acc_id']; ?></dd>
 			<dt>Benutzername</dt>
-			<dd><?php echo $account_data['acc_login']; ?></dd>
+			<dd><?php echo htmlentities($account_data['acc_login'], ENT_COMPAT | ENT_XHTML); ?></dd>
 			<dt>Name</dt>
-			<dd><input type="text" name="acc_name" value="<?php echo ( $account_data['acc_name'] ? $account_data['acc_name'] : '' ); ?>" /></dd>
+			<dd><input type="text" name="acc_name" value="<?php echo htmlentities( $account_data['acc_name'] ? $account_data['acc_name'] : '' , ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>E-Mail Adresse</dt>
-			<dd><input type="text" name="acc_email" value="<?php echo $account_data['acc_email']; ?>" /></dd>
+			<dd><input type="text" name="acc_email" value="<?php echo htmlentities($account_data['acc_email'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Passwort</dt>
 			<dd><input type="text" name="acc_passwd" value="<?php echo $account_data['acc_passwd']; ?>" /></dd>
