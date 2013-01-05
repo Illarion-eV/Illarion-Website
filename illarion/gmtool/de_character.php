@@ -62,7 +62,7 @@
 			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Account Name</dt>
 			<dd><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?accid=<?php echo $char_data['chr_accid']; ?>">
-				<?php echo $char_data['acc_name']; ?>
+				<?php echo htmlentities($char_data['acc_name'], ENT_COMPAT | ENT_XHTML); ?>
 				</a>
 				(<?php echo $char_data['acc_email']; ?>)
 				
@@ -80,11 +80,11 @@
 			<dd><?php echo date("d.m.Y h:i:s",$char_data['chr_lastsavetime'])." (via IP: ".$char_data['chr_lastip'].")"; ?></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Charaktername</dt>
-			<dd><input type="text" name="name" value="<?php echo $char_data['chr_name']; ?>" /></dd>
+			<dd><input type="text" name="name" value="<?php echo htmlentities($char_data['chr_name'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dt>Prefix</dt>
-			<dd><input type="text" name="prefix" size="20" value="<?php echo $char_data['chr_prefix']; ?>" /></dd>
+			<dd><input type="text" name="prefix" size="20" value="<?php echo htmlentities($char_data['chr_prefix'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dt>Suffix</dt>
-			<dd><input type="text" name="suffix" size="20" value="<?php echo $char_data['chr_suffix']; ?>" /></dd>
+			<dd><input type="text" name="suffix" size="20" value="<?php echo htmlentities($char_data['chr_suffix'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dt>Rasse</dt>
 			<dd>
 				<select name="race">
