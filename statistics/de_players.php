@@ -115,7 +115,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 			
 			if ($char["show_profile"])
 			{
-				$content[$current_list] .= '<a href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
+				$content[$current_list] .= '<a class="rating8" href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
 			}
 			else
 			{
