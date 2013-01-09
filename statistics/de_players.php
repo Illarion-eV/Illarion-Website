@@ -46,7 +46,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	.PHP_EOL.'       (NOW() - interval \'3 months\') < "accounts"."account"."acc_registerdate" AS "newbie",'
 	.PHP_EOL.'       ("illarionserver"."player"."ply_posz" >= 100 AND "illarionserver"."player"."ply_posz" <= 103) AS "newbieisland",'
 	.PHP_EOL.'       ("illarionserver"."gms"."gm_rights_server" IS NOT NULL AND ("illarionserver"."gms"."gm_rights_server" & 131072) = 0) AS "gm",'
-	.PHP_EOL.'       CASE WHEN "illarionserver"."questprogress"."qpg_progress" IS NULL THEN \'0\' ELSE "illarionserver"."questprogress"."qpg_progress" END AS "town",'
+	.PHP_EOL.'       CASE WHEN "illarionserver"."questprogress"."qpg_progress" IS NULL OR "illarionserver"."questprogress"."qpg_progress" = 0 THEN \'4\' ELSE "illarionserver"."questprogress"."qpg_progress" END AS "town",'
 	.PHP_EOL.'       ("homepage"."character_details"."settings" IS NOT NULL AND ("homepage"."character_details"."settings" & 1) > 0) AS "show_profile"'
 	.PHP_EOL.' FROM "illarionserver"."onlineplayer"'
 	.PHP_EOL.' INNER JOIN "illarionserver"."chars" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."chars"."chr_playerid"'
@@ -100,10 +100,10 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				$content_length[$current_list] += 56;
 				switch($current_town)
 				{
-					case 0: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
 					case 1: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/cadomyr.png" /><h3 style="margin:0">Cadomyr</h3></div>'; break;
 					case 2: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/runewick.png" /><h3 style="margin:0">Runewick</h3></div>'; break;
 					case 3: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/galmair.png" /><h3 style="margin:0">Galmair</h3></div>'; break;
+					case 4: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
 					default: $content[$current_list] .= '<h3>Unbekannt</h3>';
 				}
 				$content[$current_list] .= '<ul>';
