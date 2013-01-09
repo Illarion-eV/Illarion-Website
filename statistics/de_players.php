@@ -88,7 +88,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				continue;
 			}
 
-			if ($char['town'] != $current_race)
+			if ($char['town'] != $current_town)
 			{
 				if ($content_length[$current_list] != 0)
 				{
