@@ -101,9 +101,9 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				switch($current_town)
 				{
 					case 0: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
-					case 1: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/cadomyr.png" /><h3>Cadomyr</h3>'; break;
-					case 2: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/runewick.png" /><h3>Runewick</h3>'; break;
-					case 3: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/galmair.png" /><h3>Galmair</h3>'; break;
+					case 1: $content[$current_list] .= '<div style="margin:16px 0;vertical-align:middle;"><img style="float:left" src="'.Page::getMediaURL().'/cadomyr.png" /><h3 style="margin:0">Cadomyr</h3></div>'; break;
+					case 2: $content[$current_list] .= '<div style="margin:16px 0;vertical-align:middle;"><img style="float:left" src="'.Page::getMediaURL().'/runewick.png" /><h3 style="margin:0">Runewick</h3></div>'; break;
+					case 3: $content[$current_list] .= '<div style="margin:16px 0;vertical-align:middle;"><img style="float:left" src="'.Page::getMediaURL().'/galmair.png" /><h3 style="margin:0">Galmair</h3></div>'; break;
 					default: $content[$current_list] .= '<h3>Unbekannt</h3>';
 				}
 				$content[$current_list] .= '<ul>';
