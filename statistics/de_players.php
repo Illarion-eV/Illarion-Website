@@ -113,7 +113,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 			$content[$current_list] .= '<li>';
 			$content_length[$current_list] += 17;
 			
-			if ($char["show_profile"])
+			if ($char["show_profile"] == 't')
 			{
 				$content[$current_list] .= '<a class="rating8" href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
 			}
@@ -122,9 +122,9 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				$content[$current_list] .= $char['chr_name'];
 			}
 			
-			if ($char['newbie']=='t')
+			if ($char['newbie'] == 't')
 			{
-				if ($char['newbieisland']=='t')
+				if ($char['newbieisland'] == 't')
 				{
 					$content[$current_list] .= '<span class="newbie"> (NI)</span>';
 				}
@@ -134,7 +134,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				}
 			}
 			
-			if ($char['gm']=='t')
+			if ($char['gm'] == 't')
 			{
 			   $content[$current_list] .= '<span class="gm"> (GM)</span>';
 			}
