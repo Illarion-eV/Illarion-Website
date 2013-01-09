@@ -98,16 +98,14 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 
 				$current_town = $char['town'];
 				$content_length[$current_list] += 56;
-				$content[$current_list] .= '<h3>';
 				switch($current_town)
 				{
-					case 0: $content[$current_list] .= 'Vogelfreie'; break;
-					case 1: $content[$current_list] .= 'Cadomyr'; break;
-					case 2: $content[$current_list] .= 'Runewick'; break;
-					case 3: $content[$current_list] .= 'Galmair'; break;
-					default: $content[$current_list] .= 'Unbekannt';
+					case 0: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
+					case 1: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/cadomyr.png" /><h3>Cadomyr</h3>'; break;
+					case 2: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/runewick.png" /><h3>Runewick</h3>'; break;
+					case 3: $content[$current_list] .= '<img style="float:left" src="'.Page::getMediaURL().'/galmair.png" /><h3>Galmair</h3>'; break;
+					default: $content[$current_list] .= '<h3>Unbekannt</h3>';
 				}
-				$content[$current_list] .= '</h3>';
 				$content[$current_list] .= '<ul>';
 			}
 			$content[$current_list] .= '<li>';
