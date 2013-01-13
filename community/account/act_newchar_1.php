@@ -18,16 +18,17 @@
 			Messages::add((Page::isGerman()?'Du darfst keine Charaktere auf dem Testserver anlegen.':'You are not allowed to create testserver characters.'),'error');
 			return;
 		}
+		
+		$pgSQL =& Database::getPostgreSQL( $server );
+		$query = 'SELECT COUNT(*)'
+		.PHP_EOL.' FROM chars'
+		.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
+		;
+		$pgSQL->setQuery( $query );
+		$charcount = $pgSQL->loadResult();
+			
 		if ( $server == 'illarionserver' && IllaUser::$charlimit > 0 )
 		{
-			$pgSQL =& Database::getPostgreSQL( $server );
-			$query = 'SELECT COUNT(*)'
-			.PHP_EOL.' FROM chars'
-			.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
-			;
-			$pgSQL->setQuery( $query );
-			$charcount = $pgSQL->loadResult();
-
 			if ($charcount >= IllaUser::$charlimit)
 			{
 				Messages::add((Page::isGerman()?'Du darfst keine Charaktere mehr anlegen, da Du die Obergrenze bereits erreichst hast.':'You are not allowed to create more characters, because you\'ve already reached the upper limit.'),'error');
@@ -169,6 +170,9 @@
 			Messages::add((Page::isGerman()?'Unbekannter Fehler beim Erstellen.':'Unknown error while creating.'),'error');
 			return;
 		}
-
-		Page::redirect( Page::getURL().'/community/account/'.Page::getLanguage().'_newchar_2.php?charid='.$charid.'&server='.($server=='testserver'?'1':'0') );
+		
+		if ($server == 'illarionserver' && $charcount == 1)
+		{
+			Page::addPiwikGoal(3);
+		}
 	}

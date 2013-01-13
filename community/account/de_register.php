@@ -8,6 +8,7 @@
 		if (IllaUser::activate( $_GET['activate'] ))
 		{
 			Messages::add('Account wurde aktiviert', 'info');
+			Page::addPiwikGoal(2);
 			includeWrapper::includeOnce( Page::getRootPath().'/general/de_startpage.php' );
 			exit();
 		}
@@ -31,6 +32,7 @@
 			if ( IllaUser::register() )
 			{
 				Messages::add('Registrierung war erfolgreich. Du bekommst jetzt eine E-Mail, mit der Du den Account aktivieren kannst.', 'info');
+				Page::addPiwikGoal(1);
 				includeWrapper::includeOnce( Page::getRootPath().'/general/de_startpage.php' );
 				exit();
 			}
