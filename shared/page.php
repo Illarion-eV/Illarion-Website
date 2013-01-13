@@ -267,6 +267,14 @@ class Page {
 	* @var array
 	*/
 	static private $request_headers = array();
+	
+	/**
+	* Array of the piwik goals that should be tracked once this page is done loading.
+	*
+	* @access private
+	* @var array
+	*/
+	static private $track_goals = array();
 
 	/**
 	* Returns the normal URL of the page
@@ -547,6 +555,16 @@ class Page {
 	*/
 	static public function getKeywords() {
 		return self::$page_keywords;
+	}
+	
+	/**
+	* Add a goal that is supposed to be tracked with piwik.
+	*
+	* @access public
+	* @param int $goal the goal that is supposed to be tracked
+	*/
+	static public function addPiwikGoal($goal) {
+		self::$track_goals[] = (int)$goal;
 	}
 	
 	/**
@@ -1404,6 +1422,10 @@ class Page {
 			}
 			if (!defined('NO_INLINE_IMAGES')) {
 				$search_replace[$search_cnt] .= '<link rel="stylesheet" type="text/css" href="' . self::url . '/shared/pics/' . self::$language . '_image_bundle.css" />' . PHP_EOL;
+			}
+			$trackingGoals = array_unique($track_goals);
+			foreach($trackingGoals as $goal) {
+				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
 			$search_replace[$search_cnt] = (self::$language === 'de' ? 'News von Illarion' : 'News of Illarion');
