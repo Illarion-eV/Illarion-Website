@@ -1423,7 +1423,7 @@ class Page {
 			if (!defined('NO_INLINE_IMAGES')) {
 				$search_replace[$search_cnt] .= '<link rel="stylesheet" type="text/css" href="' . self::url . '/shared/pics/' . self::$language . '_image_bundle.css" />' . PHP_EOL;
 			}
-			$trackingGoals = array_unique($track_goals);
+			$trackingGoals = array_unique(self::$track_goals);
 			foreach($trackingGoals as $goal) {
 				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
