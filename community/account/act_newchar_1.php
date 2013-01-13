@@ -1,7 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-
 	checkAndCreateChar();
 
 	function checkAndCreateChar()
@@ -171,8 +170,5 @@
 			return;
 		}
 		
-		if ($server == 'illarionserver' && $charcount == 1)
-		{
-			Page::addPiwikGoal(3);
-		}
+		Page::redirect( Page::getURL().'/community/account/'.Page::getLanguage().'_newchar_2.php?charid='.$charid.'&server='.($server=='testserver'?'1':'0') );
 	}

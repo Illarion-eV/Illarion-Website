@@ -47,7 +47,7 @@
 <p>Hier musst Du Name, Rasse und Geschlecht des Charakters festlegen.
 Hilfreich kann dabei die <a href="<?php echo Page::getURL(); ?>/general/de_rpg_guide.php">RPG-Anleitung</a> sein.</p>
 
-<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar_1.php">
+<form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/de_newchar_2.php">
 		<table style="width:100%;">
 			<tbody>
 				<tr>
