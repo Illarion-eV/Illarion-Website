@@ -9,7 +9,7 @@
 		{
 			Messages::add('Account got activated', 'info');
 			Page::addPiwikGoal(2);
-			includeWrapper::includeOnce( Page::getRootPath().'/community/account/de_newchar.php' );
+			includeWrapper::includeOnce( Page::getRootPath().'/community/account/us_newchar.php' );
 			exit();
 		}
 		else
