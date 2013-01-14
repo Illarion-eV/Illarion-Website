@@ -1075,7 +1075,11 @@ class Page {
 				if (!IllaUser::login($_POST['login_name'], $_POST['login_pw'], ($_POST['login_remember'] == 'remember'))) {
 					self::redirect(self::url . '/community/account/' . self::$language . '_login.php?error=1&target=' . rawurlencode($_SERVER['REQUEST_URI']));
 				} else {
-                    self::redirect(self::url . '/community/account/' . self::$language . '_charlist.php');
+					if (defined("LOGIN_TARGET_URL")) {
+						self::redirect(LOGIN_TARGET_URL);
+					} else {
+						self::redirect(self::url . '/community/account/' . self::$language . '_charlist.php');
+					}
                 }
 				break;
 			case 'logout': IllaUser::logout();
