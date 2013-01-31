@@ -1389,7 +1389,7 @@ class Page {
 				array_unshift(&$js, 'proxy_killer');
 			}
 			array_unshift(&$js, 'hyphenator');
-			if (self::isGerman() {
+			if (self::isGerman()) {
 				array_unshift(&$js, 'hyphenator-de');
 			} else {
 				array_unshift(&$js, 'hyphenator-en-gb');
