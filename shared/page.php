@@ -1388,6 +1388,12 @@ class Page {
 			if (!IllaUser::loggedIn()) {
 				array_unshift(&$js, 'proxy_killer');
 			}
+			array_unshift(&$js, 'hyphenator');
+			if (self::isGerman() {
+				array_unshift(&$js, 'hyphenator-de');
+			} else {
+				array_unshift(&$js, 'hyphenator-en-gb');
+			}
 			if (self::$browser_name === 'msie' && self::$browser_version <= 6) {
 				array_unshift(&$js, 'iepngfix');
 			}

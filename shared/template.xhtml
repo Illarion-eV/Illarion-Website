@@ -49,6 +49,13 @@
 		} catch( err ) {}
 		</script>
 		<!-- End Piwik Tracking Code -->
+		<script type="text/javascript">
+        	Hyphenator.config({
+        		minwordlength : 4,
+				mainLanguage : "{LANG|de|en-gb}"
+        	});
+        	Hyphenator.run();
+        </script>
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
 		<link href="{URL}" rel="top" title="{LANG|Startseite|Startpage}" />
 		<link href="{URL}" rel="start" title="{LANG|Startseite|Startpage}" />
