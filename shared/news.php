@@ -98,9 +98,9 @@ class News {
 			$text = preg_replace('/(\n\r)|(\r\n)|(\n|\r)/', '<br />', $news['content_' . $lang]);
 			if ($news['use_capital'] == 1) {
 				Page::cap(substr($text, 0, 1));
-				echo '<p>', substr($text, 1), '</p>';
+				echo '<p class="hyphenate">', substr($text, 1), '</p>';
 			} else {
-				echo '<p>', $text, '</p>';
+				echo '<p class="hyphenate">', $text, '</p>';
 			}
 
 			echo '<div class="right">', ($lang == 'de' ? 'geschrieben von ' : 'written by ');
