@@ -7,13 +7,11 @@
 		<meta name="author" content="Illarion e.V." />
 		<meta name="keywords" content="{KEYWORDS}" />
 		<meta name="date" content="2012-07-02T15:11:14+0100" />
-		<meta name="language" content="{LANGUAGE}" />
 		<meta name="robots" content="all,index,follow" />
 		<meta name="revisit-after" content="30 days" />
 		<meta name="copyright" content="{META_RIGHTS}" />
 		<meta http-equiv="content-type" content="{CONTENT_TYPE}; charset=utf-8" />
 		<meta http-equiv="expires" content="43200" />
-		<meta http-equiv="content-language" content="{LANGUAGE}" />
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<meta name="DC.Title" content="{PAGE_TITLE}" />
@@ -36,6 +34,8 @@
 		<meta name="DC.Coverage.Spatial" content="{META_DC_LAND}" />
 		<meta name="DC.Coverage.Temporal" content="{META_DC_TIME}" />
 		<meta name="DC.Rights" content="{META_RIGHTS}" />
+		<meta name="language" content="{LANG|de|en-gb}" />
+		<meta http-equiv="content-language" content="{LANG|de|en-gb}" />
 		<script type="text/javascript">url='{URL}'; cur_lang='{LANGUAGE}';</script>
 		<link href="{SHARED_URL}/css.php?file={CSS}{NO_OPTI}" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="{SHARED_URL}/js.php?file={JS}{NO_OPTI}"></script>
@@ -53,8 +53,6 @@
         	Hyphenator.config({
         		minwordlength : 4
         	});
-			Hyphenator.defaultLanguage = "{LANG|de|en-gb}";
-			Hyphenator.mainLanguage = "{LANG|de|en-gb}";
         	Hyphenator.run();
         </script>
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
