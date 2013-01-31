@@ -11,25 +11,28 @@
 <h1>Willkommen in Illarion!</h1>
 
 <?php Page::cap('D'); ?>
-<p>ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete
-    die Reiche, Flüchtlinge aller Völker strömen in die Bastionen der
-    Menschheit im Land Illarion, die verschont geblieben sind von den
-    Entbehrungen der vergangenen Tage. Sechs Edelsteine der Macht waren den
-    Fürsten dieser Bastionen zur Verwahrung gegeben; doch Missgunst, Verrat und
-    Neid sind die alltäglichen Geißeln der Macht.</p>
+<p class="hyphenate">
+ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete die Reiche,
+Flüchtlinge aller Völker strömen in die Bastionen der Menschheit im Land
+Illarion, die verschont geblieben sind von den Entbehrungen der vergangenen
+Tage. Sechs Edelsteine der Macht waren den Fürsten dieser Bastionen zur
+Verwahrung gegeben; doch Missgunst, Verrat und Neid sind die alltäglichen
+Geißeln der Macht.</p>
 
-<p>Illarion ist ein kostenloses Online-Rollenspiel, welches seinen Schwerpunkt
-    auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
-    lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
-    verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
-    Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben
-    als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester
-    der Götter.</p>
+<p class="hyphenate">
+Illarion ist ein kostenloses Online-Rollenspiel, welches seinen Schwerpunkt
+auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
+lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
+verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
+Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben
+als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester
+der Götter.</p>
 
-<p>Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer
-    offenen, persistenten Spielwelt. Deine Entscheidungen und Taten formen und
-    gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher
-    füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
+<p class="hyphenate">
+Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer
+offenen, persistenten Spielwelt. Deine Entscheidungen und Taten formen und
+gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher
+füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 
 <p>Illarion - Welche Rolle wirst du spielen?</p>
 
