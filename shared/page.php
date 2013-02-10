@@ -1253,7 +1253,7 @@ class Page {
 			}
 			$output .= $content;
 
-			self::optimizeOutput(&$output);
+			self::optimizeOutput($output);
 		}else {
 			$output = file_get_contents(self::base_path . '/shared/template.xhtml');
 			$search_keywords = array();
@@ -1553,7 +1553,7 @@ class Page {
 			unset($search_replace);
 			unset($search_cnt);
 
-			self::optimizeOutput(&$output);
+			self::optimizeOutput($output);
 
 			if (defined('NO_DEBUG') && !isset($_GET['FORCE_ERROR_OUTPUT'])) {
 				$output = str_replace('{DEBUG}', '', $output);
