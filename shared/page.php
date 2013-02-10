@@ -1350,22 +1350,22 @@ class Page {
 			$css = &self::$css;
 
 			if (self::$browser_name === 'msie' && self::$browser_version <= 6) {
-				array_unshift(&$css, 'ieonly');
+				array_unshift($css, 'ieonly');
 			} elseif (self::$browser_name === 'mozilla') {
-				array_unshift(&$css, 'ffonly');
+				array_unshift($css, 'ffonly');
 			}
 			if (self::isGerman()) {
-				array_unshift(&$css, 'main_de');
+				array_unshift($css, 'main_de');
 			}else {
-				array_unshift(&$css, 'main_us');
+				array_unshift($css, 'main_us');
 			}
 			if (Messages::any_msgs()) {
-				array_unshift(&$css, 'messages');
+				array_unshift($css, 'messages');
 			}
 			if (!defined('NO_DEBUG')) {
-				array_unshift(&$css, 'debug');
+				array_unshift($css, 'debug');
 			}
-			array_unshift(&$css, 'main');
+			array_unshift($css, 'main');
 			$css = array_unique($css);
 			$search_keywords[++$search_cnt] = '{CSS}';
 			$search_replace[$search_cnt] = implode(',', $css);
@@ -1380,22 +1380,22 @@ class Page {
 
 			$js = &self::$js;
 			if (!self::checkSSL()) {
-				array_unshift(&$js, 'bookmarks');
+				array_unshift($js, 'bookmarks');
 				if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
-					array_unshift(&$js, 'google');
+					array_unshift($js, 'google');
 				}
 			}
 			if (!IllaUser::loggedIn()) {
-				array_unshift(&$js, 'proxy_killer');
+				array_unshift($js, 'proxy_killer');
 			}
-			array_push(&$js, 'hyphenator');
+			array_push($js, 'hyphenator');
 			if (self::isGerman()) {
-				array_push(&$js, 'hyphenator-de');
+				array_push($js, 'hyphenator-de');
 			} else {
-				array_push(&$js, 'hyphenator-en-gb');
+				array_push($js, 'hyphenator-en-gb');
 			}
 			if (self::$browser_name === 'msie' && self::$browser_version <= 6) {
-				array_unshift(&$js, 'iepngfix');
+				array_unshift($js, 'iepngfix');
 			}
 			$js = array_unique($js);
 			$search_keywords[++$search_cnt] = '{JS}';
