@@ -68,7 +68,7 @@
 	$limits['curr_age'] = 0;
 	$dob= array( 'day' => 1, 'month' => 1 );
 
-	calculateLimits( &$limits );
+	calculateLimits( $limits );
 	$limit_text = generateLimitTexts( $limits );
 
 	Page::setXHTML();
