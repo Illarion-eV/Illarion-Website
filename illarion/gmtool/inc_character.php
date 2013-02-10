@@ -447,7 +447,7 @@
         $dob_date=IllaDateTime::IllaDatestampToDate($char_data['ply_dob']);
 	    $dob= array( 'day' => $dob_date['day'], 'month' => $dob_date['month'] );
 
-        calculateLimits( &$limits );
+        calculateLimits( $limits );
 	    $limit_text = generateLimitTexts( $limits );
 
         $slider_infos['limits'] = $limits;
