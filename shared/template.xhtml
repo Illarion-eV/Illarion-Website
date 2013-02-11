@@ -53,7 +53,24 @@
         	Hyphenator.config({
         		minwordlength : 4
         	});
-        	Hyphenator.run();
+			if (typeof Prototype != 'undefined')
+			{
+				Event.observe(window, 'load', Hyphenator.run, false);
+			}
+			else
+			{
+				var oldonload = window.onload; 
+				if (typeof window.onload != 'function') { 
+					window.onload = Hyphenator.run; 
+				} else { 
+					window.onload = function() { 
+						if (oldonload) { 
+							oldonload(); 
+						} 
+						Hyphenator.run(); 
+					} 
+				}
+			};
         </script>
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>
 		<link href="{URL}" rel="top" title="{LANG|Startseite|Startpage}" />
