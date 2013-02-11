@@ -51,7 +51,10 @@
 		<!-- End Piwik Tracking Code -->
 		<script type="text/javascript">
         	Hyphenator.config({
-        		minwordlength : 4
+        		'minwordlength'  : 4,
+				'remoteloading'  : false,
+				'onerrorhandler' : function(error) {},
+				
         	});
 			Hyphenator.run();
         </script>
