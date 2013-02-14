@@ -18,7 +18,7 @@
 		exit('Error - Character ID got not transferred correctly.');
 	}
 
-	$pgSQL & Database::getPostgreSQL( $server );
+	$pgSQL = Database::getPostgreSQL( $server );
 
 	$query = 'SELECT chr_name, chr_race, chr_sex, chr_status, ply_body_height, ply_weight, ply_dob, ply_age, ply_hair, ply_beard, ply_skinred, ply_skingreen, ply_skinblue, ply_hairred, ply_hairgreen, ply_hairblue'
 	.PHP_EOL.' FROM player'
