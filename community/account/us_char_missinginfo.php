@@ -59,7 +59,7 @@
 		$dob= array( 'day' => 1, 'month' => 1 );
 	}
 
-	calculateLimits( &$limits );
+	calculateLimits( $limits );
 	if ($char_data['chr_status'] == 40 )
 	{
 		$limit_text = generateLimitTexts( $limits );
