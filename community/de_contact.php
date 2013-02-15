@@ -116,10 +116,10 @@ können hier gemeldet werden.</li>
 <p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-<li>Achae Eanstray - Englischsprachige Community-Managerin</li>
-<li>Athian - Englischsprachiger Community-Manager</li>
-<li>Djironnyma - Deutschsprachiger Community-Manager</li>
-<li>Skamato - Deutschsprachiger Community-Manager</li>
+<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin</li>
+<li><a href="?contact=31">Athian</a> - Englischsprachiger Community-Manager</li>
+<li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager</li>
+<li><a href="?contact=33">Skamato</a> - Deutschsprachiger Community-Manager</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -278,6 +278,26 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist der Kassenwart des ".
          "Illarion e.V. und kann Fragen in Bezug auf den Verein beantworten."
          ,false);
+      break;
+      case 30: //Achae
+         define(_CONTACT_NAME,"Achae Eanstray",false);
+         define(_CONTACT_MAIL,"achae@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
+      break;
+      case 31: //Athian
+         define(_CONTACT_NAME,"Athian",false);
+         define(_CONTACT_MAIL,"athian@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
+      break;
+      case 32: //Djironnyma
+         define(_CONTACT_NAME,"Djironnyma",false);
+         define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
+      break;
+      case 33: //Skamato
+         define(_CONTACT_NAME,"Skamato",false);
+         define(_CONTACT_MAIL,"skamato@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);

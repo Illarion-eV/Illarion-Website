@@ -107,10 +107,10 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These players assist new players and help resolve issues between players.</p>
 
 <ul>
-<li>Achae Eanstray - English speaking Community Manager</li>
-<li>Athian - English speaking Community Manager</li>
-<li>Djironnyma - German speaking Community Manager</li>
-<li>Skamato - German speaking Community Manager</li>
+<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager</li>
+<li><a href="?contact=31">Athian</a> - English speaking Community Manager</li>
+<li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
+<li><a href="?contact=33">Skamato</a> - German speaking Community Manager</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -253,6 +253,26 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the treasurer of the ".
          "Illarion e.V. and is able to answer questions about the society."
          ,false);
+      break;
+      case 30: //Achae
+         define(_CONTACT_NAME,"Achae Eanstray",false);
+         define(_CONTACT_MAIL,"achae@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+      break;
+      case 31: //Athian
+         define(_CONTACT_NAME,"Athian",false);
+         define(_CONTACT_MAIL,"athian@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+      break;
+      case 32: //Djironnyma
+         define(_CONTACT_NAME,"Djironnyma",false);
+         define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
+      break;
+      case 33: //Skamato
+         define(_CONTACT_NAME,"Skamato",false);
+         define(_CONTACT_MAIL,"skamato@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);
