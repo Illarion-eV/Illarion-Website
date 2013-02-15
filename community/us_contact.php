@@ -85,18 +85,17 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 	<li><a href="?contact=4">Reporting gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
 
-	<li><a href="?contact=5">RPG requests</a> - If you need gamemaster support
-	for a quest you can mail to this address. A better alternative however is
-	to seek direct contact with a gamemaster. You will find their addresses
-	further below at the <a class="hidden" href="#5">Personal Contacts</a> section.
-	</li>
+	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need gamemaster support
+	for a quest in Cadomyr you can ask for it here.</li>
 
-	<li><a href="?contact=6">Character requests</a> - All requests concerning
-	your character go here.</li>
+	<li><a href="?contact=6">RPG requests Galmair</a> - If you need gamemaster support
+	for a quest in Galmair you can ask for it here.</li>
+	
+	<li><a href="?contact=7">RPG requests Runewick</a> - If you need gamemaster support
+	for a quest in Runewick you can ask for it here.</li>
 
-	<li><a href="?contact=7">Bug reports</a> - Mistakes and errors you locate
-	within the game, can be reported here. However, it is better to report them
-	on the <a href="../mantis/">Mantis-Bugtracker</a>.</li>
+	<li><a href="../mantis/">Bug reports</a> - Mistakes and errors you encounter
+	within the game, can be reported here.</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -118,31 +117,29 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <h3>Gamemasters</h3>
 
-<p>These Gamemasters take care of all things concerning quests, new players,
-and of players who don't care for the rules.</p>
+<p>These Gamemasters take care of quests and of players who do not abide by the rules.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a></li>
 	<li><a href="?contact=11">Estralis Seborian</a></li>
 	<li><a href="?contact=42">Face</a></li>
+	<li><a href="?contact=43">Firefly</a></li>
+	<li><a href="?contact=44">Teflon</a></li>
+	<li><a href="?contact=45">Silverwing</a></li>
 	<li><a href="?contact=12">Zak</a></li>
-	<li><a href="?contact=40">Zot</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Developers</h3>
+<h3>Lead Developers</h3>
 
-<p>These are the developers of Illarion and their responsibilities</p>
+<p>These are the lead developers of Illarion and their responsibilities</p>
 
 <ul>
-	<li><a href="?contact=16">Alatar</a> - Webmaster, Server Administrator</li>
-	<li><a href="?contact=33">Ardian</a> - Scripts</li>
-	<li><a href="?contact=21">Lennier</a> - Map</li>
-	<li><a href="?contact=22">Martin</a> - Scripts, Server, Graphics</li>
-	<li><a href="?contact=23">Nitram</a> - Client, Scripts, Homepage</li>
-	<li><a href="?contact=31">pharse</a> - Scripts, Server Administrator</li>
-	<li><a href="?contact=25">Vilarion</a> - Scripts, Server, Server Administrator</li>
+    <li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
+	<li><a href="?contact=22">Martin</a> - Graphics</li>
+	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
+	<li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
 	<li><a href="?contact=40">Zot</a> - Maps</li>
 </ul>
 
@@ -166,11 +163,10 @@ and of players who don't care for the rules.</p>
       case 1: // Account requests
          define(_CONTACT_NAME,"Account requests",false);
          define(_CONTACT_MAIL,"accounts@illarion.org",false);
-         define(_CONTACT_DETAILS,"All questions concerning the accounts ".
-         "will be answered here. Don't forget to note down your account ".
-         "name in the email if the problem is about a existing account or else".
-         " we can't help you.<br />To make sure that it is your account, ".
-         "you need to send this mail from the e-mail address you used to ".
+         define(_CONTACT_DETAILS,"All questions concerning your account ".
+         "will be answered here. Don't forget to mention your account ".
+         "name in the e-mail or we might not be able to help you.<br />".
+         "You need to send this e-mail from the e-mail address you used to ".
          "register your account",false);
       break;
       case 2: //Webmaster contact
@@ -183,164 +179,73 @@ and of players who don't care for the rules.</p>
       case 3: //Reporting players
          define(_CONTACT_NAME,"Reporting players",false);
          define(_CONTACT_MAIL,"violations@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can report players, whom behaved".
-         " incorrectly in your eyes and broke the rules.<br />Please add ".
-         "the time and the date of when the problems took place, so we can ".
-         "check your report with the server log files.",false);
+         define(_CONTACT_DETAILS,"Here you can report players, who offended you".
+         " and broke the rules.<br />Please add ".
+         "the time and the date of the event, so we can ".
+         "reconstruct your report with the server logs.",false);
       break;
-      case 4: //Reporting players
+      case 4: //Reporting GMs
          define(_CONTACT_NAME,"Reporting gamemasters",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
          define(_CONTACT_DETAILS,"In the situation that a gamemaster abused".
          " his or her powers to support or punish a player in an improper".
-         " way you can report this here. Those reports are handled by a".
-         " impartial person.",false);
+         " way you can report them here. Those reports are handled by an".
+         " impartial party.",false);
       break;
-      case 5: //RPG requests
-         define(_CONTACT_NAME,"Roleplay requests",false);
-         define(_CONTACT_MAIL,"RPG_requests@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a gamemaster if you ".
-         "need their help for a quest.<br />Most of the time it will be ".
-         "better to personally contact one. Take a look at the".
-         "<a href=\"us_contact.php#3\">Personal ".
-         " contacts</a> to do this.",false);
-      break;
-      case 6: //Character requests
-         define(_CONTACT_NAME,"Character requests",false);
-         define(_CONTACT_MAIL,"character_requests@illarion.org",false);
-         define(_CONTACT_DETAILS,"Every question and request concerning ".
-         "your character can be send here. Please send us the name of your ".
-         "account as well, to prove that it is really your character."
+      case 5: //Cadomyr requests
+         define(_CONTACT_NAME,"RPG requests for Cadomyr",false);
+         define(_CONTACT_MAIL,"cadomyr@illarion.org",false);
+         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr gamemaster ".
+         "when you need their help with a quest."
          ,false);
       break;
-      case 7: //Bug reports
-         define(_CONTACT_NAME,"Bug reports",false);
-         define(_CONTACT_MAIL,"bugs@illarion.org",false);
-         define(_CONTACT_DETAILS,"Any bug you find in the game, has to be ".
-         "reported either here or on <a href=\"../flyspray/index.php\">".
-         "Flyspray</a>.<br />Please describe exactly, what went wrong."
+      case 6: //Galmair requests
+         define(_CONTACT_NAME,"RPG requests for Galmair",false);
+         define(_CONTACT_MAIL,"galmair@illarion.org",false);
+         define(_CONTACT_DETAILS,"Here you can contact a Galmair gamemaster ".
+         "when you need their help with a quest."
          ,false);
       break;
-      case 8: //Loralyn
-         define(_CONTACT_NAME,"Loralyn",false);
-         define(_CONTACT_MAIL,"loralyn@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who takes".
-         " care of rule breaking players, managing account and characters, ".
-         "answers race applications and helps newbies.",false);
-      break;
-      case 9: //Latharan Caine
-         define(_CONTACT_NAME,"Latharan Caine",false);
-         define(_CONTACT_MAIL,"latharan@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.<br />Beside this he ".
-         "takes care of rule breaking players, managing account and ".
-         "characters, answers race applications and helps newbies.<br />If ".
-         "you are in need of information related to the background of ".
-         "Illarion, you can contact him too.",false);
-      break;
-      case 10: //Noradur
-         define(_CONTACT_NAME,"Noradur",false);
-         define(_CONTACT_MAIL,"noradur@hotmail.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
+      case 7: //Runewick requests
+         define(_CONTACT_NAME,"RPG requests for Runewick",false);
+         define(_CONTACT_MAIL,"runewick@illarion.org",false);
+         define(_CONTACT_DETAILS,"Here you can contact a Runewick gamemaster ".
+         "when you need their help with a quest."
+         ,false);
       break;
       case 11: //Estralis Seborian
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who takes".
-         " care of rule breaking players, managing account and characters, ".
-         "answers race applications and helps newbies.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
       break;
-      case 13: //Thorvald
-         define(_CONTACT_NAME,"Thorvald",false);
-         define(_CONTACT_MAIL,"Jenny_Pirker@gmx.at",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
+      case 12: //Zak
+         define(_CONTACT_NAME,"Zak",false);
+         define(_CONTACT_MAIL,"zak@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
+         " general requests and rule violations.",false);
       break;
       case 14: //Arien Edhel
          define(_CONTACT_NAME,"Arien Edhel",false);
          define(_CONTACT_MAIL,"arien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who takes".
-         " care of rule breaking players, managing account and characters, ".
-         "answers race applications and helps newbies.",false);
-      break;
-      case 16: //Alatar
-         define(_CONTACT_NAME,"Alatar",false);
-         define(_CONTACT_MAIL,"alatar@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME."is the webmaster of ".
-         "Illarion and one of the two server administrators. Homepage ".
-         "related questions.<br />Furthermore he is the chairman of the ".
-         "Illarion e.V. and is able to answer questions about the society."
-         ,false);
-      break;
-      case 17: //Cassandra Fjurin
-         define(_CONTACT_NAME,"Cassandra Fjurin",false);
-         define(_CONTACT_MAIL,"cassandra@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the server ".
-         "and script developers. He is able to answer server and script ".
-         "related questions.",false);
-      break;
-      case 19: //Falk vom Wald
-         define(_CONTACT_NAME,"Falk vom Wald",false);
-         define(_CONTACT_MAIL,"falk@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a script developer (druid system)."
-         ,false);
-      break;
-      case 20: //Gro'bul
-         define(_CONTACT_NAME,"Gro'bul",false);
-         define(_CONTACT_MAIL,"gamer_dudeman@hotmail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the graphic ".
-         "designers. Proposals and questions concerning graphics can be ".
-         "send to him.",false);
-      break;
-      case 21: //Lennier
-         define(_CONTACT_NAME,"Lennier",false);
-         define(_CONTACT_MAIL,"Koschb5@yahoo.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the leading map ".
-         "designer and takes care for the developing of the map. Questions ".
-         "about the map are to be directed to him.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
+         " general requests and rule violations.",false);
       break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
          define(_CONTACT_MAIL,"martin@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a server- and script-".
-         "developer. Furthermore he takes care of the graphics. Questions ".
-         "concerning these topics can be directed to him.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead graphics developer of Illarion.",false);
       break;
       case 23: //Nitram
          define(_CONTACT_NAME,"Nitram",false);
          define(_CONTACT_MAIL,"nitram@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the developers ".
-         "for scripts and for the website. Questions concerning these ".
-         "topics can be directed to him.",false);
-      break;
-      case 24: //Shi'voc
-         define(_CONTACT_NAME,"Shi'voc",false);
-         define(_CONTACT_MAIL,"shivoc@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the server ".
-         "administrators and answers questions related to the server."
-         ,false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead client developer of Illarion.",false);
       break;
       case 25: //Vilarion
          define(_CONTACT_NAME,"Vilarion",false);
          define(_CONTACT_MAIL,"vilarion@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the server and ".
-         "script developers as well as a server administrator. He can answer questions related to these ".
-         "topics.",false);
-      break;
-      case 26: //Nop
-         define(_CONTACT_NAME,"Nop",false);
-         define(_CONTACT_MAIL,"nop@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the developer of the ".
-         "Java Client and is able to answer Client related questions."
-        ,false);
-      break;
-      case 27: //Misjbar
-         define(_CONTACT_NAME,"Misjbar",false);
-         define(_CONTACT_MAIL,"mastedoc@gmail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is one of the developers ".
-         "for map design. He can answer map related questions."
-         ,false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead server developer of Illarion. ".
+         "He also is the server administrator, i.e. 'root'. Furthermore he is the chairman ".
+         "of the Illarion society.",false);
       break;
       case 28: //Aragon
          define(_CONTACT_NAME,"Aragon",false);
@@ -349,89 +254,35 @@ and of players who don't care for the rules.</p>
          "Illarion e.V. and is able to answer questions about the society."
          ,false);
       break;
-      case 29: //Naerwyn
-         define(_CONTACT_NAME,"Naerwyn",false);
-         define(_CONTACT_MAIL,"NaerwynGM@hotmail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 30: //Kadiya
-         define(_CONTACT_NAME,"Kadiya",false);
-         define(_CONTACT_MAIL,"kadiya@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Developer who cares ".
-         "mainly for the development of the homepage. She is able to answer ".
-         "Homepage related questions.",false);
-      break;
-      case 31: //Pharse
-         define(_CONTACT_NAME,"Pharse",false);
-         define(_CONTACT_MAIL,"pharse@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a script developer.",false);
-      break;
-      case 32: //Aegohl
-         define(_CONTACT_NAME,"Aegohl",false);
-         define(_CONTACT_MAIL,"aegohl@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 33: //Ardian
-         define(_CONTACT_NAME,"Ardian",false);
-         define(_CONTACT_MAIL,"a.kukalaj@googlemail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a script developer.",false);
-      break;
-      case 34: //Garou
-         define(_CONTACT_NAME,"Garou",false);
-         define(_CONTACT_MAIL,"garou@arcor.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 35: //Alsaya
-         define(_CONTACT_NAME,"Alsaya",false);
-         define(_CONTACT_MAIL,"alsaya@gmx.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 36: //Mesha
-         define(_CONTACT_NAME,"Mesha",false);
-         define(_CONTACT_MAIL,"mesha@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 37: //Revan
-         define(_CONTACT_NAME,"Revan",false);
-         define(_CONTACT_MAIL,"GmRevan@live.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
-      case 38: //Vaun
-         define(_CONTACT_NAME,"Vaun",false);
-         define(_CONTACT_MAIL,"illavaun@live.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who takes".
-         " care of rule breaking players, managing account and characters, ".
-         "answers race applications and helps newbies.",false);
-      break;
-      case 39: //Feliae
-         define(_CONTACT_NAME,"Feliae",false);
-         define(_CONTACT_MAIL,"Felidae.Illa@hotmail.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who helps ".
-         "you in quest related things.",false);
-      break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);
-         define(_CONTACT_MAIL,"arjan.k@web.de",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
-         " Quest bezogenen Anfragen helfen kann.",false);
+         define(_CONTACT_MAIL,"zot@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead map developer of Illarion.",false);
       break;
       case 41: //Flux
          define(_CONTACT_NAME,"Flux",false);
-         define(_CONTACT_MAIL,"fluxilla@hotmail.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
-         " Quest bezogenen Anfragen helfen kann.",false);
+         define(_CONTACT_MAIL,"flux@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
       case 42: //Face
          define(_CONTACT_NAME,"Face",false);
-         define(_CONTACT_MAIL,"face4lyf@live.com",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der bei".
-         " Quest bezogenen Anfragen helfen kann.",false);
+         define(_CONTACT_MAIL,"face@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
+      break;
+      case 43: //Firefly
+         define(_CONTACT_NAME,"Firefly",false);
+         define(_CONTACT_MAIL,"firefly@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+      break;
+      case 44: //Teflon
+         define(_CONTACT_NAME,"Teflon",false);
+         define(_CONTACT_MAIL,"teflon@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
+      break;
+      case 45: //Silverwing
+         define(_CONTACT_NAME,"Silverwing",false);
+         define(_CONTACT_MAIL,"silverwing@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
       default:
          MainForm();
