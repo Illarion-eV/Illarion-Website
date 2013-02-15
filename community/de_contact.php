@@ -130,13 +130,14 @@ können hier gemeldet werden.</li>
 und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
-    <li><a href="?contact=14">Arien Edhel</a></li>
-    <li><a href="?contact=11">Estralis Seborian</a></li>
-    <li><a href="?contact=42">Face</a></li>
-    <li><a href="?contact=43">Firefly</a></li>
-    <li><a href="?contact=44">Teflon</a></li>
-    <li><a href="?contact=45">Silverwing</a></li>
-    <li><a href="?contact=12">Zak</a></li>
+    <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
+    <li><a href="?contact=11">Estralis Seborian</a> - Deutschsprachiger GM für Cadomyr</li>
+    <li><a href="?contact=42">Face</a> - Englischsprachiger GM für Galmair</li>
+    <li><a href="?contact=43">Firefly</a> - Englischsprachiger GM für Cadomyr</li>
+    <li><a href="?contact=41">Flux</a> - Englischsprachiger GM für Runewick</li>
+    <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
+    <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
+    <li><a href="?contact=12">Zak</a> - Generelle Anfragen</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>

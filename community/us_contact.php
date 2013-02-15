@@ -121,11 +121,12 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a></li>
-	<li><a href="?contact=11">Estralis Seborian</a></li>
-	<li><a href="?contact=42">Face</a></li>
-	<li><a href="?contact=43">Firefly</a></li>
-	<li><a href="?contact=44">Teflon</a></li>
-	<li><a href="?contact=45">Silverwing</a></li>
+	<li><a href="?contact=11">Estralis Seborian</a> - German speaking GM for Cadomyr</li>
+    <li><a href="?contact=42">Face</a> - English speaking GM for Galmair</li>
+    <li><a href="?contact=43">Firefly</a> - English speaking GM for Cadomyr</li>
+    <li><a href="?contact=41">Flux</a> - English speaking GM for Runewick</li>
+    <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
 	<li><a href="?contact=12">Zak</a></li>
 </ul>
 
