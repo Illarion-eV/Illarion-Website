@@ -57,8 +57,8 @@ was already deleted or you lack of the access rights to view the quest.</p>
 		<?php if (is_null($quest['q_starttime'])): ?>
 		To be announced
 		<?php else: ?>
-		<?php echo IllaDateTime::IllaTimestampToTime('dS F Y - h:i:s a', IllaDateTime::RLTimeToIllaTime( $quest['q_starttime'] ) ); ?>
-		(<?php echo strftime( '%d. %B %Y %H:%I%p', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) ) ?>)
+		<?php echo IllaDateTime::IllaTimestampToTime('dS F Y - h:i a', IllaDateTime::RLTimeToIllaTime( $quest['q_starttime'] ) ); ?>
+		(<?php echo strftime( '%d. %B %Y %I:%M %P', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) ) ?>)
 		<?php endif; ?>
 	</dd>
 	<?php endif; ?>
