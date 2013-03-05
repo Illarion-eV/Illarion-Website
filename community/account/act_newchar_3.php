@@ -13,6 +13,13 @@
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
+		
+		$query = 'SELECT COUNT(*)'
+		.PHP_EOL.' FROM chars'
+		.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
+		;
+		$pgSQL->setQuery( $query );
+		$charcount = $pgSQL->loadResult();
 
 		$query = 'SELECT chr_race, chr_sex'
 		.PHP_EOL.' FROM chars'
@@ -72,5 +79,10 @@
 					.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid );
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
+		
+		if ($server == 'illarionserver' && $charcount == 1)
+		{
+			Page::addPiwikGoal(5);
+		}
 	}
 ?>

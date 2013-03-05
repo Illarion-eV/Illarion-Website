@@ -62,7 +62,7 @@ $limits['curr_remaining'] = $limits['maxattribs'] - ( $limits['curr_agility']+$l
 $limits['minremaining'] = 0;
 $limits['maxremaining'] = $limits['maxattribs'];
 
-calculateLimits( &$limits );
+calculateLimits( $limits );
 $limit_text = generateLimitTexts( $limits );
 
 $db =& Database::getPostgreSQL( 'accounts' );

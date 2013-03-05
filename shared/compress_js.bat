@@ -85,3 +85,12 @@ java -jar %compressor% --type js --charset utf-8 -o js/register.js js/register_u
 
 echo js/google.js
 java -jar %compressor% --type js --charset utf-8 -o js/google.js js/google_uncompressed.js
+
+echo js/hyphenator.js
+java -jar %compressor% --type js --charset utf-8 -o js/hyphenator.js js/hyphenator_uncompressed.js
+
+echo js/hyphenator-de.js
+java -jar %compressor% --type js --charset utf-8 -o js/hyphenator-de.js js/hyphenator-de_uncompressed.js
+
+echo js/hyphenator-en-gb.js
+java -jar %compressor% --type js --charset utf-8 -o js/hyphenator-en-gb.js js/hyphenator-en-gb_uncompressed.js

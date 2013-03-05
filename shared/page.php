@@ -267,6 +267,14 @@ class Page {
 	* @var array
 	*/
 	static private $request_headers = array();
+	
+	/**
+	* Array of the piwik goals that should be tracked once this page is done loading.
+	*
+	* @access private
+	* @var array
+	*/
+	static private $track_goals = array();
 
 	/**
 	* Returns the normal URL of the page
@@ -547,6 +555,16 @@ class Page {
 	*/
 	static public function getKeywords() {
 		return self::$page_keywords;
+	}
+	
+	/**
+	* Add a goal that is supposed to be tracked with piwik.
+	*
+	* @access public
+	* @param int $goal the goal that is supposed to be tracked
+	*/
+	static public function addPiwikGoal($goal) {
+		self::$track_goals[] = (int)$goal;
 	}
 	
 	/**
@@ -1057,7 +1075,11 @@ class Page {
 				if (!IllaUser::login($_POST['login_name'], $_POST['login_pw'], ($_POST['login_remember'] == 'remember'))) {
 					self::redirect(self::url . '/community/account/' . self::$language . '_login.php?error=1&target=' . rawurlencode($_SERVER['REQUEST_URI']));
 				} else {
-                    self::redirect(self::url . '/community/account/' . self::$language . '_charlist.php');
+					if (defined("LOGIN_TARGET_URL")) {
+						self::redirect(LOGIN_TARGET_URL);
+					} else {
+						self::redirect(self::url . '/community/account/' . self::$language . '_charlist.php');
+					}
                 }
 				break;
 			case 'logout': IllaUser::logout();
@@ -1231,7 +1253,7 @@ class Page {
 			}
 			$output .= $content;
 
-			self::optimizeOutput(&$output);
+			self::optimizeOutput($output);
 		}else {
 			$output = file_get_contents(self::base_path . '/shared/template.xhtml');
 			$search_keywords = array();
@@ -1328,22 +1350,22 @@ class Page {
 			$css = &self::$css;
 
 			if (self::$browser_name === 'msie' && self::$browser_version <= 6) {
-				array_unshift(&$css, 'ieonly');
+				array_unshift($css, 'ieonly');
 			} elseif (self::$browser_name === 'mozilla') {
-				array_unshift(&$css, 'ffonly');
+				array_unshift($css, 'ffonly');
 			}
 			if (self::isGerman()) {
-				array_unshift(&$css, 'main_de');
+				array_unshift($css, 'main_de');
 			}else {
-				array_unshift(&$css, 'main_us');
+				array_unshift($css, 'main_us');
 			}
 			if (Messages::any_msgs()) {
-				array_unshift(&$css, 'messages');
+				array_unshift($css, 'messages');
 			}
 			if (!defined('NO_DEBUG')) {
-				array_unshift(&$css, 'debug');
+				array_unshift($css, 'debug');
 			}
-			array_unshift(&$css, 'main');
+			array_unshift($css, 'main');
 			$css = array_unique($css);
 			$search_keywords[++$search_cnt] = '{CSS}';
 			$search_replace[$search_cnt] = implode(',', $css);
@@ -1358,16 +1380,22 @@ class Page {
 
 			$js = &self::$js;
 			if (!self::checkSSL()) {
-				array_unshift(&$js, 'bookmarks');
+				array_unshift($js, 'bookmarks');
 				if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
-					array_unshift(&$js, 'google');
+					array_unshift($js, 'google');
 				}
 			}
 			if (!IllaUser::loggedIn()) {
-				array_unshift(&$js, 'proxy_killer');
+				array_unshift($js, 'proxy_killer');
+			}
+			array_push($js, 'hyphenator');
+			if (self::isGerman()) {
+				array_push($js, 'hyphenator-de');
+			} else {
+				array_push($js, 'hyphenator-en-gb');
 			}
 			if (self::$browser_name === 'msie' && self::$browser_version <= 6) {
-				array_unshift(&$js, 'iepngfix');
+				array_unshift($js, 'iepngfix');
 			}
 			$js = array_unique($js);
 			$search_keywords[++$search_cnt] = '{JS}';
@@ -1404,6 +1432,10 @@ class Page {
 			}
 			if (!defined('NO_INLINE_IMAGES')) {
 				$search_replace[$search_cnt] .= '<link rel="stylesheet" type="text/css" href="' . self::url . '/shared/pics/' . self::$language . '_image_bundle.css" />' . PHP_EOL;
+			}
+			$trackingGoals = array_unique(self::$track_goals);
+			foreach($trackingGoals as $goal) {
+				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
 			$search_replace[$search_cnt] = (self::$language === 'de' ? 'News von Illarion' : 'News of Illarion');
@@ -1521,7 +1553,7 @@ class Page {
 			unset($search_replace);
 			unset($search_cnt);
 
-			self::optimizeOutput(&$output);
+			self::optimizeOutput($output);
 
 			if (defined('NO_DEBUG') && !isset($_GET['FORCE_ERROR_OUTPUT'])) {
 				$output = str_replace('{DEBUG}', '', $output);

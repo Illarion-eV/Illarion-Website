@@ -60,8 +60,8 @@ Zugriffsberechtigung auf dieses Quest.</p>
 		<?php if (is_null($quest['q_starttime'])): ?>
 		Wird noch angekündigt
 		<?php else: ?>
-		<?php echo IllaDateTime::IllaTimestampToTime('d. F Y - H:i:s', IllaDateTime::RLTimeToIllaTime( $quest['q_starttime'] ) ); ?>
-		(<?php echo strftime( '%d. %B %Y - %H:%M:%S', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) ) ?> Uhr)
+		<?php echo IllaDateTime::IllaTimestampToTime('d. F Y - H:i', IllaDateTime::RLTimeToIllaTime( $quest['q_starttime'] ) ); ?>
+		(<?php echo strftime( '%d. %B %Y - %H:%M', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) ) ?> Uhr)
 		<?php endif; ?>
 	</dd>
 	<?php endif; ?>

@@ -40,92 +40,55 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php else:
 
 	$pgSQL =& Database::getPostgreSQL();
-	
-	$query = 'SELECT s_value'
-	.PHP_EOL.' FROM homepage.storage'
-	.PHP_EOL.' WHERE s_key = '.$pgSQL->Quote('newbie_accid')
-	;
-	$pgSQL->setQuery($query);
-	$newbie_accs = $pgSQL->loadResult();
 
-	if (IllaUser::auth('hidden_chars'))
-	{
-		$query = 'SELECT "illarionserver"."chars"."chr_name", "illarionserver"."chars"."chr_playerid", "illarionserver"."chars"."chr_race", '.$newbie_accs.' < "illarionserver"."chars"."chr_accid" AS "newbie", ("illarionserver"."player"."ply_posz" >= 100 AND "illarionserver"."player"."ply_posz" <= 103) AS "newbieisland", (( SELECT count("illarionserver"."gms"."gm_charid") AS "count" FROM "illarionserver"."gms" WHERE "illarionserver"."gms"."gm_charid" = "illarionserver"."chars"."chr_playerid" AND NOT ("illarionserver"."gms"."gm_rights_server" & 131072) > 0)) > 0 AS gm'
-		.PHP_EOL.' FROM "illarionserver"."onlineplayer"'
-		.PHP_EOL.' INNER JOIN "illarionserver"."chars" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."chars"."chr_playerid"'
-		.PHP_EOL.' INNER JOIN "illarionserver"."player" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."player"."ply_playerid"'
-		.PHP_EOL.' WHERE 1 = 1'
-		.PHP_EOL.' ORDER BY "illarionserver"."chars"."chr_race", "illarionserver"."chars"."chr_name"'
-		;
-	}
-	else
-	{
-		$query = 'SELECT "illarionserver"."chars"."chr_name", "illarionserver"."chars"."chr_playerid", "illarionserver"."chars"."chr_race", '.$newbie_accs.' < "illarionserver"."chars"."chr_accid" AS "newbie"'
-		.PHP_EOL.' FROM "illarionserver"."onlineplayer"'
-		.PHP_EOL.' INNER JOIN "illarionserver"."chars" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."chars"."chr_playerid"'
-		.PHP_EOL.' INNER JOIN "illarionserver"."player" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."player"."ply_playerid"'
-		.PHP_EOL.' WHERE (( SELECT COUNT("illarionserver"."gms"."gm_charid") AS "count" FROM "illarionserver"."gms" WHERE "illarionserver"."gms"."gm_charid" = "illarionserver"."chars"."chr_playerid" AND NOT ("illarionserver"."gms"."gm_rights_server" & 131072) > 0)) = 0 AND "illarionserver"."chars"."chr_playerid" >= 100'
-		.PHP_EOL.' ORDER BY "illarionserver"."chars"."chr_race", "illarionserver"."chars"."chr_name"'
-		;
-	}
+	$query = 'SELECT "illarionserver"."chars"."chr_name" AS "chr_name",'
+	.PHP_EOL.'       "illarionserver"."chars"."chr_playerid" AS "chr_playerid",'
+	.PHP_EOL.'       (NOW() - interval \'3 months\') < "accounts"."account"."acc_registerdate" AS "newbie",'
+	.PHP_EOL.'       ("illarionserver"."player"."ply_posz" >= 100 AND "illarionserver"."player"."ply_posz" <= 103) AS "newbieisland",'
+	.PHP_EOL.'       ("illarionserver"."gms"."gm_rights_server" IS NOT NULL AND ("illarionserver"."gms"."gm_rights_server" & 131072) = 0) AS "gm",'
+	.PHP_EOL.'       CASE WHEN "illarionserver"."questprogress"."qpg_progress" IS NULL OR "illarionserver"."questprogress"."qpg_progress" = 0 THEN \'4\' ELSE "illarionserver"."questprogress"."qpg_progress" END AS "town",'
+	.PHP_EOL.'       ("homepage"."character_details"."settings" IS NOT NULL AND ("homepage"."character_details"."settings" & 1) > 0) AS "show_profile"'
+	.PHP_EOL.' FROM "illarionserver"."onlineplayer"'
+	.PHP_EOL.' INNER JOIN "illarionserver"."chars" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."chars"."chr_playerid"'
+	.PHP_EOL.' INNER JOIN "illarionserver"."player" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."player"."ply_playerid"'
+	.PHP_EOL.' INNER JOIN "accounts"."account" ON "illarionserver"."chars"."chr_accid" = "accounts"."account"."acc_id"'
+	.PHP_EOL.' LEFT JOIN "illarionserver"."questprogress" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."questprogress"."qpg_userid" AND "illarionserver"."questprogress"."qpg_questid" = 199'
+	.PHP_EOL.' LEFT JOIN "illarionserver"."gms" ON "illarionserver"."onlineplayer"."on_playerid" = "illarionserver"."gms"."gm_charid"'
+	.PHP_EOL.' LEFT JOIN "homepage"."character_details" ON "illarionserver"."onlineplayer"."on_playerid" = "homepage"."character_details"."char_id"'
+	.PHP_EOL.' WHERE TRUE'
+	.PHP_EOL.' ORDER BY "town", "chr_name"'
+	;
+	
 	$pgSQL->setQuery( $query );
 	$list = $pgSQL->loadAssocList();
 
 	$displayed_chars = 0;
 	$newbies = 0;
-
-
-    $db_hp =& Database::getPostgreSQL( 'homepage' );
+	
 	if( count($list) > 0 )
 	{
-		$charids = array();
-		foreach( $list as $key=>$char )
-		{
-			$list[$key]['chr_race'] = min(9,$char['chr_race']);
-			$charids[] = $char['chr_playerid'];
-		}
-
-
-		$query = 'SELECT character_details.char_id, character_details.settings'
-		.PHP_EOL.' FROM character_details'
-		.PHP_EOL.' WHERE char_id IN ('.implode( ',', $charids ).')'
-		;
-		$db_hp->setQuery( $query );
-		$chr_settings = $db_hp->loadAssocList( 'char_id' );
-
 		$content = array( 0=>'', 1=>'' );
 		$content_length = array( 0=>0, 1=>0 );
 		$current_list = 1;
-		$current_race = -1;
+		$current_town = -1;
 
+		$show_hidden = IllaUser::auth('hidden_chars');
+		
 		foreach($list as $key=>$char)
 		{
-			if (!isset($chr_settings[$char['chr_playerid']]))
-			{
-				$show_char = true;
-				$show_profil = false;
-			}
-			else
-			{
-                // always show chars
-				// $show_char = ((int)($chr_settings[$char['chr_playerid']]['settings']&2) == 0);
-                $show_char = true;
-				$show_profil = ((int)($chr_settings[$char['chr_playerid']]['settings']&1) > 0);
-			}
-
-			if (!$show_char && !IllaUser::auth('hidden_chars'))
+			if (($char["gm"] =='t') && !$show_hidden)
 			{
 				continue;
 			}
 			++$displayed_chars;
-
-			if ($char['newbie']=='t' && !IllaUser::auth('hidden_chars'))
+			
+			if (($char["newbie"] =='t') && !$show_hidden)
 			{
 				++$newbies;
 				continue;
 			}
 
-			if ($char['chr_race'] != $current_race)
+			if ($char['town'] != $current_town)
 			{
 				if ($content_length[$current_list] != 0)
 				{
@@ -133,52 +96,33 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				}
 				$current_list = ( $content_length[0] > $content_length[1] ? 1 : 0 );
 
-				$current_race = $char['chr_race'];
+				$current_town = $char['town'];
 				$content_length[$current_list] += 56;
-				$content[$current_list] .= '<h3>';
-				switch($current_race)
+				switch($current_town)
 				{
-					case 0: $content[$current_list] .= 'Menschen'; break;
-					case 1: $content[$current_list] .= 'Zwerge'; break;
-					case 2: $content[$current_list] .= 'Halblinge'; break;
-					case 3: $content[$current_list] .= 'Elfen'; break;
-					case 4: $content[$current_list] .= 'Orks'; break;
-					case 5: $content[$current_list] .= 'Echsenmenschen'; break;
-					case 6: $content[$current_list] .= 'Gnome'; break;
-					case 7: $content[$current_list] .= 'Feen'; break;
-					case 8: $content[$current_list] .= 'Goblins'; break;
-					default: $content[$current_list] .= 'Andere';
+					case 1: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/cadomyr.png" /><h3 style="margin:0">Cadomyr</h3></div>'; break;
+					case 2: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/runewick.png" /><h3 style="margin:0">Runewick</h3></div>'; break;
+					case 3: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/galmair.png" /><h3 style="margin:0">Galmair</h3></div>'; break;
+					case 4: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
+					default: $content[$current_list] .= '<h3>Unbekannt</h3>';
 				}
-				$content[$current_list] .= '</h3>';
 				$content[$current_list] .= '<ul>';
 			}
 			$content[$current_list] .= '<li>';
 			$content_length[$current_list] += 17;
-			if ($show_char)
+			
+			if ($char["show_profile"] == 't')
 			{
-				if ($show_profil)
-				{
-					$content[$current_list] .= '<a href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
-				}
-				else
-				{
-			    	$content[$current_list] .= $char['chr_name'];
-				}
+				$content[$current_list] .= '<a class="rating8" href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
 			}
 			else
 			{
-				if ($show_profil)
-				{
-					$content[$current_list] .= '<a class="hidden" href="'.Page::getURL().'/community/de_charprofile.php?id='.dechex( $char['chr_playerid'] ).'">'.$char['chr_name'] . '</a>';
-				}
-				else
-				{
-			    	$content[$current_list] .= '<span class="hidden">'.$char['chr_name'].'</span>';
-				}
+				$content[$current_list] .= $char['chr_name'];
 			}
-			if ($char['newbie']=='t')
+			
+			if ($char['newbie'] == 't')
 			{
-				if ($char['newbieisland']=='t')
+				if ($char['newbieisland'] == 't')
 				{
 					$content[$current_list] .= '<span class="newbie"> (NI)</span>';
 				}
@@ -187,7 +131,8 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 					$content[$current_list] .= '<span class="newbie"> (N)</span>';
 				}
 			}
-			if ($char['gm']=='t')
+			
+			if ($char['gm'] == 't')
 			{
 			   $content[$current_list] .= '<span class="gm"> (GM)</span>';
 			}
@@ -210,7 +155,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php endif; ?>
 
 <?php
-	if ( ( $hidden_chars = Page::getPlayerCount() - $displayed_chars ) > 0 )
+	if ( ( $hidden_chars = count($list) - $displayed_chars ) > 0 )
 	{
 		echo '<p class="hidden_chars">';
 		if ($hidden_chars == 1)

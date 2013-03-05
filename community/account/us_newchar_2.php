@@ -18,6 +18,17 @@
 	}
 
 	$pgSQL =& Database::getPostgreSQL( $server );
+	$query = 'SELECT COUNT(*)'
+	.PHP_EOL.' FROM chars'
+	.PHP_EOL.' WHERE chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
+	;
+	$pgSQL->setQuery( $query );
+	$charcount = $pgSQL->loadResult();
+		
+	if ($server == 'illarionserver' && $charcount == 1)
+	{
+		Page::addPiwikGoal(3);
+	}
 
 	$query = 'SELECT chr_race, chr_sex'
 		.PHP_EOL.' FROM chars'
@@ -57,7 +68,7 @@
 	$limits['curr_age'] = 0;
 	$dob= array( 'day' => 1, 'month' => 1 );
 
-	calculateLimits( &$limits );
+	calculateLimits( $limits );
 	$limit_text = generateLimitTexts( $limits );
 
 	Page::setXHTML();

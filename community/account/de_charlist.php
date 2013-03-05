@@ -16,7 +16,7 @@
 	Page::Init();
 
 	$need_slider = false;
-	$char_list = getCharacterList( &$need_slider );
+	$char_list = getCharacterList( $need_slider );
 	if ( $need_slider )
 	{
 		Page::addCSS( 'slider' );

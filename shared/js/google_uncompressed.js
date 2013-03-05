@@ -31,5 +31,15 @@ if (typeof Prototype != 'undefined')
 }
 else
 {
-	window.onload = initGoogle;
+	var oldonload = window.onload; 
+	if (typeof window.onload != 'function') { 
+		window.onload = initGoogle; 
+	} else { 
+		window.onload = function() { 
+			if (oldonload) { 
+				oldonload(); 
+			} 
+			initGoogle(); 
+		} 
+	}
 };
