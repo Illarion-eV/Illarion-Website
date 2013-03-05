@@ -36,7 +36,6 @@
     <li><a href="#behaivor">Behaviour</a></li>
     <li><a href="#rulebreak">Rule violations</a></li>
     <li><a href="#bugs">Bugs</a></li>
-    <li><a href="#attribs">Attributes</a></li>
     <li><a href="#gms">Gamemaster</a></li>
     <li><a href="#boards">Board</a></li>
     <li><a href="#macros">Additional programs</a></li>
@@ -50,12 +49,13 @@
 <div><a id="account"></a></div>
 <h2>Account</h2>
 
-<p>Every player is allowed only one account. Accounts and characters are not
-borrowed, exchanged or sold. The owner of an account is responsible for all
-actions of his characters, even if an unauthorised person got access to it.</p>
+<p>Every player is allowed only one account. Accounts and characters are not borrowed, 
+exchanged or sold. The owner of an account is responsible for all actions of his characters, 
+even if an unauthorised person got access to it.</p>
 
-<p>If two players want to log in using the same internet connection, they have
-to inform the Illarion staff about this prior to creating both accounts.</p>
+<p>If two players want to log in using the same internet connection, 
+they have to inform the Illarion staff about this.
+</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -75,46 +75,17 @@ character. In addition, the following types of names are not allowed:</p>
   separately</li>
 </ul>
 
-<p>In addition the following guidelines apply:</p>
-
-<ul>
-    <li>A name has to contain at least a first name and can also have a surname,
-    which is recommended</li>
-    <li>The name has to be pronounceable, so it should contain vowels</li>
-    <li>Lizardmen can have unpronounceable names but they should sound like
-    being lizard language (decision of the gamemasters)</li>
-    <li>Name affixes like "el", "al" etc (ie el'Chitarim al Kazar) can start
-    with a lower case letter</li>
-</ul>
-
-<p>For names of clans and royal names holds. First come, first serve. If a
-player wants to create a character with the same surname, an approbation of the
-player who used the name first is necessary.</p>
-
-
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="world"></a></div>
 <h2>The game world</h2>
 
-<p>The races allowed to play are limited to the races offered to choose during
-the character creation in the account system. It's not allowed to roleplay any
-mixed-race characters. The only exception is half elves (elf/human) which
-properties (language, attributes) are limited to one of the parent races.</p>
-
-<p>A gamemasters permission is needed for all magical and divine interventions
-that cannot be realised by the engine. This especially holds true for magical
-and divine rituals which grant an effect, as well as for all forms of artefact
-magic as long as it does not get its effects from the engine.</p>
-
-<p>The application for a ritual should contain a description of the ritual, the
-preparation, execution, effects and dangers. Those points need to be in relation
-to each other for the ritual to be accepted. A ritual with short preparation
-and dangers will not result in big effects.</p>
-
-<p>The execution of rituals with an effect has to be supervised by a gamemaster,
-in whose judgement the success of the ritual lays and what effects occur in
-detail.</p>
+<p>The description of the game world as published on http://www.illarion.org is mandatory. 
+The races allowed to play are limited to the races offered to choose during the character 
+creation in the account system. It's not allowed to roleplay any mixed-race characters. 
+A gamemaster's permission is needed for all magical and divine interventions that 
+cannot be realised by the engine.
+</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -149,10 +120,6 @@ other. Therefore it is forbidden to exchange items between characters, also not
 by using middlemen, and that they share knowledge. One's characters also can't
 know each other and cannot be related. It is not allowed at any time to log in
 with two characters at the same time.</p>
-
-<p>Two characters of the same player are not allowed to be member of the same
-guild. Two characters of a player must not be members of groups that handicap
-or affect each other directly. This is needed to avoid conflicts of interest.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -190,7 +157,7 @@ brackets (( )) in whisper mode.</p>
 <div><a id="emotes"></a></div>
 <h2>Emotes</h2>
 
-<p>Action of characters (e.g. fighting, crafting) have to be initiated and
+<p>Action of characters (e.g. fighting, crafting) should be
 accompanied by emotes. Emotes describe only perceivable actions and states.
 Emotes do not contain opinions, thoughts or feelings of characters.</p>
 
@@ -222,7 +189,11 @@ and moralities of involved players and random listeners are not allowed.</p>
 
 <p>Harassment, threats or insults, including racist or sexist statements will
 not be tolerated. This hold for all platforms of Illarion: The game, the board
-and the chat, including private messages.</p>
+and the chat, including private messages.
+ It is not allowed to react to a rule violation of another player with another rule violation 
+(e.g. OOC-messages). These breaches will be dealt with, regardless of the situation. 
+It is unwanted that players blame each other for rule violations. If an unbearable rule violation
+ occurs, the Illarion staff should be informed to process the case.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -247,24 +218,12 @@ bug or server crash, there is no replacement or refund.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<div><a id="attribs"></a></div>
-<h2>Change of Attributes</h2>
-
-<p>Players have the opportunity to change the attributes of a character once if
-wished. To do so the changes need to be specified to a gamemaster. In general
-only changes of maximal 4 attributes, each in a range of 2 points are made. 
-The total count of attributes may not change.
-It is also not allowed to change an attribute to a value smaller than 5 or bigger than 16.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="gms"></a></div>
 <h2>Gamemaster</h2>
 
-<p>Gamemasters help players, host events and keep the peace in the game. Lying
-to a gamemaster or keeping back information about rule violations or bugs is
-forbidden. The names of player characters of a gamemaster or another staff
-member must not be published without approbation to guarantee his privacy.</p>
+<p>Gamemasters help players, host events and keep the peace in the game.
+Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
+Thus, all requests that affect the game world should be directed to them.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
