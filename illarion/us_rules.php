@@ -8,7 +8,7 @@
 
 	Page::setFirstPage(Page::getURL() . '/illarion/us_rules.php');
 	Page::setNextPage(Page::getURL() . '/illarion/us_rules_1.php');
-	Page::setLastPage(Page::getURL() . '/illarion/us_rules_3.php');
+	Page::setLastPage(Page::getURL() . '/illarion/us_rules_2.php');
 
 	Page::setXHTML();
 	Page::Init();
@@ -51,10 +51,3 @@ hardly do anything wrong.</p>
 wanting to play Illarion.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
-
-<p><a href="<?php echo Page::getURL(); ?>/illarion/us_rules_3.php">
-	<b>Guild Rules</b>
-</a><br />The guild rules are important for anyone who wants to found or lead a
-guild.</p>
-
-<?php Page::NavBarBottom(); ?>

@@ -8,7 +8,7 @@
 
 	Page::setFirstPage(Page::getURL() . '/illarion/de_rules.php');
 	Page::setNextPage(Page::getURL() . '/illarion/de_rules_1.php');
-	Page::setLastPage(Page::getURL() . '/illarion/de_rules_3.php');
+	Page::setLastPage(Page::getURL() . '/illarion/de_rules_2.php');
 
 	Page::setXHTML();
 	Page::Init();
@@ -51,10 +51,3 @@ Grundsätzen spielt, kann eigentlich nichts falsch machen.</p>
 die für jeden, der Illarion spielen möchte, relevant sind.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
-
-<p><a href="<?php echo Page::getURL(); ?>/illarion/de_rules_3.php">
-	<b>Gildenregeln</b>
-</a><br />Die Gildenregeln sind für alle wichtig, die eine Gilde gründen und
-leiten wollen.</p>
-
-<?php Page::NavBarBottom(); ?>
