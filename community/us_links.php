@@ -15,6 +15,7 @@ Page::Init();
 <ul>
 	<li><a class="hidden" href="#1">Guilds / Tribes / Clans</a></li>
 	<li><a class="hidden" href="#2">Fan sites</a></li>
+	<li><a class="hidden" href="#3">External Sites</a></li>
 </ul>
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -67,6 +68,25 @@ Page::Init();
 	description of the gods and races, the history of the gods, information concerning the
 	calendar, descriptions of professions and much more. Take your time and have a look
 	at the content as it is helpful for the game.
+</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="3"></a></div>
+
+<h2>External Sites</h2>
+
+<h4>NiftyGUI</h4>
+
+<img class="float_left" src="<?php echo Page::getURL(); ?>/community/nifty-logo.png" alt="NiftyGUI" />
+<p>
+	<a rel="external" href="http://nifty-gui.lessvoid.com/">Link to the NiftyGUI website</a>
+	<br /><br />
+	Nifty GUI is a Java Library that supports the building of interactive user interfaces
+	for games or similar applications. 
+	It utilizes lwjgl for OpenGL rendering.
+	The configuration of the GUI is stored in xml files with little supporting Java code.
+	In short Nifty helps you to layout stuff, display it in a cool way and interact with it
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>

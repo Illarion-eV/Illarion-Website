@@ -8,7 +8,7 @@
 	Page::setFirstPage(Page::getURL() . '/illarion/us_rules.php');
 	Page::setPrevPage(Page::getURL() . '/illarion/us_rules.php');
 	Page::setNextPage(Page::getURL() . '/illarion/us_rules_2.php');
-	Page::setLastPage(Page::getURL() . '/illarion/us_rules_3.php');
+	Page::setLastPage(Page::getURL() . '/illarion/us_rules_2.php');
 
 	Page::setXHTML();
 	Page::Init();
