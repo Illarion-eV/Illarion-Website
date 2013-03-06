@@ -9,7 +9,7 @@
 	Page::setFirstPage(Page::getURL() . '/illarion/de_rules.php');
 	Page::setPrevPage(Page::getURL() . '/illarion/de_rules.php');
 	Page::setNextPage(Page::getURL() . '/illarion/de_rules_2.php');
-	Page::setLastPage(Page::getURL() . '/illarion/de_rules_3.php');
+	Page::setLastPage(Page::getURL() . '/illarion/de_rules_2.php');
 
 	Page::setXHTML();
 	Page::Init();
