@@ -10,8 +10,6 @@
 ?>
 <h1>Illarion spielen</h1>
 
-<p>Die aktuelle Client-Version ist V1.22</p>
-
 <h2>Spiel starten</h2>
 
 <ul>
