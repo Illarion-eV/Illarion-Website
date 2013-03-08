@@ -8,10 +8,10 @@ Page::setXHTML();
 Page::Init();
 ?>
 
-<h1>Links to the various projects that help provide Illarions foundations</h1>
+<h3>Links to the various projects that help provide Illarions foundations</h3>
 
-<h3>The Illarion developers would like to recognise and thank all of the projects that have allowed Illarion to become what it is today.
-Below are links to these projects and a small description of how it has contributed towards the game.</h3>
+<h6>The Illarion developers would like to recognise and thank all of the projects that have allowed Illarion to become what it is today.
+Below are links to these projects and a small description of how it has contributed towards the game.</h6>>
 
 <ul>
 	<li><a class="hidden" href="#1">Debian</a></li>
