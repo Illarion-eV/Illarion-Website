@@ -52,7 +52,7 @@ sind.</p>
 
 <p>Jedem Spieler steht nur ein Account zu. Accounts und Charaktere werden nicht an andere Spieler verliehen, 
 getauscht oder verkauft. Der Besitzer eines Accounts ist verantwortlich für alle Aktionen seiner Charaktere, 
-auch wenn sich ein Dritter Zugriff auf den Account verschafft hat</p>
+auch wenn sich ein Dritter Zugriff auf den Account verschafft hat.</p>
 
 <p>Wenn zwei Spieler über dieselbe Internetverbindung ins Spiel einloggen wollen, 
 ist dies beim Team von Illarion anzumelden.</p>
