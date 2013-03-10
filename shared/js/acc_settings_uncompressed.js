@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 		if(a) {
 			var reg = new RegExp('^([a-zA-Z0-9\\-\\.\\_]+)'+
-			'(\\@)([a-zA-Z0-9\\-\\.]+)'+
+			'(\\@)([a-zA-Z0-9\\-\\.\\_]+)'+
 			'(\\.)([a-zA-Z]{2,4})$');
 			res = (reg.test(s));
 		} else {
