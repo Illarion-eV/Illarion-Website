@@ -173,8 +173,8 @@
 		<td>
 			<?php if ($step == 2): ?>
 			Click on the link "Step 2" to perform the next step of the character
-			creation. You have to put in the attributes of your character here. You
-			should think well about this, because the attributes will not change
+			creation. You have to put in the fine details of your character here. 
+			You should think well about this, because these details will not change
 			anymore in the game.
 			<?php elseif ($step > 2): ?>
 			Step 2 is done correctly.
@@ -208,7 +208,7 @@
         <td>
             <?php if ($step == 3): ?>
 			Click on the link "Step 3" to perform the next step of the character
-			creation. Here you design your character.
+			creation. Here you assign your characters attributes.
 			<?php elseif ($step > 3): ?>
 			Step 3 is done correctly.
 			<?php else: ?>
