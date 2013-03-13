@@ -68,7 +68,8 @@ Below are links to these projects and a small description of how it has contribu
 <p>
 	<a rel="external" href="http://www.oganalp.com/">Link to the Oganalp Canatan official website</a>
 	<br /><br />
-	Oganalp Canatan wrote the main theme tune for Illarion.
+	Oganalp Canatan wrote the main theme tune and large parts of 
+	the soundtrack for Illarion.
 	The staff would like to thank him for his time and assistance.
 </p>
 
