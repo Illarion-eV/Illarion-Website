@@ -2,7 +2,7 @@
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/illarion_data.php" );
     create_header( "Illarion - Charakterdatenbank",
-    "Characterdatabase",
+    "Character Database",
     "characters, background",
     "",
     "lightwindow,lightwindow_us,calendar","prototype,effects,lightwindow",true);
@@ -88,7 +88,7 @@
 	// Start der Ausgabe
 	//
 
-	echo "<h1>Illarion-Characterdatabase</h1>";
+	echo "<h1>Illarion Character Database</h1>";
 
 	// SUCHE
 	//
@@ -96,7 +96,7 @@
 	echo "<table style='width:100%;'>";
         echo "<tr><td>&nbsp;</td></tr>";
         echo "<tr><td>";
-        echo "Search for charactername :&nbsp;<input name='SUCHBEGRIFF' type='text' size='30' value='".$_GET['SUCHBEGRIFF']."'/>";
+        echo "Search for character name :&nbsp;<input name='SUCHBEGRIFF' type='text' size='30' value='".$_GET['SUCHBEGRIFF']."'/>";
 		echo "&nbsp;&nbsp;Race&nbsp;<select name='RASSE' $readonly>";
         echo "<option value=''";
 			if ($_GET['RASSE']=="") { echo " selected='selected'"; }
@@ -121,15 +121,15 @@
 		echo ">Lizard</option>";
         echo "<option value='6'";
 			if ($_GET['RASSE']==6) { echo " selected='selected'"; }
-		echo ">Gnome</option>";
-        echo "<option value='7'";
-			if ($_GET['RASSE']==7) { echo " selected='selected'"; }
-		echo ">Fairy</option>";
-        echo "<option value='8'";
-			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
-		echo ">Goblin</option>";
-        echo "<option value='9'";
-			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
+//		echo ">Gnome</option>";
+//        echo "<option value='7'";
+//			if ($_GET['RASSE']==7) { echo " selected='selected'"; }
+//		echo ">Fairy</option>";
+//        echo "<option value='8'";
+//			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
+//		echo ">Goblin</option>";
+//        echo "<option value='9'";
+//			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
 		echo ">Other</option>";
         echo "</select>";
 		echo "&nbsp;&nbsp;<select name='SEX' $readonly>";

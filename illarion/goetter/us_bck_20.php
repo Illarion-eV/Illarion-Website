@@ -30,12 +30,12 @@
    There are not many followers of Cherga. Cherga is the one who collects the dead ones, and brings
    them to the realms they belong to. Some people pray to her to give them forbidden knowledge and
    power over the undead, some (good) people to give eternal rest to the restless, others to use
-   the undead for a purpose. Many necromancers are followers of Cheerga, but many fortune tellers
+   the undead for a purpose. Many necromancers are followers of Cherga, but many fortune tellers
    too. Cherga does not care what the mortals do with the knowledge, and most of this knowledge has
    a high price. Followers of Cherga believe that when they die, they can choose to live on as a
-   lich or skeleton, or serve Cheerga in helping to direct the souls of the dead to their
+   lich or skeleton, or serve Cherga in helping to direct the souls of the dead to their
    destination places, until they themselves will be reborn to be allowed to start a new life. Most
-   people who follow Cheerga simply want to gain immortality.</p>
+   people who follow Cherga simply want to gain immortality.</p>
 
    <?php navBarBottom( "us_bck_19.php", "us_bck_21.php" ); ?>
 

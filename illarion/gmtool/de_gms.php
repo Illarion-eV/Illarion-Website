@@ -23,7 +23,7 @@
 
 ?>
 
-<h1>Gamemaster Verwaltung</h1>
+<h1>Gamemaster-Verwaltung</h1>
 
 <?php include_menu(); ?>
 
