@@ -35,7 +35,7 @@
     <li><a href="#behaivor">Behaviour</a></li>
     <li><a href="#rulebreak">Rule violations</a></li>
     <li><a href="#bugs">Bugs</a></li>
-    <li><a href="#gms">Gamemaster</a></li>
+    <li><a href="#gms">Gamemasters</a></li>
     <li><a href="#boards">Board</a></li>
     <li><a href="#macros">Additional programs</a></li>
     <li><a href="#copyright">Copyright</a></li>
@@ -218,7 +218,7 @@ bug or server crash, there is no replacement or refund.</p>
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="gms"></a></div>
-<h2>Gamemaster</h2>
+<h2>Gamemasters</h2>
 
 <p>Gamemasters help players, host events and keep the peace in the game.
 Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.

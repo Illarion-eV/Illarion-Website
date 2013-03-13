@@ -44,8 +44,8 @@
 
 <h2>Step 1</h2>
 
-<p>At this point you have to type in the name, race and gender of your character
-The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</a> could be usefull.</p>
+<p>Please select a Name, Race and Gender for your character. 
+The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</a> could be useful.</p>
 
 <form method="post" name="char_form" id="char_form" action="<?php echo Page::getURL(); ?>/community/account/us_newchar_1.php">
 		<table style="width:100%;">
@@ -75,8 +75,8 @@ The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</
 					<td>Gender:</td>
 					<td>
 						<select name="sex" style="width:100%;">
-							<option value="0">male</option>
-							<option value="1">female</option>
+							<option value="0">Male</option>
+							<option value="1">Female</option>
 						</select>
 					</td>
 				</tr>

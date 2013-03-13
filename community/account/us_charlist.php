@@ -28,15 +28,15 @@
 	$enable_lightwindow = false;
 ?>
 
-<h1>Charakterliste</h1>
+<h1>Character list</h1>
 
 <table style="width:100%">
 	<thead>
 		<tr>
-			<th>Charactername</th>
-			<th style="width:180px;">race</th>
-			<th style="width:90px;">gender</th>
-			<th style="width:190px;">status</th>
+			<th>Character Name</th>
+			<th style="width:180px;">Race</th>
+			<th style="width:90px;">Gender</th>
+			<th style="width:190px;">Status</th>
 			<th style="width:110px;">&nbsp;</th>
 			<?php if ( IllaUser::auth('testserver') ): ?><th style="width:7%;">Server</th><?php endif; ?>
 		</tr>

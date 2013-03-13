@@ -63,7 +63,7 @@ In case there was a problem with the activation of your account, please contact 
 Your activation link was:
 http://illarion.org/community/account/us_register.php?activate=%s
 
-If you are not interested in activating your Illarion account, please just ignore this e-mail. There won't be further e-mails sent to you.
+If you are not interested in activating your Illarion account, please just ignore this e-mail. There wont be further e-mails sent to you.
 
 Yours sincerely,
 The Illarion Staff

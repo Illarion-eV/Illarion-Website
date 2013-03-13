@@ -125,13 +125,13 @@
 		echo ">Echsenmensch</option>";
         echo "<option value='6'";
 			if ($_GET['RASSE']==6) { echo " selected='selected'"; }
-		echo ">Gnom</option>";
-        echo "<option value='7'";
-			if ($_GET['RASSE']==7) { echo " selected='selected'"; }
-		echo ">Fee</option>";
-        echo "<option value='8'";
-			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
-		echo ">Goblin</option>";
+//		echo ">Gnom</option>";
+//        echo "<option value='7'";
+//			if ($_GET['RASSE']==7) { echo " selected='selected'"; }
+//		echo ">Fee</option>";
+//        echo "<option value='8'";
+//			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
+//		echo ">Goblin</option>";
         echo "<option value='9'";
 			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
 		echo ">Andere</option>";
