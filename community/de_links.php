@@ -68,7 +68,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Oganalp Canatan</h4>
 
 <p>
-	<a rel="external" href="http://www.oganalp.com/">Link zur offiziellen Homepage von O. C.</a>
+	<a rel="external" href="http://www.oganalp.com/">Link zur offiziellen Homepage von Oganalp Canatan</a>
 	<br /><br />
 	Oganalp Canatan hat die Titelmelodie und große Teile des Soundtracks von Illarion komponiert. 
 	Der Staff möchte sich für seine Zeit und Hilfe bedanken.
