@@ -42,7 +42,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Debian</h4>
 
 <p>
-	<a rel="external" href="http://www.debian.org/">Link to the Debian website</a>
+	<a rel="external" href="http://www.debian.org/">Link zur Debian Homepage</a>
 	<br /><br />
 	Illarion verwendet das Betriebssystem Debian für seinen Server. 
 	Debian verwendet den Linux-Kernel und den FreeBSD-Kernel.
@@ -54,7 +54,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Libgdx</h4>
 
 <p>
-	<a rel="external" href="http://libgdx.badlogicgames.com/">Link to the Libgdx website</a>
+	<a rel="external" href="http://libgdx.badlogicgames.com/">Link zur Libgdx Homepage</a>
 	<br /><br />
 	Libgdx ist ein Spieleentwicklungsframework für Java welches eine einzigartige API zur Verfügung stellt welche alle 
 	Plattformen unterstützt. Dies ermöglicht es ein Spiel zu entwickeln, welches auf vielen Betriebssystemen läuft, 
@@ -68,7 +68,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Oganalp Canatan</h4>
 
 <p>
-	<a rel="external" href="http://www.oganalp.com/">Link to the Oganalp Canatan official website</a>
+	<a rel="external" href="http://www.oganalp.com/">Link zur offiziellen Homepage von Oganalp Canatan</a>
 	<br /><br />
 	Oganalp Canatan hat die Titelmelodie und große Teile des Soundtracks von Illarion komponiert. 
 	Der Staff möchte sich für seine Zeit und Hilfe bedanken.
@@ -81,7 +81,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Nifty GUI</h4>
 
 <p>
-	<a rel="external" href="http://nifty-gui.lessvoid.com/">Link to the Nifty GUI website</a>
+	<a rel="external" href="http://nifty-gui.lessvoid.com/">Link zur Nifty GUI Homepage</a>
 	<br /><br />
 	Nifty GUI ist eine Java-Bibliothek welche das Erstellen von interaktiven Benutzeroberflächen für Spiele 
 	und Dergleichen unterstützt. 
@@ -95,7 +95,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Java</h4>
 
 <p>
-	<a rel="external" href="http://www.java.com/">Link to the Oracle Java website</a>
+	<a rel="external" href="http://www.java.com/">Link zur Oracle Java Homepage</a>
 	<br /><br />
 	Java ist der globale Standard für die Entwicklung und Verbreitung mobiler Anwendungen, Spiele, 
 	web-basierten Inhalten und Unternehmenssoftware. 
@@ -109,7 +109,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Github</h4>
 
 <p>
-	<a rel="external" href="https://github.com/">Link to the Github website</a>
+	<a rel="external" href="https://github.com/">Link zur Github Homepage</a>
 	<br /><br />
 	Illarion verwendet Github um eine effiziente Zusammenarbeit der Entwickler zu ermöglichen. 
 	Github wird von über drei Millionen Menschen weltweit verwendet.
@@ -122,7 +122,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>LWJGL</h4>
 
 <p>
-	<a rel="external" href="http://www.lwjgl.org/">Link to the LWJGL website</a>
+	<a rel="external" href="http://www.lwjgl.org/">Link zur LWJGL Homepage</a>
 	<br /><br />
 	LWJGL gibt den Entwicklern Illarions Zugriff auf potente Plattformübergreifende Bibliotheken wie OpenGL,
 	OpenCL und OpenAL.
@@ -135,7 +135,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Apache Web Server (HTTPD)</h4>
 
 <p>
-	<a rel="external" href="https://httpd.apache.org/">Link to the Apache Web Server (A.K.A. HTTPD) website</a>
+	<a rel="external" href="https://httpd.apache.org/">Link zur Apache Web Server (A.K.A. HTTPD) Homepage</a>
 	<br /><br />
 	Apache httpd ist seit April 1996 der beliebteste Webserver im Internet. 
 	Er wird für den Betrieb der Illarion Homepage verwendet.
@@ -148,7 +148,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>CAcert</h4>
 
 <p>
-	<a rel="external" href="http://www.cacert.org/">Link to the CAcert website</a>
+	<a rel="external" href="http://www.cacert.org/">Link zur CAcert Homepage</a>
 	<br /><br />
 	CAcert.org ist eine Zertifizierungsstelle, welche der Allgemeinheit Zertifikate im großen Maßstab zur Verfügung stellt. 
 	Diese Zertifikate werden auf der Illarion-Homepage und auch im Client verwendet.
@@ -161,7 +161,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Boost</h4>
 
 <p>
-	<a rel="external" href="http://www.boost.org/">Link to the Boost website</a>
+	<a rel="external" href="http://www.boost.org/">Link zur Boost Homepage</a>
 	<br /><br />
 	Boost stellt freie und geprüfte C++-Bibliotheken zur Verfügung. 
 	Diese ermöglichen es den Entwicklern, ihre Zeit effizienter zu nutzen indem sie auf 
@@ -175,7 +175,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Lua</h4>
 
 <p>
-	<a rel="external" href="http://www.lua.org/">Link to the Lua website</a>
+	<a rel="external" href="http://www.lua.org/">Link zur Lua Homepage</a>
 	<br /><br />
 	Lua ist eine leistungsfähige, schnelle und einbettbare Skriptsprache. Sie wird bei den Skripten der NPCs und des 
 	Alchemiesystems verwendet und wird auch die Basis für das Magiesystem darstellen.
@@ -188,7 +188,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>PostgreSQL</h4>
 
 <p>
-	<a rel="external" href="http://www.postgresql.org/">Link to the PostgreSQL website</a>
+	<a rel="external" href="http://www.postgresql.org/">Link zur PostgreSQL Homepage</a>
 	<br /><br />
 	PostgreSQL ist ein leistungsstarkes, Open Source-Datenbanksystem für objektorientierte Datenbanken. 
 	Hinter ihm stecken mehr als 15 Jahre aktiver Entwicklung und Gestaltung was zu einem guten Ruf in Bezug auf 
@@ -203,7 +203,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Libpqxx</h4>
 
 <p>
-	<a rel="external" href="http://pqxx.org/">Link to the pqxx website</a>
+	<a rel="external" href="http://pqxx.org/">Link zur pqxx Homepage</a>
 	<br /><br />
 	libpqxx ist die offizielle C++ Client-API für PostgreSQL, die zuverlässige und leistungsstarke Open Source-Datenbank. 
 	Sie ermöglicht es dem Server mit der Datenbank zu kommunizieren und Daten zu speichern.
@@ -216,7 +216,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>GCC</h4>
 
 <p>
-	<a rel="external" href="http://gcc.gnu.org/">Link to the GCC website</a>
+	<a rel="external" href="http://gcc.gnu.org/">Link zur GCC Homepage</a>
 	<br /><br />
 	GCC ist ein Teil des GNU Projekts. 
 	Es wird verwendet um den Spieleserver zu kompilieren.
@@ -229,7 +229,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>GPLv3</h4>
 
 <p>
-	<a rel="external" href="https://www.gnu.org/licenses/gpl.html">Link to the GPLv3 website</a>
+	<a rel="external" href="https://www.gnu.org/licenses/gpl.html">Link zur GPLv3 Homepage</a>
 	<br /><br />
 	Die GNU General Public License ist eine freie Copyleft-Lizenz für Software und andere Werke. 
 	Eine kurze Einführung zu GPLv3 kann unter https://www.gnu.org/licenses/quick-guide-gplv3.html gefunden werden.
@@ -242,7 +242,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>PHP</h4>
 
 <p>
-	<a rel="external" href="http://www.php.net/">Link to the PHP website</a>
+	<a rel="external" href="http://www.php.net/">Link zur PHP Homepage</a>
 	<br /><br />
 	PHP ist eine in HTML eingebettete Skriptsprache. 
 	Sie wird für die Illarion-Homepage vielseitig verwendet.
@@ -255,7 +255,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>phpBB</h4>
 
 <p>
-	<a rel="external" href="https://www.phpbb.com/">Link to the phpBB website</a>
+	<a rel="external" href="https://www.phpbb.com/">Link zur phpBB Homepage</a>
 	<br /><br />
 	phpBB ist eine kostenlose Open Source-Forensoftware welche leicht zu verwenden, leistungsstark und stark 
 	modifizierbar ist. Sie wird verwendet um das Illarion-Forum zu betreiben.
@@ -268,7 +268,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <h4>Mantis Bug Tracker</h4>
 
 <p>
-	<a rel="external" href="http://www.mantisbt.org/">Link to the Mantis Bug Tracker website</a>
+	<a rel="external" href="http://www.mantisbt.org/">Link zur Mantis Bug Tracker Homepage</a>
 	<br /><br />
 	MantisBT ist ein beliebtes, kostenloses web-basiertes Bugtrackingsystem. 
 	Es findet bei Illarion Anwendung als Werkzeug um Fehler zu berichten, Verbesserungen vorzuschlagen 
