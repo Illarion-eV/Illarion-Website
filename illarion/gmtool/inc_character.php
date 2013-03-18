@@ -11,8 +11,6 @@
 					.PHP_EOL."chars.chr_lastsavetime,"
 					.PHP_EOL."chars.chr_lastip,"
 					.PHP_EOL."chars.chr_name,"
-					.PHP_EOL."chars.chr_prefix,"
-					.PHP_EOL."chars.chr_suffix,"
 					.PHP_EOL."chars.chr_race,"
 					.PHP_EOL."chars.chr_sex,"
 					.PHP_EOL."account.acc_name,"

@@ -18,8 +18,6 @@
 	}
 	
 	$newdata['name'] 		= ( strlen($_POST['name']) > 0 ? (string)$_POST['name'] : null );
-	$newdata['prefix']   	= (string)$_POST['prefix'];
-	$newdata['suffix']  	= (string)$_POST['suffix'];
 	$newdata['race'] 		= (array_key_exists ($_POST['race'], getRaceArray()) ? (int)$_POST['race'] : false  );
 	$newdata['gender']		= ( (int)$_POST['sex'] == 0 || (int)$_POST['sex'] == 1 ? (int)$_POST['sex'] : false );
 	$newdata['hitpoints']	= ( $_POST['hitpoints'] <= 10000 && $_POST['hitpoints'] >= 0 ? (int)$_POST['hitpoints'] : false );
@@ -54,8 +52,6 @@
 		$query = "UPDATE ".$server.".chars "
 						.PHP_EOL."SET "
 						.PHP_EOL."chr_name = ".$pgSQL->Quote( $newdata['name'] ).", "
-						.PHP_EOL."chr_prefix = ".$pgSQL->Quote( $newdata['prefix'] ).", "
-						.PHP_EOL."chr_suffix = ".$pgSQL->Quote( $newdata['suffix'] ).", "
 						.PHP_EOL."chr_race = ".$pgSQL->Quote( $newdata['race'] ).", "
 						.PHP_EOL."chr_sex = ".$pgSQL->Quote( $newdata['gender'] )." "
 					.PHP_EOL."WHERE "

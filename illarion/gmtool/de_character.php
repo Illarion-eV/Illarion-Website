@@ -81,10 +81,6 @@
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Charaktername</dt>
 			<dd><input type="text" name="name" value="<?php echo htmlentities($char_data['chr_name'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
-			<dt>Prefix</dt>
-			<dd><input type="text" name="prefix" size="20" value="<?php echo htmlentities($char_data['chr_prefix'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
-			<dt>Suffix</dt>
-			<dd><input type="text" name="suffix" size="20" value="<?php echo htmlentities($char_data['chr_suffix'], ENT_COMPAT | ENT_XHTML); ?>" /></dd>
 			<dt>Rasse</dt>
 			<dd>
 				<select name="race">

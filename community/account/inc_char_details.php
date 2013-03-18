@@ -3,7 +3,7 @@
 	{
 		$pgSQL =& Database::getPostgreSQL( $server );
 
-		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_prefix, c.chr_suffix, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob'
+		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob'
 		.PHP_EOL.' FROM chars AS c'
 		.PHP_EOL.' INNER JOIN player AS p ON p.ply_playerid = c.chr_playerid'
 		.PHP_EOL.' WHERE c.chr_playerid = '.$pgSQL->Quote( $charid )
