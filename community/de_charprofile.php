@@ -71,12 +71,12 @@
 
 <h1>Charakter Profil</h1>
 
-<h2><?php echo $pg_profil['chr_prefix'],' "',$pg_profil['chr_name'],'" ',$pg_profil['chr_suffix']; ?></h2>
+<h2><?php echo $pg_profil['chr_name']; ?></h2>
 
 <?php if (is_array($picture)): ?>
 <div class="charprofil_picture" style="height:<?php echo $picture['height']; ?>px;width:<?php echo $picture['width']; ?>px;">
 	<?php if ( isset( $picture['file'] ) ): ?>
-	<a href="<?php echo $picture['file']; ?>" onclick="return false;" class="lightwindow" title="<?php echo $pg_profil['chr_prefix'],' &quot;',$pg_profil['chr_name'],'&quot; ',$pg_profil['chr_suffix']; ?>">
+	<a href="<?php echo $picture['file']; ?>" onclick="return false;" class="lightwindow" title="<?php echo $pg_profil['chr_name']; ?>">
 	<?php endif; ?>
 		<img height="<?php echo $picture['height']; ?>" width="<?php echo $picture['width']; ?>" src="<?php echo $picture['preview']; ?>" alt="Charakterbild" />
 	<?php if ( isset( $picture['file'] ) ): ?>

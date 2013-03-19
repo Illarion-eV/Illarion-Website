@@ -44,7 +44,7 @@
 		<tbody>
 			<tr>
 				<td style="width:150px">Name:</td>
-				<td><?php echo $chardata['chr_prefix'] ." \"".$chardata['chr_name']."\" ". $chardata['chr_suffix']; ?></td>
+				<td><?php echo $chardata['chr_name']; ?></td>
 			</tr>
 			<tr>
 				<td style="width:150px">Race:</td>

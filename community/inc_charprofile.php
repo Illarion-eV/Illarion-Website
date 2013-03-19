@@ -234,7 +234,7 @@
 	function loadPostgreProfile( $charid )
 	{
 	   $pgSQL =& Database::getPostgreSQL( 'illarionserver' );
-		$query = 'SELECT chars.chr_accid, chars.chr_playerid, chars.chr_prefix, chars.chr_suffix, chars.chr_sex, chars.chr_name, chars.chr_race, ply_dob'
+		$query = 'SELECT chars.chr_accid, chars.chr_playerid, chars.chr_sex, chars.chr_name, chars.chr_race, ply_dob'
 		.PHP_EOL.' FROM chars'
 		.PHP_EOL.' INNER JOIN player ON ply_playerid = chr_playerid'
 		.PHP_EOL.' WHERE (( SELECT count(gms.gm_charid) AS count FROM gms WHERE gms.gm_charid = chars.chr_playerid AND NOT (gms.gm_rights_server & 131072) > 0)) = 0'
