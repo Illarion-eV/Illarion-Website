@@ -132,8 +132,8 @@
 //        echo "<option value='8'";
 //			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
 //		echo ">Goblin</option>";
-        echo "<option value='9'";
-			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
+//        echo "<option value='9'";
+//			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
 		echo ">Andere</option>";
         echo "</select>";
 		echo "&nbsp;&nbsp;<select name='SEX' $readonly>";
