@@ -1,0 +1,53 @@
+div.charprofil_picture {
+	float: right;
+}
+
+dl.charprofil dt {
+	font-weight: bold;
+	float: left;
+	width: 120px;
+}
+
+dl.charprofil dt,
+dl.charprofil dd {
+	margin-bottom: 7px;
+}
+
+p.char_online_1 {
+	font-weight: bold;
+	color: #004000;
+}
+
+p.char_online_0 {
+	font-weight: bold;
+	color: #400000;
+}
+
+div.rating {
+	text-align: left;
+	float: left;
+}
+
+div.rating div.title {
+	font-weight: bold;
+	float: left;
+	line-height: 46px;
+	margin-right: 20px;
+	margin-bottom: 7px;
+}
+
+div.rating div.icon {
+	float: left;
+	text-align: center;
+	width: 100px;
+	margin-right: 20px;
+	background: transparent url(pics/black-70.png) repeat scroll 0 0;
+	border: 1px solid #000;
+	margin-bottom: 7px;
+}
+
+div.rating div.description {
+	line-height: 46px;
+	float: left;
+	margin-bottom: 7px;
+}

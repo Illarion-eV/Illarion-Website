@@ -1,4 +1,0 @@
-Webseite in Auflösung 1024 x768 im Vollscreenmodus aufnehmen
-In PSP auf 10% verkleinern (nicht nachschärfen)
-Speichern als JPG (im Test am kleinsten)
-Dateiname = "pic_" + domain + ".jpg"

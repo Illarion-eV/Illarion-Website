@@ -1,0 +1,10 @@
+dl.statistics dt {
+	font-weight: bold;
+	float: left;
+	width: 350px;
+}
+
+dl.statistics dt,
+dl.statistics dd {
+	margin-bottom: 7px;
+}

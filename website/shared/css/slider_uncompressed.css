@@ -1,0 +1,27 @@
+div.slider {
+	margin:10px 0;
+	background-color:#000;
+	height:3px;
+	border: 1px solid #ffcd17;
+	position: relative;
+}
+
+div.slider div.handle {
+	width: 10px;
+	height: 22px;
+	background-image: url("pics/hover.gif");
+	cursor:pointer;
+	position: absolute;
+	margin-top: -9px;
+	margin-left: -1px;
+}
+
+div.slider div.disabled {
+	width: 10px;
+	height: 12px;
+	background-image: url("pics/pointer.gif");
+	cursor:default;
+	position: absolute;
+	margin-top: -5px;
+	margin-left: -1px;
+}
