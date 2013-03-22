@@ -61,28 +61,28 @@ class Page {
 	*
 	* @const string
 	*/
-	const base_path = '/var/www/illarion';
+	const base_path = '/var/www/illarion/website';
 
 	/**
 	* The non-ssl default hardware path of the images
 	*
 	* @const string
 	*/
-	const base_images_path = '/var/www/illarion/shared/pics';
+	const base_images_path = '/var/www/illarion/website/shared/pics';
 
 	/**
 	* The non-ssl default hardware path of the static media
 	*
 	* @const string
 	*/
-	const base_media_path = '/var/www/illarion/media';
+	const base_media_path = '/var/www/illarion/website/media';
 
 	/**
 	* The ssl default hardware path of the page
 	*
 	* @const string
 	*/
-	const base_ssl_path = '/var/www/illarion/ssl';
+	const base_ssl_path = '/var/www/illarion/website/ssl';
 
 	/**
 	* Status of the Illarion Server
