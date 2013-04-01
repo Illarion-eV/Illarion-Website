@@ -49,7 +49,7 @@
 		$pgSQL->setQuery( $query, 0, 1 );
 		$limits = $pgSQL->loadAssocRow();
 
-		$new_bodyheight = (float)$_POST['bodyheight'];
+		$new_bodyheight = (float)str_replace(',','.',$_POST['bodyheight'];
 		$new_weight = (float)$_POST['weight'];
 
 		if (IllaUser::usesMeter())
