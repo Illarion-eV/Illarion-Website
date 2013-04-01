@@ -9,19 +9,19 @@
 	Page::Init();
 ?>
 
-<?php if (file_exists('/home/vilarion/ts_restart.lock')): ?>
+<?php if (file_exists('/home/vilarion/ds_restart.lock')): ?>
 <h1>Reload the Devserver Map</h1>
 
 <p>The controls were locked by <b>vilarion</b>.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/martin/ts_restart.lock')): ?>
+<?php if (file_exists('/home/martin/ds_restart.lock')): ?>
 <h1>Reload the Devserver Map</h1>
 
 <p>The controls were locked by <b>martin</b>.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/nitram/ts_restart.lock')): ?>
+<?php if (file_exists('/home/nitram/ds_restart.lock')): ?>
 <h1>Reload the Devserver Map</h1>
 
 <p>The controls were locked by <b>nitram</b>.</p>

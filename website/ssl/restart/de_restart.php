@@ -11,15 +11,15 @@
 
 <h1>Devserver steuern</h1>
 
-<?php if (file_exists('/home/vilarion/ts_restart.lock')): ?>
+<?php if (file_exists('/home/vilarion/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>Vilarion</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/martin/ts_restart.lock')): ?>
+<?php if (file_exists('/home/martin/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>martin</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/nitram/ts_restart.lock')): ?>
+<?php if (file_exists('/home/nitram/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>Nitram</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
