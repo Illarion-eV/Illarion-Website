@@ -19,7 +19,7 @@
 		$servers[] = 'rs';
 	}
 
-	if (IllaUser::auth('testserver'))
+	if (IllaUser::auth('devserver'))
 	{
 		$servers[] = 'ts';
 	}
@@ -89,7 +89,7 @@ The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</
 					<td>
 						<select name="server" id="server" style="width:100%;" onchange="checkCharname();return true;">
 							<option value="0">Gameserver</option>
-							<option value="1">Testserver</option>
+							<option value="1">Devserver</option>
 						</select>
 					</td>
 				</tr>
@@ -102,7 +102,7 @@ The <a href="<?php echo Page::getURL(); ?>/general/us_rpg_guide.php">RPG-Guide</
 				</tr>
 				<tr>
 					<td>
-						Testserver
+						Devserver
 						<input type="hidden" name="server" value="1" />
 					</td>
 				</tr>

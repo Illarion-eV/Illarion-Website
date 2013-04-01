@@ -40,7 +40,7 @@ class IllaUser {
 		self::$passwd = crypt(stripslashes($plain_pw), '$1$illarion1');
 		self::$username = $username;
 
-		if ($username == "testserver") {
+		if ($username == "devserver") {
 			self::logout();
 			return false;
 		}

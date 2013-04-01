@@ -13,7 +13,7 @@
 	$pass = crypt(stripslashes(urldecode($_POST['passwd'])), '$1$illarion1');
 
 	$illarionserver = &Database::getPostgreSQL('illarionserver');
-	$testserver = &Database::getPostgreSQL('testserver');
+	$devserver = &Database::getPostgreSQL('devserver');
 	$accounts = &Database::getPostgreSQL('accounts');
 
 	$query = 'SELECT "acc_id"'
@@ -35,10 +35,10 @@
 	.PHP_EOL.'ORDER BY "chr_lastsavetime" DESC'
 	;
 	$illarionserver->setQuery($query);
-	$testserver->setQuery($query);
+	$devserver->setQuery($query);
 	
 	$rs_chars = $illarionserver->loadAssocList();
-	$ts_chars = $testserver->loadAssocList();
+	$ts_chars = $devserver->loadAssocList();
 	
 	$query = 'SELECT "acc_lang"'
 	.PHP_EOL.' FROM "account"'
@@ -53,7 +53,7 @@
 	}
     if (!is_null($ts_chars)) {
        foreach($ts_chars as $key=>$char) {
-           echo '<char server="testserver" status="',$char['chr_status'], '" lastLogin="',$char['chr_lastsavetime'], '">',$char['chr_name'],'</char>';	
+           echo '<char server="devserver" status="',$char['chr_status'], '" lastLogin="',$char['chr_lastsavetime'], '">',$char['chr_name'],'</char>';	
        }
     }
     echo '</chars>';

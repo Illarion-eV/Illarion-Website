@@ -10,7 +10,7 @@
 			return;
 		}
 
-		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
+		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'devserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
 		

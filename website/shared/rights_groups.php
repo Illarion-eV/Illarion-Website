@@ -5,7 +5,7 @@ global $_GROUPS;
 $_RIGHTS = array(
 	'chronic_edit' => array(1, 'User is allowed to edit the chronicle', 'Nutzer darf die Chronik bearbeiten', array(1, 2, 4)),
 	'news' => array(2, 'User is allowed to create and edit news', 'Nutzer darf News erstellen und ändern', array(1, 2, 3, 4)),
-	'testserver' => array(3, 'User is allowed to access the testserver', 'Nutzer darf auf den Testserver zugreifen', array(1, 3)),
+	'devserver' => array(3, 'User is allowed to access the devserver', 'Nutzer darf auf den Devserver zugreifen', array(1, 3)),
 	'hidden_chars' => array(4, 'User is able to see hidden characters on the online list', 'Nutzer kann versteckte Charaktere auf der Onlineliste sehen', array(1, 2, 4)),
 	'gmtool_chars' => array(5, 'User is allowed to search and edit characters with the GM tool', 'Nutzer darf Charaktere mit dem GM-Tool suchen und editieren', array(1, 2)),
 	'gmtool_accounts' => array(6, 'User is allowed to search and edit accounts with the GM tool', 'Nutzer darf Accounts mit dem GM-Tool suchen und editieren', array(1, 2)),

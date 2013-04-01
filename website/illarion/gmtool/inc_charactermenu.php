@@ -2,7 +2,7 @@
 
     function include_character_menu( $charid, $active, $server )
     {
-		$servername = ( $server == '1' ? 'testserver' : 'illarionserver');
+		$servername = ( $server == '1' ? 'devserver' : 'illarionserver');
 		$skill_groups = getSkillGroupList($servername);		
 		$entries = array();
 		$params = "?charid=".$charid."&amp;server=".$server;

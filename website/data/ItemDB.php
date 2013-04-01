@@ -3,15 +3,15 @@
 	
     header("Content-Type: text/plain");
 
-	$testserver = &Database::getPostgreSQL('testserver');
+	$devserver = &Database::getPostgreSQL('devserver');
 
 	$query = 'SELECT "com_itemid", "com_weight", "itn_german", "itn_english"'
     .PHP_EOL.' FROM common, itemname'
     .PHP_EOL.' WHERE "com_itemid" = "itn_itemid"'
     .PHP_EOL.' ORDER BY "com_itemid"'
 	;
-    $testserver->setQuery($query);
-	$common = $testserver->loadAssocList();
+    $devserver->setQuery($query);
+	$common = $devserver->loadAssocList();
 
     echo '/NOP/',PHP_EOL;
 	if (!is_null($common)) {

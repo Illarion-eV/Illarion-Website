@@ -19,7 +19,7 @@
 
 		$db_hp =& Database::getPostgreSQL( 'homepage' );
 
-		if ($server == 'testserver')
+		if ($server == 'devserver')
 		{
 			$chardata['picture'] = '';
 		}

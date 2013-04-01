@@ -6,7 +6,7 @@
 
 	if ( !$server )
 	{
-		exit('Abgeschalten für Testserver Charaktere.');
+		exit('Abgeschalten für Devserver Charaktere.');
 		
 	}
 

@@ -6,7 +6,7 @@
 		exit();
 	}
 	$charid = $_GET['charid'];
-	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
 
 	$pgSQL =& Database::getPostgreSQL( $server );
 

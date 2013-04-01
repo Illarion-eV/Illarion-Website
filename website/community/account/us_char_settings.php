@@ -5,7 +5,7 @@
 
 	if (!$server)
 	{
-		exit('Disabled for testserver characters');
+		exit('Disabled for devserver characters');
 	}
 
 	if ( !isset( $_GET['charid'] ) || !is_numeric( $_GET['charid'] ) )

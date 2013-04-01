@@ -16,7 +16,7 @@
 		$pgSQL->setQuery( $query );
 		$charcount = $pgSQL->loadResult();
 
-		if ($charcount >= IllaUser::$charlimit && !IllaUser::auth('testserver') && IllaUser::$charlimit > 0)
+		if ($charcount >= IllaUser::$charlimit && !IllaUser::auth('devserver') && IllaUser::$charlimit > 0)
 		{
 		Messages::add( 'Character limit of '.IllaUser::$charlimit.' was already reached.', 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/community/account/us_charlist.php' );
@@ -26,8 +26,8 @@
 	}
 	else
 	{
-		$server = ( isset( $_GET['server'] ) && $_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
-		$ident = '?charid='.$charid.( $server == 'testserver' ? '&amp;server=1' : '' );
+		$server = ( isset( $_GET['server'] ) && $_GET['server'] == 1 ? 'devserver' : 'illarionserver' );
+		$ident = '?charid='.$charid.( $server == 'devserver' ? '&amp;server=1' : '' );
 		$pgSQL =& Database::getPostgreSQL( $server );
 
 		$query = 'SELECT COUNT(*)'

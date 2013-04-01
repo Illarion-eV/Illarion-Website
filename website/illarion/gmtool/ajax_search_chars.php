@@ -33,7 +33,7 @@
 
 	$account        =& Database::getPostgreSQL( 'accounts' );
 	$illarionserver =& Database::getPostgreSQL( 'illarionserver' );
-	$testserver     =& Database::getPostgreSQL( 'testserver' );
+	$devserver     =& Database::getPostgreSQL( 'devserver' );
 
 	$search_for = array();
 	if ($search_acc)
@@ -124,8 +124,8 @@
 	}
 	if ($server === -1 || $server === 1)
 	{
-		$testserver->setQuery( $query );
-		$count+= $testserver->loadResult();
+		$devserver->setQuery( $query );
+		$count+= $devserver->loadResult();
 	}
 	$max = 0;
 	$result_list = array();
@@ -141,8 +141,8 @@
 		}
 		if ($server === -1 || $server === 1)
 		{
-			$testserver->setQuery( $query );
-			$max+= $testserver->loadResult();
+			$devserver->setQuery( $query );
+			$max+= $devserver->loadResult();
 		}
 	}
 	elseif ($count == 0)
@@ -164,8 +164,8 @@
 		if ($server === -1 || $server === 1)
 		{
 			$query = "SELECT '1' AS server, chr_playerid, chr_name".$subquery. "\n ORDER BY chr_name ASC";
-			$testserver->setQuery( $query );
-			$result_list = array_merge($result_list,$testserver->loadAssocList());
+			$devserver->setQuery( $query );
+			$result_list = array_merge($result_list,$devserver->loadAssocList());
 		}
 	}
 ?>

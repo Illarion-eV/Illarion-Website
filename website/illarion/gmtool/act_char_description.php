@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	$server = ( $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+	$server = ( $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
 	$charid = ( is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 
 	if (!$charid)

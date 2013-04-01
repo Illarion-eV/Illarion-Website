@@ -6,7 +6,7 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charlist.php' );
 
 	define( 'ILLARIONSERVER', 'Gameserver' );
-	define( 'TESTSERVER', 'Testserver' );
+	define( 'TESTSERVER', 'Devserver' );
 
 	Page::setTitle( array( 'Account', 'Characterlist' ) );
 	Page::setDescription( 'On this page you get a overview of all characters you have.' );
@@ -38,12 +38,12 @@
 			<th style="width:90px;">Gender</th>
 			<th style="width:190px;">Status</th>
 			<th style="width:110px;">&nbsp;</th>
-			<?php if ( IllaUser::auth('testserver') ): ?><th style="width:7%;">Server</th><?php endif; ?>
+			<?php if ( IllaUser::auth('devserver') ): ?><th style="width:7%;">Server</th><?php endif; ?>
 		</tr>
 	</thead>
 	<tfoot>
 		<tr>
-			<td colspan="<?php echo ( IllaUser::auth('testserver') ? '5' : '6' ); ?>" style="text-align:center;vertical-align:middle;height:60px;">
+			<td colspan="<?php echo ( IllaUser::auth('devserver') ? '5' : '6' ); ?>" style="text-align:center;vertical-align:middle;height:60px;">
 				<?php if (IllaUser::$charlimit <= getCharacterCount() && IllaUser::$charlimit > 0): ?>
 				&nbsp;
 				<?php else: ?>
@@ -55,7 +55,7 @@
 	<tbody>
 		<?php if (!count($char_list)): ?>
 		<tr>
-			<td colspan="<?php echo ( IllaUser::auth('testserver') ? '5' : '6' ); ?>">No characters were found</td>
+			<td colspan="<?php echo ( IllaUser::auth('devserver') ? '5' : '6' ); ?>">No characters were found</td>
 		</tr>
 	</tbody>
 </table>
@@ -90,7 +90,7 @@
 					Delete character
 				</a>
 			</td>
-			<?php if ( IllaUser::auth('testserver') ): ?>
+			<?php if ( IllaUser::auth('devserver') ): ?>
 			<td>
 				<?php echo $character['chr_server']; ?>
 			</td>

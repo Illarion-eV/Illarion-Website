@@ -5,7 +5,7 @@
 
 	if ( !$server )
 	{
-		exit('Abgeschalten für Testserver Charaktere.');
+		exit('Abgeschalten für Devserver Charaktere.');
 	}
 
 	if ( !isset( $_GET['charid'] ) || !is_numeric ($_GET['charid'] ) )

@@ -62,7 +62,7 @@ des Spielserver das dieser sicher nicht mehr läuft.</p>
 <?php endif; ?>
 
 <?php if ($running_server): ?>
-<p>Teste ob Testserver Verbindungen annimmt:</p>
+<p>Teste ob Devserver Verbindungen annimmt:</p>
 <?php
     $connection = @fsockopen('127.0.0.1', 3008, $errno, $errstr, 30);
     $working_server = false;
