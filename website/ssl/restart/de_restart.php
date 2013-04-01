@@ -1,25 +1,25 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php";
 
-	Page::setTitle( 'Testserver starten und beenden' );
-	Page::setDescription( 'Diese Seite dient dazu den Testserver zu starten und zu stoppen.' );
-	Page::setKeywords( array( 'Starten', 'Stoppen', 'Testserver' ) );
+	Page::setTitle( 'Devserver starten und beenden' );
+	Page::setDescription( 'Diese Seite dient dazu den Devserver zu starten und zu stoppen.' );
+	Page::setKeywords( array( 'Starten', 'Stoppen', 'Devserver' ) );
 
 	Page::setXHTML();
 	Page::Init();
 ?>
 
-<h1>Testserver steuern</h1>
+<h1>Devserver steuern</h1>
 
-<?php if (file_exists('/home/vilarion/ts_restart.lock')): ?>
+<?php if (file_exists('/home/vilarion/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>Vilarion</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/martin/ts_restart.lock')): ?>
+<?php if (file_exists('/home/martin/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>martin</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/nitram/ts_restart.lock')): ?>
+<?php if (file_exists('/home/nitram/ds_restart.lock')): ?>
 <p>Die Steuerung wurde durch <b>Nitram</b> gesperrt.</p>
 <?php exit; endif; ?> 
 
@@ -27,29 +27,29 @@
 	
 	if (isset($_POST['mode'])) {
 	    if ($_POST['mode'] == 'start') {
-	        $process = popen('sudo -u testserver testctl start', 'r');
+	        $process = popen('sudo -u devserver devctl start', 'r');
 	        if (!is_bool($process)) {
 				fread($process, 128);
 	            pclose($process);
 	        }
 	    } elseif ($_POST['mode'] == 'stop') {
-	        `sudo -u testserver testctl stop`;
+	        `sudo -u devserver devctl stop`;
 	    } elseif ($_POST['mode'] == 'kill') {
-	        `sudo -u testserver testctl kill`;
+	        `sudo -u devserver devctl kill`;
 	    }
 	}
 ?>
 
 <h2>Informationen</h2>
 
-<p>Diese Seite dient dazu den Testserver zu starten und zu stoppen. Bitte überprüfe vor dem Start
-des Testservers das dieser sicher nicht mehr läuft.</p>
+<p>Diese Seite dient dazu den Devserver zu starten und zu stoppen. Bitte überprüfe vor dem Start
+des Devservers das dieser sicher nicht mehr läuft.</p>
 
 <h2>Zustand überprüfen</h2>
 
-<p>Teste ob Testserver läuft:</p>
+<p>Teste ob Devserver läuft:</p>
 <?php
-    $output = `testctl status`;
+    $output = `devctl status`;
     $running_server = false;
     if (strpos($output, 'OFFLINE') === FALSE) {
         $running_server = true;
@@ -64,7 +64,7 @@ des Testservers das dieser sicher nicht mehr läuft.</p>
 <?php endif; ?>
 
 <?php if ($running_server): ?>
-<p>Teste ob Testserver Verbindungen annimmt:</p>
+<p>Teste ob Devserver Verbindungen annimmt:</p>
 <?php
     $connection = @fsockopen('127.0.0.1', 3012, $errno, $errstr, 30);
     $working_server = false;
@@ -100,10 +100,10 @@ sollte der Server abgeschalten und neu gestartet werden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Testserver starten</h2>
+<h2>Devserver starten</h2>
 
-<p>In diesem Abschnitt kann der Testserver gestartet werden. Diese Aktion sollte nur ausgeführt werden
-wenn der Testserver nicht läuft.</p>
+<p>In diesem Abschnitt kann der Devserver gestartet werden. Diese Aktion sollte nur ausgeführt werden
+wenn der Devserver nicht läuft.</p>
 
 <?php if (isset($_POST['mode']) && $_POST['mode'] == 'start'): ?>
 
@@ -112,7 +112,7 @@ wenn der Testserver nicht läuft.</p>
 <?php else: ?>
 
 <form action="<?php echo Page::getSecureURL(); ?>/restart/de_restart.php" method="post">
-    <input type="submit" name="submit" value="Testserver starten"<?php echo ($running_server ? ' disabled="disabled" class="disabled"' : ''); ?> />
+    <input type="submit" name="submit" value="Devserver starten"<?php echo ($running_server ? ' disabled="disabled" class="disabled"' : ''); ?> />
     <input type="hidden" name="mode" value="start" />
 </form>
 
@@ -120,9 +120,9 @@ wenn der Testserver nicht läuft.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Testserver herunterfahren</h2>
+<h2>Devserver herunterfahren</h2>
 
-<p>In diesem Abschnitt kann der Testserver heruntergefahren werden. Dabei werden alle Spieler und die Karte gespeichert und der
+<p>In diesem Abschnitt kann der Devserver heruntergefahren werden. Dabei werden alle Spieler und die Karte gespeichert und der
 Server dann beendet. Diese Methode ist die beste um den Server abzuschalten. Allerdings kann es sein das sie nicht funktioniert
 wenn der Server abgestürzt ist.</p>
 
@@ -133,7 +133,7 @@ wenn der Server abgestürzt ist.</p>
 <?php else: ?>
 
 <form action="<?php echo Page::getSecureURL(); ?>/restart/de_restart.php" method="post">
-    <input type="submit" name="submit" value="Testserver herunterfahren"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
+    <input type="submit" name="submit" value="Devserver herunterfahren"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
     <input type="hidden" name="mode" value="stop" />
 </form>
 
@@ -141,10 +141,10 @@ wenn der Server abgestürzt ist.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Testserver abschalten</h2>
+<h2>Devserver abschalten</h2>
 
-<p>In diesem Abschnitt kann der Testserver abgeschalten werden. Das hat zur Folge das der Testserver beendet wird ohne das Spieler und
-die Karte gespeichert werden. Diese Methode wird immer funktionieren um den Testserver abzuschalten. Wegen dem Datenverlust sollte sie
+<p>In diesem Abschnitt kann der Devserver abgeschalten werden. Das hat zur Folge das der Devserver beendet wird ohne das Spieler und
+die Karte gespeichert werden. Diese Methode wird immer funktionieren um den Devserver abzuschalten. Wegen dem Datenverlust sollte sie
 aber nur dann verwendet werden wenn das normale Herunterfahren fehlschlägt. In den meisten Fällen zeigt die Auswertung des Server
 Zustandes bereits ob der Server heruntergefahren oder abgeschalten werden muss.</p>
 
@@ -155,7 +155,7 @@ Zustandes bereits ob der Server heruntergefahren oder abgeschalten werden muss.<
 <?php else: ?>
 
 <form action="<?php echo Page::getSecureURL(); ?>/restart/de_restart.php" method="post">
-    <input type="submit" name="submit" value="Testserver abschalten"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
+    <input type="submit" name="submit" value="Devserver abschalten"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
     <input type="hidden" name="mode" value="kill" />
 </form>
 

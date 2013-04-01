@@ -29,7 +29,7 @@
 		$language = 'de';
 	}
 	
-	$server = ($server == 0) ? 'illarionserver' : 'testserver';
+	$server = ($server == 0) ? 'illarionserver' : 'devserver';
 	
 	$pgSQL = &Database::getPostgreSQL();
 	

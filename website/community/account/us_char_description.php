@@ -3,7 +3,7 @@
 
 	IllaUser::requireLogin();
 
-	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
 	$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 
 	if (!$charid)
@@ -66,7 +66,7 @@
 
 <h2>Short description (not more then 255 characters)</h2>
 
-<form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_description.php?charid=<?php echo $charid,($server == 'testserver' ? '&amp;server=1' : ''); ?>" id="mainForm">
+<form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_description.php?charid=<?php echo $charid,($server == 'devserver' ? '&amp;server=1' : ''); ?>" id="mainForm">
 	<p>
 		English<br />
 		<input style="width:100%;" maxlength="255" type="text" name="short_us" value="<?php echo $descriptions['short_us']; ?>" />
@@ -95,7 +95,7 @@
 		<button onclick="document.forms.mainForm.submit()" style="margin-right:10px;">Save</button>
 		<button onclick="document.forms.mainForm.reset()" style="margin-left:10px;">Reset</button>
 		<br /><br />
-		<a href="<?php echo Page::getURL(); ?>/community/account/us_char_details.php?charid=<?php echo $charid,($server == 'testserver' ? '&amp;server=1' : ''); ?>">
+		<a href="<?php echo Page::getURL(); ?>/community/account/us_char_details.php?charid=<?php echo $charid,($server == 'devserver' ? '&amp;server=1' : ''); ?>">
 			Back to the details
 		</a>
 		<input type="hidden" name="action" value="char_description" />

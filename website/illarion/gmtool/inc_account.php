@@ -90,7 +90,7 @@
         global $language;
 
         $illaSQL =& Database::getPostgreSQL( 'illarionserver' );
-        $testSQL =& Database::getPostgreSQL( 'testserver' );
+        $testSQL =& Database::getPostgreSQL( 'devserver' );
 
         $query = 'SELECT chr_playerid, chr_name, chr_status, chr_race, chr_sex, '.$illaSQL->Quote($language=='de'?'Spielserver':'Gameserver').' AS chr_server'
         .PHP_EOL.'FROM chars'
@@ -100,7 +100,7 @@
         $illaSQL->setQuery( $query );
         $charlist = $illaSQL->loadAssocList();
 
-        $query = 'SELECT chr_playerid, chr_name, chr_status, chr_race, chr_sex, \'Testserver\' AS chr_server'
+        $query = 'SELECT chr_playerid, chr_name, chr_status, chr_race, chr_sex, \'Devserver\' AS chr_server'
         .PHP_EOL.'FROM chars'
         .PHP_EOL.'WHERE chr_accid = '.$testSQL->Quote( $accid )
         ;

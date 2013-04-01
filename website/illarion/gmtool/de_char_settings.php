@@ -6,7 +6,7 @@
 
 	if (!$server)
 	{
-		exit('Abgeschaltet für Testserver-Charaktere');
+		exit('Abgeschaltet für Devserver-Charaktere');
 	}
 
     Page::setXML();

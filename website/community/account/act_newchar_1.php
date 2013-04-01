@@ -11,10 +11,10 @@
 			return;
 		}
 
-		$server = ( (int)$_POST['server'] == 1 ? 'testserver' : 'illarionserver' );
-		if ( $server == 'testserver' && !IllaUser::auth('testserver') )
+		$server = ( (int)$_POST['server'] == 1 ? 'devserver' : 'illarionserver' );
+		if ( $server == 'devserver' && !IllaUser::auth('devserver') )
 		{
-			Messages::add((Page::isGerman()?'Du darfst keine Charaktere auf dem Testserver anlegen.':'You are not allowed to create testserver characters.'),'error');
+			Messages::add((Page::isGerman()?'Du darfst keine Charaktere auf dem Devserver anlegen.':'You are not allowed to create devserver characters.'),'error');
 			return;
 		}
 		
@@ -170,5 +170,5 @@
 			return;
 		}
 		
-		Page::redirect( Page::getURL().'/community/account/'.Page::getLanguage().'_newchar_2.php?charid='.$charid.'&server='.($server=='testserver'?'1':'0') );
+		Page::redirect( Page::getURL().'/community/account/'.Page::getLanguage().'_newchar_2.php?charid='.$charid.'&server='.($server=='devserver'?'1':'0') );
 	}

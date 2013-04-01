@@ -11,7 +11,7 @@
     $quest = $_POST['questid'];
     $status = $_POST['queststatus'];
 
-	$db = &Database::getPostgreSQL('testserver');
+	$db = &Database::getPostgreSQL('devserver');
 
 	$query = 'SELECT "chr_accid", "chr_playerid"'
     .PHP_EOL.' FROM "chars"'

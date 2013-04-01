@@ -11,7 +11,7 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charcreate.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
 
-	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'testserver' : 'illarionserver');
+	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
 
 	if ( !isset( $_GET['charid'] ) || !is_numeric( $_GET['charid'] ) )
 	{

@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	$server = ( $_GET['server'] == 1 ? 'testserver' : 'illarionserver' );
+	$server = ( $_GET['server'] == 1 ? 'devserver' : 'illarionserver' );
 	$charname = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', (string)$_GET['charname']);
 	$lang = ( $_GET['lang'] == 'de' ? 'de' : 'us' );
 	$cnt = ( is_numeric($_GET['cnt']) ? (int)$_GET['cnt'] : 0 );

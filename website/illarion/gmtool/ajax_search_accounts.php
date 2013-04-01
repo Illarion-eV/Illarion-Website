@@ -55,7 +55,7 @@
 	if ($search_char)
 	{
 		$illarionserver =& Database::getPostgreSQL( 'illarionserver' );
-		$testserver =& Database::getPostgreSQL( 'testserver' );
+		$devserver =& Database::getPostgreSQL( 'devserver' );
 
 		if ($numeric_search) {
 			$query = 'SELECT chr_accid'
@@ -71,10 +71,10 @@
 			;
 		}
 		$illarionserver->setQuery( $query );
-		$testserver->setQuery( $query );
+		$devserver->setQuery( $query );
 		
 		$acc_list = $illarionserver->loadResultArray();
-		$acc_list = array_merge( $acc_list, $testserver->loadResultArray() );
+		$acc_list = array_merge( $acc_list, $devserver->loadResultArray() );
 		$acc_list = array_unique( $acc_list );
 	}
 

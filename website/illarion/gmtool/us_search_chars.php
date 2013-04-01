@@ -68,9 +68,9 @@
 <fieldset>
 	<legend>Search at</legend>
 	<select name="server" id="server" onchange="performSearch();">
-		<option value="-1">Gameserver and Testserver</option>
+		<option value="-1">Gameserver and Devserver</option>
 		<option value="0" selected="selected">Gameserver</option>
-		<option value="1">Testserver</option>
+		<option value="1">Devserver</option>
 	</select>
 	<br />
 	<input type="checkbox" name="search_in_account" id="search_in_account" onclick="performSearch();" />

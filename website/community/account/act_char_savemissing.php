@@ -13,7 +13,7 @@
     		exit();
     	}
 
-    	$server = ( $_POST['server'] == '1' ? 'testserver' : 'illarionserver');
+    	$server = ( $_POST['server'] == '1' ? 'devserver' : 'illarionserver');
 
     	$pgSQL =& Database::getPostgreSQL( $server );
 
