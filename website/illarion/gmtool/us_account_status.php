@@ -7,7 +7,7 @@
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add('Access denided', 'error');
+		Messages::add('Access denied', 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
