@@ -61,8 +61,6 @@ echo "</pre>";
             echo "</h2>";
             echo "</td></tr>";
 
-            // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
-            //
             if ($_GET['page']==""){ $_GET['page']=0; }
             if ($page['oid']==$_GET['page'])
             {
@@ -86,7 +84,7 @@ echo "</pre>";
                 if ($page['gm_accid']=="") { $page['gm_accid']="Niemand"; }
                 echo $page['gm_accid']."</td></tr>";
                 echo "<input type='hidden' name='time' value='".$page['pager_time']."' />";
-                echo "</from>";
+                echo "</form>";
             }
             echo "</table>";
 
