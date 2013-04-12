@@ -254,7 +254,7 @@ class IllarionData {
 			case 7:
 			case 8: return (Page::isGerman() ? 'Erstellung nicht fertig' : 'Creation not done');
 				break;
-			case 4: return (Page::isGerman() ? 'Namensprüfung' : 'Namecheck pending');
+			case 4: return (Page::isGerman() ? 'Namensprüfung' : 'Name check pending');
 				break;
 			case 6: return (Page::isGerman() ? 'Name abgelehnt' : 'Name rejected');
 				break;
@@ -264,9 +264,9 @@ class IllarionData {
 				break;
 			case 30: return (Page::isGerman() ? 'gebannt' : 'banned');
 				break;
-			case 31: return (Page::isGerman() ? 'vorrübergehend gebannt' : 'temporary banned');
+			case 31: return (Page::isGerman() ? 'vorrübergehend gebannt' : 'temporary ban');
 				break;
-			case 40: return (Page::isGerman() ? 'Informationen unvollständig' : 'Informations imcpmplete');
+			case 40: return (Page::isGerman() ? 'Informationen unvollständig' : 'Information incomplete');
 				break;
 			default: return (Page::isGerman() ? 'unbekannt' : 'unknown');
 				break;
@@ -276,11 +276,11 @@ class IllarionData {
 
 	public static function getAccountStatusName($status) {
 		switch ($status) {
-			case 0: return (Page::isGerman() ? 'registriert' : 'registred');
+			case 0: return (Page::isGerman() ? 'registriert' : 'registered');
 				break;
 			case 3: return (Page::isGerman() ? 'aktiv' : 'active');
 				break;
-			case 7: return (Page::isGerman() ? 'vorrübergehend gesperrt' : 'temporary banned');
+			case 7: return (Page::isGerman() ? 'vorrübergehend gesperrt' : 'temporary ban');
 				break;
 			case 8: return (Page::isGerman() ? 'gesperrt' : 'banned');
 				break;

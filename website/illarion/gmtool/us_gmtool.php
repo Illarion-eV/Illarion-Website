@@ -2,6 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_pages.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/shared/def_gmtool.php' );
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
 	
 	if (!IllaUser::loggedIn())
 	{
@@ -18,7 +19,7 @@
 	$pagecount = countGmPages();
 
 	Page::setTitle( array( 'GM Tool', 'Overview' ) );
-	Page::setDescription( 'On this page you see a overview of all functions the GM Tool offers you.' );
+	Page::setDescription( 'On this page is an overview of all of the functions the GM Tool offers you.' );
 	Page::setKeywords( array( 'GM Tool', 'Overview', 'administration' ) );
 
 	Page::setXHTML();
@@ -50,25 +51,25 @@
     <legend>GM Pages</legend>
     <ul style="list-style-type:none;padding-left:50px;">
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">New GM Pages</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">New GM Pages</a>
             <?php if ( $pagecount['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
                 (<?php echo $pagecount['pages_new']; ?>)
             </span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_IN_WORK; ?>">GM Pages In Progress</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_IN_WORK; ?>">GM Pages In Progress</a>
             <span>(<?php echo $pagecount['pages_in_work']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_DONE; ?>">Completed GM Pages</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_DONE; ?>">Completed GM Pages</a>
             <span>(<?php echo $pagecount['pages_done']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages.php?filter=<?php echo PAGE_STATUS_ARCHIVE; ?>">Archive</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_ARCHIVE; ?>">Archived GM Pages</a>
             <span>(<?php echo $pagecount['pages_archiv']; ?>)</span>
         </li>
 		<li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/de_pages_log.php">Log</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages_log.php">Log</a>
         </li>
     </ul>
 </fieldset>
@@ -81,7 +82,7 @@
 <fieldset style="background: transparent url(<?php echo IllarionData::getItemPicture(3109); ?>) scroll no-repeat 15px center;">
 	<legend>Admin Tools</legend>
 		<ul style="list-style-type:none;padding-left:50px;">
-		<li><a href="<?php echo $url; ?>/illarion/gmtool/de_gms.php">Gamemaster Edit</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/gmtool/us_gms.php">Edit Gamemasters</a></li>
 	</ul>
 </fieldset>
 <?php endif; ?>
