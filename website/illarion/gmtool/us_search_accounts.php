@@ -47,7 +47,7 @@
 	<label for="search_in_account">Search in accounts (ID, name)</label>
 	<br />
 	<input type="checkbox" name="search_in_email" id="search_in_email" checked="checked" onclick="performSearch();" />
-	<label for="search_in_email">Search in e-mail adresses</label>
+	<label for="search_in_email">Search in e-mail addresses</label>
 	<br />
 	<input type="checkbox" name="search_in_char" id="search_in_char" onclick="performSearch();" />
 	<label for="search_in_char">Search in characters (ID, name)</label>

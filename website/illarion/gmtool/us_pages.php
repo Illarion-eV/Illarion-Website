@@ -12,9 +12,9 @@
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Pages' ) );
-    Page::setDescription( 'Auf dieser Seite kannst du gm-pages bearbeiten' );
-    Page::setKeywords( array( 'GM-Tool', 'Pages', 'Übersicht' ) );
+	Page::setTitle( array( 'GM Tool', 'Pages' ) );
+    Page::setDescription( 'Edit GM Pages' );
+    Page::setKeywords( array( 'GM Tool', 'Pages', 'Übersicht' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
 
@@ -25,7 +25,7 @@
 
 ?>
 
-<h1>Gm-Pages - Übersicht</h1>
+<h1>GM Pages</h1>
 
 <?php include_menu(); ?>
 
@@ -47,11 +47,11 @@ echo "</pre>";
         {
 
 			echo "<pre>";
-			print_r($page['oid']);
+			print implode($glue, array $pieces);($page['oid']);
 			echo "</pre>";
 
             if ($page['chr_name']!="") { $char_name=$page['chr_name']; }
-            else { $char_name="Char gelöscht"; }
+            else { $char_name="Char deleted"; }
 
 
             echo "<table width='100%' border='0'>";
@@ -68,20 +68,20 @@ echo "</pre>";
             {
                 echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
-                echo "<td><b>Notiz</b></td></tr>";
+                echo "<td><b>Notice</b></td></tr>";
                 echo "<tr><td><textarea rows='3' cols='80' readonly>";
                 echo $page['pager_text'];
                 echo "</textarea></td>";
                 echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
                 echo $page['pager_note'];
                 echo "</textarea></tr>";
-                echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern'>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...'>";
+                echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Save'>";
+                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Save and...'>";
                 echo "&nbsp;verschieben&nbsp;<select name='move_to'>";
-                echo "<option value='1'>nach \"in Arbeit\"</option>";
-                echo "<option value='2'>nach \"Erledigt\"</option>";
-                echo "<option value='3'>ins Archiv</option></select>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Löschen'></td>";
+                echo "<option value='1'>nach \"In Progress\"</option>";
+                echo "<option value='2'>nach \"Completed\"</option>";
+                echo "<option value='3'>Archived</option></select>";
+                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Delete'></td>";
                 echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
                 if ($page['gm_accid']=="") { $page['gm_accid']="Niemand"; }
                 echo $page['gm_accid']."</td></tr>";
