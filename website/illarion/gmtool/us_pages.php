@@ -8,7 +8,7 @@
 	if (!IllaUser::auth('gmtool_pages'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -57,7 +57,7 @@ echo "</pre>";
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=".$url."/illarion/gmtool/de_pages.php?filter=0&page=".$page['oid'].">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo "<a href=".$url."/illarion/gmtool/us_pages.php?filter=0&page=".$page['oid'].">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
             echo "</td></tr>";
 
@@ -66,7 +66,7 @@ echo "</pre>";
             if ($_GET['page']==""){ $_GET['page']=0; }
             if ($page['oid']==$_GET['page'])
             {
-                echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&page=".$_GET['page']."' method='post'>";
+                echo "<form action='".Page::getURL()."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notice</b></td></tr>";
                 echo "<tr><td><textarea rows='3' cols='80' readonly>";
