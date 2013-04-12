@@ -21,7 +21,7 @@
 						.PHP_EOL." WHERE gmpager.pager_status = ".$pgSQL->Quote($filter)
 						.PHP_EOL." ORDER BY illarionserver.gmpager.pager_time DESC"
 						.PHP_EOL." LIMIT 30;";
-		echo $query;
+//		echo $query;
       	$pgSQL->setQuery( $query );
 		
       	$pages = $pgSQL->loadAssocList();

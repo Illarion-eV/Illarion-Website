@@ -39,7 +39,7 @@
 
 echo "<pre>";
 echo "<p>";
-print_r($pages);
+print implode($pages);
 echo "</p>";
 echo "</pre>";
 
