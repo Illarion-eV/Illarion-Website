@@ -38,16 +38,14 @@
 <?php
 
 echo "<pre>";
-echo "<p>";
-print_r($pages);
-echo "</p>";
+print(htmlspecialchars($pages));
 echo "</pre>";
 
         foreach ($pages as $page)
         {
 
 			echo "<pre>";
-			print implode($glue, array $pieces);($page['oid']);
+			print implode($page['oid']);
 			echo "</pre>";
 
             if ($page['chr_name']!="") { $char_name=$page['chr_name']; }
