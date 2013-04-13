@@ -38,7 +38,7 @@
 <?php
 
 echo "<pre>";
-print(htmlspecialchars(var_export($pages, TRUE)))
+print(htmlspecialchars(var_export($pages, TRUE)));
 echo "</pre>";
 
         foreach ($pages as $page)
