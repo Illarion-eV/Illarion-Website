@@ -14,7 +14,7 @@
 
 	Page::setTitle( array( 'GM Tool', 'Pages' ) );
     Page::setDescription( 'Edit GM Pages' );
-    Page::setKeywords( array( 'GM Tool', 'Pages', 'Übersicht' ) );
+    Page::setKeywords( array( 'GM Tool', 'Pages', 'Overview' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
 
@@ -55,7 +55,7 @@ echo "</pre>";
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=".$url."/illarion/gmtool/us_pages.php?filter=0&page=".$page['oid'].">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo '<a href="'.$url.'/illarion/gmtool/us_pages.php?filter=0&page='.$page['oid'].'>'.$page['pager_time'].' - '.$char_name.' ('.$page['pager_user'].')"</a>';
             echo "</h2>";
             echo "</td></tr>";
 
@@ -73,13 +73,13 @@ echo "</pre>";
                 echo "</textarea></tr>";
                 echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Save'>";
                 echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Save and...'>";
-                echo "&nbsp;verschieben&nbsp;<select name='move_to'>";
-                echo "<option value='1'>nach \"In Progress\"</option>";
-                echo "<option value='2'>nach \"Completed\"</option>";
-                echo "<option value='3'>Archived</option></select>";
+                echo "&nbsp;Move to&nbsp;<select name='move_to'>";
+                echo "<option value='1'>\"In Progress\"</option>";
+                echo "<option value='2'>\"Completed\"</option>";
+                echo "<option value='3'>Archive</option></select>";
                 echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Delete'></td>";
-                echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
-                if ($page['gm_accid']=="") { $page['gm_accid']="Niemand"; }
+                echo "&nbsp;<td><b>Last amended by:</b>&nbsp;";
+                if ($page['gm_accid']=="") { $page['gm_accid']="Nobody"; }
                 echo $page['gm_accid']."</td></tr>";
                 echo "<input type='hidden' name='time' value='".$page['pager_time']."' />";
                 echo "</form>";
