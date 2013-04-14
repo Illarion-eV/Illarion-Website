@@ -55,7 +55,7 @@ echo "</pre>";
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=".$url."/illarion/gmtool/us_pages.php?filter=0&page=".$page['oid'].">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo '<a href="'.$url.'/illarion/gmtool/us_pages.php?filter=0&page='.$page['oid'].'>'.$page['pager_time'].' - '.$char_name.' ('.$page['pager_user'].')"</a>';
             echo "</h2>";
             echo "</td></tr>";
 
