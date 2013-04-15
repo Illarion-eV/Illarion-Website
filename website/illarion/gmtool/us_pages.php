@@ -62,7 +62,7 @@ echo "</pre>";
             if ($_GET['page']==""){ $_GET['page']=0; }
             if ($page['oid']==$_GET['page'])
             {
-                echo "<form action='".Page::getURL()."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&page=".$_GET['page']."' method='post'>";
+                echo "<form action='".Page::getURL()."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&amp;page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notice</b></td></tr>";
                 echo "<tr><td><textarea rows='3' cols='80' readonly>";
