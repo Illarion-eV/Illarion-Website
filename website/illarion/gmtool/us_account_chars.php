@@ -39,7 +39,7 @@
 	Page::Init();
 ?>
 
-<h1>Characterlist - <?php echo $account_name; ?></h1>
+<h1>Character List - <?php echo $account_name; ?></h1>
 
 <?php include_menu(); ?>
 

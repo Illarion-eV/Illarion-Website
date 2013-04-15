@@ -15,7 +15,7 @@
 
 	if (!$accid)
 	{
-		Messages::add('Account ID was not transfered correctly', 'error');
+		Messages::add('Account ID was not transferred correctly', 'error');
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
@@ -73,8 +73,8 @@
 			<dt>Language</dt>
 			<dd>
 				<select name="lang">
-					<option value="0"<?php echo ($account_data['lang'] ? '' : ' selected="selected"'); ?>>german</option>
-					<option value="1"<?php echo ($account_data['lang'] ? ' selected="selected"' : ''); ?>>english</option>
+					<option value="0"<?php echo ($account_data['lang'] ? '' : ' selected="selected"'); ?>>German</option>
+					<option value="1"<?php echo ($account_data['lang'] ? ' selected="selected"' : ''); ?>>English</option>
 				</select>
 			</dd>
 			<dt>Length</dt>
