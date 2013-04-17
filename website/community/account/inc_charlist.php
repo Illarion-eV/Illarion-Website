@@ -70,7 +70,7 @@
 			case 31: // temp banned
 				if ( $character['ply_dob'] == 0 )
 				{
-					return '<a href="'.Page::getURL().'/community/account/'.Page::getLanguage().'_char_missinginfo.php'.$id.'"'.($enable_lightwindow ? ' onclick="'.JSBuilder::Lightwindow_activate( null, ( Page::isGerman() ? 'Fehlende Informationen für '.$name : 'Missing informations for '.$name ), 460, 340, true ).'"' : '' ).'>'.$name.'</a>';
+					return '<a href="'.Page::getURL().'/community/account/'.Page::getLanguage().'_char_missinginfo.php'.$id.'"'.($enable_lightwindow ? ' onclick="'.JSBuilder::Lightwindow_activate( null, ( Page::isGerman() ? 'Fehlende Informationen für '.$name : 'Missing information for '.$name ), 460, 340, true ).'"' : '' ).'>'.$name.'</a>';
 				}
 				else
 				{
@@ -78,7 +78,7 @@
 				}
 				break;
 			case 40: // infos reset
-				return '<a href="'.Page::getURL().'/community/account/'.Page::getLanguage().'_char_missinginfo.php'.$id.'"'.($enable_lightwindow ? ' onclick="'.JSBuilder::Lightwindow_activate( null, ( Page::isGerman() ? 'Fehlende Informationen für '.$name : 'Missing informations for '.$name ), 460, 490, true ).'"' : '' ).'>'.$name.'</a>';
+				return '<a href="'.Page::getURL().'/community/account/'.Page::getLanguage().'_char_missinginfo.php'.$id.'"'.($enable_lightwindow ? ' onclick="'.JSBuilder::Lightwindow_activate( null, ( Page::isGerman() ? 'Fehlende Informationen für '.$name : 'Missing information for '.$name ), 460, 490, true ).'"' : '' ).'>'.$name.'</a>';
 				break;
 			default:
 				return $name;
@@ -96,7 +96,7 @@
 			case 31: // temp banned
 				if ( $character[ 'ply_dob' ] == 0 )
 				{
-					return ( Page::isGerman() ? 'Informationen unvollständig' : 'Informations are incomplete' );
+					return ( Page::isGerman() ? 'Informationen unvollständig' : 'Information is incomplete' );
 				}
 				else
 				{

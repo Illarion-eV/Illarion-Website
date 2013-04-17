@@ -53,7 +53,7 @@
 	}
     if (!is_null($ts_chars)) {
        foreach($ts_chars as $key=>$char) {
-           echo '<char server="testserver" status="',$char['chr_status'], '" lastLogin="',$char['chr_lastsavetime'], '">',$char['chr_name'],'</char>';	
+           echo '<char server="devserver" status="',$char['chr_status'], '" lastLogin="',$char['chr_lastsavetime'], '">',$char['chr_name'],'</char>';	
        }
     }
     echo '</chars>';
