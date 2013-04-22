@@ -6,6 +6,7 @@
 * @copyright Copyright (C) 1997 - 2008 Illarion e.V. All rights reserved.
 * @author Martin Karing <nitram@illarion.org>
 */
+
 class Page {
 	/**
 	* The non-ssl default url of the page
@@ -58,32 +59,30 @@ class Page {
 
 	/**
 	* The non-ssl default hardware path of the page
-	*
-	* @const string
 	*/
-	const base_path = '/var/www/illarion/website';
+	static private $base_path;
 
 	/**
 	* The non-ssl default hardware path of the images
-	*
-	* @const string
 	*/
-	const base_images_path = '/var/www/illarion/website/shared/pics';
+	static private $base_images_path;
 
 	/**
 	* The non-ssl default hardware path of the static media
-	*
-	* @const string
 	*/
-	const base_media_path = '/var/www/illarion/website/media';
+	static private $base_media_path;
 
 	/**
 	* The ssl default hardware path of the page
-	*
-	* @const string
 	*/
-	const base_ssl_path = '/var/www/illarion/website/ssl';
+	static private $base_ssl_path;
 
+    static function initPaths() {
+        Page::$base_path = $_SERVER['DOCUMENT_ROOT'];
+        Page::$base_images_path = Page::$base_path . '/shared/pics';
+        Page::$base_media_path = Page::$base_path . '/media';
+        Page::$base_ssl_path = Page::$base_path . '/ssl';
+    }
 	/**
 	* Status of the Illarion Server
 	* 0 = online
@@ -385,7 +384,7 @@ class Page {
 	* @return string
 	*/
 	static public function getRootPath() {
-		return self::base_path;
+		return Page::$base_path;
 	}
 
 	/**
@@ -395,7 +394,7 @@ class Page {
 	* @return string
 	*/
 	static public function getImageRootPath() {
-		return self::base_images_path;
+		return Page::$base_images_path;
 	}
 
 	/**
@@ -405,7 +404,7 @@ class Page {
 	* @return string
 	*/
 	static public function getMediaRootPath() {
-		return self::base_media_path;
+		return Page::$base_media_path;
 	}
 
 	/**
@@ -415,7 +414,7 @@ class Page {
 	* @return string
 	*/
 	static public function getSecureRootPath() {
-		return self::base_ssl_path;
+		return Page::$base_ssl_path;
 	}
 
 	/**
@@ -1192,12 +1191,12 @@ class Page {
 			return $org_cap;
 		}
 
-		$hardward_path = self::base_images_path . '/caps/' . $cap . '.png';
+		$hardware_path = Page::$base_images_path . '/caps/' . $cap . '.png';
 		$software_path = '{IMAGE_URL}/caps/' . $cap . '.png';
-		if (!is_file($hardward_path)) {
+		if (!is_file($hardware_path)) {
 			return $org_cap;
 		}
-		$img_size = getimagesize($hardward_path);
+		$img_size = getimagesize($hardware_path);
 		$padding_top = 9;
 		$padding_bottom = 0;
 
@@ -1255,7 +1254,7 @@ class Page {
 
 			self::optimizeOutput($output);
 		}else {
-			$output = file_get_contents(self::base_path . '/shared/template.xhtml');
+			$output = file_get_contents(Page::$base_path . '/shared/template.xhtml');
 			$search_keywords = array();
 			$search_replace = array();
 			$search_cnt = - 1;
@@ -1314,7 +1313,7 @@ class Page {
 			$search_replace[$search_cnt] = str_replace('"', '&quot;', implode(',', array_unique($keywords)));
 
 			$filelist = get_included_files();
-			$last_mod = array(filemtime(self::base_path . '/shared/template.xhtml'));
+			$last_mod = array(filemtime(Page::$base_path . '/shared/template.xhtml'));
 			foreach($filelist as $file) {
 				if (is_file($file)) {
 					$last_mod[] = filemtime($file);
@@ -1463,7 +1462,7 @@ class Page {
 				$search_replace[$search_cnt] = '';
 			}else {
 				$search_keywords[++$search_cnt] = '{SYSTEM_MESSAGES}';
-				$search_replace[$search_cnt] = file_get_contents(self::base_path . '/shared/msg_template.xhtml');
+				$search_replace[$search_cnt] = file_get_contents(Page::$base_path . '/shared/msg_template.xhtml');
 				$search_keywords[++$search_cnt] = '{MESSAGES}';
 				$search_replace[$search_cnt] = Messages::parse();
 			}
@@ -1782,5 +1781,7 @@ class Page {
 		self::$errors[] = $error;
 	}
 }
+
+Page::initPaths();
 
 ?>

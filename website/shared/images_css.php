@@ -111,7 +111,7 @@ dl.messages dd.note ul {
 	$output = str_replace( array(' }', '} '), '}', $output );
 	$output = str_replace( ': ', ':', $output );
 
-	$file_res = fopen( '/var/www/illarion/shared/pics/'.$lang.'_image_bundle.css', 'w' );
+	$file_res = fopen( $_SERVER['DOCUMENT_ROOT'].'/shared/pics/'.$lang.'_image_bundle.css', 'w' );
 	fwrite( $file_res, $output );
 	fclose( $file_res );
 
