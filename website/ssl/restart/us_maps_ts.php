@@ -52,12 +52,6 @@ maps in the SVN repo are exactly in the way they are supposed to be on the serve
     echo htmlentities(`sudo -u devserver rm /usr/share/servers/devserver/map/Illarion_* -f -v`);
 ?></pre>
 
-<p>Updating Map Data:</p>
-
-<pre style="max-height: 130pt;overflow-y: scroll;"><?php
-    echo htmlentities(`svn update /usr/share/servers/devserver/map/import 2>&1`);
-?></pre>
-
 <p>Causing the server to reload the maps:</p>
 
 <pre style="max-height: 130pt;overflow-y: scroll;"><?php
