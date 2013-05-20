@@ -10,7 +10,6 @@
 ?>
 
 <h1>Entwicklungsfortschritt (VBU)</h1>
-
 <p>
     Legende:
     <span class="planned">Geplant</span>,
@@ -20,7 +19,6 @@
 </p>
 
 <h2>Server</h2>
-
 <ul>
     <li><span class="done">Lua-Anbindung</span></li>
     <li><span class="done">Lernsystem</span></li>
@@ -29,7 +27,6 @@
 </ul>
 
 <h2>Client</h2>
-
 <ul>
     <li class="done">Resourcenverwaltung</li>
     <li class="done">Server-Protokoll</li>
@@ -95,7 +92,6 @@
 </ul>
 
 <h2>Homepage</h2>
-
 <ul>
     <li><span class="done">Charakter-Erstellung</span></li>
     <li><span class="inProgress">GM-Tool</span></li>
