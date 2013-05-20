@@ -1,7 +1,7 @@
 <?php
 include ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
 Page::setTitle( 'Illarion - Chat' );
-Page::setDescription( 'This webchat client allows access to the Illarion IRC channel without an additional IRC client needed.' );
+Page::setDescription( 'Dieser Webchat-Client ermöglicht den Zugriff auf den Illarion IRC Channel ohne einen zusätzlichen IRC-Clients.' );
 Page::setKeywords( array( 'Chat, IRC' ) );
 Page::setXHTML();
 Page::Init();
@@ -11,7 +11,7 @@ Page::Init();
 
 
 <p>Auf dieser Seite wird eine Verbindung zum Quakenet IRC-Servernetzwerk hergestellt um dem Illarion-Chat beizutreten.<br />
-In diesem Chat gelten sowohl die <a href="<?php echo $url; ?>/illarion/us_rules.php">Regeln von Illarion</a> als auch die <a href="http://www.quakenet.org/">Regeln von Quakenet</a>.</p>
+In diesem Chat gelten sowohl die <a href="<?php echo $url; ?>/illarion/de_rules.php">Regeln von Illarion</a> als auch die <a href="http://www.quakenet.org/">Regeln von Quakenet</a>.</p>
 <p>Solltest du einen anderen IRC-Client verwenden wollen sind dies die nötigen Zugangsdaten:</p>
 <dl>
 	<dt>Server:</dt>
