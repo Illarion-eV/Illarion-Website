@@ -7,7 +7,7 @@ Page::setXHTML();
 Page::Init();
 ?>
 
-<h1>Illarion TeamSpeak chat</h1>
+<h1>Illarion TeamSpeak Chat</h1>
 <p>Der Illarion TeamSpeak-Server ermöglicht Sprach- und Text-Chat für Spieler und den Staff.</p>
 
 <h2>Starte TeamSpeak</h2>
