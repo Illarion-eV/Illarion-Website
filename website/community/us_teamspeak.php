@@ -17,7 +17,7 @@ Page::Init();
 <p>On the TeamSpeak server the <a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> apply.</p>
 
 <h2>Download TeamSpeak 3 client</h2>
-<p><a href="http://www.teamspeak.com/?page=downloads" target="_blank"><img src="teamspeak.jpg" alt="Download from www.teamspeak.com" /></a></p>
+<p class="center"><a href="http://www.teamspeak.com/?page=downloads" target="_blank"><img src="teamspeak.jpg" alt="Download from www.teamspeak.com" /></a></p>
 
 <h2>Minimum Requirements</h2>
 
