@@ -5,10 +5,12 @@
     // item: id of the item used for the points column header
     // item_title: title of the points column header to be shown for the item picture
     // item_alt: text to display as points column header if the item picture cannot be displayed
+	// pointsConverter: the function that is used to convert the points value to the displayed value, may be null to use the default converter (default: null)
     function addHighscore($title, $select, $lang, $item, $item_title, $item_alt, $pointsConverter = null) {
 		if ($pointsConverter == null) {
 			$pointsConverter = function($value) {
-									return number_format($value); 
+									$locale = localeconv();
+									return number_format($value, 0, $locale['decimal_point'], $locale['thousands_sep']); 
 							   };
 		}
         echo '<h2>'.$title.'</h2>';
