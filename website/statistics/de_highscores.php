@@ -86,6 +86,7 @@
     .PHP_EOL.'      FROM illarionserver.questprogress'
     .PHP_EOL.'      WHERE qpg_questid IN (801, 802, 803) AND NOT qpg_userid IN (SELECT gms.gm_charid FROM illarionserver.gms)'
     .PHP_EOL.'      GROUP BY id'
+    .PHP_EOL.'      LIMIT 20'
     .PHP_EOL.'     )'
     .PHP_EOL.'AS arenapoints'
     .PHP_EOL.'INNER JOIN illarionserver.chars'
