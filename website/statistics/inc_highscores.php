@@ -5,7 +5,10 @@
     // item: id of the item used for the points column header
     // item_title: title of the points column header to be shown for the item picture
     // item_alt: text to display as points column header if the item picture cannot be displayed
-    function addHighscore($title, $select, $lang, $item, $item_title, $item_alt, $pointsConverter = function($value) { return number_format($value); }) {
+    function addHighscore($title, $select, $lang, $item, $item_title, $item_alt, $pointsConverter = null) {
+		if ($pointsConverter == null) {
+			$pointsConverter = function($value) { return number_format($value); }
+		}
         echo '<h2>'.$title.'</h2>';
     
         $query = 'SELECT id, chr_name AS name, points, qpg_progress AS faction, '
