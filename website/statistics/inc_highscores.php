@@ -7,7 +7,9 @@
     // item_alt: text to display as points column header if the item picture cannot be displayed
     function addHighscore($title, $select, $lang, $item, $item_title, $item_alt, $pointsConverter = null) {
 		if ($pointsConverter == null) {
-			$pointsConverter = function($value) { return number_format($value); }
+			$pointsConverter = function($value) {
+									return number_format($value); 
+							   };
 		}
         echo '<h2>'.$title.'</h2>';
     
