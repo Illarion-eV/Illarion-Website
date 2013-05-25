@@ -602,7 +602,7 @@ function getHalflingFemaleHairArray($lang="")
 	{
 		return array(
 		    HALFLING_FEMALE_HAIR_1 => "Mittellange, glatte Haare",
-		    HALFLING_FEMALE_HAIR_2 => "Mittellange, glatte",
+		    HALFLING_FEMALE_HAIR_2 => "Mittellange, buschige Haare",
 		    HALFLING_FEMALE_HAIR_4 => "Hochgesteckte Haare",
 		 	HALFLING_FEMALE_HAIR_9 => "Pferdeschwanz"
 		);
