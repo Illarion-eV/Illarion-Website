@@ -7,7 +7,6 @@
 	Page::setKeywords( array( 'Highscore', 'Spieler', 'Statistik' ) );
 
 	Page::addCSS( 'onlineplayer' );
-	Page::addCSS( 'highscore' );
 
 	Page::setXHTML();
 	Page::Init();

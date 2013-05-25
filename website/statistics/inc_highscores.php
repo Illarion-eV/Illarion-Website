@@ -30,7 +30,7 @@
     	$list = $pgSQL->loadAssocList();
     	
     	if (!is_null($list)) {
-            echo '<table border="0">';
+            echo '<table border="0" align="left">';
             
             echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th><th>Charakter</th>' : '<tr><th></th><th>Faction</th><th>Character</th>';
             echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$item.'.png" alt="'.$item_alt.'" title="'.$item_title.'"/></th></tr>';
@@ -69,6 +69,52 @@
     	    }
     	    
     	    echo '</table>';
+    	}
+        
+        $query = 'SELECT SUM(points) AS points, qpg_progress AS faction'
+        .PHP_EOL.'FROM ('
+        .PHP_EOL.'      SELECT id, points from ('.$select.') AS internal_query'
+        .PHP_EOL.'      WHERE NOT id IN (SELECT gms.gm_charid FROM illarionserver.gms)'
+        .PHP_EOL.'     )'
+        .PHP_EOL.'AS points_query'
+    	.PHP_EOL.'INNER JOIN illarionserver.questprogress'
+    	.PHP_EOL.'ON id = qpg_userid AND qpg_questid = 199 AND qpg_progress IN (1, 2, 3)'
+    	.PHP_EOL.'GROUP BY faction'
+        .PHP_EOL.'ORDER BY points DESC;';
+        
+        $pgSQL->setQuery( $query );
+    	$list = $pgSQL->loadAssocList();
+    	
+    	if (!is_null($list)) {
+            echo '<table border="0" align="right">';
+            
+            echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th>' : '<tr><th></th><th>Faction</th>';
+            echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$item.'.png" alt="'.$item_alt.'" title="'.$item_title.'"/></th></tr>';
+            
+            $i = 1;
+            $row = 0;
+    	    foreach($list as $key=>$faction) {
+    	        echo '<tr class="row'.$row.'">';
+    	        echo '<td>',$i,'.</td>';
+    	        echo '<td style="text-align:center;">';
+    	        
+    	        if ($faction["faction"] == 1) {
+    	            echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
+    	        } else if ($faction["faction"] == 2) {
+    	            echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
+    	        } else if ($faction["faction"] == 3) {
+    	            echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
+    	        }
+    	            
+    	        echo '</td>';	        
+    	        echo '<td style="text-align:center;">',$faction['points'],'</td>';
+    	        echo '</tr>';
+    	        
+    	        $i = $i + 1;
+    	        $row = 1 - $row;
+    	    }
+    	    
+    	    echo '</table><br clear="all" />';
     	}
         
         Page::insert_go_to_top_link();
