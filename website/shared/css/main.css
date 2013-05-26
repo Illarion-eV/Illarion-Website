@@ -336,6 +336,12 @@ a.banner_left {
 	display: block;
 }
 
+div.tagline {
+	color: rgb(212, 185, 110);
+	margin-bottom: -20px; /* fix banner_right */
+	display: block;
+}
+
 div.banner_right {
 	background: transparent url(pics/kugel.png) no-repeat scroll 0 0;
 	float:right;
@@ -343,6 +349,7 @@ div.banner_right {
 	width:166px;
 	padding:0;
 	margin: 0 -35px -164px 0;
+	display: block;
 }
 
 div.head_button {
