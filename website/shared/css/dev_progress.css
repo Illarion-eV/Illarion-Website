@@ -1,0 +1,19 @@
+.planned {
+	font-weight: bold;
+	color: #000000;
+}
+
+.inProgress {
+	font-weight: bold;
+	color: #8B0000;
+}
+
+.testing {
+	font-weight: bold;
+	color: #285917;
+}
+
+.done {
+	font-weight: bold;
+	color: #152B85;
+}

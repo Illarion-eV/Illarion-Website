@@ -7,13 +7,13 @@
 		$entries = array();
 		$params = "?charid=".$charid."&amp;server=".$server;
 
-        $entries[1] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Informationen' : 'Informations' ) );
+        $entries[1] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Informationen' : 'Information' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character.php').$params, 'name'=>( Page::isGerman() ? 'Allgemeines' : 'General' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_settings.php').$params, 'name'=>( Page::isGerman() ? 'Einstellungen' : 'Settings' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_style.php').$params, 'name'=>( Page::isGerman() ? 'Aussehen' : 'Style' ) );
 			$entries[1]['sub'][] = array( 'link'=>getUrlString('character_log.php').$params, 'name'=>( Page::isGerman() ? 'Log' : 'Log' ) );
         $entries[2] = array( 'link'=>getUrlString('character_status.php').$params, 'name'=>( Page::isGerman() ? 'Status' : 'Status' ) );
-        $entries[3] = array( 'link'=>getUrlString('character_attributs.php').$params, 'name'=>( Page::isGerman() ? 'Attribute' : 'Attributs' ) );
+        $entries[3] = array( 'link'=>getUrlString('character_attributs.php').$params, 'name'=>( Page::isGerman() ? 'Attribute' : 'Attributes' ) );
         $entries[4] = array( 'link'=>'', 'name'=>( Page::isGerman() ? 'Skills' : 'Skills' ) );
 			foreach ($skill_groups as $key => $group)
 			{

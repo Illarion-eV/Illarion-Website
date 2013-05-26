@@ -78,7 +78,7 @@ class Page {
 	static private $base_ssl_path;
 
     static function initPaths() {
-        Page::$base_path = $_SERVER['DOCUMENT_ROOT'];
+        Page::$base_path = '/var/www/illarion/website';
         Page::$base_images_path = Page::$base_path . '/shared/pics';
         Page::$base_media_path = Page::$base_path . '/media';
         Page::$base_ssl_path = Page::$base_path . '/ssl';
@@ -1763,7 +1763,7 @@ class Page {
 			if (count($backtrace) > 0) {
 				$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace' . $error_id . '\').style.display = \'block\';">Show Backtrace</a><div class="backtrace" id="backtrace' . $error_id . '">';
 				for($i = count($backtrace) - 1;$i >= 0;--$i) {
-					if ($backtrace[$i]['function'] != 'trigger_error' && $backtrace[$i]['function'] != 'errorHandler') {
+					if (isset($backtrace[$i]['function']) && $backtrace[$i]['function'] != 'trigger_error' && $backtrace[$i]['function'] != 'errorHandler') {
 						$error .= '<i>' . str_replace(self::getRootPath(), '', $backtrace[$i]['file']) . ':' . $backtrace[$i]['line'] . '</i>: ' . (isset($backtrace[$i]['class']) ? $backtrace[$i]['class'] . '::' : '') . $backtrace[$i]['function'] . '()';
 						if (count($backtrace[$i]['params']) > 0) {
 							$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace_params' . $error_id . '_' . $i . '\').style.display = \'block\';">Show Parameters</a><div class="backtrace_params" id="backtrace_params' . $error_id . '_' . $i . '">';
