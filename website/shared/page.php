@@ -78,7 +78,7 @@ class Page {
 	static private $base_ssl_path;
 
     static function initPaths() {
-        Page::$base_path = $_SERVER['DOCUMENT_ROOT'];
+        Page::$base_path = '/var/www/illarion/website';
         Page::$base_images_path = Page::$base_path . '/shared/pics';
         Page::$base_media_path = Page::$base_path . '/media';
         Page::$base_ssl_path = Page::$base_path . '/ssl';
