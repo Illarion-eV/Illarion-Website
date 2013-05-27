@@ -28,6 +28,7 @@
 	</a>
 	Aktuelle Neuigkeiten
 </h1>
+<p>Möchtest du stets auf dem Laufenden gehalten werden und die aktuellen Neuigkeiten mit deinem E-Mail-Client oder Browser empfangen? <a href="<?php echo Page::getURL(); ?>/general/de_rss.php">Abbonniere unseren RSS-Feed!</a></p>
 
 <?php if (IllaUser::auth('news')): ?>
 <a href="<?php echo Page::getCurrentURL(); ?>/general/de_edit_news.php">Neuen Newseintrag erstellen</a>
