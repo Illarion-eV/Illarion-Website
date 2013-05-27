@@ -28,6 +28,7 @@
 	</a>
 	News
 </h1>
+<p>Do you want to stay tuned and receive the latest news with your email client or browser? <a href="<?php echo Page::getURL(); ?>/general/us_rss.php">Subscribe to our RSS feed!</a></p>
 
 <?php if (IllaUser::auth('news')): ?>
 <a href="<?php echo Page::getCurrentURL(); ?>/general/us_edit_news.php">Create new newsentry</a>
