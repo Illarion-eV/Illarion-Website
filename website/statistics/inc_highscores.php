@@ -165,6 +165,11 @@
                                       66, ['us' => 'marker stones', 'de' => 'Markierungssteine'], ['us' => 'marker stone', 'de' => 'Markierungsstein']
                         );
 
+        $highscores[] = new HighScore(['us' => 'King of the Shovel', 'de' => 'Buddlerk&ouml;nig'],
+                                      "SELECT qpg_userid AS id, qpg_progress AS points FROM illarionserver.questprogress WHERE qpg_questid = 12345",
+                                      505, ['us' => 'collected treasures', 'de' => 'Gehobene Sch&auml;tze'], ['us' => 'treasure map', 'de' => 'Schatzkarte']
+                        );
+
         foreach ($highscores as $highscore) {
             $highscore->print_on_site($lang);
         }
