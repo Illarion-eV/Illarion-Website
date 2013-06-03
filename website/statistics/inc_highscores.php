@@ -160,7 +160,7 @@
                                       1, ['us' => 'arena points', 'de' => 'Arenapunkte'], ['us' => 'sword', 'de' => 'Schwert']
                         );
 
-        $highscores[] = new HighScore(['us' => 'Gold Rush', 'de' => 'Illarionbummler'],
+        $highscores[] = new HighScore(['us' => 'Illariontrotter', 'de' => 'Illarionbummler'],
                                       "SELECT qpg_userid AS id, SUM(char_length(replace((CASE WHEN qpg_progress < 0 THEN 2147483647-qpg_progress::bigint ELSE qpg_progress END)::bit(64)::text, '0', ''))) AS points FROM illarionserver.questprogress WHERE qpg_questid >= 130 AND qpg_questid < 150 GROUP BY id",
                                       66, ['us' => 'marker stones', 'de' => 'Markierungssteine'], ['us' => 'marker stone', 'de' => 'Markierungsstein']
                         );
