@@ -159,7 +159,8 @@
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($factionTotal) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td colspan="2"><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
+			<td><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
+			<td><?php echo $this->getFactionName($factionTotal[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionTotal[$i]['points']); ?></td>
 			<?php else: ?>
 			<td colspan="4" style="visibility:hidden;" />
@@ -169,7 +170,8 @@
 			
 			<?php if (count($factionMonthly) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td colspan="2"><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
+			<td><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
+			<td><?php echo $this->getFactionName($factionMonthly[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionMonthly[$i]['points']); ?></td>
 			<?php else: ?>
 			<td colspan="4" style="visibility:hidden;" />
@@ -242,18 +244,36 @@
         }
 		
 		function getFactionImageHtml($faction) {
+			$factionName = $this->getFactionName($faction);
+			$text = ' alt="' . $factionName . '" title="' . $factionName . '"'; 
 			switch ($faction) {
 				case 1: // Cadomyr
-					echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
+					echo '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				case 2: // Runewick
-					echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
+					echo '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				case 3: // Galmair
-					echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
+					echo '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				default:
 					echo '<div style="height:32px;width:32px;display:block;" />';
+			}
+		}
+		
+		function getFactionName($faction) {
+			switch ($faction) {
+				case 1: // Cadomyr
+					echo 'Cadomyr';
+					break;
+				case 2: // Runewick
+					echo 'Runewick';
+					break;
+				case 3: // Galmair
+					echo 'Galmair';
+					break;
+				default:
+					echo '';
 			}
 		}
     }
