@@ -316,6 +316,7 @@
             echo $highscore->getContentEntry($lang);
         }
 		echo '</ul>';
+		echo '<div class="clr"></div>';
 	}
 
     function print_highscores($lang) {
