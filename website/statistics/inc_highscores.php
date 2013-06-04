@@ -136,7 +136,7 @@
 	<thead>
 		<tr>
 			<th style="width:50%" colspan="4"><?php echo ($lang == 'de') ? 'Insgesamt' : 'Total'; ?></th>
-			<td style="width:12px" />
+			<td style="width:12px; visibility:hidden;" />
 			<th style="width:50%" colspan="4"><?php echo ($lang == 'de') ? 'Aktueller Monat' : 'Current Month'; ?></th>
 		</tr>
 	</thead>
@@ -180,8 +180,22 @@
 		<tr>
 			<td colspan="9" style="height: 10px" />
 		</tr>
+		<tr>
+			<th></th>
+			<th><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
+			<th><?php echo ($lang == 'de') ? 'Charakter' : 'Character'; ?></th>
+			<th>
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			</th>
+			<td style="visibility:hidden;" />
+			<th></th>
+			<th><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
+			<th><?php echo ($lang == 'de') ? 'Charakter' : 'Character'; ?></th>
+			<th>
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			</th>
+		</tr>
 		<?php for ($i = 0; $i < $maxChars; $i++): ?>
-		<?php if ((count($characterTotal) < $i) || (count($characterMonthly) < $i)): ?>
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($characterTotal) < $i): ?>
 			<td><?php echo $i; ?></td>
@@ -219,7 +233,6 @@
 			<td colspan="4" style="visibility:hidden;" />
 			<?php endif; ?>
 		</tr>
-		<?php endif; ?>
 		<?php endfor; ?>
 	</tbody>
 </table>
