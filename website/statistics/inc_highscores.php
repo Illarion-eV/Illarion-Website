@@ -6,6 +6,7 @@
         private $points_item;
         private $item_title;
         private $item_alt;
+		private $item_anchor;
 
         private function pointsConverter($value) {
             $locale = localeconv();
@@ -17,13 +18,14 @@
         // points_item: id of the item used for the points column header
         // item_title: title of the points column header to be shown for the item picture (array keys: us, de)
         // item_alt: text to display as points column header if the item picture cannot be displayed (array keys: us, de)
-        function __construct($title, $select, $points_item, $item_title, $item_alt, $monthly_table) {
+        function __construct($title, $select, $points_item, $item_title, $item_alt, $monthly_table, $anchor) {
             $this->title = $title;
             $this->select = $select;
             $this->points_item = $points_item;
             $this->item_title = $item_title;
             $this->item_alt = $item_alt;
             $this->monthly_table = $monthly_table;
+			$this->item_anchor = $anchor;
         }
 
         function calc_monthly_offset() {
@@ -131,6 +133,7 @@
 			
 			// Output HTML
 ?>
+<div><a id="<?php echo $this->item_anchor; ?>" /></div>
 <h2><?php echo $this->title[$lang]; ?></h2>
 <table style="width:100%">
 	<thead>
@@ -243,7 +246,7 @@
             
         }
 		
-		function getFactionImageHtml($faction) {
+		private function getFactionImageHtml($faction) {
 			$factionName = $this->getFactionName($faction);
 			$text = ' alt="' . $factionName . '" title="' . $factionName . '"'; 
 			switch ($faction) {
@@ -261,7 +264,7 @@
 			}
 		}
 		
-		function getFactionName($faction) {
+		private function getFactionName($faction) {
 			switch ($faction) {
 				case 1: // Cadomyr
 					return 'Cadomyr';
@@ -276,6 +279,10 @@
 					return '';
 			}
 		}
+		
+		public function getContentEntry($lang) {
+			return '<li><a href="#' . $this->item_anchor . '">' . $this->title[$lang] . '</a></li>';
+		}
     }
 
     function get_highscores() {
@@ -284,27 +291,36 @@
         $highscores[] = new HighScore(['us' => 'Gold Rush', 'de' => 'Goldrausch'],
                                       'SELECT richest.id AS id, richest.money AS points FROM homepage.richest',
                                       61, ['us' => 'gold coins', 'de' => 'Goldm&uuml;nzen'], ['us' => 'Gold', 'de' => 'Gold'],
-                                      'monthly_money'
+                                      'monthly_money', 'gold'
                         );
 
         $highscores[] = new HighScore(['us' => 'Arena Master', 'de' => 'Arenameister'],
                                       'SELECT qpg_userid AS id, SUM(qpg_progress) AS points FROM illarionserver.questprogress WHERE qpg_questid IN (801, 802, 803) GROUP BY id',
                                       1, ['us' => 'arena points', 'de' => 'Arenapunkte'], ['us' => 'sword', 'de' => 'Schwert'],
-                                      'monthly_arena'
+                                      'monthly_arena', 'combat'
                         );
 
         $highscores[] = new HighScore(['us' => 'Illariontrotter', 'de' => 'Illarionbummler'],
                                       "SELECT qpg_userid AS id, SUM(char_length(replace((CASE WHEN qpg_progress < 0 THEN 2147483647-qpg_progress::bigint ELSE qpg_progress END)::bit(64)::text, '0', ''))) AS points FROM illarionserver.questprogress WHERE qpg_questid >= 130 AND qpg_questid < 150 GROUP BY id",
                                       66, ['us' => 'marker stones', 'de' => 'Markierungssteine'], ['us' => 'marker stone', 'de' => 'Markierungsstein'],
-                                      'monthly_explorer'
+                                      'monthly_explorer', 'explorer'
                         );
 
         return $highscores;
     }
+	
+	function print_summeries($highscores, $lang) {
+        echo '<h2>', ($lang == 'de' ? 'Inhalt' : 'Content'), '</h2>';
+		echo '<ul class="content_summery">';
+		foreach ($highscores as $highscore) {
+            echo $highscore->getContentEntry($lang);
+        }
+		echo '</ul>';
+	}
 
     function print_highscores($lang) {
         $highscores = get_highscores();
-
+		print_summeries($highscores, $lang);
         foreach ($highscores as $highscore) {
             $highscore->print_on_site($lang);
         }
