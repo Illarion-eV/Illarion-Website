@@ -155,9 +155,9 @@
 			</th>
 		</tr>
 		<?php for ($i = 0; $i < 3; $i++): ?>
-		<?php if ((count($factionTotal) < $i) || (count($factionMonthly) < $i)): ?>
+		<?php if ((count($factionTotal) > $i) || (count($factionMonthly) > $i)): ?>
 		<tr class="row<?php echo ($i % 2); ?>">
-			<?php if (count($factionTotal) < $i): ?>
+			<?php if (count($factionTotal) > $i): ?>
 			<td><?php echo $i; ?></td>
 			<td colspan="2"><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionTotal[$i]['points']); ?></td>
@@ -167,7 +167,7 @@
 			
 			<td style="visibility:hidden;" />
 			
-			<?php if (count($factionMonthly) < $i): ?>
+			<?php if (count($factionMonthly) > $i): ?>
 			<td><?php echo $i; ?></td>
 			<td colspan="2"><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionMonthly[$i]['points']); ?></td>
@@ -197,7 +197,7 @@
 		</tr>
 		<?php for ($i = 0; $i < $maxChars; $i++): ?>
 		<tr class="row<?php echo ($i % 2); ?>">
-			<?php if (count($characterTotal) < $i): ?>
+			<?php if (count($characterTotal) > $i): ?>
 			<td><?php echo $i; ?></td>
 			<td><?php echo $this->getFactionImageHtml($characterTotal[$i]["faction"]); ?></td>
 			<td>
@@ -216,7 +216,7 @@
 			
 			<td style="visibility:hidden;" />
 			
-			<?php if (count($characterMonthly) < $i): ?>
+			<?php if (count($characterMonthly) > $i): ?>
 			<td><?php echo $i; ?></td>
 			<td><?php echo $this->getFactionImageHtml($characterMonthly[$i]["faction"]); ?></td>
 			<td>
