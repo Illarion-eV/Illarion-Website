@@ -248,13 +248,13 @@
 			$text = ' alt="' . $factionName . '" title="' . $factionName . '"'; 
 			switch ($faction) {
 				case 1: // Cadomyr
-					return '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . '/cadomyr.png"' . $text . ' />';
 					break;
 				case 2: // Runewick
-					return '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . '/runewick.png"' . $text . ' />';
 					break;
 				case 3: // Galmair
-					return '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . '/galmair.png"' . $text . ' />';
 					break;
 				default:
 					return '<div style="height:32px;width:32px;display:block;" />';
