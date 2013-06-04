@@ -159,7 +159,7 @@
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($factionTotal) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
 			<td><?php echo $this->getFactionName($factionTotal[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionTotal[$i]['points']); ?></td>
 			<?php else: ?>
@@ -170,7 +170,7 @@
 			
 			<?php if (count($factionMonthly) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
 			<td><?php echo $this->getFactionName($factionMonthly[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionMonthly[$i]['points']); ?></td>
 			<?php else: ?>
@@ -201,7 +201,7 @@
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($characterTotal) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td><?php echo $this->getFactionImageHtml($characterTotal[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->getFactionImageHtml($characterTotal[$i]["faction"]); ?></td>
 			<td>
 				<?php if ($characterTotal[$i]['show_profile'] == 't'): ?>
 				<a class="rating8" href="<?php echo Page::getURL(); ?>'/community/<?php echo $lang; ?>'_charprofile.php?id=<?php echo dechex($characterTotal[$i]['id']); ?>">
@@ -220,7 +220,7 @@
 			
 			<?php if (count($characterMonthly) > $i): ?>
 			<td><?php echo ($i + 1); ?></td>
-			<td><?php echo $this->getFactionImageHtml($characterMonthly[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->getFactionImageHtml($characterMonthly[$i]["faction"]); ?></td>
 			<td>
 				<?php if ($characterMonthly[$i]['show_profile'] == 't'): ?>
 				<a class="rating8" href="<?php echo Page::getURL(); ?>'/community/<?php echo $lang; ?>'_charprofile.php?id=<?php echo dechex($characterMonthly[$i]['id']); ?>">
