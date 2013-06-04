@@ -47,14 +47,6 @@
                 return;
             }
 
-            echo '<h2>'.$this->title[$lang].'</h2>';
-
-            echo '<table border="0" style="width:100%">';
-            $total = ($lang == 'de') ? 'Insgesamt' : 'Total';
-            $monthly = ($lang == 'de') ? 'Aktueller Monat' : 'Current Month';
-            echo '<tr><th style="width:50%">'.$total.'</th><th style="width:50%">'.$monthly.'</th></tr>';
-            echo '<tr><td style="vertical-align:top">';
-
             // total faction score       
             $query = 'SELECT SUM(points) AS points, qpg_progress AS faction'
             .PHP_EOL.'FROM ('
@@ -69,43 +61,9 @@
 
             $pgSQL =& Database::getPostgreSQL();
             $pgSQL->setQuery( $query );
-            $list = $pgSQL->loadAssocList();
-
-            if (!is_null($list)) {
-                echo '<table border="0" style="width:100%">';
-
-                echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th>' : '<tr><th></th><th>Faction</th>';
-                echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$this->points_item.'.png" alt="'.$this->item_alt[$lang].'" title="'.$this->item_title[$lang].'"/></th></tr>';
-
-                $i = 1;
-                $row = 0;
-                foreach($list as $faction) {
-                    echo '<tr class="row'.$row.'">';
-                    echo '<td>',$i,'.</td>';
-                    echo '<td style="text-align:center;">';
-
-                    if ($faction["faction"] == 1) {
-                        echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
-                    } else if ($faction["faction"] == 2) {
-                        echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
-                    } else if ($faction["faction"] == 3) {
-                        echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
-                    }
-
-                    echo '</td>';
-                    echo '<td style="text-align:center;">',$this->pointsConverter($faction['points']),'</td>';
-                    echo '</tr>';
-
-                    $i = $i + 1;
-                    $row = 1 - $row;
-                }
-
-                echo '</table>';
-            }
-
-            echo '</td><td style="vertical-align:top">';
-
-            //monthly faction score
+            $factionTotal = $pgSQL->loadAssocList();
+			
+			//monthly faction score
             $query = 'SELECT SUM(points) AS points, qpg_progress AS faction'
             .PHP_EOL.'FROM ('
             .PHP_EOL.'      SELECT internal_query.id, internal_query.points-COALESCE('.$this->monthly_table.'.points, 0) AS points from ('.$this->select.') AS internal_query'
@@ -121,43 +79,9 @@
 
             $pgSQL =& Database::getPostgreSQL();
             $pgSQL->setQuery( $query );
-            $list = $pgSQL->loadAssocList();
-
-            if (!is_null($list)) {
-                echo '<table border="0" style="width:100%">';
-
-                echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th>' : '<tr><th></th><th>Faction</th>';
-                echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$this->points_item.'.png" alt="'.$this->item_alt[$lang].'" title="'.$this->item_title[$lang].'"/></th></tr>';
-
-                $i = 1;
-                $row = 0;
-                foreach($list as $faction) {
-                    echo '<tr class="row'.$row.'">';
-                    echo '<td>',$i,'.</td>';
-                    echo '<td style="text-align:center;">';
-
-                    if ($faction["faction"] == 1) {
-                        echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
-                    } else if ($faction["faction"] == 2) {
-                        echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
-                    } else if ($faction["faction"] == 3) {
-                        echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
-                    }
-
-                    echo '</td>';
-                    echo '<td style="text-align:center;">',$this->pointsConverter($faction['points']),'</td>';
-                    echo '</tr>';
-
-                    $i = $i + 1;
-                    $row = 1 - $row;
-                }
-
-                echo '</table>';
-            }
-
-            echo '</td></tr><tr><td style="vertical-align:top">';
-
-            //total character score
+            $factionMonthly = $pgSQL->loadAssocList();
+			
+			//total character score
             $query = 'SELECT id, chr_name AS name, points, qpg_progress AS faction, '
             .PHP_EOL.'       (character_details.settings IS NOT NULL AND (character_details.settings & 1) > 0) AS show_profile'
             .PHP_EOL.'FROM ('
@@ -176,53 +100,9 @@
             .PHP_EOL.'ORDER BY points DESC;';
             
             $pgSQL->setQuery( $query );
-            $list = $pgSQL->loadAssocList();
-            
-            if (!is_null($list)) {
-                echo '<table border="0" style="width:100%">';
-                
-                echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th><th>Charakter</th>' : '<tr><th></th><th>Faction</th><th>Character</th>';
-                echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$this->points_item.'.png" alt="'.$this->item_alt[$lang].'" title="'.$this->item_title[$lang].'"/></th></tr>';
-                
-                $i = 1;
-                $row = 0;
-                foreach($list as $char) {
-                    echo '<tr class="row'.$row.'">';
-                    echo '<td>',$i,'.</td>';
-                    echo '<td style="text-align:center;">';
-                    
-                    if ($char["faction"] == 1) {
-                        echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
-                    } else if ($char["faction"] == 2) {
-                        echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
-                    } else if ($char["faction"] == 3) {
-                        echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
-                    }
-                        
-                    echo '</td>';	        
-                    echo '<td>';
-                    if ($char["show_profile"] == 't')
-                    {
-                        echo '<a class="rating8" href="'.Page::getURL().'/community/'.$lang.'_charprofile.php?id='.dechex( $char['id'] ).'">'.$char['name'] . '</a>';
-                    }
-                    else
-                    {
-                        echo $char['name'];
-                    }
-                    echo '</td>';
-                    echo '<td style="text-align:center;">',$this->pointsConverter($char['points']),'</td>';
-                    echo '</tr>';
-                    
-                    $i = $i + 1;
-                    $row = 1 - $row;
-                }
-                
-                echo '</table>';
-            }
-
-            echo '</td><td style="vertical-align:top">';
-
-            //monthly character score
+            $characterTotal = $pgSQL->loadAssocList();
+			
+			//monthly character score
             $query = 'SELECT id, chr_name AS name, points, qpg_progress AS faction, '
             .PHP_EOL.'       (character_details.settings IS NOT NULL AND (character_details.settings & 1) > 0) AS show_profile'
             .PHP_EOL.'FROM ('
@@ -243,56 +123,120 @@
             .PHP_EOL.'ORDER BY points DESC;';
 
             $pgSQL->setQuery( $query );
-            $list = $pgSQL->loadAssocList();
-
-            if (!is_null($list)) {
-                echo '<table border="0" style="width:100%">';
-
-                echo ($lang == 'de') ? '<tr><th></th><th>Fraktion</th><th>Charakter</th>' : '<tr><th></th><th>Faction</th><th>Character</th>';
-                echo '<th><img src="' . Page::getCurrentImageURL() . '/items/'.$this->points_item.'.png" alt="'.$this->item_alt[$lang].'" title="'.$this->item_title[$lang].'"/></th></tr>';
-
-                $i = 1;
-                $row = 0;
-                foreach($list as $char) {
-                    echo '<tr class="row'.$row.'">';
-                    echo '<td>',$i,'.</td>';
-                    echo '<td style="text-align:center;">';
-
-                    if ($char["faction"] == 1) {
-                        echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
-                    } else if ($char["faction"] == 2) {
-                        echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
-                    } else if ($char["faction"] == 3) {
-                        echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
-                    }
-
-                    echo '</td>';
-                    echo '<td>';
-                    if ($char["show_profile"] == 't')
-                    {
-                        echo '<a class="rating8" href="'.Page::getURL().'/community/'.$lang.'_charprofile.php?id='.dechex( $char['id'] ).'">'.$char['name'] . '</a>';
-                    }
-                    else
-                    {
-                        echo $char['name'];
-                    }
-                    echo '</td>';
-                    echo '<td style="text-align:center;">',$this->pointsConverter($char['points']),'</td>';
-                    echo '</tr>';
-
-                    $i = $i + 1;
-                    $row = 1 - $row;
-                }
-
-                echo '</table>';
-            }
-           
-            echo '</td></tr></table>';
-
+            $characterMonthly = $pgSQL->loadAssocList();
+			
+			$maxChars = max(count($characterTotal), count($characterMonthly));
+			
+			$objectItem = Page::getCurrentImageURL() . '/items/' . $this->points_item . '.png';
+			
+			// Output HTML
+?>
+<h2><?php echo $this->title[$lang]; ?></h2>
+<table style="width:100%">
+	<thead>
+		<tr>
+			<th style="width:50%" colspan="4"><?php echo ($lang == 'de') ? 'Insgesamt' : 'Total'; ?></th>
+			<td style="width:12px" />
+			<th style="width:50%" colspan="4"><?php echo ($lang == 'de') ? 'Aktueller Monat' : 'Current Month'; ?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th></th>
+			<th colspan="2"><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
+			<th>
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			</th>
+			<td style="visibility:hidden;" />
+			<th></th>
+			<th colspan="2"><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
+			<th>
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			</th>
+		</tr>
+		<?php for ($i = 0; $i < 3; $i++): ?>
+		<?php if ((count($factionTotal) < $i) || (count($factionMonthly) < $i)): ?>
+		<tr class="row<?php echo ($i % 2); ?>">
+			<?php if (count($factionTotal) < $i): ?>
+			<td><?php echo $i; ?></td>
+			<td colspan="2"><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->pointsConverter($factionTotal[$i]['points']); ?></td>
+			<?php else: ?>
+			<td colspan="4" style="visibility:hidden;" />
+			<?php endif; ?>
+			
+			<td style="visibility:hidden;" />
+			
+			<?php if (count($factionMonthly) < $i): ?>
+			<td><?php echo $i; ?></td>
+			<td colspan="2"><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
+			<td style="text-align:center;"><?php echo $this->pointsConverter($factionMonthly[$i]['points']); ?></td>
+			<?php else: ?>
+			<td colspan="4" style="visibility:hidden;" />
+			<?php endif; ?>
+		</tr>
+		<?php endif; ?>
+		<?php endfor; ?>
+		<tr>
+			<td colspan="9" style="height: 10px" />
+		</tr>
+		<?php for ($i = 0; $i < $maxChars; $i++): ?>
+		<?php if ((count($characterTotal) < $i) || (count($characterMonthly) < $i)): ?>
+		<tr class="row<?php echo ($i % 2); ?>">
+			<?php if (count($characterTotal) < $i): ?>
+			<td><?php echo $i; ?></td>
+			<td><?php echo $this->getFactionImageHtml($characterTotal[$i]["faction"]); ?></td>
+			<td>
+				<?php if ($characterTotal[$i]['show_profile'] == 't'): ?>
+				<a class="rating8" href="<?php echo Page::getURL(); ?>'/community/<?php echo $lang; ?>'_charprofile.php?id=<?php echo dechex($characterTotal[$i]['id']); ?>">
+					<?php echo $characterTotal[$i]['name']; ?>
+				</a>
+				<?php else: ?>
+				<?php echo $characterTotal[$i]['name']; ?>
+				<?php endif; ?>
+			</td>
+			<td style="text-align:center;"><?php echo $this->pointsConverter($characterTotal[$i]['points']); ?></td>
+			<?php else: ?>
+			<td colspan="4" style="visibility:hidden;" />
+			<?php endif; ?>
+			
+			<td style="visibility:hidden;" />
+			
+			<?php if (count($characterMonthly) < $i): ?>
+			<td><?php echo $i; ?></td>
+			<td><?php echo $this->getFactionImageHtml($characterMonthly[$i]["faction"]); ?></td>
+			<td>
+				<?php if ($characterMonthly[$i]['show_profile'] == 't'): ?>
+				<a class="rating8" href="<?php echo Page::getURL(); ?>'/community/<?php echo $lang; ?>'_charprofile.php?id=<?php echo dechex($characterMonthly[$i]['id']); ?>">
+					<?php echo $characterMonthly[$i]['name']; ?>
+				</a>
+				<?php else: ?>
+				<?php echo $characterMonthly[$i]['name']; ?>
+				<?php endif; ?>
+			</td>
+			<td style="text-align:center;"><?php echo $this->pointsConverter($characterMonthly[$i]['points']); ?></td>
+			<?php else: ?>
+			<td colspan="4" style="visibility:hidden;" />
+			<?php endif; ?>
+		</tr>
+		<?php endif; ?>
+		<?php endfor; ?>
+	</tbody>
+</table>
+<?php
             Page::insert_go_to_top_link();
             
         }
-    
+		
+		function getFactionImageHtml($faction) {
+			if ($faction == 1) {
+				echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
+			} else if ($faction == 2) {
+				echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
+			} else if ($faction == 3) {
+				echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
+			}
+		}
     }
 
     function get_highscores() {
