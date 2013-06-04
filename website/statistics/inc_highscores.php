@@ -144,14 +144,14 @@
 		<tr>
 			<th></th>
 			<th colspan="2"><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
-			<th>
-				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			<th style="text-align:center;">
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" style="vertical-align:middle;" />
 			</th>
 			<td style="visibility:hidden;" />
 			<th></th>
 			<th colspan="2"><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
-			<th>
-				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			<th style="text-align:center;">
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" style="vertical-align:middle;" />
 			</th>
 		</tr>
 		<?php for ($i = 0; $i < 3; $i++): ?>
@@ -184,15 +184,15 @@
 			<th></th>
 			<th><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
 			<th><?php echo ($lang == 'de') ? 'Charakter' : 'Character'; ?></th>
-			<th>
-				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			<th style="text-align:center;">
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" style="vertical-align:middle;" />
 			</th>
 			<td style="visibility:hidden;" />
 			<th></th>
 			<th><?php echo ($lang == 'de') ? 'Fraktion' : 'Faction'; ?></th>
 			<th><?php echo ($lang == 'de') ? 'Charakter' : 'Character'; ?></th>
-			<th>
-				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" />
+			<th style="text-align:center;">
+				<img src="<?php echo $objectItem; ?>" alt="<?php echo $this->item_alt[$lang]; ?>" title="<?php echo $this->item_title[$lang]; ?>" style="vertical-align:middle;" />
 			</th>
 		</tr>
 		<?php for ($i = 0; $i < $maxChars; $i++): ?>
