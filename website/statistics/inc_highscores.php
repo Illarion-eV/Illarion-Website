@@ -158,7 +158,7 @@
 		<?php if ((count($factionTotal) > $i) || (count($factionMonthly) > $i)): ?>
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($factionTotal) > $i): ?>
-			<td><?php echo $i; ?></td>
+			<td><?php echo ($i + 1); ?></td>
 			<td colspan="2"><?php echo $this->getFactionImageHtml($factionTotal[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionTotal[$i]['points']); ?></td>
 			<?php else: ?>
@@ -168,7 +168,7 @@
 			<td style="visibility:hidden;" />
 			
 			<?php if (count($factionMonthly) > $i): ?>
-			<td><?php echo $i; ?></td>
+			<td><?php echo ($i + 1); ?></td>
 			<td colspan="2"><?php echo $this->getFactionImageHtml($factionMonthly[$i]["faction"]); ?></td>
 			<td style="text-align:center;"><?php echo $this->pointsConverter($factionMonthly[$i]['points']); ?></td>
 			<?php else: ?>
@@ -198,7 +198,7 @@
 		<?php for ($i = 0; $i < $maxChars; $i++): ?>
 		<tr class="row<?php echo ($i % 2); ?>">
 			<?php if (count($characterTotal) > $i): ?>
-			<td><?php echo $i; ?></td>
+			<td><?php echo ($i + 1); ?></td>
 			<td><?php echo $this->getFactionImageHtml($characterTotal[$i]["faction"]); ?></td>
 			<td>
 				<?php if ($characterTotal[$i]['show_profile'] == 't'): ?>
@@ -217,7 +217,7 @@
 			<td style="visibility:hidden;" />
 			
 			<?php if (count($characterMonthly) > $i): ?>
-			<td><?php echo $i; ?></td>
+			<td><?php echo ($i + 1); ?></td>
 			<td><?php echo $this->getFactionImageHtml($characterMonthly[$i]["faction"]); ?></td>
 			<td>
 				<?php if ($characterMonthly[$i]['show_profile'] == 't'): ?>
@@ -242,12 +242,18 @@
         }
 		
 		function getFactionImageHtml($faction) {
-			if ($faction == 1) {
-				echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
-			} else if ($faction == 2) {
-				echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
-			} else if ($faction == 3) {
-				echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
+			switch ($faction) {
+				case 1: // Cadomyr
+					echo '<img src="' . Page::getMediaURL() . '/cadomyr.png" alt="Cadomyr" title="Cadomyr" />';
+					break;
+				case 2: // Runewick
+					echo '<img src="' . Page::getMediaURL() . '/runewick.png" alt="Runewick" title="Runewick" />';
+					break;
+				case 3: // Galmair
+					echo '<img src="' . Page::getMediaURL() . '/galmair.png" alt="Galmair" title="Galmair" />';
+					break;
+				default:
+					echo '<div style="height:32px;width:32px;display:block;" />';
 			}
 		}
     }
