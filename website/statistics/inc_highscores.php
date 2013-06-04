@@ -248,32 +248,32 @@
 			$text = ' alt="' . $factionName . '" title="' . $factionName . '"'; 
 			switch ($faction) {
 				case 1: // Cadomyr
-					echo '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				case 2: // Runewick
-					echo '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				case 3: // Galmair
-					echo '<img src="' . Page::getMediaURL() . $text . ' />';
+					return '<img src="' . Page::getMediaURL() . $text . ' />';
 					break;
 				default:
-					echo '<div style="height:32px;width:32px;display:block;" />';
+					return '<div style="height:32px;width:32px;display:block;" />';
 			}
 		}
 		
 		function getFactionName($faction) {
 			switch ($faction) {
 				case 1: // Cadomyr
-					echo 'Cadomyr';
+					return 'Cadomyr';
 					break;
 				case 2: // Runewick
-					echo 'Runewick';
+					return 'Runewick';
 					break;
 				case 3: // Galmair
-					echo 'Galmair';
+					return 'Galmair';
 					break;
 				default:
-					echo '';
+					return '';
 			}
 		}
     }
