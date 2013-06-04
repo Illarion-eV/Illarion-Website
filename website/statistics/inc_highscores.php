@@ -317,6 +317,7 @@
         }
 		echo '</ul>';
 		echo '<div class="clr"></div>';
+		Page::insert_go_to_top_link();
 	}
 
     function print_highscores($lang) {
