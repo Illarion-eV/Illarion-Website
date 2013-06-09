@@ -21,8 +21,9 @@
 
 	// Ensure that this is only done once per day
 	$query = 'SELECT COUNT(*)'
-		.PHP_EOL.'  FROM homepage.statistics'
-		.PHP_EOL.' WHERE stat_date = '.$pgSQL->Quote( TODAY_TIME );
+	.PHP_EOL.'  FROM homepage.statistics'
+	.PHP_EOL.' WHERE stat_date = '.$pgSQL->Quote( TODAY_TIME );
+	
 	$pgSQL->setQuery( $query );
 	if ($pgSQL->loadResult())
 	{
@@ -32,6 +33,7 @@
 
 	define( 'SEND_MAILS', 1 );
 
+	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_highscores.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_actaccounts.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_email.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_diagramm.php';
