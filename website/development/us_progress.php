@@ -9,7 +9,7 @@
 	Page::Init();
 ?>
 
-<h1>Development Progress (VBU)</h1>
+<h1>Development Progress</h1>
 
 <p>
     Legend:
@@ -20,83 +20,45 @@
 </p>
 
 <h2>Server</h2>
-
 <ul>
-    <li><span class="done">Lua Binding</span></li>
-    <li><span class="done">Learning System</span></li>
-    <li><span class="done">Database Binding</span></li>
-    <li><span class="done">Client Protocol</span></li>
+    <li><span class="inProgress">Removal of Luabind</span></li>
+    <li><span class="inProgress">Test Suite</span></li>
+    <li><span class="inProgress">Efficient data structures for character search</span></li>
+    <li><span class="planned">Notification about available quests</span></li>
+    <li><span class="planned">New login procedure</span></li>
+    <li><span class="planned">Character creation</span></li>
+    <li><span class="planned">Provide Debian package (.deb)</span></li>
 </ul>
 
 <h2>Client</h2>
-
 <ul>
-    <li class="done">Resource Management</li>
-    <li class="done">Server Protocol</li>
-    <li class="done">Sound And Music Handling</li>
-    <li class="done">Pathfinding</li>
-    <li class="done">Slick Graphic Engine Binding</li>
-    <li class="done">NiftyGUI Binding</li>
-    <li class="done">User Input Management (mouse, keyboard)</li>
-    <li class="done">Scene Graph Management</li>
-    <li class="inProgress">Session Management</li>
+    <li><span class="inProgress">Session management</span></li>
+    <li><span class="planned">Display of available quests</span></li>
+    <li><span class="planned">New login procedure</span></li>
+    <li><span class="planned">Character creation</span></li>
 </ul>
 
 <h2>Content</h2>
 
 <h3>Systems</h3>
 <ul>
-    <li><span class="done">Crafting</span></li>
-    <li><span class="done">Fighting</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
-    <li><span class="testing">Alchemy</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5791">Jupiter</a></li>
-    <li><span class="done">Gathering</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span class="done">Factions</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=5398">Ardian</a></li>
-</ul>
-
-<h3>Map</h3>
-<ul>
-    <li><span class="done">Cities</span></li>
-    <li><span class="done">Dungeons</span></li>
-    <li><span class="done">Wilderness</span></li>
-    <li><span class="done">Tutorial</span></li>
+    <li><span class="inProgress">Balancing crafting</span></li>
+    <li><span class="planned">Magic</span></li>
 </ul>
 
 <h3>NPCs</h3>
 <ul>
-    <li><span class="done">Monsters</span></li>
-    <li><span class="done">Guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
-    <li><span class="inProgress">Traders</span></li>
+    <li><span class="inProgress">Dynamic guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
 </ul>
 
 <h3>Other</h3>
 <ul>
-    <li><span class="done">Treasure Maps</span></li>
-    <li><span class="done">Magic Gems</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=1226">martin</a></li>
-    <li><span class="done">Books</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=10083">Skamato</a></li>
     <li><span class="inProgress">Quests</span></li>
-    <li><span class="done">Tutorial</span></li>
-</ul>
-
-<h2>Graphics</h2>
-
-<h3>Characters</h3>
-<ul>
-    <li><span class="done">Avatars</span></li>
-    <li><span class="done">Paperdolling</span></li>
-    <li><span class="done">Monsters</span></li>
-</ul>
-
-<h3>Static</h3>
-<ul>
-    <li><span class="done">Scenery</span></li>
-    <li><span class="done">Decoration</span></li>
-    <li><span class="done">Items</span></li>
-    <li><span class="done">Tiles</span></li>
+    <li><span class="inProgress">Quest logs</span></li>
 </ul>
 
 <h2>Homepage</h2>
-
 <ul>
-    <li><span class="done">Character Generation</span></li>
     <li><span class="inProgress">GM Tool</span></li>
+    <li><span class="inProgress">Migration to CMS Drupal</span></li>
 </ul>
