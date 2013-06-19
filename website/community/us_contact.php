@@ -107,10 +107,10 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These players assist new players and help resolve issues between players.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager</li>
-<li><a href="?contact=31">Athian</a> - English speaking Community Manager</li>
+<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
+<li><a href="?contact=31">Athian</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
-<li><a href="?contact=33">Skamato</a> - German speaking Community Manager</li>
+<li><a href="?contact=34">Slightly</a> - English speaking Community Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -120,14 +120,14 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These Gamemasters take care of quests and of players who do not abide by the rules.</p>
 
 <ul>
-	<li><a href="?contact=14">Arien Edhel</a></li>
-	<li><a href="?contact=11">Estralis Seborian</a> - German speaking GM for Cadomyr</li>
+	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
     <li><a href="?contact=42">Face</a> - English speaking GM for Galmair</li>
     <li><a href="?contact=43">Firefly</a> - English speaking GM for Cadomyr</li>
     <li><a href="?contact=41">Flux</a> - English speaking GM for Runewick</li>
-    <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
-	<li><a href="?contact=12">Zak</a></li>
+    <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
+    <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
+	<li><a href="?contact=12">Zak</a> - General requests</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -217,7 +217,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 11: //Estralis Seborian
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion.",false);
       break;
       case 12: //Zak
          define(_CONTACT_NAME,"Zak",false);
@@ -273,7 +273,12 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 33: //Skamato
          define(_CONTACT_NAME,"Skamato",false);
          define(_CONTACT_MAIL,"skamato@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+      break;
+      case 34: //Slightly
+         define(_CONTACT_NAME,"Slightly",false);
+         define(_CONTACT_MAIL,"slightly@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);

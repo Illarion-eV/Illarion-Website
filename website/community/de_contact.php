@@ -116,10 +116,10 @@ können hier gemeldet werden.</li>
 <p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin</li>
-<li><a href="?contact=31">Athian</a> - Englischsprachiger Community-Manager</li>
+<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (US)</li>
+<li><a href="?contact=31">Athian</a> - Englischsprachiger Community-Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager</li>
-<li><a href="?contact=33">Skamato</a> - Deutschsprachiger Community-Manager</li>
+<li><a href="?contact=34">Slightly</a> - Englischsprachiger Community-Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -131,12 +131,12 @@ und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
     <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
-    <li><a href="?contact=11">Estralis Seborian</a> - Deutschsprachiger GM für Cadomyr</li>
     <li><a href="?contact=42">Face</a> - Englischsprachiger GM für Galmair</li>
     <li><a href="?contact=43">Firefly</a> - Englischsprachiger GM für Cadomyr</li>
     <li><a href="?contact=41">Flux</a> - Englischsprachiger GM für Runewick</li>
     <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
+    <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
     <li><a href="?contact=12">Zak</a> - Generelle Anfragen</li>
 </ul>
 
@@ -241,7 +241,7 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 11: //Estralis Seborian
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion.",false);
       break;
       case 12: //Zak
          define(_CONTACT_NAME,"Zak",false);
@@ -298,7 +298,12 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 33: //Skamato
          define(_CONTACT_NAME,"Skamato",false);
          define(_CONTACT_MAIL,"skamato@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+      break;
+      case 34: //Slightly
+         define(_CONTACT_NAME,"Slightly",false);
+         define(_CONTACT_MAIL,"slightly@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);
