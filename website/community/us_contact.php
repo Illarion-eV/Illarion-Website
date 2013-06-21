@@ -121,9 +121,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
-    <li><a href="?contact=42">Face</a> - English speaking GM for Galmair</li>
     <li><a href="?contact=43">Firefly</a> - English speaking GM for Cadomyr</li>
     <li><a href="?contact=41">Flux</a> - English speaking GM for Runewick</li>
+    <li><a href="?contact=42">Semtex</a> - English speaking GM for Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
     <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
@@ -290,9 +290,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_MAIL,"flux@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
-      case 42: //Face
-         define(_CONTACT_NAME,"Face",false);
-         define(_CONTACT_MAIL,"face@illarion.org",false);
+      case 42: //Semtex
+         define(_CONTACT_NAME,"Semtex",false);
+         define(_CONTACT_MAIL,"semtex@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
       case 43: //Firefly
