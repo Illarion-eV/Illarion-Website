@@ -312,6 +312,12 @@
                                       'monthly_treasure', 'treasure'
                         );
 
+        $highscores[] = new HighScore(['us' => 'Socialite', 'de' => 'Salonl&ouml;we'],
+                                      "SELECT intro_player AS id, COUNT(*) AS points FROM illarionserver.introduction GROUP BY introduction.intro_player",
+                                      2057, ['us' => 'known characters', 'de' => 'Bekannte Charaktere'], ['us' => 'glass with wine', 'de' => 'Glas mit Wein'],
+                                      'monthly_introduction', 'socialite'
+                        );
+
         return $highscores;
     }
 	
