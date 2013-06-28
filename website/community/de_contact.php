@@ -131,10 +131,10 @@ und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
     <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
-    <li><a href="?contact=42">Face</a> - Englischsprachiger GM für Galmair</li>
     <li><a href="?contact=43">Firefly</a> - Englischsprachiger GM für Cadomyr</li>
     <li><a href="?contact=41">Flux</a> - Englischsprachiger GM für Runewick</li>
     <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
+    <li><a href="?contact=42">Semtex</a> - Englischsprachiger GM für Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
     <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
     <li><a href="?contact=12">Zak</a> - Generelle Anfragen</li>
@@ -315,9 +315,9 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_MAIL,"flux@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
       break;
-      case 42: //Face
-         define(_CONTACT_NAME,"Face",false);
-         define(_CONTACT_MAIL,"face@illarion.org",false);
+      case 42: //Semtex
+         define(_CONTACT_NAME,"Semtex",false);
+         define(_CONTACT_MAIL,"semtex@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
       break;
       case 43: //Firefly
