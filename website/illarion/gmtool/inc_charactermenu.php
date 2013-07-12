@@ -50,6 +50,7 @@
 					echo "</a></li>";
 				}	
 			}
+			echo '<li class="end" />';
 			echo "</ul>";
 		echo "</div>";
 
