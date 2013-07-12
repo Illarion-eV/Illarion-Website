@@ -67,6 +67,7 @@
                 }
 				$x++;
             }
+	    echo '<li class="end" />';
             echo "</ul>";
         echo "</div>";
 
