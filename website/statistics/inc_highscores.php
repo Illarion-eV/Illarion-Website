@@ -285,14 +285,16 @@
 		}
     }
 
-    function get_highscores() {
+    function get_highscores($gold = false) {
         $highscores = [];
 
+	if ($gold):
         $highscores[] = new HighScore(['us' => 'Gold Rush', 'de' => 'Goldrausch'],
                                       'SELECT richest.id AS id, richest.money AS points FROM homepage.richest',
                                       61, ['us' => 'gold coins', 'de' => 'Goldm&uuml;nzen'], ['us' => 'Gold', 'de' => 'Gold'],
                                       'monthly_money', 'gold'
                         );
+	endif;
 
         $highscores[] = new HighScore(['us' => 'Arena Master', 'de' => 'Arenameister'],
                                       'SELECT qpg_userid AS id, SUM(qpg_progress) AS points FROM illarionserver.questprogress WHERE qpg_questid IN (801, 802, 803) GROUP BY id',
@@ -341,7 +343,7 @@
     }
 
     function set_monthly_offset() {
-        $highscores = get_highscores();
+        $highscores = get_highscores(true);
 
         foreach ($highscores as $highscore) {
             $highscore->calc_monthly_offset();
