@@ -2,8 +2,8 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 	Page::setTitle( array('Chronik','Foreword') );
-	Page::setDescription( 'Foreword of the chronicle of Gobaith' );
-	Page::setKeywords(array('Foreword','chronicle','history','Gobaith') );
+	Page::setDescription( 'Foreword of the chronicle of Illarion' );
+	Page::setKeywords(array('Foreword','chronicle','history') );
 
 	Page::setXHTML( );
 	Page::Init( );
@@ -14,7 +14,7 @@
 
 <?php Page::navBarTop(); ?>
 
-<h1>The Chronicle of Gobaith</h1>
+<h1>The Chronicle of Illarion</h1>
 
 <h2>The beginning: End of the old era</h2>
 

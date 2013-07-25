@@ -2,8 +2,8 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 	Page::setTitle( array('Chronik','Vorwort') );
-	Page::setDescription( 'Vorwort für die Chronik von Gobaith' );
-	Page::setKeywords(array('Vorwort','Chronik','Geschichte','Gobaith') );
+	Page::setDescription( 'Vorwort für die Chronik von Illarion' );
+	Page::setKeywords(array('Vorwort','Chronik','Geschichte') );
 
 	Page::setXHTML( );
 	Page::Init( );
@@ -14,7 +14,7 @@
 
 <?php Page::navBarTop(); ?>
 
-<h1>Die Chronik von Gobaith</h1>
+<h1>Die Chronik von Illarion</h1>
 
 <h2>Die Anfänge: Ende des Alten Zeitalters</h2>
 

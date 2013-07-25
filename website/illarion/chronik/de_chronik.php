@@ -2,8 +2,8 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 	Page::setTitle( 'Chronik' );
-	Page::setDescription( 'Die Chronik von Gobaith' );
-	Page::setKeywords(array('Chronik','Geschichte','Gobaith') );
+	Page::setDescription( 'Die Chronik von Illarion' );
+	Page::setKeywords(array('Chronik','Geschichte') );
 
 	Page::setXHTML( );
 	Page::Init( );
@@ -50,7 +50,7 @@
 ?>
 <?php Page::navBarTop(); ?>
 
-<h1>Die Chronik von Gobaith</h1>
+<h1>Die Chronik von Illarion</h1>
 
 <h2>Inhaltsverzeichnis</h2>
 
