@@ -25,7 +25,7 @@
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
-	<h2>Names der Quest</h2>
+	<h2>Name der Quest</h2>
 	<p>
 		<b>Deutscher Name:</b><br />
 		<input style="width:100%" type="text" name="title_de" value="<?php echo $title_de; ?>" />
