@@ -226,7 +226,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				<?php echo ( is_null($quest['q_title_de']) ? $quest['q_title_us'] : $quest['q_title_de'] ); ?>
 			</a>
 		</td>
-		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Offizieller Quest' : 'Spieler-Quest'); ?></td>
+		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Offizielle Quest' : 'Spieler-Quest'); ?></td>
 		<td class="status<?php echo $quest['q_status']; ?>">
 			<?php
 				switch($quest['q_status'])
@@ -245,9 +245,9 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php endif; ?>
 
 <?php if (IllaUser::auth('quests')): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neuen Quest eintragen</button></p>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neue Quest eintragen</button></p>
 <?php elseif(IllaUser::loggedIn()): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neuen Spieler-Quest eintragen</button></p>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neue Spieler-Quest eintragen</button></p>
 <?php endif; ?>
 
 <?php if ( count($quests) > 0): ?>

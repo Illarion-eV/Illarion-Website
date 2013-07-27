@@ -11,18 +11,18 @@
 
 	if (!$id)
 	{
-		Page::setTitle( array( 'Quest Details', 'Nicht gefunden' ) );
-		Page::setDescription( 'Diese Seite zeigt die Details eines Quests an. Das gesuchte Quest konnte nicht gefunden werden, oder ein Fehler ist aufgetreten.' );
+		Page::setTitle( array( 'Quest-Details', 'Nicht gefunden' ) );
+		Page::setDescription( 'Diese Seite zeigt die Details einer Quest an. Die gesuchte Quest konnte nicht gefunden werden, oder ein Fehler ist aufgetreten.' );
 		Page::addKeyword( 'Fehler' );
 		Page::addKeyword( 'nicht gefunden' );
 ?>
-<h1>Quest Details</h1>
+<h1>Quest-Details</h1>
 
-<h2>Gesuchtes Quest nicht gefunden</h2>
+<h2>Gesuchte Quest nicht gefunden</h2>
 
-<p>Das gesuchte Quest konnte nicht gefunden werden. Entweder sind sie einem ungültigen
-Link gefolgt, oder das Quest wurde bereits gelöscht, oder sie haben nicht die
-Zugriffsberechtigung auf dieses Quest.</p>
+<p>Die gesuchte Quest konnte nicht gefunden werden. Entweder bist du einem ungültigen
+Link gefolgt, oder die Quest wurde bereits gelöscht, oder du hast keine
+Zugriffsberechtigung auf diese Quest.</p>
 
 <p class="center">
 	<a href="<?php echo Page::getURL(); ?>/statistics/de_players.php">Zurück zur Onlineliste</a>
@@ -42,8 +42,8 @@ Zugriffsberechtigung auf dieses Quest.</p>
 
 	$title = ( is_null($quest['q_title_de']) ? $quest['q_title_us'] : $quest['q_title_de'] );
 
-	Page::setTitle( array( 'Quest Details', $title ) );
-	Page::setDescription( 'Auf dieser Seite findest du Informationen zum Quest "'.$title.'", wie Startzeit, Art und Author des Quests.' );
+	Page::setTitle( array( 'Quest-Details', $title ) );
+	Page::setDescription( 'Auf dieser Seite findest du Informationen zur Quest "'.$title.'", wie Startzeit, Art und Autor der Quest.' );
 	Page::addKeyword( $title );
 
 	Page::addCSS( 'quest_details' );
@@ -55,7 +55,7 @@ Zugriffsberechtigung auf dieses Quest.</p>
 
 <dl class="details">
 	<?php if ($quest['q_status'] != 2): ?>
-	<dt>Start Zeit des Quests:</dt>
+	<dt>Startzeit der Quest:</dt>
 	<dd>
 		<?php if (is_null($quest['q_starttime'])): ?>
 		Wird noch angekündigt
@@ -65,7 +65,7 @@ Zugriffsberechtigung auf dieses Quest.</p>
 		<?php endif; ?>
 	</dd>
 	<?php endif; ?>
-	<dt>Status des Quests:</dt>
+	<dt>Status der Quest:</dt>
 	<dd>
 		<?php
 			if($quest['q_type'] == 2)
@@ -79,13 +79,13 @@ Zugriffsberechtigung auf dieses Quest.</p>
                  case 0: echo 'Quest in Planung'; break;
                  case 1: echo 'Quest startet in Kürze'; break;
                  case 2: echo 'Quest läuft zur Zeit'; break;
-                 case 3: echo 'Quest is beendet'; break;
+                 case 3: echo 'Quest ist beendet'; break;
              }
          }
 		?>
 	</dd>
-	<dt>Art des Quests:</dt>
-	<dd><?php echo ( $quest['q_type']==1 ? 'Offizieller Quest' : 'Spieler-Quest'); ?></dd>
+	<dt>Art der Quest:</dt>
+	<dd><?php echo ( $quest['q_type']==1 ? 'Offizielle Quest' : 'Spieler-Quest'); ?></dd>
 	<dt>Quest geplant von:</dt>
 	<dd><?php echo ( strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name'] ); ?></dd>
 </dl>

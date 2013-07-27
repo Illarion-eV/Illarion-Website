@@ -9,7 +9,7 @@
 
 	if ( !$id )
 	{
-		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest was not found' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest not found' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_players.php';
 		exit();
 	}
@@ -24,14 +24,14 @@
 
 	if (!$quest_author)
 	{
-		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest was not found' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest not found' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_players.php';
 		exit();
 	}
 
 	if( $quest_author != IllaUser::$ID && !IllaUser::auth('quests') )
 	{
-		Messages::add( ( Page::isGerman() ? 'Dir fehlt die Berechtigung um das Quest zu löschen.' : 'You lack of the authorization to delete the quest.' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Dir fehlt die Berechtigung um die Quest zu löschen.' : 'You lack authorization to delete the quest.' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests.php';
 		exit();
 	}
@@ -42,5 +42,5 @@
 	$pgSQL->setQuery( $query );
 	$pgSQL->query();
 
-	Messages::add( ( Page::isGerman() ? 'Quest wurde gelöscht.' : 'Quest got deleted' ), 'info' );
+	Messages::add( ( Page::isGerman() ? 'Quest wurde gelöscht.' : 'Quest deleted' ), 'info' );
 ?>

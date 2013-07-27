@@ -17,7 +17,7 @@
 
 				if( $quest_author != IllaUser::$ID && !IllaUser::auth('quests') )
 				{
-					Messages::add( 'Die fehlt die Berechtigung um das Quest zu bearbeiten.', 'error' );
+					Messages::add( 'Dir fehlt die Berechtigung um die Quest zu bearbeiten.', 'error' );
 					include Page::getRootPath().'/statistics/de_quests.php';
 					exit();
 				}

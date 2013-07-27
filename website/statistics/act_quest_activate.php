@@ -9,7 +9,7 @@
 
 	if ( !$id )
 	{
-		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest was not found' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest not found' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_players.php';
 		exit();
 	}
@@ -24,14 +24,14 @@
 
 	if (!$found_quest)
 	{
-		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest was not found' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Quest nicht gefunden.' : 'Quest not found' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_players.php';
 		exit();
 	}
 
 	if( !IllaUser::auth('quests') )
 	{
-		Messages::add( ( Page::isGerman() ? 'Dir fehlt die Berechtigung um das Quest zu aktivieren.' : 'You lack of the authorization to activate the quest.' ), 'error' );
+		Messages::add( ( Page::isGerman() ? 'Dir fehlt die Berechtigung um die Quest zu aktivieren.' : 'You lack authorization to activate the quest.' ), 'error' );
 		include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests.php';
 		exit();
 	}
@@ -43,5 +43,5 @@
 	$pgSQL->setQuery( $query );
 	$pgSQL->query();
 
-	Messages::add( ( Page::isGerman() ? 'Quest wurde aktiviert.' : 'Quest got activated' ), 'info' );
+	Messages::add( ( Page::isGerman() ? 'Quest wurde aktiviert.' : 'Quest activated' ), 'info' );
 ?>

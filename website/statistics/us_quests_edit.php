@@ -21,10 +21,10 @@
 	$current_year  = (int)date('Y');
 ?>
 
-<h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
+<h1><?php if ($id): ?>Edit quest<?php else: ?>Create quest<?php endif; ?></h1>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
-	<h2>Name of the Quest</h2>
+	<h2>Name of the quest</h2>
 	<p>
 		<b>German Name:</b><br />
 		<input style="width:100%" type="text" name="title_de" value="<?php echo $title_de; ?>" />
@@ -33,7 +33,7 @@
 		<b>English Name:</b><br />
 		<input style="width:100%" type="text" name="title_us" value="<?php echo $title_us; ?>" />
 	</p>
-	<h2>Description of the Quest</h2>
+	<h2>Quest description</h2>
 	<p>
 		<b>German Description:</b>
 		<textarea cols="60" rows="5" style="width:100%;" name="content_de"><?php echo $content_de; ?></textarea>
@@ -42,7 +42,7 @@
 		<b>English Description:</b>
 		<textarea cols="60" rows="5" style="width:100%;" name="content_us"><?php echo $content_us; ?></textarea>
 	</p>
-	<h2>Additional Informations about the Quest</h2>
+	<h2>Additional information about the quest</h2>
 	<p>
 		<b>Starttime:</b>
 		<select name="time_d" id="time_d"<?php echo ( $tba ? ' disabled="disabled" class="disabled"' : '' ); ?>>
@@ -83,7 +83,7 @@
 		<label for="tba">Starttime is to be announced</label>
 	</p>
 	<p>
-		<b>Type of the Quest:</b><br />
+		<b>Quest type:</b><br />
 		<?php if (IllaUser::auth('quests')): ?>
 		<select name='type' id="type">
 			<option value='0'<?php echo ( $type==0 ? ' selected="selected"' : '' ); ?>>Player-Quest</option>
@@ -95,7 +95,7 @@
 		<?php endif; ?>
 	</p>
 	<p>
-		<b>Status of the Quest:</b><br />
+		<b>Quest status:</b><br />
 		<?php if ( ( $id && $type < 2 ) || IllaUser::auth('quests')): ?>
 		<select name='status' id="status">
 			<option value='0'<?php echo ( $status==0 ? ' selected="selected"' : '' ); ?>>Quest is planned</option>

@@ -89,7 +89,7 @@ was already deleted or you lack of the access rights to view the quest.</p>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/statistics/us_players.php" id="action_Form">
 	<p>
-		<button onclick="document.forms.action_Form.action='<?php echo Page::getURL(); ?>/statistics/us_players.php';document.forms.action_Form.elements.action.value='';return true;">Back to Online players</button>
+		<button onclick="document.forms.action_Form.action='<?php echo Page::getURL(); ?>/statistics/us_players.php';document.forms.action_Form.elements.action.value='';return true;">Back to online players</button>
 		<?php if($quest['q_type'] == 2 && IllaUser::auth('quests')): ?>
 		<button onclick="document.forms.action_Form.action='<?php echo Page::getURL(); ?>/statistics/us_quests.php';document.forms.action_Form.elements.action.value='quest_activate';return true;">Activate Quest</button>
 		<?php endif; ?>

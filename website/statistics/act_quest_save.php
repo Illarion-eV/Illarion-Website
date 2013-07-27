@@ -23,7 +23,7 @@
 
 			if( $quest_author != IllaUser::$ID && !IllaUser::auth('quests') )
 			{
-				Messages::add( ( Page::isGerman() ? 'Die fehlt die Berechtigung um das Quest zu bearbeiten.' : 'You lack of the authorization to edit the quest.' ), 'error' );
+				Messages::add( ( Page::isGerman() ? 'Die fehlt die Berechtigung um die Quest zu bearbeiten.' : 'You lack authorization to edit the quest.' ), 'error' );
 				includeWrapper::includeOnce( Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests.php' );
 				exit();
 			}
@@ -50,14 +50,14 @@
 
 		if ($content_de != NULL && strlen( $content_de ) < 10)
 		{
-			Messages::add( ( Page::isGerman() ? 'Die deutsche Beschreibung des Quests ist zu kurz.' : 'The german description of the text is too short.' ), 'error' );
+			Messages::add( ( Page::isGerman() ? 'Die deutsche Beschreibung der Quest ist zu kurz.' : 'The German quest description is too short.' ), 'error' );
 			include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests_edit.php';
 			exit();
 		}
 
 		if ($content_us != NULL && strlen( $content_us ) < 10)
 		{
-			Messages::add( ( Page::isGerman() ? 'Die englische Beschreibung des Quests ist zu kurz.' : 'The english description of the text is too short.' ), 'error' );
+			Messages::add( ( Page::isGerman() ? 'Die englische Beschreibung der Quest ist zu kurz.' : 'The English quest description is too short.' ), 'error' );
 			include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests_edit.php';
 			exit();
 		}
@@ -105,14 +105,14 @@
 
 		if ($status < 0 || $status > 3)
 		{
-			Messages::add( ( Page::isGerman() ? 'Der Status des Quests ist ungültig. Bitte korrigieren sie die Eingaben.' : 'The status of the quest is invalid. Please correct the settings.' ), 'error' );
+			Messages::add( ( Page::isGerman() ? 'Der Status der Quest ist ungültig. Bitte korrigiere die Eingaben.' : 'The quest status is invalid. Please correct the settings.' ), 'error' );
 			include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests_edit.php';
 			exit();
 		}
 
 		if ( $status == 1 && is_null( $starttime ) )
 		{
-			Messages::add( ( Page::isGerman() ? 'Der Queststatus "Startet in Kürze" ist nur gültig wenn eine klare Startzeit angegeben wurde.' : 'The status "starts soon" is only valid in case a clear starting time is set.' ), 'error' );
+			Messages::add( ( Page::isGerman() ? 'Der Queststatus "Startet in Kürze" ist nur gültig wenn eine Startzeit angegeben wurde.' : 'The status "starts soon" is only valid if a starting time was set.' ), 'error' );
 			include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests_edit.php';
 			exit();
 		}
@@ -147,11 +147,11 @@
 
 		if ($type == 2)
 		{
-			Messages::add( ( Page::isGerman() ? 'Die Quest wurde eingetragen, aber sie muss noch von einem GM bestätigt werden.' : 'The quest got saved, how ever a GM still needs to confirm the quest.' ), 'info' );
+			Messages::add( ( Page::isGerman() ? 'Die Quest wurde eingetragen, aber sie muss noch von einem GM bestätigt werden.' : 'The quest got saved, however a GM still needs to confirm the quest.' ), 'info' );
 		}
 		else
 		{
-			Messages::add( ( Page::isGerman() ? 'Die Quest wurde eingetragen.' : 'The quest got saved.' ), 'info' );
+			Messages::add( ( Page::isGerman() ? 'Die Quest wurde eingetragen.' : 'Quest saved.' ), 'info' );
 		}
 
 		includeWrapper::includeOnce( Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests.php' );

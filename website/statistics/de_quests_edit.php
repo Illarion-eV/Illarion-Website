@@ -5,7 +5,7 @@
 	IllaUser::requireLogin();
 
 	Page::setTitle( 'Questplaner' );
-	Page::setDescription( 'Diese Seite ermöglicht das Eintragen, Bearbeiten und Löschen eines Quests' );
+	Page::setDescription( 'Diese Seite ermöglicht das Eintragen, Bearbeiten und Löschen einer Quest' );
 	Page::setKeywords( array( 'Online', 'Spieler', 'Quests' ) );
 
 	Page::addJavaScript( 'quests_edit' );
@@ -25,7 +25,7 @@
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
-	<h2>Names des Quests</h2>
+	<h2>Names der Quest</h2>
 	<p>
 		<b>Deutscher Name:</b><br />
 		<input style="width:100%" type="text" name="title_de" value="<?php echo $title_de; ?>" />
@@ -34,7 +34,7 @@
 		<b>Englischer Name:</b><br />
 		<input style="width:100%" type="text" name="title_us" value="<?php echo $title_us; ?>" />
 	</p>
-	<h2>Beschreibung des Quests</h2>
+	<h2>Beschreibung der Quest</h2>
 	<p>
 		<b>Deutsche Beschreibung:</b><br />
 		<textarea cols="60" rows="5" style="width:100%;" name="content_de"><?php echo $content_de; ?></textarea>
@@ -43,7 +43,7 @@
 		<b>Englische Beschreibung:</b><br />
 		<textarea cols="60" rows="5" style="width:100%;" name="content_us"><?php echo $content_us; ?></textarea>
 	</p>
-	<h2>Sonstige Informationen zum Quest</h2>
+	<h2>Sonstige Informationen zur Quest</h2>
 	<p>
 		<b>Startzeit:</b>
 		<select name="time_d" id="time_d"<?php echo ( $tba ? ' disabled="disabled" class="disabled"' : '' ); ?>>
@@ -96,7 +96,7 @@
 		<?php endif; ?>
 	</p>
 	<p>
-		<b>Status des Quests:</b><br />
+		<b>Status der Quest:</b><br />
 		<?php if ( ( $id && $type < 2 ) || IllaUser::auth('quests')): ?>
 		<select name='status' id="status">
 			<option value='0'<?php echo ( $status==0 ? ' selected="selected"' : '' ); ?>>Quest ist in der Planung</option>
