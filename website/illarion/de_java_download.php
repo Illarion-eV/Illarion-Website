@@ -136,7 +136,7 @@ verwendet. Für nähere Informationen dazu frage am besten im Chat nach.</p>
 		</a>
 	</li>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapeditor.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapedit.jnlp">
 			Illarion Karten-Editor
 		</a>
 	</li>

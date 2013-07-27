@@ -133,7 +133,7 @@ more information, please ask on the IRC chat.</p>
 		</a>
 	</li>
 	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapeditor.jnlp">
+		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapedit.jnlp">
 			Illarion Map-Editor
 		</a>
 	</li>
