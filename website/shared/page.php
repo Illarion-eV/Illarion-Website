@@ -1117,11 +1117,11 @@ class Page {
 			}
 
 			if (self::isEnglish() && file_exists('de' . $short_filename)) {
-				Messages::add('<a href="' . $path . 'de' . $short_filename . $getparams . '" hreflang="de">Deine bevorzugte Sprache scheint deutsch zu sein. Klick hier um auf die deutsche Fassung dieser Seite zu wechseln.</a>', 'note');
-				Messages::add('<a href="' . $path . 'de' . $short_filename . $getparams . '" hreflang="de">Your favorite language seems to be german. Click here to view the german version of this page.</a>', 'note');
+				Messages::add('<a href="' . $path . 'de' . $short_filename . $getparams . '" hreflang="de">Deine bevorzugte Sprache scheint Deutsch zu sein. Klick hier um zur deutschen Fassung dieser Seite zu wechseln.</a>', 'note');
+				Messages::add('<a href="' . $path . 'de' . $short_filename . $getparams . '" hreflang="de">Your favoured language seems to be German. Click here to view the German version of this page.</a>', 'note');
 			} elseif (self::isGerman() && file_exists('us' . $short_filename)) {
-				Messages::add('<a href="' . $path . 'us' . $short_filename . $getparams . '" hreflang="us">Deine bevorzugte Sprache scheint englisch zu sein. Klick hier um auf die englische Fassung dieser Seite zu wechseln.</a>', 'note');
-				Messages::add('<a href="' . $path . 'us' . $short_filename . $getparams . '" hreflang="us">Your favorite language seems to be english. Click here to view the english version of this page.</a>', 'note');
+				Messages::add('<a href="' . $path . 'us' . $short_filename . $getparams . '" hreflang="us">Deine bevorzugte Sprache scheint Englisch zu sein. Klick hier um zur englischen Fassung dieser Seite zu wechseln.</a>', 'note');
+				Messages::add('<a href="' . $path . 'us' . $short_filename . $getparams . '" hreflang="us">Your favoured language seems to be English. Click here to view the English version of this page.</a>', 'note');
 			}
 		}
 	}
