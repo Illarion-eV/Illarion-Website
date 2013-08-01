@@ -11,6 +11,16 @@
 		;
 		$illarionserver->setQuery( $query );
 		$char_list = $illarionserver->loadAssocList();
+		
+		$testserver=& Database::getPostgreSQL( 'testserver' );
+		$query = 'SELECT chr_playerid, chr_name, chr_sex, chr_race, chr_status, ply_dob, \''.TESTSERVER.'\' AS chr_server'
+		.PHP_EOL.' FROM chars'
+		.PHP_EOL.' LEFT JOIN player ON ply_playerid = chr_playerid'
+		.PHP_EOL.' WHERE chr_accid = '.$testserver->Quote( IllaUser::$ID )
+		.PHP_EOL.' ORDER BY chr_name ASC'
+		;
+		$testserver->setQuery( $query );
+		$char_list = array_merge($char_list,$testserver->loadAssocList());
 
 		if ( IllaUser::auth('devserver') )
 		{
@@ -18,7 +28,7 @@
 			$query = 'SELECT chr_playerid, chr_name, chr_sex, chr_race, chr_status, ply_dob, \''.DEVSERVER.'\' AS chr_server'
 			.PHP_EOL.' FROM chars'
 			.PHP_EOL.' LEFT JOIN player ON ply_playerid = chr_playerid'
-			.PHP_EOL.' WHERE chr_accid = '.$illarionserver->Quote( IllaUser::$ID )
+			.PHP_EOL.' WHERE chr_accid = '.$devserver->Quote( IllaUser::$ID )
 			.PHP_EOL.' ORDER BY chr_name ASC'
 			;
 			$devserver->setQuery( $query );

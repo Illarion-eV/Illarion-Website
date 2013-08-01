@@ -6,6 +6,7 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charlist.php' );
 
 	define( 'ILLARIONSERVER', 'Gameserver' );
+	define( 'TESTSERVER', 'Testserver' );
 	define( 'DEVSERVER', 'Devserver' );
 
 	Page::setTitle( array( 'Account', 'Characterlist' ) );
@@ -64,7 +65,15 @@
 	endif;
 ?>
 		<?php foreach( $char_list as $key=>$character ):
-			$character['ident'] = "?charid=".$character['chr_playerid'].($character['chr_server']==DEVSERVER ? '&amp;server=1' : '');
+			$character['ident'] = "?charid=".$character['chr_playerid'];
+			switch ($character['chr_server']) {
+			case DEVSERVER:
+				$character['ident'] .= '&amp;server=1';
+				break;
+			case TESTSERVER:
+				$character['ident'] .= '&amp;server=2';
+				break;
+			}
 		?>
 		<tr>
 			<td>

@@ -1,7 +1,17 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	$server = ( $_POST['server'] == '1' ? 'devserver' : 'illarionserver');
+	$server = '';
+	switch ($_POST['server']) {
+	case '1':
+		$server = 'devserver';
+		break;
+	case '2':
+		$server = 'testserver';
+		break;
+	default:
+		$server = 'illarionserver';
+	}
 
 	if (!is_numeric($_POST['charid']))
 	{

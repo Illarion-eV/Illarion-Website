@@ -5,7 +5,18 @@
 
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_char_details.php' );
 
-	$server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
+	$server = '';
+	switch ($_GET['server']) {
+	case '1':
+		$server = 'devserver';
+		break;
+	case '2':
+		$server = 'testserver';
+		break;
+	default:
+		$server = 'illarionserver';
+	}
+	
 	$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 
 	if (!$charid)

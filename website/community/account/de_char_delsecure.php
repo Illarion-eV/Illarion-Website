@@ -1,7 +1,17 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	$server = ( $_GET['server'] == '1' ? 'devserver' : 'illarionserver');
+	$server = '';
+	switch ($_GET['server']) {
+	case '1':
+		$server = 'devserver';
+		break;
+	case '2':
+		$server = 'testserver';
+		break;
+	default:
+		$server = 'illarionserver';
+	}
 
 	if (!is_numeric($_GET['charid']))
 	{
@@ -37,13 +47,13 @@
 ?>
 
 <div>
-	<p>Bist du sicher das du deinen Charakter <b><?php echo $char; ?></b> wirklich
+	<p>Bist du sicher das du deinen Charakter <b><?php echo $char; ?></b> (<?php echo $server; ?>) wirklich
 	löschen willst? Diese Aktion kann nicht mehr rückgängig gemacht werden.</p>
 
 	<form id="delete_form" name="delete_form" method="post" action="de_charlist.php" style="width:100%;text-align:center;">
 		<button onclick="document.forms.delete_form.submit();" style="margin-right:10px;">Ja, den Charakter<br />löschen</button>
 		<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">Nein, den Charakter<br />nicht löschen</button><?php endif; ?>
-		<input type="hidden" name="server" value="<?php echo ($server == 'illarionserver' ? 0 : 1 ); ?>" />
+		<input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
 		<input type="hidden" name="charid" value="<?php echo $_GET['charid']; ?>" />
 		<input type="hidden" name="action" value="char_delete" />
 	</form>
