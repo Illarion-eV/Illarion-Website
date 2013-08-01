@@ -517,10 +517,11 @@ ul.navigation {
 
 ul.navigation li {
 	color: #DBD9CC;
+	margin-bottom: 5pt;
 }
 
 ul.navigation li.seperator {
-	margin-bottom: 8pt;
+	margin-bottom: 10pt;
 }
 
 ul.navigation a,
@@ -528,7 +529,7 @@ ul.navigation a:visited,
 ul.navigation label {
 	color:#DDC687;
 	text-decoration:none;
-	line-height: 15pt;
+	line-height: 13pt;
 }
 
 ul.navigation a.importaint,
