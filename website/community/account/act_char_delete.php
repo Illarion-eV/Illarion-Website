@@ -66,7 +66,7 @@
     $isOnline = ($pgSQL->loadResult() > 0);
 	if ($isOnline)
 	{
-		Messages::add((Page::isGerman() ? 'Der Charakter ist eingeloggt und kann nicht gelöscht werden.' : 'The character is logged in and can\'t be deleted.'), 'error');
+		Messages::add((Page::isGerman() ? 'Der Charakter ist eingeloggt und kann nicht gelöscht werden.' : 'The character is logged in and cannot be deleted.'), 'error');
 	}
 	else
 	{
@@ -127,6 +127,6 @@
 		$db_hp->query();
 		$db_hp->Commit();
 
-		Messages::add((Page::isGerman() ? 'Dein Charakter wurde gelöscht.' : 'Your character was deleted.'), 'info');
+		Messages::add((Page::isGerman() ? 'Dein Charakter wurde gelöscht.' : 'Your character has been deleted.'), 'info');
 	}
 ?>
