@@ -6,7 +6,7 @@
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charlist.php' );
 
 	define( 'ILLARIONSERVER', 'Spielserver' );
-	define( 'TESTSERVER', 'Devserver' );
+	define( 'DEVSERVER', 'Devserver' );
 
 	Page::setTitle( array( 'Account', 'Charakterliste' ) );
 	Page::setDescription( 'Auf dieser Seite bekommst du eine Übersicht über alle Charaktere die du hast' );
@@ -36,12 +36,12 @@
 			<th style="width:90px;">Geschlecht</th>
 			<th style="width:190px;">Status</th>
 			<th style="width:110px;">&nbsp;</th>
-			<?php if ( IllaUser::auth('devserver') ): ?><th style="width:7%;">Server</th><?php endif; ?>
+			<th style="width:7%;">Server</th>
 		</tr>
 	</thead>
 	<tfoot>
 		<tr>
-			<td colspan="<?php echo ( IllaUser::auth('devserver') ? '5' : '6' ); ?>" style="text-align:center;vertical-align:middle;height:60px;">
+			<td colspan="6" style="text-align:center;vertical-align:middle;height:60px;">
 				<?php if (IllaUser::$charlimit <= getCharacterCount() && IllaUser::$charlimit > 0): ?>
 				&nbsp;
 				<?php else: ?>
@@ -53,7 +53,7 @@
 	<tbody>
 		<?php if (!count($char_list)): ?>
 		<tr>
-			<td colspan="<?php echo ( IllaUser::auth('devserver') ? '5' : '6' ); ?>">Es wurden keine Charaktere gefunden</td>
+			<td colspan="6">Es wurden keine Charaktere gefunden</td>
 		</tr>
 	</tbody>
 </table>
@@ -62,7 +62,7 @@
 	endif;
 ?>
 		<?php foreach( $char_list as $key=>$character ):
-			$character['ident'] = "?charid=".$character['chr_playerid'].($character['chr_server']==TESTSERVER ? '&amp;server=1' : '');
+			$character['ident'] = "?charid=".$character['chr_playerid'].($character['chr_server']==DEVSERVER ? '&amp;server=1' : '');
 		?>
 		<tr>
 			<td>
@@ -88,11 +88,9 @@
 					Charakter löschen
 				</a>
 			</td>
-			<?php if ( IllaUser::auth('devserver') ): ?>
 			<td>
 				<?php echo $character['chr_server']; ?>
 			</td>
-			<?php endif; ?>
 		</tr>
 		<?php endforeach; ?>
 	</tbody>

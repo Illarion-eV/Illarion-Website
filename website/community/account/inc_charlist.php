@@ -15,7 +15,7 @@
 		if ( IllaUser::auth('devserver') )
 		{
 			$devserver=& Database::getPostgreSQL( 'devserver' );
-			$query = 'SELECT chr_playerid, chr_name, chr_sex, chr_race, chr_status, ply_dob, \''.TESTSERVER.'\' AS chr_server'
+			$query = 'SELECT chr_playerid, chr_name, chr_sex, chr_race, chr_status, ply_dob, \''.DEVSERVER.'\' AS chr_server'
 			.PHP_EOL.' FROM chars'
 			.PHP_EOL.' LEFT JOIN player ON ply_playerid = chr_playerid'
 			.PHP_EOL.' WHERE chr_accid = '.$illarionserver->Quote( IllaUser::$ID )
