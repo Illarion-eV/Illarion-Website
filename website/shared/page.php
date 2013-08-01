@@ -1497,7 +1497,7 @@ class Page {
 			} elseif ($mantisIssues == 1) {
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Problem' : 'One roblem');
 			} else {
-				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Probleme" : "$mantisIssues problems');
+				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Probleme" : "$mantisIssues problems");
 			}
 
 			if (!Messages::any_msgs()) {
