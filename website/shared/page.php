@@ -1026,7 +1026,7 @@ class Page {
 		$query = 'SELECT COUNT(*)'
 		.PHP_EOL.'FROM "mantis"."mantis_bug_table"'
 		.PHP_EOL.'INNER JOIN "mantis"."mantis_bug_tag_table" ON "mantis_bug_table"."id" = "mantis_bug_tag_table"."bug_id"'
-		.PHP_EOL.'WHERE "mantis_bug_table"."status" < 80 AND "mantis_bug_tag_table"."tag_id" = 31'
+		.PHP_EOL.'WHERE "mantis_bug_table"."status" < 80 AND "mantis_bug_tag_table"."tag_id" = 31';
 		$db->setQuery($query, 0, 1);
 		return $db->loadResult();
 	}
