@@ -1020,6 +1020,16 @@ class Page {
 		self::$playercount = $db->loadResult();
 		return null;
 	}
+	
+	static private function getOpenTestserverIssues() {
+		$db = Database::getPostgreSQL();
+		$query = 'SELECT COUNT(*)'
+		.PHP_EOL.'FROM "mantis"."mantis_bug_table"'
+		.PHP_EOL.'INNER JOIN "mantis"."mantis_bug_tag_table" ON "mantis_bug_table"."id" = "mantis_bug_tag_table"."bug_id"'
+		.PHP_EOL.'WHERE "mantis_bug_table"."status" < 80 AND "mantis_bug_tag_table"."tag_id" = 31'
+		$db->setQuery($query, 0, 1);
+		return $db->loadResult();
+	}
 
 	/**
 	* Detects the language of the current page
@@ -1473,12 +1483,21 @@ class Page {
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Server ist offline' : 'Server is offline');
 			}
 			
+			$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
 			if (!self::$testserverstatus) {
-				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver online' : 'Testserver online');
 			}else {
-				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver offline' : 'Testserver offline');
+			}
+			
+			$mantisIssues = getOpenTestserverIssues();
+			$search_keywords[++$search_cnt] = '{MANTIS_ISSUES}';
+			if ($mantisIssues == 0) {
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Probleme' : 'No roblems');
+			} elseif ($mantisIssues == 1) {
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Problem' : 'One roblem');
+			} else {
+				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Probleme" : "$mantisIssues problems');
 			}
 
 			if (!Messages::any_msgs()) {
