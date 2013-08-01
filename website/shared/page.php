@@ -1493,9 +1493,9 @@ class Page {
 			$mantisIssues = self::getOpenTestserverIssues();
 			$search_keywords[++$search_cnt] = '{MANTIS_ISSUES}';
 			if ($mantisIssues == 0) {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Probleme' : 'No roblems');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Probleme' : 'No problems');
 			} elseif ($mantisIssues == 1) {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Problem' : 'One roblem');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Problem' : 'One problem');
 			} else {
 				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Probleme" : "$mantisIssues problems");
 			}
