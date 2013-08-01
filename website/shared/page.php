@@ -92,6 +92,16 @@ class Page {
 	* @var int
 	*/
 	static private $serverstatus = 0;
+	
+	/**
+	* Status of the Illarion Testserver
+	* 0 = online
+	* 1 = offline
+	*
+	* @access private
+	* @var int
+	*/
+	static private $testserverstatus = 0;
 
 	/**
 	* Debugger usage
@@ -978,13 +988,19 @@ class Page {
 		$connection = @fsockopen('127.0.0.1', 3008, $errno, $errstr, 30);
 		if (is_bool($connection)) {
 			self::$serverstatus = 1;
-			self::$debugger = 0;
-			return null;
 		}else {
+			self::$serverstatus = 0;
 			fclose($connection);
 		}
 
-		self::$serverstatus = 0;
+		$connection = @fsockopen('127.0.0.1', 3011, $errno, $errstr, 30);
+		if (is_bool($connection)) {
+			self::$testserverstatus = 1;
+		}else {
+			self::$testserverstatus = 0;
+			fclose($connection);
+		}
+
 		self::$debugger = 0;
 	}
 
@@ -1455,6 +1471,14 @@ class Page {
 				// $search_keywords[++$search_cnt] = '{SERVER_STATUS}'; $search_replace[$search_cnt] = ( self::$language === 'de' ? 'Server ist offline' : 'Server is offline' );
 				$search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
 				$search_replace[$search_cnt] = (self::$language === 'de' ? 'Server ist offline' : 'Server is offline');
+			}
+			
+			if (!self::$testserverstatus) {
+				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
+				$search_replace[$search_cnt] = ( self::$language === 'de' ? 'Testserver ist online' : 'Testserver is online' );
+			}else {
+				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
+				$search_replace[$search_cnt] = (self::$language === 'de' ? 'Testserver ist offline' : 'Testserver is offline');
 			}
 
 			if (!Messages::any_msgs()) {
