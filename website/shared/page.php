@@ -1453,32 +1453,32 @@ class Page {
 				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
-			$search_replace[$search_cnt] = (self::$language === 'de' ? 'News von Illarion' : 'News of Illarion');
+			$search_replace[$search_cnt] = (self::isGerman() ? 'News von Illarion' : 'News of Illarion');
 
 			if (!self::$serverstatus) {
 				// $search_keywords[++$search_cnt] = '{SERVER_STATUS}'; $search_replace[$search_cnt] = ( self::$language === 'de' ? 'Server ist online' : 'Server is online' );
 				switch (self::$playercount) {
 					case 0: $search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
-						$search_replace[$search_cnt] = (self::$language === 'de' ? 'Niemand spielt' : 'Nobody plays');
+						$search_replace[$search_cnt] = (self::isGerman() ? 'Niemand spielt' : 'Nobody plays');
 						break;
 					case 1: $search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
-						$search_replace[$search_cnt] = (self::$language === 'de' ? 'Ein Char online' : 'One char online');
+						$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Char online' : 'One char online');
 						break;
 					default: $search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
-						$search_replace[$search_cnt] = self::$playercount . (self::$language === 'de' ? ' Chars online' : ' chars online');
+						$search_replace[$search_cnt] = self::$playercount . (self::isGerman() ? ' Chars online' : ' chars online');
 				}
 			}else {
 				// $search_keywords[++$search_cnt] = '{SERVER_STATUS}'; $search_replace[$search_cnt] = ( self::$language === 'de' ? 'Server ist offline' : 'Server is offline' );
 				$search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
-				$search_replace[$search_cnt] = (self::$language === 'de' ? 'Server ist offline' : 'Server is offline');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Server ist offline' : 'Server is offline');
 			}
 			
 			if (!self::$testserverstatus) {
 				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
-				$search_replace[$search_cnt] = ( self::$language === 'de' ? 'Testserver ist online' : 'Testserver is online' );
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver online' : 'Testserver online');
 			}else {
 				$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
-				$search_replace[$search_cnt] = (self::$language === 'de' ? 'Testserver ist offline' : 'Testserver is offline');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver offline' : 'Testserver offline');
 			}
 
 			if (!Messages::any_msgs()) {
@@ -1497,8 +1497,8 @@ class Page {
 					$name = substr($name, 0, 8) . '...';
 				}
 				$search_keywords[++$search_cnt] = '{ACCOUNT_NAVIGATION_FRAME}';
-				$search_replace[$search_cnt] = '		<li class="seperator">' . (self::$language === 'de' ? 'Hallo ' : 'Hello ') . $name . '</li>' . PHP_EOL
-				 . '		<li><a href="' . self::url . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::$language === 'de' ? 'Charaktere' : 'Characters') . '</a></li>' . PHP_EOL
+				$search_replace[$search_cnt] = '		<li class="seperator">' . (self::isGerman() ? 'Hallo ' : 'Hello ') . $name . '</li>' . PHP_EOL
+				 . '		<li><a href="' . self::url . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::isGerman() ? 'Charaktere' : 'Characters') . '</a></li>' . PHP_EOL
 				 . '		<li class="seperator"><a href="' . self::url . '/community/account/' . self::$language . '_acc_settings.php" class="importaint">Account</a></li>' . PHP_EOL
 				 . '		<li>' . PHP_EOL
 				 . '			<input type="hidden" name="action" value="logout" />' . PHP_EOL
@@ -1510,7 +1510,7 @@ class Page {
 				 . '		<li class="seperator"><input type="text" name="login_name" style="width:100%;" /></li>' . PHP_EOL
 				 . '		<li>' . (self::$language === 'de' ? 'Passwort' : 'Password') . '</li>' . PHP_EOL
 				 . '		<li class="seperator"><input type="password" name="login_pw" style="width:100%;" /></li>' . PHP_EOL
-				 . '		<li class="seperator"><input type="checkbox" name="login_remember" value="remember" id="remember_me" /><label for="remember_me">' . (self::$language === 'de' ? 'immer einloggen' : 'remember me') . '</label></li>' . PHP_EOL
+				 . '		<li class="seperator"><input type="checkbox" name="login_remember" value="remember" id="remember_me" /><label for="remember_me">' . (self::isGerman() ? 'immer einloggen' : 'remember me') . '</label></li>' . PHP_EOL
 				 . '		<li>' . PHP_EOL
 				 . '			<input type="hidden" name="action" value="login" />' . PHP_EOL
 				 . '			<input type="submit" name="login" value="' . (self::$language === 'de' ? 'Einloggen' : 'Login') . '" style="width:100%;" />' . PHP_EOL
