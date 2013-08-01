@@ -1485,9 +1485,9 @@ class Page {
 			
 			$search_keywords[++$search_cnt] = '{TESTSERVER_STATUS}';
 			if (!self::$testserverstatus) {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver online' : 'Testserver online');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver&#8239;online' : 'Testserver&#8239;online');
 			}else {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver offline' : 'Testserver offline');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver&#8239;offline' : 'Testserver&#8239;offline');
 			}
 			
 			$mantisIssues = self::getOpenTestserverIssues();
