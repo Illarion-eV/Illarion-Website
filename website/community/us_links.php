@@ -35,6 +35,7 @@ Below are links to these projects and a small description of how it has contribu
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
 	<li><a class="hidden" href="#19">YourKit</a></li>
 </ul>
+<div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="1"></a></div>
