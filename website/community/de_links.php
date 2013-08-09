@@ -87,7 +87,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<br /><br />
 	Nifty GUI ist eine Java-Bibliothek welche das Erstellen von interaktiven Benutzeroberflächen für Spiele 
 	und Dergleichen unterstützt. 
-	Sie war eine große Hilfe bei der Entwicklung der GUI, wie sie aktuellen im Spiel verwendet wird.
+	Sie war eine große Hilfe bei der Entwicklung der GUI, wie sie aktuelle im Spiel verwendet wird.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>

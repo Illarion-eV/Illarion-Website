@@ -283,7 +283,7 @@ Below are links to these projects and a small description of how it has contribu
 <p>
         <a rel="external" href="http://www.yourkit.com">Link to the YourKit homepage</a>
         <br /><br />
-        The YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
+        YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
 	YourKit is kindly supporting Illarion with free open source licenses for the Profiler.
 	Besides the <a rel="external" href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
 	YourKit, LLC also develops the <a rel="external" href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
