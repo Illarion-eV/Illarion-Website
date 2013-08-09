@@ -14,7 +14,7 @@ Page::Init();
 The Illarion developers would like to recognise and thank all of the projects that have allowed Illarion to become what it is today.
 Below are links to these projects and a small description of how it has contributed towards the game.
 
-<ul>
+<ul class="content_summery">
 	<li><a class="hidden" href="#1">Debian</a></li>
 	<li><a class="hidden" href="#2">Libgdx</a></li>
 	<li><a class="hidden" href="#3">Oganalp Canatan</a></li>
@@ -33,6 +33,7 @@ Below are links to these projects and a small description of how it has contribu
 	<li><a class="hidden" href="#16">PHP</a></li>
 	<li><a class="hidden" href="#17">phpBB</a></li>
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
+	<li><a class="hidden" href="#19">YourKit</a></li>
 </ul>
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -273,3 +274,21 @@ Below are links to these projects and a small description of how it has contribu
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="19"></a></div>
+
+<h4>YourKit</h4>
+
+<p>
+        <a rel="external" href="http://www.yourkit.com">Link to the YourKit homepage</a>
+        <br /><br />
+        The YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
+	YourKit is kindly supporting Illarion with free open source licenses for the Profiler.
+	Besides the <a rel="external" href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
+	YourKit, LLC also develops the <a rel="external" href="http://www.yourkit.com/.net/profiler/index.jsp"YourKit .NET Profiler</a>.
+	</br /><br />
+	Illarion uses the YourKit Java Profiler to identify problems and performance bottlenecks in the Java applications.
+</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
