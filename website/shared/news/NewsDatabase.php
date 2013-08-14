@@ -203,7 +203,7 @@ SQL;
                 $author = new NewsAuthor($dbEntry['news_author_us_id'], $dbEntry['news_author_us_login'], $dbEntry['news_author_us_name']);
             }
             if (!NewsDatabase::isNull($dbEntry['news_proof_reader_us_id'])) {
-                $proofReausr = new NewsAuthor($dbEntry['news_proof_reausr_us_id'], $dbEntry['news_proof_reausr_us_login'], $dbEntry['news_proof_reausr_us_name']);
+                $proofReausr = new NewsAuthor($dbEntry['news_proof_reader_us_id'], $dbEntry['news_proof_reader_us_login'], $dbEntry['news_proof_reader_us_name']);
             }
             $englishEntry = new NewsLanguageEntry($dbEntry['news_title_us'], $dbEntry['news_content_us'], $author, $proofReausr, !is_null($proofReausr));
         }
