@@ -76,7 +76,7 @@ class HTMLRenderer extends BBCodeRenderer {
 
         $langTag = $german ? 'de' : 'us';
 
-        if ($this->isShowAuthorView()) {
+        if ($this->isShowAuthorView() && !$entry->isPublished()) {
             $pageURL = \Page::getURL();
             $editImage = \Page::getCurrentImageURL() . '/feder.png';
             $edit = <<<TEXT
