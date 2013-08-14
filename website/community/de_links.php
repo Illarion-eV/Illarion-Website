@@ -15,7 +15,7 @@ Die Entwickler Illarions wollen den folgenden Projekten ihren Dank und ihre Aner
 Es ist ihnen zu verdanken, dass Illarion das geworden ist, was es heute ist. 
 Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie sie zum Spiel beigetragen haben.
 
-<ul>
+<ul class="content_summery">
 	<li><a class="hidden" href="#1">Debian</a></li>
 	<li><a class="hidden" href="#2">Libgdx</a></li>
 	<li><a class="hidden" href="#3">Oganalp Canatan</a></li>
@@ -34,7 +34,9 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<li><a class="hidden" href="#16">PHP</a></li>
 	<li><a class="hidden" href="#17">phpBB</a></li>
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
+	<li><a class="hidden" href="#19">YourKit</a></li>
 </ul>
+<div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="1"></a></div>
@@ -85,7 +87,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<br /><br />
 	Nifty GUI ist eine Java-Bibliothek welche das Erstellen von interaktiven Benutzeroberflächen für Spiele 
 	und Dergleichen unterstützt. 
-	Sie war eine große Hilfe bei der Entwicklung der GUI, wie sie aktuellen im Spiel verwendet wird.
+	Sie war eine große Hilfe bei der Entwicklung der GUI, wie sie aktuelle im Spiel verwendet wird.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -275,4 +277,21 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	und Arbeit unter den Entwicklern zu verteilen.
 </p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="19"></a></div>
+<h4>YourKit</h4>
+<p>
+	<a rel="external" href="http://yourkit.com">Link zur Yourkit Homepage</a>
+	<br /><br />
+	YourKit für Java ist ein Java Profiler der von YourKit, LLC entwickelt wird. YourKit unterstützt
+	Illarion und stellt den Java Profiler für das Projekt kostenlos zur Verfügung.
+	<br />
+	Neben dem <a rel="external" href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
+	bietet YourKit, LLC auch noch den <a rel="external" href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>
+	an.
+	<br />
+	<br />
+	Bei Illarion wird der YourKit Profiler verwendet um Probleme und Leistungsengpässe in den Java Anwendungen zu finden.
+</p>
 <?php Page::insert_go_to_top_link(); ?>
