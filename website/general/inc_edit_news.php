@@ -185,7 +185,7 @@ if (isset($_POST['action'])) {
                 if ($newsEntry->isPublished()) {
                     Page::redirect(Page::getUrlToFile($targetNewsPage), $translations['newsEntryStored'], 'info');
                 } else {
-                    Messages::add($translations['newsEntryStored'], 'info');
+                    Page::redirect(Page::getUrlToFile($targetNewsPage), $translations['newsEntryStored'], 'info');
                 }
             } else {
                 Messages::add($translations['errorWhileStoring'], 'error');
