@@ -1,131 +1,159 @@
 <?php
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
+	include ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
 
-	if (!IllaUser::auth('news'))
-	{
-		Messages::add( 'Zugriff nicht gestattet', 'error');
-		include_once( "de_news.php" );
-		exit();
-	}
+    define('SUBMIT_SAVE', 'Speichern');
+    define('SUBMIT_PREVIEW', 'Vorschau');
+    define('SUBMIT_DELETE', 'Löschen');
+    define('IN_NEWS_EDITOR', 1);
 
-	$new_news = array();
-	$new_news['id'] = ( isset($_POST['targetid']) ? $_POST['targetid'] : false );
-	if (!$new_news['id'])
-	{
-		$new_news['id'] = ( isset($_GET['targetid']) ? $_GET['targetid'] : false );
-	}
-	$new_news['title_de'] = '';
-	$new_news['title_us'] = '';
-	$new_news['content_de'] = '';
-	$new_news['content_us'] = '';
-	$new_news['use_capital'] = 0;
-	$new_news['name'] = IllaUser::$name;
-	$new_news['author'] = IllaUser::$ID;
-	$new_news['published_at'] = time();
+    $targetNewsPage = __DIR__ . '/de_news.php';
 
-	if (isset($_POST['action']))
-	{
-		$new_news['title_de'] = stripslashes($_POST['title_de']);
-		$new_news['title_us'] = stripslashes($_POST['title_us']);
-		$new_news['content_de'] = stripslashes($_POST['content_de']);
-		$new_news['content_us'] = stripslashes($_POST['content_us']);
-		$new_news['use_capital'] = ( $_POST['use_capital'] == 'yes' ? 1 : 0 );
-	}
-	elseif ( $new_news['id'] )
-	{
-		$new_news = News::load_id_from_db( $new_news['id'] );
-	}
+    $translations = array();
+    $translations['accessRejected'] = 'Zugriff nicht gestattet';
+    $translations['entryAlreadyPublished'] = 'News-Einträge die bereits veröffentlicht sind können nicht bearbeitet werden.';
+    $translations['entryDeleted'] = 'Der News-Eintrag wurde erfolgreich entfernt.';
+    $translaction['deleteCheckMissing'] = 'Um den News-Eintrag zu löschen muss der Hacken gesetzt werden.';
+    $translations['newsEntryStored'] = 'Der News-Eintrag wurde erfolgreich gespeichert.';
+    $translations['errorWhileStoring'] = 'Beim Speichern des News-Eintrags ist ein Fehler aufgetreten.';
 
-	if ($_POST['action'] == 'Absenden')
-	{
-		News::save( $new_news );
-		include_once( "de_news.php" );
-		exit();
-	}
+    include __DIR__ . '/inc_edit_news.php';
 
-	create_header( "Illarion - News posten",
-	"Hier kann eine neue News auf die Titelseite von Illarion gepostet werden.",
-	"News, Aktuelles, Neuigkeiten" );
-	include_header();
+    Page::setTitle('Neuigkeiten verfassen');
+    Page::setDescription('Diese Seite enthält den Editor für die Neuigkeiten auf der Homepage.');
+    Page::setKeywords(array('Neuigkeiten', 'News', 'Editor'));
+    Page::setXHTML();
+    Page::Init();
 ?>
 
-<h1>Einen News Eintrag <?php echo ($new_news['id'] ? 'ändern' : 'erstellen'); ?></h1>
+<h1>Einen News Eintrag <?php echo (is_null($originalEntry) ? 'erstellen' : 'ändern'); ?></h1>
+
+<?php if ($legacy): ?>
+<p style="font-weight:bold;color:#990000;">
+    Dieser News-Eintrag ist ein alter Eintrag. Er wird nach anderen Prinzipien gerendert. HTML-Code wird interpretiert
+    und BBCode wird ignoriert. Es ist möglich diesen News-Eintrag zu ändern, allerdings verliert er dadurch die
+    Markierung als alter News-Eintrag. Bei der Bearbeitung muss also aller HTML-Code aus dem News-Eintrag entfernt
+    werden und durch entsprechenden BBCode ersetzt werden.
+</p>
+<?php endif; ?>
 
 <?php
-	if ($new_news['title_de'] != '')
-	{
-		News::show( $new_news, $type = 'html', $lang='de' );
-		if ($new_news['title_us'] != '')
-		{
-			echo "<br />";
-		}
-	}
-	if ($new_news['title_us'] != '')
-	{
-		News::show( $new_news, $type = 'html', $lang='us' );
-	}
-?>
+if ($showPreview): ?>
+<div>
+    <fieldset>
+        <legend>Vorschau (deutsch)</legend>
+        <?php echo $newsRenderer->renderEntry($newsEntry, 'de'); ?>
+    </fieldset>
+    <fieldset>
+        <legend>Vorschau (englisch)</legend>
+        <?php echo $newsRenderer->renderEntry($newsEntry, 'en'); ?>
+    </fieldset>
+</div>
+<?php endif; ?>
 
-<form action="de_edit_news.php" method="post">
-	<table style="width:100%;">
-		<tr>
-			<th style="width:50%;">Überschrift (deutsch)</th>
-			<td style="width:15px;" />
-			<th style="width:50%;">Überschrift (englisch)</th>
-		</tr>
-		<tr>
-			<td style="width:50%;"><input type="text" name="title_de" value="<?php echo $new_news['title_de']; ?>" style="width:100%" /></td>
-			<td style="width:15px;" />
-			<td style="width:50%;"><input type="text" name="title_us" value="<?php echo $new_news['title_us']; ?>" style="width:100%" /></td>
-		</tr>
-		<tr><td>&nbsp;</td></tr>
-		<tr>
-			<th style="width:50%;">Text (deutsch)</th>
-			<td style="width:15px;" />
-			<th style="width:50%;">Text (englisch)</th>
-		</tr>
-		<tr>
-			<td style="width:50%;"><textarea rows="15" name="content_de" value="" style="width:100%" wrap="virtual"><?php echo $new_news['content_de']; ?></textarea></td>
-			<td style="width:15px;" />
-			<td style="width:50%;"><textarea rows="15" name="content_us" value="" style="width:100%" wrap="virtual"><?php echo $new_news['content_us']; ?></textarea></td>
-		</tr>
-		<tr><td>&nbsp;</td></tr>
-		<tr>
-			<td colspan="3">
-				<input type="checkbox" name="use_capital" id="use_capital" value="yes" <?php echo ( $new_news['use_capital'] == 1 ? 'checked="checked" ' : '' ); ?>/>
-				<label for="use_capital">Grafischen Großbuchstaben am Anfang benutzen</label>
-			</td>
-		</tr>
-		<tr><td>&nbsp;</td></tr>
-		<tr>
-			<td colspan="3" style="text-align:center;">
-				<input type="submit" name="action" value="Vorschau" />
-				&nbsp;&nbsp;&nbsp;
-				<input type="submit" name="action" value="Absenden" />
-				<input type="reset" value="Zurücksetzen" />
-				<?php if ($new_news['id']) { ?><input type="hidden" name="targetid" value="<?php echo $new_news['id']; ?>" /><?php } ?>
-			</td>
-		</tr>
-	</table>
+<form action="<?php echo Page::getUrlToFile(__FILE__); ?>" method="post">
+    <fieldset>
+        <legend>Deutscher News Eintrag</legend>
+        <p>
+            <label>
+                Überschrift <?php echo ($titleDeChanged ? '(geändert)' : ''); ?>
+                <input type="text" name="title_de" value="<?php echo $titleDe; ?>" style="width:100%"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                Text <?php echo ($contentDeChanged ? '(geändert)' : ''); ?>
+                <textarea rows="15" name="content_de" style="width:100%" wrap="virtual"><![CDATA[<?php echo $contentDe; ?>]]></textarea>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="signedOff_de"
+                       value="yes" <?php echo ($signedOffDe ? 'checked="checked" ' : ''); ?>/>
+                Eintrag ist abgezeichnet <?php echo ($signedOffDeChanged ? '(geändert)' : ''); ?>
+            </label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Englischer News Eintrag</legend>
+        <p>
+            <label>
+                Überschrift <?php echo ($titleEnChanged ? '(geändert)' : ''); ?>
+                <input type="text" name="title_us" value="<?php echo $titleEn; ?>" style="width:100%"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                Text <?php echo ($contentEnChanged ? '(geändert)' : ''); ?>
+                <textarea rows="15" name="content_us" style="width:100%" wrap="virtual"><![CDATA[<?php echo $contentEn; ?>]]></textarea>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="signedOff_us"
+                       value="yes" <?php echo ($signedOffEn ? 'checked="checked" ' : ''); ?>/>
+                Eintrag ist abgezeichnet <?php echo ($signedOffEnChanged ? '(geändert)' : ''); ?>
+            </label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Allgmein</legend>
+
+        <p class="hyphenate" style="font-weight: bold;">
+            News-Einträge die veröffentlicht wurden, werden über den News-Feed an die Spieler und an Facebook geschickt. Darum
+            ist es nicht mehr möglich einen News-Eintrag zu verändern nachdem er veröffentlicht wurde. Die News-Einträge müssen
+            daher vorher auf Richtigkeit geprüft werden.
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="published"
+                       value="yes" <?php echo ($published ? 'checked="checked" ' : ''); ?>/>
+                Veröffentlicht <?php echo ($publishedChanged ? '(geändert)' : ''); ?>
+            </label>
+        </p>
+        <p style="text-align:center;">
+            <input type="submit" name="action" value="<?php echo SUBMIT_PREVIEW; ?>" style="margin-right:15px" />
+            <input type="submit" name="action" value="<?php echo SUBMIT_SAVE; ?>" />
+            <input type="reset" value="Zurücksetzen" />
+            <input type="hidden" name="targetid" value="<?php echo $newsId; ?>" />
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>News-Eintrag löschen</legend>
+        <p>
+            <label>
+                <input type="checkbox" name="deleteConfirmed" value="yes" />
+                Löschung des News-Eintrags bestätigen
+            </label>
+        </p>
+        <p style="text-align:center;">
+            <input type="submit" name="action" value="<?php echo SUBMIT_DELETE; ?>" />
+        </p>
+    </fieldset>
 </form>
+
 
 <h2>Ausfüllanleitung</h2>
 
-<p>Wenn Du einen Text schreibst, wird der gesamte Text automatisch von einem
-<b>&lt;p&gt;</b> und <b>&lt;/p&gt;</b> eingeschlossen. Möchtest Du mehrere
-Abschnitte formulieren, sollte Deine Eingabe insgesamt wie folgt aussehen:
-"absatz1&lt;/p&gt;&lt;p&gt;absatz2"</p>
+<p class="hyphenate">
+    Es ist zu beachten, dass die Überschriften nur reinen Text enthalten dürfen. Die Textfelder die den Inhalt der News
+    enthalten dürfen BBCode enthalten. Es gibt einige wenige Tags die unterstützt werden. Unterstützt werden:
+</p>
 
-<p>Links werden ähnlich gesetzt: <strong>&lt;a href='...'&gt;Link&lt;/a&gt;</strong>
-aber denke daran beim deutschen Text auf deutsche (Unter-)Seiten und beim englischen Text auf
-englische (Unter-)Seiten zu verlinken.</p>
+<ul>
+    <li>Fetter Text (<span style="font-family: monospace;">[b]Text[/b]</span>)</li>
+    <li>Kursiver Text (<span style="font-family: monospace;">[i]Text[/i]</span>)</li>
+    <li>URLs (<span style="font-family: monospace;">[url]http://illarion.org[/url]</span> oder
+        <span style="font-family: monospace;">[url=http://illarion.org]Illarion Homepage[/url]</span></li>
+    <li>Listen (<span style="font-family: monospace;">[list][*]Punkt 1[*]Punkt 2[/list]</span>)</li>
+</ul>
 
-<p>Aufzählungen können wie folgt gemacht werden: <b>&lt;ul&gt;&lt;li&gt;Aufz&auml;hlungspunkt
-1&lt;/li&gt;&lt;li&gt;Aufzählungspunkt 2&lt;/li&gt;&lt;/ul&gt;</b></p>
-
-<p>Am einfachsten ist es, sich vom Resultat mittels Vorschau zu überzeugen und erst dann die
-News abzusenden.</p>
-
-<?php insert_go_to_top_link(); ?>
-
-<?php include_footer(); ?>
+<p class="hyphenate">
+    Bei allen News müssen die deutschen und englischen Einträge abgezeichnet werden bevor die News veröffentlicht werden
+    kann. Bevor das Abzeichnen und das Veröffentlichen durchgeführt wurde, ist der News-Eintrag nur für News-Autoren
+    sichbar. Das Abzeichnen sollte von der Person vorgenommen werden, die die Richtigkeit des Textes überprüft hat.
+    Posts sollten generell nicht selbst abgezeichnet und direkt veröffentlicht werden. Es ist zwar möglich um Posts
+    abzuschicken, die im Vorfeld vorbereitet wurden, allerdings sollte das nicht die Regel sein.
+</p>

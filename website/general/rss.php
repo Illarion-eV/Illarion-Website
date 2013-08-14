@@ -10,15 +10,17 @@
 ?>
 <rss version="2.0">
 	<channel>
-		<title>News von Illarion</title>
-		<link><?php echo Page::getURL(); ?>/general/de_rss.php</link>
-		<description>Die aktuellen Nachrichten des Online-Rollenspiels Illarion</description>
-		<language>de-de</language>
+		<title>News of Illarion - News von Illarion</title>
+		<link><?php echo Page::getURL(); ?>/general/rss.php</link>
+		<description>
+            <p>The current news of the online-roleplaygame Illarion</p>
+            <p>Die aktuellen Nachrichten des Online-Rollenspiels Illarion</p>
+        </description>
 		<copyright>Illarion e.V.</copyright>
 		<lastBuildDate><?php echo date(DATE_RSS, $time); ?></lastBuildDate>
 		<pubDate><?php echo date(DATE_RSS, $time); ?></pubDate>
 		<managingEditor>webmaster@illarion.org</managingEditor>
 		<webMaster>webmaster@illarion.org</webMaster>
-		<?php echo $newsRenderer->renderList($news_list, 'de'); ?>
+		<?php echo $newsRenderer->renderList($news_list, 'un'); ?>
 	</channel>
 </rss>

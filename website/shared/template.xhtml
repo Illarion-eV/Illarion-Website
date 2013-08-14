@@ -53,9 +53,9 @@
         	Hyphenator.config({
         		'minwordlength'  : 4,
 				'remoteloading'  : false,
-				'onerrorhandler' : function(error) {},
-				
+				'onerrorhandler' : function(error) {}
         	});
+            Hyphenator.addExceptions('','Illarion');
 			Hyphenator.run();
         </script>
 		<link href="{HTTP_URL}/general/{LANGUAGE}_rss.php" title="{NEWS_TEXT}" type="application/rss+xml" rel="alternate"/>

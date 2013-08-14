@@ -40,4 +40,8 @@ füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 
 <h1>Aktuelle News</h1>
 
-<?php News::show( News::load_from_db( 'DESC', 3, 0 ), 'html' ); ?>
+<?php
+    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
+    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
+?>

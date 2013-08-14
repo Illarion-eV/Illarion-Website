@@ -330,7 +330,7 @@ class IllaUser {
 		$mail->IsHTML(false);
 		$mail->WordWrap = 80;
 		$mail->CharSet = 'utf-8';
-		$mail->SetLanguage(Page::getLanguage(), '');
+		$mail->SetLanguage(Page::getLanguage());
 		$mail->AddAddress(self::$email, self::$name);
 		$mail->From = 'accounts@illarion.org';
 		$mail->FromName = 'Illarion';

@@ -2,39 +2,33 @@
 if (!defined('AUTOLOAD_PREPARED')):
 	define('AUTOLOAD_PREPARED', 1);
 /**
-* This file controls the auto load of all classes. All exsisting classes need to be
-* registred in this autoload function so they are loaded upon need
-*/
-function __autoload($class_name) {
-	switch ($class_name) {
-		case 'includeWrapper': require $_SERVER['DOCUMENT_ROOT'] . '/shared/include_wrapper.php';
-			break;
-		case 'Page': require $_SERVER['DOCUMENT_ROOT'] . '/shared/page.php';
-			break;
-		case 'Database': require $_SERVER['DOCUMENT_ROOT'] . '/shared/database.php';
-			break;
-		case 'IllaDateTime': require $_SERVER['DOCUMENT_ROOT'] . '/shared/datetime.php';
-			break;
-		case 'IllaUser': require $_SERVER['DOCUMENT_ROOT'] . '/shared/user.php';
-			break;
-		case 'XmlC': require $_SERVER['DOCUMENT_ROOT'] . '/shared/xmlC.php';
-			break;
-		case 'News': require $_SERVER['DOCUMENT_ROOT'] . '/shared/news.php';
-			break;
-		case 'PHPMailer': require $_SERVER['DOCUMENT_ROOT'] . '/shared/email/class.phpmailer.php';
-			break;
-		case 'IllarionData': require $_SERVER['DOCUMENT_ROOT'] . '/shared/illarion_data.php';
-			break;
-		case 'JSBuilder': require $_SERVER['DOCUMENT_ROOT'] . '/shared/jsbuilder.php';
-			break;
-		case 'Messages': require $_SERVER['DOCUMENT_ROOT'] . '/shared/messages.php';
-			break;
-		case 'msg': require $_SERVER['DOCUMENT_ROOT'] . '/shared/messages.php';
-			break; //LEGACY
-		default: break;
+ * This file implements the function for auto loading the shared classes. Also it includes all other autoloading classes.
+ */
+
+require __DIR__ . '/libs/autoload.php';
+require __DIR__ . '/news/autoload.php';
+
+/**
+ * Autoload the shared classes of the page.
+ *
+ * @param string $class the class name
+ */
+function shared_autoload($class) {
+	switch ($class) {
+		case 'includeWrapper': require __DIR__ . '/include_wrapper.php'; break;
+		case 'Page': require __DIR__ . '/page.php'; break;
+		case 'Database': require __DIR__ . '/database.php'; break;
+		case 'IllaDateTime': require __DIR__ . '/datetime.php'; break;
+		case 'IllaUser': require __DIR__ . '/user.php'; break;
+		case 'XmlC': require __DIR__ . '/xmlC.php'; break;
+		case 'News': require __DIR__ . '/news.php'; break;
+		case 'IllarionData': require __DIR__ . '/illarion_data.php'; break;
+		case 'JSBuilder': require __DIR__ . '/jsbuilder.php'; break;
+		case 'Messages': require __DIR__ . '/messages.php'; break;
+		case 'msg': require __DIR__ . '/messages.php'; break;
 	}
 }
 
-endif;
+spl_autoload_register('shared_autoload');
 
-?>
+endif;

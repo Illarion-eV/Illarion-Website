@@ -1173,11 +1173,13 @@ class Page {
 	* @access private
 	*/
 	static private function CreateHeaderMessage() {
-		if (isset(self::$request_headers['X-Message'])) {
-			$type = (string)self::$request_headers['X-Message-Type'];
+		if (isset($_SESSION['message'])) {
+			$type = (string)$_SESSION['message-type'];
 			if ($type == 'note' || $type == 'error' || $type == 'info') {
-				Messages::add((string)self::$request_headers['X-Message'], 'note');
+				Messages::add((string)$_SESSION['message'], $type);
 			}
+            unset($_SESSION['message']);
+            unset($_SESSION['message-type']);
 		}
 	}
 
@@ -1236,27 +1238,50 @@ class Page {
 		echo $output;
 	}
 
-	/**
-	* Redirect the user to another page and shut the script execution down
-	*
-	* @access public
-	* @param string $target the url of the target page
-	* @param string $message The message that shall show up after the redirect
-	* @param string $message The type of the message that shall show up (info, error, note)
-	*/
+    /**
+     * Redirect the user to another page and shut the script execution down
+     *
+     * @param string $target the url of the target page
+     * @param string $message the message that is supposed to be displayed
+     * @param string $message_type The type of the message that shall show up (info, error, note)
+     * @access public
+     */
 	static public function redirect($target, $message = null, $message_type = 'info') {
+        ob_clean();
+
 		if (!defined('NO_OUTPUT')) {
 			define('NO_OUTPUT', 1);
 		}
 		if (!is_null($message)) {
 			if ($message_type === 'info' || $message_type === 'error' || $message_type === 'note') {
-				header('X-Message: ' . $message);
-				header('X-Message-Type: ' . $message_type);
+                $_SESSION['message'] = $message;
+                $_SESSION['message-type'] = $message_type;
 			}
 		}
 		header('Location: ' . $target);
 		exit();
 	}
+
+    /**
+     * Get the URL to a file that is inside the document root.
+     *
+     * @param string $file the file
+     * @return string the URL to the file
+     * @throws InvalidArgumentException in case the file is outside of the document root
+     */
+    static public function getUrlToFile($file) {
+        $docRoot = realpath($_SERVER['DOCUMENT_ROOT']);
+        $docRootLen = strlen($docRoot);
+        if (strncmp($file, $docRoot, $docRootLen)) {
+            throw new InvalidArgumentException("The file $file is not inside the document root {$_SERVER['DOCUMENT_ROOT']}.");
+        }
+
+        $relativePath = substr($file, $docRootLen);
+        if (strncmp($file, '/ssl', 4)) {
+            return Page::getURL() . $relativePath;
+        }
+        return Page::getSecureURL() . substr($relativePath, 4);
+    }
 
 	/**
 	* Creates the page template and put all received data out
