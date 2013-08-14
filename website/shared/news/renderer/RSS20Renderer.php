@@ -41,7 +41,7 @@ class RSS20Renderer extends BBCodeRenderer {
             $langTag = 'us_';
         } else {
             $orgTitle = $entry->getEnglish()->getTitle() . ' - ' . $entry->getGerman()->getTitle();
-            $orgContent = $entry->getEnglish()->getContent() . PHP_EOL . ' ---- ' . PHP_EOL . $entry->getGerman()->getContent();
+            $orgContent = $entry->getEnglish()->getContent() . PHP_EOL.PHP_EOL . ' ---- ' . PHP_EOL.PHP_EOL . $entry->getGerman()->getContent();
             $orgAuthor = $entry->getEnglish()->getAuthor()->getName() . ', ' . $entry->getGerman()->getAuthor()->getName();
             $langTag = '';
         }
