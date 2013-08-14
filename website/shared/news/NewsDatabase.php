@@ -107,7 +107,7 @@ SELECT news_id, news_published_at, news_title_de, news_title_us, news_content_de
   news_proof_reader_us_id, account_proof_reader_us.acc_login AS news_proof_reader_us_login, account_proof_reader_us.acc_name AS news_proof_reader_us_name
 FROM homepage.news
 LEFT JOIN accounts.account AS account_author_de ON news_author_de_id = account_author_de.acc_id
-LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_de.acc_id
+LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_us.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_de ON news_proof_reader_de_id = account_proof_reader_de.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_us ON news_proof_reader_us_id = account_proof_reader_us.acc_id
 WHERE news_id = {$pgSQL->Quote($id)}
@@ -136,7 +136,7 @@ SELECT news_id, news_published_at, news_title_de, news_title_us, news_content_de
   news_proof_reader_us_id, account_proof_reader_us.acc_login AS news_proof_reader_us_login, account_proof_reader_us.acc_name AS news_proof_reader_us_name
 FROM homepage.news
 LEFT JOIN accounts.account AS account_author_de ON news_author_de_id = account_author_de.acc_id
-LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_de.acc_id
+LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_us.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_de ON news_proof_reader_de_id = account_proof_reader_de.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_us ON news_proof_reader_us_id = account_proof_reader_us.acc_id
 ORDER BY news_published_at DESC
@@ -150,7 +150,7 @@ SELECT news_id, news_published_at, news_title_de, news_title_us, news_content_de
   news_proof_reader_us_id, account_proof_reader_us.acc_login AS news_proof_reader_us_login, account_proof_reader_us.acc_name AS news_proof_reader_us_name
 FROM homepage.news
 LEFT JOIN accounts.account AS account_author_de ON news_author_de_id = account_author_de.acc_id
-LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_de.acc_id
+LEFT JOIN accounts.account AS account_author_us ON news_author_us_id = account_author_us.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_de ON news_proof_reader_de_id = account_proof_reader_de.acc_id
 LEFT JOIN accounts.account AS account_proof_reader_us ON news_proof_reader_us_id = account_proof_reader_us.acc_id
 WHERE news_published = true
