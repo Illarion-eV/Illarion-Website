@@ -141,11 +141,14 @@ if (isset($_POST['action'])) {
 
     if (strlen($titleDe) > 0 || strlen($contentDe) > 0) {
         $author = $currentAuthor;
+        $proofReader = null;
         if (!is_null($originalEntry) && !is_null($originalEntry->getGerman())) {
             $author = $originalEntry->getGerman()->getAuthor();
+            $proofReader = $originalEntry->getGerman()->getProofReader();
         }
-        $proofReader = null;
-        if (($signedOffDeChanged || $titleDeChanged || $contentDeChanged) && $signedOffDe) {
+        if (!$signedOffDe) {
+            $proofReader = null;
+        } elseif ($signedOffDeChanged || $titleDeChanged || $contentDeChanged) {
             $proofReader = $currentAuthor;
         }
         $germanEntry = new \News\NewsLanguageEntry($titleDe, $contentDe, $author, $proofReader, !is_null($proofReader));
@@ -154,11 +157,14 @@ if (isset($_POST['action'])) {
     }
     if (strlen($titleEn) > 0 || strlen($contentEn) > 0) {
         $author = $currentAuthor;
+        $proofReader = null;
         if (!is_null($originalEntry) && !is_null($originalEntry->getEnglish())) {
             $author = $originalEntry->getEnglish()->getAuthor();
+            $proofReader = $originalEntry->getEnglish()->getProofReader();
         }
-        $proofReader = null;
-        if (($signedOffEnChanged || $titleEnChanged || $contentEnChanged) && $signedOffEn) {
+        if (!$signedOffEn) {
+            $proofReader = null;
+        } elseif ($signedOffEnChanged || $titleEnChanged || $contentEnChanged) {
             $proofReader = $currentAuthor;
         }
         $englishEntry = new \News\NewsLanguageEntry($titleEn, $contentEn, $author, $proofReader, !is_null($proofReader));
