@@ -38,7 +38,7 @@ if (isset($_POST['action'])) {
             $newsDb->deleteEntry($originalEntry->getId());
             Page::redirect(Page::getUrlToFile($targetNewsPage), $translations['entryDeleted'], 'info');
         } else {
-            Messages::add($translaction['deleteCheckMissing'], 'error');
+            Messages::add($translations['deleteCheckMissing'], 'error');
         }
     }
     $titleDe = trim(stripslashes($_POST['title_de']));
@@ -122,6 +122,19 @@ if (isset($_POST['action'])) {
     $legacy = false;
 }
 
+if (!is_null($originalEntry)) {
+    $publishDateTime = $originalEntry->getPublicationDate();
+    $publishDateTime->setTimezone(new \DateTimeZone('GMT'));
+    $lastChangeTimeStamp = $publishDateTime->getTimestamp();
+    $originalLastTimeStamp = $lastChangeTimeStamp;
+} else {
+    $lastChangeTimeStamp = 0;
+    $originalLastTimeStamp = 0;
+}
+if (isset($_POST['lastChangeTimeStamp']) && is_numeric($_POST['lastChangeTimeStamp'])) {
+    $lastChangeTimeStamp = (int) $_POST['lastChangeTimeStamp'];
+}
+
 $showPreview = false;
 if (isset($_POST['action'])) {
     $currentAuthor = new \News\NewsAuthor(IllaUser::$ID, IllaUser::$username, IllaUser::$name);
@@ -132,7 +145,7 @@ if (isset($_POST['action'])) {
             $author = $originalEntry->getGerman()->getAuthor();
         }
         $proofReader = null;
-        if ($signedOffDeChanged && $signedOffDe) {
+        if (($signedOffDeChanged || $titleDeChanged || $contentDeChanged) && $signedOffDe) {
             $proofReader = $currentAuthor;
         }
         $germanEntry = new \News\NewsLanguageEntry($titleDe, $contentDe, $author, $proofReader, !is_null($proofReader));
@@ -145,7 +158,7 @@ if (isset($_POST['action'])) {
             $author = $originalEntry->getEnglish()->getAuthor();
         }
         $proofReader = null;
-        if ($signedOffEnChanged && $signedOffEn) {
+        if (($signedOffEnChanged || $titleEnChanged || $contentEnChanged) && $signedOffEn) {
             $proofReader = $currentAuthor;
         }
         $englishEntry = new \News\NewsLanguageEntry($titleEn, $contentEn, $author, $proofReader, !is_null($proofReader));
@@ -157,15 +170,22 @@ if (isset($_POST['action'])) {
     if ($_POST['action'] === SUBMIT_PREVIEW) {
         $showPreview = true;
         $newsRenderer = new \News\Renderer\HTMLRenderer();
+        if ($lastChangeTimeStamp != $originalLastTimeStamp) {
+            Messages::add($translations['warningNewsChanged'], 'warn');
+        }
     } elseif ($_POST['action'] === SUBMIT_SAVE) {
-        if ($newsDb->saveEntry($newsEntry)) {
-            if ($newsEntry->isPublished()) {
-                Page::redirect(Page::getUrlToFile($targetNewsPage), $translations['newsEntryStored'], 'info');
+        if ($lastChangeTimeStamp == $originalLastTimeStamp) {
+            if ($newsDb->saveEntry($newsEntry)) {
+                if ($newsEntry->isPublished()) {
+                    Page::redirect(Page::getUrlToFile($targetNewsPage), $translations['newsEntryStored'], 'info');
+                } else {
+                    Messages::add($translations['newsEntryStored'], 'info');
+                }
             } else {
-                Messages::add($translations['newsEntryStored'], 'info');
+                Messages::add($translations['errorWhileStoring'], 'error');
             }
         } else {
-            Messages::add($translations['errorWhileStoring'], 'error');
+            Messages::add($translations['errorNewsChanged'], 'error');
         }
     }
 }

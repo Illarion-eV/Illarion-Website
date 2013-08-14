@@ -15,6 +15,8 @@
     $translaction['deleteCheckMissing'] = 'You need to set the mark to confirm that you really want to delete the news entry.';
     $translations['newsEntryStored'] = 'The news entry got successfully stored.';
     $translations['errorWhileStoring'] = 'Something went wrong when saving the news entry.';
+    $translations['warningNewsChanged'] = 'Warning! The news entry got changed by a different person.';
+    $translations['errorNewsChanged'] = 'The news entry can\'t be saved. It got changed by a different person.';
 
     include __DIR__ . '/inc_edit_news.php';
 
@@ -116,6 +118,7 @@ if ($showPreview): ?>
             <input type="submit" name="action" value="<?php echo SUBMIT_SAVE; ?>" />
             <input type="reset" value="Zurücksetzen" />
             <input type="hidden" name="targetid" value="<?php echo $newsId; ?>" />
+            <input type="hidden" name="lastChangeTimeStamp" value="<?php echo $lastChangeTimeStamp; ?>" />
         </p>
     </fieldset>
 

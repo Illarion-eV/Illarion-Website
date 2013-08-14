@@ -15,6 +15,8 @@
     $translaction['deleteCheckMissing'] = 'Um den News-Eintrag zu löschen muss der Hacken gesetzt werden.';
     $translations['newsEntryStored'] = 'Der News-Eintrag wurde erfolgreich gespeichert.';
     $translations['errorWhileStoring'] = 'Beim Speichern des News-Eintrags ist ein Fehler aufgetreten.';
+    $translations['warningNewsChanged'] = 'Achtung! Der News-Eintrag wurde von einer anderen Person geändert.';
+    $translations['errorNewsChanged'] = 'Der News-Eintrag kann nicht gespeichert werden, er wurde von einer anderen Person verändert.';
 
     include __DIR__ . '/inc_edit_news.php';
 
@@ -117,6 +119,7 @@ if ($showPreview): ?>
             <input type="submit" name="action" value="<?php echo SUBMIT_SAVE; ?>" />
             <input type="reset" value="Zurücksetzen" />
             <input type="hidden" name="targetid" value="<?php echo $newsId; ?>" />
+            <input type="hidden" name="lastChangeTimeStamp" value="<?php echo $lastChangeTimeStamp; ?>" />
         </p>
     </fieldset>
 
