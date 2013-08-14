@@ -108,16 +108,20 @@ TEXT;
             }
             if (!$entry->isPublished()) {
                 $authorInfo .= ($german? 'Nicht veröffentlicht - ' : 'Not published - ');
+                $publishText = ($german? ', letzte Änderung am ' : ', last change on ');
+            } else {
+                $publishText = ($german? ', veröffentlicht am ' : ', published on ');
             }
             if (strlen($authorInfo) > 0) {
                 $authorInfo = '<b>' . substr($authorInfo, 0, strlen($authorInfo) - 3) . '</b><br />';
             }
         } else {
             $proofReadBy = '';
+            $publishText = ($german ? ' am ' : ' on ');
         }
         $publishDateTime = $entry->getPublicationDate();
         $publishDateTime->setTimezone(new \DatetimeZone(date_default_timezone_get()));
-        $publishTime = ($german ? 'am ' : 'on ') . strftime(($german ? '%d. %B %Y um %H:%MUhr' : '%d. %B %Y %H:%I%p'), \IllaDateTime::TimestampWithOffset($publishDateTime->getTimestamp()));
+        $publishTime = $publishText . strftime(($german ? '%d. %B %Y um %H:%MUhr' : '%d. %B %Y %H:%I%p'), \IllaDateTime::TimestampWithOffset($publishDateTime->getTimestamp()));
 
         $result = <<<TEXT
 <div>
@@ -126,7 +130,7 @@ TEXT;
         $edit $title
     </h2>
     $content
-    <div class="right">{$authorInfo}{$writtenBy}{$proofReadBy} {$publishTime}</div>
+    <div class="right">{$authorInfo}{$writtenBy}{$proofReadBy}{$publishTime}</div>
 </div>
 TEXT;
         return $result;
