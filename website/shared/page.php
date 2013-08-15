@@ -1836,7 +1836,7 @@ class Page {
 						if (count($backtrace[$i]['params']) > 0) {
 							$error .= ' - <a href="#debug" onclick="document.getElementById(\'backtrace_params' . $error_id . '_' . $i . '\').style.display = \'block\';">Show Parameters</a><div class="backtrace_params" id="backtrace_params' . $error_id . '_' . $i . '">';
 							foreach ($backtrace[$i]['params'] as $param_name => $param_value) {
-								$error .= '$' . $param_name . ' = \'' . $param_value . '\'<br />';
+								$error .= '$' . $param_name . ' = \'' . htmlspecialchars($param_value) . '\'<br />';
 							}
 							$error .= '</div>';
 						}
