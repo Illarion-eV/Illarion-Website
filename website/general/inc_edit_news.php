@@ -43,7 +43,7 @@ if (isset($_POST['action'])) {
     }
     $titleDe = trim(stripslashes($_POST['title_de']));
     $contentDe = trim(stripslashes($_POST['content_de']));
-    $signedOffDe = ($_POST['signedOff_de'] === 'yes' && strlen($titleDe) > 0 && strlen($contentDe) > 0);
+    $signedOffDe = (isset($_POST['signedOff_de']) && $_POST['signedOff_de'] === 'yes' && strlen($titleDe) > 0 && strlen($contentDe) > 0);
     if (!is_null($originalEntry) && !is_null($originalEntry->getGerman())) {
         $germanEntry = $originalEntry->getGerman();
         $titleDeChanged = ($titleDe !== (is_null($germanEntry->getTitle()) ? '' : $germanEntry->getTitle()));
@@ -57,7 +57,7 @@ if (isset($_POST['action'])) {
 
     $titleEn = trim(stripslashes($_POST['title_us']));
     $contentEn = trim(stripslashes($_POST['content_us']));
-    $signedOffEn = ($_POST['signedOff_us'] === 'yes' && strlen($titleEn) > 0 && strlen($contentEn) > 0);
+    $signedOffEn = (isset($_POST['signedOff_us']) && $_POST['signedOff_us'] === 'yes' && strlen($titleEn) > 0 && strlen($contentEn) > 0);
     if (!is_null($originalEntry) && !is_null($originalEntry->getEnglish())) {
         $englishEntry = $originalEntry->getEnglish();
         $titleEnChanged = ($titleEn !== (is_null($englishEntry->getTitle()) ? '' : $englishEntry->getTitle()));
@@ -69,7 +69,7 @@ if (isset($_POST['action'])) {
         $signedOffEnChanged = $signedOffEn;
     }
 
-    $published = ($_POST['published'] === 'yes' && $signedOffDe && $signedOffEn);
+    $published = (isset($_POST['published']) && $_POST['published'] === 'yes' && $signedOffDe && $signedOffEn);
     $publishedChanged = $published != (!is_null($originalEntry) && $originalEntry->isPublished());
     $legacy = (!is_null($originalEntry) && $originalEntry->isLegacy());
 } elseif (is_null($originalEntry)) {
