@@ -40,8 +40,6 @@ resist the magic of this world.</p>
 
 <h1>News</h1>
 
-<?php News::show( News::load_from_db( 'DESC', 3, 0 ), 'html' ); ?>
-
 <?php
 $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
 $newsDb = new \News\NewsDatabase();
