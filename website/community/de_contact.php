@@ -116,7 +116,7 @@ können hier gemeldet werden.</li>
 <p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (US)</li>
+<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (inaktiv)</li>
 <li><a href="?contact=31">Athian</a> - Englischsprachiger Community-Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager</li>
 <li><a href="?contact=34">Slightly</a> - Englischsprachiger Community-Manager (EU)</li>
@@ -131,12 +131,12 @@ und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
     <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
-    <li><a href="?contact=43">Firefly</a> - Englischsprachiger GM für Cadomyr</li>
-    <li><a href="?contact=41">Flux</a> - Englischsprachiger GM für Runewick</li>
-    <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
+    <li><a href="?contact=46">Onyxx</a> - Englischsprachiger GM für Runewick</li>
+    <li><a href="?contact=43">Revan</a> - Englischsprachiger GM für Cadomyr</li>
     <li><a href="?contact=42">Semtex</a> - Englischsprachiger GM für Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
     <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
+    <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
     <li><a href="?contact=12">Zak</a> - Generelle Anfragen</li>
 </ul>
 
@@ -320,9 +320,9 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_MAIL,"semtex@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
       break;
-      case 43: //Firefly
-         define(_CONTACT_NAME,"Firefly",false);
-         define(_CONTACT_MAIL,"firefly@illarion.org",false);
+      case 43: //Revan
+         define(_CONTACT_NAME,"Revan",false);
+         define(_CONTACT_MAIL,"revan@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
       break;
       case 44: //Teflon
@@ -333,6 +333,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
+      break;
+      case 46: //Onyxx
+         define(_CONTACT_NAME,"Onyxx",false);
+         define(_CONTACT_MAIL,"onyxx@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
       break;
       default:

@@ -107,7 +107,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These players assist new players and help resolve issues between players.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
+<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (inactive)</li>
 <li><a href="?contact=31">Athian</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
 <li><a href="?contact=34">Slightly</a> - English speaking Community Manager (EU)</li>
@@ -121,8 +121,8 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
-    <li><a href="?contact=43">Firefly</a> - English speaking GM for Cadomyr</li>
-    <li><a href="?contact=41">Flux</a> - English speaking GM for Runewick</li>
+    <li><a href="?contact=46">Onyxx</a> - English speaking GM for Runewick</li>
+    <li><a href="?contact=43">Revan</a> - English speaking GM for Cadomyr</li>
     <li><a href="?contact=42">Semtex</a> - English speaking GM for Galmair</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
@@ -295,9 +295,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_MAIL,"semtex@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
-      case 43: //Firefly
-         define(_CONTACT_NAME,"Firefly",false);
-         define(_CONTACT_MAIL,"firefly@illarion.org",false);
+      case 43: //Revan
+         define(_CONTACT_NAME,"Revan",false);
+         define(_CONTACT_MAIL,"revan@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 44: //Teflon
@@ -308,6 +308,11 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
+      break;
+      case 46: //Onyxx
+         define(_CONTACT_NAME,"Onyxx",false);
+         define(_CONTACT_MAIL,"onyxx@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
       default:
