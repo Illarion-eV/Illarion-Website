@@ -127,7 +127,6 @@ only be released when specifically requested by the Gamemaster personally.</p>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
     <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
-	<li><a href="?contact=12">Zak</a> - General requests</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -218,12 +217,6 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion.",false);
-      break;
-      case 12: //Zak
-         define(_CONTACT_NAME,"Zak",false);
-         define(_CONTACT_MAIL,"zak@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
-         " general requests and rule violations.",false);
       break;
       case 14: //Arien Edhel
          define(_CONTACT_NAME,"Arien Edhel",false);

@@ -124,7 +124,7 @@ können hier gemeldet werden.</li>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Gamemasters</h3>
+<h3>Gamemaster</h3>
 
 <p>Diese Gamemaster kümmern sich um besondere Ereignisse im Spiel 
 und um alle die es nicht so mit Regeln haben.</p>
@@ -137,7 +137,6 @@ und um alle die es nicht so mit Regeln haben.</p>
     <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
     <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
     <li><a href="?contact=44">Teflon</a> - Deutschsprachiger GM für Galmair</li>
-    <li><a href="?contact=12">Zak</a> - Generelle Anfragen</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -242,12 +241,6 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion.",false);
-      break;
-      case 12: //Zak
-         define(_CONTACT_NAME,"Zak",false);
-         define(_CONTACT_MAIL,"zak@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der ".
-         "sich gezielt um allgemeine Anfragen und Regelverstöße kümmert.",false);
       break;
       case 14: //Arien Edhel
          define(_CONTACT_NAME,"Arien Edhel",false);
