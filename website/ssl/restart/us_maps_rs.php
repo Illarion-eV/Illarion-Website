@@ -9,19 +9,19 @@
 	Page::Init();
 ?>
 
-<?php if (file_exists('/home/vilarion/ds_restart.lock')): ?>
+<?php if (file_exists('/home/vilarion/rs_restart.lock')): ?>
 <h1>Reload the Illarion Server Map</h1>
 
 <p>The controls were locked by <b>vilarion</b>.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/martin/ds_restart.lock')): ?>
+<?php if (file_exists('/home/martin/rs_restart.lock')): ?>
 <h1>Reload the Illarion Server Map</h1>
 
 <p>The controls were locked by <b>martin</b>.</p>
 <?php exit; endif; ?> 
 
-<?php if (file_exists('/home/nitram/ds_restart.lock')): ?>
+<?php if (file_exists('/home/nitram/rs_restart.lock')): ?>
 <h1>Reload the Illarion Server Map</h1>
 
 <p>The controls were locked by <b>nitram</b>.</p>
@@ -29,9 +29,9 @@
 
 <h1>Reload the Illarion Server Map</h1>
 
-<h2>Informations</h2>
+<h2>Information</h2>
 
-<p>This site is used to make the illarionserver reloading the map data. Before launching the script ensure that the
+<p>This site is used to make the illarionserver reload the map data. Before launching the script ensure that the
 maps in the SVN repo are exactly in the way they are supposed to be on the server.</p>
 
 <h2>Reload the Server</h2>
