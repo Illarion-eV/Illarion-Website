@@ -1518,11 +1518,11 @@ class Page {
 			$mantisIssues = self::getOpenTestserverIssues();
 			$search_keywords[++$search_cnt] = '{MANTIS_ISSUES}';
 			if ($mantisIssues == 0) {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Probleme' : 'No problems');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Tests' : 'No tests');
 			} elseif ($mantisIssues == 1) {
-				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Problem' : 'One problem');
+				$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Test' : 'One test');
 			} else {
-				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Probleme" : "$mantisIssues problems");
+				$search_replace[$search_cnt] = (self::isGerman() ? "$mantisIssues Tests" : "$mantisIssues tests");
 			}
 
 			if (!Messages::any_msgs()) {
