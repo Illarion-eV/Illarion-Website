@@ -121,7 +121,7 @@ TEXT;
         }
         $publishDateTime = $entry->getPublicationDate();
         $publishDateTime->setTimezone(new \DatetimeZone(date_default_timezone_get()));
-        $publishTime = $publishText . strftime(($german ? '%d. %B %Y um %H:%MUhr' : '%d. %B %Y %H:%I%p'), \IllaDateTime::TimestampWithOffset($publishDateTime->getTimestamp()));
+        $publishTime = $publishText . strftime(($german ? '%d. %B %Y um %H:%MUhr' : '%d. %B %Y %I:%M&nbsp;%P'), \IllaDateTime::TimestampWithOffset($publishDateTime->getTimestamp()));
 
         $result = <<<TEXT
 <div>
