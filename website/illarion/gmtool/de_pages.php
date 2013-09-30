@@ -31,23 +31,14 @@
 
 <div class="spacer"></div>
 
-<?php include_page_menu(1); ?>
+<?php include_page_menu($_GET['filter']+1); ?>
 
 <div class="spacer"></div>
 
 <?php
 
-echo "<pre>";
-print(htmlspecialchars(var_export($pages, TRUE)));
-echo "</pre>";
-
         foreach ($pages as $page)
         {
-
-			echo "<pre>";
-			print_r($page['oid']);
-			echo "</pre>";
-
             if ($page['chr_name']!="") { $char_name=$page['chr_name']; }
             else { $char_name="Char gelöscht"; }
 
@@ -55,7 +46,7 @@ echo "</pre>";
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=".$url."/illarion/gmtool/de_pages.php?filter=0&page=".$page['oid'].">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['oid']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
             echo "</td></tr>";
 
@@ -64,22 +55,22 @@ echo "</pre>";
             if ($_GET['page']==""){ $_GET['page']=0; }
             if ($page['oid']==$_GET['page'])
             {
-                echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&page=".$_GET['page']."' method='post'>";
+                echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&amp;page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notiz</b></td></tr>";
-                echo "<tr><td><textarea rows='3' cols='80' readonly>";
+                echo "<tr><td><textarea rows='3' cols='80' readonly='true'>";
                 echo $page['pager_text'];
                 echo "</textarea></td>";
                 echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
                 echo $page['pager_note'];
-                echo "</textarea></tr>";
-                echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern'>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...'>";
+                echo "</textarea></td></tr>";
+                echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern' />";
+                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...' />";
                 echo "&nbsp;verschieben&nbsp;<select name='move_to'>";
                 echo "<option value='1'>nach \"in Arbeit\"</option>";
                 echo "<option value='2'>nach \"Erledigt\"</option>";
                 echo "<option value='3'>ins Archiv</option></select>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Löschen'></td>";
+                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Löschen' /></td>";
                 echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
                 if ($page['gm_accid']=="") { $page['gm_accid']="Niemand"; }
                 echo $page['gm_accid']."</td></tr>";
