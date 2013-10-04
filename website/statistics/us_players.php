@@ -193,18 +193,18 @@ logging on. Usually other follow if someone is playing.</p>
 
 	if(IllaUser::auth('quests'))
 	{
-		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type'
+		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
 		.PHP_EOL.' FROM homepage.quests'
 		.PHP_EOL.' WHERE q_status != 3'
-		.PHP_EOL.' ORDER BY q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
+		.PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
 		;
 	}
 	else
 	{
-		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type'
+		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
 		.PHP_EOL.' FROM homepage.quests'
 		.PHP_EOL.' WHERE q_status != 3 AND ( q_type != 2 OR q_user_id = '.$pgSQL->Quote( IllaUser::$ID ).' )'
-		.PHP_EOL.' ORDER BY q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
+		.PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
 		;
 	}
 
@@ -222,6 +222,10 @@ logging on. Usually other follow if someone is playing.</p>
 		{
 			$quest['q_status'] = 3;
 		}
+		if (!is_null( $quest['q_starttime'] ))
+		{
+		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
+		}
 	?>
 	<tr>
 		<td class="title">
@@ -238,6 +242,10 @@ logging on. Usually other follow if someone is playing.</p>
 					case 1:	echo 'Quest starts soon'; break;
 					case 2:	echo 'Quest takes place now'; break;
 					case 3:	echo 'Not activated'; break;
+				}
+				if (!is_null( $quest['q_starttime'] ))
+				{
+					echo '<br />', strftime( '%d. %B %Y %I:%M %P', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) );
 				}
 			?>
 		</td>

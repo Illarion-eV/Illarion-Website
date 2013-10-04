@@ -191,18 +191,18 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php
 	if(IllaUser::auth('quests'))
     {
-        $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type'
+        $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
         .PHP_EOL.' FROM homepage.quests'
         .PHP_EOL.' WHERE q_status != 3'
-        .PHP_EOL.' ORDER BY q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC'
+        .PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC'
         ;
     }
     else
     {
-        $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type'
+        $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
         .PHP_EOL.' FROM homepage.quests'
         .PHP_EOL.' WHERE q_status != 3 AND ( q_type != 2 OR q_user_id = '.$pgSQL->Quote( IllaUser::$ID ).' )'
-        .PHP_EOL.' ORDER BY q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC'
+        .PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC'
         ;
     }
     $pgSQL->setQuery( $query );
@@ -218,6 +218,10 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 		if ($quest['q_type'] == 2)
 		{
 			$quest['q_status'] = 3;
+		}
+		if (!is_null( $quest['q_starttime'] ))
+		{
+		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
 		}
 	?>
 	<tr>
@@ -235,6 +239,10 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 					case 1:	echo 'Quest startet in Kürze'; break;
 					case 2:	echo 'Quest läuft zur Zeit'; break;
 					case 3:	echo 'Nicht aktiviert'; break;
+				}
+				if (!is_null( $quest['q_starttime'] ))
+				{
+					echo '<br />', strftime( '%d. %B %Y - %H:%M', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) );
 				}
 			?>
 		</td>
