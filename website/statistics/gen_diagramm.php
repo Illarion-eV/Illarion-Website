@@ -2,9 +2,9 @@
 	define( 'TTF_DIR', '/usr/share/fonts/truetype/ttf-dejavu/' );
 
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/database.php';
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/statistics/jpgraph/jpgraph.php';
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/statistics/jpgraph/jpgraph_log.php';
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/statistics/jpgraph/jpgraph_line.php';
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/libs/jpgraph/jpgraph.php';
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/libs/jpgraph/jpgraph_log.php';
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/libs/jpgraph/jpgraph_line.php';
 
 	$pgSQL =& Database::getPostgreSQL();
 	$query = 'SELECT *'
