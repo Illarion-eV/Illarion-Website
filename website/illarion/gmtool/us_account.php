@@ -66,7 +66,7 @@
 			<dt>Last seen</dt>
 			<dd><?php echo $account_data['lastseen']; ?></dd>
 			<dt>Last IP</dt>
-			<dd><?php echo decode_ip($account_data['lastip']); ?></dd>
+			<dd><?php echo $account_data['lastip']; ?></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Character limit</dt>
 			<dd><input type="text" name="charlimit" value="<?php echo $account_data['charlimit']; ?>" /></dd>

@@ -192,16 +192,6 @@
         }
     }
 
-	function decode_ip($int_ip)
-	{
-		while( strlen( $int_ip ) < 8 )
-		{
-			$int_ip = $int_ip . '0';
-		}
-		$hexipbang = explode('.', chunk_split($int_ip, 2, '.'));
-		return hexdec($hexipbang[0]). '.' . hexdec($hexipbang[1]) . '.' . hexdec($hexipbang[2]) . '.' . hexdec($hexipbang[3]);
-	}
-
 	function convertDBTime($daytime)
 	{
 		$timepart = explode(".", $daytime);
