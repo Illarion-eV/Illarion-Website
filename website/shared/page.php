@@ -1009,7 +1009,7 @@ class Page {
 	*
 	* @access private
 	*/
-	static private function PlayerCount() {
+	static public function PlayerCount() {
 		if (self::$serverstatus == 1) {
 			self::$playercount = 0;
 			return null;

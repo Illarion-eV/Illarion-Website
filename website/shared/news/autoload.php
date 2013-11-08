@@ -19,6 +19,7 @@ function news_autoload($class) {
         case 'News\\Renderer\\BBCodeRenderer': require __DIR__ . '/renderer/BBCodeRenderer.php'; break;
         case 'News\\Renderer\\HTMLRenderer': require __DIR__ . '/renderer/HTMLRenderer.php'; break;
         case 'News\\Renderer\\RSS20Renderer': require __DIR__ . '/renderer/RSS20Renderer.php'; break;
+        case 'News\\Renderer\\MobileRenderer': require __DIR__ . '/renderer/MobileRenderer.php'; break;
 		default: break;
 	}
 }
