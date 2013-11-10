@@ -60,7 +60,12 @@ class MobileRenderer extends BBCodeRenderer {
 
         $publishDateTime = $entry->getPublicationDate();
         $publishDateTime->setTimezone(new \DateTimeZone('GMT'));
-        $publishDate = $publishDateTime->format('d.j. Y H:i');
+        $publishDate = $publishDateTime->format('j.n.Y H:i');
+		if ('de' === $locale) {
+			$publishAuthor = $publishDate . ' von ' . $author;
+        } else {
+			$publishAuthor = $publishDate . ' by ' . $author;
+        }
 
         $newsLink = \Page::getURL() . "/general/{$langTag}news.php?news={$entry->getId()}#news_{$entry->getId()}";
 
@@ -73,7 +78,7 @@ class MobileRenderer extends BBCodeRenderer {
 <h4>$title</h4>
 <div data-role="content" class="news-collapsible-text">
 $content
-<p>$publishDate by $author</p>
+<p>$publishAuthor</p>
 </div>
 </div>
 Text;
@@ -81,7 +86,7 @@ Text;
         $result = <<<Text
 <h3><b>$title</b></h3>
 $content
-<p>$publishDate von $author</p>
+<p>$publishAuthor</p>
 Text;
 		}
         return $result;
