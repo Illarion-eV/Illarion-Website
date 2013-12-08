@@ -11,3 +11,4 @@ website/ssl/piwik
 website/ssl/shared
 website/php_errors.log
 cache/*
+website/sync.ffs_db

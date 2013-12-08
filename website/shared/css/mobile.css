@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.ui-header .ui-title {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ui-header {
+	text-align: center;
+	background: #000 url(../pics/uebbg.jpg) repeat;
+	color: #d4b96e; 
+}
+
+ .logo {
+	height: 91px;
+	margin: 0px auto 0px auto;
+	background: #000 url(../pics/uebbg.jpg) repeat;
+}
+
+ .ui-content{
+	background: #000 url(../pics/pergament.jpg) repeat;
+ 	padding-top: 20px;
+	padding-bottom; 20px;
+}
+
+.mainmenue {
+	background: #000 url(../pics/uebbg.jpg) repeat;
+	position : absolute;
+	top      : 91px;
+    right    : 0;
+    bottom   : 50px;
+    left     : 0;
+}
+
+.normpage{
+	position : absolute;
+	top      : 55px;
+    right    : 0;
+    bottom   : 50px;
+    left     : 0;
+}
+
+.newspage{
+	position : absolute;
+	top      : 55px;
+    right    : 0;
+    bottom   : 50px;
+    left     : 0;
+}
+
+.mainbutton {
+	background: #000 url(../pics/pergament.jpg) repeat;
+	color: #250000 !important;
+}
+
+.playerlist{
+	background: transparent;
+	color: #000000 !important;
+}
+
+.playerlist  li{
+	background: transparent;
+	height: 12px;
+	color: #000000 !important;
+}
+
+.newstext{
+	background: #000 url(../pics/lightpaper.png) repeat;
+	color: #000000 !important;
+	padding: 10px 10px 10px 10px;
+	font-size: 0.9em;
+}
+
+.news-collapsible  h4 a{
+	background: #000 url(../pics/pergament.jpg) repeat;
+	color: #000000 !important;
+}
+
+.news-collapsible-text {
+	background: #000 url(../pics/lightpaper.png) repeat;
+	color: #000000 !important;
+	font-size: 0.8em;
+}
+
+
+.questnow-collapsible  h4 a{
+	background: #000 url(../pics/pergament.jpg) repeat;
+/*	color: #3D380C !important;*/
+	color: #892000 !important;
+}
+
+.questnow-collapsible  p{
+	background: #000 url(../pics/lightpaper.png) repeat;
+	color: #000000 !important;
+	padding: 10px 10px 10px 10px;
+	font-size: 0.8em;
+}
+
+.quest-collapsible  h4 a{
+	background: #000 url(../pics/pergament.jpg) repeat;
+	color: #000000 !important;
+}
+
+.quest-collapsible  p{
+	background: #000 url(../pics/lightpaper.png) repeat;
+	color: #000000 !important;
+	padding: 10px 10px 10px 10px;
+	font-size: 0.8em;
+}
+ 
+ .ui-footer{
+	text-align: center;
+	font-size: .7em;
+	background: #000 url(../pics/uebbg.jpg) repeat;
+	color: #d4b96e; 
+}
+
+.dateinfo {
+	text-align: center;
+	font-size: 1.3em;
+	color: #d4b96e !important; 
+}
+
+
+
