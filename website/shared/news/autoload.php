@@ -20,6 +20,7 @@ function news_autoload($class) {
         case 'News\\Renderer\\HTMLRenderer': require __DIR__ . '/renderer/HTMLRenderer.php'; break;
         case 'News\\Renderer\\RSS20Renderer': require __DIR__ . '/renderer/RSS20Renderer.php'; break;
         case 'News\\Renderer\\MobileRenderer': require __DIR__ . '/renderer/MobileRenderer.php'; break;
+        case 'News\\Renderer\\LauncherRenderer': require __DIR__ . '/renderer/LauncherRenderer.php'; break;
 		default: break;
 	}
 }
