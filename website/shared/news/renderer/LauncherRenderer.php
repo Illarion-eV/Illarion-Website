@@ -31,10 +31,11 @@ class LauncherRenderer implements Renderer {
 
         $result = <<<XML
 <item>
+	<id>{$entry->getId()}</id>
     <title lang="de">$titleDe</title>
     <title lang="en">$titleEn</title>
     <link>$newsLink</link>
-	<pubDate>$publishDate</pubDate>
+	<date>$publishDate</date>
 </item>
 XML;
         return $result;
