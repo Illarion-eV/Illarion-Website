@@ -55,7 +55,8 @@ SQL;
 		<item>
 			<id><?php echo $quest['q_id']; ?></id>
 			<title lang="de"><?php echo htmlspecialchars($quest['q_title_de']); ?></title>
-			<title lang="en"><?php echo htmlspecialchars($quest['q_title_us']); ?></title>			
+			<title lang="en"><?php echo htmlspecialchars($quest['q_title_us']); ?></title>
+			<link><?php echo Page::getURL(); ?>/statistics/quests.php?id=<?php echo $quest['q_id']; ?></link>
 			<date><?php echo date(DATE_RSS, strtotime($quest['q_starttime'])); ?></date>
 		</item>
 		<?php endforeach; ?>
