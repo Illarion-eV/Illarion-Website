@@ -13,7 +13,7 @@
 <h2>Start game</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/media/java/illarion_client.jnlp">Play!</a></li>
+  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Play!</a></li>
 </ul>
 
 <p>To be able to play, you must
@@ -44,28 +44,28 @@ points and selecting a starting package.</p>
 <ul>
   <li>Operating System:
     <ul>
-      <li>Windows:  2000, XP, XP 64-bit, Vista, Vista 64-bit, 7 and 7 64-bit</li>
-      <li>Linux: Kernel 2.4.20 or newer</li>
+      <li>Windows XP, Vista, 7, 8, 8.1</li>
+      <li>Linux</li>
       <li>MacOS X 10.6 or more recent</li>
     </ul>
   </li>
   <li>Graphics card: 64MB memory, driver supporting OpenGL, Shader 2.0 support</li>
   <li>CPU: Dual core processor with 1.4 GHz</li>
-  <li>Java 6</li>
+  <li>Java 7 update 6</li>
 </ul>
 
 <h4>Recommended</h4>
 <ul>
   <li>Operating system:
     <ul>
-      <li>Windows XP, Vista, Vista 64-bit, 7, 7 64-bit</li>
+      <li>Windows XP, Vista, 7, 8, 8.1</li>
       <li>Linux</li>
       <li>MacOS X 10.65 or more recent</li>
     </ul>
   </li>
   <li>Graphics card: 128MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
   <li>CPU: Dual core processor with 2.0 GHz</li>
-  <li>Java 7 (64-bit Version if you have a 64-bit operating system installed)</li>
+  <li>Java 7 newest version(64-bit Version if you have a 64-bit operating system installed)</li>
 </ul>
 
 <h4>Note</h4>
@@ -77,129 +77,45 @@ website.</p>
 
 <h3>Installation</h3>
 
-<p>The installation takes several steps. First a tool will start up to help
-you through the installation of the client. This program will download the
-client for you and keep it up to date.</p>
+<p>To perform the installation of the client there is a small helper
+application required. This applications downloads and launches the client
+and all other applications created for Illarion. This application is the
+Illarion-Launcher.</p>
 
-<p>For the Client and the download to work, the Java Runtime Environment (JRE) is needed.
-If you're not sure whether or not, you have the latest version installed, or
-any version at all, you should download the latest version. Java is freely
-provided by Oracle.</p>
+<p>For the launcher, the client and all other applications of Illarion
+the Java runtime environment is required. The JRE is free and you can
+download it from Oracle. Java should be up-to-date to ensure the
+applications to work properly.</p>
 
 <p><a href="http://java.com">Java download page (external page)</a></p>
 
-<p>To start the client installation, you click on the
-&quot;Online installation&quot; link. The file downloaded by that
-(illarion_client.jnlp) is a Java-webstart file and should be run by your Java
-Runtime Environment.</p>
+<p>Once Java is installed, the Illarion-Launcher can be downloaded. This
+applications is packaged in a JAR file. These files are Java applications
+that can be launched on many operating systems. Launching a JAR file works
+like any other application. Windows launches those files simply with a 
+double click. Provided a proper Installation of Java.</p>
 
-<p>When starting the &quot;Illarion Client&quot; a warning message, concerning
-a potential security risk may appear. This message may <b>for now</b> be
-ignored. With this warning Java wants to point out that this application will access
-your computer. This is necessary for the client as files need to be saved on to your
-machine.</p>
+<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Illarion-Launcher download</a></p>
 
-<p>
-	<a href="<?php echo Page::getURL(); ?>/media/java/illarion_client.jnlp">
-		Online Installation
-	</a>
-</p>
+<p>During the first launch of the Illarion-Launcher a short installation
+assistent will request the required information. In case you got a old
+installation of Illarion, this assistent will be skipped and the old settings
+will be used.</p>
+
+<p>The main menu of the Illarion-Launcher offers the possibility to launch
+the client using the "play" button. The other applications are launched with
+the buttons as labeled. Once a application is chosen the launcher will look
+for the latest version, resolve its dependencies and download everything.
+Especially during the first time a application is launched this can take some
+time. A few minutes are not unusual. So give the launcher some time.
+
+<p>Once the download is done the application is launched automatically.</p>
+
+<p>The JAR file of the launcher can be saved where ever you like. Its not
+needed to download this file over and over again.</p>
 
 <p>If there should be problems during the installation or start of the client,
 please ask for help on the IRC chat or the forum. There's almost no problem,
 we can't find a solution for.</p>
-
-<h2>Additional Applications</h2>
-
-<p>Within the Illarion client, Illarion provides additional applications
-for you to use. These are mainly used for further development of Illarion. For
-more information, please ask on the IRC chat.</p>
-
-<ul>
-	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_download.jnlp">
-			Illarion-starter
-		</a>
-		(With this application, all of the other applications will be started, including the client itself.)
-	</li>
-	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_easynpc.jnlp">
-			Illarion easyNPC-Editor
-		</a>
-	</li>
-	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_easyquest.jnlp">
-			Illarion easyQuest-Editor
-		</a>
-	</li>
-	<li>
-		<a href="<?php echo Page::getURL(); ?>/media/java/illarion_mapedit.jnlp">
-			Illarion Map-Editor
-		</a>
-	</li>
-</ul>
-
-<h2>Solve certificate error</h2>
-
-<p>Upon starting the Illarion applications, a message appears saying, that
-the certificate the applications has been signed with cannot be verified or
-has not been signed by a trusted certification authority.</p>
-
-<p>This error appears, because Illarion uses CAcert as the certification
-authority. Java, however, has not listed CAcert as a trustworthy certification
-authority yet.</p>
-
-<p>For the Illarion certificate to be verified and the validity to be ensured,
-the necessary certificate must be embedded in Java.</p>
-
-<h3>Downloading the root certificates</h3>
-
-<p>First you have to download the root certificates from CAcert.</p>
-
-<p>
-	<a href="http://www.cacert.org/index.php?id=3&amp;lang=de">
-		Download page of CAcert (external page)
-	</a>
-</p>
-
-<p>From this page download the &quot;Class 1 PKI-Key&quot; and the
-&quot;Class 3 PKI-Key&quot; each in &quot;PEM Format&quot;.
-Further installation is depending on your operating system.</p>
-
-<h3>Windows</h3>
-
-<p>On Windows, open Windows Control Panel and look for the entry
-&quot;Java&quot;. In the window that will open, choose the
-&quot;Security&quot; tab and click on the &quot;Certificates&quot; button. In
-the new window, choose &quot;Signer-CA&quot; as &quot;Certificate type&quot;
-entry. Use the &quot;Import&quot; button to install the certificate that have
-been downloaded.</p>
-
-<p>When you're done close all windows. With that, all certificates should get
-verified correctly.</p>
-
-<h3>Linux</h3>
-
-<p>On Linux it is best to use the ;keytool&quot; from Java, to perform the
-installation. If Java is installed correctly, the program should be in this
-path.</p>
-
-<p><pre>
-$ keytool -keystore $/PATH/TO/CACERTS/KEYSTORE \
-	-storepass changeit -import \
-	-trustcacerts -v \
-	-alias cacertclass1 \
-	-file root.crt
-$ keytool -keystore $/PATH/TO/CACERTS/KEYSTORE \
-	-storepass changeit -import \
-	-trustcacerts -v \
-	-alias cacertclass3 \
-	-file class3.crt
-</pre></p>
-
-<p>Usually the Keystore can be found here:</p>
-<ul>
-	<li>/usr/lib/jvm/java-$VERSION/jre/lib/security/cacerts</li>
-</ul>
 
 <?php Page::insert_go_to_top_link(); ?>
