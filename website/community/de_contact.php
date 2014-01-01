@@ -159,7 +159,7 @@ und um alle die es nicht so mit Regeln haben.</p>
 
 <ul>
 <li><a href="?contact=25">Vilarion</a> - Vorsitzender</li>
-<li><a href="?contact=28">Aragon</a> - Kassenwart</li>
+<li><a href="?contact=23">Nitram</a> - Kassenwart</li>
 <li><a href="?contact=21">Lennier</a> - Schriftführer</li>
 </ul>
 
