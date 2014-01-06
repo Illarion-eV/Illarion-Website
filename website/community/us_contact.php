@@ -149,7 +149,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=25">Vilarion</a> - chairman</li>
-	<li><a href="?contact=28">Aragon</a> - treasurer</li>
+	<li><a href="?contact=23">Nitram</a> - treasurer</li>
 	<li><a href="?contact=21">Lennier</a> - secretary</li>
 </ul>
 
