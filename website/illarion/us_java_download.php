@@ -107,7 +107,7 @@ the client using the "play" button. The other applications are launched with
 the buttons as labeled. Once a application is chosen the launcher will look
 for the latest version, resolve its dependencies and download everything.
 Especially during the first time a application is launched this can take some
-time. A few minutes are not unusual. So give the launcher some time.
+time. A few minutes are not unusual. So give the launcher some time.</p>
 
 <p>Once the download is done the application is launched automatically.</p>
 
