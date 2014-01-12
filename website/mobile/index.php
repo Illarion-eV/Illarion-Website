@@ -1,12 +1,16 @@
 <!-- Mobile web page Illarion -->
-<!-- version 0.7 2013-11-07   -->
+<!-- version 0.8 2014-01-12   -->
 <!-- Banduk and some more     -->
 <?php //load news
+ //changes
+ //0.8: Date format Quests
+ 
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 //get language
 if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 	$IsGerman = true;
+	setlocale (LC_TIME,"de_DE");
 } else {
 	$IsGerman = false;
 }
