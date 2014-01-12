@@ -45,7 +45,7 @@
 	<tfoot>
 		<tr>
 			<td colspan="6" style="text-align:center;vertical-align:middle;height:60px;">
-				<?php if (IllaUser::$charlimit <= getCharacterCount() && IllaUser::$charlimit > 0): ?>
+				<?php if ((IllaUser::$charlimit <= getCharacterCount() && IllaUser::$charlimit > 0) || IllaUser::auth('devserver')): ?>
 				&nbsp;
 				<?php else: ?>
 				<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar.php">Create a new character</a>
