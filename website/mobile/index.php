@@ -1,19 +1,22 @@
 <!-- Mobile web page Illarion -->
-<!-- version 0.8 2014-01-12   -->
+<!-- version 0.9 2014-01-17   -->
 <!-- Banduk and some more     -->
 <?php //load news
  //changes
  //0.8: Date format Quests
+ //0.9: Players list corrected
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 //get language
 if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 	$IsGerman = true;
-	setlocale (LC_TIME,"de_DE");
 } else {
 	$IsGerman = false;
 }
+//set FootlineText
+$footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; www.illarion.org</p>'
+//'<p>'.echo( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; www.illarion.org</p>'
 ?>
 <!DOCTYPE html> 
 <!-- Begin Web Page code -->
@@ -86,10 +89,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 		<?php endif; ?>
 	</div> 
 	<div data-role="footer" data-position="fixed">
-		<p>
-		<?php echo ( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ) ?>
-		<br/>
-		&copy;2013 &bull; www.illarion.org</p>
+		<?php echo $footlinetext ?>
 	</div> 
 </div> 
 
@@ -115,10 +115,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 		</div>
 	</div> 
 	<div data-role="footer" data-position="fixed">
-		<p>
-		<?php echo ( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ) ?>
-		<br/>
-		&copy;2013 &bull; www.illarion.org</p>
+		<?php echo $footlinetext ?>
 	</div> 
 </div> 
 
@@ -142,10 +139,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
          </div>
 	</div> 
 	<div data-role="footer" data-position="fixed">
-		<p>
-		<?php echo ( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ) ?>
-		<br/>
-		&copy;2013 &bull; www.illarion.org</p>
+		<?php echo $footlinetext ?>
 	</div> 
 </div> 
 
@@ -193,7 +187,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 			
 				foreach($list as $key=>$char)
 				{
-					if (!($char["gm"] =='t'))
+					if (($char["gm"] =='t'))
 					{
 						++$hidden_chars;
 						continue;
@@ -222,7 +216,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 					
 					$content .= '<li>'.$char['chr_name'].'</li>';
 				}
-				if ($hidden_chars = 1)
+				if ($hidden_chars == 1)
 				{
 					$IsGerman == true ? $content .= '<h3>Ein nicht sichtbarer Spieler</h3>' : $content .= '<h3>One hidden char</h3>';
 				}
@@ -230,7 +224,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 				{
 					$IsGerman == true ? $content .= '<h3>'.$hidden_chars.' nicht sichtbare Spieler</h3>' : $content .= '<h3>'.$hidden_chars.' hidden chars</h3>';
 				}
-				if ($newbies = 1)
+				if ($newbies == 1)
 				{
 					$IsGerman == true ? $content .= '<h3>Ein neuer Spieler</h3>' : $content .= '<h3>One new char</h3>';
 				}
@@ -244,10 +238,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 		</ul>
 	</div> 
 	<div data-role="footer" data-position="fixed">
-		<p>
-		<?php echo ( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ) ?>
-		<br/>
-		&copy;2013 &bull; www.illarion.org</p>
+		<?php echo $footlinetext ?>
 	</div> 
 </div> 
 
@@ -304,7 +295,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 					endif;
 				?>
 					<h4>
-						<?php echo(is_null ($quest['q_starttime']) ? 'open' : strftime( '%d. %B %Y - %H:%M:%S', IllaDateTime::TimestampWithOffset($quest['q_starttime']))); ?>
+						<?php echo(is_null ($quest['q_starttime']) ? 'open' : strftime( '%d.%m.%Y  %H:%M:%S', IllaDateTime::TimestampWithOffset($quest['q_starttime']))); ?>
 						<br/>
 						<?php echo( $IsGerman == true ? $quest['q_title_de'] : $quest['q_title_us'] ); ?>
 					</h4>
@@ -330,10 +321,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 		?>
 	</div> 
 	<div data-role="footer" data-position="fixed">
-		<p>
-		<?php echo ( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ) ?>
-		<br/>
-		&copy;2013 &bull; www.illarion.org</p>
+		<?php echo $footlinetext ?>
 	</div> 
 </div> 
 
