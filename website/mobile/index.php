@@ -5,6 +5,7 @@
  //changes
  //0.8: Date format Quests
  //0.9: Players list corrected
+ //1.0: Quest German no text possible
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -297,7 +298,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 					<h4>
 						<?php echo(is_null ($quest['q_starttime']) ? 'open' : strftime( '%d.%m.%Y  %H:%M:%S', IllaDateTime::TimestampWithOffset($quest['q_starttime']))); ?>
 						<br/>
-						<?php echo( $IsGerman == true ? $quest['q_title_de'] : $quest['q_title_us'] ); ?>
+						<?php echo(( $IsGerman == true and empty($quest['q_title_de']) == false) ? $quest['q_title_de'] : $quest['q_title_us'] ); ?>
 					</h4>
 					<p>
 						<?php
@@ -308,7 +309,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 						endif;
 						?>
 						<br/>
-						<?php echo ( $IsGerman == true ? $quest['q_content_de'] : $quest['q_content_us'] ); ?>
+						<?php echo (( $IsGerman == true and empty($quest['q_content_de']) == false) ? $quest['q_content_de'] : $quest['q_content_us'] ); ?>
 					</p>
 					</div>
 				<?php
