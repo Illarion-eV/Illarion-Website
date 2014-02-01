@@ -12,9 +12,36 @@
 
 <?php Page::cap('I'); ?>
 
-<p>llarion is developed as Open Source Software. The sources of Java software
-and server are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a> and are thus free for public usage. This page
-offers a list where you can find the current development repositories of Illarion.</p>
+<p>llarion is developed as Open Source Software. The sources of the Java software
+are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>
+while sources of server, maps and game content are released under
+<a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>.
+All sources are free for public usage. This page offers a list of the
+development repositories of Illarion.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+<h1>Game Content Development</h1>
+
+<p>Game content are all quests, NPCs, monsters and e.g. the fighting system
+or the bevaviour of items. Most of our content is written in Lua&nbsp;5.1 (plus an
+<a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">Illarion-specific extension</a>) with
+the exception of almost all NPCs, which were created with our own language easyNPC.
+The editor for easyNPC is available via the game's loader.</p>
+
+<ul>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Content">Official development branch</a></li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
+<h1>Map Development</h1>
+
+<p>Game world maps form the landscape in which all characters move around.
+They describe tiles, items which form e.g. buildings and mountains, as well as
+background music for each area. The map editor is available via the game's loader.</p>
+
+<ul>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Map">Official development branch</a></li>
+</ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 <h1>Java Development</h1>
