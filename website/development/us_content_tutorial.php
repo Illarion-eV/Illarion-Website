@@ -41,7 +41,8 @@ This How-To lists an easy way to contribute to Illarion development by fixing mi
 
 <h3>Preparation (you only need to do this once):</h3>
 <ul>
-<li>In GitHub, on the game content repository page, copy the game content repository to your account. This is called forking, so click "Fork".</li>
+<li>In GitHub, on the game content repository page, copy the game content repository to your account. This is called forking, so click "Fork".
+	Your Illarion-Content fork URL will look like this: https://github.com/&lt;your_account_name&gt;/Illarion-Content</li>
 </ul>
 <h4>Windows/Mac:</h4>
 <ul>
