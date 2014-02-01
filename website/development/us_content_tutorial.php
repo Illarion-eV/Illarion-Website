@@ -25,7 +25,7 @@ This How-To lists an easy way to contribute to Illarion development by fixing mi
 <h3>You will need the following:</h3>
 <ul>
 <li>Link to the game content repository: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
-<li>A free account on <a href="https://github.com">github.com</></li>
+<li>A free account on <a href="https://github.com">github.com</a></li>
 <li>A modern, good editor like <a href="http://notepad-plus-plus.org">Notepad++</a></li>
 <li>An easy to use Git client like <a href="http://sourcetreeapp.com">SourceTree</a> on Windows and Mac, or the console client on Linux</li>
 </ul>
