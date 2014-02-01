@@ -67,7 +67,7 @@ This How-To lists an easy way to contribute to Illarion development by fixing mi
 <li>In Notepad++ click select "Find in Files..." from the "Search" menu.</li>
 <li>Enter your phrase under "Find what" and select your copy of Illarion-Content under "Directory".</li>
 <li>Hit "Find All" to list all occurrences of the error.</li>
-<li>Review these and [u]either[/u] use "Replace with" and "Replace All" to fix everything, [u]or[/u] open each file by double-clicking the mentioned lines, replace manually and save.</li>
+<li>Review these and <u>either</u> use "Replace with" and "Replace All" to fix everything, <u>or</u> open each file by double-clicking the mentioned lines, replace manually and save.</li>
 </ul>
 
 <h3>Share your great work with us:</h3>
