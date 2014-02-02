@@ -14,11 +14,14 @@
 Did you ever stumble over an obvious mistake in the game like a spelling error?
 Did you consider posting on Mantis but felt it was just not worth it?
 Would you just have corrected it if given the means?
-If so, keep reading, this tutorial is dedicated to YOU.
+If so, keep reading, this tutorial is for <u>you</u>.
 </p>
-<p>
-This How-To lists an easy way to contribute to Illarion development by fixing mistakes such as spelling errors yourself.
-</p>
+<p><b>
+This How-To lists an easy way to contribute to Illarion development by fixing
+mistakes such as spelling errors yourself. It gives a basic introduction into
+our development process and policies, i.e. what you need to know to contribute
+to Illarion development. Once you get used to it, it is really simple, promise!
+</b></p>
 
 <h2>Setup</h2>
 
@@ -65,7 +68,7 @@ This How-To lists an easy way to contribute to Illarion development by fixing mi
 <h3>Find and correct the error:</h3>
 <ul>
 <li>Write down the exact phrase containing the error, keep it as short as possible, since you might encounter multiple occurrences of the error.</li>
-<li>In Notepad++ click select "Find in Files..." from the "Search" menu.</li>
+<li>In Notepad++ select "Find in Files..." from the "Search" menu.</li>
 <li>Enter your phrase under "Find what" and select your copy of Illarion-Content under "Directory".</li>
 <li>Hit "Find All" to list all occurrences of the error.</li>
 <li>Review these and <u>either</u> use "Replace with" and "Replace All" to fix everything, <u>or</u> open each file by double-clicking the mentioned lines, replace manually and save.</li>
@@ -97,7 +100,7 @@ This How-To lists an easy way to contribute to Illarion development by fixing mi
 <li>Well done! Thank you very much for improving Illarion!</li>
 </ul>
 
-<h2>Interested in more serious stuff?</h2>
+<h2>Do you want more? Interested in more serious stuff?</h2>
 <ul>
 <li>Write your own easyNPCs.</li>
 <li>Illarion uses Lua 5.1, a <a href="http://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
