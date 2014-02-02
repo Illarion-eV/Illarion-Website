@@ -8,7 +8,7 @@
 	Page::Init();
 ?>
 
-<h1>Rechtschreibfehler selber beheben!</h1>
+<h1>Einführung in die Inhaltsentwicklung</h1>
 
 <p>
 Bist du schon einmal über einen offensichtlichen Fehler im Spiel gestolpert wie z.B.

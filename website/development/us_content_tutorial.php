@@ -8,7 +8,7 @@
 	Page::Init();
 ?>
 
-<h1>How to fix spelling errors yourself!</h1>
+<h1>Introduction to Content Development</h1>
 
 <p>
 Did you ever stumble over an obvious mistake in the game like a spelling error?
