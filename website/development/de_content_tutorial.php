@@ -11,7 +11,7 @@
 <h1>Rechtschreibfehler selber beheben!</h1>
 
 <p>
-Bist du schonmal über einen offensichtlichen Fehler im Spiel gestolpert wie z.B.
+Bist du schon einmal über einen offensichtlichen Fehler im Spiel gestolpert wie z.B.
 einen Rechtschreibfehler? Hast du überlegt diesen im Mantis zu melden aber es
 dann doch gelassen? Hättest du ihn selber behoben wenn du die Mittel dazu gehabt
 hättest? Wenn ja lies weiter, dieses Tutorial ist für <u>dich</u>.
@@ -37,10 +37,10 @@ gewöhnt hast, ist es sehr einfach. Versprochen!
 	
 <h4>Einige Bemerkungen:</h4>
 <ul>
-<li>Wenn du weisst was du machst, dann kannst du vermutlich hier aufhören zu lesen.</li>
+<li>Wenn du weißt was du machst, dann kannst du vermutlich hier aufhören zu lesen.</li>
 <li>GitHub steht in keinerlei Beziehung zu illarion.org.</li>
 <li>Du kannst natürlich andere Editoren benutzen, aber in diesem Fall bist du auf dich gestellt, falls sie die nötigen Voraussetzungen nicht erfüllen.</li>
-<li>Wenn du Linux benutzt nehme ich an, dass du weisst was du tust (z.B. wie man Git installiert).</li>
+<li>Wenn du Linux benutzt nehme ich an, dass du weißt was du tust (z.B. wie man Git installiert).</li>
 <li>Für jeden Schritt mit Git gebe ich auch den Konsolenbefehl an.</li>
 <li>Die Entwicklungssprache Illarions ist Englisch. Daher macht es Sinn die englische Version der Werkzeuge zu benutzen, um bei Rückfragen keine Probleme zu haben.</li>
 </ul>
@@ -105,7 +105,7 @@ gewöhnt hast, ist es sehr einfach. Versprochen!
 
 <h2>Du willst mehr? Bist du an weiterer Entwicklung interessiert?</h2>
 <ul>
-<li>Schreibe deine eignenen easyNPCs.</li>
+<li>Schreibe deine eigenen easyNPCs.</li>
 <li>Illarion benutzt Lua 5.1, ein <a href="http://www.lua.org/pil/contents.html">Buch das Lua 5.0 behandelt</a> (sehr ähnlich) ist online verfügbar.</li>
 <li>Schau dir die <a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">Illarion-Erweiterung zu Lua</a> an.</li>
 <li>Hol dir deinen eigenen <a href="https://spideroak.com/browse/share/vilarion/localserver/localserver/">lokalen Illarion-Server</a> um damit zu experimentieren.</li>
