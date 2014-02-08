@@ -1,11 +1,12 @@
 <!-- Mobile web page Illarion -->
-<!-- version 0.9 2014-01-17   -->
+<!-- version 1.1 2014-02-08   -->
 <!-- Banduk and some more     -->
 <?php //load news
  //changes
  //0.8: Date format Quests
  //0.9: Players list corrected
  //1.0: Quest German no text possible
+ //1.01: Quest Line feed
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -309,7 +310,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 						endif;
 						?>
 						<br/>
-						<?php echo (( $IsGerman == true and empty($quest['q_content_de']) == false) ? $quest['q_content_de'] : $quest['q_content_us'] ); ?>
+						<?php echo (preg_replace('/(\n\r)|(\r\n)|(\n|\r)/', '<br />',( $IsGerman == true and empty($quest['q_content_de']) == false) ? $quest['q_content_de'] : $quest['q_content_us'] )); ?>
 					</p>
 					</div>
 				<?php
