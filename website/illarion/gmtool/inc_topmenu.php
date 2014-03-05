@@ -25,9 +25,9 @@
             <a class="none"><?php echo ( $language == 'de' ? 'GM Pages' : 'GM Pages' ); ?></a>
             <ul>
                 <li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=0"><?php echo ( $language == 'de' ? 'Neu' : 'New' ); ?></a></li>
-                <li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=1"><?php echo ( $language == 'de' ? 'in Arbeit' : 'in work' ); ?></a></li>
-                <li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=2"><?php echo ( $language == 'de' ? 'fertig' : 'done' ); ?></a></li>
-                <li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=3"><?php echo ( $language == 'de' ? 'Archiv' : 'Archiv' ); ?></a></li>
+                <li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=1"><?php echo ( $language == 'de' ? 'in Arbeit' : 'In Work' ); ?></a></li>
+                <li><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=2"><?php echo ( $language == 'de' ? 'fertig' : 'Done' ); ?></a></li>
+                <li class="last"><a href="<?php echo $url; ?>/illarion/gmtool/<?php echo $language; ?>_pages.php?filter=3"><?php echo ( $language == 'de' ? 'Archiv' : 'Archive' ); ?></a></li>
             </ul>
         </li>
         <?php endif; ?>

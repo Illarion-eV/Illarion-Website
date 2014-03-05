@@ -8,11 +8,11 @@
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Charakter', 'Runen' ) );
+	Page::setTitle( array( 'GM-Tool', 'Character', 'Runes' ) );
     Page::setDescription( 'Character Runes Overview' );
     Page::setKeywords( array( 'GM Tool', 'Character', 'Runes' ) );
 
@@ -27,7 +27,7 @@
 	if (!$charid)
 	{
 		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transferred correctly'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 	
@@ -38,7 +38,7 @@
 	if (strlen($charname) == 0)
 	{
         Messages::add( (Page::isGerman() ? 'Charakter wurde nicht gefunden' : 'Character not found'), 'error' );
-        includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+        includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
         exit();
 	}
 ?>
@@ -53,7 +53,7 @@
 
 <div class="spacer"></div>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_runes.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/us_character_runes.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
 	<br /><br />
 		<dl class="gmtool">
