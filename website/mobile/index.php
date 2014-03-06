@@ -1,11 +1,13 @@
 <!-- Mobile web page Illarion -->
-<!-- version 0.9 2014-01-17   -->
+<!-- version 1.02 2014-03-06   -->
 <!-- Banduk and some more     -->
 <?php //load news
  //changes
  //0.8: Date format Quests
  //0.9: Players list corrected
  //1.0: Quest German no text possible
+ //1.01: Quest Line feed
+ //1.02: favicon.ico, line in players list away
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -33,6 +35,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 	<link href=<?php Page::getURL()?>"/shared/css/jquery.mobile.css" rel="stylesheet" type="text/css"/>
 <!--	"http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css"-->
 	<link rel="stylesheet" type="text/css" href=<?php Page::getURL()?>"/shared/css/mobile.css" />
+	<link rel="SHORTCUT ICON" href="favicon.ico"/>
 	<script src=<?php Page::getURL()?>"/shared/js/jquery.js"></script>
 <!-- "http://code.jquery.com/jquery-1.8.3.min.js"-->
 	<script src=<?php Page::getURL()?>"/shared/js/jquery.mobile.js"></script>
@@ -233,7 +236,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 				{
 					$IsGerman == true ? $content .= '<h3>'.$newbies.' neue Spieler</h3>' : $content .= '<h3>'.$newbies.' new chars</h3>';
 				}
-			}		
+			}	
 			echo $content;
 		?>
 		</ul>
@@ -309,7 +312,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 						endif;
 						?>
 						<br/>
-						<?php echo (( $IsGerman == true and empty($quest['q_content_de']) == false) ? $quest['q_content_de'] : $quest['q_content_us'] ); ?>
+						<?php echo (preg_replace('/(\n\r)|(\r\n)|(\n|\r)/', '<br />',( $IsGerman == true and empty($quest['q_content_de']) == false) ? $quest['q_content_de'] : $quest['q_content_us'] )); ?>
 					</p>
 					</div>
 				<?php
