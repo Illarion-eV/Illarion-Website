@@ -459,7 +459,7 @@ function getCastTypeArray($lang="")
     {
         return array(
 			CAST_TYPE_MAGE => "Mage",
-            CAST_TYPE_PRIEST => "Pries",
+            CAST_TYPE_PRIEST => "Priest",
             CAST_TYPE_BARD => "Bard",
             CAST_TYPE_DRUID => "Druid"
         );
@@ -528,7 +528,7 @@ function getRaceArray($lang="")
 			RACE_FAIRY => "Fairy",
 			RACE_GOBLIN => "Goblin",
 			RACE_OGRE => "Ogre",
-			RACE_MUMMIE => "Mummie",
+			RACE_MUMMIE => "Mummy",
 			RACE_SKELETON => "Skeleton",
 			RACE_BEHOLDER => "Beholder",
 			RACE_GHOST => "Ghost",
@@ -595,16 +595,16 @@ function getCharStatusArray($lang="")
 	{
 		return array(
 			CHAR_STATUS_PLAYABLE => "Playable",
-			CHAR_STATUS_INAKTIVE => "Inaktiv",
-			CHAR_STATUS_NAME_CHECK => "Namecheck",
-			CHAR_STATUS_NAME_ACCEPTED => "Name accepted",
-			CHAR_STATUS_NAME_REJECTED => "Name rejected",
-			CHAR_STATUS_CREATION_NOT_DONE => "Creation not done",
+			CHAR_STATUS_INAKTIVE => "Inactive",
+			CHAR_STATUS_NAME_CHECK => "Name Check",
+			CHAR_STATUS_NAME_ACCEPTED => "Name Accepted",
+			CHAR_STATUS_NAME_REJECTED => "Name Rejected",
+			CHAR_STATUS_CREATION_NOT_DONE => "Creation Not Done",
 			CHAR_STATUS_JAILED => "Jailed",
-			CHAR_STATUS_TEMP_JAILED => "Temporary jailed",
+			CHAR_STATUS_TEMP_JAILED => "Temporarily Jailed",
 			CHAR_STATUS_BANNED => "Banned",
-			CHAR_STATUS_TEMP_BANNED => "Temporary banned",
-			CHAR_STATUS_INFORMATION_INCOMPLETE => "Information incomplete"
+			CHAR_STATUS_TEMP_BANNED => "Temporarily Banned",
+			CHAR_STATUS_INFORMATION_INCOMPLETE => "Information Incomplete"
 		);
 	}
 }

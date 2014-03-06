@@ -9,7 +9,7 @@
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -21,7 +21,7 @@
 	if (!$charid)
 	{
 		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transferred correctly'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -58,7 +58,7 @@ print_r(getSkillGroupList($server));
 
 <div class="spacer"></div>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>&amp;filter=<?php echo $_GET['filter']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/us_character_skills.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>&amp;filter=<?php echo $_GET['filter']; ?>" method="post">
 	<div>
 	<dl class="gmtool">
 		<?php foreach($skill_list as $key=>$skill) : ?>

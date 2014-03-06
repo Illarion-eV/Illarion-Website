@@ -7,11 +7,11 @@
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Charakter' ) );
+	Page::setTitle( array( 'GM-Tool', 'Character' ) );
     Page::setDescription( 'Character Data Overview' );
     Page::setKeywords( array( 'GM-Tool', 'Character', 'Information' ) );
 
@@ -26,7 +26,7 @@
 	if (!$charid)
 	{
 		Messages::add( (Page::isGerman() ? 'Charakter ID wurde nicht richtig übergeben' : 'Character ID was not transferred correctly'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -35,13 +35,13 @@
 	if (!$char_data || !count($char_data))
 	{
 		Messages::add( (Page::isGerman() ? 'Charakter wurde nicht gefunden' : 'Character not found'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
 ?>
 
-<h1>Charakter - <?php echo $char_data['chr_name']; ?></h1>
+<h1>Character - <?php echo $char_data['chr_name']; ?></h1>
 
 <?php include_menu(); ?>
 
@@ -51,7 +51,7 @@
 
 <div class="spacer"></div>
 
-<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/de_character.php?charid=<?php echo $char_data['chr_playerid']; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
+<form action="<?php echo Page::getURL(); ?>/illarion/gmtool/us_character.php?charid=<?php echo $char_data['chr_playerid']; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post">
 	<div>
 		<dl class="gmtool">
 			<dt>Server</dt>
@@ -61,7 +61,7 @@
 			<dt>Account ID</dt>
 			<dd><?php echo $char_data['chr_accid']; ?></dd>
 			<dt>Account Name</dt>
-			<dd><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_account.php?accid=<?php echo $char_data['chr_accid']; ?>">
+			<dd><a href="<?php echo Page::getURL(); ?>/illarion/gmtool/us_account.php?accid=<?php echo $char_data['chr_accid']; ?>">
 				<?php echo htmlentities($char_data['acc_name'], ENT_COMPAT | ENT_XHTML); ?>
 				</a>
 				(<?php echo $char_data['acc_email']; ?>)

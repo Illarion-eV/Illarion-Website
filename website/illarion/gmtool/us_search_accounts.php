@@ -4,7 +4,7 @@
 
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add('Access denieded', 'error');
+		Messages::add('Access denied', 'error');
 		includeWrapper::includeOnce( Page::getRootPath(). '/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
@@ -55,6 +55,9 @@
 
 <div style="height:16px;"></div>
 
-<h2 id="search_title" style="text-indent:16px;">Searching results</h2>
+<h2 id="search_title"> 
+	<div style="width:23px;height:23px;display:block;float:left;"></div>
+	<span>Searching results</span>
+</h2>
 
 <div id="output_area"></div>
