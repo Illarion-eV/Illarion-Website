@@ -7,7 +7,7 @@
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -24,7 +24,7 @@
 	if (!$accid)
 	{
 		Messages::add( (Page::isGerman() ? 'Account ID wurde nicht richtig übergeben' : 'Account ID was not transferred correctly'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -32,19 +32,15 @@
 	if (!$account_login || !strlen($account_login))
 	{
 		Messages::add( (Page::isGerman() ? 'Account wurde nicht gefunden' : 'Account not found'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
 	$loglist = getLogs( $accid );
 
-
-echo "<pre>";
-print_r($loglist);
-echo "</pre>";
 ?>
 
-<h1>Accountlog - <?php echo $account_login; ?></h1>
+<h1>Account Log - <?php echo $account_login; ?></h1>
 
 <?php include_menu(); ?>
 
