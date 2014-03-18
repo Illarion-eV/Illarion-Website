@@ -23,7 +23,7 @@
 
 <h1><?php if ($id): ?>Edit quest<?php else: ?>Create quest<?php endif; ?></h1>
 
-<form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
+<form action="<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php" method="post" id="quest_form">
 	<h2>Name of the quest</h2>
 	<p>
 		<b>German Name:</b><br />
