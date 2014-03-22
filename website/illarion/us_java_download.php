@@ -13,7 +13,7 @@
 <h2>Start game</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Play!</a></li>
+  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Play!</a></li>
 </ul>
 
 <p>To be able to play, you must
@@ -95,7 +95,7 @@ that can be launched on many operating systems. Launching a JAR file works
 like any other application. Windows launches those files simply with a 
 double click. Provided a proper Installation of Java.</p>
 
-<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Illarion-Launcher download</a></p>
+<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Illarion-Launcher download</a></p>
 
 <p>During the first launch of the Illarion-Launcher a short installation
 assistent will request the required information. In case you got a old

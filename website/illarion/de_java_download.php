@@ -13,7 +13,7 @@
 <h2>Spiel starten</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Spielen!</a></li>
+  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Spielen!</a></li>
 </ul>
 
 <p>Damit Du spielen kannst, musst Du
@@ -97,7 +97,7 @@ funktioniert wie mit jeder anderen Anwendung auch. Unter Windows zum
 Beispiel mit einem Doppelklick. Sollte es nicht funktionieren gibt es ein
 Problem mit der Java-Installation.</p>
 
-<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/downloader.jar">Illarion-Starter Download</a></p>
+<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Illarion-Starter Download</a></p>
 
 <p>Bei ersten Start des Illarion-Starters fragt ein kurzer
 Installationsassistent die noch fehlenden Einstellungen ab. Wenn es schon 
