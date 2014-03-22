@@ -8,11 +8,11 @@
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
+		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Charakter' ) );
+	Page::setTitle( array( 'GM-Tool', 'Character Status' ) );
     Page::setDescription( 'Character Status Overview' );
     Page::setKeywords( array( 'GM Tool', 'Character', 'Status' ) );
 
@@ -67,8 +67,8 @@
 
 <div class="spacer"></div>
 
-<form action="<?php echo $url; ?>/illarion/gmtool/de_character_status.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post" id="statusForm">
-	<h3>Charakterstatus</h3>
+<form action="<?php echo $url; ?>/illarion/gmtool/us_character_status.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" method="post" id="statusForm">
+	<h3>Character Status</h3>
 	<table>
 		<?php foreach( $state_array as $status => $name): ?>
 		<tr>
@@ -85,7 +85,7 @@
 			<td>
 				<div id='time_settings_<?php echo $status; ?>' style='<?php echo ($status == $char_state ? "display:block" : "display:none"); ?>;'>
 					<?php if( in_array($status, array(CHAR_STATUS_TEMP_BANNED,CHAR_STATUS_TEMP_JAILED)) ): ?>
-					<?php echo "bis "; ?>
+					<?php echo "til"; ?>
 					<select name="time_rl_day_<?php echo $status; ?>" id="time_rl_day" style="width:50px">
 						<?php for( $i=1;$i<=31;++$i ): ?>
 						<option value="<?php echo $i; ?>"<?php echo ($day_rl == $i ? ' selected="selected"' : ''); ?>><?php echo $i; ?>.</option>
@@ -103,7 +103,7 @@
 					</select>
 					<select name="time_rl_hour_<?php echo $status; ?>" id="time_rl_hour" style="width:80px;margin-left:18px;">
 						<?php for( $i=0;$i<=23;++$i ): ?>
-						<option value="<?php echo $i; ?>"<?php echo ($hour_rl == $i ? ' selected="selected"' : ''); ?>><?php echo $i; ?> Uhr</option>
+						<option value="<?php echo $i; ?>"<?php echo ($hour_rl == $i ? ' selected="selected"' : ''); ?>><?php echo $i; ?> Hrs</option>
 						<?php endfor; ?>
 					</select>
 					<?php endif ?>

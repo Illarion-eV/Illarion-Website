@@ -13,9 +13,37 @@
 <?php Page::cap('I'); ?>
 
 <p>llarion wird als quelloffenes Projekt entwickelt. Die Quellen der Java-Software
-sowie die des Servers sind unter der <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a> veröffentlicht und jedem frei zugänglich. Diese
-Seite bietet einen Überblick über die Speicherorte der Quelltexte unserer
-Hauptentwickler.</p>
+sind unter der <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>
+veröffentlicht während die Quellen des Servers, der Karten und der Spielinhalte
+unter der <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>
+veröffentlicht sind. Alle Quellen sind jedem frei zugänglich. Diese
+Seite bietet einen Überblick über die Speicherorte der Quelltexte.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+<h1>Entwicklung der Spielinhalte</h1>
+
+<p>Als Spielinhalte werden alle Quests, NPCs, Monster und z.B. das Kampfsystem
+oder das Verhalten von Gegenständen bezeichnet. Spielinhalte sind zumeist in Lua&nbsp;5.1
+(und einer <a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">
+Illarion-spezifischen Erweiterung</a>) geschrieben mit der Ausnahme von fast allen NPCs,
+welche in unserer eigenen Sprache easyNPC verfasst wurden. Der Editor für easyNPC
+ist über das Startprogramm erreichbar.</p>
+
+<ul>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Content">Offizieller Entwicklungsstrang</a></li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
+<h1>Kartenentwicklung</h1>
+
+<p>Die Karten der Spielwelt bilden die Landschaft in der sich alle Charaktere
+bewegen. Sie beschreiben die Bodenplatten, Gegenstände welche z.B. Gebäude oder Berge
+bilden, sowie die Hintergrundmusik des jeweiligen Gebiets. Der Karteneditor ist über
+das Startprogramm erreichbar.</p>
+
+<ul>
+	<li><a href="https://github.com/Illarion-eV/Illarion-Map">Offizieller Entwicklungsstrang</a></li>
+</ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 <h1>Java-Entwicklung</h1>

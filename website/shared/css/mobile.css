@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+/* 2014-03-06 border 0px bei playerlist.li - Striche weg*/
 
 .ui-header .ui-title {
 	margin-left: 0;
@@ -61,8 +62,9 @@
 
 .playerlist  li{
 	background: transparent;
-	height: 12px;
+	height: 10px;
 	color: #000000 !important;
+	border: 0px;
 }
 
 .newstext{
