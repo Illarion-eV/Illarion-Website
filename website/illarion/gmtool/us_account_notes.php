@@ -8,7 +8,7 @@
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
 		Messages::add( (Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -25,7 +25,7 @@
 	if (!$accid)
 	{
 		Messages::add( (Page::isGerman() ? 'Account ID wurde nicht richtig übergeben' : 'Account ID was not transferred correctly'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -33,7 +33,7 @@
 	if (!$account_login || !strlen($account_login))
 	{
 		Messages::add( (Page::isGerman() ? 'Account wurde nicht gefunden' : 'Account not found'), 'error' );
-		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
+		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
@@ -51,7 +51,7 @@
 
 <h2>Notes</h2>
 
-<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="note_form">
+<form action="<?php echo $url; ?>/illarion/gmtool/us_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="note_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
 		<input type="submit" value="Add New Note" name="submit" />
@@ -63,7 +63,7 @@
 
 <h2>Warnings</h2>
 
-<form action="<?php echo $url; ?>/illarion/gmtool/de_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="warn_form">
+<form action="<?php echo $url; ?>/illarion/gmtool/us_account_notes.php?accid=<?php echo $accid; ?>" method="post" id="warn_form">
 	<p><textarea name="entry" rows="5" cols="60"></textarea></p>
 	<p>
 		<input type="submit" value="Add New Warning" name="submit" />

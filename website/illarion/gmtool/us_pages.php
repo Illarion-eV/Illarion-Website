@@ -31,7 +31,7 @@
 
 <div class="spacer"></div>
 
-<?php include_page_menu(1); ?>
+<?php include_page_menu($_GET['filter']+1); ?>
 
 <div class="spacer"></div>
 
