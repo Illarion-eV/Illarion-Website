@@ -91,5 +91,5 @@ Illarion e.V. Martin Völkel.</p>
 
 <p>Also every six months there is a RL (Real Life) meeting for the staff members and players of
 Illarion. These meetings are held in Germany. Its also possible to donate something
-there. Details about this meetings can be found on the
+there. Details about these meetings can be found on the
 <a href="<?php echo Page::getURL(); ?>/community/forums/">forum</a>.</p>
