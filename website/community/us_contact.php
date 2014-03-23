@@ -67,7 +67,7 @@ They should be the first people to turn to for a non-technical issue that may ar
 <?php echo Page::cap('S'); ?>
 <p>ome players have a special Gamemaster (GM) character. These uphold the rules of Illarion and may
 punish any and all infractions severely or they may even pass it on to the admins. Lying to or
-deceiving a Gamemaster regarding rule offences and bugs/errors is strictly forbidden.
+deceiving a Gamemaster regarding rule offenses and bugs/errors is strictly forbidden.
 Furthermore, if a Gamemaster is busy or discussing game relevant matters they should only be
 disturbed in urgent cases. The names of other characters of a Gamemaster are withheld, and will
 only be released when specifically requested by the Gamemaster personally.</p>
