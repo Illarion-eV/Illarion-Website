@@ -24,7 +24,7 @@
 
 <h2>Informations about the community</h2>
 
-<p>This statistics show the current state of the community.</p>
+<p>These statistics show the current state of the community.</p>
 
 <dl class="statistics">
 	<dt>Amount of active players</dt>
@@ -49,7 +49,7 @@
 
 <h2>History of Players</h2>
 
-<p>At the following diagrams you will find how many players were online last time.
+<p>In the following diagrams you will find how many players were online since the last update.
 The last update of these diagrams:
 <b><?php echo strftime( '%d. %B %Y %H:%I%p', filemtime(Page::getMediaRootPath().'/statistics/onlineplayers.rrd') ) ?></b></p>
 
