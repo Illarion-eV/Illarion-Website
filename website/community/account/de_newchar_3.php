@@ -79,6 +79,7 @@ Page::addJavaScript( 'prototype' );
 Page::addJavaScript( 'effects' );
 Page::addCSS( 'slider' );
 Page::addJavaScript( 'slider' );
+Page::addJavaScript( 'wz_tooltip' );
 
 ?>
 
@@ -108,7 +109,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Stärke (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Stärke-Attribut wirkt sich auf die folgenden: Schlagwaffen, Hiebwaffen, und Ringen',TITLE,'Stärke',WIDTH,-300);" onmouseout="UnTip();">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -116,7 +117,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Schnelligkeit (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Schnelligkeit Attribut wirkt sich auf die folgenden: Ausweichen, Parieren, und Stichwaffen',TITLE,'Schnelligkeit',WIDTH,-300);" onmouseout="UnTip();">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -124,7 +125,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Ausdauer (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Ausdauer Attribut wirkt sich auf die folgenden: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, und Holzfällen',TITLE,'Ausdauer',WIDTH,-300);" onmouseout="UnTip();">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -132,7 +133,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Geschicklichkeit (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Geschicklichkeit Attribut wirkt sich auf die folgenden: Schreinern, Kochen und Becken, Edelsteinschleifen, Glasblasen, Goldschmieden, Musikinstrumente, Schmieden, und Schneidern',TITLE,'Geschicklichkeit',WIDTH,-300);" onmouseout="UnTip();">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -140,7 +141,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Intelligenz (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Intelligenz-Attribut wirkt sich auf die folgenden: Alchemie',TITLE,'Intelligenz',WIDTH,-300);" onmouseout="UnTip();">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -156,7 +157,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Willenskraft (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Willenskraft-Attribut wirkt sich auf die folgenden: Dieses Attribut ist noch nicht genutzt',TITLE,'Willenskraft',WIDTH,-300);" onmouseout="UnTip();">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -164,7 +165,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Essenz (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Ihre Essenz Attribut wirkt sich auf die folgenden: Alchemie und Magieresistenz',TITLE,'Essenz',WIDTH,-300);" onmouseout="UnTip();">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
