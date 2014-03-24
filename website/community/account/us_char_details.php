@@ -44,7 +44,7 @@
 	Page::Init();
 ?>
 
-<h1>Characterdetails - <?php echo $chardata['chr_name']; ?></h1>
+<h1>Character Details - <?php echo $chardata['chr_name']; ?></h1>
 
 <div style="float:left; height:200px; width:255px;vertical-align:middle;text-align:center;">
 	<img src="<?php echo $chardata['picture']['file']; ?>" style="height:<?php echo $chardata['picture']['height']; ?>px; width:<?php echo $chardata['picture']['width']; ?>px;" alt="Picture of <?php echo $chardata['chr_name']; ?>" />
