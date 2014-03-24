@@ -78,6 +78,7 @@ Page::addJavaScript( 'prototype' );
 Page::addJavaScript( 'effects' );
 Page::addCSS( 'slider' );
 Page::addJavaScript( 'slider' );
+Page::addJavaScript( 'wz_tooltip' );
 
 ?>
 <h1>Create a new character</h1>
@@ -107,7 +108,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Strength (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="" class="tooltip" onmouseover="Tip('Your Strength attribute affects the following: Concussion Weapons, Slashing Weapons and the Wrestling skill',TITLE,'Strength',WIDTH,-300);"  (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
