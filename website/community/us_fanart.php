@@ -39,7 +39,7 @@
 		<?php Fanart::getFanArt('char_jen.xml')->show_random_pic( ); ?>
 	</a>
 	<br />
-	<span>by Jennifer Pirker</span>
+	<span>by Gwynnther</span>
 </div>
 <div style="margin:3px;float:left;">
 	<a href="<?php echo Page::getURL(); ?>/community/us_fanart.php?coll=3">
