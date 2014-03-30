@@ -1135,7 +1135,7 @@ class Page {
 			if (count($_GET) > 0) {
 				$getparams = array();
 				foreach ($_GET as $key => $value) {
-					$getparams[] = $key . '=' . $value;
+					$getparams[] = htmlentities($key) . '=' . htmlentities($value);
 				}
 				$getparams = '?' . implode('&amp;', $getparams);
 			}else {
