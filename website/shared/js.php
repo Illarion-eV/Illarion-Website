@@ -16,7 +16,7 @@ if (isset($_GET['no_opti'])) {
 }
 
 foreach($filenames as $file) {
-	if ($file != '') {
+	if ($file != '' && strpos($file, '/') === false) {
 		$last_mod[] = filemtime('js/' . $file . $filetype);
 	}
 }
@@ -30,7 +30,7 @@ if ($if_last_mod >= $last_mod) {
 
 $content = '';
 foreach($filenames as $file) {
-	if ($file != '') {
+	if ($file != '' && strpos($file, '/') === false) {
 		$content .= file_get_contents('js/' . $file . $filetype);
 	}
 }
