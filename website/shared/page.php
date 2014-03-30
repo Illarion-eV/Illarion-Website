@@ -650,10 +650,10 @@ class Page {
 	*/
 	static public function addJavaScript($new_js) {
 		if (is_array($new_js)) {
-			self::$js = array_merge(self::$js, $new_js);
-			return null;
-		}
-		self::$js[] = (string)trim($new_js);
+            self::$js = array_merge(self::$js, $new_js);
+        } else {
+            self::$js[] = (string)trim($new_js);
+        }
 	}
 
 	/**
@@ -688,9 +688,9 @@ class Page {
 	static public function addAdditionalHeader($new_header) {
 		if (is_array($new_header)) {
 			self::$additional_headers = array_merge(self::$additional_headers, $new_header);
-			return null;
-		}
-		self::$additional_headers[] = (string)trim($new_header);
+		} else {
+            self::$additional_headers[] = (string)trim($new_header);
+        }
 	}
 
 	/**
@@ -946,7 +946,7 @@ class Page {
 			if (function_exists('xdebug_disable')) {
 				xdebug_disable();
 			}
-		}else {
+		} else {
 			ini_set('xdebug.collect_params', '4');
 			ini_set('xdebug.collect_vars', 'on');
 			ini_set('xdebug.collect_params', '4');
@@ -988,7 +988,7 @@ class Page {
 		$connection = @fsockopen('127.0.0.1', 3008, $errno, $errstr, 30);
 		if (is_bool($connection)) {
 			self::$serverstatus = 1;
-		}else {
+		} else {
 			self::$serverstatus = 0;
 			fclose($connection);
 		}
@@ -996,7 +996,7 @@ class Page {
 		$connection = @fsockopen('127.0.0.1', 3011, $errno, $errstr, 30);
 		if (is_bool($connection)) {
 			self::$testserverstatus = 1;
-		}else {
+		} else {
 			self::$testserverstatus = 0;
 			fclose($connection);
 		}
@@ -1388,7 +1388,7 @@ class Page {
 			$search_keywords[++$search_cnt] = '{CURRENT_YEAR}';
 			$search_replace[$search_cnt] = date('Y');
 			$search_keywords[++$search_cnt] = '{CURRENT_URI}';
-			$search_replace[$search_cnt] = str_replace('&', '&amp;', $_SERVER['REQUEST_URI']);
+			$search_replace[$search_cnt] = str_replace('&', '&amp;', htmlentities($_SERVER['REQUEST_URI']));
 			
 			$search_keywords[++$search_cnt] = '{GOOGLE}';
 			if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
@@ -1851,5 +1851,3 @@ class Page {
 }
 
 Page::initPaths();
-
-?>
