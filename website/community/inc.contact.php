@@ -44,19 +44,22 @@
 
    function ShowFormular() { ?>
 <h1><?php echo _CONTACT_NAME; ?></h1>
-<form name="mail" id="mail" method="post" action="?contact=<?php echo $_GET['contact']; ?>">
+<form name="mail" id="mail" method="post" action="?contact=<?php echo htmlentities($_GET['contact']); ?>">
 	<table class="center" style="width:90%;">
 		<tr>
 			<td style="width:15%;"><?php echo _MAIL; ?></td>
-			<td style="width:85%;"><input style="width:100%;" type="text" name="mail" id="mail" value="<?php echo (isset($_POST['mail']) ? $_POST['mail'] : "" ); ?>" /></td>
+			<td style="width:85%;"><input style="width:100%;" type="text" name="mail" id="mail" value="<?php
+                echo (isset($_POST['mail']) ? htmlentities($_POST['mail']) : "" ); ?>" /></td>
 		</tr>
 		<tr>
 			<td><?php echo _SUBJECT; ?></td>
-			<td><input style="width:100%;" type="text" name="subject" id="subject" value="<?php echo (isset($_POST['subject']) ? $_POST['subject'] : "" ); ?>" /></td>
+			<td><input style="width:100%;" type="text" name="subject" id="subject" value="<?php
+                echo (isset($_POST['subject']) ? htmlentities($_POST['subject']) : "" ); ?>" /></td>
 		</tr>
 		<tr>
 			<td><?php echo _CONTENT; ?></td>
-			<td><textarea rows="6" style="width:100%;" name="content" id="content"><?php echo (isset($_POST['content']) ? $_POST['content'] : "" ); ?></textarea></td>
+			<td><textarea rows="6" style="width:100%;" name="content" id="content">
+                    <?php echo (isset($_POST['content']) ? htmlentities($_POST['content']) : "" ); ?></textarea></td>
 		</tr>
 		<tr>
 			<td colspan="2" class="center"><input type="submit" name="sendmail" value="<?php echo _SEND_MAIL; ?>" /></td>
