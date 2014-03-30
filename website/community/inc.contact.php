@@ -9,13 +9,12 @@
       } elseif (!isset($_POST['mail'])) {
          ShowFormular();
       } else {
-         $mail = explode("@",$_POST['mail']);
-         if (count($mail)!=2) {
+         $mail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL, FILTER_NULL_ON_FAILURE);
+         if (is_null($mail)) {
             echo _BAD_MAIL."<br />";
             ShowFormular();
          } else {
-            $mail = explode(".",$mail[1]);
-            if (count($mail)<2) {
+            if (false) {
                echo _BAD_MAIL."<br />";
                ShowFormular();
             } else {
