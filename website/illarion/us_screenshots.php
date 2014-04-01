@@ -12,7 +12,8 @@
 	Page::Init();
 
 	$xmlC = new XmlC( 'UTF-8' );
-	$xmlC->Set_XML_data( file_get_contents( Page::getRootPath().'/illarion/screenshots.xml' ) );
+	$xml_file = file_get_contents( Page::getRootPath().'/illarion/screenshots.xml' );
+	$xmlC->Set_XML_data( $xml_file );
 ?>
 
 <h1>Screenshots</h1>
@@ -31,21 +32,9 @@
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
 <h2><?php echo $currGroup->eName; ?></h2>
 <?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
-<div style="margin:3px;float:left;">
-	<?php $imagesize = getimagesize( Page::getMediaRootPath().'/screenshots/'.$currScreen->filename); ?>
-	<a href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->eName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->eName; ?>" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" style="width:150px;height:75px" alt="Click here to view the picture in full size" />
-		<br />
-		<?php
-if (strlen($currScreen->eName)<25)
-{
-	echo $currScreen->eName;
-}
-else
-{
-	echo substr($currScreen->eName,0,22),'...';
-}
-?>
+<div style="margin:3px;float:left;width:150px;height:75px;text-align:center;vertical-align:center;">
+	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->eName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->eName; ?>" class="lightwindow" onclick="return false;">
+		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="150" height="75" alt="Click here to view the picture in full size" />
 	</a>
 </div>
 <?php endforeach; ?>
