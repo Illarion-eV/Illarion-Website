@@ -3,6 +3,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+Page::addJavaScript( 'prototype' );
+Page::addJavaScript( 'effects' );
+Page::addJavaScript( 'slider' );
+
+Page::addCSS( 'slider' );
+
+Page::setXHTML();
 Page::Init();
 
 includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
@@ -11,7 +18,7 @@ $server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : '
 $charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 if (!$charid)
 {
-	exit('Error - Character ID was not transfered correctly.');
+	exit('Error - Character ID was not transferred correctly.');
 }
 
 $pgSQL =& Database::getPostgreSQL( $server );
@@ -73,13 +80,6 @@ $query = 'SELECT attr_name_us AS name, attr_str AS str, attr_agi AS agi, attr_de
 $db->setQuery( $query );
 $templates = $db->loadAssocList();
 
-Page::setXHTML();
-Page::addJavaScript( 'prototype' );
-Page::addJavaScript( 'effects' );
-Page::addCSS( 'slider' );
-Page::addJavaScript( 'slider' );
-Page::addJavaScript( 'wz_tooltip' );
-
 ?>
 <h1>Create a new character</h1>
 
@@ -108,7 +108,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Strength attribute affects the following: Concussion Weapons, Slashing Weapons and the Wrestling skill',TITLE,'Strength',WIDTH,-300);"  (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Your Strength attribute affects the following: &#10;Concussion Weapons, &#10;Slashing Weapons, &#10;Wrestling.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -116,7 +116,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Agility attribute affects the following: Dodge, Parry, and Puncture Weapons',TITLE,'Agility',WIDTH,-300);" onmouseout="UnTip();">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Your Agility attribute affects the following: &#10;Dodge, &#10;Parry, &#10;Puncture Weapons.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -124,7 +124,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Constitution attribute affects the following: Farming, Firing Bricks, Fishing, Herblore, Mining, and Woodcutting',TITLE,'Constitution',WIDTH,-300);" onmouseout="UnTip();">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Your Constitution attribute affects the following: &#10;Farming, &#10;Firing Bricks, &#10;Fishing, &#10;Herblore, &#10;Mining, &#10;Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -132,7 +132,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Dexterity attribute affects the following: Carpentry, Baking/Cooking, Gemcutting, Glass Blowing, Goldsmithing, Instruments, Smithing, and Tailoring ',TITLE,'Dexterity',WIDTH,-300);" onmouseout="UnTip();">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Your Dexterity attribute affects the following: &#10;Carpentry, &#10;Baking/Cooking, &#10;Gemcutting, &#10;Glass Blowing, &#10;Goldsmithing, &#10;Musical Instruments, &#10;Smithing, &#10;Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -140,7 +140,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Intelligence attribute affects the following: Alchemy',TITLE,'Intelligence',WIDTH,-300);" onmouseout="UnTip();">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Your Intelligence attribute affects the following: &#10;Alchemy.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -148,7 +148,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Perception attribute affects the following: Alchemy, Distance Weapons, and Poisioning',TITLE,'Perception',WIDTH,-300);" onmouseout="UnTip();">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Your Perception attribute affects the following: &#10;Alchemy, &#10;Distance Weapons, &#10;Poisoning.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -156,7 +156,7 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Willpower attribute affects the following: This attribute is not yet utilised',TITLE,'Willpower',WIDTH,-300);" onmouseout="UnTip();">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Your Willpower attribute affects the following: &#10;This attribute is not yet utilised.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -164,7 +164,8 @@ Page::addJavaScript( 'wz_tooltip' );
 					</tr>
 					<tr>
 						<td>
-							<a title="" class="tooltip" onmouseover="Tip('Your Essence attribute affects the following: Alchemy and Magic Resistance',TITLE,'Essence',WIDTH,-300);" onmouseout="UnTip();">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Your Essence attribute affects the following: &#10;Alchemy, &#10;Magic Resistance.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
 						</td>
