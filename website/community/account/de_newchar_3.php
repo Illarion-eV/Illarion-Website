@@ -86,6 +86,7 @@ $templates = $db->loadAssocList();
 <h2>Stufe 3</h2>
 
 <p>Du musst die Attribute deines Charakters hierhin tun.Du solltest dir dies sehr gut überlegen, da man die Attribute später im Spiel nicht mehr ändern kann.</p>
+<p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -108,7 +109,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Stärke beeinflusst: Schlagwaffen Hiebwaffen Ringen">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Stärke beeinflusst: Schlagwaffen Hiebwaffen Ringen, Gewicht das man tragen kann, und Schadensstärke im Kampf.">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -116,7 +117,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, und Stichwaffen">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, Stichwaffen, und Schnelligkeit beim Laufen.">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -124,7 +125,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, und Holzfällen">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, Holzfällen, und Geschwindigkeit des Erholens.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
