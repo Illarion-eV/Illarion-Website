@@ -86,6 +86,7 @@ $templates = $db->loadAssocList();
 <h2>Step 3</h2>
 
 <p>You have to put in the attributes of your character here. You should think well about this, because the attributes will not change anymore in the game.</p>
+<p>Below you can choose an attribute package that will give you a general idea of what attributes go towards a certain role. For example, druids need a pool of 30 points shared between perception, essence, and intelligence. Feel free to make changes to existing packages, but just be careful to not stray too far from them if that is a role you'd like to play.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -108,7 +109,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Strength attribute affects the following: &#10;Concussion Weapons, &#10;Slashing Weapons, &#10;Wrestling.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Your Strength attribute affects the following: &#10;Concussion Weapons, &#10;Slashing Weapons, &#10;Wrestling, weight one can carry, and damage dealt in combat.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -116,7 +117,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Agility attribute affects the following: &#10;Dodge, &#10;Parry, &#10;Puncture Weapons.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Your Agility attribute affects the following: &#10;Dodge, &#10;Parry, &#10;Puncture Weapons and walking speed.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -124,7 +125,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Constitution attribute affects the following: &#10;Farming, &#10;Firing Bricks, &#10;Fishing, &#10;Herblore, &#10;Mining, &#10;Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Your Constitution attribute affects the following: &#10;Farming, &#10;Firing Bricks, &#10;Fishing, &#10;Herblore, &#10;Mining, &#10;Woodcutting and recovery speed.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
