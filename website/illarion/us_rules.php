@@ -6,15 +6,9 @@
 		. 'game.' );
 	Page::setKeywords( array( 'rules', 'regulations' ) );
 
-	Page::setFirstPage(Page::getURL() . '/illarion/us_rules.php');
-	Page::setNextPage(Page::getURL() . '/illarion/us_rules_1.php');
-	Page::setLastPage(Page::getURL() . '/illarion/us_rules_2.php');
-
 	Page::setXHTML();
 	Page::Init();
 ?>
-
-<?php Page::NavBarTop(); ?>
 
 <h1>Illarion Game Rules</h1>
 
