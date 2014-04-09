@@ -86,7 +86,7 @@ $templates = $db->loadAssocList();
 <h2>Stufe 3</h2>
 
 <p>Du musst die Attribute deines Charakters hierhin tun.Du solltest dir dies sehr gut überlegen, da man die Attribute später im Spiel nicht mehr ändern kann.</p>
-<p>
+<p>Unterhalb kannst du ein Attribut-Paket auswählen, welches dir einen generellen Überblick über Attribute für die verschiedenen Rollen verschafft. z.B: Druiden brauchen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte änder die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst, die du spielen möchtest.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
