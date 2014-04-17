@@ -154,6 +154,18 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
+<h2> Website Credits </ h2> 
+ 
+<h3> Illarion e.V. </ h3> 
+
+<p> 
+Register court: Amtsgericht Kempten <br /> 
+Register No.: VR 30767 
+</ p> 
+ 
+<p> Email: committee@illarion.org </ p> 
+
+? - <php Page :: insert_go_to_top_link (); ?>
 <?php
    }
 
