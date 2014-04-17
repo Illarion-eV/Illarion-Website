@@ -107,7 +107,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These players assist new players and help resolve issues between players.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager</li>
+<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=31">Alessaina</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
 </ul>
@@ -120,9 +120,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
-    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick</li>
-    <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr</li>
-    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair</li>
+    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
+    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
     <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair</li>
