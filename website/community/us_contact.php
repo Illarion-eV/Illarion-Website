@@ -178,7 +178,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 3: //Reporting players
          define(_CONTACT_NAME,"Reporting players",false);
          define(_CONTACT_MAIL,"violations@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can report players, who offended you".
+         define(_CONTACT_DETAILS,"Here you can report players, who have offended you".
          " and broke the rules.<br />Please add ".
          "the time and the date of the event, so we can ".
          "reconstruct your report with the server logs.",false);
