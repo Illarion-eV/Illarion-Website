@@ -132,7 +132,7 @@ und um alle die es nicht so mit Regeln haben.</p>
    <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
    <li><a href="?contact=41">Bloodraven</a> - Englischsprachiger GM für Runewick (EU)</li>
    <li><a href="?contact=43">White Crow</a> - Englischsprachiger GM für Cadomyr (US)</li>
-   <li><a href="?contact=34">Slightly/a> - Englischsprachiger GM für Galmair (EU)</li>
+   <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
    <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
    <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
    <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM für Galmair</li>
