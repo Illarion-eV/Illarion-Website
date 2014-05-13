@@ -38,6 +38,19 @@ Below are links to these projects and a small description of how it has contribu
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
 
+<h3>Links to the various game lists that help promote Illarion</h3>
+<br />
+
+The following game sites have taken Illarion on to their listings. We would like to thank all those who support and appreciate imaginative games.
+
+<ul class="content_summery">
+	<li><a class="hidden" href="#20">Heise online</a></li>
+	<li><a class="hidden" href="#21">Computerbild.de</a></li>
+	<li><a class="hidden" href="#22">Gamona</a></li>
+</ul>
+<div class="clr"></div>
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="1"></a></div>
 
 <h4>Debian</h4>
@@ -293,3 +306,33 @@ Below are links to these projects and a small description of how it has contribu
 
 <?php Page::insert_go_to_top_link(); ?>
 
+
+<div><a id="20"></a></div>
+<h4>Heise online</h4>
+<p>
+	<a rel="external" href="http://www.heise.de">Link to the Heise.de homepage</a>
+	<br /><br />
+	Heise is known for the serious german computer magazine c't. At the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
+	you find a number of screenshots and even the downloader.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="21"></a></div>
+<h4>Computer Bild</h4>
+<p>
+	<a rel="external" href="http://www.computerbild.de">Link to the Computerbild homepage</a>
+	<br /><br />
+	Computerbild is one of the most popular german computer magazines. The redaction took own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
+	.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="22"></a></div>
+<h4>Gamona</h4>
+<p>
+	<a rel="external" href="http://www.gamona.de/">Link to the Gamona Homepage</a>
+	<br /><br />
+	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">lllarion </a>
+	is present with a short description.
+</p>
+<?php Page::insert_go_to_top_link(); ?>

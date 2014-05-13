@@ -39,6 +39,19 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
 
+<h3>Links zu diversen Spieleseiten, welche Illarion berücksichtigen</h3>
+<br />
+
+Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möchten uns bei all denen bedanken, die gute Spiele propagieren.
+
+<ul class="content_summery">
+	<li><a class="hidden" href="#20">Heise online</a></li>
+	<li><a class="hidden" href="#21">Computerbild.de</a></li>
+	<li><a class="hidden" href="#22">Gamona</a></li>
+</ul>
+<div class="clr"></div>
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="1"></a></div>
 
 <h4>Debian</h4>
@@ -293,5 +306,35 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<br />
 	<br />
 	Bei Illarion wird der YourKit Profiler verwendet um Probleme und Leistungsengpässe in den Java Anwendungen zu finden.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="20"></a></div>
+<h4>Heise online</h4>
+<p>
+	<a rel="external" href="http://www.heise.de">Link zur Heise.de Homepage</a>
+	<br /><br />
+	Hinter Heise steht die renomierte Computerzeitschrift c't. Auf der <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">Seite mit dem Illarion Auftritt</a>
+	finden sich nicht nur Screenshots sondern auch gleich der Downloader.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="21"></a></div>
+<h4>Computer Bild</h4>
+<p>
+	<a rel="external" href="http://www.computerbild.de">Link zur Computerbild Homepage</a>
+	<br /><br />
+	Die Redakteure haben für die <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Seite mit dem Illarion Auftritt</a>
+	sogar eigene Screenshots gemacht.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="22"></a></div>
+<h4>Gamona</h4>
+<p>
+	<a rel="external" href="http://www.gamona.de/">Link zur Gamona Homepage</a>
+	<br /><br />
+	Kurz und prägnant ist der <a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">lllarion Auftritt</a>
+	hier.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
