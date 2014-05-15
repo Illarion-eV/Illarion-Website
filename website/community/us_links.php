@@ -312,8 +312,8 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.heise.de">Link to the Heise.de homepage</a>
 	<br /><br />
-	Heise is known for the serious german computer magazine c't. At the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
-	you find a number of screenshots and even the downloader.
+	Heise is known for the serious german computer magazine c't. On the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
+	you can find a number of screenshots and even the downloader.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -322,7 +322,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.computerbild.de">Link to the Computerbild homepage</a>
 	<br /><br />
-	Computerbild is one of the most popular german computer magazines. The redaction took own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
+	Computerbild is one of the most popular german computer magazines. The editorial staff took their own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
 	.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
@@ -330,9 +330,9 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="22"></a></div>
 <h4>Gamona</h4>
 <p>
-	<a rel="external" href="http://www.gamona.de/">Link to the Gamona Homepage</a>
+	<a rel="external" href="http://www.gamona.de/">Link to the Gamona homepage</a>
 	<br /><br />
-	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">lllarion </a>
+	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">Illarion </a>
 	is present with a short description.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
