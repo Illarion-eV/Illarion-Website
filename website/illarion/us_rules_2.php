@@ -245,11 +245,12 @@ offer an advantage to the player are not allowed.</p>
 <div><a id="copyright"></a></div>
 <h2>Copyright</h2>
 
-<p>The sources of the Java software (client and development tools) and of the
-server are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3
-</a> and are thus <a href="http://illarion.org/development/us_opensource.php">
-available for public review</a> and usage. All other content of Illarion, all
-texts which are created for Illarion, all scripts, pictures, sound effects,
+<p>The sources of the Java software (client and development tools) are released
+under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.
+The sources of server, scripts and maps are released under
+<a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
+These sources are thus <a href="http://illarion.org/development/us_opensource.php">
+available for public review</a> and usage. All other content of Illarion, pictures, sound effects,
 music and the homepage is property of the Illarion society and is therefore
 protected by copyright if not indicated otherwise. It is not allowed to use
 this content without the consent of the Illarion society. </p>
