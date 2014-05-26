@@ -61,9 +61,6 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	
 	$pgSQL->setQuery( $query );
 	$list = $pgSQL->loadAssocList();
-
-	$displayed_chars = 0;
-	$newbies = 0;
 	
 	if( count($list) > 0 )
 	{
@@ -71,23 +68,9 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 		$content_length = array( 0=>0, 1=>0 );
 		$current_list = 1;
 		$current_town = -1;
-
-		$show_hidden = IllaUser::auth('hidden_chars');
 		
 		foreach($list as $key=>$char)
 		{
-			if (($char["gm"] =='t') && !$show_hidden)
-			{
-				continue;
-			}
-			++$displayed_chars;
-			
-			if (($char["newbie"] =='t') && !$show_hidden)
-			{
-				++$newbies;
-				continue;
-			}
-
 			if ($char['town'] != $current_town)
 			{
 				if ($content_length[$current_list] != 0)
@@ -153,36 +136,6 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	</tr>
 </table>
 <?php endif; ?>
-
-<?php
-	if ( ( $hidden_chars = count($list) - $displayed_chars ) > 0 )
-	{
-		echo '<p class="hidden_chars">';
-		if ($hidden_chars == 1)
-		{
-			echo 'Ein Charakter ist online der nicht auf der Onlineliste angezeigt wird.';
-		}
-		elseif ($hidden_chars > 1)
-		{
-			echo $hidden_chars,' Charaktere sind online die nicht auf der Liste angezeigt werden.';
-		}
-		echo '</p>';
-	}
-
-	if ( $newbies > 0 )
-	{
-		echo '<p class="hidden_newbies">';
-		if ($newbies == 1)
-		{
-			echo 'Ein neuer Spieler ist online der nicht auf der Onlineliste angezeigt wird.';
-		}
-		elseif ($newbies > 1)
-		{
-			echo $newbies,' neue Spieler sind online die nicht auf der Onlineliste angezeigt werden.';
-		}
-		echo '</p>';
-	}
-?>
 
 <?php Page::insert_go_to_top_link(); ?>
 

@@ -62,32 +62,15 @@ logging on. Usually other follow if someone is playing.</p>
 	$pgSQL->setQuery( $query );
 	$list = $pgSQL->loadAssocList();
 
-	$displayed_chars = 0;
-	$newbies = 0;
-	
 	if( count($list) > 0 )
 	{
 		$content = array( 0=>'', 1=>'' );
 		$content_length = array( 0=>0, 1=>0 );
 		$current_list = 1;
 		$current_town = -1;
-
-		$show_hidden = IllaUser::auth('hidden_chars');
 		
 		foreach($list as $key=>$char)
 		{
-			if (($char["gm"] =='t') && !$show_hidden)
-			{
-				continue;
-			}
-			++$displayed_chars;
-			
-			if (($char["newbie"] =='t') && !$show_hidden)
-			{
-				++$newbies;
-				continue;
-			}
-
 			if ($char['town'] != $current_town)
 			{
 				if ($content_length[$current_list] != 0)
@@ -153,36 +136,6 @@ logging on. Usually other follow if someone is playing.</p>
 	</tr>
 </table>
 <?php endif; ?>
-
-<?php
-	if ( ( $hidden_chars = count($list) - $displayed_chars ) > 0 )
-	{
-		echo '<p class="hidden_chars">';
-		if ($hidden_chars == 1)
-		{
-			echo 'One character is online and playing but is not shown on the online list.';
-		}
-		elseif ($hidden_chars > 1)
-		{
-			echo $hidden_chars,' characters are online and playing but invisible on the online list.';
-		}
-		echo '</p>';
-	}
-
-	if ( $newbies > 0 )
-	{
-		echo '<p class="hidden_newbies">';
-		if ($newbies == 1)
-		{
-			echo 'One new player is playing but hidden from the online list.';
-		}
-		elseif ($newbies > 1)
-		{
-			echo $newbies,' new players are playing but are not shown on the online list.';
-		}
-		echo '</p>';
-	}
-?>
 
 <?php Page::insert_go_to_top_link(); ?>
 
