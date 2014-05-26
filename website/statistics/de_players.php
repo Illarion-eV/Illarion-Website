@@ -107,11 +107,11 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 			{
 				if ($char['newbieisland'] == 't')
 				{
-					$content[$current_list] .= '<span class="newbie"> (NI)</span>';
+					$content[$current_list] .= '<span class="newbie"> (Tutorial)</span>';
 				}
 				else
 				{
-					$content[$current_list] .= '<span class="newbie"> (N)</span>';
+					$content[$current_list] .= '<span class="newbie"> (Neu)</span>';
 				}
 			}
 			
