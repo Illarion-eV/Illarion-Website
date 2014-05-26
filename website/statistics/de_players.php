@@ -43,7 +43,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 
 	$query = 'SELECT "illarionserver"."chars"."chr_name" AS "chr_name",'
 	.PHP_EOL.'       "illarionserver"."chars"."chr_playerid" AS "chr_playerid",'
-	.PHP_EOL.'       (NOW() - interval \'1 months\') < "accounts"."account"."acc_registerdate" AS "newbie",'
+	.PHP_EOL.'       "illarionserver"."is_new_player"("accounts"."account"."acc_id") AS "newbie",'
 	.PHP_EOL.'       ("illarionserver"."player"."ply_posz" >= 100 AND "illarionserver"."player"."ply_posz" <= 103) AS "newbieisland",'
 	.PHP_EOL.'       ("illarionserver"."gms"."gm_rights_server" IS NOT NULL AND ("illarionserver"."gms"."gm_rights_server" & 131072) = 0) AS "gm",'
 	.PHP_EOL.'       CASE WHEN "illarionserver"."questprogress"."qpg_progress" IS NULL OR "illarionserver"."questprogress"."qpg_progress" = 0 THEN \'4\' ELSE "illarionserver"."questprogress"."qpg_progress" END AS "town",'
