@@ -333,7 +333,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.gamona.de/">Link to the Gamona homepage</a>
 	<br /><br />
-	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">Illarion </a>
+	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">Illarion</a>
 	is present with a short description.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
@@ -343,7 +343,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.gamefee.de/">Link to the GameFee homepage</a>
 	<br /><br />
-	"Pure role play". An external German description <a rel="external" href="http://www.gamefee.de/illarion">of lllarion</a>
-	you can find. Don't forget to watch the video from the redaction!
+	"Pure role play". An external German description <a rel="external" href="http://www.gamefee.de/illarion">of lllarion</a>.
+	Don't forget to watch their video!
 </p>
 <?php Page::insert_go_to_top_link(); ?>
