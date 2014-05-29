@@ -32,9 +32,9 @@
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
 <h2><?php echo $currGroup->gName; ?></h2>
 <?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
-<div style="margin:3px;float:left;width:205px;height:115px;text-align:center;vertical-align:center;">
+<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
 	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->gName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->gName; ?>" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="205" height="115" alt="Auf das Bild klicken um es in voller Größe zu sehen" />
+		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Auf das Bild klicken um es in voller Größe zu sehen" />
 	</a>
 </div>
 <?php endforeach; ?>
