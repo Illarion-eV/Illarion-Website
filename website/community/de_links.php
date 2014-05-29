@@ -46,8 +46,9 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 
 <ul class="content_summery">
 	<li><a class="hidden" href="#20">Heise online</a></li>
-	<li><a class="hidden" href="#21">Computerbild.de</a></li>
+	<li><a class="hidden" href="#21">Computerbild</a></li>
 	<li><a class="hidden" href="#22">Gamona</a></li>
+	<li><a class="hidden" href="#23">GameFee</a></li>
 </ul>
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
@@ -336,5 +337,15 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 	<br /><br />
 	Kurz und prägnant ist der <a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">lllarion Auftritt</a>
 	hier.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="23"></a></div>
+<h4>GameFee</h4>
+<p>
+	<a rel="external" href="http://www.gamefee.de/">Link zur GameFee Homepage</a>
+	<br /><br />
+	"Rollenspiel in Reinform", so fängt der <a rel="external" href="http://www.gamefee.de/illarion">lllarion Auftritt</a>
+	hier an. Nicht zu vergessen, das vom Redakteur gemachte Video!
 </p>
 <?php Page::insert_go_to_top_link(); ?>

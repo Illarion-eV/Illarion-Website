@@ -47,6 +47,7 @@ The following game sites have taken Illarion on to their listings. We would like
 	<li><a class="hidden" href="#20">Heise online</a></li>
 	<li><a class="hidden" href="#21">Computerbild.de</a></li>
 	<li><a class="hidden" href="#22">Gamona</a></li>
+	<li><a class="hidden" href="#23">GameFee</a></li>
 </ul>
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
@@ -334,5 +335,15 @@ The following game sites have taken Illarion on to their listings. We would like
 	<br /><br />
 	<a rel="external" href="http://www.gamona.de/games/illarion:game,172463.html">Illarion </a>
 	is present with a short description.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="23"></a></div>
+<h4>GameFee</h4>
+<p>
+	<a rel="external" href="http://www.gamefee.de/">Link to the GameFee homepage</a>
+	<br /><br />
+	"Pure role play". An external German description <a rel="external" href="http://www.gamefee.de/illarion">of lllarion</a>
+	you can find. Don't forget to watch the video from the redaction!
 </p>
 <?php Page::insert_go_to_top_link(); ?>

@@ -1,5 +1,5 @@
 <!-- Mobile web page Illarion -->
-<!-- version 1.02 2014-03-06   -->
+<!-- version 1.03 2014-05-28   -->
 <!-- Banduk and some more     -->
 <?php //load news
  //changes
@@ -8,6 +8,7 @@
  //1.0: Quest German no text possible
  //1.01: Quest Line feed
  //1.02: favicon.ico, line in players list away
+ //1.03: Show Newbe and GM
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -181,9 +182,6 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 			$pgSQL->setQuery( $query );
 			$list = $pgSQL->loadAssocList();
 
-			$hidden_chars = 0;
-			$newbies = 0;
-			
 			if( count($list) > 0 )
 			{
 				$content = '';
@@ -191,17 +189,6 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 			
 				foreach($list as $key=>$char)
 				{
-					if (($char["gm"] =='t'))
-					{
-						++$hidden_chars;
-						continue;
-					}
-					
-					if (($char["newbie"] =='t'))
-					{
-						++$newbies;
-						continue;
-					}
 
 					if ($char['town'] != $current_town)
 					{
@@ -218,23 +205,17 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 						}
 					}
 					
-					$content .= '<li>'.$char['chr_name'].'</li>';
-				}
-				if ($hidden_chars == 1)
-				{
-					$IsGerman == true ? $content .= '<h3>Ein nicht sichtbarer Spieler</h3>' : $content .= '<h3>One hidden char</h3>';
-				}
-				if ($hidden_chars > 1)
-				{
-					$IsGerman == true ? $content .= '<h3>'.$hidden_chars.' nicht sichtbare Spieler</h3>' : $content .= '<h3>'.$hidden_chars.' hidden chars</h3>';
-				}
-				if ($newbies == 1)
-				{
-					$IsGerman == true ? $content .= '<h3>Ein neuer Spieler</h3>' : $content .= '<h3>One new char</h3>';
-				}
-				if ($newbies > 1)
-				{
-					$IsGerman == true ? $content .= '<h3>'.$newbies.' neue Spieler</h3>' : $content .= '<h3>'.$newbies.' new chars</h3>';
+					$content .= '<li>'.$char['chr_name'];
+					if (($char["gm"] =='t'))
+					{
+						$content .= ' (GM)';
+					}
+					
+					if (($char["newbie"] =='t'))
+					{
+						$IsGerman == true ? $content .= ' (neu)' : $content .= ' (new)';
+					}
+					$content .= '</li>';
 				}
 			}	
 			echo $content;
