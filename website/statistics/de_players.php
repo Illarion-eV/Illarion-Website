@@ -83,9 +83,9 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 				$content_length[$current_list] += 56;
 				switch($current_town)
 				{
-					case 1: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/cadomyr.png" /><h3 style="margin:0">Cadomyr</h3></div>'; break;
-					case 2: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/runewick.png" /><h3 style="margin:0">Runewick</h3></div>'; break;
-					case 3: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getMediaURL().'/galmair.png" /><h3 style="margin:0">Galmair</h3></div>'; break;
+					case 1: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getCurrentImageURL().'/factions/cadomyrShield32.png" /><h3 style="margin:0">Cadomyr</h3></div>'; break;
+					case 2: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getCurrentImageURL().'/factions/runewickShield32.png" /><h3 style="margin:0">Runewick</h3></div>'; break;
+					case 3: $content[$current_list] .= '<div style="margin:16px 0"><img style="float:left;margin-top:-4px;" src="'.Page::getCurrentImageURL().'/factions/galmairShield32.png" /><h3 style="margin:0">Galmair</h3></div>'; break;
 					case 4: $content[$current_list] .= '<h3>Vogelfreie</h3>'; break;
 					default: $content[$current_list] .= '<h3>Unbekannt</h3>';
 				}
