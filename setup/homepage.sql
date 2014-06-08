@@ -150,31 +150,6 @@ CREATE TABLE character_votes (
 
 
 --
--- Name: chronicle_seq; Type: SEQUENCE; Schema: homepage; Owner: -
---
-
-CREATE SEQUENCE chronicle_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: chronicle; Type: TABLE; Schema: homepage; Owner: -; Tablespace: 
---
-
-CREATE TABLE chronicle (
-    id integer DEFAULT nextval('chronicle_seq'::regclass) NOT NULL,
-    author bigint NOT NULL,
-    date integer DEFAULT 0 NOT NULL,
-    note_en text,
-    note_de text
-);
-
-
---
 -- Name: mail_cert; Type: TABLE; Schema: homepage; Owner: -; Tablespace: 
 --
 
@@ -427,14 +402,6 @@ ALTER TABLE ONLY character_votes
 
 
 --
--- Name: chronicle_pkey; Type: CONSTRAINT; Schema: homepage; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY chronicle
-    ADD CONSTRAINT chronicle_pkey PRIMARY KEY (id);
-
-
---
 -- Name: mail_cert_pkey; Type: CONSTRAINT; Schema: homepage; Owner: -; Tablespace: 
 --
 
@@ -527,20 +494,6 @@ ALTER TABLE ONLY storage
 --
 
 CREATE UNIQUE INDEX key ON mail_cert USING btree (key);
-
-
---
--- Name: note_de; Type: INDEX; Schema: homepage; Owner: -; Tablespace: 
---
-
-CREATE INDEX note_de ON chronicle USING btree (note_de);
-
-
---
--- Name: note_en; Type: INDEX; Schema: homepage; Owner: -; Tablespace: 
---
-
-CREATE INDEX note_en ON chronicle USING btree (note_en);
 
 
 --

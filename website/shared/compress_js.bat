@@ -14,9 +14,6 @@ java -jar %compressor% --type js --charset utf-8 -o js/builder.js js/builder_unc
 echo js/controls.js
 java -jar %compressor% --type js --charset utf-8 -o js/controls.js js/controls_uncompressed.js
 
-echo js/chronik.js
-java -jar %compressor% --type js --charset utf-8 -o js/chronik.js js/chronik_uncompressed.js
-
 echo js/dragdrop.js
 java -jar %compressor% --type js --charset utf-8 -o js/dragdrop.js js/dragdrop_uncompressed.js
 
