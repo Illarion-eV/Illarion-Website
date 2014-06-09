@@ -132,6 +132,7 @@ und um alle die es nicht so mit Regeln haben.</p>
    <li><a href="?contact=14">Arien Edhel</a> - Generelle Anfragen</li>
    <li><a href="?contact=41">Bloodraven</a> - Englischsprachiger GM für Runewick (EU)</li>
    <li><a href="?contact=43">White Crow</a> - Englischsprachiger GM für Cadomyr (US)</li>
+   <li><a href="?contact=15">Zephyrius</a> - Englischsprachiger GM für Cadomyr (US)</li>
    <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
    <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick</li>
    <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr</li>
@@ -247,6 +248,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der ".
          "sich gezielt um um allgemeine Anfragen und Regelverstöße kümmert.",false);
       break;
+      case 15: //Zephyrius
+		 define(_CONTACT_NAME,"Zephyrius",false);
+		 define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+		 define(_contact_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+	  break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
          define(_CONTACT_MAIL,"martin@illarion.org",false);
