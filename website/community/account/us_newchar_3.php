@@ -109,7 +109,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Strength attribute affects the following: &#10;Concussion Weapons, &#10;Slashing Weapons, &#10;Wrestling, weight one can carry, and damage dealt in combat.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Your Strength attribute affects the following: Concussion Weapons, Slashing Weapons, Wrestling, weight one can carry, and damage dealt in combat.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -117,7 +117,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Agility attribute affects the following: &#10;Dodge, &#10;Parry, &#10;Puncture Weapons and walking speed.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Your Agility attribute affects the following: Dodge, Parry, Puncture Weapons and walking speed.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -125,7 +125,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Constitution attribute affects the following: &#10;Farming, &#10;Firing Bricks, &#10;Fishing, &#10;Herblore, &#10;Mining, &#10;Woodcutting and recovery speed.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Your Constitution attribute affects the following: Farming, Firing Bricks, Fishing, Herblore, Mining, Woodcutting and recovery speed.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -133,7 +133,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Dexterity attribute affects the following: &#10;Carpentry, &#10;Baking/Cooking, &#10;Gemcutting, &#10;Glass Blowing, &#10;Goldsmithing, &#10;Musical Instruments, &#10;Smithing, &#10;Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Your Dexterity attribute affects the following: Carpentry, Baking/Cooking, Gemcutting, Glass Blowing, Goldsmithing, Musical Instruments, Smithing, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -141,7 +141,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Intelligence attribute affects the following: &#10;Alchemy.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Your Intelligence attribute affects the following: Alchemy.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -149,7 +149,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Perception attribute affects the following: &#10;Alchemy, &#10;Distance Weapons, &#10;Poisoning.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Your Perception attribute affects the following: Alchemy, Distance Weapons, Poisoning.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -157,7 +157,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Willpower attribute affects the following: &#10;This attribute is not yet utilised.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Your Willpower attribute affects the following: This attribute is not yet utilised.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -165,7 +165,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your Essence attribute affects the following: &#10;Alchemy, &#10;Magic Resistance.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Your Essence attribute affects the following: Alchemy, Magic Resistance.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
