@@ -122,6 +122,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
 	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
     <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
     <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
+    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
     <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
@@ -234,6 +235,11 @@ Register No.: VR 30767
          define(_CONTACT_MAIL,"arien@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
          " general requests and rule violations.",false);
+      break;
+      case 15: //Zephyrius
+	define(_CONTACT_NAME,"Zephyrius",false);
+	define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+	define(_contact_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
