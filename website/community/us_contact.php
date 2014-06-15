@@ -107,10 +107,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
 <p>These players assist new players and help resolve issues between players.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (inactive)</li>
-<li><a href="?contact=31">Athian</a> - English speaking Community Manager (US)</li>
+<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
+<li><a href="?contact=31">Alessaina</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
-<li><a href="?contact=34">Slightly</a> - English speaking Community Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -121,12 +120,13 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
-    <li><a href="?contact=46">Onyxx</a> - English speaking GM for Runewick</li>
-    <li><a href="?contact=43">Revan</a> - English speaking GM for Cadomyr</li>
-    <li><a href="?contact=42">Semtex</a> - English speaking GM for Galmair</li>
+    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
+    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
+    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
-    <li><a href="?contact=44">Teflon</a> - German speaking GM for Galmair</li>
+    <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -155,6 +155,18 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
+<h2> Website Credits </ h2> 
+ 
+<h3> Illarion e.V. </ h3> 
+
+<p> 
+Register court: Amtsgericht Kempten <br /> 
+Register No.: VR 30767 
+</ p> 
+ 
+<p> Email: committee@illarion.org </ p> 
+
+? - <php Page :: insert_go_to_top_link (); ?>
 <?php
    }
 
@@ -179,7 +191,7 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 3: //Reporting players
          define(_CONTACT_NAME,"Reporting players",false);
          define(_CONTACT_MAIL,"violations@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can report players, who offended you".
+         define(_CONTACT_DETAILS,"Here you can report players, who have offended you".
          " and broke the rules.<br />Please add ".
          "the time and the date of the event, so we can ".
          "reconstruct your report with the server logs.",false);
@@ -224,6 +236,11 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
          " general requests and rule violations.",false);
       break;
+      case 15: //Zephyrius
+	define(_CONTACT_NAME,"Zephyrius",false);
+	define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+	define(_contact_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+      break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
          define(_CONTACT_MAIL,"martin@illarion.org",false);
@@ -253,9 +270,9 @@ only be released when specifically requested by the Gamemaster personally.</p>
          define(_CONTACT_MAIL,"achae@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
-      case 31: //Athian
-         define(_CONTACT_NAME,"Athian",false);
-         define(_CONTACT_MAIL,"athian@illarion.org",false);
+      case 31: //Alessaina
+         define(_CONTACT_NAME,"Alessaina",false);
+         define(_CONTACT_MAIL,"alessaina@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
       case 32: //Djironnyma
@@ -271,41 +288,31 @@ only be released when specifically requested by the Gamemaster personally.</p>
       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Zot",false);
          define(_CONTACT_MAIL,"zot@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead map developer of Illarion.",false);
       break;
-      case 41: //Flux
-         define(_CONTACT_NAME,"Flux",false);
-         define(_CONTACT_MAIL,"flux@illarion.org",false);
+      case 41: //Bloodraven
+         define(_CONTACT_NAME,"Bloodraven",false);
+         define(_CONTACT_MAIL,"bloodraven@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
-      case 42: //Semtex
-         define(_CONTACT_NAME,"Semtex",false);
-         define(_CONTACT_MAIL,"semtex@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
-      break;
-      case 43: //Revan
-         define(_CONTACT_NAME,"Revan",false);
-         define(_CONTACT_MAIL,"revan@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
-      break;
-      case 44: //Teflon
+      case 42: //Teflon
          define(_CONTACT_NAME,"Teflon",false);
          define(_CONTACT_MAIL,"teflon@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
+      case 43: //White Crow
+         define(_CONTACT_NAME,"White Crow",false);
+         define(_CONTACT_MAIL,"whitecrow@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+      break;
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
-      break;
-      case 46: //Onyxx
-         define(_CONTACT_NAME,"Onyxx",false);
-         define(_CONTACT_MAIL,"onyxx@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
       break;
       default:

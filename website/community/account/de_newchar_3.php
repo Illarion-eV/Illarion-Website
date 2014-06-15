@@ -3,6 +3,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+Page::addJavaScript( 'prototype' );
+Page::addJavaScript( 'effects' );
+Page::addJavaScript( 'slider' );
+
+Page::addCSS( 'slider' );
+
+Page::setXHTML();
 Page::Init();
 
 includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
@@ -74,20 +81,15 @@ $query = 'SELECT attr_name_de AS name, attr_str AS str, attr_agi AS agi, attr_de
 $db->setQuery( $query );
 $templates = $db->loadAssocList();
 
-Page::setXHTML();
-Page::addJavaScript( 'prototype' );
-Page::addJavaScript( 'effects' );
-Page::addCSS( 'slider' );
-Page::addJavaScript( 'slider' );
-
 ?>
-
 <h1>Neuen Charakter erstellen</h1>
 
 <h2>Schritt 3</h2>
-<p>Hier kannst Du die Attribute Deines Charakters festlegen. Die Attribute verändern sich im Spiel nicht mehr. Überlege also möglichst genau, wie Du sie wählst.</p>
+
+<p>Hier kannst du die Attribute deines Charakters festlegen.</p>
+<p>Unterhalb kannst du ein Attribut-Paket auswählen. Diese Pakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Z.B: Druiden brauchen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte ändere die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst.</p>
 <div>
-	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attribute</h2>
 
@@ -95,7 +97,7 @@ Page::addJavaScript( 'slider' );
 				<tbody>
 					<tr>
 						<td>
-							Attributpakete
+							AttributPaket
 						</td>
 						<td style="width:423px;">
 							<select id="attrib_pack">
@@ -108,7 +110,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Stärke (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Stärke beeinflusst: Schlagwaffen, Hiebwaffen, Ringen, tragbare Last und Schaden im Kampf">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -116,7 +118,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Schnelligkeit (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, Stichwaffen und Schnelligkeit beim Laufen">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -124,7 +126,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Ausdauer (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, Holzfällen und Erholungsgeschwindigkeit">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -132,7 +134,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Geschicklichkeit (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Geschicklichkeit beeinflusst: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Musikinstrumente, Schmieden und Schneidern">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -140,7 +142,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Intelligenz (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Intelligenz beeinflusst: Alchemie">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -148,7 +150,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Wahrnehmung (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Wahrnehmung beeinflusst: Alchemie, Distanzwaffen und Vergiften">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -156,7 +158,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Willenskraft (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Dieses Attribut wird zur Zeit nicht genutzt">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -164,7 +166,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Essenz (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Essenz beeinflusst: Alchemie und Magieresistenz">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
@@ -183,7 +185,7 @@ Page::addJavaScript( 'slider' );
 			<?php include_attribute_js( $limits ); ?>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_3" />
-				<input type="submit" name="submit" value="Daten speichern" />
+				<input type="submit" name="submit" value="Save data" />
 			</p>
 		</div>
 	</form>

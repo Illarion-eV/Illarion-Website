@@ -3,6 +3,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 IllaUser::requireLogin();
 
+Page::addJavaScript( 'prototype' );
+Page::addJavaScript( 'effects' );
+Page::addJavaScript( 'slider' );
+
+Page::addCSS( 'slider' );
+
+Page::setXHTML();
 Page::Init();
 
 includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_editinfos.php' );
@@ -11,7 +18,7 @@ $server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : '
 $charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 if (!$charid)
 {
-	exit('Error - Character ID was not transfered correctly.');
+	exit('Error - Character ID was not transferred correctly.');
 }
 
 $pgSQL =& Database::getPostgreSQL( $server );
@@ -73,18 +80,13 @@ $query = 'SELECT attr_name_us AS name, attr_str AS str, attr_agi AS agi, attr_de
 $db->setQuery( $query );
 $templates = $db->loadAssocList();
 
-Page::setXHTML();
-Page::addJavaScript( 'prototype' );
-Page::addJavaScript( 'effects' );
-Page::addCSS( 'slider' );
-Page::addJavaScript( 'slider' );
-
 ?>
 <h1>Create a new character</h1>
 
 <h2>Step 3</h2>
 
-<p>You have to put in the attributes of your character here. You should think well about this, because the attributes will not change anymore in the game.</p>
+<p>You have to put in the attributes of your character here.</p>
+<p>Below you can choose an attribute package to get a general idea of what attributes go towards a certain role. For example, druids need a pool of 30 points shared between perception, essence, and intelligence. Feel free to make changes to existing packages, but just be careful to not stray too far from them if that is a role you'd like to play.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -107,7 +109,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Strength (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Strength affects: Concussion Weapons, Slashing Weapons, Wrestling, weight one can carry and damage dealt in combat">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -115,7 +117,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Agility (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Agility affects: Dodge, Parry, Puncture Weapons and walking speed">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -123,7 +125,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Constitution (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Constitution affects: Farming, Firing Bricks, Fishing, Herblore, Mining, Woodcutting and recovery speed.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -131,7 +133,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Dexterity (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Dexterity affects: Carpentry, Baking/Cooking, Gemcutting, Glass Blowing, Goldsmithing, Musical Instruments, Smithing and Tailoring">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -139,7 +141,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Intelligence (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Intelligence affects: Alchemy">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -147,7 +149,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Perception (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Perception affects: Alchemy, Distance Weapons, Poisoning">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -155,7 +157,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Willpower (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="This attribute is not utilised currently">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -163,7 +165,7 @@ Page::addJavaScript( 'slider' );
 					</tr>
 					<tr>
 						<td>
-							Essence (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Essence affects: Alchemy, Magic Resistance">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
