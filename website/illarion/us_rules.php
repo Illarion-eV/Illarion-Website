@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
 	Page::setTitle( 'Rules' );
-	Page::setDescription( 'On this page you find links to all rule sets of this '
+	Page::setDescription( 'On this page you find all rule sets of this '
 		. 'game.' );
 	Page::setKeywords( array( 'rules', 'regulations' ) );
 

@@ -1,10 +1,10 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-	Page::setTitle( 'Rules' );
-	Page::setDescription( 'On this page you find links to all rule sets of this '
-		. 'game.' );
-	Page::setKeywords( array( 'rules', 'regulations' ) );
+	Page::setTitle( 'Spielregeln' );
+	Page::setDescription( 'Auf dieser Seite stehen alle Regeln die '
+		. 'in diesem Spiel gelten.' );
+	Page::setKeywords( array( 'Regeln', 'Vorschriften' ) );
 
 	Page::setXHTML();
 	Page::Init();
@@ -29,7 +29,7 @@ alle Beteiligten.</p>
 <h2>Verhaltenscodex</h2>
 
 <p>Dies ist ein echtes Rollenspiel und dein Charakter ist nicht dein 
-Abbild . Lass ihn Schwächen haben und auch mal Fehler machen; wir alle 
+Abbild. Lass ihn Schwächen haben und auch mal Fehler machen; wir alle 
 machen Fehler. Unterscheide stets zwischen dir und deinem Charakter und 
 lass Probleme in der Spielwelt dort wo sie hingehören: Im Spiel. Wenn das
 Verhalten eines anderen Spielers für dich unerträglich ist, wende dich 

@@ -18,7 +18,7 @@ $server = ( isset( $_GET['server'] ) && $_GET['server'] == '1' ? 'devserver' : '
 $charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : false );
 if (!$charid)
 {
-	exit('Error - Character ID was not transferred correctly.');
+	exit('Fehler - Charakter ID wurde nicht richtig übergeben.');
 }
 
 $pgSQL =& Database::getPostgreSQL( $server );
@@ -33,8 +33,8 @@ list( $race, $sex ) = $pgSQL->loadRow();
 
 if ($race === null || $race === false)
 {
-	Messages::add( 'Character not found', 'error' );
-	includeWrapper::includeOnce( Page::getRootPath().'/community/account/us_charlist.php' );
+	Messages::add( 'Charakter wurde nicht gefunden.', 'error' );
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/de_charlist.php' );
 	exit();
 }
 
@@ -46,16 +46,17 @@ $query = 'SELECT COUNT(*)'
 $pgSQL->setQuery( $query );
 if ($pgSQL->loadResult())
 {
-	exit('Error - Values already set');
+	exit('Fehler - Werte wurden bereits gesetzt');
 }
 
 $query = 'SELECT *'
 .PHP_EOL.' FROM "'.$server.'"."raceattr"'
-.PHP_EOL.' WHERE "id" IN ( -1, '.$pgSQL->Quote( $race ).' )'
+.PHP_EOL.' WHERE "id" IN ( -1, '.$pgSQL->Quote($race).' )'
 .PHP_EOL.' ORDER BY "id" DESC'
 ;
 $pgSQL->setQuery( $query, 0, 1 );
 $limits = $pgSQL->loadAssocRow();
+
 
 $limits['curr_agility'] = $limits['minagility'];
 $limits['curr_strength'] = $limits['minstrength'];
@@ -73,7 +74,7 @@ calculateLimits( $limits );
 $limit_text = generateLimitTexts( $limits );
 
 $db =& Database::getPostgreSQL( 'accounts' );
-$query = 'SELECT attr_name_us AS name, attr_str AS str, attr_agi AS agi, attr_dex AS dex, attr_con AS con, attr_int AS int, attr_per AS per, attr_wil AS wil, attr_ess AS ess'
+$query = 'SELECT attr_name_de AS name, attr_str AS str, attr_agi AS agi, attr_dex AS dex, attr_con AS con, attr_int AS int, attr_per AS per, attr_wil AS wil, attr_ess AS ess'
 .PHP_EOL.' FROM attribtemp'
 .PHP_EOL.' ORDER BY attr_id'
 ;
@@ -81,12 +82,12 @@ $db->setQuery( $query );
 $templates = $db->loadAssocList();
 
 ?>
-<h1>Einen Charakter erstellen</h1>
+<h1>Neuen Charakter erstellen</h1>
 
-<h2>Stufe 3</h2>
+<h2>Schritt 3</h2>
 
-<p>Du musst die Attribute deines Charakters hierhin tun.Du solltest dir dies sehr gut überlegen, da man die Attribute später im Spiel nicht mehr ändern kann.</p>
-<p>Unterhalb kannst du ein Attribut-Paket auswählen, welches dir einen generellen Überblick über Attribute für die verschiedenen Rollen verschafft. z.B: Druiden brauchen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte änder die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst, die du spielen möchtest.</p>
+<p>Hier kannst du die Attribute deines Charakters festlegen.</p>
+<p>Unterhalb kannst du ein Attribut-Paket auswählen. Diese Pakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Z.B: Druiden brauchen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte ändere die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -109,7 +110,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Stärke beeinflusst: Schlagwaffen Hiebwaffen Ringen, Gewicht das man tragen kann, und Schadensstärke im Kampf.">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Stärke beeinflusst: Schlagwaffen, Hiebwaffen, Ringen, tragbare Last und Schaden im Kampf">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -117,7 +118,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, Stichwaffen, und Schnelligkeit beim Laufen.">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, Stichwaffen und Schnelligkeit beim Laufen">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -125,7 +126,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, Holzfällen, und Geschwindigkeit des Erholens.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, Holzfällen und Erholungsgeschwindigkeit">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -133,7 +134,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Geschicklichkeit beeinflusst: Schreinern, Kochen und Becken, Edelsteinschleifen, Glasblasen, Goldschmieden, Musikinstrumente, Schmieden, und Schneidern">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Geschicklichkeit beeinflusst: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Musikinstrumente, Schmieden und Schneidern">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -149,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Wahrnehmung beeinflusst: Alchemie, Distanzwaffen, und Vergiften">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Wahrnehmung beeinflusst: Alchemie, Distanzwaffen und Vergiften">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -157,7 +158,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Willenskraft beeinflusst: Dieses Attribut wird noch nicht genutzt">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Dieses Attribut wird zur Zeit nicht genutzt">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>

@@ -116,8 +116,8 @@ können hier gemeldet werden.</li>
 <p>Diese Spieler helfen neuen Spielern und bei Problemen zwischen Spielern.</p>
 
 <ul>
-<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Manager (US)</li>
-<li><a href="?contact=31">Alessaina</a> - Englischsprachiger Community-Manager (US)</li>
+<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (US)</li>
+<li><a href="?contact=31">Alessaina</a> - Englischsprachige Community-Managerin (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager</li>
 </ul>
 
