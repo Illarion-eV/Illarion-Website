@@ -61,79 +61,244 @@ communication on the boards and in the chat are influenced by players just like
 you. Please contribute actively to maintain an atmosphere of respect and
 considerateness that attracts roleplayers from all around the world.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <h2> Common Game Rules </h2>
 
-<p>1. Every player is allowed one account. You are responsible for the 
-actions of your characters, regardless if an unauthorized person gained
-access to your account.</p>
+<ul class="content_summery">
+    <li><a href="#account">Account</a></li>
+    <li><a href="#names">Names</a></li>
+    <li><a href="#world">Game world</a></li>
+    <li><a href="#realism">Realism</a></li>
+    <li><a href="#charmixing">Mixing characters</a></li>
+    <li><a href="#ooc">OOC</a></li>
+    <li><a href="#language">Language</a></li>
+    <li><a href="#emotes">Emotes</a></li>
+    <li><a href="#pkilling">Player killing</a></li>
+    <li><a href="#harm">Violence</a></li>
+    <li><a href="#behaivor">Behaviour</a></li>
+    <li><a href="#rulebreak">Rule violations</a></li>
+    <li><a href="#bugs">Bugs</a></li>
+    <li><a href="#gms">Gamemasters</a></li>
+    <li><a href="#boards">Board</a></li>
+    <li><a href="#macros">Additional programs</a></li>
+    <li><a href="#copyright">Copyright</a></li>
+</ul>
 
-<p>2. If two players wish to share an internet connection, they must
-contact the Illarion staff. </p>
-
-<p>3. Names of characters must fit into a medieval fantasy world and 
-also to their race. Well known, historical, mythological, or names 
-that are offensive are not permitted, nor are titles (earned in-game).</p>
-
-<p>4. Races that are allowed to play are limited to those that are 
-able to be chosen from in the character creation process in your 
-account system. Mixed-race characters are not allowed. A gamemaster's
-permission is needed for all magical and divine interventions as well
-as supernatural properties that cannot be realised by the engine and
-affect the game world or other players.</p>
-
-<p>5. While the game engine permits and limits some actions, players 
-must adapt characters to the “realism” in Illarion, including any 
-behaviors that one would exhibit in a medieval fantasy world. Do not
-ignore NPC’s or disregard injuries. If struck down or injured, act out
-the injuries until health is recovered.</p>
-
-<p>6. It is not permitted for two characters of one player to mix or
-interact with each other. One’s characters cannot know each other, nor
-can they exchange items with each other or through a middleman. It is 
-not allowed to log in with two characters at the same time.</p>
-
-<p>7. Players are not allowed to use out of character (OOC) information 
-that they have obtained, but that their character has not. Decisions of
-characters should not be influenced by OOC information.</p>
-
-<p>8. Language of characters should match that of a medieval fantasy world.
-Leet speak (e.g. u got pwn3d) and modern expressions are not permitted. 
-Senseless messages and typing in all capital letters is not permitted.</p>
-
-<p>9. Actions of characters (e.g. fighting, crafting) should be accompanied 
-with emotes. Emotes describe perceivable actions and states, not opinions,
-thoughts or feelings.</p>
-
-<p>10. Power emotes, or ones that force actions of other characters, are not permitted.</p>
-
-<p>11. Characters must have a valid and traceable reason to attack other characters.
-Also, attacking a character after they are resurrected (res-killing) is not allowed.</p>
-
-<p>12. The portrayal of extreme violence and x-rated actions are not permitted 
-(e.g. sexual content, glorifying violence, and brutal or perverse acts).</p>
-
-<p>13. All contents that hurt the ideals or moralities of other players are not allowed.</p>
-
-<p>14. Harassment, threats or insults, racist and sexist statements will not be tolerated
-in-game, on the forums, or in the chat. It is not acceptable to answer a rule violation 
-with one of your own. If you find a rule violation unbearable, please contact the 
-Illarion staff.</p>
-
-<p>15. The willful use of game errors (bugs) is forbidden. If a bug is founded, it 
-should be reported to the Illarion staff, on the bugtracker.</p>
-
-<p>16. Gamemasters keep the peace in-game and host player events. They also run the 
-in-game factions of Cadomyr, Runewick and Galmair. All requests that affect the in-game 
-world should be directed to gamemasters.</p>
-
-<p>17. On the forums, the creation of senseless or off-topic posts is not allowed.</p>
-
-<p>18. The usage of additional programs that could influence the behaviour 
-of the game are prohibited.</p>
-
-<p>19. The sources of Java software and of the server are released and available 
-for public review. All other content is property of Illarion and is therefore 
-protected by copyright. It is not allowed to use this content without permission 
-of the Illarion society.</p>
+<div class="clr"></div>
 
 <?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="account"></a></div>
+<h2>Account</h2>
+
+<p>Every player is allowed only one account. Accounts and characters are not borrowed, 
+exchanged or sold. The owner of an account is responsible for all actions of his characters, 
+even if an unauthorised person got access to it.</p>
+
+<p>If two players want to log in using the same internet connection, 
+they have to inform the Illarion staff about this.
+</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="names"></a></div>
+<h2>Names</h2>
+
+<p>Names of characters have to fit a medieval fantasy world and the race of the
+character. In addition, the following types of names are not allowed:</p>
+
+<ul>
+  <li>Absurd and offensive names (Kismai Ass, Adolf Hitlersson)</li>
+  <li>Names of history or present-day life (Barack Obama, Julius Caesar)</li>
+  <li>Names of mythology, religion etc. (Buddha, Jesus Christus, Osiris)</li>
+  <li>Well known names from literature, TV, movies etc. (Gandalf, Legolas, Harry
+  Potter, Mononoke)</li>
+  <li>Names containing a title (Sir Yaran, King Kuno). You can add titles in-game
+  separately</li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="world"></a></div>
+<h2>The game world</h2>
+
+<p>The description of the game world as published on http://www.illarion.org is mandatory. 
+The races allowed to play are limited to the races offered to choose during the character 
+creation in the account system. It's not allowed to roleplay any mixed-race characters.</p>
+
+<p>
+A gamemaster's permission is needed for all magical and divine interventions as well as
+supernatural properties that cannot be realised by the engine and affect the game world or
+other players.
+</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="realism"></a></div>
+<h2>Realism</h2>
+
+<p>Regardless from the limits and possibilities of the engine one has to adapt
+the behaviour of a character to the game world. Swords remain deathly weapons,
+ogres are still scary monsters and farming hard labour, even if the engine
+allows a player to master such challenges. It is not allowed in the sense of the
+game logic to ignore NPCs in your own roleplay. No criminal would rob another
+character right in front of a town guard, even if the guard is only a NPC.</p>
+
+<p>Actions of a character must not be adapted to the technical environment of
+the engine to maximise success. Characters have to react on external influences
+and must not be kept idle in the game. To evade unwanted situations that could
+have bad consequences for a character by logging out of the game is
+forbidden.</p>
+
+<p>When a character is knocked down or 'killed' (s)he will suffer from injuries
+which should be played out. In case of a knock-out there are light injuries, in
+the case of death severe ones. The wounds should be played out until the health
+points are fully restored.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="charmixing"></a></div>
+<h2>Mixing characters</h2>
+
+<p>In general it is not allowed that two characters of one player support each
+other. Therefore it is forbidden to exchange items between characters, also not
+by using middlemen, and that they share knowledge. One's characters also can't
+know each other and cannot be related. It is not allowed at any time to log in
+with two characters at the same time.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="ooc"></a></div>
+<h2>Out of character (OOC)</h2>
+
+<p>Out of character is everything that is not backed up by actions or thoughts
+of a character in-game. Decisions or actions in game should never be motivated by
+OOC influence, e.g. because of dislike for the other player. To call for help
+via means not present in the game (e.g. messengers) is strictly forbidden. It is
+also not allowed to use knowledge which the player has but the character
+doesn't. A player has to prove that the character has gained said knowledge.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="language"></a></div>
+<h2>Language of characters</h2>
+
+<p>The language should fit the character and the game world and should follow
+the rules of spelling and grammar as well as possible. Modern expressions as
+well as abbreviations or "Leet-speak" (e.g. "u g0t pwn3d") should not by 
+used.</p>
+
+<p>Writing or invoking senseless or disturbing messages and the continuous use
+of capital letters to stress statements (e.g. "IT IS MY TURN NOW!") is not
+allowed.</p>
+
+<p>Conversations are to be done from the point of view of the character.
+Conversations that have nothing to do with the communication between the
+characters (OOC) are to kept to a bare minimum and have to be masked by double
+brackets (( )) in whisper mode.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="emotes"></a></div>
+<h2>Emotes</h2>
+
+<p>Action of characters (e.g. fighting, crafting) should be
+accompanied by emotes. Emotes describe only perceivable actions and states.
+Emotes do not contain opinions, thoughts or feelings of characters.</p>
+
+<p>So called power-emotes that force a behaviour or an effect on other
+characters and leave no room for reaction are forbidden.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="pkilling"></a></div>
+<h2>Player killing</h2>
+
+<p>The purposeful attacking of a character without clearly traceable and
+reasonable roleplaying reason is forbidden. Immediate killing of a character
+right after resurrection ("res-killing") is not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="harm"></a></div>
+<h2>Portrayal of Violence and X-rated Actions</h2>
+
+<p>Content and portrayals of actions which are brutal, perverse, sexual or
+glorify violence are strictly forbidden. Also all contents that hurt the ideals
+and moralities of involved players and random listeners are not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="behaivor"></a></div>
+<h2>Behaviour</h2>
+
+<p>Harassment, threats or insults, including racist or sexist statements will
+not be tolerated. This hold for all platforms of Illarion: The game, the board
+and the chat, including private messages.
+ It is not allowed to react to a rule violation of another player with another rule violation 
+(e.g. OOC-messages). These breaches will be dealt with, regardless of the situation. 
+It is unwanted that players blame each other for rule violations. If an unbearable rule violation
+ occurs, the Illarion staff should be informed to process the case.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="rulebreak"></a></div>
+<h2>Reaction to rule violations</h2>
+
+<p>It is not allowed to react to a rule violation of another player with another
+rule violation (e.g. OOC-messages). These breaches will be dealt with,
+regardless of the situation. It is unwanted that players blame each other for
+rule violations. If a rule violation occurs, the Illarion staff should be
+informed to process the case.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="bugs"></a></div>
+<h2>Bug exploits</h2>
+
+<p>The wilful use of game errors (bugs) is, regardless of reason, forbidden. If
+an error is found in-game, it has to be reported to the Illarion staff;
+preferably by an entry in the bugtracker. If items or effects are lost due to a
+bug or server crash, there is no replacement or refund.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="gms"></a></div>
+<h2>Gamemasters</h2>
+
+<p>Gamemasters help players, host events and keep the peace in the game.
+Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
+Thus, all requests that affect the game world should be directed to them.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="boards"></a></div>
+<h2>Board</h2>
+
+<p>On the Illarion forums, the rules apply analogously. Creating senseless or
+off-topic posts is not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="macros"></a></div>
+<h2>Additional programs</h2>
+
+<p>The usage of programs which influence the behaviour of the game and thus
+offer an advantage to the player are not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="copyright"></a></div>
+<h2>Copyright</h2>
+
+<p>The sources of the Java software (client and development tools) and of the
+server are released under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3
+</a> and are thus <a href="http://illarion.org/development/us_opensource.php">
+available for public review</a> and usage. All other content of Illarion, all
+texts which are created for Illarion, all scripts, pictures, sound effects,
+music and the homepage is property of the Illarion society and is therefore
+protected by copyright if not indicated otherwise. It is not allowed to use
+this content without the consent of the Illarion society. </p>
+
+<?php Page::NavBarBottom(); ?>
