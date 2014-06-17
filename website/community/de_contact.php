@@ -41,15 +41,6 @@ E-Mail-Adresse, an die Du Dich wenden kannst. Aber prüfe bitte GENAU,
 in welche Kategorie Dein Anliegen fällt und teile die E-Mail
 gegebenenfalls auf!</p>
 
-<p>Überprüfe VORHER, ob deine Anfrage eventuell in der
-<a href="<?php echo Page::getURL(); ?>/general/de_faq_graphic.php">Grafik-FAQ</a>,
-<a href="<?php echo Page::getURL(); ?>/general/de_faq_concept.php">Konzept-FAQ</a>,
-<a href="<?php echo Page::getURL(); ?>/general/de_faq_technic.php">Technik-FAQ</a> oder in den
-verschiedenen Bereichen des
-<a href= "<?php echo Page::getURL(); ?>/community/forums">Forums</a> beantwortet
-wurde oder dort gestellt werden kann. Dies spart uns wertvolle Zeit für
-die Weiterentwicklung von Illarion.</p>
-
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2><a name="2"></a>Community-Manager</h2>

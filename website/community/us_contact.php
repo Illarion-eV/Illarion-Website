@@ -39,17 +39,7 @@ function MainForm() {
 relevant email addresses to which you can send your inquiries, bug reports,
 wishes and such. As there are quite a few people working on Illarion, we have
 divided the addresses into different categories, so that each mail is sent to
-the appropriate people. Therefore, you should make sure you send your e-mails
-to the right address as they will otherwise probably just be ignored.</p>
-
-<p>Make sure you have already read the
-<a href="<?php echo Page::getURL(); ?>/general/us_faq_graphic.php">Graphic-FAQ</a>,
-<a href="<?php echo Page::getURL(); ?>/general/us_faq_concept.php">Concepts-FAQ</a>,
-<a href="<?php echo Page::getURL(); ?>/general/us_faq_technic.php">Technical-FAQ</a> or even checked
-out the <a href= "<?php echo Page::getURL(); ?>/community/forums/">Forum</a> before
-you write to us as the answer to your problem may well be there
-and it is frustrating at times for us to answer the same questions again and
-again.</p>
+the appropriate people.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
