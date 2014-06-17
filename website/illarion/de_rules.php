@@ -84,10 +84,10 @@ Spiel erworben werden).</p>
 <p>4. Bei der Auswahl der Rassen eines Charakters ist die Auswahl 
 auf die bei der Charaktererstellung angegebenen Rassen begrenzt. 
 Auch über das Rollenspiel ist es nicht erlaubt, Mischlingscharaktere 
-irgendeiner Art zu spielen.. Bei magischem und göttlichem Wirken 
-oder übernatürlichen Eigenschaften gilt, dass alles, was man 
-nicht über die Engine von Illarion umsetzen kann, eine Genehmigung 
-eines Gamemasters erfordert.</p>
+irgendeiner Art zu spielen. Bei magischem und göttlichem Wirken oder
+übernatürlichen Eigenschaften gilt, dass alles, was man nicht über die
+Engine von Illarion umsetzen kann und einen Einfluss auf die Spielwelt
+oder andere Spieler hat, eine Genehmigung eines Gamemasters erfordert.</p>
 
 <p>5. Unabhängig von denen durch die Engine vorgegebenen Begrenzungen 
 und Möglichkeiten muss sich ein Charakters an den “Realismus” der 

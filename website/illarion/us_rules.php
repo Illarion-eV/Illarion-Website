@@ -76,9 +76,10 @@ that are offensive are not permitted, nor are titles (earned in-game).</p>
 
 <p>4. Races that are allowed to play are limited to those that are 
 able to be chosen from in the character creation process in your 
-account system. Mixed-race characters are not allowed. One must receive 
-gamemaster approval for any magical or divine interventions that 
-cannot be done be the engine.</p>
+account system. Mixed-race characters are not allowed. A gamemaster's
+permission is needed for all magical and divine interventions as well
+as supernatural properties that cannot be realised by the engine and
+affect the game world or other players.</p>
 
 <p>5. While the game engine permits and limits some actions, players 
 must adapt characters to the “realism” in Illarion, including any 
