@@ -128,6 +128,6 @@ zu unterlassen.</p>
 <p>18. Die Verwendung von Zusatzprogrammen, die das Verhalten des Spiels beeinflussen,
  ist nicht gestattet.</p>
  
-<p> 19. Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) ist unter der GPLv3 veröffentlicht. Die Serversoftware, alle Skripte und Karten sind unter der AGPLv3 veröffentlicht. Diese Quellen sind somit öffentlich einsehbar und verwendbar. Alle anderen Inhalte von Illarion, das heißt alle Grafiken, Soundeffekte, Musik und die Homepage gehören dem Illarion e.V. und sind damit urheberrechtlich geschützt, soweit nicht explizit anders angegeben. Diese Inhalte dürfen ohne die Zustimmung des Illarion e.V. nicht verwendet werden.
+<p> 19. Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) ist unter der GPLv3 veröffentlicht. Die Serversoftware, alle Skripte und Karten sind unter der AGPLv3 veröffentlicht. Diese Quellen sind somit öffentlich einsehbar und verwendbar. Alle anderen Inhalte von Illarion, das heißt alle Grafiken, Soundeffekte, Musik und die Homepage gehören dem Illarion e.V. und sind damit urheberrechtlich geschützt, soweit nicht explizit anders angegeben. Diese Inhalte dürfen ohne die Zustimmung des Illarion e.V. nicht verwendet werden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>

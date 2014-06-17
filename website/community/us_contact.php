@@ -1,22 +1,22 @@
 <?php
    /*
-    * Contact Page of Illarion
-    *
-    * @author Martin Karing <nitram@illarion.org>
-    * @copyright 2006, Illarion e.V.
-    * @version 1.0 ENGLISH
-    *
-    */
-	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
-	include 'inc.contact.php';
-	
-	Page::setTitle( 'Contact' );
-	Page::setDescription( 'Here you find all informations needed to get in contact with the Illarion staff.' );
-	Page::setKeywords( array( 'Contact', 'E-Mail', 'email', 'Email' ) );
-	Page::setXHTML();
-	Page::Init();
+* Contact Page of Illarion
+*
+* @author Martin Karing <nitram@illarion.org>
+* @copyright 2006, Illarion e.V.
+* @version 1.0 ENGLISH
+*
+*/
+include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+include 'inc.contact.php';
 
-   function MainForm() {
+Page::setTitle( 'Contact' );
+Page::setDescription( 'Here you find all informations needed to get in contact with the Illarion staff.' );
+Page::setKeywords( array( 'Contact', 'E-Mail', 'email', 'Email' ) );
+Page::setXHTML();
+Page::Init();
+
+function MainForm() {
 ?>
 
 <h1>Contact to Illarion</h1>
@@ -155,18 +155,18 @@ only be released when specifically requested by the Gamemaster personally.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2> Website Credits </ h2> 
+<h2>Website Credits</h2> 
  
-<h3> Illarion e.V. </ h3> 
+<h3>Illarion e.V.</h3> 
 
 <p> 
-Register court: Amtsgericht Kempten <br /> 
+Register court: Amtsgericht Kempten<br /> 
 Register No.: VR 30767 
-</ p> 
+</p> 
  
-<p> Email: committee@illarion.org </ p> 
+<p>Email: committee@illarion.org</p> 
 
-? - <php Page :: insert_go_to_top_link (); ?>
+<?php Page::insert_go_to_top_link(); ?>
 <?php
    }
 
