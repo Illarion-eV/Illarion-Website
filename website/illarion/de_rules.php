@@ -57,6 +57,8 @@ außerhalb im Forum und Chat, werden von Spielern wie dir geprägt. Bitte hilf
 aktiv dabei mit, dass Illarion seine respektvolle, rücksichtsvolle und
 angenehme Atmosphäre beibehält, die Rollenspieler aus aller Welt schätzen.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div class="clr"></div>
 
 <div><a id="account"></a></div>
@@ -72,6 +74,8 @@ auch wenn sich ein Dritter Zugriff auf den Account verschafft hat.</p>
 
 <p>Wenn zwei Spieler über dieselbe Internetverbindung ins Spiel einloggen wollen, 
 ist dies beim Team von Illarion anzumelden.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="names"></a></div>
 <h2>Namen</h2>
@@ -92,6 +96,8 @@ zulässig:</p>
   Spiel erworben werden</li>
 </ul>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="world"></a></div>
 <h2>Die Spielwelt</h2>
 
@@ -103,6 +109,8 @@ Auch über das Rollenspiel ist es nicht erlaubt, Mischlingscharaktere irgendeine
 dass alles, was man nicht über die Engine von Illarion umsetzen kann und einen
 Einfluss auf die Spielwelt oder andere Spieler hat, eine Genehmigung eines
 Gamemasters erfordert.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="realism"></a></div>
 <h2>Realismus</h2>
@@ -125,6 +133,8 @@ durch Ausloggen zu entziehen, ist verboten.</p>
 Im Falle des Niederschlagens sind das leichte Verletzungen, im Falle des Todes sehr schwere.
 Diese Wunden sind solange auszuspielen, bis die Lebenspunkte des Charakters wieder hergestellt sind.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="charmixing"></a></div>
 <h2>Charaktere vermischen</h2>
 
@@ -133,6 +143,8 @@ Daher dürfen zwischen diesen Charakteren keine Gegenstände, auch nicht über M
 ausgetauscht werden und die Charaktere dürfen kein Wissen teilen.
 Außerdem können zwei Charaktere eines Spielers nicht verwandt oder eng verbunden sein.
 Es ist niemals gestattet, sich mit zwei Charakteren gleichzeitig einzuloggen.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="ooc"></a></div>
 <h2>Out of character (OOC)</h2>
@@ -143,6 +155,8 @@ dass man einen anderen Spieler nicht leiden kann.
 Das Herbeirufen von anderen Charakteren durch im Spiel nicht vorhandene Möglichkeiten (z.B. Messenger) ist strengstens verboten. 
 Außerdem ist die Verwendung von Wissen untersagt, das der Spieler, jedoch nicht der Charakter, erlangt hat. 
 Der Spieler ist in der Pflicht nachzuweisen, dass sein Charakter das Wissen im Spiel erworben hat.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="language"></a></div>
 <h2>Sprache eines Charakters und Emotes</h2>
@@ -167,6 +181,8 @@ Zustände. Emotes enthalten keine Meinungen, Gedanken und Gefühle des Charakter
 <p>So genannte Poweremotes, die anderen Charakteren ein Verhalten oder einen
 Effekt aufzwingen und keine Möglichkeit des Reagierens bieten, sind verboten.
 </p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="behavior"></a></div>
 <h2>Verhalten im Spiel</h2>
@@ -193,6 +209,8 @@ erwünscht, dass Spieler andere Spieler für ihre Verstöße im Spiel zurechtwei
 Wenn ein Verstoß gegen die Regeln von Illarion vorliegt, sollte das Team von
 Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="bugs"></a></div>
 <h2>Ausnutzen von Spielschwächen</h2>
 
@@ -205,6 +223,8 @@ so werden diese nicht ersetzt.</p>
 <p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
 so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="gms"></a></div>
 <h2>Gamemaster</h2>
 
@@ -213,11 +233,15 @@ und für Ordnung im Spiel zu sorgen.
 Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick. 
 Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="boards"></a></div>
 <h2>Foren und Chat</h2>
 
 <p>Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
 Das Erstellen von sinnlosen oder themenfremden Beiträgen ist zu unterlassen.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="copyright"></a></div>
 <h2>Open Source und das Urheberrecht</h2>
