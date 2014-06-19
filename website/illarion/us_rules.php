@@ -56,6 +56,8 @@ communication on the boards and in the chat are influenced by players just like
 you. Please contribute actively to maintain an atmosphere of respect and
 considerateness that attracts roleplayers from all around the world.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div class="clr"></div>
 
 <div><a id="account"></a></div>
@@ -73,6 +75,8 @@ even if an unauthorised person got access to it.</p>
 they have to inform the Illarion staff about this.
 </p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="names"></a></div>
 <h2>Names</h2>
 
@@ -88,6 +92,8 @@ character. In addition, the following types of names are not allowed:</p>
   <li>Names containing a title (Sir Yaran, King Kuno). You can earn titles in the game</li>
 </ul>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="world"></a></div>
 <h2>The game world</h2>
 
@@ -100,6 +106,8 @@ A gamemaster's permission is needed for all magical and divine interventions as 
 supernatural properties that cannot be realised by the engine and affect the game world or
 other players.
 </p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="realism"></a></div>
 <h2>Realism</h2>
@@ -122,6 +130,8 @@ which should be played out. In case of a knock-out there are light injuries, in
 the case of death severe ones. The wounds should be played out until the health
 points are fully restored.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="charmixing"></a></div>
 <h2>Mixing characters</h2>
 
@@ -130,6 +140,8 @@ other. Therefore it is forbidden to exchange items between characters, also not
 by using middlemen, and that they share knowledge. One's characters also can't
 know each other and cannot be related. It is not allowed at any time to log in
 with two characters at the same time.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="ooc"></a></div>
 <h2>Out of character (OOC)</h2>
@@ -140,6 +152,8 @@ OOC influence, e.g. because of dislike for the other player. To call for help
 via means not present in the game (e.g. messengers) is strictly forbidden. It is
 also not allowed to use knowledge which the player has but the character
 doesn't. A player has to prove that the character has gained said knowledge.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="language"></a></div>
 <h2>Language of characters and emotes</h2>
@@ -165,6 +179,7 @@ Emotes do not contain opinions, thoughts or feelings of characters.</p>
 <p>So called power-emotes that force a behaviour or an effect on other
 characters and leave no room for reaction are forbidden.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="behaivor"></a></div>
 <h2>Behaviour in the game</h2>
@@ -191,6 +206,8 @@ informed to process the case.</p>
 reasonable roleplaying reason is forbidden. Immediate killing of a character
 right after resurrection ("res-killing") is not allowed.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="bugs"></a></div>
 <h2>Bug exploits</h2>
 
@@ -202,6 +219,8 @@ bug or server crash, there is no replacement or refund.</p>
 <p>The usage of programs which influence the behaviour of the game and thus
 offer an advantage to the player are not allowed.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="gms"></a></div>
 <h2>Gamemasters</h2>
 
@@ -209,11 +228,15 @@ offer an advantage to the player are not allowed.</p>
 Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
 Thus, all requests that affect the game world should be directed to them.</p>
 
+<?php Page::insert_go_to_top_link(); ?>
+
 <div><a id="boards"></a></div>
 <h2>Board and chat</h2>
 
 <p>On the Illarion forums and in the Illarion chat, the rules apply analogously. Creating senseless or
 off-topic posts is not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="copyright"></a></div>
 <h2>Open source and copyright</h2>

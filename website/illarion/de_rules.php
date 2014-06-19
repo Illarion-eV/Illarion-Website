@@ -10,7 +10,7 @@
 	Page::Init();
 ?>
 
-<h1>Verhaltenscodex und Spielregeln</h1>
+<h1>Spielregeln</h1>
 
 <?php Page::cap('A'); ?>
 <p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die in Illarion
