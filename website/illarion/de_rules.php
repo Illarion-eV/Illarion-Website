@@ -12,19 +12,15 @@
 
 <h1>Verhaltenscodex und Spielregeln</h1>
 
-<?php Page::cap('U'); ?>
-<p>m für alle Spieler eine positives Spielerlebnis sicherzustellen sind 
-im Folgenden einige Leitlinien und Regeln zusammengefasst, die alle 
-befolgen sollten. Das gewährleistet das bestmögliche Rollenspiel für 
-alle Beteiligten.</p>
-
-<p>Bedenke immer:</p>
+<?php Page::cap('A'); ?>
+<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die in Illarion
+gelten. Sie decken die meisten Situationen in Illarion ab und im
+Zweifelsfalle gibt es die Gamemaster, die sich um Streitfälle kümmern können. 
+Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 
 <p><b>Wir spielen miteinander, nicht gegeneinander.</b></p>
 
-<p>Das empfohlene Mindestalter für Illarion liegt bei 16 Jahren.
- Grenze begründet sich auf der Notwendigkeit, die im Spiel gebotenen 
- Themen und Inhalte mit der notwendigen sozialen Reife zu reflektieren.</p>
+<p>Wer Illarion nach diesem Grundsatz spielt, kann eigentlich nichts falsch machen.</p>
 
 <h2>Verhaltenscodex</h2>
 
@@ -36,10 +32,7 @@ Illarion erwünscht sind. Denn ebenso wichtig wie ein ausgefeilter Regelkatalog
 ist es, dass die Spieler rücksichtsvoll, respektvoll und mit Nachsicht
 miteinander umgehen.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<?php Page::cap('I'); ?>
-<p>llarion ist ein echtes Rollenspiel. Dein Charakter ist nicht dein Abbild und
+<p>Illarion ist ein echtes Rollenspiel. Dein Charakter ist nicht dein Abbild und
 sein Erfolg oder Misserfolg ist nicht deiner. Unterscheide stets zwischen dir
 und deinem Charakter und lass ihn Schwächen haben und auch mal Fehler machen.
 Auch Spieler machen mitunter Fehler. Sei tolerant gegenüber den Fehlern anderer.
@@ -50,61 +43,35 @@ Illarion verderben will und genauso solltest du niemandem den Spaß verderben
 wollen. Überlege dir also stets, ob was immer du im Spiel tust, auch anderen
 Spielern Spaß bereitet oder nur dir alleine.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<?php Page::cap('I'); ?>
-<p>llarion lebt vom kooperativen Zusammenspiel, auch wenn Charaktere Feinde
+<p>Illarion lebt vom kooperativen Zusammenspiel, auch wenn Charaktere Feinde
 sein mögen, so sollen die Spieler doch gemeinsam die Geschichte der Welt
 Illarion weiterschreiben. Ein Gegeneinander hilft niemanden; dies gilt auch für
 das Team von Illarion. Es besteht aus Freiwilligen, die in ihrer Freizeit für
 dich ein kostenloses Spiel betreuen und dabei genauso wenig perfekt sind wie
 du. Gegenseitiger Respekt ist genauso wichtig wie gesittete Kommunikation – ein
-hilfreiches Wort bewirkt manchmal mehr als tausend Beschwerden. Das Team leistet
-einen Teil, um das Spiel zu formen, aber den weit größeren Teil leisten die
+hilfreiches Wort bewirkt manchmal mehr als tausend Beschwerden.</p>
+
+<p>Das Team leistet einen Teil, um das Spiel zu formen, aber den weit größeren Teil leisten die
 Spieler. Die Geschichten und Abenteuer im Spiel, aber auch der Umgangston
 außerhalb im Forum und Chat, werden von Spielern wie dir geprägt. Bitte hilf
 aktiv dabei mit, dass Illarion seine respektvolle, rücksichtsvolle und
 angenehme Atmosphäre beibehält, die Rollenspieler aus aller Welt schätzen.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2>Spielregeln</h2>
-
-<ul class="content_summery">
-	<li><a href="#account">Account</a></li>
-	<li><a href="#names">Namen</a></li>
-	<li><a href="#world">Spielwelt</a></li>
-    <li><a href="#realism">Realismus</a></li>
-    <li><a href="#charmixing">Charaktere vermischen</a></li>
-    <li><a href="#ooc">OOC</a></li>
-    <li><a href="#language">Sprache</a></li>
-    <li><a href="#emotes">Emotes</a></li>
-    <li><a href="#pkilling">Player killing</a></li>
-    <li><a href="#harm">Gewalt</a></li>
-    <li><a href="#behavior">Verhalten</a></li>
-    <li><a href="#rulebreak">Regelverstöße</a></li>
-    <li><a href="#bugs">Spielfehler</a></li>
-    <li><a href="#gms">Gamemaster</a></li>
-    <li><a href="#boards">Foren</a></li>
-    <li><a href="#macros">Zusatzprogramme</a></li>
-    <li><a href="#copyright">Urheberrecht</a></li>
-</ul>
-
 <div class="clr"></div>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="account"></a></div>
 <h2>Account</h2>
 
+<p>Das empfohlene Mindestalter für Illarion liegt bei 16 Jahren.
+ Grenze begründet sich auf der Notwendigkeit, die im Spiel gebotenen 
+ Themen und Inhalte mit der notwendigen sozialen Reife zu reflektieren.</p>
+ 
 <p>Jedem Spieler steht nur ein Account zu. Accounts und Charaktere werden nicht an andere Spieler verliehen, 
 getauscht oder verkauft. Der Besitzer eines Accounts ist verantwortlich für alle Aktionen seiner Charaktere, 
 auch wenn sich ein Dritter Zugriff auf den Account verschafft hat.</p>
 
 <p>Wenn zwei Spieler über dieselbe Internetverbindung ins Spiel einloggen wollen, 
 ist dies beim Team von Illarion anzumelden.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="names"></a></div>
 <h2>Namen</h2>
@@ -122,10 +89,8 @@ zulässig:</p>
   <li>Bekannte Namen aus Literatur, Film, Fernsehen etc. (Gandalf, Legolas,
   Harry Potter, Mononoke)</li>
   <li>Namen, die einen Titel enthalten (Sir Yaran, König Kuno). Titel können im
-  Spiel separat eingefügt werden</li>
+  Spiel erworben werden</li>
 </ul>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="world"></a></div>
 <h2>Die Spielwelt</h2>
@@ -139,8 +104,6 @@ dass alles, was man nicht über die Engine von Illarion umsetzen kann und einen
 Einfluss auf die Spielwelt oder andere Spieler hat, eine Genehmigung eines
 Gamemasters erfordert.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="realism"></a></div>
 <h2>Realismus</h2>
 
@@ -153,22 +116,14 @@ gestattet, NPCs im Rollenspiel zu ignorieren. So wird kein Verbrecher einen
 anderen Charakter ausrauben, wenn dieser direkt neben einer NPC-Stadtwache
 steht.</p>
 
-<p>Unabhängig von denen durch die Engine vorgegebenen Begrenzungen und Möglichkeiten 
-ist das Verhalten eines Charakters an die Spielwelt anzupassen. 
-Schwerter sind tödliche Waffen, Oger bleiben furchteinflößende Wesen und Ackerbau harte Knochenarbeit, 
-auch wenn ein Spieler mit der Engine Herausforderungen leicht meistern kann. 
-Handlungen eines Charakters sind nicht den technischen Bedingungen der Engine anzupassen, 
-um maximalen Erfolg zu erzielen. </p>
-
-<p>Charaktere müssen stets auf äußere Einflüsse reagieren und dürfen nicht unbeaufsichtigt im Spiel belassen werden.
+<p>Handlungen eines Charakters sind nicht den technischen Bedingungen der Engine anzupassen, 
+um maximalen Erfolg zu erzielen. Charaktere müssen stets auf äußere Einflüsse reagieren und dürfen nicht unbeaufsichtigt im Spiel belassen werden.
 Sich unliebsamen Situationen, die nachteilige Folgen für den Charakter haben könnten,
 durch Ausloggen zu entziehen, ist verboten.</p>
 
 <p>Wenn ein Charakter niedergeschlagen oder 'getötet' wird, trägt er Verletzungen davon, die auszuspielen sind.
 Im Falle des Niederschlagens sind das leichte Verletzungen, im Falle des Todes sehr schwere.
 Diese Wunden sind solange auszuspielen, bis die Lebenspunkte des Charakters wieder hergestellt sind.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="charmixing"></a></div>
 <h2>Charaktere vermischen</h2>
@@ -178,8 +133,6 @@ Daher dürfen zwischen diesen Charakteren keine Gegenstände, auch nicht über M
 ausgetauscht werden und die Charaktere dürfen kein Wissen teilen.
 Außerdem können zwei Charaktere eines Spielers nicht verwandt oder eng verbunden sein.
 Es ist niemals gestattet, sich mit zwei Charakteren gleichzeitig einzuloggen.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="ooc"></a></div>
 <h2>Out of character (OOC)</h2>
@@ -191,10 +144,8 @@ Das Herbeirufen von anderen Charakteren durch im Spiel nicht vorhandene Möglich
 Außerdem ist die Verwendung von Wissen untersagt, das der Spieler, jedoch nicht der Charakter, erlangt hat. 
 Der Spieler ist in der Pflicht nachzuweisen, dass sein Charakter das Wissen im Spiel erworben hat.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="language"></a></div>
-<h2>Sprache eines Charakters</h2>
+<h2>Sprache eines Charakters und Emotes</h2>
 
 <p>Die Sprache muss dem Charakter und der Spielwelt angemessen sein und sollte 
 den Regeln der Rechtschreibung und der Grammatik so gut wie möglich folgen. 
@@ -208,11 +159,6 @@ die nichts mit der Kommunikation der Charaktere zu tun haben (OOC), sind auf
 ein absolutes Minimum zu begrenzen und im Flüstermodus durch doppelte Klammern
 (( )) zu kennzeichnen.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="emotes"></a></div>
-<h2>Emotes</h2>
-
 <p>Aktionen eines Charakters (z.B. Kämpfen, Handwerk) sind durch Emotes
 einzuleiten und zu begleiten. Emotes beschreiben nur wahrnehmbare Handlungen und
 Zustände. Emotes enthalten keine Meinungen, Gedanken und Gefühle des Charakters.
@@ -222,29 +168,13 @@ Zustände. Emotes enthalten keine Meinungen, Gedanken und Gefühle des Charakter
 Effekt aufzwingen und keine Möglichkeit des Reagierens bieten, sind verboten.
 </p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="pkilling"></a></div>
-<h2>Player killing</h2>
-
-<p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
-Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
-einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="harm"></a></div>
-<h2>Gewalt und nicht jugendfreie Darstellungen</h2>
+<div><a id="behavior"></a></div>
+<h2>Verhalten im Spiel</h2>
 
 <p>Gewaltverherrlichende, brutale, perverse oder sexuelle Schilderungen sind im
 Spiel strengstens verboten. Außerdem dürfen durch alle Schilderungen im Spiel
 die Wertvorstellungen und moralischen Grundsätze aller beteiligten Spieler und
 zufälliger Zuhörer nicht verletzt werden.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="behavior"></a></div>
-<h2>Verhalten</h2>
 
 <p>Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
 einschließlich rassistischer oder sexistischer Äußerungen, 
@@ -252,10 +182,9 @@ die sich gegen andere Spieler richten, werden nicht toleriert.
 Dies gilt für alle Plattformen von Illarion: 
 das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="rulebreak"></a></div>
-<h2>Reaktion auf Regelverstöße</h2>
+<p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
+Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
+einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 
 <p>Auf Regelverstöße anderer Spieler darf nicht ebenfalls mit einem Regelverstoß
 (z.B. OOC-Nachrichten) reagiert werden. Solche Verfehlungen werden völlig
@@ -264,10 +193,8 @@ erwünscht, dass Spieler andere Spieler für ihre Verstöße im Spiel zurechtwei
 Wenn ein Verstoß gegen die Regeln von Illarion vorliegt, sollte das Team von
 Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="bugs"></a></div>
-<h2>Ausnutzen von Spielfehlern</h2>
+<h2>Ausnutzen von Spielschwächen</h2>
 
 <p>Das bewusste Ausnutzen von Spielfehlern ist, egal mit welcher Absicht,
 verboten. Wenn ein Fehler im Spiel gefunden wird, muss dieser an das Team von
@@ -275,7 +202,8 @@ Illarion gemeldet werden; vorzugsweise durch einen Eintrag im Bugtracker.
 Sollten durch Bugs oder Serverabstürze Dinge oder Eigenschaften verloren gehen,
 so werden diese nicht ersetzt.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
+<p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
+so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 
 <div><a id="gms"></a></div>
 <h2>Gamemaster</h2>
@@ -285,26 +213,14 @@ und für Ordnung im Spiel zu sorgen.
 Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick. 
 Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="boards"></a></div>
-<h2>Foren</h2>
+<h2>Foren und Chat</h2>
 
 <p>Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
 Das Erstellen von sinnlosen oder themenfremden Beiträgen ist zu unterlassen.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="macros"></a></div>
-<h2>Zusatzprogramme</h2>
-
-<p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
-so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
 <div><a id="copyright"></a></div>
-<h2>Urheberrecht</h2>
+<h2>Open Source und das Urheberrecht</h2>
 
 <p>Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) ist unter
 der <a href="http://www.gnu.org/licenses/gpl-3.0">
@@ -312,7 +228,9 @@ GPLv3</a> veröffentlicht. Die Serversoftware, alle Skripte und Karten sind unte
 der <a href="http://www.gnu.org/licenses/agpl-3.0">
 AGPLv3</a> veröffentlicht.
 Diese Quellen sind somit <a href="http://illarion.org/development/de_opensource.php">
-öffentlich einsehbar</a> und verwendbar. Alle anderen Inhalte von Illarion, das
+öffentlich einsehbar</a> und verwendbar.</p>
+
+<p>Alle anderen Inhalte von Illarion, das
 heißt alle Grafiken, Soundeffekte, Musik und die Homepage gehören dem Illarion e.V.
 und sind damit urheberrechtlich geschützt, soweit nicht explizit anders angegeben.
 Diese Inhalte dürfen ohne die Zustimmung des Illarion e.V. nicht verwendet werden.</p>
