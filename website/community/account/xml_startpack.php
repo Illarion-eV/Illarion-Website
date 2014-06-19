@@ -51,9 +51,9 @@
     $pgSQL->setQuery($query);
 	$skills = $pgSQL->loadResultArray();
 	
-	$query = 'SELECT "spi_item_id" AS "itemid", '.($language == 'de' ? '"itn_german"' : '"itn_english"').' AS "name"'
+	$query = 'SELECT "spi_item_id" AS "itemid", '.($language == 'de' ? '"itm_name_german"' : '"itm_name_english"').' AS "name"'
     .PHP_EOL.' FROM "'.$server.'"."startpack_items"'
-    .PHP_EOL.' INNER JOIN "'.$server.'"."itemname" ON "spi_item_id" = "itn_itemid"'
+    .PHP_EOL.' INNER JOIN "'.$server.'"."items" ON "spi_item_id" = "itm_id"'
     .PHP_EOL.' WHERE "spi_id" = '.$pgSQL->Quote($packId)
     .PHP_EOL.' ORDER BY "spi_linenumber" ASC';
     $pgSQL->setQuery($query);

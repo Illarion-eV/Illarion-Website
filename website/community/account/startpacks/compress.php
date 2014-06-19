@@ -58,17 +58,17 @@
 		$items[] = $node->getAttribute( 'id' );
 	}
 
-	$query = 'SELECT itn_itemid, itn_german, itn_english'
-	.PHP_EOL.' FROM illarionserver.itemname'
-	.PHP_EOL.' WHERE itn_itemid IN ('.implode(',',$items).');'
+	$query = 'SELECT itm_id, itm_name_german, itm_name_english'
+	.PHP_EOL.' FROM illarionserver.items'
+	.PHP_EOL.' WHERE itm_id IN ('.implode(',',$items).');'
 	;
 	$pgSQL->setQuery( $query );
-	$itemNames = $pgSQL->loadAssocList( 'itn_itemid' );
+	$itemNames = $pgSQL->loadAssocList( 'itm_id' );
 
 	foreach ($item_tags as $node)
 	{
-		$node->setAttribute( 'name_de', $itemNames[$node->getAttribute( 'id' )]['itn_german'] );
-		$node->setAttribute( 'name_us', $itemNames[$node->getAttribute( 'id' )]['itn_english'] );
+		$node->setAttribute( 'name_de', $itemNames[$node->getAttribute( 'id' )]['itm_name_german'] );
+		$node->setAttribute( 'name_us', $itemNames[$node->getAttribute( 'id' )]['itm_name_english'] );
 	}
 
 	echo $document->saveXML( $document->documentElement );

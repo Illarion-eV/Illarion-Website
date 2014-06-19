@@ -3,16 +3,16 @@
 	
 	$devserver = &Database::getPostgreSQL('devserver');
 
-	$query = 'SELECT "itn_itemid", "itn_german", "itn_english"'
-    .PHP_EOL.' FROM itemname'
-    .PHP_EOL.' ORDER BY "itn_itemid"'
+	$query = 'SELECT "itm_id", "itm_name_german", "itm_name_english"'
+    .PHP_EOL.' FROM items'
+    .PHP_EOL.' ORDER BY "itm_id"'
 	;
     $devserver->setQuery($query);
 	$common = $devserver->loadAssocList();
 
 	if (!is_null($common)) {
 	   foreach($common as $key=>$item) {
-	       echo $item['itn_itemid'],',"',$item['itn_german'],'","',$item['itn_english'],'"',PHP_EOL;
+	       echo $item['itm_id'],',"',$item['itm_name_german'],'","',$item['itm_name_english'],'"',PHP_EOL;
 	   }
 	}
 ?>
