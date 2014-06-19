@@ -177,9 +177,9 @@
 		$pgSQL->query();
 		
 		$query = 'INSERT INTO "'.$server.'"."playeritems" ("pit_itemid", "pit_playerid", "pit_linenumber", "pit_wear", "pit_number", "pit_quality")'
-		.PHP_EOL.'  SELECT "spi_item_id", '.$pgSQL->Quote( $charid ).', "spi_linenumber", "com_agingspeed", "spi_number", "spi_quality"'
+		.PHP_EOL.'  SELECT "spi_item_id", '.$pgSQL->Quote( $charid ).', "spi_linenumber", "itm_agingspeed", "spi_number", "spi_quality"'
 		.PHP_EOL.'    FROM "'.$server.'"."startpack_items"'
-		.PHP_EOL.'    INNER JOIN "'.$server.'"."common" ON "spi_item_id" = "com_itemid"'
+		.PHP_EOL.'    INNER JOIN "'.$server.'"."items" ON "spi_item_id" = "itm_id"'
 		.PHP_EOL.'    WHERE "spi_id" = '.$db->Quote( $package );
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
