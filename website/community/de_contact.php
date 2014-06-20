@@ -97,13 +97,13 @@ Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <ul>
    <li><a href="?contact=14">Arien Edhel</a> - Deutschsprachiger GM für generelle Anfragen (EU)</li>
-   <li><a href="?contact=41">Bloodraven</a> - Englischsprachiger GM für Runewick (EU)</li>
    <li><a href="?contact=43">White Crow</a> - Englischsprachiger GM für Cadomyr (US)</li>
    <li><a href="?contact=15">Zephyrius</a> - Englischsprachiger GM für Cadomyr (US)</li>
-   <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
-   <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick (EU)</li>
    <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr (EU)</li>
+   <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
    <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM für Galmair (EU)</li>
+   <li><a href="?contact=41">Bloodraven</a> - Englischsprachiger GM für Runewick (EU)</li>
+   <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>

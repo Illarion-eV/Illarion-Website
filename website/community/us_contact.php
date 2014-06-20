@@ -90,13 +90,13 @@ Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
 	<li><a href="?contact=14">Arien Edhel</a> - German speaking GM for general requests (EU)</li>
-    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
     <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
     <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick (EU)</li>
     <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr (EU)</li>
+    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
     <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair (EU)</li>
+    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
