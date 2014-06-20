@@ -23,45 +23,24 @@ function MainForm() {
 
 <h2>Content</h2>
 <ul>
-	<li><a class="hidden" href="#1">General information</a></li>
+	<li><a class="hidden" href="#1">General Information</a></li>
 	<li><a class="hidden" href="#2">Community Managers</a></li>
 	<li><a class="hidden" href="#3">Gamemasters</a></li>
-	<li><a class="hidden" href="#4">General contacts</a></li>
-	<li><a class="hidden" href="#5">Personal contacts</a></li>
+	<li><a class="hidden" href="#4">Lead Developers</a></li>
+	<li><a class="hidden" href="#5">Committee Illarion e.V.</a>
+	<li><a class="hidden" href="#6">Website Credits</a></li></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>General information</h2>
+<h2><a name="1"></a>General Information</h2>
 
 <?php echo Page::cap('Q'); ?>
 <p>uestions and issues may arise when you play Illarion, so we have created a list of
-relevant email addresses to which you can send your inquiries, bug reports,
+relevant email addresses to which you can send your inquiries, reports,
 wishes and such. As there are quite a few people working on Illarion, we have
 divided the addresses into different categories, so that each mail is sent to
 the appropriate people.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="2"></a>Community Managers</h2>
-
-<?php echo Page::cap('S'); ?>
-<p>ome players are known as "Community Managers" (CM).
-These players duties include assisting new players and also helping resolve issues and conflicts between players.
-They should be the first people to turn to for a non-technical issue that may arise. </p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="3"></a>Gamemasters</h2>
-
-<?php echo Page::cap('G'); ?>
-<p>amemasters help players, host events and keep the peace in the game.
-Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
-Thus, all requests that affect the game world should be directed to them.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="4"></a>General contacts</h2>
 
 <ul>
 	<li><a href="?contact=1">Account requests</a> - Questions with regards to Account issues.</li>
@@ -87,52 +66,60 @@ Thus, all requests that affect the game world should be directed to them.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="5"></a>Personal contacts</h2>
+<h2><a name="2"></a>Community Managers</h2>
 
-<h3>Community Managers</h3>
-
-<p>These players assist new players and help resolve issues between players.</p>
+<?php echo Page::cap('S'); ?>
+<p>ome players are known as "Community Managers" (CM).
+These players duties include assisting new players and also helping resolve issues and conflicts between players.
+They should be the first people to turn to for a non-technical issue that may arise. </p>
 
 <ul>
 <li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=31">Alessaina</a> - English speaking Community Manager (US)</li>
-<li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager</li>
+<li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Gamemasters</h3>
+<h2><a name="3"></a>Gamemasters</h2>
 
-<p>These Gamemasters take care of quests and of players who do not abide by the rules.</p>
+<?php echo Page::cap('G'); ?>
+<p>amemasters help players, host events and keep the peace in the game.
+Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
+Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
-	<li><a href="?contact=14">Arien Edhel</a> - General requests</li>
+	<li><a href="?contact=14">Arien Edhel</a> - German speaking GM for general requests (EU)</li>
     <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
     <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
     <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
     <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick</li>
-    <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr</li>
-    <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr (EU)</li>
+    <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Lead Developers</h3>
 
-<p>These are the lead developers of Illarion and their responsibilities</p>
+<h2><a name="4"></a>Lead Developers</h2>
+
+<?php echo Page::cap('T'); ?>
+<p>hese are the lead developers of Illarion and their responsibilities. 
+The developers implement new features, run the game server and care for the homepage. 
+Contact them especially if you want to join the development team of Illarion.</p>
 
 <ul>
-    <li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
-	<li><a href="?contact=22">Martin</a> - Graphics</li>
+    <li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
 	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
-	<li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
+	<li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
+	<li><a href="?contact=22">Martin</a> - Graphics</li>
 	<li><a href="?contact=40">Zot</a> - Maps</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h3>Committee Illarion e.V.</h3>
+<h2><a name="5"></a>Committee Illarion e.V.</h2>
 
 <ul>
 	<li><a href="?contact=25">Vilarion</a> - chairman</li>
@@ -142,7 +129,7 @@ Thus, all requests that affect the game world should be directed to them.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Website Credits</h2> 
+<h2><a name="6"></a>Website Credits</h2>
  
 <h3>Illarion e.V.</h3> 
 
