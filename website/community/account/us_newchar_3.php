@@ -109,7 +109,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Strength affects: Concussion Weapons, Slashing Weapons, Wrestling, weight one can carry and damage dealt in combat">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="The physical force of your character. It directly influences the damage you deal in comat and the weight you can carry. This attribute is important for all kinds of fighters but also gatherers. Strength affects the following skills: Blunt weapons, stabbing weapons, slashing weapons and wrestling.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>

@@ -87,7 +87,7 @@ $templates = $db->loadAssocList();
 <h2>Schritt 3</h2>
 
 <p>Hier kannst du die Attribute deines Charakters festlegen.</p>
-<p>Unterhalb kannst du ein Attribut-Paket auswählen. Diese Pakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Z.B: Druiden brauchen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte ändere die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst.</p>
+<p>Unterhalb kannst du ein Attributpaket auswählen. Diese Pakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Beispielsweise benötigen Druiden 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte ändere die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -97,7 +97,7 @@ $templates = $db->loadAssocList();
 				<tbody>
 					<tr>
 						<td>
-							AttributPaket
+							Attributpaket
 						</td>
 						<td style="width:423px;">
 							<select id="attrib_pack">
@@ -110,7 +110,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Stärke beeinflusst: Schlagwaffen, Hiebwaffen, Ringen, tragbare Last und Schaden im Kampf">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Die körperliche Kraft deines Charakters. Sie bestimmt den Schaden, den du im Kampf anrichtest, und das Gewicht, welches du tragen kannst. Dieses Attribut ist für Kämpfer, die Schaden austeilen wollen, wichtig und hilft auch Sammlern. Stärke beeinflusst die folgenden Fertigkeiten: Schlagwaffen, Stichwaffen, Hiebwaffen und Ringen.">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -118,7 +118,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Schnelligkeit beeinflusst: Ausweichen, Parieren, Stichwaffen und Schnelligkeit beim Laufen">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Die Handlungsgeschwindigkeit deines Charakters. Sie bestimmt die Lauf- und Angriffsgeschwindigkeit. Dieses Attribut ist für Kämpfer wichtig, die Schaden vermeiden wollen. Schnelligkeit beeinflusst die folgenden Fertigkeiten: Parieren, Leichte Rüstungen, Mittlere Rüstungen und Schwere Rüstungen.">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -126,7 +126,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Ausdauer beeinflusst: Ackerbau, Ziegelbrennen, Angeln, Kräuterkunde, Bergbau, Holzfällen und Erholungsgeschwindigkeit">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die folgenden Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Ziegel brennen, Ackerbau und Holzfällen.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -134,7 +134,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Geschicklichkeit beeinflusst: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Musikinstrumente, Schmieden und Schneidern">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die folgenden Fertigkeiten: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -142,7 +142,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Intelligenz beeinflusst: Alchemie">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein. Intelligenz beeinflusst die folgenden Fertigkeiten: -">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Wahrnehmung beeinflusst: Alchemie, Distanzwaffen und Vergiften">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die folgenden Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -158,7 +158,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Dieses Attribut wird zur Zeit nicht genutzt">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Die geistige Widerstandsfähigkeit deines Charakters. Dieses Attribut wird zukünftig für Priester wichtig sein und die Auswirkungen magischer Angriffe abschwächen. Willenskraft beeinflusst die folgenden Fertigkeiten: -">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
