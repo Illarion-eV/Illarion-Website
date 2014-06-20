@@ -13,7 +13,8 @@
 <h1>Illarion Game Rules</h1>
 
 <?php Page::cap('O'); ?>
-<p>n this page you can find all the rules and procedures that apply to Illarion.
+<p>n this page you can find all the rules and procedures that apply to the game Illarion.
+On the Illarion forums and in the Illarion chat, the rules apply analogously.
 They should cover most situations in Illarion. In case of doubts, contact a
 Gamemaster. They know the rules by heart, and can help you when conflicts or
 questions arise. The most important principle in Illarion though is:</p>
@@ -23,6 +24,26 @@ questions arise. The most important principle in Illarion though is:</p>
 <p>People who play Illarion and follow this principle can
 hardly do anything wrong.</p>
 
+<h2>Inhalt</h2>
+<ul>
+<li><a class="hidden" href="code">Code of Conduct</a></li>
+<li><a class="hidden" href="account">Account</a></li>
+<li><a class="hidden" href="names">Names</a></li>
+<li><a class="hidden" href="world">The game world</a></li>
+<li><a class="hidden" href="realism">Realism</a></li>
+<li><a class="hidden" href="charmixing">Mixing characters</a></li>
+<li><a class="hidden" href="ooc">Out of character (OOC)</a></li>
+<li><a class="hidden" href="language">Language of characters and emotes</a></li>
+<li><a class="hidden" href="behavior">Behaviour in the game</a></li>
+<li><a class="hidden" href="bugs">Bug exploits</a></li>
+<li><a class="hidden" href="copyright">Open source and copyright</a></li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div class="clr"></div>
+
+<div><a id="code"></a></div>
 <h2>Code of Conduct</h2>
 
 <?php Page::cap('R'); ?>
@@ -218,23 +239,6 @@ bug or server crash, there is no replacement or refund.</p>
 
 <p>The usage of programs which influence the behaviour of the game and thus
 offer an advantage to the player are not allowed.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="gms"></a></div>
-<h2>Gamemasters</h2>
-
-<p>Gamemasters help players, host events and keep the peace in the game.
-Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
-Thus, all requests that affect the game world should be directed to them.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="boards"></a></div>
-<h2>Board and chat</h2>
-
-<p>On the Illarion forums and in the Illarion chat, the rules apply analogously. Creating senseless or
-off-topic posts is not allowed.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 

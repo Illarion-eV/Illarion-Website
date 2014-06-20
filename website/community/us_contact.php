@@ -54,13 +54,10 @@ They should be the first people to turn to for a non-technical issue that may ar
 
 <h2><a name="3"></a>Gamemasters</h2>
 
-<?php echo Page::cap('S'); ?>
-<p>ome players have a special Gamemaster (GM) character. These uphold the rules of Illarion and may
-punish any and all infractions severely or they may even pass it on to the admins. Lying to or
-deceiving a Gamemaster regarding rule offences and bugs/errors is strictly forbidden.
-Furthermore, if a Gamemaster is busy or discussing game relevant matters they should only be
-disturbed in urgent cases. The names of other characters of a Gamemaster are withheld, and will
-only be released when specifically requested by the Gamemaster personally.</p>
+<?php echo Page::cap('G'); ?>
+<p>amemasters help players, host events and keep the peace in the game.
+Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
+Thus, all requests that affect the game world should be directed to them.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 

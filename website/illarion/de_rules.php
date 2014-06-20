@@ -13,8 +13,9 @@
 <h1>Spielregeln</h1>
 
 <?php Page::cap('A'); ?>
-<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die in Illarion
-gelten. Sie decken die meisten Situationen in Illarion ab und im
+<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die im Spiel Illarion
+gelten. Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
+Sie decken die meisten Situationen in Illarion ab und im
 Zweifelsfalle gibt es die Gamemaster, die sich um Streitfälle kümmern können. 
 Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 
@@ -22,6 +23,26 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 
 <p>Wer Illarion nach diesem Grundsatz spielt, kann eigentlich nichts falsch machen.</p>
 
+<h2>Inhalt</h2>
+<ul>
+<li><a class="hidden" href="code">Verhaltenscodex</a></li>
+<li><a class="hidden" href="account">Account</a></li>
+<li><a class="hidden" href="names">Namen</a></li>
+<li><a class="hidden" href="world">Die Spielwelt</a></li>
+<li><a class="hidden" href="realism">Realismus</a></li>
+<li><a class="hidden" href="charmixing">Charaktere vermischen</a></li>
+<li><a class="hidden" href="ooc">Out of character (OOC)</a></li>
+<li><a class="hidden" href="language">Sprache eines Charakters und Emotes</a></li>
+<li><a class="hidden" href="behavior">Verhalten im Spiel</a></li>
+<li><a class="hidden" href="bugs">Ausnutzen von Spielschwächen</a></li>
+<li><a class="hidden" href="copyright">Open Source und das Urheberrecht</a></li>
+</ul>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div class="clr"></div>
+
+<div><a id="code"></a></div>
 <h2>Verhaltenscodex</h2>
 
 <?php Page::cap('R'); ?>
@@ -222,24 +243,6 @@ so werden diese nicht ersetzt.</p>
 
 <p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
 so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="gms"></a></div>
-<h2>Gamemaster</h2>
-
-<p>Gamemaster sind dafür zuständig, Spielern zu helfen, Events zu veranstalten
-und für Ordnung im Spiel zu sorgen.
-Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick. 
-Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<div><a id="boards"></a></div>
-<h2>Foren und Chat</h2>
-
-<p>Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
-Das Erstellen von sinnlosen oder themenfremden Beiträgen ist zu unterlassen.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 

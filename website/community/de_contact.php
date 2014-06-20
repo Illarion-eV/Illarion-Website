@@ -54,15 +54,11 @@ Sie sollten die ersten sein, an die man sich bei nicht technischen Problemen wen
 
 <h2><a name="3"></a>Gamemaster</h2>
 
-<?php echo Page::cap('E'); ?>
-<p>inige Spieler haben den Status eines Gamemasters für einen speziellen Charakter. Diese sind
-dafür zuständig für Ordnung zu sorgen und können selbst Strafen zur Durchsetzung dieser Regeln
-verhängen, bzw. diese durch den Administrator ausführen lassen. Das Belügen/Täuschen eines
-Gamemasters in Bezug auf Regelverstöße und Programmfehler ist verboten. Ist ein Gamemaster
-offensichtlich gerade mit Arbeit beschäftigt oder in ein wichtiges, spielrelevantes Gespräch
-vertieft, sollte er nur in dringenden Fällen gestört werden. Die Namen weiterer Charaktere eines
-Gamemasters dürfen nicht gegen seinen Willen weitergegeben
-werden.</p>
+<?php echo Page::cap('G'); ?>
+<p>amemaster sind dafür zuständig, Spielern zu helfen, Events zu veranstalten
+und für Ordnung im Spiel zu sorgen.
+Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick. 
+Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
