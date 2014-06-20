@@ -166,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Essenz beeinflusst: Alchemie und Magieresistenz">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie ist für Druiden von entscheidender Bedeutung und wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die folgenden Fertigkeiten: Alchemie.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
