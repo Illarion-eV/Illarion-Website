@@ -214,7 +214,7 @@ not be tolerated. This hold for all platforms of Illarion: The game, the board
 and the chat, including private messages.
  It is not allowed to react to a rule violation of another player with another rule violation 
 (e.g. OOC-messages). These breaches will be dealt with, regardless of the situation. 
-It is unwanted that players blame each other for rule violations. If an unbearable rule violation
+It is unwanted for players to rebuke each other for rule violations. If an unbearable rule violation
  occurs, the Illarion staff should be informed to process the case.</p>
  
  <p>It is not allowed to react to a rule violation of another player with another
