@@ -219,16 +219,16 @@ die sich gegen andere Spieler richten, werden nicht toleriert.
 Dies gilt für alle Plattformen von Illarion: 
 das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
 
-<p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
-Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
-einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
-
 <p>Auf Regelverstöße anderer Spieler darf nicht ebenfalls mit einem Regelverstoß
 (z.B. OOC-Nachrichten) reagiert werden. Solche Verfehlungen werden völlig
 unabhängig der Situation ebenfalls bestraft. Des Weiteren ist es nicht
 erwünscht, dass Spieler andere Spieler für ihre Verstöße im Spiel zurechtweisen.
-Wenn ein Verstoß gegen die Regeln von Illarion vorliegt, sollte das Team von
+Wenn ein Verstoß gegen die Regeln von Illarion vorliegt, soll das Team von
 Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
+
+<p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
+Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
+einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -236,7 +236,7 @@ Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
 <h2>Ausnutzen von Spielschwächen</h2>
 
 <p>Das bewusste Ausnutzen von Spielfehlern ist, egal mit welcher Absicht,
-verboten. Wenn ein Fehler im Spiel gefunden wird, muss dieser an das Team von
+verboten. Wenn ein Fehler im Spiel gefunden wird, soll dieser an das Team von
 Illarion gemeldet werden; vorzugsweise durch einen Eintrag im Bugtracker.
 Sollten durch Bugs oder Serverabstürze Dinge oder Eigenschaften verloren gehen,
 so werden diese nicht ersetzt.</p>

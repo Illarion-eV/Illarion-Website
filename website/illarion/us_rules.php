@@ -58,7 +58,7 @@ another world and his gain and loss is not yours. Separate yourself from your
 character and let him have flaws and commit mistakes. Players commit mistakes
 once in a while, too. Be lenient towards the mistakes of other players, nobody
 is perfect, not even you. If you cannot stand the behaviour of another player,
-leave him alone and contact a gamemaster. Have faith in the fact that no one
+leave him alone and contact a Gamemaster. Have faith in the fact that no one
 wants to harm your fun on purpose, likewise, you must not want to spoil anyone's
 fun. Consider whether everything you do in game is also fun for other players or
 just for you alone.</p>
@@ -123,7 +123,7 @@ The races allowed to play are limited to the races offered to choose during the 
 creation in the account system. It's not allowed to roleplay any mixed-race characters.</p>
 
 <p>
-A gamemaster's permission is needed for all magical and divine interventions as well as
+A Gamemaster's permission is needed for all magical and divine interventions as well as
 supernatural properties that cannot be realised by the engine and affect the game world or
 other players.
 </p>
@@ -133,7 +133,7 @@ other players.
 <div><a id="realism"></a></div>
 <h2>Realism</h2>
 
-<p>Regardless from the limits and possibilities of the engine one has to adapt
+<p>Regardless from the limits and possibilities of the engine, one has to adapt
 the behaviour of a character to the game world. Swords remain deathly weapons,
 ogres are still scary monsters and farming hard labour, even if the engine
 allows a player to master such challenges. It is not allowed in the sense of the
@@ -146,7 +146,7 @@ and must not be kept idle in the game. To evade unwanted situations that could
 have bad consequences for a character by logging out of the game is
 forbidden.</p>
 
-<p>When a character is knocked down or 'killed' (s)he will suffer from injuries
+<p>When a character is knocked down or 'killed', (s)he will suffer from injuries
 which should be played out. In case of a knock-out there are light injuries, in
 the case of death severe ones. The wounds should be played out until the health
 points are fully restored.</p>
@@ -170,7 +170,7 @@ with two characters at the same time.</p>
 <p>Out of character is everything that is not backed up by actions or thoughts
 of a character in-game. Decisions or actions in game should never be motivated by
 OOC influence, e.g. because of dislike for the other player. To call for help
-via means not present in the game (e.g. messengers) is strictly forbidden. It is
+via means, not present in the game (e.g. messengers), is strictly forbidden. It is
 also not allowed to use knowledge which the player has but the character
 doesn't. A player has to prove that the character has gained said knowledge.</p>
 
@@ -190,7 +190,7 @@ allowed.</p>
 
 <p>Conversations are to be done from the point of view of the character.
 Conversations that have nothing to do with the communication between the
-characters (OOC) are to kept to a bare minimum and have to be masked by double
+characters (OOC), are to kept to a bare minimum and have to be masked by double
 brackets (( )) in whisper mode.</p>
 
 <p>Action of characters (e.g. fighting, crafting) should be
@@ -202,27 +202,22 @@ characters and leave no room for reaction are forbidden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<div><a id="behaivor"></a></div>
+<div><a id="behavior"></a></div>
 <h2>Behaviour in the game</h2>
 
 <p>Content and portrayals of actions which are brutal, perverse, sexual or
 glorify violence are strictly forbidden. Also all contents that hurt the ideals
 and moralities of involved players and random listeners are not allowed.</p>
 
-<p>Harassment, threats or insults, including racist or sexist statements will
+<p>Harassment, threats or insults, including racist or sexist statements against other players will
 not be tolerated. This hold for all platforms of Illarion: The game, the board
-and the chat, including private messages.
- It is not allowed to react to a rule violation of another player with another rule violation 
+and the chat, including private messages.</p>
+
+<p>It is not allowed to react to a rule violation of another player with another rule violation 
 (e.g. OOC-messages). These breaches will be dealt with, regardless of the situation. 
-It is unwanted for players to rebuke each other for rule violations. If an unbearable rule violation
+It is unwanted for players to rebuke each other for rule violations. If a rule violation
  occurs, the Illarion staff should be informed to process the case.</p>
  
- <p>It is not allowed to react to a rule violation of another player with another
-rule violation (e.g. OOC-messages). These breaches will be dealt with,
-regardless of the situation. It is unwanted that players blame each other for
-rule violations. If a rule violation occurs, the Illarion staff should be
-informed to process the case.</p>
-
  <p>The purposeful attacking of a character without clearly traceable and
 reasonable roleplaying reason is forbidden. Immediate killing of a character
 right after resurrection ("res-killing") is not allowed.</p>
