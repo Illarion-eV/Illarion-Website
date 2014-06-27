@@ -25,17 +25,17 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 
 <h2>Inhalt</h2>
 <ul>
-<li><a class="hidden" href="code">Verhaltenscodex</a></li>
-<li><a class="hidden" href="account">Account</a></li>
-<li><a class="hidden" href="names">Namen</a></li>
-<li><a class="hidden" href="world">Die Spielwelt</a></li>
-<li><a class="hidden" href="realism">Realismus</a></li>
-<li><a class="hidden" href="charmixing">Charaktere vermischen</a></li>
-<li><a class="hidden" href="ooc">Out of character (OOC)</a></li>
-<li><a class="hidden" href="language">Sprache eines Charakters und Emotes</a></li>
-<li><a class="hidden" href="behavior">Verhalten im Spiel</a></li>
-<li><a class="hidden" href="bugs">Ausnutzen von Spielschwächen</a></li>
-<li><a class="hidden" href="copyright">Open Source und das Urheberrecht</a></li>
+<li><a class="hidden" href="#code">Verhaltenscodex</a></li>
+<li><a class="hidden" href="#account">Account</a></li>
+<li><a class="hidden" href="#names">Namen</a></li>
+<li><a class="hidden" href="#world">Die Spielwelt</a></li>
+<li><a class="hidden" href="#realism">Realismus</a></li>
+<li><a class="hidden" href="#charmixing">Charaktere vermischen</a></li>
+<li><a class="hidden" href="#ooc">Out of character (OOC)</a></li>
+<li><a class="hidden" href="#language">Sprache eines Charakters und Emotes</a></li>
+<li><a class="hidden" href="#behavior">Verhalten im Spiel</a></li>
+<li><a class="hidden" href="#bugs">Ausnutzen von Spielschwächen</a></li>
+<li><a class="hidden" href="#copyright">Open Source und das Urheberrecht</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>

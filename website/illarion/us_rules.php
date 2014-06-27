@@ -24,19 +24,19 @@ questions arise. The most important principle in Illarion though is:</p>
 <p>People who play Illarion and follow this principle can
 hardly do anything wrong.</p>
 
-<h2>Inhalt</h2>
+<h2>Content</h2>
 <ul>
-<li><a class="hidden" href="code">Code of Conduct</a></li>
-<li><a class="hidden" href="account">Account</a></li>
-<li><a class="hidden" href="names">Names</a></li>
-<li><a class="hidden" href="world">The game world</a></li>
-<li><a class="hidden" href="realism">Realism</a></li>
-<li><a class="hidden" href="charmixing">Mixing characters</a></li>
-<li><a class="hidden" href="ooc">Out of character (OOC)</a></li>
-<li><a class="hidden" href="language">Language of characters and emotes</a></li>
-<li><a class="hidden" href="behavior">Behaviour in the game</a></li>
-<li><a class="hidden" href="bugs">Bug exploits</a></li>
-<li><a class="hidden" href="copyright">Open source and copyright</a></li>
+<li><a class="hidden" href="#code">Code of Conduct</a></li>
+<li><a class="hidden" href="#account">Account</a></li>
+<li><a class="hidden" href="#names">Names</a></li>
+<li><a class="hidden" href="#world">The game world</a></li>
+<li><a class="hidden" href="#realism">Realism</a></li>
+<li><a class="hidden" href="#charmixing">Mixing characters</a></li>
+<li><a class="hidden" href="#ooc">Out of character (OOC)</a></li>
+<li><a class="hidden" href="#language">Language of characters and emotes</a></li>
+<li><a class="hidden" href="#behavior">Behaviour in the game</a></li>
+<li><a class="hidden" href="#bugs">Bug exploits</a></li>
+<li><a class="hidden" href="#copyright">Open source and copyright</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
