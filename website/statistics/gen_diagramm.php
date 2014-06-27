@@ -51,6 +51,7 @@
 		$graph->SetMargin(40,10,30,115);
 		$graph->SetMarginColor( '#9F8A5B' );
 		$graph->SetColor( '#9F8A5B' );
+		$graph->SetFrame(true, '#9F8A5B', 1);
 
 		$graph->ygrid->Show(true,false);
 		$graph->xgrid->Show(false,false);
@@ -58,6 +59,7 @@
 		$graph->ygrid->SetColor('black');
 		$graph->ygrid->SetLineStyle('dashed');
 		$graph->ygrid->SetWeight(1);
+		$graph->ygrid->SetFill(false);
 		$graph->yaxis->SetFont(FF_DV_SANSSERIF,FS_NORMAL,10);
 
 		$graph->SetGridDepth( DEPTH_FRONT );
