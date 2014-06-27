@@ -47,11 +47,8 @@ hardly do anything wrong.</p>
 <h2>Code of Conduct</h2>
 
 <?php Page::cap('R'); ?>
-<p>ules are important to create a good roleplay atmosphere. But no rules can
-describe how players should behave with each other. This code of conduct shows
-what kind of game climate and game culture we would like to create in Illarion.
-Because it is important to have a set of guidelines which shows players how to
-be respectful, considerate and to be lenient with one another.</p>
+
+<p>ules are important to create a good roleplay atmosphere, but no rules can describe how players should behave towards one another. This code of conduct forms a set of guidelines to show the kind of game climate and culture we would like to create in Illarion, where players are respectful, considerate and lenient with one another.</p>
 
 <p>Illarion is a true roleplaying game. Your character is not your avatar in
 another world and his gain and loss is not yours. Separate yourself from your
@@ -67,8 +64,8 @@ just for you alone.</p>
 players shall continue the tale of Illarion hand in hand. To battle each other
 is in vain, this holds for the Illarion staff, too. It consists of volunteers
 that manage a free game in their spare time, without being perfect, just like
-you. Respect and common courtesy are as important as good communication; 
-helpful word has commonly more effect than a thousand complaints. </p>
+you. Respect and common courtesy are as important as good communication;
+a helpful word commonly has more effect than a thousand complaints.</p>
 
 <p>The staff
 does its share to shape the world of Illarion, but the major share is done by
