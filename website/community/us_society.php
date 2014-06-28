@@ -16,11 +16,11 @@
 
 <p>llarion is a free game that is maintained by volunteers.
 No one gets a cent for the work at Illarion, but still the hosting of the server costs
-money. The money needed for this is paid by the members of the Illarion society.</p>
+money. The money needed for this is paid by the members of the Illarion Society.</p>
 
-<p>The simplest way to cover our expenses in a predictable way is your Illarion society support 
+<p>The simplest way to cover our expenses in a predictable way is your Illarion Society support 
 membership for only ten Euro per year. To become a member, just fill out the form and send it to us. 
-Please find the Illarion society statutes below.</p>
+Please find the Illarion Society statutes below.</p>
    <ul>
       <li><a href="Illarion_e.V._-_Request_for_Support_Membership.pdf">Support Membership Request for &quot;Illarion e.V.&quot; Society</a> (pdf)</li>
 	   <li><a href="Illarion_e.V._-_Statutes.pdf">Illarion e.V. - Statutes</a> (pdf)</li>
@@ -45,10 +45,10 @@ To ensure
 that we can keep the server online in future the Illarion e.V. is in need of donations.
 As alternative to a donation there is also the possibility to
 <a href="Illarion_e.V._-_Request_for_Support_Membership.pdf">join the Illarion
-e.V</a> and help the society with ten Euro yearly membership fee.</p>
+e.V</a> and help the Illarion Society with ten Euro yearly membership fee.</p>
 <h3>Paypal</h3>
 
-<p>The Illarion e.V has a paypal-basic account with the e-mail address
+<p>The Illarion Society has a paypal-basic account with the e-mail address
 donation@illarion.org</p>
 
 <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
