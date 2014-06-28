@@ -4,6 +4,8 @@
                   "This page contains information about the Illarion e.V. society",
                   "society, Illarion e.V." );
    include_header();
+   
+   Page::addCSS( 'donate' );
 ?>
 
    <h1>Illarion e.V.</h1>

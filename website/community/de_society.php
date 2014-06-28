@@ -4,6 +4,8 @@
                   "Diese Seite enth&auml;lt Informationen zum Illarion e.V.",
                   "Verein, Illarion e.V." );
    include_header();
+   
+   Page::addCSS( 'donate' );
 ?>
 
    <h1>Illarion e.V.</h1>
