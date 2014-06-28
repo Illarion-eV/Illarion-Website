@@ -15,7 +15,7 @@
 <?php Page::cap('I'); ?>
 
 <p>llarion is a free game that is maintained by volunteers.
-No one gets a cent for the work at Illarion, but still the hosting of the server costs
+No one gets a cent for their work at Illarion, but still the hosting of the server costs
 money. The money needed for this is paid by the members of the Illarion Society.</p>
 
 <p>The simplest way to cover our expenses in a predictable way is your Illarion Society support 
@@ -32,7 +32,7 @@ Please find the Illarion Society statutes below.</p>
    The following benefits are available for support members on <a href="http://illarion.org/community/de_contact.php?contact=25">request</a> right now:</p>
    <ul>
       <li>Your own forwarding email address to your specified account email address (e.g. charactername@illarion.org)</li>
-      <li>Increase of the maximum character number of your account from 5 to 7</li>
+      <li>Increase of the maximum character number for your account from 5 to 7</li>
       <li>A guild forum at forum.illarion.org with group leader and moderator rights</li>
    </ul>
 
@@ -41,8 +41,7 @@ Please find the Illarion Society statutes below.</p>
    <?php insert_go_to_top_link(); ?>
    
 <h2>Donations</h2>
-To ensure
-that we can keep the server online in future the Illarion e.V. is in need of donations.
+To ensure that we can keep the server online in future the Illarion e.V. is in need of donations.
 As alternative to a donation there is also the possibility to
 <a href="Illarion_e.V._-_Request_for_Support_Membership.pdf">join the Illarion
 e.V</a> and help the Illarion Society with ten Euro yearly membership fee.</p>
@@ -79,8 +78,8 @@ donation@illarion.org</p>
 	</dl>
 </fieldset>
 
-<p>Also every six months there is a RL (Real Life) meeting for the staff members and players of
-Illarion. These meetings are held in Germany. Its also possible to donate something
+<p>Also, every six months there is a RL (Real Life) meeting for the staff members and players of
+Illarion. These meetings are held in Germany. It's also possible to donate something
 there. Details about these meetings can be found on the
 <a href="<?php echo Page::getURL(); ?>/community/forums/">forum</a>.</p>
 
