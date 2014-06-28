@@ -17,7 +17,7 @@
    <p>llarion ist ein kostenloses Spiel, welches von einem Team von Freiwilligen unterhalten wird. Niemand verdient auch nur einen Cent an Illarion, dennoch
 	kostet der Betrieb des Servers Geld. Dieses Geld wird von den Mitgliedern des Illarion e.V. aufgebracht.</p>
 
-   <p>Der einfachste Weg, unsere Ausgaben planbar zu decken, ist Eure freiwillige F&ouml;rdermitgliedschaft im Illarion e.V. f&uuml;r nur 10 Euro im Jahr. Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Das Formular für den Antrag auf Fördermitgliedschaft und die Satzung des Illarion e.V. findet ihr hier:</p>
+   <p>Der einfachste Weg, unsere Ausgaben planbar zu decken, ist Eure freiwillige F&ouml;rdermitgliedschaft im Illarion e.V. f&uuml;r nur zehn Euro im Jahr. Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Das Formular für den Antrag auf Fördermitgliedschaft und die Satzung des Illarion e.V. findet ihr hier:</p>
    <ul>
       <li><a href="Illarion_e.V._-_Antrag_auf_Foerdermitgliedschaft.pdf">Illarion e.V. - Antrag auf F&ouml;rdermitgliedschaft</a> (pdf)</li>
 	  <li><a href="Illarion_e.V._-_Satzung.pdf">Illarion e.V. - Satzung</a> (pdf)</li>
@@ -38,7 +38,7 @@
 <h2>Spendenmöglichkeiten</h2>
 <p> Um den Betrieb des Servers auch in Zukunft sicherstellen zu
 können, ist der Illarion e. V. auf Spenden angewiesen. Anstelle einer einmaligen Spende
-besteht die Möglichkeit, für 10 Euro im Jahr
+besteht die Möglichkeit, für zehn Euro im Jahr
 <a href="Illarion_e.V._-_Antrag_auf_Foerdermitgliedschaft.pdf">Fördermitglied im
 Illarion e. V.</a> zu werden.</p>
 
