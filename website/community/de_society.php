@@ -12,10 +12,8 @@
 
 	<?php Page::cap('I'); ?>
 
-   <p>llarion ist ein kostenloses Spiel, welches von freiwilligen Entwicklern und
-	Gamemastern unterhalten wird. Niemand verdient auch nur einen Cent an Illarion, dennoch
-	kostet der Betrieb des Servers Geld. Dieses Geld wird von den Mitgliedern des Illarion
-	e.V. aufgebracht.</p>
+   <p>llarion ist ein kostenloses Spiel, welches von einem Team von Freiwilligen unterhalten wird. Niemand verdient auch nur einen Cent an Illarion, dennoch
+	kostet der Betrieb des Servers Geld. Dieses Geld wird von den Mitgliedern des Illarion e.V. aufgebracht.</p>
 
    <p>Der einfachste Weg, unsere Ausgaben planbar zu decken, ist Eure freiwillige F&ouml;rdermitgliedschaft im Illarion e.V. f&uuml;r nur 10 Euro im Jahr. Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Das Antragsformular auf Fördermitgliedschaft findet Ihr hier:</p>
    <ul>
