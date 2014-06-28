@@ -8,7 +8,7 @@
    Page::addCSS( 'donate' );
 ?>
 
-   <h1>Illarion e.V.</h1>
+   <h1>Illarion Society</h1>
   
    <h2>Support Membership</h2>
    
