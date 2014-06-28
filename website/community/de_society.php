@@ -17,18 +17,17 @@
    <p>llarion ist ein kostenloses Spiel, welches von einem Team von Freiwilligen unterhalten wird. Niemand verdient auch nur einen Cent an Illarion, dennoch
 	kostet der Betrieb des Servers Geld. Dieses Geld wird von den Mitgliedern des Illarion e.V. aufgebracht.</p>
 
-   <p>Der einfachste Weg, unsere Ausgaben planbar zu decken, ist eure freiwillige F&ouml;rdermitgliedschaft im Illarion e.V. f&uuml;r nur zehn Euro im Jahr. Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Das Formular für den Antrag auf Fördermitgliedschaft und die Satzung des Illarion e.V. findet ihr hier:</p>
+   <p>Der einfachste Weg, unsere Ausgaben planbar zu decken, ist eure freiwillige F&ouml;rdermitgliedschaft im Illarion e.V. f&uuml;r nur zehn Euro im Jahr. Das Formular für den Antrag auf Fördermitgliedschaft und die Satzung des Illarion e.V. findet ihr hier:</p>
    <ul>
       <li><a href="Illarion_e.V._-_Antrag_auf_Foerdermitgliedschaft.pdf">Illarion e.V. - Antrag auf F&ouml;rdermitgliedschaft</a> (pdf)</li>
 	  <li><a href="Illarion_e.V._-_Satzung.pdf">Illarion e.V. - Satzung</a> (pdf)</li>
    </ul>
-   <p>Grundgedanke ist dabei, dass keine Vorteile im Spiel aus diesen Boni entstehen d&uuml;rfen, denn sonst w&auml;re es ein verkappter Bezahl-Account - kurz, wer zahlt w&uuml;rde im Spiel bessere Chancen haben und dies wollen wir vermeiden.</p>
-
-   <p>Folgende Vorteile werden ab sofort f&uuml;r F&ouml;rdermitglieder auf <a href="http://illarion.org/community/de_contact.php?contact=25">Anfrage</a> gew&auml;hrt:</p>
+   <p>Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Grundgedanke ist dabei, dass keine Vorteile im Spiel aus diesen Boni entstehen d&uuml;rfen, denn sonst w&auml;re es ein verkappter Bezahl-Account - kurz, wer zahlt w&uuml;rde im Spiel bessere Chancen haben und dies wollen wir vermeiden.
+   Folgende Vorteile werden ab sofort f&uuml;r F&ouml;rdermitglieder auf <a href="http://illarion.org/community/de_contact.php?contact=25">Anfrage</a> gew&auml;hrt:</p>
    <ul>
-      <li>Eine eigene E-Mail-Adresse als Weiterleitung an die im Account hinterlegte Adresse (z.B. charaktername@illarion.org)</li>
+      <li>Eine eigene E-Mail-Adresse als Weiterleitung an die im Account hinterlegte Adresse, z.B. charaktername@illarion.org</li>
       <li>Erhöhung der maximalen Charaktere des Account von 5 auf 7</li>
-      <li>Ein eigenes Gildenforum auf forum.illarion.org (mit Gruppenleiter- und Moderatorrecht)</li> 
+      <li>Ein eigenes Gildenforum auf forum.illarion.org mit Gruppenleiter- und Moderatorrecht</li> 
    </ul>
 
    <p>Diese Liste kann sich jederzeit &auml;ndern, weitere Ideen sind bereits vorhanden. Ein Rechtsanspruch auf die Boni besteht nicht. </p>
