@@ -99,11 +99,10 @@
 								</div>
 								<ul class="navigation">
 									<li><a href="{URL}/general/{LANGUAGE}_startpage.php">{LANG|Startseite|Home}</a></li>
-									<li><a href="{URL}/general/{LANGUAGE}_news.php">News</a></li>
+									<li class="seperator"><a href="{URL}/general/{LANGUAGE}_news.php">News</a></li>
 									<li class="seperator"><a href="{HTTP_URL}/illarion/{LANGUAGE}_java_download.php">Download</a></li>
-									<li><a href="{URL}/general/{LANGUAGE}_rpg_guide.php">{LANG|RPG-Anleitung|RPG Guide}</a></li>
 									<li><a href="{HTTP_URL}/illarion/{LANGUAGE}_rules.php">{LANG|Spielregeln|Game Rules}</a></li>
-									<li><a href="{URL}/illarion/manual_{LANGUAGE}.pdf">{LANG|Handbuch|Manual}</a></li>
+									<li><a href="{URL}/general/{LANGUAGE}_rpg_guide.php">{LANG|RPG-Anleitung|RPG Guide}</a></li>
 									<li><a href="{URL}/general/{LANGUAGE}_faq_general.php">FAQ</a></li>
 								</ul>
 								<div class="menu_title">
@@ -123,10 +122,9 @@
 									<li><a href="{HTTP_URL}/community/{LANGUAGE}_chat.php">Chat</a></li>
 									<li class="seperator"><a href="{HTTP_URL}/community/{LANGUAGE}_teamspeak.php">TeamSpeak</a></li>
 									<!-- <li><a href="{HTTP_URL}/community/wiki/index.php/Main_Page{LANG|/de|}" rel="external">Wiki-Read Only</a></li> -->
-									<li><a href="{HTTP_URL}/community/{LANGUAGE}_society.php" class="importaint">{LANG|Verein|Society}</a></li>
-									<li><a href="{HTTP_URL}/community/{LANGUAGE}_donate.php" class="importaint">{LANG|Spenden|Donation}</a></li>
-									<li><a href="{HTTP_URL}/community/{LANGUAGE}_contact.php">{LANG|Kontakt|Contact}</a></li>
-									<li class="seperator"><a href="{URL}/community/{LANGUAGE}_links.php">Links</a></li>
+									<li><a href="{HTTP_URL}/community/{LANGUAGE}_society.php">{LANG|Verein|Society}</a></li>
+									<li><a href="{URL}/community/{LANGUAGE}_links.php">Links</a></li>
+									<li class="seperator"><a href="{HTTP_URL}/community/{LANGUAGE}_contact.php">{LANG|Kontakt|Contact}</a></li>
 								</ul>
 							</td>
 							<td rowspan="3" class="vertical_border" style="background-position:0 75px;" />
@@ -147,8 +145,9 @@
 									<img width="135" height="34" src="{IMAGE_URL}/blank.gif" alt="{LANG|Server|Server}" style="background-position: 0 -217px;" />
 								</div>
 								<ul class="navigation">
-									<li><a href="{HTTP_URL}/statistics/{LANGUAGE}_players.php">{ONLINE_PLAYERS}</a></li>
+									<li class="seperator"><a href="{HTTP_URL}/statistics/{LANGUAGE}_players.php">{ONLINE_PLAYERS}</a></li>
 									<li><a href="{URL}/statistics/{LANGUAGE}_highscores.php">{LANG|Bestenlisten|High Scores}</a></li>
+									<li><a href="{HTTP_URL}/illarion/illachars/{LANGUAGE}_illachars.php">{LANG|Spielerdatenbank|Player Database}</a></li>
 						    		<li class="seperator"><a href="{HTTP_URL}/statistics/{LANGUAGE}_history_of_players.php">{LANG|Statistiken|Statistics}</a></li>
 						    		<li><a href="{HTTP_URL}/development/mantis_testserver_bugs.php">{MANTIS_ISSUES}</a></li>
 					        	</ul>
@@ -156,12 +155,13 @@
 									<img width="135" height="34" src="{IMAGE_URL}/blank.gif" alt="Illarion" style="background-position: 0 -124px;" />
 								</div>
 								<ul class="navigation">
-									<li><a href="{HTTP_URL}/illarion/calendar/{LANGUAGE}_calendar.php">{LANG|Kalender|Calendar}</a></li>
-									<li><a href="{HTTP_URL}/community/{LANGUAGE}_timeconverter.php">{LANG|Zeitumrechner|Time Converter}</a></li>
-									<li class="seperator"><a href="{HTTP_URL}/illarion/background/{LANGUAGE}_overview.php">{LANG|Geschichte|Story}</a></li>
-									<li class="seperator"><a href="{HTTP_URL}/illarion/illachars/{LANGUAGE}_illachars.php">{LANG|Spielerdatenbank|Player Database}</a></li>
-									<li><a href="{HTTP_URL}/illarion/goetter/{LANGUAGE}_bck_10.php">{LANG|Götter|Gods}</a></li>
+									
 									<li><a href="{HTTP_URL}/illarion/races/{LANGUAGE}_story.php">{LANG|Völker|Races}</a></li>
+									<li><a href="{HTTP_URL}/illarion/goetter/{LANGUAGE}_bck_10.php">{LANG|Götter|Gods}</a></li>
+									<li class="seperator"><a href="{HTTP_URL}/illarion/background/{LANGUAGE}_overview.php">{LANG|Geschichte|Story}</a></li>
+									<li><a href="{HTTP_URL}/illarion/calendar/{LANGUAGE}_calendar.php">{LANG|Kalender|Calendar}</a></li>
+									<li class="seperator"><a href="{HTTP_URL}/community/{LANGUAGE}_timeconverter.php">{LANG|Zeitumrechner|Time Converter}</a></li>
+																								
 								</ul>
 								<div class="menu_title">
 									<img width="135" height="34" src="{IMAGE_URL}/blank.gif" alt="{LANG|Entwicklung|Development}" style="background-position: 0 -155px;" />
@@ -169,9 +169,10 @@
 								<ul class="navigation">
 									<li><a href="{HTTP_URL}/development/{LANGUAGE}_about_project.php">{LANG|Die Vision|The Vision}</a></li>
 									<li><a href="{HTTP_URL}/development/{LANGUAGE}_progress.php">{LANG|Fortschritt|Progress}</a></li>
+									<li class="seperator"><a href="{HTTP_URL}/development/{LANGUAGE}_content_tutorial.php">{LANG|Entwicklung|Development}</a></li>
 									<li><a href="{HTTP_URL}/mantis/index.php" rel="external">Bug Tracker</a></li>
 									<li><a href="{HTTP_URL}/development/{LANGUAGE}_opensource.php">{LANG|Quellcode|Source Code}</a></li>
-									<li><a href="{HTTP_URL}/development/{LANGUAGE}_content_tutorial.php">{LANG|Inhaltsentwicklung|Content Development}</a></li>
+									
 								</ul>
 								<!--
 								<div class="menu_title">
