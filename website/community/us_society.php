@@ -41,7 +41,7 @@ Please find the Illarion Society statutes below.</p>
    <?php insert_go_to_top_link(); ?>
    
 <h2>Donations</h2>
-To ensure that we can keep the server online in future the Illarion e.V. is in need of donations.
+To ensure that we can keep the server online in future the Illarion Society is in need of donations.
 As alternative to a donation there is also the possibility to
 <a href="Illarion_e.V._-_Request_for_Support_Membership.pdf">join the Illarion
 e.V</a> and help the Illarion Society with ten Euro yearly membership fee.</p>
