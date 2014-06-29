@@ -34,6 +34,7 @@ Below are links to these projects and a small description of how it has contribu
 	<li><a class="hidden" href="#17">phpBB</a></li>
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
 	<li><a class="hidden" href="#19">YourKit</a></li>
+	<li><a class="hidden" href="#install4j">Install4J</a></li>
 </ul>
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
@@ -291,22 +292,32 @@ The following game sites have taken Illarion on to their listings. We would like
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="19"></a></div>
-
 <h4>YourKit</h4>
-
 <p>
-        <a rel="external" href="http://www.yourkit.com">Link to the YourKit homepage</a>
-        <br /><br />
-        YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
+	<a rel="external" href="http://www.yourkit.com">Link to the YourKit homepage</a>
+	<br /><br />
+	YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
+	<br />
 	YourKit is kindly supporting Illarion with free open source licenses for the Profiler.
 	Besides the <a rel="external" href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
 	YourKit, LLC also develops the <a rel="external" href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
 	<br /><br />
 	Illarion uses the YourKit Java Profiler to identify problems and performance bottlenecks in the Java applications.
 </p>
-
 <?php Page::insert_go_to_top_link(); ?>
 
+<div><a id="install4j"></a></div>
+<h4>Install4J</h4>
+<p>
+	<a rel="external" href="http://www.ej-technologies.com/products/install4j/overview.html">Link to the Install4j homepage</a>
+	<br /><br />
+	Install4j is a powerful multi-platform Java installer builder that
+	generates native installers and application launchers for Java
+	applications.
+	<br /><br />
+	Illarion uses Install4J to generate the setup files.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="20"></a></div>
 <h4>Heise online</h4>

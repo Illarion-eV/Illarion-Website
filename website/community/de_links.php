@@ -35,6 +35,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<li><a class="hidden" href="#17">phpBB</a></li>
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
 	<li><a class="hidden" href="#19">YourKit</a></li>
+	<li><a class="hidden" href="#install4j">Install4J</a></li>
 </ul>
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
@@ -307,6 +308,18 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 	<br />
 	<br />
 	Bei Illarion wird der YourKit Profiler verwendet um Probleme und Leistungsengpässe in den Java Anwendungen zu finden.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="install4j"></a></div>
+<h4>Install4J</h4>
+<p>
+	<a rel="external" href="http://www.ej-technologies.com/products/install4j/overview.html">Link zur Install4J Homepage</a>
+	<br /><br />
+	Install4J ist ein mächtiges Programm um native Installationsprogramme und Starter für Java zu erzeugen.
+	<br />
+	<br />
+	Bei Illarion wird install4j genutzt um die Setup-Dateien zu erzeugen.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
 
