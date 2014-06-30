@@ -1,9 +1,9 @@
 <?php
    include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-   Page::setTitle( 'Fraktionen' );
-   Page::setDescription( 'Übersicht über die Fraktionen im Spiel.' );
-   Page::setKeywords( array( 'Fraktionen', 'Cadomyr', 'Galmair', 'Runewick' ) );
+   Page::setTitle( 'Realms' );
+   Page::setDescription( 'An overview of the realms in the game.' );
+   Page::setKeywords( array( 'Factions', 'Realms', 'Cadomyr', 'Galmair', 'Runewick' ) );
 
    Page::setXHTML();
    Page::Init();
