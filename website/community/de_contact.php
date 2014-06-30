@@ -31,8 +31,6 @@ function MainForm() {
 <li><a class="hidden" href="#6">Impressum</a></li></li>
 </ul>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <h2><a name="1"></a>Allgemeine Informationen</h2>
 
 <?php echo Page::cap('R'); ?>

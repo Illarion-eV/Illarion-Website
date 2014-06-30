@@ -31,8 +31,6 @@ function MainForm() {
 	<li><a class="hidden" href="#6">Website Credits</a></li></li>
 </ul>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <h2><a name="1"></a>General Information</h2>
 
 <?php echo Page::cap('Q'); ?>
