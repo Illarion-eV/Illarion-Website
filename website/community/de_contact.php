@@ -18,6 +18,7 @@ Page::Init();
 
 function MainForm() {
 ?>
+
 <h1>Kontakt zu Illarion</h1>
 
 <h2>Inhalt</h2>
@@ -138,14 +139,18 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 <h2><a name="6"></a>Impressum</h2>
  
 <h3>Illarion e.V.</h3>
- 
+ 				
 <p>
+E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a>
+Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a>
 Registergericht: Amtsgericht Kempten<br />
 Registernummer: VR 30767
+<br />
+Copyright 1997-{CURRENT_YEAR} {LANG|bei|by} <a href="{URL}">Illarion e.V.</a> - {LANG|ein kostenloses grafisches Online-Rollenspiel|A free online role playing game}
+<br />
+{LANG|Diese Seite ist gültiges|This page is valid} <a href="http://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> {LANG|und|and} <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
  
-<p>E-Mail: committee@illarion.org</p>
-
 <?php Page::insert_go_to_top_link(); ?>
 <?php
    }
