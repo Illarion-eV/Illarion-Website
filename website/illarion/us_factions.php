@@ -40,10 +40,12 @@
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2><a name="3"></a>Galmair</h2>
-<?php echo Page::cap('F'); ?>
+
+<?php echo Page::cap('N'); ?>
+
 <img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
-<p>Nestled in the foothills of the Lonely Mountains, Galmair’s imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory as it flows from the mountains to Lake Syrita, bordering edge of Nargun’s Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
+<p>estled in the foothills of the Lonely Mountains, Galmair’s imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory as it flows from the mountains to Lake Syrita, bordering edge of Nargun’s Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
 
 <p>At the heart of Galmair lies Galmair’s Crest, the home to Don Valerio Guilianni. He is the son of Tommaso Guilianni, a successful Gynkese trader who in search of ever greater riches established Galmair as a profitable trading town. As his natural successor, Valerio Guilianni came to power following the sudden death of his father, although rumours suggest a family feud and naming of another successor may have hurried his demise. As a dwarf of considerable wealth, and thus power, Don Valerio Guilianni is the undisputed ruler of Galmair, holding the two stones of power, sapphire and obsidian.</p>
 
@@ -55,9 +57,11 @@
 
 <h2><a name="4"></a>Runewick</h2>
 
+<?php echo Page::cap('S'); ?>
+
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
-<p>Set in an archipelago of forested islands, Runewick’s towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
+<p>et in an archipelago of forested islands, Runewick’s towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
 
 <p>High in the Tower of Fire, the Archmage Elvaine Morgan presides over the Hall of Elara. He first founded Runewick as an academy with a group of mages from the renowned magical city of Lor Angur. Together the Towers of Earth, Fire, Air and Water, combine to form an imposing arcane structure, housing countless precious books and manuscripts in vast libraries and research chambers. As an elf of immense wisdom, and thus power, Archmage Elvaine Morgan is the undisputed ruler of Runewick, possessing the two stones of power, ruby and emerald.</p>
 
