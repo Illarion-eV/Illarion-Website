@@ -8,13 +8,13 @@
    Page::setXHTML();
    Page::Init();
 ?>
-<h1>Die Fraktionen</h1>
+<h1>The Realms</h1>
 
-<h2>Inhalt</h2>
+<h2>Content</h2>
 <ul>
-<li><a class="hidden" href="#1">Cadomyr - Reich von Ruhm und Ehre</a></li>
-<li><a class="hidden" href="#2">Galmair - Reich des aufstrebenden Wohlstands</a></li>
-<li><a class="hidden" href="#3">Runewick - Reich der Weisheit und Magie</a></li>
+<li><a class="hidden" href="#1">Cadomyr - Realm of Honour and Glory</a></li>
+<li><a class="hidden" href="#2">Galmair - Realm of Prosperity and Wealth</a></li>
+<li><a class="hidden" href="#3">Runewick - Realm of Wisdom and Magic</a></li>
 </ul>
 
 <h2><a name="1"></a>Cadomyr</h2>
@@ -31,7 +31,7 @@
 
 <h2><a name="2"></a>Galmair</h2>
 
-<img src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
+<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
 <p>Nestled in the foothills of the Lonely Mountains, Galmair’s imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory as it flows from the mountains to Lake Syrita, bordering edge of Nargun’s Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
 
@@ -45,7 +45,7 @@
 
 <h2><a name="1"></a>Runewick</h2>
 
-<img src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
+<img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
 <p>Set in an archipelago of forested islands, Runewick’s towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
 
