@@ -12,14 +12,20 @@
 
 <h2>Inhalt</h2>
 <ul>
-<li><a class="hidden" href="#1">Cadomyr - Reich von Ruhm und Ehre</a></li>
-<li><a class="hidden" href="#2">Galmair - Reich des aufstrebenden Wohlstands</a></li>
-<li><a class="hidden" href="#3">Runewick - Reich der Weisheit und Magie</a></li>
+<li><a class="hidden" href="#1">Die Welt Illarion</a></li>
+<li><a class="hidden" href="#2">Cadomyr - Reich von Ruhm und Ehre</a></li>
+<li><a class="hidden" href="#3">Galmair - Reich des aufstrebenden Wohlstands</a></li>
+<li><a class="hidden" href="#4">Runewick - Reich der Weisheit und Magie</a></li>
 </ul>
 
-<h2><a name="1"></a>Cadomyr</h2>
+<h2><a name="1"></a>Die Welt Illarion</h2>
+<p>(Platz für eine Karte)</p>
 
-<img align="left" vspace="10" hspace="10" src="<?php echo $url; ?>/shared/pics/factions/cadomyrShieldDirt150.png" alt="Cadomyr"/>
+<?php Page::insert_go_to_top_link(); ?>
+
+<h2><a name="2"></a>Cadomyr</h2>
+
+<img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/cadomyrShieldDirt150.png" alt="Cadomyr"/>
 
 <p>Flanked by the impenetrable Lonely Mountains and the Great Ocean, Cadomyr’s foreboding fortress walls rise from the desert sands. From the Lonely Mountains the Kantabi River cuts through the Kantabi desert, demarking the territory of Cadomyr as it flows towards the ocean where it diverges into the Kantabi Delta. The hot desert sun reflects off the uniform sandstone walls of the town while grand paintings and statues depict glorious feats of past rulers.</p>
 
@@ -31,9 +37,9 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Galmair</h2>
+<h2><a name="3"></a>Galmair</h2>
 
-<img align="right" vspace="10" hspace="10" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
+<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
 <p>Nestled in the foothills of the Lonely Mountains, Galmair’s imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory as it flows from the mountains to Lake Syrita, bordering edge of Nargun’s Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
 
@@ -45,9 +51,9 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>Runewick</h2>
+<h2><a name="4"></a>Runewick</h2>
 
-<img align="left" vspace="10" hspace="10" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
+<img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
 <p>Set in an archipelago of forested islands, Runewick’s towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
 
