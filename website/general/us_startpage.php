@@ -20,7 +20,7 @@ betrayal and envy are the ever present scourges in the constant struggle
 for power.</p>
 
 <p class="hyphenate">
-Illarion is a free online roleplaying game that focuses on true role playing.
+Illarion is a free open source MMORPG that focuses on true role playing.
 All of the characters that you will encounter during your time here are
 living, breathing inhabitants of this mysterious world. Each character has
 their own past, goals, flaws, strengths and personality. Experience

@@ -20,7 +20,7 @@ Verwahrung gegeben; doch Missgunst, Verrat und Neid sind die alltäglichen
 Geißeln der Macht.</p>
 
 <p class="hyphenate">
-Illarion ist ein kostenloses Online-Rollenspiel, welches seinen Schwerpunkt
+Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
 auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
 lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
 verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
