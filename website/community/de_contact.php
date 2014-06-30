@@ -144,7 +144,7 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a><br />
 Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Registergericht: Amtsgericht Kempten<br />
-Registernummer: VR 30767<br />
+Registernummer: VR 30767<br /><br />
 Copyright 1997-2014 bei Illarion e.V. - Ein kostenloses Online-Rollenspiel<br />
 Diese Seite ist gültiges <a href="http://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> und <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
