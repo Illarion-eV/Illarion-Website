@@ -7,13 +7,28 @@
 
    Page::setXHTML();
    Page::Init();
+   
+   $pathList = [];
+   $outputFile = file('/var/www/illarion/website/media/java/install/output.txt');
+   foreach ($outputFile as $line) {
+	  if (strpos($line, '#') === 0) {
+	     continue;
+	  }
+	  $elements = explode("\t", $line);
+      $pathList[$elements[0]] = str_replace(Page::getMediaRootPath(), Page::getMediaURL(), $elements[3]);	  
+   }
 ?>
 <h1>Play Illarion</h1>
 
-<h2>Start game</h2>
+<h2>Download the game</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Play!</a></li>
+  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[63]; ?>">MacOS X</a></li>
+  <li><a href="<?php echo $pathList[64]; ?>">Unix</a></li>
+  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM</a></li>
+  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB</a></li>
 </ul>
 
 <p>To be able to play, you must
