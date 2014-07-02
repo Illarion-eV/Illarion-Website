@@ -26,9 +26,12 @@
   <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
   <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
   <li><a href="<?php echo $pathList[63]; ?>">MacOS X</a></li>
-  <li><a href="<?php echo $pathList[64]; ?>">Unix</a></li>
-  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM</a></li>
-  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB</a></li>
+  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit)</a></li>
 </ul>
 
 <p>To be able to play, you must
