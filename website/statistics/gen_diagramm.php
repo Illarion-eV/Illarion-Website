@@ -48,7 +48,7 @@
 
 		$graph = new Graph($width,$height,'auto');
 		$graph->SetScale('textint');
-		$graph->SetMargin(40,10,30,115);
+		$graph->SetMargin(40,10,30,130);
 		$graph->SetMarginColor( '#9F8A5B' );
 		$graph->SetColor( '#9F8A5B' );
 		$graph->SetFrame(true, '#9F8A5B', 1);
@@ -106,6 +106,7 @@
 		$graph->legend->SetShadow( false );
 		$graph->legend->SetFont(FF_DV_SANSSERIF,FS_NORMAL,10);
 
+		$graph->graph_theme=null;
 		$graph->Stroke( $_SERVER['DOCUMENT_ROOT'] . '/media/statistics/'.$lang.'_actplayers.png' );
 
 		echo '<p>'.$lang.' created</p>';

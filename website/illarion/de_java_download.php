@@ -7,13 +7,31 @@
 
    Page::setXHTML();
    Page::Init();
+   
+   $pathList = [];
+   $outputFile = file('/var/www/illarion/website/media/java/install/output.txt');
+   foreach ($outputFile as $line) {
+	  if (strpos($line, '#') === 0) {
+	     continue;
+	  }
+	  $elements = explode("\t", $line);
+      $pathList[$elements[0]] = str_replace(Page::getMediaRootPath(), Page::getMediaURL(), $elements[3]);	  
+   }
 ?>
 <h1>Illarion spielen</h1>
 
-<h2>Spiel starten</h2>
+<h2>Spiel herunterladen</h2>
 
 <ul>
-  <li><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Spielen!</a></li>
+  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[63]; ?>">MacOS X</a></li>
+  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit)</a></li>
+  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit)</a></li>
 </ul>
 
 <p>Damit Du spielen kannst, musst Du
