@@ -12,18 +12,12 @@
 
 <h2>Inhalt</h2>
 <ul>
-<li><a class="hidden" href="#1">Die Welt Illarion</a></li>
-<li><a class="hidden" href="#2">Cadomyr - Reich von Ruhm und Ehre</a></li>
-<li><a class="hidden" href="#3">Galmair - Reich des aufstrebenden Wohlstands</a></li>
-<li><a class="hidden" href="#4">Runewick - Reich der Weisheit und Magie</a></li>
+<li><a class="hidden" href="#1">Cadomyr - Reich von Ruhm und Ehre</a></li>
+<li><a class="hidden" href="#2">Galmair - Reich des aufstrebenden Wohlstands</a></li>
+<li><a class="hidden" href="#3">Runewick - Reich der Weisheit und Magie</a></li>
 </ul>
 
-<h2><a name="1"></a>Die Welt Illarion</h2>
-<p>(Platz für eine Karte)</p>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="2"></a>Cadomyr - Realm of Honour and Glory</h2>
+<h2><a name="1"></a>Cadomyr - Realm of Honour and Glory</h2>
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/cadomyrShieldDirt150.png" alt="Cadomyr"/>
 
@@ -37,7 +31,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>Galmair - Realm of Prosperity and Wealth</h2>
+<h2><a name="2"></a>Galmair - Realm of Prosperity and Wealth</h2>
 
 <img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
@@ -51,7 +45,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Runewick - Realm of Wisdom and Magic</h2>
+<h2><a name="3"></a>Runewick - Realm of Wisdom and Magic</h2>
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
