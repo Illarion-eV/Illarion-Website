@@ -10,7 +10,7 @@
 
 <h1>Welcome to Illarion!</h1>
 
-<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/illarion_icon.png" alt="Illarion"/>
+<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/illarion_icon.png" width="100" height="100" alt="Illarion"/>
 <?php Page::cap('T'); ?>
 <p class="hyphenate">
 he world is in turmoil. The Second Coming of the Elder Gods has shaken the

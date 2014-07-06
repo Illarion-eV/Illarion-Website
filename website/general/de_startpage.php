@@ -10,7 +10,7 @@
 
 <h1>Willkommen in Illarion!</h1>
 
-<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/illarion_icon.png" alt="Illarion"/>
+<img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/illarion_icon.png" width="100" height="100" alt="Illarion"/>
 <?php Page::cap('D'); ?>
 <p class="hyphenate">
 ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete die Reiche,
