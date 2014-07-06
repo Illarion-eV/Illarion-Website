@@ -17,7 +17,9 @@ Flüchtlinge aller Völker strömen in die Bastionen der Menschheit im Land
 Illarion, die verschont geblieben sind von den Entbehrungen der vergangenen
 Tage. Sechs Edelsteine der Macht waren den Fürsten dieser Bastionen zur
 Verwahrung gegeben; doch Missgunst, Verrat und Neid sind die alltäglichen
-Geißeln der Macht.</p>
+Geißeln der Macht. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>, 
+das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise 
+<a href="/illarion/de_factions.php#3">Runewick</a> oder  - welchen Weg wirst du einschlagen?</p>
 
 <p class="hyphenate">
 Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt

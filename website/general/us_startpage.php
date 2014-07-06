@@ -17,7 +17,9 @@ realms to their core. Refugees flock to the bastions of the land Illarion
 that were spared from the hardships of the past. Six gems of power were
 given to the Lords of these bastions for safekeeping; but jealousy,
 betrayal and envy are the ever present scourges in the constant struggle
-for power.</p>
+for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy 
+<a href="/illarion/us_factions.php#2">Galmair</a> or wise 
+<a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
 <p class="hyphenate">
 Illarion is a free open source MMORPG that focuses on true role playing.
