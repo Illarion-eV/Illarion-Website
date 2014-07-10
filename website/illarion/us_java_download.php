@@ -25,7 +25,7 @@
 <ul>
   <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
   <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[580]; ?>">MacOS X</a></li>
+  <li><a href="<?php echo $pathList[590]; ?>">MacOS X</a></li>
   <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit)</a></li>
   <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit)</a></li>
   <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit)</a></li>
