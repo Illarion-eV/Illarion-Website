@@ -9,6 +9,7 @@
  //1.01: Quest Line feed
  //1.02: favicon.ico, line in players list away
  //1.03: Show Newbe and GM
+ //1.04: Return to homepage and short text
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -92,6 +93,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 		<?php else: ?>
 		<p><a href="#Quests" data-role="button" class="mainbutton" data-transition=slide><?php echo count($quests) ?> Quests</a></p>
 		<?php endif; ?>
+		<p><a href="http://www.illarion.org" data-role="button" class="mainbutton" data-transition=slide>Homepage</a></p>
 	</div> 
 	<div data-role="footer" data-position="fixed">
 		<?php echo $footlinetext ?>
