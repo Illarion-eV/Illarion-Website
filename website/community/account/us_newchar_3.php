@@ -117,7 +117,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your character's speed of actions. It determines running pace and attack speed. This attribute matters for fighters that want to avoid damage. Dieses Attribut ist für Kämpfer wichtig, die Schaden vermeiden wollen. Agility affects the learning speed of the following skills: Parry, Light Armour, Medium Armour, and Heavy Armour.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Your character's speed of actions. It determines running pace and attack speed. This attribute matters for fighters that want to avoid damage. Agility affects the learning speed of the following skills: Parry, Light Armour, Medium Armour, and Heavy Armour.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
