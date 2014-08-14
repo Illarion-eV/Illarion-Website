@@ -1,5 +1,5 @@
 <!-- Mobile web page Illarion -->
-<!-- version 1.03 2014-05-28   -->
+<!-- version 1.05 2014-08-13   -->
 <!-- Banduk and some more     -->
 <?php //load news
  //changes
@@ -9,7 +9,8 @@
  //1.01: Quest Line feed
  //1.02: favicon.ico, line in players list away
  //1.03: Show Newbe and GM
- //1.04: Return to homepage and short text
+ //1.04: Homepage
+ //1.05: Homepage in footer, about and new pic locations
  
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
@@ -20,7 +21,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 	$IsGerman = false;
 }
 //set FootlineText
-$footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; www.illarion.org</p>'
+$footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; <a href="http://www.illarion.org">www.illarion.org</a></p>'
 //'<p>'.echo( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; www.illarion.org</p>'
 ?>
 <!DOCTYPE html> 
@@ -93,7 +94,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 		<?php else: ?>
 		<p><a href="#Quests" data-role="button" class="mainbutton" data-transition=slide><?php echo count($quests) ?> Quests</a></p>
 		<?php endif; ?>
-		<p><a href="http://www.illarion.org" data-role="button" class="mainbutton" data-transition=slide>Homepage</a></p>
+		<p><a href="#About" data-role="button" class="mainbutton" data-transition=slide>About Illarion</a></p>
 	</div> 
 	<div data-role="footer" data-position="fixed">
 		<?php echo $footlinetext ?>
@@ -199,9 +200,9 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 						switch($current_town)
 						{
 							//<h3><img src="images/galmair.png" width="32" />  Galmair</h3>
-							case 1: $content .= '<h3><img src="'.Page::getMediaURL().'/cadomyr.png" width="32" /> Cadomyr</h3>'; break;
-							case 2: $content .= '<h3><img src="'.Page::getMediaURL().'/runewick.png" width="32" /> Runewick</h3>'; break;
-							case 3: $content .= '<h3><img src="'.Page::getMediaURL().'/galmair.png" width="32" /> Galmair</h3>'; break;
+							case 1: $content .= '<h3><img src="'.Page::getImageURL().'/factions/cadomyrShield32.png" width="32" /> Cadomyr</h3>'; break;
+							case 2: $content .= '<h3><img src="'.Page::getImageURL().'/factions/runewickShield32.png" width="32" /> Runewick</h3>'; break;
+							case 3: $content .= '<h3><img src="'.Page::getImageURL().'/factions/galmairShield32.png" width="32" /> Galmair</h3>'; break;
 							case 4: $IsGerman == true ? $content .= '<h3> Vogelfrei</h3>' : $content .= '<h3> Outlawed</h3>'; break;
 							default: $content .= '<h3> Unknown</h3>';
 						}
@@ -313,10 +314,36 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 </div> 
 
 
+<!-- Start of About page -->
+<div data-role="page" id="About" data-theme="a"> 
+	<div data-role="header">
+		<a href="#" data-rel=back data-icon=home data-direction=reverse data-transition=slide>Home</a>
+		<?php echo ( $IsGerman == true ? '<p>Willkommen!</p>' : '<p>Welcome!</p>' ) ?>
+	</div>
+	<div data-role="content" class="normpage">
+		<div data-role="content" class="newstext">
+		<p>
+		<?php echo ( $IsGerman == true ? '<img src="'.Page::getImageURL().'/caps/d.png"' : '<img src="'.Page::getImageURL().'/caps/t.png"' ) ?> style="padding:0px 6px 0px 6px; float:left;" width="44" height="52" />
+		<?php echo ( $IsGerman == true ? 
+		'ie Welt ist in Aufruhr. Die Rückkehr der Alten Götter zerrüttete die Reiche, Flüchtlinge aller Völker strömen in die Bastionen der Menschheit im Land Illarion, die verschont geblieben sind von den Entbehrungen der vergangenen Tage. Sechs Edelsteine der Macht waren den Fürsten dieser Bastionen zur Verwahrung gegeben; doch Missgunst, Verrat und Neid sind die alltäglichen Geißeln der Macht. Das edle Cadomyr, das reiche Galmair oder das weise Runewick - welchen Weg wirst du einschlagen?</p>
+		<p>Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester der Götter.</p>
+		<p>Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer offenen, persistenten Spielwelt. Deine Entscheidungen und Taten formen und gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
+		<p>Illarion - Welche Rolle wirst du spielen?</p>':
+		'he world is in turmoil. The Second Coming of the Elder Gods has shaken the realms to their core. Refugees flock to the bastions of the land Illarion that were spared from the hardships of the past. Six gems of power were given to the Lords of these bastions for safekeeping; but jealousy, betrayal and envy are the ever present scourges in the constant struggle for power. Noble Cadomyr, wealthy Galmair or wise Runewick - whose side will you join?</p>
+		<p>Illarion is a free open source MMORPG that focuses on true role playing. All of the characters that you will encounter during your time here are living, breathing inhabitants of this mysterious world. Each character has their own past, goals, flaws, strengths and personality. Experience glorious adventures as a noble knight or live the life of a hardworking craftsman, acquisitive merchant, or charismatic priest of the gods.</p>
+		<p>Illarion combines a high fantasy setting with a persistent game world. The decisions that you make while playing Illarion will actually impact and shape the world around you. Your actions will determine the events that will one day fill the pages of Illarion\'s history books. You won\'t be able to resist the magic of this world.</p>
+		<p>Illarion - What role will you play?</p>') ?>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<?php echo $footlinetext ?>
+	</div> 
+</div> 
+
 <!-- Reload page ? -->
 <div data-role="dialog" id="ReloadPage" data-theme="a"> 
 		<button onClick="window.location.reload()">Reload data</button>
 		<a href="#Start"><button>Home</button></a>
+		<a href="http://www.illarion.org"><button>Homepage</button></a>
 </div> 
 
 </body>

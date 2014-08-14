@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 /* 2014-03-06 border 0px bei playerlist.li - Striche weg*/
+/* 2014-08-13 neue Klasse abouttext */
 
 .ui-header .ui-title {
 	margin-left: 0;
@@ -40,6 +41,7 @@
     right    : 0;
     bottom   : 50px;
     left     : 0;
+	color	 : #000000;
 }
 
 .newspage{
@@ -109,6 +111,13 @@
 	color: #000000 !important;
 	padding: 10px 10px 10px 10px;
 	font-size: 0.8em;
+}
+
+.abouttext{
+	background: #000 url(../pics/lightpaper.png) repeat;
+	color: #000000 !important;
+	padding: 10px 10px 10px 10px;
+	font-size: 0.9em;
 }
  
  .ui-footer{
