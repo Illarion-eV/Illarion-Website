@@ -22,7 +22,7 @@
 
 <h1>Statistics</h1>
 
-<h2>Informations about the community</h2>
+<h2>Information about the community</h2>
 
 <p>These statistics show the current state of the community.</p>
 
