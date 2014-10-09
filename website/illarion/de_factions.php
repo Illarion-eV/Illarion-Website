@@ -17,7 +17,7 @@
 <li><a class="hidden" href="#3">Runewick - Reich der Weisheit und Magie</a></li>
 </ul>
 
-<h2><a name="1"></a>Cadomyr - Realm of Honour and Glory</h2>
+<h2><a name="1"></a>Cadomyr - Reich von Ruhm und Ehre</h2>
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/cadomyrShieldDirt150.png" alt="Cadomyr"/>
 
@@ -31,7 +31,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Galmair - Realm of Prosperity and Wealth</h2>
+<h2><a name="2"></a>Galmair - Reich des aufstrebenden Wohlstands</h2>
 
 <img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
@@ -45,7 +45,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>Runewick - Realm of Wisdom and Magic</h2>
+<h2><a name="3"></a>Runewick - Reich der Weisheit und Magie</h2>
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
