@@ -13,28 +13,28 @@ class Page {
 	*
 	* @const string
 	*/
-	const url = 'http://illarion.org';
+	static private $url;
 
 	/**
 	* The non-ssl default url of the images
 	*
 	* @const string
 	*/
-	const image_url = 'http://illarion.org/shared/pics';
+	static private $image_url;
 
 	/**
 	* The non-ssl default url of the images
 	*
 	* @const string
 	*/
-	const ssl_image_url = 'https://illarion.org/shared/pics';
+	static private $ssl_image_url;
 
 	/**
 	* The non-ssl default url of the static media
 	*
 	* @const string
 	*/
-	const media_url = 'http://illarion.org/media';
+	static private $media_url;
 
 	/**
 	* The default non-ssl port of the page
@@ -48,7 +48,7 @@ class Page {
 	*
 	* @const string
 	*/
-	const ssl_url = 'https://illarion.org';
+	static private $ssl_url;
 
 	/**
 	* The default ssl port of the page
@@ -78,6 +78,13 @@ class Page {
 	static private $base_ssl_path;
 
     static function initPaths() {
+		Page::$url = 'http://' . $_SERVER['SERVER_NAME'];
+		Page::$image_url = Page::$url . '/shared/pics';
+		Page::$media_url = Page::$url . '/media';
+		
+		Page::$ssl_url = 'https://' . $_SERVER['SERVER_NAME'];
+		Page::$ssl_image_url = Page::$ssl_url . '/shared/pics';
+		
         Page::$base_path = '/var/www/illarion/website';
         Page::$base_images_path = Page::$base_path . '/shared/pics';
         Page::$base_media_path = Page::$base_path . '/media';
@@ -292,7 +299,7 @@ class Page {
 	* @return string
 	*/
 	static public function getURL() {
-		return self::url;
+		return self::$url;
 	}
 	
 	/**
@@ -318,7 +325,7 @@ class Page {
 	* @return string
 	*/
 	static public function getImageURL() {
-		return self::image_url;
+		return self::$image_url;
 	}
 	
 	/**
@@ -344,7 +351,7 @@ class Page {
 	* @return string
 	*/
 	static public function getMediaURL() {
-		return self::media_url;
+		return self::$media_url;
 	}
 
 	/**
@@ -354,7 +361,7 @@ class Page {
 	* @return string
 	*/
 	static public function getSecureURL() {
-		return self::ssl_url;
+		return self::$ssl_url;
 	}
 	
 	/**
@@ -364,7 +371,7 @@ class Page {
 	* @return string
 	*/
 	static public function getSecureImageURL() {
-		return self::ssl_image_url;
+		return self::$ssl_image_url;
 	}
 
 	/**
@@ -425,6 +432,10 @@ class Page {
 	*/
 	static public function getSecureRootPath() {
 		return Page::$base_ssl_path;
+	}
+	
+	static public function isLocalServer() {
+		return self::getURL() == "http://127.0.0.1" || self::getURL() == "http://localhost";
 	}
 
 	/**
@@ -1079,10 +1090,10 @@ class Page {
 		if (count($_POST) > 0) {
 			return;
 		}
-		$correct_host = str_replace('http://', '', self::url);
+		$correct_host = str_replace('http://', '', self::getURL());
 
 		if ($_SERVER["SERVER_NAME"] !== $correct_host) {
-			self::redirect(($_SERVER["SERVER_PORT"] == self::ssl_port ? self::ssl_url : self::url) . $_SERVER["REQUEST_URI"]);
+			self::redirect(self::getCurrentURL() . $_SERVER["REQUEST_URI"]);
 		}
 	}
 
@@ -1098,12 +1109,12 @@ class Page {
 		switch ($_POST['action']) {
 			case 'login':
 				if (!IllaUser::login($_POST['login_name'], $_POST['login_pw'], ($_POST['login_remember'] == 'remember'))) {
-					self::redirect(self::url . '/community/account/' . self::$language . '_login.php?error=1&target=' . rawurlencode($_SERVER['REQUEST_URI']));
+					self::redirect(self::getURL() . '/community/account/' . self::$language . '_login.php?error=1&target=' . rawurlencode($_SERVER['REQUEST_URI']));
 				} else {
 					if (defined("LOGIN_TARGET_URL")) {
 						self::redirect(LOGIN_TARGET_URL);
 					} else {
-						self::redirect(self::url . '/community/account/' . self::$language . '_charlist.php');
+						self::redirect(self::getURL() . '/community/account/' . self::$language . '_charlist.php');
 					}
                 }
 				break;
@@ -1394,7 +1405,7 @@ class Page {
 			if (self::isHTML() || (self::$browser_name === 'msie' && self::$browser_version == 8)) {
 				$search_replace[$search_cnt] = '<div class="g-plusone"></div>';
 			} else {
-				$search_replace[$search_cnt] = '<object data="'.self::url.'/shared/'.self::$language.'_google.html" type="text/html" width="68px" height="24px">Google +1 button</object>';
+				$search_replace[$search_cnt] = '<object data="'.self::getURL().'/shared/'.self::$language.'_google.html" type="text/html" width="68px" height="24px">Google +1 button</object>';
 			}
 
 			$css = &self::$css;
@@ -1435,7 +1446,7 @@ class Page {
 					array_unshift($js, 'google');
 				}
 			}
-			if (!IllaUser::loggedIn()) {
+			if (!IllaUser::loggedIn() && !self::isLocalServer()) {
 				array_unshift($js, 'proxy_killer');
 			}
 			array_push($js, 'hyphenator');
@@ -1481,7 +1492,7 @@ class Page {
 				$search_replace[$search_cnt] .= '<link rel="last" href="' . self::$last_page . '" />' . PHP_EOL;
 			}
 			if (!defined('NO_INLINE_IMAGES')) {
-				$search_replace[$search_cnt] .= '<link rel="stylesheet" type="text/css" href="' . self::url . '/shared/pics/' . self::$language . '_image_bundle.css" />' . PHP_EOL;
+				$search_replace[$search_cnt] .= '<link rel="stylesheet" type="text/css" href="' . self::getURL() . '/shared/pics/' . self::$language . '_image_bundle.css" />' . PHP_EOL;
 			}
 			$trackingGoals = array_unique(self::$track_goals);
 			foreach($trackingGoals as $goal) {
@@ -1542,7 +1553,7 @@ class Page {
 				}
 				$search_keywords[++$search_cnt] = '{ACCOUNT_NAVIGATION_FRAME}';
 				$search_replace[$search_cnt] = '		<li class="seperator">' . (self::isGerman() ? 'Hallo ' : 'Hello ') . $name . '</li>' . PHP_EOL
-				 . '		<li><a href="' . self::url . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::isGerman() ? 'Charaktere' : 'Characters') . '</a></li>' . PHP_EOL
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::isGerman() ? 'Charaktere' : 'Characters') . '</a></li>' . PHP_EOL
 				 . '		<li class="seperator"><a href="' . self::url . '/community/account/' . self::$language . '_acc_settings.php" class="importaint">Account</a></li>' . PHP_EOL
 				 . '		<li>' . PHP_EOL
 				 . '			<input type="hidden" name="action" value="logout" />' . PHP_EOL
@@ -1559,15 +1570,15 @@ class Page {
 				 . '			<input type="hidden" name="action" value="login" />' . PHP_EOL
 				 . '			<input type="submit" name="login" value="' . (self::$language === 'de' ? 'Einloggen' : 'Login') . '" style="width:100%;" />' . PHP_EOL
 				 . '		</li>' . PHP_EOL
-				 . '		<li><a href="' . self::url . '/community/account/' . self::$language . '_register.php">' . (self::$language === 'de' ? 'Registrieren' : 'Register') . '</a></li>' . PHP_EOL
-				 . '		<li><a href="' . self::url . '/community/account/' . self::$language . '_forgot_pw.php">' . (self::$language === 'de' ? 'Passwort weg?' : 'Lost password?') . '</a></li>' . PHP_EOL ;
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_register.php">' . (self::$language === 'de' ? 'Registrieren' : 'Register') . '</a></li>' . PHP_EOL
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_forgot_pw.php">' . (self::$language === 'de' ? 'Passwort weg?' : 'Lost password?') . '</a></li>' . PHP_EOL ;
 			}
 
 			$xml = simplexml_load_file(self::getRootPath() . '/illarion/screenshots.xml');
 			$selected_pic = rand(0, count($xml->group[0]->screenshot) - 1);
 
 			$search_keywords[++$search_cnt] = '{SCREENSHOT_FILE}';
-			$search_replace[$search_cnt] = self::media_url . '/screenshots/preview/' . $xml->group[0]->screenshot[$selected_pic]->attributes()->filename;
+			$search_replace[$search_cnt] = self::getMediaURL() . '/screenshots/preview/' . $xml->group[0]->screenshot[$selected_pic]->attributes()->filename;
 			$search_keywords[++$search_cnt] = '{SCREENSHOT_NAME}';
 			$search_replace[$search_cnt] = 'Screenshot';
 
@@ -1588,30 +1599,19 @@ class Page {
 			$search_replace[$search_cnt] = &self::$language;
 			
 			$search_keywords[++$search_cnt] = '{IMAGE_URL}';
-			if (self::checkSSL()) {
-				$search_replace[$search_cnt] = self::ssl_image_url;
-			} else {
-				$search_replace[$search_cnt] = self::image_url;
-			}
+			$search_replace[$search_cnt] = self::getCurrentImageURL();
+			
 			$search_keywords[++$search_cnt] = '{URL}';
-			if (self::checkSSL()) {
-				$search_replace[$search_cnt] = self::ssl_url;
-			} else {
-				$search_replace[$search_cnt] = self::url;
-			}
+			$search_replace[$search_cnt] = self::getCurrentURL();
 			
 			$search_keywords[++$search_cnt] = '{SHARED_URL}';
-			if (self::checkSSL()) {
-				$search_replace[$search_cnt] = self::ssl_url . '/shared';
-			} else {
-				$search_replace[$search_cnt] = self::url . '/shared';
-			}
+			$search_replace[$search_cnt] = self::getCurrentURL() . '/shared';
 			
 			$search_keywords[++$search_cnt] = '{HTTP_URL}';
-			$search_replace[$search_cnt] = self::url;
+			$search_replace[$search_cnt] = self::getURL();
 			
 			$search_keywords[++$search_cnt] = '{HTTPS_URL}';
-			$search_replace[$search_cnt] = self::ssl_url;
+			$search_replace[$search_cnt] = self::getSecureURL();
 			
 
 			$output = str_replace($search_keywords, $search_replace, $output);
