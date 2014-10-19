@@ -40,9 +40,9 @@ resist the magic of this world.</p>
 
 <p>Illarion - What role will you play?</p>
 
-<div style="width:auto;margin:0 auto;text-align:center;">
+<div style="width:auto;margin:0 auto;text-align:center;float:right;padding:9px 0px 0px 12px">
 	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>/general/us_map_of_illarion.jpg" title="Map of Illarion" rel="Map of Illarion" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getURL(); ?>/general/us_thumb_map_of_illarion.jpg" width="206" height="85" alt="Map of Illarion. Click here to see it in full size." />
+		<img src="<?php echo Page::getURL(); ?>/general/us_thumb_map_of_illarion.jpg" width="121" height="100" alt="Map of Illarion. Click here to see it in full size." />
 	</a>
 </div>
 
