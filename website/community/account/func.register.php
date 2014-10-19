@@ -16,7 +16,7 @@
 	$value = trim($value);
 	if ($_GET['action'] == 'check_user')
 	{
-		$db->setQuery("SELECT COUNT(*) FROM account WHERE lower(acc_login) = ".$db->Quote( strtolower($value) ));
+		$db->setQuery("SELECT COUNT(*) FROM account WHERE acc_login = ".$db->Quote($value));
 		if ($db->loadResult())
 		{
 			echo 0;
