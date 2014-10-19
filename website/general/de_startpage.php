@@ -4,6 +4,8 @@
 	Page::setTitle( 'Das kostenlose Online-Rollenspiel' );
 	Page::setDescription( 'Illarion ist ein kostenloses Online-Rollenspiel in einer mittelalterlichen Fantasy Umgebung mit dem Schwerpunkt auf echtes Rollenspiel.' );
 	Page::setKeywords( array( 'Startseite', 'Neuigkeiten' ) );
+	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
 	Page::setXHTML();
 	Page::Init();
 ?>
@@ -37,6 +39,12 @@ gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher
 füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 
 <p>Illarion - Welche Rolle wirst du spielen?</p>
+
+<div style="width:auto;margin:0 auto;text-align:center;">
+	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg" title="Karte von Illarion" rel="Karte von Illarion" class="lightwindow" onclick="return false;">
+		<img src="<?php echo Page::getURL(); ?>/general/de_thumb_map_of_illarion.jpg" width="103" height="85" alt="Karte von Illarion. Hier klicken um das Bild in der vollen Größe zu sehen." />
+	</a>
+</div>
 
 <?php Page::insert_go_to_top_link(); ?>
 
