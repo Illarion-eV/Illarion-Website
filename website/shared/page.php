@@ -435,7 +435,7 @@ class Page {
 	}
 	
 	static public function isLocalServer() {
-		return self::getURL() == "http://127.0.0.1" || self::getURL() == "http://localhost";
+		return self::getURL() == "http://127.0.0.1" || self::getURL() == "http://localhost" || self::getURL() == "http://illarion.local";
 	}
 
 	/**
