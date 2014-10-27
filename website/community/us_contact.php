@@ -73,7 +73,6 @@ They should be the first people to turn to for a non-technical issue that may ar
 
 <ul>
 <li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
-<li><a href="?contact=31">Alessaina</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager (EU)</li>
 </ul>
 
@@ -87,14 +86,12 @@ Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
 Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
-	<li><a href="?contact=14">Arien Edhel</a> - German speaking GM for general requests (EU)</li>
-    <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr (EU)</li>
+    <li><a href="?contact=31">Obsydien</a> - English speaking GM for Cadomyr (US)</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Cadomyr (EU)</li>
     <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
     <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=41">Bloodraven</a> - German speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Runewick (US)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -112,7 +109,7 @@ Contact them especially if you want to join the development team of Illarion.</p
 	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
 	<li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
 	<li><a href="?contact=22">Martin</a> - Graphics</li>
-	<li><a href="?contact=40">Zot</a> - Maps</li>
+	<li><a href="?contact=40">Evie</a> - Maps</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -204,16 +201,10 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion.",false);
       break;
-      case 14: //Arien Edhel
-         define(_CONTACT_NAME,"Arien Edhel",false);
-         define(_CONTACT_MAIL,"arien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
-         " general requests and rule violations.",false);
-      break;
       case 15: //Zephyrius
-	define(_CONTACT_NAME,"Zephyrius",false);
-	define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
-	define(_contact_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+         define(_CONTACT_NAME,"Zephyrius",false);
+         define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
@@ -244,20 +235,15 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_MAIL,"achae@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
-      case 31: //Alessaina
-         define(_CONTACT_NAME,"Alessaina",false);
-         define(_CONTACT_MAIL,"alessaina@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+      case 31: //Obsydien
+         define(_CONTACT_NAME,"Obsydien",false);
+         define(_CONTACT_MAIL,"obdydien@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 32: //Djironnyma
          define(_CONTACT_NAME,"Djironnyma",false);
          define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
-      break;
-      case 33: //Skamato
-         define(_CONTACT_NAME,"Skamato",false);
-         define(_CONTACT_MAIL,"skamato@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
@@ -265,8 +251,8 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
       case 40: //Zot
-         define(_CONTACT_NAME,"Zot",false);
-         define(_CONTACT_MAIL,"zot@illarion.org",false);
+         define(_CONTACT_NAME,"Evie",false);
+         define(_CONTACT_MAIL,"evie@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead map developer of Illarion.",false);
       break;
       case 41: //Bloodraven
@@ -279,15 +265,10 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_MAIL,"teflon@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
       break;
-      case 43: //White Crow
-         define(_CONTACT_NAME,"White Crow",false);
-         define(_CONTACT_MAIL,"whitecrow@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
-      break;
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
       break;
       default:
          MainForm();

@@ -80,7 +80,6 @@ Sie sollten die ersten sein, an die man sich bei nicht technischen Problemen wen
 
 <ul>
 <li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (US)</li>
-<li><a href="?contact=31">Alessaina</a> - Englischsprachige Community-Managerin (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager (EU)</li>
 </ul>
 
@@ -95,14 +94,12 @@ Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick.
 Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <ul>
-   <li><a href="?contact=14">Arien Edhel</a> - Deutschsprachiger GM für generelle Anfragen (EU)</li>
-   <li><a href="?contact=43">White Crow</a> - Englischsprachiger GM für Cadomyr (US)</li>
-   <li><a href="?contact=15">Zephyrius</a> - Englischsprachiger GM für Cadomyr (US)</li>
-   <li><a href="?contact=33">Skamato</a> - Deutschsprachiger GM für Cadomyr (EU)</li>
+	 <li><a href="?contact=31">Obsydien</a> - Englischsprachiger GM für Cadomyr (US)</li>
+	 <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Cadomyr (EU)</li>
    <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
    <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM für Galmair (EU)</li>
-   <li><a href="?contact=41">Bloodraven</a> - Englischsprachiger GM für Runewick (EU)</li>
-   <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Runewick (EU)</li>
+   <li><a href="?contact=41">Bloodraven</a> - Deutschsprachiger GM für Runewick (EU)</li>
+   <li><a href="?contact=15">Zephyrius</a> - Englischsprachiger GM für Runewick (US)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -119,7 +116,7 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 <li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
 <li><a href="?contact=11">Estralis Seborian</a> - Spielinhalte</li>
 <li><a href="?contact=22">Martin</a> - Grafik</li>
-<li><a href="?contact=40">Zot</a> - Karte</li>
+<li><a href="?contact=40">Evie</a> - Karte</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -213,17 +210,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion.",false);
       break;
-      case 14: //Arien Edhel
-         define(_CONTACT_NAME,"Arien Edhel",false);
-         define(_CONTACT_MAIL,"arien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der ".
-         "sich gezielt um um allgemeine Anfragen und Regelverstöße kümmert.",false);
-      break;
       case 15: //Zephyrius
-		 define(_CONTACT_NAME,"Zephyrius",false);
-		 define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
-		 define(_contact_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
-	  break;
+         define(_CONTACT_NAME,"Zephyrius",false);
+		     define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+		     define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
+      break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
          define(_CONTACT_MAIL,"martin@illarion.org",false);
@@ -254,30 +245,25 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_MAIL,"achae@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
       break;
-      case 31: //Alessaina
-         define(_CONTACT_NAME,"Alessaina",false);
-         define(_CONTACT_MAIL,"alessaina@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
+      case 31: //Obsydien
+         define(_CONTACT_NAME,"Obsydien",false);
+         define(_CONTACT_MAIL,"obsydien@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
       break;
       case 32: //Djironnyma
          define(_CONTACT_NAME,"Djironnyma",false);
          define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
       break;
-      case 33: //Skamato
-         define(_CONTACT_NAME,"Skamato",false);
-         define(_CONTACT_MAIL,"skamato@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
-      break;
-      case 34: //Slightly
+       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
       break;
-      case 40: //Zot
-         define(_CONTACT_NAME,"Zot",false);
-         define(_CONTACT_MAIL,"zot@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Entwickler der Spiel-Karte.",false);
+      case 40: //Evie
+         define(_CONTACT_NAME,"Evie",false);
+         define(_CONTACT_MAIL,"evie@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist die leitende Entwicklerin der Spiel-Karte.",false);
       break;
       case 41: //Bloodraven
          define(_CONTACT_NAME,"Bloodraven",false);
@@ -285,19 +271,14 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
       break;
       case 42: //Teflon
-         define(_CONTACT_NAME,"Semtex",false);
+         define(_CONTACT_NAME,"Teflon",false);
          define(_CONTACT_MAIL,"teflon@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
       break;
-      case 43: //White Crow
-         define(_CONTACT_NAME,"White Crow",false);
-         define(_CONTACT_MAIL,"whitecrow@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
-      break;
-      case 45: //Silverwing
+        case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
       break;
       default:
          MainForm();
