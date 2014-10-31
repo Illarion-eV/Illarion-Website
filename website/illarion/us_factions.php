@@ -49,7 +49,7 @@
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/runewickShieldDirt150.png" alt="Runewick"/>
 
-<p>Set in an archipelago of forested islands, Runewick's towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
+<p>Set in an archipelago of forested islands, Runewick's towers soar above fertile fields and bountiful glades. Across Lunord Bridge lies the farming community of Yewdale with Runewick harbour at the entrance to Snakehead Bay, whilst animals graze as far as the Dewy Swamps. Founded by the Archmage Elvaine Morgan, the towers themselves provide an eclectic seat of learning amongst a bustling town.</p>
 
 <p>High in the Tower of Fire, the Archmage Elvaine Morgan presides over the Hall of Elara. He first founded Runewick as an academy with a group of mages from the renowned magical city of Lor Angur. Together the Towers of Earth, Fire, Air and Water, combine to form an imposing arcane structure, housing countless precious books and manuscripts in vast libraries and research chambers. As an elf of immense wisdom, and thus power, Archmage Elvaine Morgan is the undisputed ruler of Runewick, possessing the two stones of power, ruby and emerald.</p>
 
