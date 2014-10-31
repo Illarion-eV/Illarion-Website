@@ -35,7 +35,7 @@
 
 <img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
-<p>Nestled in the foothills of the Lonely Mountains, Galmair's imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory to join the Bounding Stream as it flows from Lake Syrita, bordering the edge of Nargun's Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
+<p>Nestled in the foothills of the Lonely Mountains, Galmair's imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory to join the Bounding Stream as it flows from Syrita Bay, bordering the edge of Nargun's Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
 
 <p>At the heart of Galmair lies Galmair's Crest, the home to Don Valerio Guilianni. He is the son of Tommaso Guilianni, a successful Gynkese trader who in search of ever greater riches established Galmair as a profitable trading town. As his natural successor, Valerio Guilianni came to power following the sudden death of his father, although rumours suggest a family feud and naming of another successor may have hurried his demise. As a dwarf of considerable wealth, and thus power, Don Valerio Guilianni is the undisputed ruler of Galmair, holding the two stones of power, sapphire and obsidian.</p>
 
