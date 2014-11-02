@@ -36,7 +36,7 @@ lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
 verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
 Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben
 als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester
-der Götter.</p>
+der <a href="/illarion/goetter/de_bck_10.php">Götter</a>.</p>
 
 <p class="hyphenate">
 Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer
