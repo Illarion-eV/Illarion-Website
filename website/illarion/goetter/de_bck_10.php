@@ -31,13 +31,13 @@
    Insel einzugreifen.<br />
    Die &Auml;ltesten w&auml;hlten Ihr Anh&auml;nger selbst aus, mit einer Ausnahme: Tanora (Zelphia).</p>
 
-   <p class="center">
-      <a href="de_bck_11.php">Ushara - G&ouml;ttin der Erde</a><br />
-      <a href="de_bck_12.php">Br&aacute;gon - Gott des Feuers</a><br />
-      <a href="de_bck_13.php">Eldan - Gott des Geistes</a><br />
-      <a href="de_bck_14.php">Tanora - G&ouml;ttin des Wassers</a><br />
-      <a href="de_bck_15.php">Findari - G&ouml;ttin der Luft</a>
-   </p>
+<ul>
+<li><a class="hidden" href="de_bck_11.php">Ushara - G&ouml;ttin der Erde</a></li>
+<li><a class="hidden" href="de_bck_11.php">Br&aacute;gon - Gott des Feuers</a></li>
+<li><a class="hidden" href="de_bck_11.php">Eldan - Gott des Geistes</a></li>
+<li><a class="hidden" href="de_bck_11.php">Tanora - G&ouml;ttin des Wassers</a></li>
+<li><a class="hidden" href="de_bck_11.php">Findari - G&ouml;ttin der Luft</a></li>
+</ul>
    
    <?php insert_go_to_top_link(); ?>
 
