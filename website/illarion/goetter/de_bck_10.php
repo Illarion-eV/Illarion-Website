@@ -7,7 +7,7 @@
 ?>
 
 
-   <h1>Die G&ouml;tter Illarion&#39;s</h1>
+   <h1>Die G&ouml;tter Illarions</h1>
 
    <?php cap(E); ?>
    
