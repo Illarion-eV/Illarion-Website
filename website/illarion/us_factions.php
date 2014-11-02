@@ -21,7 +21,7 @@
 
 <img align="left" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/cadomyrShieldDirt150.png" alt="Cadomyr"/>
 
-<p>Flanked by the impenetrable Lonely Mountains and the Great Ocean, Cadomyr's foreboding fortress walls rise from the desert sands. From the Lonely Mountains the Kantabi River cuts through the Kantabi desert, demarking the territory of Cadomyr as it flows towards the ocean where it diverges into the Kantabi Delta. The hot desert sun reflects off the uniform sandstone walls of the town while grand paintings and statues depict glorious feats of past rulers.</p>
+<p>Flanked by the impenetrable Nameless Mountains and the Great Ocean, Cadomyr's foreboding fortress walls rise from the desert sands. From the Nameless Mountains the Kantabi River cuts through the Kantabi desert, demarking the territory of Cadomyr as it flows towards the ocean where it diverges into the Kantabi Delta. The hot desert sun reflects off the uniform sandstone walls of the town while grand paintings and statues depict glorious feats of past rulers.</p>
 
 <p>Sheltered behind buttressed walls is the Royal Palace, home to Queen Rosaline Edwards. She is the daughter of Sir Reginald, last of a long line of illustrious Kings of Albarian origin who ruled the desert fortress. A rich heritage of combat and stringent codes of honour sustains the traditional customs. With this proud and ambitious Queen the royal bloodline continues, some say blessed by the gods themselves. As a woman of considerable honour, and thus power, Queen Rosaline Edwards is the undisputed ruler of Cadomyr, holding the two stones of power, amethyst and topaz.</p>
 
@@ -35,7 +35,7 @@
 
 <img align="right" vspace="10" hspace="20" src="<?php echo $url; ?>/shared/pics/factions/galmairShieldDirt150.png" alt="Galmair"/>
 
-<p>Nestled in the foothills of the Lonely Mountains, Galmair's imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory to join the Bounding Stream as it flows from Syrita Bay, bordering the edge of Nargun's Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
+<p>Nestled in the foothills of the Nameless Mountains, Galmair's imposing walls join with rocky outcrops to form formidable fortifications. Malachite Creek courses through Galmairian territory to join the Bounding Stream as it flows from Syrita Bay, bordering the edge of Nargun's Plain. Originally built by dwarves, much of the town itself lies underground with cavernous halls and tunnels cleaved deep into the mountains.</p>
 
 <p>At the heart of Galmair lies Galmair's Crest, the home to Don Valerio Guilianni. He is the son of Tommaso Guilianni, a successful Gynkese trader who in search of ever greater riches established Galmair as a profitable trading town. As his natural successor, Valerio Guilianni came to power following the sudden death of his father, although rumours suggest a family feud and naming of another successor may have hurried his demise. As a dwarf of considerable wealth, and thus power, Don Valerio Guilianni is the undisputed ruler of Galmair, holding the two stones of power, sapphire and obsidian.</p>
 
