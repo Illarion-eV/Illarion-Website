@@ -48,19 +48,19 @@
    Illarion. Anstatt die V&ouml;lker zu f&uuml;hren und ihr friedliches Zusammenleben zu gew&auml;hrleisten,
    nehmen sie aktiv Anteil am Kampf der V&ouml;lker, um Einfluss und Macht zu erlangen.</p>
 
-   <p class="center">
-      <a href="de_bck_16.php">Narg&ugrave;n - Gott des Chaos</a><br />
-      <a href="de_bck_17.php">Elara - G&ouml;ttin des Wissens und der Weisheit</a><br />
-      <a href="de_bck_18.php">Adron - Gott des Weines und der Feste</a><br />
-      <a href="de_bck_19.php">Oldra - G&ouml;ttin der Fruchtbarkeit und des Lebens</a><br />
-      <a href="de_bck_20.php">Cherga - G&ouml;ttin der Geister und der Unterwelt</a><br />
-      <a href="de_bck_21.php">Malach&iacute;n - Gott der Jagd und der Schlachten</a><br />
-      <a href="de_bck_22.php">Irmorom - Gott des Handels und des Handwerks</a><br />
-      <a href="de_bck_23.php">Sirani - G&ouml;ttin der Liebe und der Freude</a><br />
-      <a href="de_bck_24.php">Zhambra - Gott der Freundschaft und des Vertrauens</a><br />
-      <a href="de_bck_25.php">Ronagan - Gott der Diebe und der Schatten</a><br />
-      <a href="de_bck_26.php">Moshran - Gott des Blutes und der Gebeine</a>
-   </p>
+<ul>
+<li><a class="hidden" href="de_bck_16.php">Narg&ugrave;n - Gott des Chaos</a></li>
+<li><a class="hidden" href="de_bck_17.php">Elara - G&ouml;ttin des Wissens und der Weisheit</a></li>
+<li><a class="hidden" href="de_bck_18.php">Adron - Gott des Weines und der Feste</a></li>
+<li><a class="hidden" href="de_bck_19.php">Oldra - G&ouml;ttin der Fruchtbarkeit und des Lebens</a></li>
+<li><a class="hidden" href="de_bck_20.php">Cherga - G&ouml;ttin der Geister und der Unterwelt</a></li>
+<li><a class="hidden" href="de_bck_21.php">Malach&iacute;n - Gott der Jagd und der Schlachten</a></li>
+<li><a class="hidden" href="de_bck_22.php">Irmorom - Gott des Handels und des Handwerks</a></li>
+<li><a class="hidden" href="de_bck_23.php">Sirani - G&ouml;ttin der Liebe und der Freude</a></li>
+<li><a class="hidden" href="de_bck_24.php">Zhambra - Gott der Freundschaft und des Vertrauens</a></li>
+<li><a class="hidden" href="de_bck_25.php">Ronagan - Gott der Diebe und der Schatten</a></li>
+<li><a class="hidden" href="de_bck_26.php">Moshran - Gott des Blutes und der Gebeine</a></li>
+</ul>
 
    <?php insert_go_to_top_link(); ?>
 

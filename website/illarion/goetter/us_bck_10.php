@@ -45,19 +45,19 @@
    Illarion. Instead of leading the different races and ensuring their peacefull coexistence, they
    themself take part in the struggle, fighting for influence and power.</p>
 
-   <p class="center">
-      <a href="us_bck_16.php">Narg&ugrave;n - God of Chaos</a><br />
-      <a href="us_bck_17.php">Elara - Goddess of Wisdom and Knowledge</a><br />
-      <a href="us_bck_18.php">Adron - God of Festivities and Wine</a><br />
-      <a href="us_bck_19.php">Oldra - Goddess of Life and Fertility</a><br />
-      <a href="us_bck_20.php">Cherga - Goddess of Spirits and the Underworld</a><br />
-      <a href="us_bck_21.php">Malach&iacute;n - God of Battle and Hunting</a><br />
-      <a href="us_bck_22.php">Irmorom - God of Trade and Craftsmanship</a><br />
-      <a href="us_bck_23.php">Sirani - Goddess of Love and Pleasure</a><br />
-      <a href="us_bck_24.php">Zhambra - God of Friendship and Loyalty</a><br />
-      <a href="us_bck_25.php">Ronagan - God of Thieves and Shadows</a><br />
-      <a href="us_bck_26.php">Moshran - God of Blood and Bones</a>
-   </p>
+<ul>
+<li><a class="hidden" href="us_bck_16.php">Narg&ugrave;n - God of Chaos</a></li>
+<li><a class="hidden" href="us_bck_17.php">Elara - Goddess of Wisdom and Knowledge</a></li>
+<li><a class="hidden" href="us_bck_18.php">Adron - God of Festivities and Wine</a></li>
+<li><a class="hidden" href="us_bck_19.php">Oldra - Goddess of Life and Fertility</a></li>
+<li><a class="hidden" href="us_bck_20.php">Cherga - Goddess of Spirits and the Underworld</a></li>
+<li><a class="hidden" href="us_bck_21.php">Malach&iacute;n - God of Battle and Hunting</a></li>
+<li><a class="hidden" href="us_bck_22.php">Irmorom - God of Trade and Craftsmanship</a></li>
+<li><a class="hidden" href="us_bck_23.php">Sirani - Goddess of Love and Pleasure</a></li>
+<li><a class="hidden" href="us_bck_24.php">Zhambra - God of Friendship and Loyalty</a></li>
+<li><a class="hidden" href="us_bck_25.php">Ronagan - God of Thieves and Shadows</a></li>
+<li><a class="hidden" href="us_bck_26.php">Moshran - God of Blood and Bones</a></li>
+</ul>
 
    <?php insert_go_to_top_link(); ?>
 
