@@ -4,7 +4,7 @@
 ?>
 <div>
 	<h1>
-		<img src="<?php echo $url; ?>/illarion/calendar/images/image_1.png" style="height:60px;width:60px;" alt="Hirschkuh" />
+		<img src="<?php echo $url; ?>/illarion/calendar/images/image_1.gif" style="height:60px;width:60px;" alt="Hirschkuh" />
 		Die weise Hirschkuh
 	</h1>
 
