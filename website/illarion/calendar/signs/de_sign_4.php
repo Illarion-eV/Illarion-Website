@@ -4,15 +4,15 @@
 ?>
 <div>
 	<h1>
-		<img src="<?php echo $url; ?>/illarion/calendar/images/image_4.png" style="height:60px;width:60px;" alt="Bär" />
-		Der beständige Bär
+		<img src="<?php echo $url; ?>/illarion/calendar/images/image_4.png" style="height:60px;width:60px;" alt="BÃ¤r" />
+		Der bestÃ¤ndige BÃ¤r
 	</h1>
 
 	<h2>Monat: Ushos</h2>
 
 	<b>Beschreibung:</b>
 	<p>Im Monat Usharas Geborene sind stille und introvertierte Menschen. Sie lieben die
-	Natur und materielle Dinge haben für sie nur einen geringen Wert. Sie sind
+	Natur und materielle Dinge haben fÃ¼r sie nur einen geringen Wert. Sie sind
 	Familienmensche und streben stets nach Harmonie.</p>
 
 	<br />
