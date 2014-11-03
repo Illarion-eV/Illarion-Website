@@ -4,7 +4,7 @@
 ?>
 <div>
 	<h1>
-		<img src="<?php echo $url; ?>/illarion/calendar/images/image_4.png" style="height:60px;width:60px;" alt="Bear" />
+		<img src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" style="height:60px;width:60px;" alt="Bear" />
 		The consistent Bear
 	</h1>
 

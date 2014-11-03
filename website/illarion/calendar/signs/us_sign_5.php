@@ -5,7 +5,7 @@
 <div>
 	<h1>
 		<img src="<?php echo $url; ?>/illarion/calendar/images/image_5.png" style="height:60px;width:60px;" alt="Butterfly" />
-		The beautyful Butterfly
+		The beautiful Butterfly
 	</h1>
 
 	<h2>Monat: Siros</h2>
