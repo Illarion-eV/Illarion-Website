@@ -12,7 +12,7 @@
 
 	<b>Beschreibung:</b>
 	<p>Im Monat Usharas Geborene sind stille und introvertierte Menschen. Sie lieben die
-	Natur und materielle Dinge haben fÃ¼r sie nur einen geringen Wert. Sie sind
+	Natur und materielle Dinge haben für sie nur einen geringen Wert. Sie sind
 	Familienmensche und streben stets nach Harmonie.</p>
 
 	<br />
