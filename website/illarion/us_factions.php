@@ -12,10 +12,15 @@
 
 <h2>Content</h2>
 <ul>
+<li><a class="hidden" href="#0">The World Illarion</a></li>
 <li><a class="hidden" href="#1">Cadomyr - Realm of Honour and Glory</a></li>
 <li><a class="hidden" href="#2">Galmair - Realm of Prosperity and Wealth</a></li>
 <li><a class="hidden" href="#3">Runewick - Realm of Wisdom and Magic</a></li>
 </ul>
+
+<h2><a name="0"></a>The World Illarion</h2>
+
+<center><a href="<?php echo Page::getURL(); ?>/general/us_map_of_illarion.jpg"><img width="600" height="497" src="<?php echo $url; ?>/general/us_bigthumb_map_of_illarion.jpg" alt="Map of Illarion"/></a></center>
 
 <h2><a name="1"></a>Cadomyr - Realm of Honour and Glory</h2>
 
