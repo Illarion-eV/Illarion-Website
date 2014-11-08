@@ -26,7 +26,7 @@ $illa_month=illa_date('m');
 
 <h2>Aktuelles Datum: <?php echo $illa_today.". "; echo $monate[$illa_month-1]." "; echo $illa_year;?></h2>
 
-<p>Klicke auf die Beschreibung eines Monats, um Weiteres zu erfahren. Ebenso kannst du auf das Sternkreiszeichenbild klicken, um etwas über die typischen Eigenschaften eines Charakters zu erfahren, der im jeweiligen Monat geboren wurde.</p>
+<p>Klicke auf die Beschreibung eines Monats, um Weiteres zu erfahren. Ebenso kannst du auf das Sternkreiszeichenbild klicken, um etwas Ã¼ber die typischen Eigenschaften eines Charakters zu erfahren, der im jeweiligen Monat geboren wurde.</p>
 
 <?php
 $this_month=1;
