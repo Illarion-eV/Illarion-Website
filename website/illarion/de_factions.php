@@ -20,7 +20,7 @@
 
 <h2><a name="0"></a>Die Welt Illarion</h2>
 
-<a href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg"><img align="center" width="400" height="331" src="<?php echo $url; ?>/general/de_bigthumb_map_of_illarion.jpg" alt="Karte von Illarion"/></a>
+<a href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg"><img align="middle" width="600" height="497" src="<?php echo $url; ?>/general/de_bigthumb_map_of_illarion.jpg" alt="Karte von Illarion"/></a>
 
 <h2><a name="1"></a>Cadomyr - Reich von Ruhm und Ehre</h2>
 
