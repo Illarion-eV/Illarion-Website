@@ -28,6 +28,8 @@ $illa_month=illa_date('m');
 
 <p>Klicke auf die Beschreibung eines Monats, um Weiteres zu erfahren. Ebenso kannst du auf das Sternkreiszeichenbild klicken, um etwas über die typischen Eigenschaften eines Charakters zu erfahren, der im jeweiligen Monat geboren wurde.</p>
 
+<p>Die Zeit vergeht in der Welt Illarion dreimal schneller als im wirklichen Leben. So dauert ein Tag in der Welt Illarion lediglich acht Stunden. Soll auf einen Tag im wirklichen Leben verwiesen werden, so wird von "Zwergentagen" geredet. Dies leitet sich aus den Arbeitsschichten der fleißigen Zwerge her, welche unter Tage nicht auf den Lauf der Sonne Rücksicht nehmen und dreimal länger arbeiten als die faulen anderen Rassen.</p>
+
 <?php
 $this_month=1;
 while ($this_month < 17)
