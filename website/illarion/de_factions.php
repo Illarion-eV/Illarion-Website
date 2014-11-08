@@ -21,7 +21,7 @@
 <h2><a name="0"></a>Die Welt Illarion</h2>
 
 <div style="width:auto;margin:0 auto;text-align:center;float:centre;padding:0px 0px 0px 0px">
-	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg" title="Karte von Illarion" rel="Karte von Illarion" class="lightwindow" onclick="return false;">
+	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>http://illarion.org/general/de_map_of_illarion.jpg" title="Karte von Illarion" rel="Karte von Illarion" class="lightwindow" onclick="return false;">
 		<img src="<?php echo Page::getURL(); ?>/general/de_bigthumb_map_of_illarion.jpg" width="400" height="331" alt="Karte von Illarion. Hier klicken um das Bild in der vollen Größe zu sehen." />
 	</a>
 </div>
