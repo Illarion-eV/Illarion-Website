@@ -512,7 +512,7 @@ ul.navigation {
 	list-style: none none outside;
 	color: #DBD9CC;
 	line-height: 20px;
-	text-align: center;
+	text-align: left;
 }
 
 ul.navigation li {
