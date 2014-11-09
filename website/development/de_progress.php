@@ -22,9 +22,9 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Verbesserung der Charaktererstellung</span></li>
-    <li><span class="planned">Optische Verbesserungen des Clients und seiner Bedienbarkeit</span></li>
-    <li><span class="planned">Aktualisierung der Homepage</span></li>
+    <li>Verbesserung der Charaktererstellung</li>
+    <li>Optische Verbesserungen des Clients und seiner Bedienbarkeit</li>
+    <li>Aktualisierung der Homepage</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9822" target="_blank">Meilenstein II: Neue Gegenstände und verbessertes Handwerk</a></h2>
@@ -34,9 +34,9 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Über 100 neue Waffen und Rüstungen</span></li>
-    <li><span class="planned">Neugstaltung der Handwerksrezepte</span></li>
-    <li><span class="planned">Verbesserung des Sammelns von Ressourcen</span></li>
+    <li>Über 100 neue Waffen und Rüstungen</li>
+    <li>Neugstaltung der Handwerksrezepte</li>
+    <li>Verbesserung des Sammelns von Ressourcen</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9823" target="_blank">Meilenstein III: Magie</a></h2>
@@ -46,9 +46,9 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Arkane Magie mit dutzenden Zaubersprüchen</span></li>
-    <li><span class="planned">Magie der Götter für Templer und Priester</span></li>
-    <li><span class="planned">Handwerksähnliche Verzauberungen und Alchemieverbesserungen</span></li>
+    <li>Arkane Magie mit dutzenden Zaubersprüchen</li>
+    <li>Magie der Götter für Templer und Priester</li>
+    <li>Handwerksähnliche Verzauberungen und Alchemieverbesserungen</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9914" target="_blank">Meilenstein IV: Überarbeitung des Kampfsystems</a></h2>
@@ -58,9 +58,9 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Klarere Verwendung der Attribute</span></li>
-    <li><span class="planned">Fehlerfreier Fertigkeitenzuwachs</span></li>
-    <li><span class="planned">Der Nutzen der verschiedenen Waffen und Rüstungen wird fairer verteilt</span></li>
+    <li>Klarere Verwendung der Attribute</li>
+    <li>Fehlerfreier Fertigkeitenzuwachs</li>
+    <li>Der Nutzen der verschiedenen Waffen und Rüstungen wird fairer verteilt</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9825" target="_blank">Meilenstein V: Sandkasten und Immersion</a></h2>
@@ -70,9 +70,9 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Bau eigener Häuser</span></li>
-    <li><span class="planned">Dynamische Ereignisse</span></li>
-    <li><span class="planned">Erhöhung der Atmosphäre im Spiel</span></li>
+    <li>Bau eigener Häuser</li>
+    <li>Dynamische Ereignisse</li>
+    <li>Erhöhung der Atmosphäre im Spiel</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9824" target="_blank">Meilenstein VI: Inhalte, Quests und Dungeons</a></h2>
@@ -82,7 +82,7 @@
 <h3>Highlights</h3>
 
 <ul>
-    <li><span class="planned">Neugestaltung der Geschichte und Beschreibung Illarions</span></li>
-    <li><span class="planned">Veröffentlichung von dutzenden neuen Büchern</span></li>
-    <li><span class="planned">Hinzufügen von neuen, komplexen und herausfordernden Quests</span></li>
+    <li>Neugestaltung der Geschichte und Beschreibung Illarions</li>
+    <li>Veröffentlichung von dutzenden neuen Büchern</li>
+    <li>Hinzufügen von neuen, komplexen und herausfordernden Quests</li>
 </ul>
