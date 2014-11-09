@@ -1570,8 +1570,8 @@ class Page {
 				 . '			<input type="hidden" name="action" value="login" />' . PHP_EOL
 				 . '			<input type="submit" name="login" value="' . (self::$language === 'de' ? 'Einloggen' : 'Login') . '" style="width:100%;" />' . PHP_EOL
 				 . '		</li>' . PHP_EOL
-				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_register.php">' . (self::$language === 'de' ? 'Registrieren' : 'Register') . '</a></li>' . PHP_EOL
-				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_forgot_pw.php">' . (self::$language === 'de' ? 'Passwort weg?' : 'Lost password?') . '</a></li>' . PHP_EOL ;
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_register.php">' . (self::$language === 'de' ? '▪ Registrieren' : '▪ Register') . '</a></li>' . PHP_EOL
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_forgot_pw.php">' . (self::$language === 'de' ? '▪ Passwort weg?' : '▪ Lost password?') . '</a></li>' . PHP_EOL ;
 			}
 
 			$xml = simplexml_load_file(self::getRootPath() . '/illarion/screenshots.xml');
