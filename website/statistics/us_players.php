@@ -211,7 +211,7 @@ logging on. Usually other follow if someone is playing.</p>
 <?php if (IllaUser::auth('quests')): ?>
 <p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New quest</button></p>
 <?php elseif (IllaUser::loggedIn()): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">New player quest</button></p>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New player quest</button></p>
 <?php endif; ?>
 
 <?php if ( count($quests) > 0): ?>
