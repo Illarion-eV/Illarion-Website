@@ -35,7 +35,7 @@
 
 <ul>
     <li>Über 100 neue Waffen und Rüstungen</li>
-    <li>Neugstaltung der Handwerksrezepte</li>
+    <li>Neugestaltung der Handwerksrezepte</li>
     <li>Verbesserung des Sammelns von Ressourcen</li>
 </ul>
 

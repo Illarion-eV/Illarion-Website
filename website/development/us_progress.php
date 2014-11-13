@@ -29,43 +29,43 @@
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9822" target="_blank">Milestone II: New items and improved crafting</a></h2>
 
-<p>Mit diesem Milestone werden dem Spiel eine sinnvolle Anzahl von Gegenständen hinzugefügt, insbesondere Waffen und Rüstungen. Ihr Nutzen und ihre Herstellung werden in Hinblick auf die Handwerke, deren Verteilung über die Städte, Ressourcen, Verbrauchsmaterialien und Preise gestaltet.</p>
+<p>This milestone will add a reasonable amount of new items to the game, especially weapons and armours, define their use properly and make the available to players. The crafts for these items will be rebalanced in terms of craft distribution over towns, resources, needed materials for items and also prices.</p>
 
 <h3>Highlights</h3>
 
 <ul>
     <li>More than 100 new weapons and armours</li>
-    <li>Neugstaltung der Handwerksrezepte</li>
-    <li>Verbesserung des Sammelns von Ressourcen</li>
+    <li>Redesign of crafting recipes</li>
+    <li>Improvements to gathering of resources</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9823" target="_blank">Milestone III: Magic</a></h2>
 
-<p>Magie ist ein notwendiges Features eines Fantasyspiels. Mit diesem Milestone werden wir die arkane Magie wieder einführen und ebenso die heilige Magie der Götter. Entsprechende Anpassungen an handwerksähnliche Systeme wie Alchemie werden erfolgen.</p>
+<p>Magic is a mandatory feature für a fantasy game. With this milestone arcane magic will return to the game and also, we'll release divine magic for priests. Adjustments to craft like actions like alchemy will also be included./p>
 
 <h3>Highlights</h3>
 
 <ul>
-    <li>Arkane Magie mit dutzenden Zaubersprüchen</li>
-    <li>Magie der Götter für Templer und Priester</li>
-    <li>Handwerksähnliche Verzauberungen und Alchemieverbesserungen</li>
+    <li>Arcane magic with dozens of spells</li>
+    <li>Divine magic of the gods for templars and priests</li>
+    <li>Craft like enchanting and improvements to alchemy</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9914" target="_blank">Milestone IV: Review the fighting system</a></h2>
 
-<p>Das derzeitige Kampfsystem bedarf einer Überarbeitung, um fairer, klarer und verlässlicher zu werden. Dieser Milestone wird für die Spieler nur wenige sichtbare Veränderungen bringen, jedoch zu einem deutlich verbesserten und flexibleren Kampfsystem führen.</p>
+<p>The current fighting system is in need of a review to become more fair, clear and relieable. This milestone won't bring many visible changes but an improved and more flexible fighting system.</p>
 
 <h3>Highlights</h3>
 
 <ul>
-    <li>Klarere Verwendung der Attribute</li>
-    <li>Fehlerfreier Fertigkeitenzuwachs</li>
-    <li>Der Nutzen der verschiedenen Waffen und Rüstungen wird fairer verteilt</li>
+    <li>Clear use of attributes</li>
+    <li>Skillgain without issues</li>
+    <li>The use of weapons and armours will be distributed in a fair way</li>
 </ul>
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9825" target="_blank">Milestone V: Sandboxing and immersion</a></h2>
 
-<p>Illarion steht im Wettbewerb mit anderen Spielen. Um sich als Indie-Spiel abzuheben, bedarf es Features, die kein anderes Spiel aufweisen kann. Mit diesem Milestone wollen wir solche Features einführen, die der Immersion dienen und dem Spieler zusätzliche Freiräume ermöglichen, seinen Charakter auszuspielen.</p>
+<p>Illarion competes with other games. To stand out as an indie game, it needs features no other game can offer. This milestone will add features for enhanced immersion and enable new options for the players to shape their characters.</p>
 
 <h3>Highlights</h3>
 
@@ -77,7 +77,7 @@
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9824" target="_blank">Milestone VI: Content, quests and dungeons</a></h2>
 
-<p>By adding further quests and dungeons das Hinzufügen weiterer Quests und Dungeons soll in diesem Milestone die Attraktivität des Spiels erhöht werden. Mit ihnen soll der Hintergrund des Spiels ("Lore") dem Spieler nähergebracht werden. Bücher, NPCs, Inschriften und Ereignisse sollen an jedem wichtigen Ort den Hintergrund präsent machen.</p>
+<p>By adding further quests and dungeons, this milestone will increased the attractivity of this game. With these features, the lore shall be transported to the player. Books, NPCs, inscriptions and events will teach the lore at every noteable location.</p>
 
 <h3>Highlights</h3>
 
