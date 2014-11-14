@@ -18,9 +18,6 @@
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>

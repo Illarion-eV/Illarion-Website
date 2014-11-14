@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_orcs.php','de_story.php','de_gnomes.php' ); ?>
+<?php navBarTop( 'de_orcs.php','de_story.php','' ); ?>
 
 <h1>Echsenmenschen</h1>
 
@@ -18,9 +18,6 @@
 		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>
