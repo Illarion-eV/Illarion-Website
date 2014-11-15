@@ -16,21 +16,14 @@ Spitzen und schneebedeckten Gipfel das Firmament zu berühren scheinen. Mit sein
 erkennt er die versteckten Eingänge zu den großen Minen der <a href="de_dwarfs.php" class="eyecatcher">Zwerge</a>, die sich tief in das Herz
 der Gebirgszüge gegraben haben, um dem Stein seine wertvollsten Schätze zu rauben.</p>
 
-<p>Nicht weit davon entfernt erkennt er auch die offenen Höhlen der erfindungsreichen <a href="de_gnomes.php" class="eyecatcher">Gnome</a>.
-Elegant kreist er einen Augenblick über den Zugängen bis dichter Rauch aufsteigt und ihm die Sicht nimmt.</p>
-
 <p>Das Heulen der Wolfsrudel begleitet den Adler, der an den Flanken der Berge in die tiefen
 waldbedeckten Täler hinabgleitet. Hier und dort erhebt sich eine Ansammlung von großen
 Bradamenbäumen aus der sonst geschlossenen Decke der Baumwipfel und in dem dichten Geflecht der
 Äste sind die Wohnstätten der <a href="de_elfes.php" class="eyecatcher">Elfen</a> nur schwer zu erkennen, wie auch ihre Existenz nur selten
-Spuren in der unberührten Natur hinterlässt. Helle Funken stoben auf, als er sich zur kurzen Rast auf einem Baum niederläßt und das helle
-Lachen der spielenden <a href="de_fairies.php" class="eyecatcher">Feen</a> hallte durch die Baumwipfel. Unter den vergnügten Blicken der geflügelten
-Wesen breitet der Adler erneut seine Schwingen aus und erhebt sich in die Lüfte.</p>
+Spuren in der unberührten Natur hinterlässt.</p>
 
-<p>Weiter, immer weiter fliegt der Adler und auf
-seinem Weg werden die Berge abgelöst von einer sanft geschwungenen Hügellandschaft, nur
-unterbrochen von den großen Flüssen, die träge dem Meer entgegenströmen. In dieser fruchtbaren
-Gegend findet man die Dörfer der friedfertigen <a href="de_halflings.php" class="eyecatcher">Halblinge</a>, deren Behausungen von den
+<p>Weiter, immer weiter fliegt der Adler und auf seinem Weg werden die Berge abgelöst von einer sanft geschwungenen Hügellandschaft, nur
+unterbrochen von den großen Flüssen, die träge dem Meer entgegenströmen. In dieser fruchtbaren Gegend findet man die Dörfer der friedfertigen <a href="de_halflings.php" class="eyecatcher">Halblinge</a>, deren Behausungen von den
 wohlgepflegten Gärten und Feldern umgeben sind.</p>
 
 <?php cap(D); ?>
@@ -38,9 +31,7 @@ wohlgepflegten Gärten und Feldern umgeben sind.</p>
 <p>och schon bald erreicht der Adler auf seinem Flug die endlosen Steppen und unwirtlichen
 Wüsten. Vereinzelt steigt Rauch in den Himmel empor und zeugt von den Behausungen und
 Lagerplätzen der kriegerischen <a href="de_orcs.php" class="eyecatcher">Orks</a>. Ihre Schlachtrufe hallen weit über die Ebene und jedem, der
-diese Rufe vernimmt, ist wohlgeraten, ihr Gebiet mit Vorsicht zu betreten.
-Nicht sehr weit davon entfernt erkennt er ein weiteres, kleineres Lager. Schon aus der Ferne erkennt er an dem Durcheinander der durch das Lager eilenden
-Kreaturen, dass es sich um eines der vielen Lager der <a href="de_goblins.php" class="eyecatcher">Goblins</a> handelt.</p>
+diese Rufe vernimmt, ist wohlgeraten, ihr Gebiet mit Vorsicht zu betreten.</p>
 
 <p>Endlich erreicht der Adler die sturmgepeitschte Küste und sieht die großen Städte der stolzen
 <a href="de_humans.php" class="eyecatcher">Menschen</a>, auf deren Mauern und Zinnen die Fahnen im Winde flattern. Zwischen den Türmen und

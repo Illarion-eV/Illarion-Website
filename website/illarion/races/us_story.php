@@ -16,15 +16,10 @@ jagged peaks and snowcapped summits. With its sharp eyes it recognizes the hidde
 the great mines of the <a href="us_dwarfs.php" class="eyecatcher">dwarfs</a>, who dug deep into the heart of the mountain ranges to rob the
 cold stone of its most precious treasures.</p>
 
-<p>Not far away dense smoke is rising out of the caves of the <a href="us_gnomes.php" class="eyecatcher">gnomes</a>.
-The eagle drifts for a moment upon the winds and watches the hustle and bustle of this inventive people, before he turns away.</p>
-
 <p>The howling of the wolf packs is accompanying the eagle who is gliding down the flanks of the
 mountains into the wood covered valleys. Here and there a group of bradamen trees rises above
 the continuous cover of tree tops and in the thick netting of branches the <a href="us_elfes.php" class="eyecatcher">elven</a> dwellings are
-hard to recognize, as their existence seldom leaves marks in the untouched nature.
-Sparklings fly up as the eagle lands an a tree for a short rest and the friendly laughters of playing
-<a href="us_fairies.php" class="eyecatcher">faeries</a> sounds through the tree tops.</p>
+hard to recognize, as their existence seldom leaves marks in the untouched nature.</p>
 
 <p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
 hilly landscape, only intermittent by the great rivers slowly streaming towards the sea. In this
@@ -36,9 +31,7 @@ well maintained gardens and fields.</p>
 <p>re long the eagle reaches the endless wastelands and inhospitable deserts. Few and far
 between a column of smoke rises into the sky, testifying the dwellings and campgrounds of the
 <a href="us_orcs.php" class="eyecatcher">orcs</a>. Their battle cries echo far across the plains and everyone hearing their shouts is well
-advised to enter their realm with great care.
-Near he also sees the smaller and more chaoticly arranged campgrounds of the <a href="us_goblins.php" class="eyecatcher">goblins</a>.
-In spite of the distance, it's not hard to recognize them through the camp of bustling creatures.</p>
+advised to enter their realm with great care.</p>
 
 <p>Finally the eagle reaches the windswept coast and comes across the big cities of the proud
 <a href="us_humans.php" class="eyecatcher">humans</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs
