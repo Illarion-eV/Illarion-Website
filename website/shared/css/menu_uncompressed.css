@@ -19,7 +19,7 @@ ul.menu_top {
 }
 ul.menu_top a {
 	cursor: pointer;
-	min-width:128px;
+	min-width:215px;
 	display:block;
 }
 ul.menu_top a.none {
@@ -32,7 +32,7 @@ ul.menu_top ul {
 }
 ul.menu_top li {
 	background: #29150C url(pics/uebbg.jpg) repeat scroll 0 0;
-	min-width:128px;
+	min-width:215px;
 }
 ul.menu_top > li {
 	float:left;
