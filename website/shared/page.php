@@ -1553,8 +1553,8 @@ class Page {
 				}
 				$search_keywords[++$search_cnt] = '{ACCOUNT_NAVIGATION_FRAME}';
 				$search_replace[$search_cnt] = '		<li class="seperator">' . (self::isGerman() ? 'Hallo ' : 'Hello ') . $name . '</li>' . PHP_EOL
-				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::isGerman() ? '▪ Charaktere' : '▪ Characters') . '</a></li>' . PHP_EOL
-				 . '		<li class="seperator"><a href="' . self::getURL() . '/community/account/' . self::$language . '_acc_settings.php" class="importaint">▪ Account</a></li>' . PHP_EOL
+				 . '		<li><a href="' . self::getURL() . '/community/account/' . self::$language . '_charlist.php" class="importaint">' . (self::isGerman() ? 'Charaktere' : 'Characters') . '</a></li>' . PHP_EOL
+				 . '		<li class="seperator"><a href="' . self::getURL() . '/community/account/' . self::$language . '_acc_settings.php" class="importaint">Account</a></li>' . PHP_EOL
 				 . '		<li>' . PHP_EOL
 				 . '			<input type="hidden" name="action" value="logout" />' . PHP_EOL
 				 . '			<input type="submit" name="logout" value="' . (self::$language === 'de' ? 'Ausloggen' : 'Logout') . '" style="width:100%;" />' . PHP_EOL
