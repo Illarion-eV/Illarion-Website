@@ -1,6 +1,6 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Background - Client',
+	create_header( 'Illarion - Background - Humans',
 	'Races Illarions',
 	'Background, Races, History', '', 'menu', '', true );
 	include_header();

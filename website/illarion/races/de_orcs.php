@@ -1,6 +1,6 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrund - Client',
+	create_header( 'Illarion - Hintergrund - Orks',
 	'Rassen Illarions',
 	'Hintergrund, Rassen, Geschichte', '', 'menu', '', true );
 	include_header();

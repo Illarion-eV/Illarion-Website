@@ -1,8 +1,8 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrundgeschichte',
-	'Diese Seite enthält einige Worte zur Hintergrundgeschichte Illarions.',
-	'Hintergrundgeschichte, Story, Geschichte', '', '', '', true );
+	create_header( 'Illarion - Völker',
+	'Diese Seite enthält einige Worte zu den Völkern Illarions.',
+	'Völker, Rassen, Land', '', '', '', true );
 	include_header();
 ?>
 
