@@ -2,11 +2,11 @@
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
 	create_header( 'Illarion - Völker',
 	'Diese Seite enthält einige Worte zu den Völkern Illarions.',
-	'Völker, Rassen, Land', '', '', '', true );
+	'Völker, Rassen, Land', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( '','de_story.php','de_humans.php' ); ?>
+<?php navBarTop( 'de_lizards.php','de_story.php','de_humans.php' ); ?>
 
 <h1>Die Völker der Welt</h1>
 

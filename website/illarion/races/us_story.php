@@ -2,11 +2,11 @@
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
 	create_header( 'Illarion - Races',
 	'This page will provide you with a short resume of the races of Illarion.',
-	'races, people, land', '', '', '', true );
+	'races, people, land', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( 'us_story.php','us_story.php','us_elfes.php' ); ?>
+<?php navBarTop( 'us_lizards.php','us_story.php','us_elfes.php' ); ?>
 
 <h1>Races of the world</h1>
 
