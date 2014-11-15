@@ -24,27 +24,27 @@
 
 <table class="center">
 <tr>
-<td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="männlicher Mensch"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="weiblicher Mensch"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="männlicher Elf"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="weiblicher Elf"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="männlicher Halbling"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="weiblicher Halbling"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="männlicher Zwerg"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="weiblicher Zwerg"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="männlicher Ork"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="weiblicher Ork"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="Echsenmensch"/></td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="male human"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="female human"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="male elf"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="female elf"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="male halfling"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="female halfling"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="male dwarf"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="female dwarf"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="male orc"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="female orc"/></td>
+<td>Â </td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="lizard"/></td>
 </tr>
 </table>
 
@@ -91,7 +91,7 @@ water.</p>
 <p>he world of Illarion is filled with unexplainable wonders and mysterious places, unutterable
 horrors and dangerous locations. Out of the dark past demons and monsters arise, longing for the
 lives of the mortals. Therefore it is not astonishing that in this magical world in which
-everyone&#39;s destiny is fading, the races seek refuge and comfort with the Gods. 16 deities
+everyone's destiny is fading, the races seek refuge and comfort with the Gods. 16 deities
 determine the life in Illarion and exert influence on everything that proves to be beneficial to
 them. In consequence, wars have been started and reconciled, whole families seized power and were
 overthrown. May it be that there are a few madmen who renounce their existence and defy their
