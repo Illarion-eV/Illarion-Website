@@ -65,7 +65,7 @@ unterbrochen vom Anthilbach, die träge dem Meer entgegenströmen. In dieser fru
 
 <?php cap(D); ?>
 
-<p>och schon bald erreicht der Adler auf seinem Flug die endlosen Steppen und unwirtlichen
+<p>och schon bald erreicht der Adler auf seinem Flug das endlose Ödland der unwirtlichen
 Kantabiwüste. Vereinzelt steigt Rauch in den Himmel empor und zeugt von den Behausungen und
 Lagerplätzen der kriegerischen <a href="de_orcs.php" class="eyecatcher">Orks</a>. Ihre Schlachtrufe hallen weit über die Ebene und jedem, der
 diese Rufe vernimmt, ist wohlgeraten, ihr Gebiet mit Vorsicht zu betreten.</p>
