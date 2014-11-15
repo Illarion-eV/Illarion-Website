@@ -12,7 +12,7 @@
 
 <div class="menu">
 	<ul class="menu_top">
-		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_elfes.php">Elfes</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
