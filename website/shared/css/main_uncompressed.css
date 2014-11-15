@@ -509,8 +509,7 @@ div.menu_title img {
 ul.navigation {
 	margin: 16px 8px;
 	padding: 0;
-	list-style-type: square;
-	list-style: none none outside;
+	list-style: square none outside;
 	color: #DBD9CC;
 	line-height: 20px;
 	text-align: left;
