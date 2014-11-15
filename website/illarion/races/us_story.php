@@ -91,7 +91,7 @@ water.</p>
 <p>he world of Illarion is filled with unexplainable wonders and mysterious places, unutterable
 horrors and dangerous locations. Out of the dark past demons and monsters arise, longing for the
 lives of the mortals. Therefore it is not astonishing that in this magical world in which
-everyone's destiny is fading, the races seek refuge and comfort with the Gods. Sixteen deities
+everyone's destiny is fading, the races seek refuge and comfort with the <a href="http://illarion.org/illarion/goetter/us_bck_10.php" class="eyecatcher">Gods</a>. Sixteen deities
 determine the life in Illarion and exert influence on everything that proves to be beneficial to
 them. In consequence, wars have been started and reconciled, whole families seized power and were
 overthrown. May it be that there are a few madmen who renounce their existence and defy their
