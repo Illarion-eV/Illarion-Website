@@ -63,8 +63,7 @@ hard to recognize, as their existence seldom leaves marks in the untouched natur
 
 <p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
 hilly landscape of Yewdale, only intermittent by the Anthil Brook, slowly streaming towards the sea. In this
-fertile area to the feet of the towers of the mysterious city of <a href="http://illarion.org/illarion/us_factions.php#3" class="eyecatcher">Runewick</a>, the cottages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by
-well maintained gardens and fields.</p>
+fertile area to the feet of the towers of the mysterious city of <a href="http://illarion.org/illarion/us_factions.php#3" class="eyecatcher">Runewick</a>, the cottages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by well maintained gardens and fields.</p>
 
 <?php cap(E); ?>
 
@@ -74,12 +73,10 @@ between a column of smoke rises into the sky, testifying the dwellings and campg
 advised to enter their realm with great care.</p>
 
 <p>Finally the eagle reaches the windswept coast and comes across the big city of the proud
-<a href="us_humans.php" class="eyecatcher">humans</a> of <a href="http://illarion.org/illarion/us_factions.php#1" class="eyecatcher">Cadomyr</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs
-it recognizes the buzz of activity filling the market place and the sunbeams are reflected by
-the armour of the knights riding on horse back and trying to find their way through the
-crowd.</p>
+<a href="us_humans.php" class="eyecatcher">humans</a> of <a href="http://illarion.org/illarion/us_factions.php#1" class="eyecatcher">Cadomyr</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs it recognizes the buzz of activity filling the market place and the sunbeams are reflected by
+the armour of the knights riding on horse back and trying to find their way through the crowd.</p>
 
-<p>Starting from the harbor the eagle follows the huge merchant ships setting out on their
+<p>Starting from the harbour the eagle follows the huge merchant ships setting out on their
 perilous trips across the sea. Above the rolling waves it recognizes the dim outline of the
 great praying halls, which were built by the Lizardmen deep below the surface. They live in an
 element which is alien to the eagle and while it circles in the sky the <a href="us_lizards.php" class="eyecatcher">lizardmen</a> are gliding

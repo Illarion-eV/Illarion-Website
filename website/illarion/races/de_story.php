@@ -51,33 +51,29 @@
 <?php cap(E); ?>
 
 <p>in Adler schraubt sich immer höher in den Himmel über Illarion. Auf der Suche nach Beute
-streifen seine Blicke über die weiten Lande. Er sieht die hohen Berge, die mit ihren schroffen
-Spitzen und schneebedeckten Gipfel das Firmament zu berühren scheinen. Mit seinen scharfen Augen
-erkennt er die versteckten Eingänge zu den großen Minen der <a href="de_dwarfs.php" class="eyecatcher">Zwerge</a>, die sich tief in das Herz
+streifen seine Blicke über die weiten Lande. Er sieht die Namenlosen Berge, die mit ihren schroffen
+Spitzen und schneebedeckten Gipfel das Firmament zu berühren scheinen und Wacht über die reiche Kaufmannsstadt <a href="http://illarion.org/illarion/de_factions.php#2" class="eyecatcher">Galmair</a> halten. Mit seinen scharfen Augen erkennt er die versteckten Eingänge zu den großen Hammerfall-Minen der <a href="de_dwarfs.php" class="eyecatcher">Zwerge</a>, die sich tief in das Herz
 der Gebirgszüge gegraben haben, um dem Stein seine wertvollsten Schätze zu rauben.</p>
 
-<p>Das Heulen der Wolfsrudel begleitet den Adler, der an den Flanken der Berge in die tiefen
-waldbedeckten Täler hinabgleitet. Hier und dort erhebt sich eine Ansammlung von großen
-Bradamenbäumen aus der sonst geschlossenen Decke der Baumwipfel und in dem dichten Geflecht der
+<p>Das Heulen der Wolfsrudel begleitet den Adler, der an den Flanken der Namenlosen Berge zum Wachwald hinabgleitet. Hier und dort erhebt sich eine Ansammlung von großen
+Eldaneichen aus der sonst geschlossenen Decke der Baumwipfel und in dem dichten Geflecht der
 Äste sind die Wohnstätten der <a href="de_elfes.php" class="eyecatcher">Elfen</a> nur schwer zu erkennen, wie auch ihre Existenz nur selten
 Spuren in der unberührten Natur hinterlässt.</p>
 
-<p>Weiter, immer weiter fliegt der Adler und auf seinem Weg werden die Berge abgelöst von einer sanft geschwungenen Hügellandschaft, nur
-unterbrochen von den großen Flüssen, die träge dem Meer entgegenströmen. In dieser fruchtbaren Gegend findet man die Dörfer der friedfertigen <a href="de_halflings.php" class="eyecatcher">Halblinge</a>, deren Behausungen von den
-wohlgepflegten Gärten und Feldern umgeben sind.</p>
+<p>Weiter, immer weiter fliegt der Adler und auf seinem Weg werden die Berge abgelöst von der sanft geschwungenen Hügellandschaft Eibenthals, nur
+unterbrochen vom Anthilbach, die träge dem Meer entgegenströmen. In dieser fruchtbaren Gegend zu Füßen der Türme der magischen Stadt <a href="http://illarion.org/illarion/de_factions.php#3" class="eyecatcher">Runewick</a> findet man die Höfe der friedfertigen <a href="de_halflings.php" class="eyecatcher">Halblinge</a>, deren Behausungen von wohlgepflegten Gärten und Feldern umgeben sind.</p>
 
 <?php cap(D); ?>
 
 <p>och schon bald erreicht der Adler auf seinem Flug die endlosen Steppen und unwirtlichen
-Wüsten. Vereinzelt steigt Rauch in den Himmel empor und zeugt von den Behausungen und
+Kantabiwüste. Vereinzelt steigt Rauch in den Himmel empor und zeugt von den Behausungen und
 Lagerplätzen der kriegerischen <a href="de_orcs.php" class="eyecatcher">Orks</a>. Ihre Schlachtrufe hallen weit über die Ebene und jedem, der
 diese Rufe vernimmt, ist wohlgeraten, ihr Gebiet mit Vorsicht zu betreten.</p>
 
-<p>Endlich erreicht der Adler die sturmgepeitschte Küste und sieht die großen Städte der stolzen
+<p>Endlich erreicht der Adler die sturmgepeitschte Küste und sieht die große Stadt <a href="http://illarion.org/illarion/de_factions.php#1" class="eyecatcher">Cadomyr</a> der stolzen
 <a href="de_humans.php" class="eyecatcher">Menschen</a>, auf deren Mauern und Zinnen die Fahnen im Winde flattern. Zwischen den Türmen und
 Dächern erkennt er das Treiben auf den überfüllten Marktplätzen und die Sonnenstrahlen werden
-von den Rüstungen der Ritter reflektiert, die sich hoch zu Ross einen Weg durch die Menge
-bahnen.</p>
+von den Rüstungen der Ritter reflektiert, die sich hoch zu Ross einen Weg durch die Menge bahnen.</p>
 
 <p>Vom Hafen aus folgt der Adler den großen Handelsschiffen, die ihre gefährliche Reise über das
 Meer antreten. Über den sich hebenden und senkenden Wogen erkennt er tief unter der
