@@ -11,42 +11,54 @@ Page::Init();
 	<h2>Getting Started</h2>
 
 <ul>
-	<li><a class="hidden" href="#gs1">What are the system requirements for Illarion?</a></li>
-	<li><a class="hidden" href="#gs2">How do I download the game?</a></li>
-	<li><a class="hidden" href="#gs3">Why does downloading take so long?</a></li>
-	<li><a class="hidden" href="#gs4">Why isn't the game starting?</a></li>
-	<li><a class="hidden" href="#gs5">How do I log into the game</a></li>
+    <li><a class="hidden" href="#gs1">What exactly is Illarion for a game?</a></li>
+	<li><a class="hidden" href="#gs2">How much do I have to pay for Illarion? Is there a monthly fee or an item shop?</a></li>
+	<li><a class="hidden" href="#gs3">What are the system requirements for Illarion?</a></li>
+	<li><a class="hidden" href="#gs4">What do I need to play?</a></li>
+	<li><a class="hidden" href="#gs5">How do I download the game?</a></li>
+	<li><a class="hidden" href="#gs6">How do I log into the game?</a></li>
+    <li><a class="hidden" href="#gs7">From what races and classes can I chose?</a></li>
+	<li><a class="hidden" href="#gs8">What attributes should I chose?</a></li>
+	<li><a class="hidden" href="#gs9">I have a technical problem. Where can I get support?</a></li>
+
 </ul>
 
 	<h2>First Steps Into Illarion</h2>
 
 <ul>
-	<li><a class="hidden" href="#fs6">I just started playing and don't know what I want to do!</a></li>
-	<li><a class="hidden" href="#fs7">How can I attack and kill somebody?</a></li>
-	<li><a class="hidden" href="#fs8">How do I pick up items?</a></li>
-	<li><a class="hidden" href="#fs9">How do I use or equip items?</a></li>
-	<li><a class="hidden" href="#fs10">I equipped an item so why doesn't it show on my character?</a></li>
-	<li><a class="hidden" href="#fs11">Does the game have storage facilities?</a></li>
+	<li><a class="hidden" href="#fs1">I just started playing and don't know what to do!</a></li>
+	<li><a class="hidden" href="#fs2">How can I attack and kill somebody?</a></li>
+	<li><a class="hidden" href="#fs3">How do I pick up items?</a></li>
+	<li><a class="hidden" href="#fs4">How do I use or equip items?</a></li>
+	<li><a class="hidden" href="#fs5">How does crafting work in this game?</a></li>
+	<li><a class="hidden" href="#fs6">What about magic? How can I cast spells?</a></li>
+	<li><a class="hidden" href="#fs7">What faction should I chose?</a></li>
+	<li><a class="hidden" href="#fs8">Does the game have storage facilities?</a></li>
+	<li><a class="hidden" href="#fs9">I died! How do I resurrect? Is there a death penalty?</a></li>
 </ul>
 
 	<h2>Game Concepts</h2>
 
 <ul>
-	<li><a class="hidden" href="#gc12">What is an RPG?</a></li>
-	<li><a class="hidden" href="#gc13">What are CMs and GMs?</a></li>
-	<li><a class="hidden" href="#gc14">Why do some of the players talk funny?</a></li>
-	<li><a class="hidden" href="#gc15">How do I find out an item's stats?</a></li>
-	<li><a class="hidden" href="#gc16">Where can I see my exact skill levels and attributes?</a></li>
-	<li><a class="hidden" href="#gc17">How do I send global chat messages?</a></li>
-	<li><a class="hidden" href="#gc18">What is "Power Gaming" and is it allowed?</a></li>
-	<li><a class="hidden" href="#gc19">What is "Power Emoting" and is it allowed?</a></li>
+	<li><a class="hidden" href="#gc1">What is an RPG?</a></li>
+	<li><a class="hidden" href="#gc2">What are CMs and GMs?</a></li>
+	<li><a class="hidden" href="#gc3">Why do some of the players talk funny?</a></li>
+	<li><a class="hidden" href="#gc4">How do I find out an item's stats?</a></li>
+	<li><a class="hidden" href="#gc5">Where can I see my skill levels?</a></li>
+	<li><a class="hidden" href="#gc6">How do I send global chat messages?</a></li>
+	<li><a class="hidden" href="#gc7">The game took taxes from me! What is this all about?</a></li>
+	<li><a class="hidden" href="#gc8">How can I find out my rank with my faction?</a></li>
+	<li><a class="hidden" href="#gc9">I've been reading about the special skill system of Illarion and Mental Capacity. What's that?</a></li>	
 </ul>
 
 	<h2>Contributing to Illarion</h2>
 
 <ul>
-	<li><a class="hidden" href="#co20">I found a bug or have a request. How do I report it?</a></li>
-	<li><a class="hidden" href="#co21">How can I contribute to Illarion?</a></li>
+	<li><a class="hidden" href="#co1">I read Illarion is Open Source. What does that mean?</a></li>
+	<li><a class="hidden" href="#co2">I found a bug or have a feature request. How do I report it?</a></li>
+	<li><a class="hidden" href="#co3">Can players write books, NPCs or even quests?</a></li>
+	<li><a class="hidden" href="#co4">How can I contribute to Illarion? What skills are needed?</a></li>
+	<li><a class="hidden" href="#co5">What features are planned?</a></li>
 </ul>
 
 <?php insert_go_to_top_link(); ?>
