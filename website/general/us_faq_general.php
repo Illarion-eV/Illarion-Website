@@ -69,15 +69,7 @@ Page::Init();
 
 
 <ul>
-	<li class="question"><a id="gs1"><strong>What are the system requirements for Illarion?</strong></a></li>
-		<strong>Operating system:</strong> <br />
-		Windows 98/ME/2000/XP/Vista/7 <br />
-		Linux Kernel 2.4.20 or newer <br />
-		MacOS X 10.4 Tiger/10.5 Leopard/10.6 Snow Leopard <br />
-		Solaris 8/9/10 (only 32 bit)<br /> 
-		<strong>Graphics card:</strong> <br />16MB memory, driver with OpenGL support<br />
-		<strong>CPU:</strong> <br />500 MHz and better<br /><br />
-		A Java 1.5 runtime environment or higher (preferably 1.6 as 1.7 is not officially supported yet)<br /><br />
+	<li class="question"><a id="gs1"></a><strong>What are the system requirements for Illarion?</strong></li>
 
 		Windows Vista does not support the free graphics standard OpenGL by default. Therefore Illarion will not run with the graphics drivers included with Vista. With a better graphics driver from your graphics card manufacturer including OpenGL support, everything should work.<br /><br />
 
