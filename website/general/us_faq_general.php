@@ -69,21 +69,14 @@ Page::Init();
 
 
 <ul>
-	<li class="question"><a id="gs1"></a><strong>What are the system requirements for Illarion?</strong></li>
+	<li class="question"><a id="gs3"></a><strong>What are the system requirements for Illarion?</strong></li>
 
-		Windows Vista does not support the free graphics standard OpenGL by default. Therefore Illarion will not run with the graphics drivers included with Vista. With a better graphics driver from your graphics card manufacturer including OpenGL support, everything should work.<br /><br />
+	    <p>You can review the system requirements on the <a href="http://illarion.org/illarion/us_java_download.php">download page of the website</a>. Illarion is a cross platform game that runs on Windows, Linux and MacOS. Some operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
 
-	<li class="question"><a id="gs2"><strong>Where can I download the game?</strong></a></li>
-		On the <a href="http://illarion.org/illarion/us_java_download.php">Download page of the website</a>. It will then download and install Illarion. You will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.
-	<br /><br />
-	<li class="question"><a id="gs3"><strong>Why does downloading take so long?</strong></a></li>
-		The client is 35MB. With a slow connection, this might take a while to download. From time to time, the installation stalls for a while but please be patient, the download will continue automatically. Use the time and read the forums and other FAQs
-	<br /><br />
-	<li class="question"><a id="gs4"><strong>Why isn't the game starting?</strong></a></li>
-		If the game is installed and launched correctly but fails to start please check the <a href="http://illarion.org/community/forums/viewforum.php?f=3" >Support Forums</a> for any known issues. Also make sure you launch the .jnlp file with Java Webstart.
-	<br /><br />
-	<li class="question"><a id="gs5"><strong>How do I log into the game?</strong></a></li>
-	Once you have <a href="http://illarion.org/community/account/us_charlist.php" >created your character</a> you need to log onto the client with the relevant character's name that you want to play (names are case sensitive) and your account password
+	<li class="question"><a id="gs5"></a><strong>Where can I download the game?</strong></li>
+		
+		<p>Illarion can be downloaded for many operation systems on the <a href="http://illarion.org/illarion/us_java_download.php">download page</a>. During the setup, you will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.</p>
+		
 </ul>
 
 <?php insert_go_to_top_link(); ?>
