@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_orcs.php','de_story.php','' ); ?>
+<?php navBarTop( 'de_orcs.php','de_story.php','de_story.php' ); ?>
 
 <h1>Echsenmenschen</h1>
 

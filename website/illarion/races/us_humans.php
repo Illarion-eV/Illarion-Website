@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( '','us_story.php','us_elfes.php' ); ?>
+<?php navBarTop( 'us_story.php','us_story.php','us_elfes.php' ); ?>
 
 <h1>Humans</h1>
 
