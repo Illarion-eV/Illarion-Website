@@ -51,30 +51,30 @@
 <?php cap(A); ?>
 
 <p>n eagle is escalating higher and higher into the sky above Illarion. In search of prey, it
-scans the vast lands. It sees the high mountains, seemingly touching the firmament with their
-jagged peaks and snowcapped summits. With its sharp eyes it recognizes the hidden entrances to
-the great mines of the <a href="us_dwarfs.php" class="eyecatcher">dwarfs</a>, who dug deep into the heart of the mountain ranges to rob the
+scans the vast lands. It sees the Nameless Mountains, seemingly touching the firmament with their
+jagged peaks and snowcapped summits, guarding the wealthy merchant town of Galmair. With its sharp eyes it recognizes the hidden entrances to
+the great Hammefall mines of the <a href="us_dwarfs.php" class="eyecatcher">dwarfs</a>, who dug deep into the heart of the mountain ranges to rob the
 cold stone of its most precious treasures.</p>
 
 <p>The howling of the wolf packs is accompanying the eagle who is gliding down the flanks of the
-mountains into the wood covered valleys. Here and there a group of bradamen trees rises above
+Nameless Mountains into the Sentry Forest. Here and there a group of Eldan Oaks rises above
 the continuous cover of tree tops and in the thick netting of branches the <a href="us_elfes.php" class="eyecatcher">elven</a> dwellings are
 hard to recognize, as their existence seldom leaves marks in the untouched nature.</p>
 
 <p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
-hilly landscape, only intermittent by the great rivers slowly streaming towards the sea. In this
-fertile area the villages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by
+hilly landscape of Yewdale, only intermittent by the Anthil Brook, slowly streaming towards the sea. In this
+fertile area to the feet of the towers of the mysterious city of Runewick, the villages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by
 well maintained gardens and fields.</p>
 
 <?php cap(E); ?>
 
-<p>re long the eagle reaches the endless wastelands and inhospitable deserts. Few and far
+<p>re long the eagle reaches the endless wastelands and inhospitable Kantabi desert. Few and far
 between a column of smoke rises into the sky, testifying the dwellings and campgrounds of the
 <a href="us_orcs.php" class="eyecatcher">orcs</a>. Their battle cries echo far across the plains and everyone hearing their shouts is well
 advised to enter their realm with great care.</p>
 
-<p>Finally the eagle reaches the windswept coast and comes across the big cities of the proud
-<a href="us_humans.php" class="eyecatcher">humans</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs
+<p>Finally the eagle reaches the windswept coast and comes across the big city of the proud
+<a href="us_humans.php" class="eyecatcher">humans</a> of Cadomyr, on which walls and battlements the flags flap in the wind. Between the towers and roofs
 it recognizes the buzz of activity filling the market place and the sunbeams are reflected by
 the armour of the knights riding on horse back and trying to find their way through the
 crowd.</p>
@@ -91,7 +91,7 @@ water.</p>
 <p>he world of Illarion is filled with unexplainable wonders and mysterious places, unutterable
 horrors and dangerous locations. Out of the dark past demons and monsters arise, longing for the
 lives of the mortals. Therefore it is not astonishing that in this magical world in which
-everyone's destiny is fading, the races seek refuge and comfort with the Gods. 16 deities
+everyone's destiny is fading, the races seek refuge and comfort with the Gods. Sixteen deities
 determine the life in Illarion and exert influence on everything that proves to be beneficial to
 them. In consequence, wars have been started and reconciled, whole families seized power and were
 overthrown. May it be that there are a few madmen who renounce their existence and defy their
