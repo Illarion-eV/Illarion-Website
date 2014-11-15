@@ -45,8 +45,8 @@ writing, consisting of different signs and scratch marks. In times of war, an or
 allowing allies to exchange messages without leaving the enemy the possibility to read them.</p>
 
 <?php cap(M); ?>
-<p>ost orc tribes honor different gods. Oldra, for most tribes, is the goddess of fertility and growth, and is prayed to in
-spring. She is also called the "spring– goddess" by them. In Summer, they honor Brágon, the "daily–sun–maker" or
+<p>ost orc tribes honour different gods. Oldra, for most tribes, is the goddess of fertility and growth, and is prayed to in
+spring. She is also called the "spring– goddess" by them. In Summer, they honour Brágon, the "daily–sun–maker" or
 "strong–in–summer". Since summertime often means wartime for an orc tribe, some tribes pray to Moshran, called "bone–crusher"
 or simply "blood lord". Either Moshran or Malachín is the war god of a tribe, sometimes both.</p>
 
@@ -54,7 +54,7 @@ or simply "blood lord". Either Moshran or Malachín is the war god of a tribe, s
 caves must be filled with food for the tribe and its herds.</p>
 
 <?php cap(D); ?>
-<p>uring Winter, the tribes live in the winter caves, and Cherga is the honored goddess. Winter is the time of death, time of
+<p>uring Winter, the tribes live in the winter caves, and Cherga is the honoured goddess. Winter is the time of death, time of
 spirits, time of the ancestors. Some of the ancestors' skulls, are placed in holy places in the winter quarters, and
 some in the chief's and shaman's quarters, to help them in their decisions and to speak to them in dreams.</p>
 

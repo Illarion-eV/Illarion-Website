@@ -50,7 +50,7 @@ even when the writing is a thousand years old. But since these scrolls have to b
 when exposed to air, their use outside the water only makes sense when stored in flasks or special boxes.</p>
 
 <?php cap(I); ?>
-<p>In the life of a Lizard, religion and honor are the most important things. The older a lizard gets, the wiser he becomes.
+<p>In the life of a Lizard, religion and honour are the most important things. The older a lizard gets, the wiser he becomes.
 At a age of about a hundred and fifty or seventy years, old lizard start to sleep much, and spend the rest of their life
 dreaming, meditating and praying in a Lizard temple. Legends say that some Lizards live that way for hundreds of years before
 they die. Some of them suddenly awake with a holy shine in their eyes, and without saying a single word, walk away never to be

@@ -32,7 +32,7 @@ avoid wearing any kind of footwear. They also tend live longer than humans.</p>
 the generations these caverns can obtain quite a respectable size, filled with lots of furniture and other items as Halflings
 feel that everythign might have a use, and don't throw anything away. There are actually some who have houses
 similar to humans but most of the Halflings wouldn't call this comfortable. In these homes they live together in big family
-clans led by a clan chief. This is a honorary title rather than an actual position of power. The function of this position
+clans led by a clan chief. This is a honourary title rather than an actual position of power. The function of this position
 can be described as organising feasts and festivals and especially keeping a well stocked pantry as Halflings tend to show
 up for dinner uninvited and deem it improper if they have to leave with an empty stomach. Malicious tongues say
 that three things are most important for Halflings. That would be breakfast, lunch and dinner! They take a serious
