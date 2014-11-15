@@ -6,7 +6,21 @@
 	include_header();
 ?>
 
+<?php navBarTop( '','de_story.php','de_humans.php' ); ?>
+
 <h1>Die Völker der Welt</h1>
+
+<div class="menu">
+	<ul class="menu_top">
+		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
+		<li class="end" />
+	</ul>
+</div>
 
 <?php cap(E); ?>
 
