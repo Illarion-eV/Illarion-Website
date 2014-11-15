@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="münnlicher Ork"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="weiblicher Ork"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="männlicher Ork"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="weiblicher Ork"/></td></tr></table>
 <?php cap(D); ?>
 <p>er normale Ork ist ein wenig kleiner als ein Mensch. Ihre Haut ist grünlich und zwei von ihren unteren Kieferzähnen
 sind länger als die anderen und reichen ein wenig über die Lippen.</p>

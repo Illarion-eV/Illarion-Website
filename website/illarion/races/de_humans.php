@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="münnlicher Mensch"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="weiblicher Mensch"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="männlicher Mensch"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="weiblicher Mensch"/></td></tr></table>
 <?php cap(D); ?>
 <p>er Menschen Gedächtnis ist kurz. So, wie auch ihre Lebensspanne im Vergleich zu den anderen Völkern nicht
 lange währt, so reicht das Wissen über ihre eigene Geschichte und ihre Wurzeln nicht tief. In den vielen Kriegen,
