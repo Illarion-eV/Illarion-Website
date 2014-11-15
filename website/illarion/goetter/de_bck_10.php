@@ -28,8 +28,7 @@
    aber wer wei&szlig; welche Geschichten wahr sind. Die meisten der alten G&ouml;tter haben Illarion
    verlassen.... niemand wei&szlig; wohin sie gingen.... wohl an einen Ort an dem sie von keinem
    Sterblichen mehr gest&ouml;rt werden. Nur ab und zu kehren sie zur&uuml;ck, um in die Handlungen auf der
-   Insel einzugreifen.<br />
-   Die &Auml;ltesten w&auml;hlten Ihr Anh&auml;nger selbst aus, mit einer Ausnahme: Tanora (Zelphia).</p>
+   Insel einzugreifen.</p>
 
 <ul>
 <li><a class="hidden" href="de_bck_11.php">Ushara - G&ouml;ttin der Erde</a></li>

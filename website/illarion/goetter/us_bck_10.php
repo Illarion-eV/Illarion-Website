@@ -24,9 +24,6 @@
    them have retreated from Illarion - no one knows where they went - and do not like to be
    disturbed by mortals. But sometimes, they return and take action.</p>
 
-   <p>The Elder Gods pick their few followers themselves, with one exception : Tanora
-   (Zelphia).</p>
-
 <ul>
 <li><a class="hidden" href="us_bck_11.php">Ushara - Goddess of Earth</a></li>
 <li><a class="hidden" href="us_bck_11.php">Br&aacute;gon - God of Fire</a></li>
