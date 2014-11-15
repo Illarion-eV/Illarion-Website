@@ -510,13 +510,13 @@ ul.navigation {
 	margin: 16px 8px;
 	padding: 0;
 	list-style: square inside none;
-	color: #DBD9CC;
+    color: #DDC687;
 	line-height: 20px;
 	text-align: left;
 }
 
 ul.navigation li {
-	color: #DBD9CC;
+    color: #DDC687;
 	margin-bottom: 3pt;
 }
 
