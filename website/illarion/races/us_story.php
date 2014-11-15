@@ -52,7 +52,7 @@
 
 <p>n eagle is escalating higher and higher into the sky above Illarion. In search of prey, it
 scans the vast lands. It sees the Nameless Mountains, seemingly touching the firmament with their
-jagged peaks and snowcapped summits, guarding the wealthy merchant town of Galmair. With its sharp eyes it recognizes the hidden entrances to
+jagged peaks and snowcapped summits, guarding the wealthy merchant town of <a href="http://illarion.org/illarion/us_factions.php#2" class="eyecatcher">Galmair</a>. With its sharp eyes it recognizes the hidden entrances to
 the great Hammefall mines of the <a href="us_dwarfs.php" class="eyecatcher">dwarfs</a>, who dug deep into the heart of the mountain ranges to rob the
 cold stone of its most precious treasures.</p>
 
@@ -63,7 +63,7 @@ hard to recognize, as their existence seldom leaves marks in the untouched natur
 
 <p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
 hilly landscape of Yewdale, only intermittent by the Anthil Brook, slowly streaming towards the sea. In this
-fertile area to the feet of the towers of the mysterious city of Runewick, the villages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by
+fertile area to the feet of the towers of the mysterious city of <a href="http://illarion.org/illarion/us_factions.php#3" class="eyecatcher">Runewick</a>, the cottages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by
 well maintained gardens and fields.</p>
 
 <?php cap(E); ?>
@@ -74,7 +74,7 @@ between a column of smoke rises into the sky, testifying the dwellings and campg
 advised to enter their realm with great care.</p>
 
 <p>Finally the eagle reaches the windswept coast and comes across the big city of the proud
-<a href="us_humans.php" class="eyecatcher">humans</a> of Cadomyr, on which walls and battlements the flags flap in the wind. Between the towers and roofs
+<a href="us_humans.php" class="eyecatcher">humans</a> of <a href="http://illarion.org/illarion/us_factions.php#1" class="eyecatcher">Cadomyr</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs
 it recognizes the buzz of activity filling the market place and the sunbeams are reflected by
 the armour of the knights riding on horse back and trying to find their way through the
 crowd.</p>
