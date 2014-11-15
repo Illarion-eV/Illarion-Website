@@ -32,7 +32,7 @@
 <td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="weiblicher Elf"/></td>
 <td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="münnlicher Halbling"/></td>
+<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="männlicher Halbling"/></td>
 <td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="weiblicher Halbling"/></td>
 <td> </td>
