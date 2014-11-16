@@ -148,7 +148,7 @@ Page::Init();
 		
 	<li class="question"><a id="fs9"></a><strong>I died! How do I resurrect? Is there a death penalty?</strong></li>
 		
-		<p></p>
+		<p>A dead character is automatically revived at the city of their chosen faction after one minute. No skills or items are lost but the equipment takes damage. However, a recently revived character suffers from 'resurrection sickness'. This severely weakens them, making it difficult to immediately return to combat. Resurrection sickness is temporary, and will be cured by refraining from combat until a character is healthy again.</p>
 		
 </ul>
 
@@ -187,7 +187,7 @@ Page::Init();
 		
 	<li class="question"><a id="gc7"></a><strong>The game took taxes from me! What is this all about?</strong></li>
 	
-		<p>Gems.</p>	
+		<p>Every citizen from one of the three major factions is charged taxes. These are 1% of a character's total currency, collected once an ingame month. These are used to pay for town services such as protection, infrastructure upkeep, etc. In addition, generous faction leaders have also been known to reward loyal tax-payers with magical gemstones.</p>	
 		
 	<li class="question"><a id="gc8"></a><strong>How can I find out my rank with my faction?</strong></li>
 	
