@@ -222,7 +222,7 @@ Page::Init();
 
 	<li class="question"><a id="co3"></a><strong>Can players write books, NPCs or even quests?</strong></li>
 	
-		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="<a href="http://illarion.org/community/us_contact.php#4">Contact a developera</a> and read the <a href="http://illarion.org/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
+		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="http://illarion.org/community/us_contact.php#4">Contact a developer</a> and read the <a href="http://illarion.org/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
 		
 	<li class="question"><a id="co4"></a><strong>How can I contribute to Illarion? What skills are needed?</strong></li>
 	
