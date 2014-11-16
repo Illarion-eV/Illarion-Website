@@ -30,7 +30,7 @@ Page::Init();
 	<li><a class="hidden" href="#fs2">How can I attack and kill somebody?</a></li>
 	<li><a class="hidden" href="#fs3">How do I pick up items?</a></li>
 	<li><a class="hidden" href="#fs4">How do I use or equip items?</a></li>
-	<li><a class="hidden" href="#fs5">How does crafting work in this game?</a></li>
+	<li><a class="hidden" href="#fs5">How does crafting work in this game? How do I repair items?</a></li>
 	<li><a class="hidden" href="#fs6">What about magic? How can I cast spells?</a></li>
 	<li><a class="hidden" href="#fs7">What faction should I chose?</a></li>
 	<li><a class="hidden" href="#fs8">Does the game have storage facilities?</a></li>
@@ -130,9 +130,11 @@ Page::Init();
 	
 		<p>To equip an item, press 'I' to open the inventory move the item you want to equip to a free slot in your inventory. If you hold your mouse over a slot it shows you what you can put here. The slot has to be free to put something new in it. To do this, move the previous item somewhere else (e.g in the bag of your character). This works for weapons, armour or anything else you wear. If you want to use an item (e.g. eating an apple), perform a double click.</p>
 
-	<li class="question"><a id="fs5"></a><strong>How does crafting work in this game?</strong></li>
+	<li class="question"><a id="fs5"></a><strong>How does crafting work in this game? How do I repair items?</strong></li>
 		
-		<p></p>
+		<p>Crafting generally consists of three steps: Gathering of raw materials such as ores, producing intermediate items such as ingots and crafting final items that can be used such as swords. For each step, you need dedicated tools and locations, e.g. you will need to use a pick axe in a mine to mine ores and a hammer and anvil to forge a sword. Almost every item in this game can be crafted by players and crafting can be a lot of fun, taking into account the vast variety of crafts, resources and products.</p>
+		
+		<p>Repairing items is to by dedicated NPCs, though. You can find one in each major city. The charge a fee for their service, but repairing is usually more cheap than buying a new item from a NPC.</p>
 
 	<li class="question"><a id="fs6"></a><strong>What about magic? How can I cast spells?</strong></li>
 		
