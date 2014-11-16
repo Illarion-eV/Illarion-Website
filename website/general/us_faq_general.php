@@ -173,7 +173,7 @@ Page::Init();
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
 		
-		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound medieval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too.<BR> Bad Example: "ok hi wanna buy sword lol!!!111"<BR> Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
+		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound medieval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too. Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
 		
 
 	<li class="question"><a id="gc4"></a><strong>How do I find out an item's stats?</strong></li>
