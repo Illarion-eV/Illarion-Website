@@ -88,19 +88,21 @@ Page::Init();
 		
 	<li class="question"><a id="gs6"></a><strong>How do I log into the game?</strong></li>
 	
-		<p> </p>
+		<p>The setup installs the Illarion launcher that shows the latest news and ingame events. Click on "Play!" to start the game. You have to enter your account name (NOT your character's name) along with your password. Chose one of your characters, you may create up to five characters.</p>
 		
 	<li class="question"><a id="gs7"></a><strong>From what races and classes can I chose?</strong></li>
 	
-		<p> </p>
+		<p>Illarion features six playable <a href="http://illarion.org/illarion/races/us_story.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
+		
+		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. Except for magic, you can combine as many skills as you like, only your imagination limits what your characters may become.
 		
 	<li class="question"><a id="gs8"></a><strong>What attributes should I pick?</strong></li>
 	
-		<p> </p>
+		<p>We have prepared typical attribute sets for common playing styles in the account system. As there are no strict classes, you are not bond to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a fee.</p>
 		
 	<li class="question"><a id="gs9"></a><strong>I have a technical problem. Where can I get support?</strong></li>
 		
-		<p> </p>
+		<p>There is a dedicated <a href="http://illarion.org/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="http://illarion.org/community/us_chat.php">chat</a> to get in contact with the gamemasters, developers and other players.</p>
 		
 </ul>
 
