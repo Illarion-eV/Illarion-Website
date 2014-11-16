@@ -175,7 +175,7 @@ Page::Init();
 
 	<li class="question"><a id="gc4"></a><strong>How do I find out an item's stats?</strong></li>
 
-		<p>Hover.</p>	
+		<p>Hovering your mouse over the item will provide details on an item name, its level and skill requirement, value, weight, quality and durability. As Illarion is not a game about numbers but about immersion and stories told, detailled technical stats are not shown. For weapons and armours, you can derive the use directly from the shown level.</p>	
 
 	<li class="question"><a id="gc5"></a><strong>Where can I see my skill levels?</strong></li>
 
