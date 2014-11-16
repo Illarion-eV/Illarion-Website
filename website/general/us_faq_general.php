@@ -139,11 +139,11 @@ Page::Init();
 
 	<li class="question"><a id="fs6"></a><strong>What about magic? How can I cast spells?</strong></li>
 		
-		<p></p>
+		<p>As of now, alchemy is available to players. By brewing powerful potions, you can strengthen yourself and your comrades. To become an alchemist, you need to find a magical place in the wilderness. Later, we will add arcane magic and divine magic to the game.</p>
 		
 	<li class="question"><a id="fs7"></a><strong>What faction should I chose?</strong></li>
 		
-		<p></p>
+		<p>The land Illarion is divided between three factions: <a href="http://illarion.org/illarion/us_factions.php#2">Wealthy Galmair</a>, <a href="http://illarion.org/illarion/us_factions.php#1">noble Cadomyr</a> and <a href="http://illarion.org/illarion/us_factions.php#3">wise Runewick</a>. Just pick the faction that fits the motives of your character best. You can revise your decisions later in the game or even become an outlaw.</p>
 		
 	<li class="question"><a id="fs8"></a><strong>Does the game have storage facilities?</strong></li>
 		
@@ -182,7 +182,7 @@ Page::Init();
 
 	<li class="question"><a id="gc5"></a><strong>Where can I see my skill levels?</strong></li>
 
-		<p>Press 'C' to review your character's traits. The bars for each skill represent how far you are away from the next level up. Skills range from 1-100, from a novice to a true grandmaster.</p>	
+		<p>Press 'C' to review your character's skills. The bars for each skill represent how far you are away from the next level up. Skills range from 1-100, from a novice to a true grandmaster.</p>	
 
 	<li class="question"><a id="gc6"></a><strong>How do I send global chat messages?</strong></li>
 	
@@ -194,7 +194,7 @@ Page::Init();
 		
 	<li class="question"><a id="gc8"></a><strong>How can I find out my rank with my faction?</strong></li>
 	
-		<p>Notaries.</p>	
+		<p>In each city, there is a notary NPC who can tell you your rank. The higher your rank, the more well known you are to your faction leader and also, the more advanced your are in his or her favour.</p>	
 		
 	<li class="question"><a id="gc9"></a><strong>I've been reading about the special skill system of Illarion and Mental Capacity. What's that?</strong></li>
 	
@@ -212,7 +212,9 @@ Page::Init();
 	
 	<li class="question"><a id="co1"></a><strong>I read Illarion is Open Source. What does that mean?</strong></li>
 	
-		<p></p>
+		<p>Illarion is a free game, not just in terms of cost, but also in terms of free code. The sources of the Java software (client and development tools) are released
+		under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>. The sources of server, scripts and maps are released under <a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
+		These sources are thus <a href="http://illarion.org/development/us_opensource.php">available for public review</a> and usage.</p>
 		
 	<li class="question"><a id="co2"></a><strong>I found a bug or have a feature request. How do I report it?</strong></li>
 		
@@ -220,7 +222,7 @@ Page::Init();
 
 	<li class="question"><a id="co3"></a><strong>Can players write books, NPCs or even quests?</strong></li>
 	
-		<p>Yes.</p>
+		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="<a href="http://illarion.org/community/us_contact.php#4">Contact a developera</a> and read the <a href="http://illarion.org/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
 		
 	<li class="question"><a id="co4"></a><strong>How can I contribute to Illarion? What skills are needed?</strong></li>
 	
