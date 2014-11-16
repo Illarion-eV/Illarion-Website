@@ -6,7 +6,7 @@ Page::setKeywords( array( 'FAQ, Questions, General' ) );
 Page::Init();
 ?>
 
-		<h1>General FAQ</h1>
+<h1>General FAQ</h1>
 
 	<h2>Getting Started</h2>
 
@@ -20,7 +20,6 @@ Page::Init();
     <li><a class="hidden" href="#gs7">From what races and classes can I chose?</a></li>
 	<li><a class="hidden" href="#gs8">What attributes should I pick?</a></li>
 	<li><a class="hidden" href="#gs9">I have a technical problem. Where can I get support?</a></li>
-
 </ul>
 
 	<h2>First Steps Into Illarion</h2>

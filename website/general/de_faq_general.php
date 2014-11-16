@@ -8,7 +8,7 @@ Page::Init();
 
 <h1>Allgemeine FAQ</h1>
 
-<h2>Aller Anfang ist schwer</h2>
+	<h2>Aller Anfang ist schwer</h2>
 
 <ul>
        <li><a class="hidden" href="#1">Was sind die Systemanforderungen von Illarion?</a></li>
