@@ -195,8 +195,10 @@ Page::Init();
 		
 	<li class="question"><a id="gc9"></a><strong>I've been reading about the special skill system of Illarion and Mental Capacity. What's that?</strong></li>
 	
-		<p></p>	
-			
+		<p>Illarion's skill system is based on "learning by doing", there are no skills points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items at a higher quality. A character may also develop combat skills, improving their ability to weild more advanced weapons or wear exotic armor. </p>	
+		
+		<p>The Mental Capacity refers to a character's ability to focus while improving. The more actions you do over time, the less you learn from each action. This way, it is on you how much time you want to invest on training your skills, the result after a given time will be the same. A character can reverse a 'high' degree of mental fatigue by performing tasks which are not skill-dependant such as talking to other characters and exploring. We have designed the skill system in this way to give players the opportunity to roleplay or train as much as they want without one style of playing being favoured by the game.</p>
+		
 </ul>
 <?php insert_go_to_top_link(); ?>
 <br />
