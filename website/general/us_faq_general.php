@@ -68,7 +68,7 @@ Page::Init();
 <ul>
 	<li class="question"><a id="gs1"></a><strong>What exactly is Illarion for a game?</strong></li>
 
-		<p>Illarion is a free online roleplaying game. It features a high fantasy setting of dragons, elves and magic. Roleplaying is not optional but the very core of this game. It is independently developed ("indie game") by volunteers who share the passion to provide a truly free roleplaying game for players from all around the world. Illarion is not about grinding for levels or gold coins but about immersion, friendship and epic tales, to be written by the deeds of the characters of the game.</p>
+		<p>Illarion is a free indie online roleplaying game that focuses on true roleplaying. All of the characters that you will encounter during your time here are living, breathing inhabitants of this mysterious world. Each character has their own past, goals, flaws, strengths and personality. Roleplaying is not optional but the very core of this game. It is independently developed by volunteers who share the passion to provide a truly free roleplaying game for players from all around the world. Illarion is not about grinding for levels or gold coins but about immersion, friendship and epic tales, to be written by the deeds of the characters of the game.</p>
 		
 	<li class="question"><a id="gs2"></a><strong>How much do I have to pay for Illarion? Is there a monthly fee or an item shop?</strong></li>
 		

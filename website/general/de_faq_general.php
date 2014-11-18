@@ -68,11 +68,11 @@ Page::Init();
 <ul>
 	<li class="question"><a id="gs1"></a><strong>Was für eine Art Spiel ist Illarion?</strong></li>
 
-		<p>Illarion is a free online roleplaying game. It features a high fantasy setting of dragons, elves and magic. Roleplaying is not optional but the very core of this game. It is independently developed ("indie game") by volunteers who share the passion to provide a truly free roleplaying game for players from all around the world. Illarion is not about grinding for levels or gold coins but about immersion, friendship and epic tales, to be written by the deeds of the characters of the game.</p>
+		<p>Illarion ist ein kostenloses Indie-Rollenspiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Rollenspiel ist nicht einfach nur eine Nebensache sondern der Kern des gesamten Spieles. Es wird Freiwilligen entwickelt, welche das Ziel vereint, ein wirklich kostenloses Rollenspiel für Spieler aus der ganzen Welt zu schaffen. Bei Illarion geht es nicht um das Erarbeiten von Leveln oder Goldstücken sondern um das Eintauchen in eine fremde Welt, Freundschaften und Legenden, welche mit der Feder der Charaktere des Spiels geschrieben werden.</p>
 		
 	<li class="question"><a id="gs2"></a><strong>Wieviel kostet Illarion? Gibt es eine Monatsgebühr oder einen Itemshop?</strong></li>
 		
-		<p>Illarion is completely free. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/us_society.php">Illarion e.V.</a>. If you want, you can support the work of the <a href="http://illarion.org/community/us_society.php">society</a> by a voluntary <a href="http://illarion.org/community/us_society.php">donation</a> or by becoming a supporting member.</p>
+		<p>Illarion ist vollständig kostenlos. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a>. If you want, you can support the work of the <a href="http://illarion.org/community/de_society.php">society</a> by a voluntary <a href="http://illarion.org/community/de_society.php">donation</a> or by becoming a supporting member.</p>
 		
 	<li class="question"><a id="gs3"></a><strong>Was sind die Systemanforderungen von Illarion?</strong></li>
 
