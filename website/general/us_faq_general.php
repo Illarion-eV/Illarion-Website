@@ -168,7 +168,7 @@ Page::Init();
 
 	<li class="question"><a id="gc2"></a><strong>What are CMs and GMs?</strong></li>
 	
-		<p>A CM is a Community Manager. Their role is to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue. A GM is a Game Master. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion.</p>
+		<p>A CM is a <a href="http://illarion.org/community/us_contact.php#2">Community Manager</a>. Their role is to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue. A GM is a <a href="http://illarion.org/community/us_contact.php#3">Gamemaster</a>. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion.</p>
 		
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
