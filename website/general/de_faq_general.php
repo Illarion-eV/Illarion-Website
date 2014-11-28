@@ -134,17 +134,17 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="fs5"></a><strong>Wie funktionieren Handwerke in diesem Spiel? Wie kann ich Gegenstände reparieren?</strong></li>
 		
-		<p>Crafting generally consists of three steps: Gathering of raw materials such as ores, producing intermediate items such as ingots and crafting final items that can be used such as swords. For each step, you need dedicated tools and locations, e.g. you will need to use a pick axe in a mine to mine ores and a hammer and anvil to forge a sword. Almost every item in this game can be crafted by players and crafting can be a lot of fun, taking into account the vast variety of crafts, resources and products.</p>
-		
-		<p>Repairing items is done by dedicated NPCs, though. You can find one in each major city. They charge a fee for their services, but repairing is usually more cheap than buying a new item from a NPC.</p>
+		<p>Die Ausübung eines Handwerks besteht generell aus drei Schritten: Dem Sammeln von Rohmaterialien, wie zum Beispiel Erze, dem Produzieren von Zwischenprodukten wie Barren und dem Herstellen der eigentlichen Gegenstände, die dann auch benutzt werden kann, z.B. ein Schwert. Für jeden Schritt brauchst du geeignete Werkzeuge und Orte. Um ein Schwert zu schmieden, musst du zum Beispiel zuerst mit einer Spitzhacke in eine Mine gehen und dort Eisenerze abbauen oder einen Hammer an einem Amboss um ein Schwert aus Eisenbarren herzustellen. Beinahe jeder Gegenstand in diesem Spiel kann von Spielern hergestellt werden und ein Handwerk auszuüben  kann sehr viel Spaß machen, wenn man die enorme Vielfalt an Handwerken, Rohstoffen und Produkten bedenkt.</p>
+
+		<p>Für die Reparatur eines Gegenstands sind dagegen spezielle NPCs zuständig. Davon gibt es einen in jeder größeren Stadt. Sie verlangen einen Entgelt für die Reparatur, doch einen Gegenstand zu reparieren ist im Normalfall billiger als einen neuen von einem NPC zu kaufen.</p>
 
 	<li class="question"><a id="fs6"></a><strong>Und was ist mit Magie? Wie zaubere ich?</strong></li>
 		
-		<p>As of now, alchemy is available to players. By brewing powerful potions, you can strengthen yourself and your comrades. To become an alchemist, you need to find a magical place in the wilderness. Later, we will add arcane magic and divine magic to the game.</p>
+		<p>Im Moment steht den Spielern die Alchemie offen. Durch das Brauen starker Tränke kannst du dich und deine Freunde stärken. Um ein Alchemist zu werden musst du einen magischen Ort in der Wildnis finden. Später werden wir arkane und göttliche Magie zum Spiel hinzufügen.</p>
 		
 	<li class="question"><a id="fs7"></a><strong>Welches Reich sollte ich wählen?</strong></li>
 		
-		<p>The land Illarion is divided between three factions: <a href="http://illarion.org/illarion/us_factions.php#2">Wealthy Galmair</a>, <a href="http://illarion.org/illarion/us_factions.php#1">noble Cadomyr</a> and <a href="http://illarion.org/illarion/us_factions.php#3">wise Runewick</a>. Just pick the faction that fits the motives of your character best. You can revise your decisions later in the game or even become an outlaw.</p>
+		<p>Auf Illarion gibt es drei Fraktionen die das Land unter sich aufgeteilt haben: das <a href="http://illarion.org/illarion/de_factions.php#2">reiche Galmair</a>, das <a href="http://illarion.org/illarion/de_factions.php#1">edle Cadomyr</a> und das <a href="http://illarion.org/illarion/de_factions.php#3">weise Runewick</a>. Wähle einfach das Reich aus, dessen Motive am besten zu deinem Charakter passen. Du kannst dich auch später im Spiel noch umentscheiden oder sogar ein Vogelfreier werden.</p>
 		
 	<li class="question"><a id="fs8"></a><strong>Gibt es im Spiel Lagerplätze?</strong></li>
 		
@@ -152,7 +152,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="fs9"></a><strong>Ich bin gestorben! Wie kann ich mich wiederbeleben? Gibt es eine Bestrafung für den Tod?</strong></li>
 		
-		<p>A dead character is automatically revived at the city of their chosen faction after one minute. No skills or items are lost but the equipment takes damage. However, a recently revived character suffers from 'resurrection sickness'. This severely weakens them, making it difficult to immediately return to combat. Resurrection sickness is temporary, and will be cured by refraining from combat until a character is healthy again.</p>
+		<p>Ein toter Charakter wird automatisch nach einer Minute in der Stadt seines Reich wiederbelebt. Der Charakter verliert beim Tod keine Gegenstände oder Fähigkeiten, nur die Ausüstung nimmt Schaden. Allerdings leidet der Charakter unter der "Wiederbelebungskrankheit". Das schwächt sehr und macht es schwierig sich sofort wieder in den Kampf zu stürzen. Dies ist nur ein temporärer Effekt und kann geheilt werden indem man solange von Kampf fernbleibt, bis sich der Charakter wieder erholt hat.</p>
 		
 </ul>
 

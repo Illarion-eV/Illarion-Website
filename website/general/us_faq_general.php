@@ -133,7 +133,7 @@ Page::Init();
 
 	<li class="question"><a id="fs5"></a><strong>How does crafting work in this game? How do I repair items?</strong></li>
 		
-		<p>Crafting generally consists of three steps: Gathering of raw materials such as ores, producing intermediate items such as ingots and crafting final items that can be used such as swords. For each step, you need dedicated tools and locations, e.g. you will need to use a pick axe in a mine to mine ores and a hammer and anvil to forge a sword. Almost every item in this game can be crafted by players and crafting can be a lot of fun, taking into account the vast variety of crafts, resources and products.</p>
+		<p>Crafting generally consists of three steps: Gathering of raw materials such as ores, producing intermediate items such as ingots and crafting final items that can be used such as swords. For each step, you need dedicated tools and locations, e.g. you will need to use a pick axe in a mine to mine ores and a hammer and anvil to forge a sword out of iron ingots. Almost every item in this game can be crafted by players and crafting can be a lot of fun, taking into account the vast variety of crafts, resources and products.</p>
 		
 		<p>Repairing items is done by dedicated NPCs, though. You can find one in each major city. They charge a fee for their services, but repairing is usually more cheap than buying a new item from an NPC.</p>
 
