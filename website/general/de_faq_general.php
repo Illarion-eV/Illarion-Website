@@ -229,13 +229,13 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="co4"></a><strong>Wie kann ich Illarion helfen? Was muss ich können?</strong></li>
 	
-		<p>Illarion kann man auf vielerlei Arten unterstützen. You could support the <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a>, assist with the <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklung des Spieles</a> or help to <a href="http://illarion.org/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
+		<p>Illarion kann man auf vielerlei Arten unterstützen. Du könntest dem Verein <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a> beitreten, die <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklung des Spieles</a> unterstützen oder dabei helfen, das Spiel <a href="http://illarion.org/community/forums/viewforum.php?f=77">bekannter zu machen</a>. Erzähl auch deinen Freunden von Illarion!</p>
 		
-		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="http://illarion.org/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
+		<p>Wenn du fortgeschrittene Fähigkeiten in Java, C++, LUA, PHP oder mit 3D-Grafiken hast, wende dich doch an einen der <a href="http://illarion.org/community/de_contact.php#4">Entwickler</a>, um deinen Beitrag zur Entwicklung beizusteuern. Beachte hierbei, dass Illarion kein gewinnorientierte Projekt ist und somit auch keine Vergütung gezahlt werden kann.</p>
 		
 	<li class="question"><a id="co5"></a><strong>Welche Features sind für die Zukunft noch geplant?</strong></li>
 	
-		<p>Illarion's development follows six clearly specified <a href="http://illarion.org/development/de_progress.php">Meilensteinen</a>. Those milestones stand for a state of the game that does not require any future reworking on existing features. Crafting and fighting shall be reworked and more types of magic will be added to the game. Also, we'll add unique features to the game no other game can offer to enhance the immersion.</p>
+		<p>Die Entwicklung Illarions folgt sechs klar definierten <a href="http://illarion.org/development/de_progress.php">Meilensteinen</a>. Diese Meilensteine stehen für einen Zustand des Spieles, der keine weitere Nacharbeit von bestehenden Features mehr erfordert. Handwerk und Kampf werden überarbeitet werden und weitere Magiearten werden dem Spiel hinzugefügt. Ebenso werden wir weitere Features hinzufügen, die kein anderes Spiel zu bieten hat, um die Besonderheit der Welt Illarion zu betonen.</p>
 	
 </ul>
 

@@ -232,7 +232,7 @@ Page::Init();
 		
 	<li class="question"><a id="co5"></a><strong>What features are planned for the future?</strong></li>
 	
-		<p>Illarion's development follows six clearly specified <a href="http://illarion.org/development/us_progress.php">milestones</a>. Those milestones stand for a state of the game that does not require any future reworking on existing features. Crafting and fighting shall be reworked and more types of magic will be added to the game. Also, we'll add unique features to the game no other game can offer to enhance the immersion.</p>
+		<p>Illarion's development follows six clearly specified <a href="http://illarion.org/development/us_progress.php">milestones</a>. Those milestones stand for a state of the game that does not require any future reworking on existing features. Crafting and fighting shall be reworked and more types of magic will be added to the game. Also, we'll add unique features to the game no other game can offer to enhance the immersion and uniqueness of the world Illarion.</p>
 	
 </ul>
 
