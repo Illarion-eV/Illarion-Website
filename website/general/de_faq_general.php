@@ -216,9 +216,8 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 	
 	<li class="question"><a id="co1"></a><strong>Ich habe gelesen, dass Illarion 'Open Source' ist. Was bedeutet das?</strong></li>
 	
-		<p>Illarion is a free game, not just in terms of cost, but also in terms of free code. The sources of the Java software (client and development tools) are released
-		under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>. The sources of server, scripts and maps are released under <a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
-		These sources are thus <a href="http://illarion.org/development/us_opensource.php">available for public review</a> and usage.</p>
+		<p>Illarion ist ein freies Spiel, nicht nur kostenfrei sondern auch der Spielcode ist frei verwendbar. Der Sourcecode der Java-Software (Client und Entwicklungstools) ist unter der <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a> veröffentlicht. Der Sourcecode des Servers, der Skripte und der Karten ist unter der <a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a> veröffentlicht.
+		Somit kann jeder den <a href="http://illarion.org/development/de_opensource.php">Quellcode einsehen</a> und auch verwenden.</p>
 		
 	<li class="question"><a id="co2"></a><strong>Ich habe einen Fehler gefunden oder habe einen Vorschlag. Wie melde ich sowas?</strong></li>
 		
@@ -226,11 +225,11 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="co3"></a><strong>Können Spieler Bücher, NPCs oder sogar Quests selber schreiben?</strong></li>
 	
-		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="http://illarion.org/community/us_contact.php#4">Contact a developer</a> and read the <a href="http://illarion.org/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
+		<p>Jawohl! Illarion schätzt alle Inhalte, die von Spielern erstellt wurden, und gibt ihnen die Möglichkeit, die Welt mitzugestalten. <a href="http://illarion.org/community/de_contact.php#4">Wende dich an einen Entwickler</a> und ließ das <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklungstutorial</a>, um erste Informationen zu erhalten.</p>
 		
 	<li class="question"><a id="co4"></a><strong>Wie kann ich Illarion helfen? Was muss ich können?</strong></li>
 	
-		<p>Illarion kann man auf vielerlei Arten unterstützen. You could support the <a href="http://illarion.org/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklung des Spieles</a> or help to <a href="http://illarion.org/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
+		<p>Illarion kann man auf vielerlei Arten unterstützen. You could support the <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a>, assist with the <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklung des Spieles</a> or help to <a href="http://illarion.org/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
 		
 		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="http://illarion.org/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
 		
