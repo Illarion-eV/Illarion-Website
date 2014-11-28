@@ -72,15 +72,15 @@ Page::Init();
 		
 	<li class="question"><a id="gs2"></a><strong>Wieviel kostet Illarion? Gibt es eine Monatsgebühr oder einen Itemshop?</strong></li>
 		
-		<p>Illarion ist vollständig kostenlos. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a>. If you want, you can support the work of the <a href="http://illarion.org/community/de_society.php">society</a> by a voluntary <a href="http://illarion.org/community/de_society.php">donation</a> or by becoming a supporting member.</p>
+		<p>Illarion ist vollständig kostenlos. Du wirst garantiert niemals einen Cent für Illarion zahlen müssen. Es gibt keine Premiumitems und keinen Itemshop. Illarion wird von dem nicht gewinnorientierten Verein <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a> betrieben. Wenn du möchtest, kannst du die Arbeit des Vereins mit einer freiwilligen <a href="http://illarion.org/community/de_society.php">Spende</a> unterstützen oder indem du ein Fördermitglied wirst.</p>
 		
 	<li class="question"><a id="gs3"></a><strong>Was sind die Systemanforderungen von Illarion?</strong></li>
 
-	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="http://illarion.org/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Einige Betriebssysteme wie Windows Vista unterstützt den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller der Grafikkarte.</p>
+	    <p>Illarion ist ein plattformübergreifendes Spiel, welches auf Windows, Linux und MacOS läuft. Du kannst die Systemanforderungen auf der <a href="http://illarion.org/illarion/de_java_download.php">Downloadseite der Homepage</a> einsehen. Du brauchst vor allem einen Computer mit einer Grafikkarte, die Shaders 2.0 und OpenGL unterstützt. Einige Betriebssysteme wie Windows Vista unterstützen den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller der Grafikkarte.</p>
 
 	<li class="question"><a id="gs4"></a><strong>Was brauche ich, um spielen zu können?</strong></li>
 		
-		<p>To play Illarion, you must first <a href="http://illarion.org/community/account/us_register.php">register an account</a> and create a character. Once these are complete, <a href="http://illarion.org/illarion/us_java_download.php">download</a> the game client. You are then ready to immerse yourself in the world of Illarion!</p>
+		<p>Um Illarion spielen zu können musst du zuerst einen <a href="http://illarion.org/community/account/de_register.php">Account registrieren</a> und einen Charakter erstellen. Wenn das erledigt ist, lade den <a href="http://illarion.org/illarion/de_java_download.php">Spielclient</a> herunter. Dann bist du bereit in die Welt von Illarion einzutauchen!</p>
 					
 	<li class="question"><a id="gs5"></a><strong>Wo kann ich das Spiel herunterladen?</strong></li>
 		
@@ -88,21 +88,22 @@ Page::Init();
 		
 	<li class="question"><a id="gs6"></a><strong>Wie logge ich mich ein?</strong></li>
 	
-		<p>The setup installs the Illarion launcher that shows the latest news and ingame events. Click on "Play!" to start the game. You have to enter your account name (NOT your character's name) along with your password. Chose one of your characters, you may create up to five characters.</p>
+		<p>Das Setup installiert den Illarion Launcher, der die aktuellsten Nachrichten und Spielereignisse anzeigt. Klicke auf "Spielen!" um das Spiel zu starten. Dann musst du den Namen deines Accounts eingeben (NICHT den deines Charakters!) und dein Passwort. Anschließend kannst du einen von deinen Charaktern auswählen. Du kannst bis zu fünf Charaktere erstellen.</p>
 		
 	<li class="question"><a id="gs7"></a><strong>Aus welchen Völkern und Klassen kann ich wählen?</strong></li>
 	
-		<p>Illarion features six playable <a href="http://illarion.org/illarion/races/us_story.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
+		<p>In Illarion gibt es sechs spielbare <a href="http://illarion.org/illarion/races/de_story.php">Völker</a>: Menschen, Halblinge, Zwerge, Elben, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
 		
-		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. Except for magic, you can combine as many skills as you like, only your imagination limits what your characters may become.
+		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein echter Alleskönner.
+Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nur deine Vorstellungskraft beschränkt was deine Charaktere werden können.</p>
 		
 	<li class="question"><a id="gs8"></a><strong>Welche Attribute sollte ich wählen?</strong></li>
 	
-		<p>We have prepared typical attribute sets for common playing styles in the account system. As there are no strict classes, you are not bond to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a fee.</p>
+		<p>Wir haben ein paar Sets von Attributen vorbereitet, die typisch sind für die am häufigsten gespielten Arten von Charaktern. Da es keine strikten Klassen gibt bist du allerdings nicht an eines davon gebunden. Jedes Attribut hat seinen Nutzen, fahre einfach mit dem Mauszeiger darüber, um eine Beschreibung zu bekommen. Wähle einfach die Attribute aus, die deinen Charakter am besten beschreiben. Ingame gibt es die Option die Attribute gegen einige Goldstücke zu verändern.</p>
 		
 	<li class="question"><a id="gs9"></a><strong>Ich habe eine technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
 		
-		<p>There is a dedicated <a href="http://illarion.org/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="http://illarion.org/community/us_chat.php">chat</a> to get in contact with the gamemasters, developers and other players.</p>
+		<p>Es gibt ein genau dafür vorgesehenes <a href="http://illarion.org/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="http://illarion.org/community/sw_chat.php">Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
 		
 </ul>
 

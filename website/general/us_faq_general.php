@@ -72,7 +72,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs2"></a><strong>How much do I have to pay for Illarion? Is there a monthly fee or an item shop?</strong></li>
 		
-		<p>Illarion is completely free. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/us_society.php">Illarion e.V.</a>. If you want, you can support the work of the <a href="http://illarion.org/community/us_society.php">society</a> by a voluntary <a href="http://illarion.org/community/us_society.php">donation</a> or by becoming a supporting member.</p>
+		<p>Illarion is completely free. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/us_society.php">Illarion e.V.</a>. If you want, you can support the work of the society by a voluntary <a href="http://illarion.org/community/us_society.php">donation</a> or by becoming a supporting member.</p>
 		
 	<li class="question"><a id="gs3"></a><strong>What are the system requirements for Illarion?</strong></li>
 
@@ -98,7 +98,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs8"></a><strong>What attributes should I pick?</strong></li>
 	
-		<p>We have prepared typical attribute sets for common playing styles in the account system. As there are no strict classes, you are not bond to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a fee.</p>
+		<p>We have prepared typical attribute sets for common playing styles in the account system. As there are no strict classes, you are not bond to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a few gold coins.</p>
 		
 	<li class="question"><a id="gs9"></a><strong>I have a technical problem. Where can I get support?</strong></li>
 		
