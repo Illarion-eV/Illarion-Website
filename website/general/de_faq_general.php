@@ -179,11 +179,11 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc4"></a><strong>Wo sehe ich die Werte eines Gegenstandes?</strong></li>
 
-		<p>Hovering your mouse over the item will provide details on an item name, its level and skill requirement, value, weight, quality and durability. As Illarion is not a game about numbers but about immersion and stories told, detailled technical stats are not shown. For weapons and armours, you can derive the use directly from the shown level.</p>	
+		<p>Wenn du mit dem Mauszeiger über dem Gegenstand schwebst, werden Details über das Item angezeigt wie der Name, Level oder Fähigkeiten, die man für das Item benötigt, der Wert, das Gewicht und die Haltbarkeit. Weil Illarion kein Spiel ist, bei dem es um Zahlen geht, sondern primär um das Eintauchen in die Spielwelt und erzählte Geschichten werden keine technischen Details angezeigt. Bei Waffen und Rüstung kann man den Nutzen direkt aus dem angezeigten Level erschließen.</p>	
 
 	<li class="question"><a id="gc5"></a><strong>Woher weiß ich meine genauen Fertigkeitswerte?</strong></li>
 
-		<p>Press 'C' to review your character's skills. The bars for each skill represent how far you are away from the next level up. Skills range from 1-100, from a novice to a true grandmaster.</p>	
+		<p>Drücke "C" um die Fähigkeiten deines Charakters anzuzeigen. Die Balken neben jeder Fähigkeit zeigen an wie weit du noch vom nächsten Level entfernt bist. Die Fähigkeitslevel gehen von 1 bis 100, vom blutigen Anfänger bis zum echten Meister.</p>	
 
 	<li class="question"><a id="gc6"></a><strong>Wie kann ich anderen Spielern im Spiel eine Botschaft zukommen lassen?</strong></li>
 	
@@ -191,20 +191,23 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="gc7"></a><strong>Das Spiel hat Steuern von mir eingetrieben! Was soll das?</strong></li>
 	
-		<p>Every citizen from one of the three major factions is charged taxes. These are 1% of a character's total currency, collected once an ingame month. These are used to pay for town services such as protection, infrastructure upkeep, etc. In addition, generous faction leaders have also been known to reward loyal tax-payers with magical gemstones.</p>	
+		<p>Jeder Charakter, der Bürger von einer der drei größeren Städte Illarions ist, muss Steuern zahlen. Sie betragen 1% von der Gesamtmenge an Geld eines Charakters, und werden einmal pro ingame Monat eingesammelt. Die Steuern werden für Dienstleistungen der Stadt verwendet, wie Schutz, Erhalt der Infrastruktur etc. Außerdem sind großzügige Anführer der Fraktionen dafür bekannt, loyale Steuerzahler mit magischen Edelsteinen zu belohnen.</p>	
 		
 	<li class="question"><a id="gc8"></a><strong>Wie finde ich meinen Rang in meiner Fraktion heraus?</strong></li>
 	
-		<p>In each city, there is a notary NPC who can tell you your rank. The higher your rank, the more well known you are to your faction leader and also, the more advanced your are in his or her favour.</p>	
+		<p>In jeder Stadt gibt es ein NPC, der dir deinen Rang sagen kann. Je höher dein Rang ist, desto bekannter bist du dem Anführer deiner Fraktion und desto
+		höher in seiner oder ihrer Gunst.</p>	
 		
 	<li class="question"><a id="gc9"></a><strong>Ich habe davon gelesen, dass Illarion ein besonderes Fertigkeitensystem mit 'mentaler Kapazität' hat. Was ist das alles?</strong></li>
 	
-		<p>Illarion's skill system is based on "learning by doing", there are no skills points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items at a higher quality. A character may also develop combat skills, improving their ability to weild more advanced weapons or wear exotic armor. </p>	
-		
-		<p>The Mental Capacity refers to a character's ability to focus while improving. The more actions you do over time, the less you learn from each action. This way, it is on you how much time you want to invest on training your skills, the result after a given time will be the same. A character can reverse a 'high' degree of mental fatigue by performing tasks which are not skill-dependant such as talking to other characters and exploring. We have designed the skill system in this way to give players the opportunity to roleplay or train as much as they want without one style of playing being favoured by the game.</p>
+		<p>Das Fähigkeitensystem Illarions basiert auf dem Motto "Learning by doing", Deutsch "Lernen durch Handeln". Es gibt keine Fähigkeitspunkte, die man verteilen muss. Stattdessen verbessern sich die Fähigkeiten für eine Handlung während dein Charakter sie übt. Zum Beispiel kann dein Charakter mit der Zeit von einem Anfänger im Schmiedehandwerk zu einem Meister werden, wodurch er dann eine größere Vielfalt von Gegenständen besserer Qualität herstellen kann. Ein Charakter kann auch Kampffähigkeiten entwickeln und dadurch lernen bessere Waffen zu halten oder exotische Rüstung zu tragen.</p>
+
+		<p>"Mentale Kapazität" bezieht sich auf die Fähigkeit deines Charakters sich während des Verbesserns auf das Gelernte zu konzentrieren. Je öfter du Handlung hintereinander ausführst desto weniger lernst du von jeder Handlung. Deswegen ist es an dir, wie viel Zeit du investieren willst um die Fähigkeiten deines Charakters zu trainieren, das Resultat nach einer bestimmten Zeit wird das selbe sein. Ein Charakter kann einen hohen Erschöpfungsgrad senken indem er/sie Handlungen ausführt, die nicht von Fähigkeiten abhänging sind, wie mit anderen Charaktern zu reden oder die Spielwelt zu erforschen. Wir haben dieses System so konstruiert um den Spielern die Möglichkeit zu geben so viel Zeit in Rollenspiel oder Training zu stecken wie sie möchten, ohne dass eine Art Illarion zu spielen vom Spiel bevorzugt wird.</p>
 		
 </ul>
+
 <?php insert_go_to_top_link(); ?>
+
 <br />
 
 	<h2>Illarion unterstützen</h2>
