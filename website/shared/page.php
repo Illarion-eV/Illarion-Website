@@ -1498,8 +1498,11 @@ class Page {
 			foreach($trackingGoals as $goal) {
 				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
+            $search_keywords[++$search_cnt] = '{PIWIK_USER_ID}'
             if (IllaUser::loggedIn()) {
-                $search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.setUserId("'.IllaUser::$username.'");</script>';
+                $search_replace[$search_cnt] .= 'piwikTracker.setUserId(\''.IllaUser::$username.'\');';
+            } else {
+                $search_replace[$search_cnt] = ''
             }
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
 			$search_replace[$search_cnt] = (self::isGerman() ? 'News von Illarion' : 'News of Illarion');
