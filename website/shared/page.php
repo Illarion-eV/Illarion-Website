@@ -1498,6 +1498,9 @@ class Page {
 			foreach($trackingGoals as $goal) {
 				$search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.trackGoal('.$goal.');</script>';
 			}
+            if (IllaUser::loggedIn()) {
+                $search_replace[$search_cnt] .= '<script type="text/javascript">piwikTracker.setUserId("'.IllaUser::$username.'");</script>';
+            }
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
 			$search_replace[$search_cnt] = (self::isGerman() ? 'News von Illarion' : 'News of Illarion');
 
