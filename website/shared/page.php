@@ -1502,7 +1502,7 @@ class Page {
             if (IllaUser::loggedIn()) {
                 $search_replace[$search_cnt] .= 'piwikTracker.setUserId(\''.IllaUser::$username.'\');';
             } else {
-                $search_replace[$search_cnt] = ''
+                $search_replace[$search_cnt] = '';
             }
 			$search_keywords[++$search_cnt] = '{NEWS_TEXT}';
 			$search_replace[$search_cnt] = (self::isGerman() ? 'News von Illarion' : 'News of Illarion');
