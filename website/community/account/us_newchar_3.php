@@ -86,7 +86,7 @@ $templates = $db->loadAssocList();
 <h2>Step 3</h2>
 
 <p>You have to put in the attributes of your character here.</p>
-<p>The attribute packages should give your a general idea of what attributes go towards a certain role. For example, druids need a pool of 30 points shared between perception, essence, and intelligence. Make changes to existing packages to adjust them to the role you'd like to play.</p> 
+<p>The attribute packages should give your a general idea of what attributes go towards a certain role. Make changes to existing packages to adjust them to the role you'd like to play. Druids need a pool of 30 points shared between perception, essence, and intelligence.</p> 
 <p>Hover your mouse of an attribute to get a tool tip.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
