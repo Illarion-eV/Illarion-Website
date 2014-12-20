@@ -259,7 +259,7 @@
 </table>
 
 <?php if ($step == 5): ?>
-<h1 style="color:#007f00;">Charaktererstellung ist abgeschlossen. Viel&nbsp;Spaß!</h1>
+<h1>Charaktererstellung ist abgeschlossen. Viel&nbsp;Spaß!</h1>
 
 <h2>Wie gehts weiter?</h2>
 
