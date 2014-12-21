@@ -100,7 +100,7 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>Allgmein</legend>
+        <legend>Allgemein</legend>
 
         <p class="hyphenate" style="font-weight: bold;">
             News-Einträge die veröffentlicht wurden, werden über den News-Feed an die Spieler und an Facebook geschickt. Darum

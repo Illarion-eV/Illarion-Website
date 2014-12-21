@@ -99,7 +99,7 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>Allgmein</legend>
+        <legend>General</legend>
 
         <p class="hyphenate" style="font-weight: bold;">
             News entries that got published, are pushed to the players and to facebook using the news feed. For this
@@ -123,11 +123,11 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>News-Eintrag löschen</legend>
+        <legend>Delete a news entry</legend>
         <p>
             <label>
                 <input type="checkbox" name="deleteConfirmed" value="yes" />
-                Löschung des News-Eintrags bestätigen
+                Confirm the deletion of the news entry
             </label>
         </p>
         <p style="text-align:center;">
