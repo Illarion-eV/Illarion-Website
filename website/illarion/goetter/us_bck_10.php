@@ -26,10 +26,10 @@
 
 <ul>
 <li><a class="hidden" href="us_bck_11.php">Ushara - Goddess of Earth</a></li>
-<li><a class="hidden" href="us_bck_11.php">Br&aacute;gon - God of Fire</a></li>
-<li><a class="hidden" href="us_bck_11.php">Eldan - God of Spirit</a></li>
-<li><a class="hidden" href="us_bck_11.php">Tanora - Goddess of Water</a></li>
-<li><a class="hidden" href="us_bck_11.php">Findari - Goddess of Air</a></li>
+<li><a class="hidden" href="us_bck_12.php">Br&aacute;gon - God of Fire</a></li>
+<li><a class="hidden" href="us_bck_13.php">Eldan - God of Spirit</a></li>
+<li><a class="hidden" href="us_bck_14.php">Tanora - Goddess of Water</a></li>
+<li><a class="hidden" href="us_bck_15.php">Findari - Goddess of Air</a></li>
 </ul>
 
    <?php insert_go_to_top_link(); ?>
