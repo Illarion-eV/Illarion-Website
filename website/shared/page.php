@@ -996,20 +996,18 @@ class Page {
 	* @access private
 	*/
 	static private function ServerState() {
-		$connection = @fsockopen('127.0.0.1', 3008, $errno, $errstr, 30);
-		if (is_bool($connection)) {
+        $status = exec('illarionctl status');
+        if (strpos($status, 'ONLINE') === FALSE) {
 			self::$serverstatus = 1;
 		} else {
 			self::$serverstatus = 0;
-			fclose($connection);
 		}
 
-		$connection = @fsockopen('127.0.0.1', 3011, $errno, $errstr, 30);
-		if (is_bool($connection)) {
+        $status = exec('testctl status');
+		if (strpos($status, 'ONLINE') === FALSE) {
 			self::$testserverstatus = 1;
 		} else {
 			self::$testserverstatus = 0;
-			fclose($connection);
 		}
 
 		self::$debugger = 0;
