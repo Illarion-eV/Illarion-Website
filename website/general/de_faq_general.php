@@ -19,7 +19,7 @@ Page::Init();
 	<li><a class="hidden" href="#gs6">Wie logge ich mich ein?</a></li>
     <li><a class="hidden" href="#gs7">Aus welchen Völkern und Klassen kann ich wählen?</a></li>
 	<li><a class="hidden" href="#gs8">Welche Attribute sollte ich wählen?</a></li>
-	<li><a class="hidden" href="#gs9">Ich habe eine technisches Problem. Wo kann ich Hilfe bekommen?</a></li>
+	<li><a class="hidden" href="#gs9">Ich habe ein technisches Problem. Wo kann ich Hilfe bekommen?</a></li>
 </ul>
 
 	<h2>Die ersten Schritte in Illarion</h2>
@@ -68,7 +68,7 @@ Page::Init();
 <ul>
 	<li class="question"><a id="gs1"></a><strong>Was für eine Art Spiel ist Illarion?</strong></li>
 
-		<p>Illarion ist ein kostenloses Indie-Rollenspiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Rollenspiel ist nicht einfach nur eine Nebensache sondern der Kern des gesamten Spieles. Es wird Freiwilligen entwickelt, welche das Ziel vereint, ein wirklich kostenloses Rollenspiel für Spieler aus der ganzen Welt zu schaffen. Bei Illarion geht es nicht um das Erarbeiten von Leveln oder Goldstücken sondern um das Eintauchen in eine fremde Welt, Freundschaften und Legenden, welche mit der Feder der Charaktere des Spiels geschrieben werden.</p>
+		<p>Illarion ist ein kostenloses Indie-Rollenspiel, welches seinen Schwerpunkt auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Rollenspiel ist nicht einfach nur eine Nebensache sondern der Kern des gesamten Spieles. Es wird von Freiwilligen entwickelt, welche das Ziel vereint, ein wirklich kostenloses Rollenspiel für Spieler aus der ganzen Welt zu schaffen. Bei Illarion geht es nicht um das Erarbeiten von Leveln oder Goldstücken sondern um das Eintauchen in eine fremde Welt, Freundschaften und Legenden, welche mit der Feder der Charaktere des Spiels geschrieben werden.</p>
 		
 	<li class="question"><a id="gs2"></a><strong>Wieviel kostet Illarion? Gibt es eine Monatsgebühr oder einen Itemshop?</strong></li>
 		
@@ -94,14 +94,14 @@ Page::Init();
 	
 		<p>In Illarion gibt es sechs spielbare <a href="http://illarion.org/illarion/races/de_story.php">Völker</a>: Menschen, Halblinge, Zwerge, Elben, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
 		
-		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein echter Alleskönner.
+		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein Alleskönner.
 Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nur deine Vorstellungskraft beschränkt was deine Charaktere werden können.</p>
 		
 	<li class="question"><a id="gs8"></a><strong>Welche Attribute sollte ich wählen?</strong></li>
 	
 		<p>Wir haben ein paar Sets von Attributen vorbereitet, die typisch sind für die am häufigsten gespielten Arten von Charaktern. Da es keine strikten Klassen gibt bist du allerdings nicht an eines davon gebunden. Jedes Attribut hat seinen Nutzen, fahre einfach mit dem Mauszeiger darüber, um eine Beschreibung zu bekommen. Wähle einfach die Attribute aus, die deinen Charakter am besten beschreiben. Ingame gibt es die Option die Attribute gegen einige Goldstücke zu verändern.</p>
 		
-	<li class="question"><a id="gs9"></a><strong>Ich habe eine technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
+	<li class="question"><a id="gs9"></a><strong>Ich habe ein technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
 		
 		<p>Es gibt ein genau dafür vorgesehenes <a href="http://illarion.org/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="http://illarion.org/community/sw_chat.php">Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
 		
@@ -144,15 +144,15 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="fs7"></a><strong>Welches Reich sollte ich wählen?</strong></li>
 		
-		<p>Auf Illarion gibt es drei Fraktionen die das Land unter sich aufgeteilt haben: das <a href="http://illarion.org/illarion/de_factions.php#2">reiche Galmair</a>, das <a href="http://illarion.org/illarion/de_factions.php#1">edle Cadomyr</a> und das <a href="http://illarion.org/illarion/de_factions.php#3">weise Runewick</a>. Wähle einfach das Reich aus, dessen Motive am besten zu deinem Charakter passen. Du kannst dich auch später im Spiel noch umentscheiden oder sogar ein Vogelfreier werden.</p>
+		<p>Auf Illarion gibt es drei Fraktionen, die das Land unter sich aufgeteilt haben: das <a href="http://illarion.org/illarion/de_factions.php#2">reiche Galmair</a>, das <a href="http://illarion.org/illarion/de_factions.php#1">edle Cadomyr</a> und das <a href="http://illarion.org/illarion/de_factions.php#3">weise Runewick</a>. Wähle einfach das Reich aus, dessen Motive am besten zu deinem Charakter passen. Du kannst dich auch später im Spiel noch umentscheiden oder sogar ein Vogelfreier werden.</p>
 		
 	<li class="question"><a id="fs8"></a><strong>Gibt es im Spiel Lagerplätze?</strong></li>
 		
-		<p>Ja. Das Spiel hat ein "Depotsystem". Diese gelben Lagerkisten stehen an wichtigen Plätzen der Städte. Um sie zu verwenden stelle dich neben sie und "öffne" sie mit einem Doppelklick. Per "Drag and Drop" kannst du Gegenstände im Depot ablegen. Beachte, dass das Depotsystem einer Stadt nur in dieser Stadt verfügbar ist.</p>
+		<p>Ja. Das Spiel hat ein "Depotsystem". Diese gelben Lagerkisten stehen an wichtigen Plätzen der Städte. Um sie zu verwenden, stelle dich neben sie und "öffne" sie mit einem Doppelklick. Per "Drag and Drop" kannst du Gegenstände im Depot ablegen. Beachte, dass das Depotsystem einer Stadt nur in dieser Stadt verfügbar ist.</p>
 		
 	<li class="question"><a id="fs9"></a><strong>Ich bin gestorben! Wie kann ich mich wiederbeleben? Gibt es eine Bestrafung für den Tod?</strong></li>
 		
-		<p>Ein toter Charakter wird automatisch nach einer Minute in der Stadt seines Reich wiederbelebt. Der Charakter verliert beim Tod keine Gegenstände oder Fähigkeiten, nur die Ausüstung nimmt Schaden. Allerdings leidet der Charakter unter der "Wiederbelebungskrankheit". Das schwächt sehr und macht es schwierig sich sofort wieder in den Kampf zu stürzen. Dies ist nur ein temporärer Effekt und kann geheilt werden indem man solange von Kampf fernbleibt, bis sich der Charakter wieder erholt hat.</p>
+		<p>Ein toter Charakter wird automatisch nach einer Minute in der Stadt seines Reich wiederbelebt. Der Charakter verliert beim Tod keine Gegenstände oder Fähigkeiten, nur die Ausüstung nimmt Schaden. Allerdings leidet der Charakter unter der "Wiederbelebungskrankheit". Sie schwächt sehr und macht es schwierig, sich sofort wieder in den Kampf zu stürzen. Dies ist nur ein temporärer Effekt und kann geheilt werden, indem man solange von Kampf fernbleibt, bis sich der Charakter wieder erholt hat.</p>
 		
 </ul>
 
@@ -174,7 +174,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc3"></a><strong>Warum sprechen die alle so komisch?</strong></li>
 		
-		<p>Illarion wird von Spielern aus der ganzen Welt gespielt. Es ist somit naheliegend, dass sie nicht alle die gleiche Sprache sprechen. Englisch und Deutsch sind die am häufigsten anzutreffenden Sprachen und es ist ein Gebot der Höflichkeit, gegenüber anderen Spielern eine Sprache zu verwenden, die sie verstehen. Es können auch Mundarten verwendet werden. Viele Spieler versuchen, ihren Charakter mittelalterlich klingen zu lassen ohne dabei aber Altdeutsch zu verwenden, was eh niemand verstehen würde. Abkürzungen und "Chat Slang" sind ungerne gesehen. Nimm dir die Zeit und verwende Großbuchstaben und korrekte Zeichensetzung. Gutes Beispiel: "Seid gegrüßt, edler Herr. Dürfte ich eure Aufmerksamkeit auf dieses bestens gefertigte Schwert ziehen, welches ich zu einem angemessenen Preis veräußern würde?"</p>
+		<p>Illarion wird von Spielern aus der ganzen Welt gespielt. Es ist somit naheliegend, dass sie nicht alle die gleiche Sprache sprechen. Englisch und Deutsch sind die am häufigsten anzutreffenden Sprachen und es ist ein Gebot der Höflichkeit, gegenüber anderen Spielern eine Sprache zu verwenden, die sie verstehen. Es können auch Mundarten verwendet werden. Viele Spieler versuchen, ihren Charakter mittelalterlich klingen zu lassen ohne dabei aber Altdeutsch zu verwenden, was eh niemand verstehen würde. Abkürzungen und "Chat Slang" sind ungerne gesehen. Nimm dir die Zeit und verwende Großbuchstaben und korrekte Zeichensetzung. Gutes Beispiel: "Seid gegrüßt, edler Herr. Dürfte ich eure Aufmerksamkeit auf dieses von kundiger Hand gefertigte Schwert ziehen, welches ich zu einem angemessenen Preis zu veräußern suche?"</p>
 		
 
 	<li class="question"><a id="gc4"></a><strong>Wo sehe ich die Werte eines Gegenstandes?</strong></li>
@@ -183,26 +183,26 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc5"></a><strong>Woher weiß ich meine genauen Fertigkeitswerte?</strong></li>
 
-		<p>Drücke "C" um die Fähigkeiten deines Charakters anzuzeigen. Die Balken neben jeder Fähigkeit zeigen an wie weit du noch vom nächsten Level entfernt bist. Die Fähigkeitslevel gehen von 1 bis 100, vom blutigen Anfänger bis zum echten Meister.</p>	
+		<p>Drücke "C", um die Fähigkeiten deines Charakters anzuzeigen. Die Balken neben jeder Fähigkeit zeigen an, wie weit du noch vom nächsten Level entfernt bist. Die Fähigkeitslevel gehen von 1 bis 100, vom blutigen Anfänger bis zum echten Meister.</p>	
 
 	<li class="question"><a id="gc6"></a><strong>Wie kann ich anderen Spielern im Spiel eine Botschaft zukommen lassen?</strong></li>
 	
-		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sicher der <a href="http://illarion.org/community/de_chat.php">globale Chat</a> auf der Homepage. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="http://illarion.org/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
+		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sich der <a href="http://illarion.org/community/de_chat.php">globale Chat</a> auf der Homepage. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="http://illarion.org/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
 		
 	<li class="question"><a id="gc7"></a><strong>Das Spiel hat Steuern von mir eingetrieben! Was soll das?</strong></li>
 	
-		<p>Jeder Charakter, der Bürger von einer der drei größeren Städte Illarions ist, muss Steuern zahlen. Sie betragen 1% von der Gesamtmenge an Geld eines Charakters, und werden einmal pro ingame Monat eingesammelt. Die Steuern werden für Dienstleistungen der Stadt verwendet, wie Schutz, Erhalt der Infrastruktur etc. Außerdem sind großzügige Anführer der Fraktionen dafür bekannt, loyale Steuerzahler mit magischen Edelsteinen zu belohnen.</p>	
+		<p>Jeder Charakter, der Bürger von einer der drei Reiche Illarions ist, muss Steuern zahlen. Sie betragen 1% von der Gesamtmenge an Geld eines Charakters und werden einmal pro ingame Monat eingesammelt. Die Steuern werden für Dienstleistungen der Stadt verwendet, wie Schutz, Erhalt der Infrastruktur etc. Außerdem sind großzügige Anführer der Fraktionen dafür bekannt, loyale Steuerzahler mit magischen Edelsteinen zu belohnen.</p>	
 		
 	<li class="question"><a id="gc8"></a><strong>Wie finde ich meinen Rang in meiner Fraktion heraus?</strong></li>
 	
-		<p>In jeder Stadt gibt es ein NPC, der dir deinen Rang sagen kann. Je höher dein Rang ist, desto bekannter bist du dem Anführer deiner Fraktion und desto
+		<p>In jeder Stadt gibt es einen NPC, der dir deinen Rang sagen kann. Je höher dein Rang ist, desto bekannter bist du dem Anführer deiner Fraktion und desto
 		höher in seiner oder ihrer Gunst.</p>	
 		
 	<li class="question"><a id="gc9"></a><strong>Ich habe davon gelesen, dass Illarion ein besonderes Fertigkeitensystem mit 'mentaler Kapazität' hat. Was ist das alles?</strong></li>
 	
-		<p>Das Fähigkeitensystem Illarions basiert auf dem Motto "Learning by doing", Deutsch "Lernen durch Handeln". Es gibt keine Fähigkeitspunkte, die man verteilen muss. Stattdessen verbessern sich die Fähigkeiten für eine Handlung während dein Charakter sie übt. Zum Beispiel kann dein Charakter mit der Zeit von einem Anfänger im Schmiedehandwerk zu einem Meister werden, wodurch er dann eine größere Vielfalt von Gegenständen besserer Qualität herstellen kann. Ein Charakter kann auch Kampffähigkeiten entwickeln und dadurch lernen bessere Waffen zu halten oder exotische Rüstung zu tragen.</p>
+		<p>Das Fähigkeitensystem Illarions basiert auf dem Motto "Learning by doing", Deutsch "Lernen durch Handeln". Es gibt keine Fähigkeitspunkte, die man verteilen muss. Stattdessen verbessern sich die Fähigkeiten für eine Handlung während dein Charakter sie übt. Zum Beispiel kann dein Charakter mit der Zeit von einem Anfänger im Schmiedehandwerk zu einem Meister werden, wodurch er dann eine größere Vielfalt von Gegenständen besserer Qualität herstellen kann. Ein Charakter kann auch Kampffähigkeiten entwickeln und dadurch lernen, bessere Waffen zu halten oder exotische Rüstung zu tragen.</p>
 
-		<p>"Mentale Kapazität" bezieht sich auf die Fähigkeit deines Charakters sich während des Verbesserns auf das Gelernte zu konzentrieren. Je öfter du Handlung hintereinander ausführst desto weniger lernst du von jeder Handlung. Deswegen ist es an dir, wie viel Zeit du investieren willst um die Fähigkeiten deines Charakters zu trainieren, das Resultat nach einer bestimmten Zeit wird das selbe sein. Ein Charakter kann einen hohen Erschöpfungsgrad senken indem er/sie Handlungen ausführt, die nicht von Fähigkeiten abhänging sind, wie mit anderen Charaktern zu reden oder die Spielwelt zu erforschen. Wir haben dieses System so konstruiert um den Spielern die Möglichkeit zu geben so viel Zeit in Rollenspiel oder Training zu stecken wie sie möchten, ohne dass eine Art Illarion zu spielen vom Spiel bevorzugt wird.</p>
+		<p>"Mentale Kapazität" bezieht sich auf die Fähigkeit deines Charakters, sich während des Verbesserns auf das Gelernte zu konzentrieren. Je öfter du Handlung hintereinander ausführst desto weniger lernst du von jeder Handlung. Deswegen ist es an dir, wie viel Zeit du investieren willst um die Fähigkeiten deines Charakters zu trainieren, das Resultat nach einer bestimmten Zeit wird das selbe sein. Ein Charakter kann einen hohen Erschöpfungsgrad senken indem er/sie Handlungen ausführt, die nicht von Fähigkeiten abhänging sind, wie mit anderen Charaktern zu reden oder die Spielwelt zu erforschen. Wir haben dieses System so konstruiert, um den Spielern die Möglichkeit zu geben, so viel Zeit in Rollenspiel oder Training zu stecken wie sie möchten, ohne dass eine Art Illarion zu spielen vom Spiel bevorzugt wird.</p>
 		
 </ul>
 
