@@ -17,7 +17,7 @@
 	$query = <<<SQL
 SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime
  FROM homepage.quests
- WHERE q_status != 3
+ WHERE q_status != 3 AND q_type != 2
  ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC
 SQL;
 	$pgSQL->setQuery($query, 0, 4);
