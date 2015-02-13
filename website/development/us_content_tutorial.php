@@ -16,16 +16,22 @@ Did you consider posting on Mantis but felt it was just not worth it?
 Would you just have corrected it if given the means?
 If so, keep reading, this tutorial is for <u>you</u>.
 </p>
-<p><b>
-This How-To lists an easy way to contribute to Illarion development by fixing
+<p>
+This tutorial lists an easy way to contribute to Illarion development by fixing
 mistakes such as spelling errors yourself. It gives a basic introduction into
 our development process and policies, i.e. what you need to know to contribute
-to Illarion development. Once you get used to it, it is really simple, promise!
-</b></p>
+to Illarion development. 
+</p>
+
+<p>Illarion uses a free revision control system called Git. Git was initially designed for Linux kernel development.
+With Git, various developers can work on one project simultanously without causing conflicts between commits of different developers.
+One can also define development branches. The running game is not affected by the development.
+Using Git is quite challenging for beginners. Once you get used to it, it is really simple, promise!
+</p>
 
 <h2>Setup</h2>
 
-<h3>You will need the following:</h3>
+<h4>Prerequisites</h4>
 <ul>
 <li>Link to the game content repository: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>A free account on <a href="https://github.com">github.com</a></li>
@@ -100,12 +106,14 @@ to Illarion development. Once you get used to it, it is really simple, promise!
 <li>Well done! Thank you very much for improving Illarion!</li>
 </ul>
 
-<h2>Do you want more? Interested in more serious stuff?</h2>
+<h2>Further steps and options</h2>
 <ul>
-<li>Write your own easyNPCs.</li>
+<li>Write your own NPCs with easyNPC.</li>
+<li>Shape the map with the map editor.</li>
+<li>Create quests or help developing the fighting and magic system.</li>
 <li>Illarion uses Lua 5.1, a <a href="http://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
 <li>See the <a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">Illarion extension to Lua</a>.</li>
 <li>Get your own <a href="https://spideroak.com/browse/share/vilarion/localserver/localserver/">local Illarion server</a> to play around with.</li>
 <li>Learn more about <a href="http://git-scm.com/book">Git</a>, the fast and distributed version control system.</li>
-<li>Talk to our content developers in #illarion-sv on QuakeNet (IRC).</li>
+<li>Talk to our content developers in the <a href="http://illarion.org/community/us_chat.php">IRC chat</a> (#illarion on QuakeNet).</li></li>
 </ul>
