@@ -89,7 +89,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Schließlich drücke den "Commit"-Knopf um deinen Satz von Änderungen lokal zu speichern.</li>
 <li>Klicke den "Push"-Knopf in der oberen Leiste und bestätige mit "OK" um den Satz deiner Änderungen an deinen GitHub-Account zu schicken. Zumindest beim ersten Mal wirst du dein GitHub-Login eingeben müssen.</li>
 </ul>
-<h4>Teilen deiner Arbeit unter Linux oder die Konsole</h4>
+<h4>Teilen deiner Arbeit unter Linux oder der Konsole</h4>
 <ul>
 <li>git pull upstream master</li>
 <li>git add [Geänderte Dateien]</li>
