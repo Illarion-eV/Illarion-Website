@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-	Page::setTitle( 'Zeit Umrechnung' );
+	Page::setTitle( 'Zeitumrechnung' );
 	Page::setDescription( 'Mit dieser Seite ist es möglich die Illarion Zeit in die echte Zeit umzurechnen' );
 	Page::setKeywords( array( 'Zeit', 'umrechnen', 'Zeitumrechner', 'Umrechner' ) );
 
