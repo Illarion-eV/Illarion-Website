@@ -31,28 +31,27 @@ gewöhnt hast, ist es sehr einfach. Versprochen!
 <ul>
 <li>Link zum Repository für Spielinhalte: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>Einen kostenlosen Account auf <a href="https://github.com">github.com</a></li>
-<li>Einen modernen, guten Editor wie <a href="http://notepad-plus-plus.org">Notepad++</a></li>
+<li>Einen modernen, guten Texteditor wie <a href="http://notepad-plus-plus.org">Notepad++</a></li>
 <li>Einen einfach zu benutzenden Git-Client wie <a href="http://sourcetreeapp.com">SourceTree</a> unter Windows und Mac, oder den Konsolenclient unter Linux</li>
 </ul>
 	
-<h4>Einige Bemerkungen:</h4>
+<h4>Bemerkungen</h4>
 <ul>
-<li>Wenn du weißt was du machst, dann kannst du vermutlich hier aufhören zu lesen.</li>
-<li>GitHub steht in keinerlei Beziehung zu illarion.org.</li>
+<li>GitHub steht in keinerlei Beziehung zum Illarion e.V.</li>
 <li>Du kannst natürlich andere Editoren benutzen, aber in diesem Fall bist du auf dich gestellt, falls sie die nötigen Voraussetzungen nicht erfüllen.</li>
 <li>Wenn du Linux benutzt nehme ich an, dass du weißt was du tust (z.B. wie man Git installiert).</li>
-<li>Für jeden Schritt mit Git gebe ich auch den Konsolenbefehl an.</li>
+<li>Für jeden Schritt mit Git ist auch der Konsolenbefehl angegeben.</li>
 <li>Die Entwicklungssprache Illarions ist Englisch. Daher macht es Sinn die englische Version der Werkzeuge zu benutzen, um bei Rückfragen keine Probleme zu haben.</li>
 </ul>
 
-<h3>Vorbereitung (dies musst du nur einmal machen):</h3>
+<h4>Einmalige Vorbereitungen</h4>
 <ul>
 <li>Kopiere in GitHub, auf der Seite des Repositorys für Spielinhalte, dieses Repository in deinen eigenen Account. Dies wird Forken genannt, also klicke auf "Fork".
 	Die URL zu deiner Kopie (Fork) des Repositorys für Spielinhalte wird dann so aussehen: https://github.com/&lt;dein_account_name&gt;/Illarion-Content</li>
 </ul>
 <h4>Windows/Mac:</h4>
 <ul>
-<li>Starte SourceTree.</li>
+<li>Starte SourceTree und folge den Bildschirmanweisungen.</li>
 <li>Öffne die "Options" im "Tools"-Menü und setze "Default text encoding" auf iso-8859-1. Klicke OK.</li>
 <li>Klicke auf "Clone / New".</li>
 <li>Gebe die "HTTPS clone URL" aus deinem GitHub-Fork als "Source Path / URL" ein.</li>
