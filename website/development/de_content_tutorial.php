@@ -107,10 +107,12 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 
 <h2>Weitere Schritte und Möglichkeiten</h2>
 <ul>
-<li>Schreibe deine eigenen easyNPCs.</li>
+<li>Schreibe deine eigenen NPCs mit easyNPC.</li>
+<li>Gestalte Dungeons mit dem Mapeditor.</li>
+<li>Schreibe Quests oder wirke an Kampf- und Magiesystem mit.</li>
 <li>Illarion benutzt Lua 5.1, ein <a href="http://www.lua.org/pil/contents.html">Buch, das Lua 5.0 behandelt</a> ist online verfügbar.</li>
 <li>Schau dir die <a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">Illarion-Erweiterung zu Lua</a> an.</li>
 <li>Hol dir deinen eigenen <a href="https://spideroak.com/browse/share/vilarion/localserver/localserver/">lokalen Illarion-Server</a>, um damit zu experimentieren.</li>
 <li>Lerne mehr über <a href="http://git-scm.com/book">Git</a>, das schnelle verteilte Versionierungssystem.</li>
-<li>Sprich mit unseren Inhaltsentwicklern in #illarion-sv im QuakeNet (IRC).</li>
+<li>Sprich mit unseren Inhaltsentwicklern im <a href="http://illarion.org/community/de_chat.php">IRC-Chat</a> (#illarion im QuakeNet).</li>
 </ul>
