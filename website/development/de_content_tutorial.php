@@ -79,8 +79,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Betrachte diese um dann <u>entweder</u> "Replace with" und "Replace All" zu benutzen um alles zu beheben, <u>oder</u> um die einzelnen Dateien mittels Doppelklick auf die gefundenen Zeilen zu öffnen und die Fehler von Hand zu bereinigen und zu speichern.</li>
 </ul>
 
-<h4>Teile deine Arbeit mit uns</h4>
-<h5>Windows/Mac:</h5>
+<h4>Teilen deiner Arbeit unter Windows/Mac</h4>
 <ul>
 <li>Um deine lokale Kopie mit der Version zu aktualisieren, die gerade im Spiel vorhanden ist, wähle in SourceTree mittels Rechtsklick die "upstream"-Remote aus der Liste auf der linken Seite, wähle "Pull from upstream" und dann "master" als "Remote branch to pull"</li>
 <li>Falls "master" nicht aufgelistet ist, musst du erst auf "Refresh" klicken.</li>
@@ -90,14 +89,14 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Schließlich drücke den "Commit"-Knopf um deinen Satz von Änderungen lokal zu speichern.</li>
 <li>Klicke den "Push"-Knopf in der oberen Leiste und bestätige mit "OK" um den Satz deiner Änderungen an deinen GitHub-Account zu schicken. Zumindest beim ersten Mal wirst du dein GitHub-Login eingeben müssen.</li>
 </ul>
-<h4>Linux/Konsole:</h4>
+<h4>Teilen deiner Arbeit unter Linux oder die Konsole</h4>
 <ul>
 <li>git pull upstream master</li>
 <li>git add [Geänderte Dateien]</li>
 <li>git commit</li>
 <li>git push</li>
 </ul>
-<h4>In beiden Fällen:</h4>
+<h4>In beiden Fällen</h4>
 <ul>
 <li>In deinem Illarion-Content Fork in deinem GitHub-Account siehst du nun (nach Neuladen) den Titel der letzten Commit-Nachricht.</li>
 <li>Klicke auf "Pull Request" rechts über der Nachricht und kontrolliere zum letzten Mal deine Änderungen bevor du mittels "Click to create a pull request for this comparison" bestätigst.</li>
