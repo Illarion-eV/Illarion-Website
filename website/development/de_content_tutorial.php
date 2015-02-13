@@ -27,7 +27,7 @@ gewöhnt hast, ist es sehr einfach. Versprochen!
 
 <h2>Setup</h2>
 
-<h3>Du benötigst folgendes:</h3>
+<h4>Vorraussetzungen</h4>
 <ul>
 <li>Link zum Repository für Spielinhalte: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>Einen kostenlosen Account auf <a href="https://github.com">github.com</a></li>
@@ -39,16 +39,17 @@ gewöhnt hast, ist es sehr einfach. Versprochen!
 <ul>
 <li>GitHub steht in keinerlei Beziehung zum Illarion e.V.</li>
 <li>Du kannst natürlich andere Editoren benutzen, aber in diesem Fall bist du auf dich gestellt, falls sie die nötigen Voraussetzungen nicht erfüllen.</li>
-<li>Wenn du Linux benutzt nehme ich an, dass du weißt was du tust (z.B. wie man Git installiert).</li>
 <li>Für jeden Schritt mit Git ist auch der Konsolenbefehl angegeben.</li>
-<li>Die Entwicklungssprache Illarions ist Englisch. Daher macht es Sinn die englische Version der Werkzeuge zu benutzen, um bei Rückfragen keine Probleme zu haben.</li>
+<li>Die Entwicklungssprache Illarions ist Englisch. Daher macht es Sinn, die englische Version der Werkzeuge zu benutzen, um bei Rückfragen keine Übersetzungsprobleme zu haben.</li>
 </ul>
 
 <h4>Einmalige Vorbereitungen</h4>
 <ul>
-<li>Kopiere in GitHub, auf der Seite des Repositorys für Spielinhalte, dieses Repository in deinen eigenen Account. Dies wird Forken genannt, also klicke auf "Fork".
-	Die URL zu deiner Kopie (Fork) des Repositorys für Spielinhalte wird dann so aussehen: https://github.com/&lt;dein_account_name&gt;/Illarion-Content</li>
+<li>Rufe mit deinem Internetbrowser folgende Seite auf: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
+<li>Klicke auf "Fork", um auf GitHub dieses Repository in deinen eigenen Account zu kopieren ("fork").</li>
+<li>Die URL zu deiner Kopie (Fork) des Repositorys für Spielinhalte wird dann so aussehen: https://github.com/&lt;dein_account_name&gt;/Illarion-Content</li>
 </ul>
+
 <h4>Windows/Mac:</h4>
 <ul>
 <li>Starte SourceTree und folge den Bildschirmanweisungen.</li>
