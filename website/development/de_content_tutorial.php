@@ -52,7 +52,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Die URL zu deiner Kopie (Fork) des Repositorys für Spielinhalte wird dann so aussehen: https://github.com/&lt;dein_account_name&gt;/Illarion-Content</li>
 </ul>
 
-<h4>Windows/Mac:</h4>
+<h4>Windows/Mac</h4>
 <ul>
 <li>Starte SourceTree und folge den Bildschirmanweisungen.</li>
 <li>Öffne die "Options" im "Tools"-Menü und setze "Default text encoding" auf iso-8859-1. Klicke OK.</li>
@@ -62,7 +62,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Klicke auf "Clone". (Du hast jetzt die gesamten Spielinhalte bereits zweimal kopiert!)</li>
 <li>Im "Repository"-Menü klicke auf "Add Remote..." und füge mittels "Add" eine Remote mit dem Namen "upstream" und der URL https://github.com/Illarion-eV/Illarion-Content hinzu.</li>
 </ul>
-<h4>Linux/Konsole:</h4>
+<h4>Linux/Konsole</h4>
 <ul>
 <li>git clone [Deine GitHub-Fork-URL]</li>
 <li>git remote add upstream https://github.com/Illarion-eV/Illarion-Content</li>
