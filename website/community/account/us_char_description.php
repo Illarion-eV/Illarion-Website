@@ -62,7 +62,7 @@
 
 	Page::setXHTML();
 ?>
-<h1>Characterdescription</h1>
+<h1>Character Description</h1>
 
 <h2>Short description (not more then 255 characters)</h2>
 
@@ -78,7 +78,7 @@
 	</p>
 
 	<?php if ($server == 'illarionserver'): ?>
-	<h2>Detailed Description for the web profil</h2>
+	<h2>Detailed description for the web profil</h2>
 
 	<p>
 		English<br />

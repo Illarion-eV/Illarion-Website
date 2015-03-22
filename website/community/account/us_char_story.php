@@ -55,10 +55,10 @@
 	Page::Init();
 ?>
 
-<h1>Characterstory</h1>
+<h1>Character Story</h1>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_story.php?charid=<?php echo $charid; ?>" id="mainForm">
-	<h2>Charaktergeschichte für das Webprofil</h2>
+	<h2>Character story for the web profile</h2>
 
 	<p>
 		English<br />
