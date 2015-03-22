@@ -95,7 +95,7 @@
 	</table>
 	<?php endif; ?>
 
-	<h3>Neues Bild hochladen</h3>
+	<h3>Upload new picture</h3>
 
 	<form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_details.php?charid=<?php echo $charid; ?>" name="pictureForm" enctype="multipart/form-data">
 		<p>
