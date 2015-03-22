@@ -59,21 +59,21 @@
 
 <div style='height:200px;margin-top:30px;display:block;'>
 	<div style="float:left; height:200px; width:255px;vertical-align:middle;text-align:center;">
-	    <img src="<?php echo $char_pic['file']; ?>" height="<?php echo $char_pic['height']; ?>" width="<?php echo $char_pic['width']; ?>" alt="Bild von <?php echo $char_data['chr_name']; ?>" />
+	    <img src="<?php echo $char_pic['file']; ?>" height="<?php echo $char_pic['height']; ?>" width="<?php echo $char_pic['width']; ?>" alt="Picture of <?php echo $char_data['chr_name']; ?>" />
 	</div>
 
 	<div>
 		<?php if ($server == "illarionserver") : ?>
         <dl>
             <dd>
-                <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:300,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
+                <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_settings.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:300,width:350,title:'Settings for <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
                         Edit Character Settings
                 </a>
             </dd>
             <dt>&nbsp;</dt>
             <dd>
 			<?php if ($server == "illarionserver") : ?>
-                <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
+                <a href="<?php echo Page::getURL(); ?>/illarion/gmtool/de_char_picture.php?charid=<?php echo $charid; ?>&amp;server=<?php echo $_GET['server']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Picture of <?php echo str_replace("'", "\\'", $char_data['chr_name'] ); ?>'});return false;">
                         Edit Character Picture
                 </a>
 			<?php endif ?>
