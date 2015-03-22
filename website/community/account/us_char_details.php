@@ -94,14 +94,14 @@
 		<tbody>
 			<tr>
 				<td>
-					<a href="<?php echo Page::getURL(); ?>/community/account/us_char_settings.php<?php echo $chardata['ident']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Einstellungen von <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
+					<a href="<?php echo Page::getURL(); ?>/community/account/us_char_settings.php<?php echo $chardata['ident']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:180,width:350,title:'Settings of <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
 						Edit the settings of this character
 					</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<a href="<?php echo Page::getURL(); ?>/community/account/us_char_picture.php<?php echo $chardata['ident']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Bild von <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
+					<a href="<?php echo Page::getURL(); ?>/community/account/us_char_picture.php<?php echo $chardata['ident']; ?>" onclick="myLightWindow.activateWindow({href:this.href,height:410,width:400,title:'Picture of <?php echo str_replace("'", "\\'", $chardata['chr_name'] ); ?>'});return false;">
 						Upload or delete the picture
 					</a>
 				</td>
