@@ -1,7 +1,7 @@
 <?php
 	if (!IllaUser::auth('gmtool_accounts'))
 	{
-		Messages::add((Page::isGerman()?'Zugriff verweigert':'Access denieded'), 'error');
+		Messages::add((Page::isGerman()?'Zugriff verweigert':'Access denied'), 'error');
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
