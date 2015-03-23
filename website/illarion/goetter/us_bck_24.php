@@ -37,7 +37,7 @@
    people stand in Zhambra&#39;s hall for a long time, not taking the glove in pure fear. If they
    pick up the glove, they must put it on, and a sword will appear in it. They will appear on an
    eternal battlefield until they die in honor. Then they are lead to the god&#39;s hall again, and
-   if they have learned loyality, they will be either reborn to make friends, or if they already
+   if they have learned loyalty, they will be either reborn to make friends, or if they already
    have some, led into paradise by the God.</p>
 
    <?php navBarBottom( "us_bck_23.php", "us_bck_25.php" ); ?>
