@@ -54,9 +54,7 @@ points and selecting a starting package.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Download the client</h2>
-
-<h3>System requirements</h3>
+<h2>System requirements</h2>
 
 <h4>Minimum</h4>
 <ul>
@@ -93,7 +91,7 @@ supporting OpenGL hardware acceleration installed by default. Drivers that
 support this feature can be found on your graphics card manufacturers
 website.</p>
 
-<h3>Installation</h3>
+<h2>Installation</h2>
 
 <p>During the first launch of the Illarion-Launcher a short installation
 assistent will request the required information. In case you got a old

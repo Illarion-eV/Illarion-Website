@@ -54,9 +54,7 @@ ausgewählt hast.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Client herunterladen</h2>
-
-<h3>Systemanforderungen</h3>
+<h2>Systemanforderungen</h2>
 
 <h4>Minimal</h4>
 <ul>
@@ -93,7 +91,7 @@ keinen Treiber mit OpenGL Hardwarebeschleunigung installiert. Ein solcher
 Treiber kann auf der Homepage der Hersteller deiner Grafikkarte gefunden
 werden.</p>
 
-<h3>Installation</h3>
+<h2>Installation</h2>
 
 <p>Bei ersten Start des Illarion-Starters fragt ein kurzer
 Installationsassistent die noch fehlenden Einstellungen ab. Wenn es schon 
