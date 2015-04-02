@@ -104,9 +104,7 @@ the client using the "play" button. The other applications are launched with
 the buttons as labeled. Once a application is chosen the launcher will look
 for the latest version, resolve its dependencies and download everything.
 Especially during the first time a application is launched this can take some
-time.</p>
-
-<p>Once the download is done the application is launched automatically.</p>
+time. Once the download is done the application is launched automatically.</p>
 
 <p>If there should be problems during the installation or start of the client,
 please ask for help on the IRC chat or the forum. There's almost no problem,

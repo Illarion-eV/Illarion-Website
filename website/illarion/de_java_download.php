@@ -105,12 +105,11 @@ zu starten, indem man auf "Spielen" drückt. Alle anderen Anwendungen werden
 durch die jeweiligen beschrifteten Knöpfe gestartet. Sobald eine Anwendung
 ausgewählt wird beginnt der Launcher die aktuelle Version der Anwendung
 zu suchen, eine Downloadliste zu erzeugen und die Anwendung herunterzuladen.
-Beim ersten Start kann einige Zeit vergehen bis der Download beginnt.</p>
-
-<p>Nach dem Download startet die Anwendung automatisch.</p>
+Beim ersten Start kann einige Zeit vergehen bis der Download beginnt.
+Nach dem Download startet die Anwendung automatisch.</p>
 
 <p>Sollte es Probleme bei der Installation oder beim Start des Clienten geben,
-frage bitte im IRC-Chat oder im Forum nach Hilfe. Es gibt fast kein Problem
+frage bitte im IRC-Chat oder im Forum nach Hilfe. Es gibt fast kein Problem,
 das nicht gelöst werden kann.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
