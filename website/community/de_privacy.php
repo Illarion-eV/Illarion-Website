@@ -2,14 +2,14 @@
    include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
    create_header( "Illarion - Datenschutzerklärung",
                   "Diese Seite enth&auml;lt die Datenschutzerklärung des Illarion e.V.",
-                  "Verein, Illarion e.V." );
+                  "Datenschutz, Illarion e.V." );
    include_header();
    
 ?>
 
 <h1>Datenschutzerklärung</h1>
    
-<h2>Allgemeines</h2>
+<h2>Erhebung, Verarbeitung und Nutzung personenbezogener Daten</h2>
 
 <p>Die Nutzung unserer Seite ist ohne eine Angabe von personenbezogenen Daten möglich. Für die Nutzung einzelner Services unserer Seite können sich hierfür abweichende Regelungen ergeben, die in diesem Falle nachstehend gesondert erläutert werden. Ihre personenbezogenen Daten werden von uns nur gemäß den Bestimmungen des deutschen Datenschutzrechts verarbeitet. Daten sind dann personenbezogen, wenn sie eindeutig einer bestimmten natürlichen Person zugeordnet werden können. Die rechtlichen Grundlagen des Datenschutzes finden Sie im Bundesdatenschutzgesetz (BDSG) und dem Telemediengesetz (TMG). Nachstehende Regelungen informieren Sie insoweit über die Art, den Umfang und Zweck der Erhebung, die Nutzung und die Verarbeitung von personenbezogenen Daten durch den Anbieter Illarion e.V.. Wir weisen darauf hin, dass die internetbasierte Datenübertragung Sicherheitslücken aufweist, ein lückenloser Schutz vor Zugriffen durch Dritte somit unmöglich ist.</p>
 
