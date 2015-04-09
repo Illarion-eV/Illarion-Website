@@ -35,7 +35,7 @@
 
 <h2>Posting Comments</h2>
 
-<p>On our website we offer you the opportunity to post comments about individual articles. For this purpose, the IP address of the user/internet connection subscriber is stored. This information is stored for our security in the event the author through his/her comments infringes against third party rights and/or unlawful content is entered. Consequently, we have a direct interest in the authorís stored data, particularly since we may be potentially liable for such violations. No data is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.</p>
+<p>On our website we offer you the opportunity to post comments about individual articles. For this purpose, the IP address of the user/internet connection subscriber is stored. This information is stored for our security in the event the author through his/her comments infringes against third party rights and/or unlawful content is entered. Consequently, we have a direct interest in the author's stored data, particularly since we may be potentially liable for such violations. No data is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.</p>
 
 <h2>Subscribing to Comments</h2>
 
@@ -49,7 +49,7 @@ Our website uses the web analysis service PIWIK. To carry out this analysis, PIW
 
 <p>On the basis of the Federal Data Protection Act, you may contact us at no cost if you have questions relating to the collection, processing or use of your personal information, if you wish to request the correction, blocking or deletion of the same, or if you wish to cancel explicitly granted consent. Please note that you have the right to have incorrect data corrected or to have personal data deleted, where such claim is not barred by any legal obligation to retain this data.</p>
 
-<p>Data Privacy Policy Statement provided by the Law Offices of Weiﬂ & Partner</p>
+<p>Data Privacy Policy Statement provided by the Law Offices of Wei√ü & Partner</p>
 
 <?php insert_go_to_top_link(); ?>
 
