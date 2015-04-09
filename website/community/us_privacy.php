@@ -1,6 +1,6 @@
 <?php
    include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
-   create_header( "Illarion - Society",
+   create_header( "Illarion - Data Privacy Policy",
                   "This page contains the Data Privacy Policy of the Illarion e.V. society",
                   "Data Privacy Policy, Illarion e.V." );
    include_header();
