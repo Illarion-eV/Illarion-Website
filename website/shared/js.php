@@ -8,7 +8,7 @@ if (!isset($_GET['file'])) {
 	exit();
 }
 
-$filenames = split(',', $_GET['file']);
+$filenames = explode(',', $_GET['file']);
 if (isset($_GET['no_opti'])) {
 	$filetype = '_uncompressed.js';
 }else {
