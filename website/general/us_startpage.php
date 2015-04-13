@@ -17,6 +17,8 @@
 
 <h1>Welcome to Illarion!</h1>
 
+<h2>The World Illarion</h2>
+
 <?php Page::cap('T'); ?>
 <p class="hyphenate">
 he world is in turmoil. The War of the Gems has shaken the

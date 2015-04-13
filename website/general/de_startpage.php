@@ -16,6 +16,8 @@
 
 <h1>Willkommen in Illarion!</h1>
 
+<h2>Die Welt Illarion</h2>
+
 <?php Page::cap('D'); ?>
 <p class="hyphenate">
 ie Welt ist in Aufruhr. Der Edelsteinkrieg zerrüttete die Reiche,
