@@ -49,6 +49,8 @@ füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 <?php Page::insert_go_to_top_link(); ?>
 
 <?php
+	$pgSQL =& Database::getPostgreSQL();
+	
 	if(IllaUser::auth('quests'))
     {
         $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
@@ -65,6 +67,7 @@ füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
         .PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_de , q_title_us ) ASC'
         ;
     }
+	
     $pgSQL->setQuery( $query );
     $quests = $pgSQL->loadAssocList();
 	if ( count($quests) > 0):
