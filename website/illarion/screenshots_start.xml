@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screenshots>
+	<group index="0" gName="Screenshots" eName="Current Screenshots">
+        <screenshot filename="welcome_home.jpg" gName="Willkommen daheim" eName="Welcome Home" />
+        <screenshot filename="magic_forest.jpg" gName="Der magische Wald" eName="Magic Forest" />
+        <screenshot filename="market_day.jpg" gName="Markttag" eName="Market Day" />
+	</group>
+</screenshots>
