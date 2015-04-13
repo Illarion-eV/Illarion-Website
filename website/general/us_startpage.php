@@ -23,12 +23,6 @@ for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy
 <a href="/illarion/us_factions.php#2">Galmair</a> or wise 
 <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
-<div style="width:auto;margin:0 auto;text-align:center;float:right;padding:9px 0px 0px 12px">
-	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>/general/us_map_of_illarion.jpg" title="Map of Illarion" rel="Map of Illarion" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getURL(); ?>/general/us_thumb_map_of_illarion.jpg" width="121" height="100" alt="Map of Illarion. Click here to see it in full size." />
-	</a>
-</div>
-
 <p class="hyphenate">
 Illarion is a free open source MMORPG that focuses on true role playing.
 All of the characters that you will encounter during your time here are

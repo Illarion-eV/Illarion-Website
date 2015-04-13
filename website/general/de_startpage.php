@@ -23,12 +23,6 @@ Geißeln der Macht. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>,
 das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise 
 <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
-<div style="width:auto;margin:0 auto;text-align:center;float:right;padding:9px 0px 0px 12px">
-	<a style="margin:auto;" href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg" title="Karte von Illarion" rel="Karte von Illarion" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getURL(); ?>/general/de_thumb_map_of_illarion.jpg" width="121" height="100" alt="Karte von Illarion. Hier klicken um das Bild in der vollen Größe zu sehen." />
-	</a>
-</div>
-
 <p class="hyphenate">
 Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
 auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
