@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	Page::setTitle( 'Online-Player' );
+	Page::setTitle( 'Players Online' );
 	Page::setDescription( 'This page shows the players who are online' );
 	Page::setKeywords( array( 'online', 'players', 'statistics' ) );
 

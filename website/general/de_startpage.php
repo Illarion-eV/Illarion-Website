@@ -14,7 +14,7 @@
 
 <?php Page::cap('D'); ?>
 <p class="hyphenate">
-ie <a href="/illarion/de_factions.php#0">Welt</a> ist in Aufruhr. Der Edelsteinkrieg zerrüttete die Reiche,
+ie Welt ist in Aufruhr. Der Edelsteinkrieg zerrüttete die Reiche,
 Flüchtlinge aller Völker strömen in die Bastionen der Menschheit im Land
 Illarion, die verschont geblieben sind von den Entbehrungen der vergangenen
 Tage. Sechs Edelsteine der Macht waren den Fürsten dieser Bastionen zur

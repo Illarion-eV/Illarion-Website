@@ -4,7 +4,7 @@
 	Page::setTitle( 'The Free Online Roleplaying Game' );
 	Page::setDescription( 'Illarion is a free online roleplaying game within a middle age fantasy setting with focus on real roleplay.' );
 	Page::setKeywords( array( 'Startpage', 'News' ) );
-	Page::addCSS( array( 'lightwindow', 'lightwindow_us' ) );
+	Page::addCSS( array( 'lightwindow', 'lightwindow_us', 'onlineplayer' ) );
 	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
 	Page::setXHTML();
 	Page::Init();
@@ -14,7 +14,7 @@
 
 <?php Page::cap('T'); ?>
 <p class="hyphenate">
-he <a href="/illarion/us_factions.php#0">world</a> is in turmoil. The War of the Gems has shaken the
+he world is in turmoil. The War of the Gems has shaken the
 realms to their core. Refugees flock to the bastions of the land Illarion
 that were spared from the hardships of the past. Six gems of power were
 given to the Lords of these bastions for safekeeping; but jealousy,
