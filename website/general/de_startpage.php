@@ -36,13 +36,9 @@ lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
 verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
 Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben
 als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester
-der <a href="/illarion/goetter/de_bck_10.php">Götter</a>.</p>
-
-<p class="hyphenate">
-Illarion vereint ein klassisches Fantasy-Setting mit den Vorzügen einer
-offenen, persistenten Spielwelt. Deine Entscheidungen und Taten formen und
-gestalten diese Welt und werden eines Tages die Seiten der Geschichtsbücher
-füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
+der <a href="/illarion/goetter/de_bck_10.php">Götter</a>.
+Deine Entscheidungen und Taten formen und gestalten diese Welt und werden 
+eines Tages die Seiten der Geschichtsbücher füllen.</p>
 
 <p>Illarion - Welche Rolle wirst du spielen?</p>
 

@@ -35,14 +35,10 @@ All of the characters that you will encounter during your time here are
 living, breathing inhabitants of this mysterious world. Each character has
 their own past, goals, flaws, strengths and personality. Experience
 glorious adventures as a noble knight or live the life of a hardworking
-craftsman, acquisitive merchant, or charismatic priest of the <a href="/illarion/goetter/us_bck_10.php">gods</a>.</p>
-
-<p class="hyphenate">
-Illarion combines a high fantasy setting with a persistent game world. The
-decisions that you make while playing Illarion will actually impact and
+craftsman, acquisitive merchant, or charismatic priest of the <a href="/illarion/goetter/us_bck_10.php">gods</a>.
+The decisions that you make while playing Illarion will actually impact and
 shape the world around you. Your actions will determine the events that will
-one day fill the pages of Illarion's history books. You won't be able to
-resist the magic of this world.</p>
+one day fill the pages of Illarion's history books.</p>
 
 <p>Illarion - What role will you play?</p>
 
