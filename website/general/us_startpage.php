@@ -43,7 +43,7 @@ one day fill the pages of Illarion's history books.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Screenshots</h2>
+<h1>Screenshots</h1>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
@@ -55,9 +55,6 @@ one day fill the pages of Illarion's history books.</p>
 	</a>
 </div>
 <?php endforeach; ?>
-<div class="clr"></div>
-
-<?php Page::insert_go_to_top_link(); ?>
 <?php endforeach; ?>
 
 <?php Page::insert_go_to_top_link(); ?>
