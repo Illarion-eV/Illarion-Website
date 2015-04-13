@@ -27,7 +27,7 @@ Geißeln der Macht. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>,
 das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise 
 <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
-<p>&nbsp</p>
+<div class="clr"></div>
 
 <div class="head_button">
 	<div class="create_account">
