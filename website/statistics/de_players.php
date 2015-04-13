@@ -163,7 +163,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests</h2>
+<h2>Quests und Events</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>
