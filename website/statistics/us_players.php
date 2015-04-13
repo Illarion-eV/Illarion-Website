@@ -11,7 +11,7 @@
 	Page::Init();
 ?>
 
-<h1>Online-Player</h1>
+<h1>Players Online</h1>
 
 <?php if ( Page::getDebugger() > 0 ): ?>
 <h2>Debugger running</h2>
@@ -166,7 +166,7 @@ logging on. Usually other follow if someone is playing.</p>
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests</h2>
+<h2>Quests and Events</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>
