@@ -142,6 +142,8 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php endif; ?>
 
 <?php
+	$pgSQL =& Database::getPostgreSQL();
+
 	if(IllaUser::auth('quests'))
     {
         $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
