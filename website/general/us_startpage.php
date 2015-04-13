@@ -28,6 +28,17 @@ for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy
 <a href="/illarion/us_factions.php#2">Galmair</a> or wise 
 <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
+ <p>
+ <div class="head_button">
+	<div class="create_account">
+		<a href="{HTTP_URL}/community/account/{LANGUAGE}_register.php"></a>
+	</div>
+    <div class="start_game">
+    	<a href="{HTTP_URL}/illarion/{LANGUAGE}_java_download.php"></a>
+    </div>
+</div>
+</p>
+
 <p class="hyphenate">
 Illarion is a free open source MMORPG that focuses on true role playing.
 All of the characters that you will encounter during your time here are
