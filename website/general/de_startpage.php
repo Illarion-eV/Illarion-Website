@@ -48,6 +48,58 @@ füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
+<h2>Quests und Events</h2>
+
+<table class="quests">
+	<?php foreach($quests as $key=>$quest): ?>
+	<?php
+		if ($quest['q_type'] == 2)
+		{
+			$quest['q_status'] = 3;
+		}
+		if (!is_null( $quest['q_starttime'] ))
+		{
+		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
+		}
+	?>
+	<tr>
+		<td class="title">
+			<a style="font-weight:bold;" href="<?php echo Page::getURL(); ?>/statistics/de_quests.php?id=<?php echo $quest['q_id']; ?>">
+				<?php echo ( is_null($quest['q_title_de']) ? $quest['q_title_us'] : $quest['q_title_de'] ); ?>
+			</a>
+		</td>
+		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Offizielle Quest' : 'Spieler-Quest'); ?></td>
+		<td class="status<?php echo $quest['q_status']; ?>">
+			<?php
+				switch($quest['q_status'])
+				{
+					case 0:	echo 'Quest in Planung'; break;
+					case 1:	echo 'Quest startet in Kürze'; break;
+					case 2:	echo 'Quest läuft zur Zeit'; break;
+					case 3:	echo 'Nicht aktiviert'; break;
+				}
+				if (!is_null( $quest['q_starttime'] ))
+				{
+					echo '<br />', strftime( '%d. %B %Y - %H:%M', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) );
+				}
+			?>
+		</td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+<?php endif; ?>
+
+<?php if (IllaUser::auth('quests')): ?>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neue Quest eintragen</button></p>
+<?php elseif(IllaUser::loggedIn()): ?>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">Neue Spieler-Quest eintragen</button></p>
+<?php endif; ?>
+
+<?php if ( count($quests) > 0): ?>
+<?php Page::insert_go_to_top_link(); ?>
+<?php endif; ?>
+
 <h1>Aktuelle News</h1>
 
 <?php
