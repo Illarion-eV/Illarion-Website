@@ -20,7 +20,7 @@ veröffentlicht sind. Alle Quellen sind jedem frei zugänglich. Diese
 Seite bietet einen Überblick über die Speicherorte der Quelltexte.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
-<h1>Entwicklung der Spielinhalte</h1>
+<h2>Entwicklung der Spielinhalte</h2>
 
 <p>Als Spielinhalte werden alle Quests, NPCs, Monster und z.B. das Kampfsystem
 oder das Verhalten von Gegenständen bezeichnet. Spielinhalte sind zumeist in Lua&nbsp;5.1
@@ -34,7 +34,7 @@ ist über das Startprogramm erreichbar.</p>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
-<h1>Kartenentwicklung</h1>
+<h2>Kartenentwicklung</h2>
 
 <p>Die Karten der Spielwelt bilden die Landschaft in der sich alle Charaktere
 bewegen. Sie beschreiben die Bodenplatten, Gegenstände welche z.B. Gebäude oder Berge
@@ -46,7 +46,7 @@ das Startprogramm erreichbar.</p>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
-<h1>Java-Entwicklung</h1>
+<h2>Java-Entwicklung</h2>
 
 <p>Die Java-Entwicklung befasst sich mit der Entwicklung der Software, die auf den
 Rechnern der Benutzer läuft. Dabei handelt es sich um den Illarion-Client, den
@@ -57,7 +57,7 @@ easyNPC-Editor, den easyQuest-Editor und den Map-Editor.</p>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
-<h1>Server-Entwicklung</h1>
+<h2>Server-Entwicklung</h2>
 
 <p>Die Server-Entwicklung befasst sich mit der Entwicklung der C++-Serversoftware,
 welche auf der eigentlichen Hardware läuft. Alle Clients verbinden sich mit dem Server, welcher im Wesentlichen das Spiel steuert.</p>
@@ -65,3 +65,5 @@ welche auf der eigentlichen Hardware läuft. Alle Clients verbinden sich mit dem
 <ul>
 	<li><a href="https://github.com/Illarion-eV/Illarion-Server">Offizieller Entwicklungsstrang</a></li>
 </ul>
+
+<?php Page::insert_go_to_top_link(); ?>
