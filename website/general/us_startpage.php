@@ -28,8 +28,7 @@ for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy
 <a href="/illarion/us_factions.php#2">Galmair</a> or wise 
 <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
- <p></p>
- <p></p>
+ <p>&nbsp</p>
  
  <div class="head_button">
 	<div class="create_account">
