@@ -4,7 +4,7 @@
 	Page::setTitle( 'Das kostenlose Online-Rollenspiel' );
 	Page::setDescription( 'Illarion ist ein kostenloses Online-Rollenspiel in einer mittelalterlichen Fantasy Umgebung mit dem Schwerpunkt auf echtes Rollenspiel.' );
 	Page::setKeywords( array( 'Startseite', 'Neuigkeiten' ) );
-	Page::addCSS( array( 'lightwindow', 'lightwindow_de' ) );
+	Page::addCSS( array( 'lightwindow', 'lightwindow_de', 'onlineplayer' ) );
 	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
 	Page::setXHTML();
 	Page::Init();
