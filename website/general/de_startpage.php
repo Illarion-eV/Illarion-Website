@@ -121,14 +121,6 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <?php Page::insert_go_to_top_link(); ?>
 <?php endif; ?>
 
-<h1>Aktuelle News</h1>
-
-<?php
-    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
-    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
-    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
-?>
-
 <h1>Screenshots</h1>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
@@ -146,3 +138,11 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <div class="clr"></div>
 
 <?php Page::insert_go_to_top_link(); ?>
+
+<h1>Aktuelle News</h1>
+
+<?php
+    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
+    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
+?>

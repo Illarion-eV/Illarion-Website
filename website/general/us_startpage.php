@@ -122,14 +122,6 @@ one day fill the pages of Illarion's history books.</p>
 <?php Page::insert_go_to_top_link(); ?>
 <?php endif; ?>
 
-<h1>News</h1>
-
-<?php
-$newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
-$newsDb = new \News\NewsDatabase();
-echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
-?>
-
 <h1>Screenshots</h1>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
@@ -147,3 +139,11 @@ echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
 <div class="clr"></div>
 
 <?php Page::insert_go_to_top_link(); ?>
+
+<h1>News</h1>
+
+<?php
+$newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+$newsDb = new \News\NewsDatabase();
+echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
+?>
