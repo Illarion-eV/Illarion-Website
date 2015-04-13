@@ -15,13 +15,11 @@
 	
 ?>
 
-<h1>Welcome to Illarion!</h1>
-
-<h2>The World Illarion</h2>
+<h1>The World Illarion</h1>
 
 <?php Page::cap('T'); ?>
 <p class="hyphenate">
-he world is in turmoil. The War of the Gems has shaken the
+he lands are in turmoil. The War of the Gems has shaken the
 realms to their core. Refugees flock to the bastions of the land Illarion
 that were spared from the hardships of the past. Six gems of power were
 given to the Lords of these bastions for safekeeping; but jealousy,

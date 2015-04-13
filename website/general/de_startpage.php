@@ -14,13 +14,11 @@
 	$xmlC->Set_XML_data( $xml_file );
 ?>
 
-<h1>Willkommen in Illarion!</h1>
-
-<h2>Die Welt Illarion</h2>
+<h1>Die Welt Illarion</h1>
 
 <?php Page::cap('D'); ?>
 <p class="hyphenate">
-ie Welt ist in Aufruhr. Der Edelsteinkrieg zerrüttete die Reiche,
+as Land ist in Aufruhr. Der Edelsteinkrieg zerrüttete die Reiche,
 Flüchtlinge aller Völker strömen in die Bastionen der Menschheit im Land
 Illarion, die verschont geblieben sind von den Entbehrungen der vergangenen
 Tage. Sechs Edelsteine der Macht waren den Fürsten dieser Bastionen zur
