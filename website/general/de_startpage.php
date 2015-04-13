@@ -56,6 +56,8 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <?php endforeach; ?>
 <?php endforeach; ?>
 
+<div class="clr"></div>
+
 <?php Page::insert_go_to_top_link(); ?>
 
 <?php
