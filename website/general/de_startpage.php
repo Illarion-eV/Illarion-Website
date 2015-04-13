@@ -73,7 +73,9 @@ füllen. Du wirst dich dem Zauber dieser Welt nicht entziehen können!</p>
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests und Events</h2>
+<h1>Quests und Events</h1>
+
+<h2>Angekündigte Ereignisse</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>

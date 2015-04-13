@@ -73,7 +73,9 @@ resist the magic of this world.</p>
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests and Events</h2>
+<h1>Quests and Events</h1>
+
+<h2>Announced Events</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>
