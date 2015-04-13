@@ -19,7 +19,6 @@ unter der <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>
 veröffentlicht sind. Alle Quellen sind jedem frei zugänglich. Diese
 Seite bietet einen Überblick über die Speicherorte der Quelltexte.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
 <h2>Entwicklung der Spielinhalte</h2>
 
 <p>Als Spielinhalte werden alle Quests, NPCs, Monster und z.B. das Kampfsystem

@@ -19,7 +19,6 @@ while sources of server, maps and game content are released under
 All sources are free for public usage. This page offers a list of the
 development repositories of Illarion.</p>
 
-<?php Page::insert_go_to_top_link(); ?>
 <h2>Game Content Development</h2>
 
 <p>Game content are all quests, NPCs, monsters and e.g. the fighting system
