@@ -8,6 +8,8 @@ Page::setXHTML();
 Page::Init();
 ?>
 
+<h1>Links</h1>
+
 <h2>Links to the various projects that help provide Illarions foundations</h2>
 <br />
 

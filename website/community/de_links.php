@@ -8,6 +8,8 @@ Page::setXHTML();
 Page::Init();
 ?>
 
+<h1>Links</h1>
+
 <h2>Links zu diversen Projekten, welche Basiskomponenten von Illarion bereitstellen</h2>
 <br />
 
