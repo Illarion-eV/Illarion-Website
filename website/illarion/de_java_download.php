@@ -23,15 +23,15 @@
 <h2>Spiel herunterladen</h2>
 
 <ul>
-  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[590]; ?>">MacOS X</a></li>
-  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit) - Alle Versionen</a></li>
+  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit) - Alle Versionen</a></li>
+  <li><a href="<?php echo $pathList[590]; ?>">MacOS X - Alle Versionen</a></li>
+  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit) - Debian, Ubuntu, Mint usw.</a></li>
+  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit) - Debian, Ubuntu, Mint usw.</a></li>
+  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit) - Fedora, Mandriva, openSUSE, Red Hat usw.</a></li>
+  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit) - Fedora, Mandriva, openSUSE, Red Hat usw.</a></li>
+  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit) - Andere Linux-Distributionen</a></li>
+  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit) - Andere Linux-Distributionen</a></li>
 </ul>
 
 <p>Damit Du spielen kannst, musst Du
@@ -54,9 +54,7 @@ ausgewählt hast.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Client herunterladen</h2>
-
-<h3>Systemanforderungen</h3>
+<h2>Systemanforderungen</h2>
 
 <h4>Minimal</h4>
 <ul>
@@ -76,7 +74,7 @@ ausgewählt hast.</p>
 <ul>
   <li>Betriebssystem:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1</li>
+      <li>Windows Vista, 7, 8, 8.1</li>
       <li>Linux</li>
       <li>MacOS X 10.65 oder neuer</li>
     </ul>
@@ -93,51 +91,23 @@ keinen Treiber mit OpenGL Hardwarebeschleunigung installiert. Ein solcher
 Treiber kann auf der Homepage der Hersteller deiner Grafikkarte gefunden
 werden.</p>
 
-<h3>Installation</h3>
-
-<p>Für die Installation des Clients wird zunächst ein kleines Hilfsprogramm
-benötigt. Dieses Programm übernimmt den Download und des Start des Clienten
-und aller Hilfsprogramme die für Illarion entwickelt wurden. Dieses
-Hilfsprogramm ist der Illarion-Starter.</p>
-
-<p>Damit der Starter, der Client und alle anderen Anwendungen von Illarion
-verwendet werden können wird zunächst eine Java-Laufzeitumgebung gebraucht.
-Die Laufzeitumgebung wird kostenlos von Oracle angeboten und sollte auf dem
-aktuellen Stand sein, damit die Anwendungen richtig funktionieren.</p>
-
-<p><a href="http://java.com">Java Downloadseite (externe Seite)</a></p>
-
-<p>Wenn Java installiert ist, kann der Illarion-Starter heruntergeladen
-werden. Das Programm befindet sich in einer JAR-Datei. Diese Dateien sind
-Java-Anwendungen die auf vielen Betriebssystemen ausgeführt werden können,
-vorrausgesetzt das Java richtig installiert ist. Der Start der JAR-Datei
-funktioniert wie mit jeder anderen Anwendung auch. Unter Windows zum 
-Beispiel mit einem Doppelklick. Sollte es nicht funktionieren gibt es ein
-Problem mit der Java-Installation.</p>
-
-<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Illarion-Starter Download</a></p>
+<h2>Installation</h2>
 
 <p>Bei ersten Start des Illarion-Starters fragt ein kurzer
 Installationsassistent die noch fehlenden Einstellungen ab. Wenn es schon 
-eine alte Installation von Illarion auf dem Rechner gab, dann wird dieser
-Assistent übersprungen und die bestehenden Einstellungen werden weiterhin
+eine alte Installation von Illarion auf dem Rechner gab, dann werden die bestehenden Einstellungen werden weiterhin
 benutzt.</p>
 
-<p>Das Hauptmenu des Illarion-Starters bietet die Möglichkeit den Client
-zu starten in dem man auf "Spielen" drückt. Alle anderen Anwendungen werden
+<p>Das Hauptmenu des Illarion-Launchers bietet die Möglichkeit, den Client
+zu starten, indem man auf "Spielen" drückt. Alle anderen Anwendungen werden
 durch die jeweiligen beschrifteten Knöpfe gestartet. Sobald eine Anwendung
-ausgewählt wird beginnt der Downloader die aktuelle Version der Anwendung
+ausgewählt wird beginnt der Launcher die aktuelle Version der Anwendung
 zu suchen, eine Downloadliste zu erzeugen und die Anwendung herunterzuladen.
-Beim ersten Start kann einige Zeit vergehen bis der Download sichtbar beginnt.
-Lasst dem Starter etwas Zeit. Einige Minuten sind völlig normal.</p>
-
-<p>Nach dem Download startet die Anwendung automatisch.</p>
-
-<p>Die JAR-Datei des Downloaders kann an einem beliebigen Ort gespeichert werden.
-Es ist nicht notwendig die Datei immer wieder herunterzuladen.</p>
+Beim ersten Start kann einige Zeit vergehen bis der Download beginnt.
+Nach dem Download startet die Anwendung automatisch.</p>
 
 <p>Sollte es Probleme bei der Installation oder beim Start des Clienten geben,
-frage bitte im IRC Chat oder im Forum nach Hilfe. Es gibt fast kein Problem
+frage bitte im IRC-Chat oder im Forum nach Hilfe. Es gibt fast kein Problem,
 das nicht gelöst werden kann.</p>
 
 <?php Page::insert_go_to_top_link(); ?>

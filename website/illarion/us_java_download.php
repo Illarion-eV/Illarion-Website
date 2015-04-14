@@ -23,15 +23,15 @@
 <h2>Download the game</h2>
 
 <ul>
-  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[590]; ?>">MacOS X</a></li>
-  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit)</a></li>
-  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit)</a></li>
-  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit) - All versions</a></li>
+  <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit) - All versions</a></li>
+  <li><a href="<?php echo $pathList[590]; ?>">MacOS X - All versions</a></li>
+  <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit) - Debian, Ubuntu, Mint etc.</a></li>
+  <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit) - Debian, Ubuntu, Mint etc.</a></li>
+  <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit) - Fedora, Mandriva, openSUSE, Red Hat etc.</a></li>
+  <li><a href="<?php echo $pathList[416]; ?>">Linux RPM (64-Bit) - Fedora, Mandriva, openSUSE, Red Hat etc.</a></li>
+  <li><a href="<?php echo $pathList[64]; ?>">Linux (32-Bit) - Other Linux distributions</a></li>
+  <li><a href="<?php echo $pathList[420]; ?>">Linux (64-Bit) - Other Linux distributions</a></li>
 </ul>
 
 <p>To be able to play, you must
@@ -54,9 +54,7 @@ points and selecting a starting package.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2>Download the client</h2>
-
-<h3>System requirements</h3>
+<h2>System requirements</h2>
 
 <h4>Minimum</h4>
 <ul>
@@ -76,7 +74,7 @@ points and selecting a starting package.</p>
 <ul>
   <li>Operating system:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1</li>
+      <li>Windows Vista, 7, 8, 8.1</li>
       <li>Linux</li>
       <li>MacOS X 10.65 or more recent</li>
     </ul>
@@ -93,44 +91,18 @@ supporting OpenGL hardware acceleration installed by default. Drivers that
 support this feature can be found on your graphics card manufacturers
 website.</p>
 
-<h3>Installation</h3>
-
-<p>To perform the installation of the client there is a small helper
-application required. This applications downloads and launches the client
-and all other applications created for Illarion. This application is the
-Illarion-Launcher.</p>
-
-<p>For the launcher, the client and all other applications of Illarion
-the Java runtime environment is required. The JRE is free and you can
-download it from Oracle. Java should be up-to-date to ensure the
-applications to work properly.</p>
-
-<p><a href="http://java.com">Java download page (external page)</a></p>
-
-<p>Once Java is installed, the Illarion-Launcher can be downloaded. This
-applications is packaged in a JAR file. These files are Java applications
-that can be launched on many operating systems. Launching a JAR file works
-like any other application. Windows launches those files simply with a 
-double click. Provided a proper Installation of Java.</p>
-
-<p><a href="<?php echo Page::getURL(); ?>/media/java/launcher/illarion.jar">Illarion-Launcher download</a></p>
+<h2>Installation</h2>
 
 <p>During the first launch of the Illarion-Launcher a short installation
 assistent will request the required information. In case you got a old
-installation of Illarion, this assistent will be skipped and the old settings
-will be used.</p>
+installation of Illarion, the old settings will be used.</p>
 
-<p>The main menu of the Illarion-Launcher offers the possibility to launch
+<p>The main menu of the Illarion Launcher offers the possibility to launch
 the client using the "play" button. The other applications are launched with
 the buttons as labeled. Once a application is chosen the launcher will look
 for the latest version, resolve its dependencies and download everything.
 Especially during the first time a application is launched this can take some
-time. A few minutes are not unusual. So give the launcher some time.</p>
-
-<p>Once the download is done the application is launched automatically.</p>
-
-<p>The JAR file of the launcher can be saved where ever you like. Its not
-needed to download this file over and over again.</p>
+time. Once the download is done the application is launched automatically.</p>
 
 <p>If there should be problems during the installation or start of the client,
 please ask for help on the IRC chat or the forum. There's almost no problem,

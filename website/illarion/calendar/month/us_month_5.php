@@ -10,7 +10,7 @@
 	<p>The month "Siros" is named after Sirani, the goddess of love who is popular among
 	the people of Salkamar, Gynk and the Serinjahs.</p>
 
-	<p>All known cultures have loyality and binding celebrations during the month of
+	<p>All known cultures have loyalty and binding celebrations during the month of
 	Siros. Those mostly jolly fairs offer young couples the possibility for marriage
 	vows. There is no precise date for that festival but it is usually held on the 12th
 	Siros. Often villages communicate with each other so that there can be a festival in
