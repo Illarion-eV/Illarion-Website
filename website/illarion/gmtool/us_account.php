@@ -11,7 +11,7 @@
 		exit();
 	}
 
-	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
+	$accid = ( is_numeric($_GET['accid']) ? (int)$_GET['accid'] : 0 );
 
 	if (!$accid)
 	{
