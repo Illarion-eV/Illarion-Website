@@ -10,8 +10,6 @@
 
 <h1>Ushara - Goddess of Earth</h1>
 
-<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
-
 <?php cap(U); ?>
 <p>sharas is the god of the element Earth. Wise and calm, she is respected as mother of the world. Her restrained personality rejects wealth or any other kind of transitory values. If Ushara ever appears on Illarion, she choses the shape of an old dark-haired, dark-skinned woman dressed in dark colours. To foster her creation, she has put Oldra in charge, who is now being worshipped in new temples.</p>
 
@@ -23,6 +21,8 @@
 <p>Ushos, named after the creator goddess Ushara, is the last month of spring. In Galmair they celebrate the "Crocodile Feast" from the 3rd to 17th Ushos. This is a huge, lasting street festival in which the people wear animal masks and consume large amounts of alcoholic drinks. Not too seldomly, this leads to the fact that the Galmair town guards have to rescue drunken or even drowned people out of the swamps and brooks. In Gynk, Galmair's mother city, there is even a rumor that the Crocodile Feast was named so because in fact it would be a feast for the crocodiles who lurk the canals of Gynk.</p>
 
 <h2>Sign of the Zodiac - The Consistent Bear</h2>
+
+<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
 
 <p>Those born in the month of Ushara are quiet and introverted people. They love nature, and material things hold only little value to them. The are family people and constantly strive for harmony. Balanced persons, who are quiet and wise are blessed by Ushara. With wisdom, there comes confidence - Consistent bears do not hesitate to pursuit unconventional solutions. Rumor tells us that Archmage Elvaine Morgan of Runewick was actually born in the month of Ushos.</p>
 
