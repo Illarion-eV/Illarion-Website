@@ -14,7 +14,7 @@
 <p>ldan is the god of the element spirit. With his pensive attitude, one might conclude that his mind left the world and he sought refugee in the ivory tower of his thoughts. Wisdom is his mark, yet does he prefer to remain quiet when other shout out their foolishnesses. Eldan might appear as a mage, scholar, sometimes as a beggar or drunken philosopher; but always will he carry a wooden pole-staff. He avoids the the big cities or large crowds and prefers solitude.</p>
 
 <h2>Followers</h2>
-Eldan has never been too active amongst mortals. Very few people pray to him. As he was rarely
+<p>Eldan has never been too active amongst mortals. Very few people pray to him. As he was rarely
 heard or seen in public, only few know how to identify him. His believers do not talk much
 about him, and there are many rumors that he still wanders around in Illarion in disguise.
 People who follow him are often hermits, or people who love drinks and long philosophical talks.
