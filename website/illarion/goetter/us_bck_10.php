@@ -13,15 +13,14 @@
    <p>here are many Gods, many myths, and many legends. The stories told by the Gods to a few
    chosen mortals, may have been changed by the priest&#39;s tongues, to glorify their actions and
    to attract attention. Or sometimes, a prophet has added the one or another part. The Gods
-   themselves do not care much about the details - the whole thing must just go in the right
-   direction.</p>
+   do not care much about the details - as long as the story told is in their favour.</p>
 
    <h2>The Elder Ones</h2>
 
-   <p>Not much is known about their origin, and they seldom let others know something about their
-   past. Some people claim to know the answer, but who knows if these stories are true. Most of
-   them care little about the fate of Illarion and do not like to be disturbed by mortals. 
-   But when they intervene and write history, their majestic radiance leaves no doubt about their power.</p>
+   <p>Not much is known about their origin, and they seldom let others know anything about their past.
+   Some people claim to know the answer, but who knows if these stories are true. Most of the Elder Gods 
+   care little about the fate of Illarion and do not like to be disturbed by mortals, 
+   yet when they intervene and write history, their majestic radiance leaves no doubt about their power.</p>
 
 <ul>
 <li><a class="hidden" href="us_bck_11.php">Ushara - Goddess of Earth</a></li>
