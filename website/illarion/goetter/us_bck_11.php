@@ -11,7 +11,7 @@
 <h1>Ushara - Goddess of Earth</h1>
 
 <?php cap(U); ?>
-<p>sharas is the god of the element Earth. Wise and calm, she is respected as mother of the world. Her restrained personality rejects wealth or any other kind of transitory values. If Ushara ever appears on Illarion, she choses the shape of an old dark-haired, dark-skinned woman dressed in dark colours. To foster her creation, she has put Oldra in charge, who is now being worshipped in new temples.</p>
+<p>shara is the god of the element Earth. Wise and calm, she is respected as mother of the world. Her restrained personality rejects wealth or any other kind of transitory values. If Ushara ever appears on Illarion, she choses the shape of an old dark-haired, dark-skinned woman dressed in dark colours. To foster her creation, she has put Oldra in charge, who is now being worshipped in new temples.</p>
 
 <h2>Followers</h2>
 <p>Her believers are very few, most are female old druids or old elves who met Ushara personally. She is very well respected among dwarven kind, but true admiration is rarely found. As all elder gods, she is worshipped at the Temple of the Five, east of Galmair. There is also the Chapel of the Five, east of the Kantabi Desert, where the name of the Five is held in honour. The people of Runewick are known to show more respect for the Five as the citizens of Cadomyr or Galmair - but any miner who finds a gem in the Malachite Mine might thank Ushara in a quick prayer for her creation.</p>
@@ -24,7 +24,7 @@
 
 <img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
 
-<p>Those born in the month of Ushara are quiet and introverted people. They love nature, and material things hold only little value to them. The are family people and constantly strive for harmony. Balanced persons, who are quiet and wise are blessed by Ushara. With wisdom, there comes confidence - Consistent bears do not hesitate to pursuit unconventional solutions. Rumor tells us that Archmage Elvaine Morgan of Runewick was actually born in the month of Ushos.</p>
+<p>Those born in the month of Ushara are quiet and introverted people. They love nature, and material things hold only little value to them. The are family people and constantly strive for harmony. Balanced persons, who are quiet and wise are blessed by Ushara. With wisdom, there comes confidence and sometimes arrogance - Consistent bears do not hesitate to pursuit unconventional solutions. Rumor tells us that Archmage Elvaine Morgan of Runewick was actually born in the month of Ushos.</p>
 
 <?php navBarBottom( "us_bck_10.php", "us_bck_12.php" ); ?>
 
