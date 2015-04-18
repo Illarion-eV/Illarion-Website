@@ -24,10 +24,10 @@ As all elder gods, he is worshipped at the Temple of the Five, east of Galmair.
 There is also the Chapel of the Five, east of the Kantabi Desert, where the name of the Five is held in honour.
 As faith needs no house but one's mind and soul, she is also worshipped at remarkable sites at the coast of Illarion such as Cape Farewell, south of Cadomyr.</p>
 
-<p>Most Zelphia believers are Lizards, sailors, or even elves. Many healers pray to her too. Her
+<p>Most Tanora believers are Lizards, sailors, or even elves. Many healers pray to her too. Her
 followers believe that she is a very powerful righteous goddess. Since most of her lizard
 priests follow ancient traditions, some might be quite fanatic believers who crush evil beings
-wherever they can, while many other followers are very peaceful in nature. Zelphia followers
+wherever they can, while many other followers are very peaceful in nature. Tanora followers
 believe that the world and the magic are all one flow, and life springs from it where ever the
 goddess touches it. They think, that when they die, they will have to cross an endless sea. 
 When they have been good beings, the goddess may even send them a boat to bring them ashore. 
