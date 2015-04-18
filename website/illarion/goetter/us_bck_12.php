@@ -23,7 +23,7 @@ At the Chapel of the Five, east of the Kantabi Desert, Highpriest Bathelor prais
 
 <p>Brás is named after Brágon, the third known creator god: he gave the sun and the fire to the world. The longest day in the year followed by the shortest night is the 24th of Brás. In this night, elves celebrate the feast of fire, in which on seas and rivers small, carven wood pieces swim and carry many candles. The humans have different way to celebrate this celebration. In Salkamar and Gynk this night is celebrated with a long grill feast, where all kinds of artists show they skills. In Albar just the nobles usually celebrate, but therefor their decadent feasts goes through the whole of Brás. It's not unusally that they have a special tax enforced in many Albarian regions to finance this.</p>
 
-<h2>Sign of the Zodiac - The Noble Dragon</u2>
+<h2>Sign of the Zodiac - The Noble Dragon</2>
 
 <img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_7.gif" alt="The Noble Dragon"/>
 
