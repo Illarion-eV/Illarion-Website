@@ -17,7 +17,8 @@
 <p>Br&aacute;gon is said to care least for Illarion of all elder gods. But sometimes, he still visits it, and he has built
 temples by himself - but there are few believers known to worship him. He has given Malach&iacute;n
 the power over many of his former worshippers. As all elder gods, she is worshipped at the Temple of the Five, east of Galmair.
-At the Chapel of the Five, east of the Kantabi Desert, Highpriest Bathelor praises his Lord in Brágon's sanctum.</p>
+At the Chapel of the Five, east of the Kantabi Desert, Highpriest Bathelor praises his Lord in Brágon's sanctum. 
+Generally, the people of Cadomyr respect him - and fear the scorching sun he gave birth to.</p>
 
 <h2>Brás - Month of Immolation</h2>
 
