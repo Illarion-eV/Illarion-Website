@@ -22,7 +22,7 @@
 
 <h2>Sign of the Zodiac - The Consistent Bear</h2>
 
-<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
 
 <p>Those born in the month of Ushara are quiet and introverted people. They love nature, and material things hold only little value to them. The are family people and constantly strive for harmony. Balanced persons, who are quiet and wise are blessed by Ushara. With wisdom, there comes confidence and sometimes arrogance - Consistent bears do not hesitate to pursuit unconventional solutions. Rumor tells us that Archmage Elvaine Morgan of Runewick was actually born in the month of Ushos.</p>
 

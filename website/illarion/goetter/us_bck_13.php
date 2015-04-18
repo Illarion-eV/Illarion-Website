@@ -28,7 +28,7 @@ There is also the Chapel of the Five, east of the Kantabi Desert, where the name
 
 <h2>Sign of the Zodiac - The Prudent Owl</h2>
 
-<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_8.gif" alt="The Consistent Bear"/>
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_8.gif" alt="The Consistent Bear"/>
 
 <p>People of this sign seem to be rather innocuous. They are reasonable, love books, and avoid any possible aggression. Their vast discretion keeps them from interfering with the lives of other people. They hate large crowds of people and would never push into the foreground. Very cultured persons are known to be born under this sign, but don't expect them to be a partyer, as they are usually unsocial.</p>
 

@@ -43,7 +43,7 @@ until the guilt is cleaned.</p>
 
 <h2>Sign of the Zodiac - The Dreaming Dolphin</h2>
 
-<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_2.png" alt="The Dreaming Dolphin"/>
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_2.png" alt="The Dreaming Dolphin"/>
 
 <p>The dolphins oftenly appear to be melancholic. They tend to dream of goals they cannot reach and quarrel with their fate. They are also very calm, just, and possess good taste. They constantly seek the vicinity of their beloved and strive for attention. Dreaming Dolphins are not everyone's preferred companions, as the tend to be sad or worried. Those who are impatient will never understand the ways of the Dreaming Dolphins.</p>
 

@@ -26,7 +26,7 @@ Generally, the people of Cadomyr respect him - and fear the scorching sun he gav
 
 <h2>Sign of the Zodiac - The Noble Dragon</h2>
 
-<img align="right" vspace="5" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_7.gif" alt="The Noble Dragon"/>
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_7.gif" alt="The Noble Dragon"/>
 
 <p>Those who are born under the sign of the Dragon have a fiery temper. They are ambitious and intelligent. They usually reach highly-staked goals with ease, and thus tend to challenge their destiny too much.
 Their sense for justice and passion makes them good leaders. Noble Dragons tend to be commanding and impulsive - but with their elegance and grace, it is easy to fall to their charisma. It is not a secret that Queen Rosaline Edwards of Cadomyr is a true Noble Dragon, born in the month of Brágon.</p>
