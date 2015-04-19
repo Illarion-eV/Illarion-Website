@@ -30,7 +30,7 @@ Sailors of Runewick are known to pray to her, but more in fear of storms than tr
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_11.gif" alt="The Elegant Falcon"/>
 
 <p>The Falcons are full of bold beauty and attract alot of spectators. They love music, painting, and other arts. Many various wishes slumber under their thin shell of reason.
-They are artistically talented and inventive. An Elegant Falcon tends to be very curious and sometimes impertinent - they can afford it. Their might be fickle, but one thing they never are: boring.</p>
+They are artistically talented and inventive. An Elegant Falcon tends to be very curious and sometimes impertinent - they can afford it. They might be fickle, but one thing they never are: boring.</p>
 
 <?php navBarBottom( "us_bck_14.php", "us_bck_16.php" ); ?>
 
