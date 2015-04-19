@@ -16,7 +16,7 @@
 <h2>Followers</h2>
 <p>Br&aacute;gon is said to care least for Illarion of all elder gods. But sometimes, he still visits it, and he has built
 temples by himself - but there are few believers known to worship him. He has given Malach&iacute;n
-the power over many of his former worshippers. As all elder gods, she is worshipped at the Temple of the Five, east of Galmair.
+the power over many of his former worshippers. As with all the Elder Gods, she is worshipped at the Temple of the Five, east of Galmair.
 At the Chapel of the Five, east of the Kantabi Desert, Highpriest Bathelor praises his Lord in Brágon's sanctum. 
 People often ask for the scorching sun, to which Bragon gave birth, to be merciful during their travel through the desert.</p>
 

@@ -10,10 +10,7 @@
 
    <?php cap(T); ?>
    
-   <p>here are many Gods, many myths, and many legends. The stories told by the Gods to a few
-   chosen mortals, may have been changed by the priest&#39;s tongues, to glorify their actions and
-   to attract attention. Or sometimes, a prophet has added the one or another part. The Gods
-   do not care much about the details - as long as the story told is in their favour.</p>
+   <p>here are many Gods, countless myths, and endless legends. The stories told by the Gods to a few chosen mortals may have changed through time, embellished by the tongues of priests and prophets that seek to glorify the actions of their chosen deity and ensure their place in history. The Gods do not care much about the details - as long as the story told is in their favour.</p>
 
    <h2>The Elder Ones</h2>
 
@@ -34,10 +31,7 @@
 
    <h2>The Younger Ones</h2>
 
-<p>Ennobled by the Elder Gods to guard and guide the races of Illarion, the Younger Ones are
-deeply involved in life itself. In disguise or in person, they started to take sides in the struggle between the powers on
-Illarion. Instead of leading the different races and ensuring their peacefull coexistence, they
-themself take part in the struggle, fighting for influence and power.</p>
+<p>nnobled by the Elder Gods to guard and guide the races of Illarion, the Younger Ones are deeply involved in life itself. In disguise or in person, they started to take sides in the struggle between the powers across Illarion. Instead of leading the different races and ensuring their peaceful coexistence, they themselves take part in the struggle, fighting for influence and power.</p>
 
 <ul>
 <li><a class="hidden" href="us_bck_16.php">Narg&ugrave;n - God of Chaos</a></li>
