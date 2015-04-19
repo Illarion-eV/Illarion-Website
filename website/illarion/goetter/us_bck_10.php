@@ -31,7 +31,7 @@
 
    <h2>The Younger Ones</h2>
 
-<p>nnobled by the Elder Gods to guard and guide the races of Illarion, the Younger Ones are deeply involved in life itself. In disguise or in person, they started to take sides in the struggle between the powers across Illarion. Instead of leading the different races and ensuring their peaceful coexistence, they themselves take part in the struggle, fighting for influence and power.</p>
+<p>Ennobled by the Elder Gods to guard and guide the races of Illarion, the Younger Ones are deeply involved in life itself. In disguise or in person, they started to take sides in the struggle between the powers across Illarion. Instead of leading the different races and ensuring their peaceful coexistence, they themselves take part in the struggle, fighting for influence and power.</p>
 
 <ul>
 <li><a class="hidden" href="us_bck_16.php">Narg&ugrave;n - God of Chaos</a></li>
