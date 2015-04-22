@@ -13,16 +13,16 @@
    
    <p>s gibt viele G&ouml;tter, viele Mythen und zahlreiche Geschichten. Die Geschichten wurden einst
    von den G&ouml;ttern selbst an einige auserw&auml;hlte Sterbliche weitergegeben, welche nun als Priester
-   &uuml;ber die Welten wandern, und von Ihren gro&szlig;en Taten erz&auml;hlen, auf das sie niemals in
+   &uuml;ber die Welten wandern und von Ihren gro&szlig;en Taten erz&auml;hlen, auf dass sie niemals in
    Vergessenheit geraten. Sie erz&auml;hlen von glorreichen Zeiten, und wahrhaft unglaublichen
-   Geschehnissen. Es mag auch sein das einige Propheten das eine oder andere Detail hinzugef&uuml;gt
-   haben, aber die G&ouml;tter k&uuml;mmern sich nicht um Details, solange der Inhalt Ihrem Weg
+   Geschehnissen. Es mag auch sein, dass einige Propheten das eine oder andere Detail hinzugef&uuml;gt
+   haben, aber die G&ouml;tter k&uuml;mmern sich nicht um Details, solange der Inhalt ihrem Weg
    entspricht.</p>
 
    <h2>Die Alten</h2>
 
-   <p>Es ist nicht viel &uuml;ber Ihren Ursprung in Erfahrung zu bringen, und sie erz&auml;hlen nur selten
-   etwas &uuml;ber Ihre Herkunft und ihre Vergangenheit. Viele stellten Fragen und forderten Antworten,
+   <p>Es ist nicht viel &uuml;ber ihren Ursprung in Erfahrung zu bringen und sie erz&auml;hlen nur selten
+   etwas &uuml;ber ihre Herkunft und ihre Vergangenheit. Viele stellten Fragen und forderten Antworten,
    aber wer wei&szlig; welche Geschichten wahr sind. Die meisten der alten G&ouml;tter scheren sich wenig um 
    das Schicksal Illarions und wollen von den sterblichen nicht gestört werden. 
    Doch wenn sie in die Geschichte eingreifen, dann ist ihr majestätischer Glanz über jeden Zweifel an ihrer Macht erhaben.</p>
