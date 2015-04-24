@@ -186,7 +186,7 @@ $templates = $db->loadAssocList();
 			<?php include_attribute_js( $limits ); ?>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_3" />
-				<input type="submit" name="submit" value="Speichern" />
+				<input type="submit" name="submit" value="Daten speichern" />
 			</p>
 		</div>
 	</form>
