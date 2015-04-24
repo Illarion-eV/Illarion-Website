@@ -90,7 +90,7 @@ $templates = $db->loadAssocList();
 <p>Die Attributpakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Bitte ändere die bestehenden Pakete bei Bedarf um sie deiner gewünschten Charakterrolle anzupassen. Druiden benötigen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz.</p>
 <p>Bewege deine Maus über ein Attribut, um einen Hilfetext anzuzeigen.</p>
 <div>
-	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attribute</h2>
 
@@ -186,7 +186,7 @@ $templates = $db->loadAssocList();
 			<?php include_attribute_js( $limits ); ?>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_3" />
-				<input type="submit" name="submit" value="Save data" />
+				<input type="submit" name="submit" value="Speichern" />
 			</p>
 		</div>
 	</form>
