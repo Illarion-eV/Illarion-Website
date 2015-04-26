@@ -7,4 +7,3 @@
 	{
 		include $_SERVER['DOCUMENT_ROOT'].'/community/account/us_charlist.php';
 	}
-?>
