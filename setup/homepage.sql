@@ -91,7 +91,7 @@ CREATE TABLE bans (
 --
 
 CREATE TABLE build_rules (
-    br_id integer DEFAULT nextval(('build_rules_seq'::text)::regclass) NOT NULL,
+    br_id integer DEFAULT nextval('build_rules_seq'::regclass) NOT NULL,
     br_type smallint NOT NULL,
     br_title_de character varying(100) NOT NULL,
     br_title_us character varying(100) NOT NULL,
@@ -205,7 +205,7 @@ CREATE TABLE monthly_treasure (
 --
 
 CREATE TABLE news (
-    n_id integer DEFAULT nextval(('news_seq'::text)::regclass) NOT NULL,
+    n_id integer DEFAULT nextval('news_seq'::regclass) NOT NULL,
     n_user_id integer NOT NULL,
     n_published_at timestamp without time zone DEFAULT now() NOT NULL,
     n_use_capital smallint NOT NULL,
@@ -252,7 +252,7 @@ CREATE SEQUENCE quest_seq
 --
 
 CREATE TABLE quests (
-    q_id integer DEFAULT nextval(('quest_seq'::text)::regclass) NOT NULL,
+    q_id integer DEFAULT nextval('quest_seq'::regclass) NOT NULL,
     q_user_id integer NOT NULL,
     q_published_at timestamp without time zone DEFAULT now() NOT NULL,
     q_status smallint DEFAULT 0 NOT NULL,
@@ -343,7 +343,7 @@ CREATE TABLE statistics (
 --
 
 CREATE TABLE storage (
-    s_id integer DEFAULT nextval(('storage_seq'::text)::regclass) NOT NULL,
+    s_id integer DEFAULT nextval('storage_seq'::regclass) NOT NULL,
     s_key character varying(100) NOT NULL,
     s_value integer NOT NULL
 );
