@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screenshots>
+	<group index="0" gName="Aktuelle Screenshots" eName="Current Screenshots">
+        <screenshot filename="welcome_home.jpg" gName="Willkommen daheim" eName="Welcome Home" />
+        <screenshot filename="magic_forest.jpg" gName="Der magische Wald" eName="Magic Forest" />
+        <screenshot filename="market_day.jpg" gName="Markttag" eName="Market Day" />
+		<screenshot filename="cadomyr_wedding.jpg" gName="Hochzeit in Cadomyr" eName="Wedding in Cadomyr" />
+		<screenshot filename="crafting.jpg" gName="Handwerk" eName="Crafting" />
+		<screenshot filename="a_quest.jpg" gName="Eine Aufgabe" eName="A Quest" />
+	</group>
+</screenshots>

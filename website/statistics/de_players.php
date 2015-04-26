@@ -142,6 +142,8 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 <?php endif; ?>
 
 <?php
+	$pgSQL =& Database::getPostgreSQL();
+
 	if(IllaUser::auth('quests'))
     {
         $query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
@@ -163,7 +165,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests</h2>
+<h2>Quests und Events</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>

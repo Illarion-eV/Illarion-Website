@@ -13,22 +13,19 @@
    
    <p>s gibt viele G&ouml;tter, viele Mythen und zahlreiche Geschichten. Die Geschichten wurden einst
    von den G&ouml;ttern selbst an einige auserw&auml;hlte Sterbliche weitergegeben, welche nun als Priester
-   &uuml;ber die Welten wandern, und von Ihren gro&szlig;en Taten erz&auml;hlen, auf das sie niemals in
+   &uuml;ber die Welten wandern und von Ihren gro&szlig;en Taten erz&auml;hlen, auf dass sie niemals in
    Vergessenheit geraten. Sie erz&auml;hlen von glorreichen Zeiten, und wahrhaft unglaublichen
-   Geschehnissen. Es mag auch sein das einige Propheten das eine oder andere Detail hinzugef&uuml;gt
-   haben, aber die G&ouml;tter k&uuml;mmern sich nicht um Details, solange der Inhalt Ihrem Weg
-   entspricht.<br />
-   Hier erm&ouml;glichen wir einen &Uuml;berblick &uuml;ber die G&ouml;tter, Ihr Kirchen, und Ihren
-   Glauben.</p>
+   Geschehnissen. Es mag auch sein, dass einige Propheten das eine oder andere Detail hinzugef&uuml;gt
+   haben, aber die G&ouml;tter k&uuml;mmern sich nicht um Details, solange der Inhalt ihrem Weg
+   entspricht.</p>
 
    <h2>Die Alten</h2>
 
-   <p>Es ist nicht viel &uuml;ber Ihren Ursprung in Erfahrung zu bringen, und sie erz&auml;hlen nur selten
-   etwas &uuml;ber Ihre Herkunft und ihre Vergangenheit. Viele stellten Fragen und forderten Antworten,
-   aber wer wei&szlig; welche Geschichten wahr sind. Die meisten der alten G&ouml;tter haben Illarion
-   verlassen.... niemand wei&szlig; wohin sie gingen.... wohl an einen Ort an dem sie von keinem
-   Sterblichen mehr gest&ouml;rt werden. Nur ab und zu kehren sie zur&uuml;ck, um in die Handlungen auf der
-   Insel einzugreifen.</p>
+   <p>Es ist nicht viel &uuml;ber ihren Ursprung in Erfahrung zu bringen und sie erz&auml;hlen nur selten
+   etwas &uuml;ber ihre Herkunft und ihre Vergangenheit. Viele stellten Fragen und forderten Antworten,
+   aber wer wei&szlig; welche Geschichten wahr sind. Die meisten der alten G&ouml;tter scheren sich wenig um 
+   das Schicksal Illarions und wollen von den sterblichen nicht gestört werden. 
+   Doch wenn sie in die Geschichte eingreifen, dann ist ihr majestätischer Glanz über jeden Zweifel an ihrer Macht erhaben.</p>
 
 <ul>
 <li><a class="hidden" href="de_bck_11.php">Ushara - G&ouml;ttin der Erde</a></li>
@@ -42,7 +39,7 @@
 
    <h2>Die Jungen</h2>
 
-   <p>Erschaffen von den Alten, um die V&ouml;lker von Illarion zu f&uuml;hren und zu besch&uuml;tzen, sind sie
+   <p>Erhoben von den Alten, um die V&ouml;lker von Illarion zu f&uuml;hren und zu besch&uuml;tzen, sind sie
    sehr in die Geschehnisse involviert und ergreifen Partei im fortw&auml;hrenden Kampf der Kr&auml;fte auf
    Illarion. Anstatt die V&ouml;lker zu f&uuml;hren und ihr friedliches Zusammenleben zu gew&auml;hrleisten,
    nehmen sie aktiv Anteil am Kampf der V&ouml;lker, um Einfluss und Macht zu erlangen.</p>

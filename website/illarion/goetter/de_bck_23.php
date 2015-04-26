@@ -38,6 +38,6 @@
    Einlass in den Garten der Erleuchtung. Die wahrlich B&ouml;sen und Unreinen werden durch der G&ouml;ttin
    Kuss reingewaschen und werden als unschuldige Neugeborene wieder auf die Erde gesandt.</p>
 
-   <?php navBarBottom( "de_bck_22.php", "de_bck_24php" ); ?>
+   <?php navBarBottom( "de_bck_22.php", "de_bck_24.php" ); ?>
 
 <?php include_footer(); ?>

@@ -89,7 +89,7 @@ erkennen.</p>
 unsagbaren Schrecken und gefährlichen Orten. Aus dunkler Vergangenheit steigen Dämonen und
 Monster empor, die nach dem Leben der Sterblichen trachten. So ist es nicht verwunderlich, dass
 in dieser magischen Welt, in der das Schicksal eines jeden vergänglich ist, die Völker Zuflucht
-und Trost bei den Göttern suchen. 16 Gottheiten bestimmen das Leben auf Illarion und nehmen
+und Trost bei den <a href="http://illarion.org/illarion/goetter/de_bck_10.php" class="eyecatcher">Göttern</a> suchen. Sechszehn Gottheiten bestimmen das Leben auf Illarion und nehmen
 Einfluss, wo immer es ihren Interessen zugute kommt. Kriege sind durch sie entstanden und wurden
 geschlichtet. Ganze Geschlechter kamen durch sie an die Macht und wurden gestürzt. Mag es auch
 hier und dort Verrückte geben, die ihre Existenz verleugnen, die sich ihrem Willen

@@ -86,3 +86,5 @@
     <li>Veröffentlichung von dutzenden neuen Büchern</li>
     <li>Hinzufügen von neuen, komplexen und herausfordernden Quests</li>
 </ul>
+
+<?php Page::insert_go_to_top_link(); ?>

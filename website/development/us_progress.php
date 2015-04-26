@@ -87,3 +87,4 @@
     <li>Addition of new, complex and challenging quests</li>
 </ul>
 
+<?php Page::insert_go_to_top_link(); ?>
