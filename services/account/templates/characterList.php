@@ -1,5 +1,6 @@
 <?php
 /** This is the view used to generate the character list output */
+if (!defined('IN_ACCOUNT_SERVICE')) { exit(); }
 
 $accountId = $this->get('account');
 

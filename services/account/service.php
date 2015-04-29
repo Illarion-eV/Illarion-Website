@@ -36,6 +36,10 @@ $app->post('/session', function() use ($app) {
     }
 });
 
+$app->post('/account', function() use ($app) {
+    // TODO: To be continued
+});
+
 function authenticate(\Slim\Route $route) {
     $app = \Slim\Slim::getInstance();
     $sessionId = $route->getParam('sessionId');
@@ -54,6 +58,8 @@ function authenticate(\Slim\Route $route) {
     }
 }
 
+$sessionIdCondition = ['sessionId' => '[a-f0-9]{32}'];
+
 /* Terminate a session */
 $app->delete('/session/:sessionId', 'authenticate', function($sessionId) use ($app) {
     if (Account\logout($sessionId)) {
@@ -61,7 +67,7 @@ $app->delete('/session/:sessionId', 'authenticate', function($sessionId) use ($a
     } else {
         $app->response()->setStatus(500);
     }
-})->conditions(['sessionId' => '[a-f0-9]{32}']);
+})->conditions($sessionIdCondition);
 
 /* Get the character list */
 $app->get('/characters/:sessionId', 'authenticate', function() use ($app) {
@@ -71,6 +77,18 @@ $app->get('/characters/:sessionId', 'authenticate', function() use ($app) {
     $app->view()->set('account', $accountId);
     $app->response()->headers->set('Content-Type', 'application/json');
     $app->render('characterList.php');
-})->conditions(['sessionId' => '[a-f0-9]{32}']);
+})->conditions($sessionIdCondition);
+
+/* Get the capabilities of the account. As in the things the account system is allowed to do. */
+$app->get('/caps/:sessionId', 'authenticate', function() use ($app) {
+    $app->response()->setStatus(200);
+    $env = $app->environment();
+    $accountId = intval($env['illarion.accountId']);
+    $app->view()->set('account', $accountId);
+    $app->response()->headers->set('Content-Type', 'application/json');
+    $app->render('capabilities.php');
+})->conditions($sessionIdCondition);
+
+
 
 $app->run();
