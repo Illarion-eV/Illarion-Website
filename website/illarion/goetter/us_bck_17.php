@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_16.php","us_bck_10.php","us_bck_18.php" ); ?>
+<?php navBarTop( "us_bck_16.php","us_bck_10.php","us_bck_18.php" ); ?>
 
-   <h2>Elara - Goddess of Wisdom and Knowledge</h2>
+   <h1>Elara - Goddess of Wisdom and Knowledge</h1>
 
    <p>Prayed to for:<br />
    Gaining knowledge, learning, justice</p>
@@ -37,6 +37,6 @@
    suffering. Most followers who claim to have come close to a suiting answer, have become very
    pieceful, righteous, pensive persons.</p>
 
-   <?php navBarBottom( "us_bck_16.php", "us_bck_18.php" ); ?>
+<?php navBarBottom( "us_bck_16.php", "us_bck_18.php" ); ?>
 
 <?php include_footer(); ?>
