@@ -8,7 +8,7 @@
 
    <?php navBarTop( "us_bck_18.php","us_bck_10.php","us_bck_20.php" ); ?>
 
-   <h2>Oldra - Goddess of Life and Fertility</h2>
+<h1>Oldra - Goddess of Life and Fertility</h1>
 
    <p>Prayed to for:<br />
    Growth of grain and food, birth of children, healing, protection and advice.</p>
@@ -34,6 +34,6 @@
    garden, and meet old and new friends in it - if not, they are allowed a rest, and send back to
    be reborn with a new name to make a good sense of their life.</p>
 
-   <?php navBarBottom( "us_bck_18.php", "us_bck_20.php" ); ?>
+<?php navBarBottom( "us_bck_18.php", "us_bck_20.php" ); ?>
 
 <?php include_footer(); ?>

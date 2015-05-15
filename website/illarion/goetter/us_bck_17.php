@@ -8,7 +8,7 @@
 
 <?php navBarTop( "us_bck_16.php","us_bck_10.php","us_bck_18.php" ); ?>
 
-   <h1>Elara - Goddess of Wisdom and Knowledge</h1>
+<h1>Elara - Goddess of Wisdom and Knowledge</h1>
 
    <p>Prayed to for:<br />
    Gaining knowledge, learning, justice</p>

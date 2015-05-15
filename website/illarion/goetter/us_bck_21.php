@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_20.php","us_bck_10.php","us_bck_22.php" ); ?>
+<?php navBarTop( "us_bck_20.php","us_bck_10.php","us_bck_22.php" ); ?>
 
-   <h2>Malach&iacute;n - God of Battle and Hunting </h2>
+<h1>Malachín - God of Battle and Hunting</h1>
 
    <p>Prayed to for:<br />
    Good hunt, protection on hunts or in battles, patron of warriors, soldiers and rangers.</p>
@@ -45,6 +45,6 @@
    the worlds. Never to enter the realm of the undead nor to be reborn. Cherga is know to look out
    for those with her mercyless gaze to punish them in a way they deserve.</p>
 
-   <?php navBarBottom( "us_bck_20.php", "us_bck_22.php" ); ?>
+<?php navBarBottom( "us_bck_20.php", "us_bck_22.php" ); ?>
 
 <?php include_footer(); ?>

@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_22.php","us_bck_00.php","us_bck_24.php" ); ?>
+<?php navBarTop( "us_bck_22.php","us_bck_00.php","us_bck_24.php" ); ?>
 
-   <h2>Sirani - Goddess of Love and Pleasure</h2>
+<h1>Sirani - Goddess of Love and Pleasure</h1>
 
    <p>Prayed to for:<br />
    Protection of people in love, or for love, or for attention of loved ones, advice for young
@@ -38,6 +38,6 @@
    will be &quot;washed&quot; from their guilt by the kiss of the Goddess, and loose most of their
    knowledge - and will awake as a newborn, unguilty child.</p>
 
-   <?php navBarBottom( "us_bck_22.php", "us_bck_24.php" ); ?>
+<?php navBarBottom( "us_bck_22.php", "us_bck_24.php" ); ?>
 
 <?php include_footer(); ?>

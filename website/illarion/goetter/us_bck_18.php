@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_17.php","us_bck_10.php","us_bck_19.php" ); ?>
+<?php navBarTop( "us_bck_17.php","us_bck_10.php","us_bck_19.php" ); ?>
 
-   <h2>Adron - God of Festivities and Wine </h2>
+<h1>Adron - God of Festivities and Wine </h1>
 
    <p>Prayed to for:<br />
    House God of all taverns and inns. For a good wine season, or simply when the wine bottle is
@@ -34,6 +34,6 @@
    that lasts forever, and the really bad or evil ones will be condemmned to be servants until they
    are enlightened.</p>
 
-   <?php navBarBottom( "us_bck_17.php", "us_bck_19.php" ); ?>
+<?php navBarBottom( "us_bck_17.php", "us_bck_19.php" ); ?>
 
 <?php include_footer(); ?>

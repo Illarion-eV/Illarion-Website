@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_23.php","us_bck_10.php","us_bck_25.php" ); ?>
+<?php navBarTop( "us_bck_23.php","us_bck_10.php","us_bck_25.php" ); ?>
 
-   <h2>Zhambra - God of Friendship and Loyalty</h2>
+<h1>Zhambra - God of Friendship and Loyalty</h1>
 
    <p>Prayed to for:<br />
    Protection of friendships, loyalty and holy vows, orcish bloodbrother-rituals, protection in
@@ -40,6 +40,6 @@
    if they have learned loyalty, they will be either reborn to make friends, or if they already
    have some, led into paradise by the God.</p>
 
-   <?php navBarBottom( "us_bck_23.php", "us_bck_25.php" ); ?>
+<?php navBarBottom( "us_bck_23.php", "us_bck_25.php" ); ?>
 
 <?php include_footer(); ?>

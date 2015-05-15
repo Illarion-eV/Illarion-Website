@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_24.php","us_bck_10.php","us_bck_26.php" ); ?>
+<?php navBarTop( "us_bck_24.php","us_bck_10.php","us_bck_26.php" ); ?>
 
-   <h2>Ronagan - God of Thieves and Shadows</h2>
+<h1>Ronagan - God of Thieves and Shadows</h1>
 
    <p>Prayed to for:<br />
    Protection from authorities. For all people living in the shadows of life, thieves, assassins,
@@ -37,6 +37,6 @@
    talent, Ronagan will give them a quest, mostly to help street children to learn how to become a
    thief.</p>
 
-   <?php navBarBottom( "us_bck_24.php", "us_bck_26.php" ); ?>
+<?php navBarBottom( "us_bck_24.php", "us_bck_26.php" ); ?>
 
 <?php include_footer(); ?>

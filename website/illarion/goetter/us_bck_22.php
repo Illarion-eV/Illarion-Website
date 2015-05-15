@@ -6,9 +6,9 @@
    include_header();
 ?>
 
-   <?php navBarTop( "us_bck_21.php","us_bck_00.php","us_bck_23.php" ); ?>
+<?php navBarTop( "us_bck_21.php","us_bck_00.php","us_bck_23.php" ); ?>
 
-   <h2>Irmorom - God of Trade and Craftsmanship </h2>
+<h1>Irmorom - God of Trade and Craftsmanship</h1>
 
    <p>Prayed to for:<br />
    Good business, making of things, protection when working. God of most Blacksmiths, other
@@ -35,6 +35,6 @@
    will be laughed at , and sent back to be reborn and learn more. If they impress the god, they
    will be granted some power too.</p>
 
-   <?php navBarBottom( "us_bck_21.php", "us_bck_23.php" ); ?>
+<?php navBarBottom( "us_bck_21.php", "us_bck_23.php" ); ?>
 
 <?php include_footer(); ?>

@@ -8,7 +8,7 @@
 
    <?php navBarTop( "us_bck_25.php","us_bck_10.php","" ); ?>
 
-   <h2>Moshran - God of Blood and Bones.</h2>
+<h1>Moshran - God of Blood and Bones</h1>
 
    <p>Prayed to for:<br />
    Big battles, sharp blades, power and wealth without taking care of something. Orcish war god.
@@ -48,6 +48,6 @@
    Eventually they will stand in front of him and their soul will be tortured in eternity to give
    pleasure to the Blood God.</p>
 
-   <?php navBarBottom( "us_bck_25.php", "" ); ?>
+<?php navBarBottom( "us_bck_25.php", "" ); ?>
 
 <?php include_footer(); ?>

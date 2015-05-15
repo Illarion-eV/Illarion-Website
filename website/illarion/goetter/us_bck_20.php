@@ -8,7 +8,7 @@
 
    <?php navBarTop( "us_bck_19.php","us_bck_10.php","us_bck_21.php" ); ?>
 
-   <h2>Cherga - Goddess of Spirits and the Underworld </h2>
+<h1>Cherga - Goddess of Spirits and the Underworld</h1>
 
    <p>Prayed to for:<br />
    Avoiding death, healing of ill people(spare them), rest and protection for the dead, bring rest
@@ -37,6 +37,6 @@
    destination places, until they themselves will be reborn to be allowed to start a new life. Most
    people who follow Cherga simply want to gain immortality.</p>
 
-   <?php navBarBottom( "us_bck_19.php", "us_bck_21.php" ); ?>
+<?php navBarBottom( "us_bck_19.php", "us_bck_21.php" ); ?>
 
 <?php include_footer(); ?>
