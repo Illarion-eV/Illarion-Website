@@ -5,7 +5,7 @@
 <div>
 	<h1>Eldas</h1>
 
-	<h2>Month of Abrosia</h2>
+	<h2>Month of Abstinence</h2>
 
 	<p>Eldas was named after the creator god Eldan</p>
 
