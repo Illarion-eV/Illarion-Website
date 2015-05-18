@@ -6,14 +6,14 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'us_elfes.php','us_story.php','us_dwarfs.php' ); ?>
+<?php navBarTop( 'us_elves.php','us_story.php','us_dwarfs.php' ); ?>
 
 <h1>Haflings</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_elfes.php">Elfes</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>

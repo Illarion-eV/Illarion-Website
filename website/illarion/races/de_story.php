@@ -13,7 +13,7 @@
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elves.php">Elfen</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
@@ -57,7 +57,7 @@ der Gebirgszüge gegraben haben, um dem Stein seine wertvollsten Schätze zu rau
 
 <p>Das Heulen der Wolfsrudel begleitet den Adler, der an den Flanken der Namenlosen Berge zum Wachwald hinabgleitet. Hier und dort erhebt sich eine Ansammlung von großen
 Eldaneichen aus der sonst geschlossenen Decke der Baumwipfel und in dem dichten Geflecht der
-Äste sind die Wohnstätten der <a href="de_elfes.php" class="eyecatcher">Elfen</a> nur schwer zu erkennen, wie auch ihre Existenz nur selten
+Äste sind die Wohnstätten der <a href="de_elves.php" class="eyecatcher">Elfen</a> nur schwer zu erkennen, wie auch ihre Existenz nur selten
 Spuren in der unberührten Natur hinterlässt.</p>
 
 <p>Weiter, immer weiter fliegt der Adler und auf seinem Weg werden die Berge abgelöst von der sanft geschwungenen Hügellandschaft Eibenthals, nur

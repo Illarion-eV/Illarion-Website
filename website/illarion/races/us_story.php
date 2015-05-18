@@ -13,7 +13,7 @@
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_elfes.php">Elfes</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>
@@ -58,7 +58,7 @@ cold stone of its most precious treasures.</p>
 
 <p>The howling of the wolf packs is accompanying the eagle who is gliding down the flanks of the
 Nameless Mountains into the Sentry Forest. Here and there a group of Eldan Oaks rises above
-the continuous cover of tree tops and in the thick netting of branches the <a href="us_elfes.php" class="eyecatcher">elven</a> dwellings are
+the continuous cover of tree tops and in the thick netting of branches the <a href="us_elves.php" class="eyecatcher">elven</a> dwellings are
 hard to recognize, as their existence seldom leaves marks in the untouched nature.</p>
 
 <p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
