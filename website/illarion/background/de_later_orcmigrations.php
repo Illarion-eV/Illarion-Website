@@ -58,14 +58,14 @@ galt lange Zeit als verfluchtes Land.</p>
 
 <h2>-2503 Der Fall des Hauses Narníl</h2>
 
-<p>Onathrae Nirié Narnil, die Älteste des Elbenhauses Narnil, war eine Überlebende
+<p>Onathrae Nirié Narnil, die Älteste des Elfenhauses Narnil, war eine Überlebende
 Gefangene des Angriffes der Orks. Sie hatte der Legende nach mit ansehen müssen, wie
 ihre Eltern von Orks erschlagen und einer ihrer Brüder geopfert und gegessen wurden.
 Während der 75 Jahre, in denen der Ältestenrat über die Orks beriet, waren sie und ihre
 Schwestern diejenigen, die am vehementesten dafür eintraten, die Orks ein für allemal zu
 vernichten.</p>
 
-<p>Einige Gefangene Orks hatten sich jedoch über die Jahre hinweg mit manchen der Elben
+<p>Einige Gefangene Orks hatten sich jedoch über die Jahre hinweg mit manchen der Elfen
 angefreundet. Sie hatten sich sogar als ehrenhaft und gelehrig erwiesen, wenn auch ihr
 aufbrausendes Talent die Ältesten sehr beunruhigte - jedoch war sich der Ältestenrat
 über die Situation der Orks klar geworden. Sie waren Vertriebene, und für dämonische
@@ -129,7 +129,7 @@ Jubel folgen die Stämme dem Strom flussaufwärts bis in die Hochebenen von Norb
 <p>Die oberste des Hauses Narnil, Onathrae Nirié Narnil, führt das Haus auf den Spuren
 der Orks bis an den Fuß des Aramon-Gebirges. Da die Orks das Gebiet vor etwa 60 Jahren
 durchquert hatten, sind die Spuren kaum noch auffindbar. Die .erume-lie. - .die (Leute),
-die Verlassen haben. , so werden die Dunkelelben von den Elben genannt - finden
+die Verlassen haben. , so werden die Dunkelelben von den Elfen genannt - finden
 verfallene Bauten in einem Gebirgstal. Für sie ist klar : Die Orks müssen die
 Bevölkerung geschlachtet haben. Das es kein Zeichen von Krieg gibt, wird angenommen, die
 Bewohner waren friedliche Handwerker, die sich nicht wehren konnten.</p>
@@ -139,7 +139,7 @@ verlassene Zwergenmine. Kundschafter stellen fest, dass unterirdische Gänge bis
 die Berge führen.</p>
 
 <p>Das Haus Nanril zerstreitet sich: Während Onathrae Nirié weiterhin die Orks verfolgen
-will, halten viele diese Jagd für sinnlos. Einige wollen zu den Städten der Elben
+will, halten viele diese Jagd für sinnlos. Einige wollen zu den Städten der Elfen
 zurückkehren, andere die Gänge erforschen. Onathrae Nirié Narnil wird eines Abends
 erstochen in ihrem Lager aufgefunden, nachdem sie sich zuvor lautstark mit ihren
 Schwestern gestritten hatte. Beide setzen sich durch, und entscheiden, die Höhlen zu
@@ -157,8 +157,8 @@ Höhlenkomplex, der weiter in die Tiefe hineinreicht als selbst die Stollen der 
 Dort gibt es alte Ruinenreste, welche von den Zwergen als bösartiger Ort gemieden
 wurden. Es kommt zu kleineren territorialen Konflikten, welche allerdings verbal gelöst
 werden. Ein großer Teil der Dunkelelben spaltet sich vom Hause Narnil ab. Sie brechen
-auf, um zu den anderen Elben zurückzukehren. Etwa um -1390 erreichen die Abgespaltenen
-die alten Siedlungen der Elben. Sie werden jedoch als Ausgestoßene betrachtet, als
+auf, um zu den anderen Elfen zurückzukehren. Etwa um -1390 erreichen die Abgespaltenen
+die alten Siedlungen der Elfen. Sie werden jedoch als Ausgestoßene betrachtet, als
 Gottlose und Verfluchte. Anstatt ihnen die Häuser und Eigentümer des Hauses Narnil
 zurückzugeben, werden sie aufgefordert, die Götter und den Ältestenrat zuvor um
 Verzeihung zu bitten.</p>
@@ -200,17 +200,17 @@ Aramon-Gebirge aufgetaucht.</p>
 <p>Aufgrund des Konfliktes der Zwerge der Aramon-Berge mit den Dunkelelben, greift ein
 Trupp Zwerge elbische Händlerkarawanen an. Auf diese unerwarteten Feindseligkeiten hin
 werden Botschafter geschickt, selbige kehren mit der Nachricht zurück, dass die Zwerge
-nicht mit Lügnern verhandeln werden. Als Antwort nehmen Elben zwergische Händler in
+nicht mit Lügnern verhandeln werden. Als Antwort nehmen Elfen zwergische Händler in
 "Gewahrsam".</p>
 
 <p>Auf diese Geiselnahme hin, entsendet Barak Ochsenbrecher, ein hoher Zwergenfürst,
 eine kleine Armee (zwei Hundertschaften) mit dem Ziel, die Gefangenen zu befreien. Es
-ist ihnen jedoch unmöglich, die Elbenstadt in den weiten Wäldern ausfindig zu machen.
+ist ihnen jedoch unmöglich, die Elfenstadt in den weiten Wäldern ausfindig zu machen.
 Die Zwerge werden beim Betreten der Waldgebiete von Bogenschützen beschossen.</p>
 
-<p>Als Bardak Ochsenbrecher, Fürst von Siebenberg, die Elben wutschreiend auffordert,
+<p>Als Bardak Ochsenbrecher, Fürst von Siebenberg, die Elfen wutschreiend auffordert,
 mit ihrem feigen Versteckspiel aufzuhören und sich Mann gegen Mann zu stellen oder
-seinen Bruder herauszugeben (einen der Händler), erscheinen Hunderte von Elbenkriegern.
+seinen Bruder herauszugeben (einen der Händler), erscheinen Hunderte von Elfenkriegern.
 Die Zwerge ziehen sich ob dieser gewaltigen Übermacht zurück.</p>
 
 <?php insert_go_to_top_link(); ?>

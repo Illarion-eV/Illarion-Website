@@ -21,7 +21,7 @@
 
 <h2>-5200 Schrift</h2>
 
-<p>Um -900 in Ausgrabungen gefundene schriftliche Elben-Dokumente werden auf etwa -5200
+<p>Um -900 in Ausgrabungen gefundene schriftliche Elfen-Dokumente werden auf etwa -5200
 datiert. Dabei handelt es sich um die ersten "Schriftstücke", die auf ledrigem Pergament
 niedergeschrieben wurden, die also Tragbar und flexibel waren. Beim ersten gefundenen
 Schriftstück handelt sich anscheinend um ein uraltes Gedicht oder Lied, eine

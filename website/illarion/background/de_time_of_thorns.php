@@ -42,9 +42,9 @@ getrunken.</p>
 
 <p>Eine Nebenwirkung des Tees ist zudem ein sehr leichter, eher beruhigender und
 belebender Rauschzustand, sowie eine Erfrischung der magischen Kraft des Trinkenden.
-Sumpfstechtee wird der Haupt-Exportschlager Gynks. Der Tee selbst ist dem Elbenvolk
+Sumpfstechtee wird der Haupt-Exportschlager Gynks. Der Tee selbst ist dem Elfenvolk
 schon seit Jahrhunderten bekannt, und wird oft vor Meditationen getrunken. Der Handel
-mit Gynk erspart den Elben das Suchen in den wenig angenehmen Sümpfen. In den Schänken
+mit Gynk erspart den Elfen das Suchen in den wenig angenehmen Sümpfen. In den Schänken
 Salkamars und Albars wird Stechkraut-Tee das ultimative Modegetränk, auch Tempel
 konsumieren Mengen davon. Die Umgebung Gynks ist seither geprägt durch große
 Stechkraut-Farmen.</p>
