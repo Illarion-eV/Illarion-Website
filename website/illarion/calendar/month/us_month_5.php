@@ -19,7 +19,7 @@
 	<p>Although all peoples celebrate there are differences among the races and
 	religions.</p>
 
-	<p>The elfish tradition expects that the man attaches branches of the Mevranno-tree
+	<p>The elven tradition expects that the man attaches branches of the Mevranno-tree
 	to the entrance of his love's house. This tree lives in symbiosis with another plant
 	called Levrenni. Levrenni is a blooming climbing plant who starts to wrap around
 	trees already when it is still young. If one of the two plants tries to exist alone,
