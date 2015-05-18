@@ -44,7 +44,7 @@ anscheinend wurde so etwas für unnötig befunden.</p>
 
 <p>Das erste geschichtliche Ereignis, was sich überhaupt an Hand von Aufzeichnungen
 genau datieren lässt, sind die Anfänge der Ork-Kriege. Diese Aufzeichnungen stammen
-von Elbischer Hand und lassen sich durch Abschriften aus den Archiven von Salkamar
+von elfischer Hand und lassen sich durch Abschriften aus den Archiven von Salkamar
 belegen.</p>
 
 <?php navBarBottom("de_overview.php", "de_early_orcmigrations.php"); ?>

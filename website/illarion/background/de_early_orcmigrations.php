@@ -99,7 +99,7 @@ geopfert, und aus Mangel an anderer Nahrung kurzerhand gegessen.</p>
 <p>Schon drei Tage später, mitten in den Siegesfeierlichkeiten, wurde das Lager der
 Clans angegriffen. In großer Zahl waren Elfen erschienen, gerüstet mit mächtigen Waffen
 und Rüstungen, die zum Teil noch aus alten Kriegen stammten und solchen, die nach alter
-Kunst hergestellt worden waren. Elbische Magie schlug Breschen in die orkischen
+Kunst hergestellt worden waren. Elfische Magie schlug Breschen in die orkischen
 Palisaden, und während die Gefangenen flohen, sprangen Kriegstänzer und Schwertsänger
 mitten zwischen die verblüfften Orks. Schon nach kurzer Zeit wurde aus der Verblüffung
 der orkischen Krieger eine wilde Flucht: Einem Feind, der sich unnatürlich schnell
