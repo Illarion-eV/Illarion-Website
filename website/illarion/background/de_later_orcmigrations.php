@@ -198,7 +198,7 @@ Aramon-Gebirge aufgetaucht.</p>
 <h2>-2331 bis -2320 Der Aramon-Konflikt</h2>
 
 <p>Aufgrund des Konfliktes der Zwerge der Aramon-Berge mit den Dunkelelben, greift ein
-Trupp Zwerge elbische Händlerkarawanen an. Auf diese unerwarteten Feindseligkeiten hin
+Trupp Zwerge elfische Händlerkarawanen an. Auf diese unerwarteten Feindseligkeiten hin
 werden Botschafter geschickt, selbige kehren mit der Nachricht zurück, dass die Zwerge
 nicht mit Lügnern verhandeln werden. Als Antwort nehmen Elfen zwergische Händler in
 "Gewahrsam".</p>
