@@ -1,6 +1,6 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Background - Dwarfs',
+	create_header( 'Illarion - Background - Dwarves',
 	'Races Illarions',
 	'Background, Races, History', '', 'menu', '', true );
 	include_header();
@@ -8,14 +8,14 @@
 
 <?php navBarTop( 'us_halflings.php','us_story.php','us_orcs.php' ); ?>
 
-<h1>Dwarfs</h1>
+<h1>Dwarves</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
-		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
+		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_dwarves.php">Dwarves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_lizards.php">Lizards</a></li>
 		<li class="end" />
@@ -26,7 +26,7 @@
 <?php cap(T); ?>
 <p>he dwarves are an old race. According to history, they were the third race who developed their own writing. In the very
 beginning it was based on pictograms – a simple and easy way to show the true meaning of the word. It was mainly used to
-record the history of the dwarfs and for religious purposes, thus being of a more sacrosanct nature and having no real
+record the history of the dwarves and for religious purposes, thus being of a more sacrosanct nature and having no real
 value for daily life. But over the centuries these pictograms developed and became more simple, corresponding with the
 need of a script used for daily life. In the end the old dwarfish writing developed into a rune like writing; only
 few are still able to read or write the old pictograms nowadays.</p>
@@ -79,7 +79,7 @@ shrine for the clan god. In most cases this would be Irmorom but also Ushara is 
 <?php cap(E); ?>
 <p>very dwarven clan consists of several families. A typical dwarven family consists of a man, his wife, and the children. A
 common number of children is two to four. When getting married, a new family is founded and they choose a new family name. This
-is the reason why dwarves call their children "Son of... and ... Son of... etc.", female dwarfs take their name from their
+is the reason why dwarves call their children "Son of... and ... Son of... etc.", female dwarves take their name from their
 mothers and grandmothers. The actual, self–chosen family name is not mentioned and never told to strangers. This is done to
 prevent curses against the family.</p>
 

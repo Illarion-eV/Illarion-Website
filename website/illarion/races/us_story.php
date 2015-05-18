@@ -15,7 +15,7 @@
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarves.php">Dwarves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_lizards.php">Lizards</a></li>
 		<li class="end" />
@@ -53,7 +53,7 @@
 <p>n eagle is escalating higher and higher into the sky above Illarion. In search of prey, it
 scans the vast lands. It sees the Nameless Mountains, seemingly touching the firmament with their
 jagged peaks and snowcapped summits, guarding the wealthy merchant town of <a href="http://illarion.org/illarion/us_factions.php#2" class="eyecatcher">Galmair</a>. With its sharp eyes it recognizes the hidden entrances to
-the great Hammefall mines of the <a href="us_dwarfs.php" class="eyecatcher">dwarfs</a>, who dug deep into the heart of the mountain ranges to rob the
+the great Hammefall mines of the <a href="us_dwarves.php" class="eyecatcher">dwarves</a>, who dug deep into the heart of the mountain ranges to rob the
 cold stone of its most precious treasures.</p>
 
 <p>The howling of the wolf packs is accompanying the eagle who is gliding down the flanks of the
