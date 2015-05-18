@@ -28,7 +28,7 @@
 beginning it was based on pictograms – a simple and easy way to show the true meaning of the word. It was mainly used to
 record the history of the dwarves and for religious purposes, thus being of a more sacrosanct nature and having no real
 value for daily life. But over the centuries these pictograms developed and became more simple, corresponding with the
-need of a script used for daily life. In the end the old dwarfish writing developed into a rune like writing; only
+need of a script used for daily life. In the end the old dwarven writing developed into a rune like writing; only
 few are still able to read or write the old pictograms nowadays.</p>
 
 <?php cap(A); ?>
