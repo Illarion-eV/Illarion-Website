@@ -208,7 +208,7 @@ be useful.</p>
 <p>Learn to separate between these two levels. When a dwarf calls an orc a stinky beast, it
 would be a conflict between the dwarf and the orc, not between the player of the dwarf and the
 player of the orc. If the orc player changes to another of his characters, that is a dwarf too,
-both dwarfs could be close friends. This separation also counts for the boards on the website. A
+both dwarves could be close friends. This separation also counts for the boards on the website. A
 misunderstanding of both levels often leads to a disgusting battle between players on the
 boards.</p>
 
