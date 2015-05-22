@@ -18,7 +18,7 @@
 
 <p>Followers of Malachín believe, that when they die they will be led to the door of a great castle where there will be a great feast for them, and Malachín will ask them what they did in life. If they tell an honourable and true story, they are invited to sit with him at the table with the great heroes for that evening. The next morning, they will stand and fight a battle against Moshran's demons. If a soldier shows great valour in these battles, he will be sent back to the world to assist righteous paladins or soldiers (sometimes famous ones, or even orc shamans) in battle or as a spiritual mentor. Occasionally, a fighter or even a great hero will be sent back to be reborn to fulfill a righteous purpose in times when heroes are needed. Doom awaits those who dare to face Malachín when they are liars or have lived a dishonourable life and. They are denied a seat next to the god and instead their soul is condemned to wander under Cherga's merciless gaze for ever more between the mortal plane and the afterlife.</p>
    
-<h2>Ushos - Month of the Hunter</h2>
+<h2>Malas - Month of the Hunter</h2>
 
 <p>The month of Malas was named after Malachín, god of hunting and honourable battles. Orcs are known to depart from civilised places such as Cadomyr or Galmair during Malas and gather at their ritual places. Orcish shamans initiate dances, recalling old tribal customs of the orcs. Also, in the plains far away from Illarion, the descendants of the Serinjah people hold huge gatherings of all tribes, starting on the 4th Malas and continuing over twenty days.</p>
 
