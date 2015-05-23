@@ -41,10 +41,9 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 
 <p>Illarion - Welche Rolle wirst du spielen?</p>
 
-
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
-<h2><?php echo $currGroup->eName; ?></h2>
+<h2><?php echo $currGroup->gName; ?></h2>
 <?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
 <div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
 	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->gName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->gName; ?>" class="lightwindow" onclick="return false;">

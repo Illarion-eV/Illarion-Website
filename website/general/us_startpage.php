@@ -42,8 +42,6 @@ one day fill the pages of Illarion's history books.</p>
 
 <p>Illarion - What role will you play?</p>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
 <h2><?php echo $currGroup->eName; ?></h2>
