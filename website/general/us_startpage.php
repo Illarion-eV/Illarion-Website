@@ -28,22 +28,6 @@ for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy
 <a href="/illarion/us_factions.php#2">Galmair</a> or wise 
 <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
-<?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
-<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
-
-<?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
-<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
-	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->eName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->eName; ?>" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Click here to view the picture in full size" />
-	</a>
-</div>
-<?php endforeach; ?>
-<?php endforeach; ?>
-
-<div class="clr"></div>
-
-<?php Page::insert_go_to_top_link(); ?>
-
 <?php Page::cap('I'); ?>
 <p class="hyphenate">
 llarion is a free open source MMORPG that focuses on true role playing.
@@ -57,6 +41,22 @@ shape the world around you. Your actions will determine the events that will
 one day fill the pages of Illarion's history books.</p>
 
 <p>Illarion - What role will you play?</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
+<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
+<h2><?php echo $currGroup->eName; ?></h2>
+<?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
+<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
+	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->eName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->eName; ?>" class="lightwindow" onclick="return false;">
+		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Click here to view the picture in full size" />
+	</a>
+</div>
+<?php endforeach; ?>
+<?php endforeach; ?>
+
+<div class="clr"></div>
 
 <?php Page::insert_go_to_top_link(); ?>
 
