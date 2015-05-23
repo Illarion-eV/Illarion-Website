@@ -28,7 +28,7 @@ das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise
 <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
-<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
+
 <h2><?php echo $currGroup->gName; ?></h2>
 <?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
 <div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
@@ -39,8 +39,11 @@ das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise
 <?php endforeach; ?>
 <?php endforeach; ?>
 
+<div class="clr"></div>
+
+<?php Page::cap('I'); ?>
 <p class="hyphenate">
-Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
+llarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
 auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
 lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
 verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
