@@ -83,6 +83,14 @@ one day fill the pages of Illarion's history books.</p>
 	if ( count($quests) > 0):
 ?>
 
+<h1>News</h1>
+
+<?php
+$newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+$newsDb = new \News\NewsDatabase();
+echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
+?>
+
 <h1>Quests and Events</h1>
 
 <h2>Announced Events</h2>
@@ -136,11 +144,3 @@ one day fill the pages of Illarion's history books.</p>
 <?php if ( count($quests) > 0): ?>
 <?php Page::insert_go_to_top_link(); ?>
 <?php endif; ?>
-
-<h1>News</h1>
-
-<?php
-$newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
-$newsDb = new \News\NewsDatabase();
-echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
-?>

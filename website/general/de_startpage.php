@@ -82,6 +82,14 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 	if ( count($quests) > 0):
 ?>
 
+<h1>Aktuelle News</h1>
+
+<?php
+    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
+    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
+?>
+
 <h1>Quests und Events</h1>
 
 <h2>Angekündigte Ereignisse</h2>
@@ -135,11 +143,3 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <?php if ( count($quests) > 0): ?>
 <?php Page::insert_go_to_top_link(); ?>
 <?php endif; ?>
-
-<h1>Aktuelle News</h1>
-
-<?php
-    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
-    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
-    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
-?>
