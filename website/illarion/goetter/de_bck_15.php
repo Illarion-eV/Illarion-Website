@@ -8,7 +8,7 @@
 
    <?php navBarTop( "de_bck_14.php","de_bck_10.php","de_bck_16.php" ); ?>
 
-<h1>Findari - G&ouml;ttin der Luft</h1>
+<h1>Findari - Göttin der Luft</h1>
 
 <?php cap(F); ?>
 <p>indari ist die Göttin des Elements Luft. Es liegt nicht in Findaris Natur, sich den Dingen aufzuzwingen, aber wie jeder Wind den sie entsendet, verändert auch sie die Welt - ob zum Guten oder Schlechten liegt dabei immer im Auge des Betrachters. Als gutherziges Wesen, ist sie als freundliche Göttin ohne böswilligen Vorhaben bekannt. Diejenigen, die ihre Wege nicht verstehen, werden die Vernichtung, die ihre Stürme hinterlassen, jedoch nicht als Chance betrachten, etwas Neues aufzubauen, sondern als reine Zerstörung. In den seltenen Fällen da Findari eine sterbliche Hülle anlegt, zeigt sie sich in der Gestalt einer alterslosen, blonden Frau mit hellblauer Kleidung, die selbst dort tanzt, wo andere der Verzweiflung verfallen sind. Sie zieht Musik und die feinen Künste vor, aber nur, solange diese nicht Regeln unterliegen, sondern dazu dienen, eigene Gefühle und Gedanken auszudrücken.</p>
