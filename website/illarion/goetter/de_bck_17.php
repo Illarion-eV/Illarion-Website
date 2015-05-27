@@ -8,7 +8,7 @@
 
    <?php navBarTop( "de_bck_16.php","de_bck_10.php","de_bck_18.php" ); ?>
 
- <h2>Elara - Göttin des Wissens und der Weisheit</h1>
+<h1>Elara - Göttin des Wissens und der Weisheit</h1>
 
 <?php cap(E); ?>
 <p>lara ist die Göttin der Wissens und der Weisheit. Sie wird als weise und ruhig angesehen, obwohl ihre nachdenkliche Einstellung sie manchmal distanziert erscheinen lassen mag. Genau wie Eldan vor ihr, zieht auch sie oft die Abgeschiedenheit eines Einsiedlerlebens vor. Wenn sie gesehen wurde, so erschien sie bisher als große, alterslose Frau, oft von Büchern oder Schriftrollen umgeben. Elara vermeidet wenn möglich große Gruppen und mag keine spontanen und unüberlegten Handlungen. In ihrer zurückhaltenden Art lehnt Elara persönliche Reichtümer und jede andere Art von vergänglichen Schätzen ab. Stattdessen bevorzugt sie den bleibenden Wert des Lernens und die Erhaltung des Wissens in Büchern. Sie schätzt engagierte Personen und erscheint manchmal im Verborgenen um Leuten in Notsituationen ihren Rat zu geben und ihnen dabei zu helfen, ein kompliziertes Problem zu lösen.</p>
@@ -23,14 +23,15 @@
 <p>Der erste Monat im Frühling wurde nach Elara benannt, der Göttin der Weisheit. Traditionell ist die Geburtenrate im Elos extrem hoch und viele Frauen jeder Rasse gebähren während dieser Zeit ihr erstes Kind, damit den Beginn eines neuen Jahres anzeigend. Das Ende des Winters und der Beginn des neuen Jahres wird mit vielen großen Freudenfeuern in allen Städten und Dörfern gefeiert, während die Häuser mit Lampen und Laternen geschmückt sind. Diese Festivitäten erreichen ihren Höhepunkt in der Verbrennung einer Vogelscheuche namens "Schattenmann" oder "Dunkler Mann". Das Lichterfest dient der Verbannung des Bösen und des Ruins während des Mas. Der Ursprung des Festivals liegt in den alten Aufzeichnungen des Nokorakan Zyklus, dem Versuch einer umfassenden Aufzeichnung vergangener Prophezeihungen, in denen zu lesen ist:</p>
 
 <p><i>"Fliehet vor den Zeichen der langen Nacht.<br>
-Flehet auf Knien um eure unsterbliche Seele, wenn sich das Licht dem neuen Tage versagt.<br>
+Flehet auf Knien um eure unsterbliche Seele,<br>
+wenn sich das Licht dem neuen Tage versagt.<br>
 Denn er wird sich aus den Sümpfen der Qual erneut erheben<br>
 und sein Schatten wird die Welt in Dunkelheit hüllen.<br>
 Auf den Schwingen des Todes reitet er dahin und dort,<br>
 wo seine Schritte weilen, werden die Sterblichen vergehen.<br>
 Dann werden nur die Träger des Feuers seinem Kommen Einhalt gebieten.<br>
 Und ihr Licht wird erstrahlen wie tausend Sonnen, der Dunkelheit zu trotzen.<br>
-In der gleißenden Helligkeit, die sie entfachen, mag er verbrennen,
+In der gleißenden Helligkeit, die sie entfachen, mag er verbrennen,<br>
 auf dass seine Spuren vom Antlitz der Erde getilgt werden."</i></p>
 
 <h2>Sternzeichen - Die weise Hirschkuh</h2>
