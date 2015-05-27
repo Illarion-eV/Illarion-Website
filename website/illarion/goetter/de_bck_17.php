@@ -6,7 +6,7 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_16.php","de_bck_10.php","de_bck_18.php" ); ?>
+<?php navBarTop( "de_bck_16.php","de_bck_10.php","de_bck_18.php" ); ?>
 
 <h1>Elara - Göttin des Wissens und der Weisheit</h1>
 
