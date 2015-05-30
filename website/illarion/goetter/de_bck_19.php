@@ -6,7 +6,7 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_18.php","de_bck_10.php","de_bck_20.php" ); ?>
+<?php navBarTop( "de_bck_18.php","de_bck_10.php","de_bck_20.php" ); ?>
 
 <h1>Oldra - Göttin der Fruchtbarkeit und des Lebens</h1>
 
