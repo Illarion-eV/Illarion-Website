@@ -10,7 +10,7 @@
 
 <h1>Irmorom - Gott des Handels und des Handwerks</h1>
 
-<?php cap(M); ?>
+<?php cap(I); ?>
 <p>rmorom ist der Gott des Handwerks und Handels. Er wird typischerweise als gerechter und ehrhafter Gott angesehen, der in den meisten Angelegenheiten der Sterblichen eine neutrale Position einnimmt und sich auf das Gesetz verlässt, um seine Arbeit zu schützen und sicherzustellen, dass die Geschäfte laufen und die Wirtschaft wachsen kann. Irmorom hat eine große Vorliebe für Handwerkskunst und Gold. Er besitzt eine positive Persönlichkeit, befindet sich gerne in Gesellschaft und plaudert und lehnt fast nie ein gutes Bier ab. Es kommt nur selten vor, dass ein Dieb Irmoroms Gefallen findet, da er an fairen Handel glaubt und nicht an das Stehlen von Reichtümern Anderer. Es wird gemunkelt, dass er meist in der Gestalt eines grauhaarigen Zwerges mit gräulicher, fast steinartiger Haut erscheint, manchmal als Mann, gekleidet in einer Schmiedeschürze und einem mächtigen Hammer.</p>
 
 <h2>Anhänger</h2>
