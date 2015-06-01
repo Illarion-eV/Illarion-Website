@@ -33,7 +33,7 @@ chosen him as their god. His mood was getting darker and darker by the year. It 
 another personality overtook the once admired character. He was left alone and he started to
 curse the ungratefulness of all races. “They should all follow me, for I was the one who killed
 their greatest enemy”, so he thought. His thoughts were dominated by hate and he vowed that one
-day they would pay for their behavior. Brágon, the Elder God, saw this and was touched by the
+day they would pay for their behaviour. Brágon, the Elder God, saw this and was touched by the
 dark fate of Moshran. Brágon knew that some evil had partially taken control of Moshran, but
 still believed that it was not too late to help him. They met, and together they created the
 Orcs, to comfort Moshran in his loneliness.</p>

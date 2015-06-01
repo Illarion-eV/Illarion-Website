@@ -15,7 +15,7 @@
 	large amounts of alcoholic drinks</p>
 
 	<p>Not too seldomly, this leads to the fact that the Gynkese town guards have to
-	fish drunken or even drowned people out of the canals. There is even a rumor that
+	fish drunken or even drowned people out of the canals. There is even a rumour that
 	the Crocodile Feast was named so because in fact it would be a feast for the
 	crocodiles, but in truth the canals of Gynk are usually crocodile free.</p>
 </div>

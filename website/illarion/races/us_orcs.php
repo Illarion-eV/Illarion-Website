@@ -82,7 +82,7 @@ sound strange to him, like music from another culture always does.</p>
 <p>Orcs don't like to complicate matters. For them, it is best if a man speaks directly and with little words. That's why they
 sometimes have problems with elves, who always take their time, and
 prefer a more metaphoric speech. If a human insults an orc, the orc wouldn't immediatly strike him with a weapon, instead
-he would make a fierce, suiting answer, trying to make the other one look stupid. But since the orcish humor appears a little
+he would make a fierce, suiting answer, trying to make the other one look stupid. But since the orcish humour appears a little
 rough compared to a human's, it takes a lot for a human to insult an orc ( if he does not start to insult the orc's tribe or
 race ). In the most cases, it's the human who attacks first.</p>
 

@@ -11,8 +11,8 @@
 	and Salkamar as god of shadows, secrecy and thieves. The Serinjah know Ronagan as
 	god of freedom, fishermen and hunters, but also as god of secrecy and trickery.</p>
 
-	<p>It is rumored that there are secret meetings of Ronagan-followers - thief guilds
-	- in towns of Gynk, Salkamar and Albar. But this rumor is unproven and has been told
+	<p>It is rumoured that there are secret meetings of Ronagan-followers - thief guilds
+	- in towns of Gynk, Salkamar and Albar. But this rumour is unproven and has been told
 	again and again over centuries.</p>
 </div>
 <?php include_short_footer(); ?>

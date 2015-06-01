@@ -25,7 +25,7 @@
 	<p>Just in a few of the more wild and uncivilized tribes the warriors "slay each
 	another in heaps". It is said that the wildest tribes sacrifice people - usually not
 	captives from other tribes and races, but members of their own tribe who give
-	themselves to the sacrifical dagger. It is rumored that these tribes believe that
+	themselves to the sacrifical dagger. It is rumoured that these tribes believe that
 	this death would be the biggest honor that a warrior could have, and that someone
 	who died that way would be reborn under Moshran's blessing in a strong body. This
 	custom, als well as the ritus of "slay each another in heaps" has becomes very rare,

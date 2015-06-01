@@ -54,7 +54,7 @@ norsemen and dwarvenkind, they are obliterated.</p>
 fortress Khalm (upon the mountain of Khalm, which shared its name with the city around
 the base of the mountain) is ambushed by an orcish warrior horde and falls under siege.
 It is cut within the time frame of a year. The Albarian army was currently away on an
-advance into Salkamaerian territory and was not ordered back for defense. It is said
+advance into Salkamaerian territory and was not ordered back for defence. It is said
 that the guardless and hungered-out (from the previous decade of war) city surrendered
 to the orcish warriors without battle.while only fifty defenders had held the fortress
 on the mountain for almost a whole year. The contemporary Lord Lhoderik of Khalm
@@ -75,7 +75,7 @@ comply to your duties."</p>
 <p>According to legend, the severed head of Lhoderik of Khalm, who fell to the axe of an
 orcish warrior, was impaled on an orcish spear and even beyond death was cursing at the
 stupidity and arrogance of his king, and still under many curses, asked the orcs for the
-favor to beat the living hells out of Theoderich in order for him to finally find
+favour to beat the living hells out of Theoderich in order for him to finally find
 peace.</p>
 
 <p>But because the orcish horde was defeated before they could near Albar, nothing
@@ -101,7 +101,7 @@ year of -1,878.</p>
 surrounding territory. The motives behind these acts are to gather provisions for the
 planned war against Albar and to send slaves back to their home grounds.</p>
 
-<p>The halflings in the area are subjugated, but they organize themselves in an
+<p>The halflings in the area are subjugated, but they organise themselves in an
 effective underground resistance movement. Their sheer toughness and thick-headedness
 causes them to actually garner respect from their occupiers.</p>
 
@@ -132,14 +132,14 @@ The so far less damaged buildings meet their destruction in this course of actio
 
 <p>Unable to withstand the intruders, Salkamar allies with the free city of Gynk. This
 alliance sends new troupes to Naskur, but they do not encounter orcs there, and instead
-they meet the elves and dwarves. This results in new hostilities. The rumor went around
+they meet the elves and dwarves. This results in new hostilities. The rumour went around
 that the orcs were only the vanguard for the elves and dwarves. The elves see no reason
 for hostilities, but their dwarven allies deem their honor tarnished, which is a fact
 that the elvenkind can easily comprehend. Finally, the Aramon-Alliance denied any
 support in the continued pursuit of the orcs.</p>
 
 <p>Only by the autumn of -1,774, the remains of the united forces of Salkamar and Gynk,
-assisted by an armored troupe of riders from Albar, manage to fully drive the orcs
+assisted by an armoured troupe of riders from Albar, manage to fully drive the orcs
 away.</p>
 
 <p>The remains of the orcish horde retreat to the Norodaj areas, but already after

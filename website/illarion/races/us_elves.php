@@ -26,12 +26,12 @@
 <?php cap(E); ?>
 <p>lves are a mysterious race of which information is difficult to obtain. They try to avoid attracting attention and very few
 have ever had the opportunity to gain a deeper insight into their society and their peculiar way of life. Therefore most of the
-information accessible is derived from rumors and third hand reports, whose reliability is disputable.</p>
+information accessible is derived from rumours and third hand reports, whose reliability is disputable.</p>
 
 <p>The elves were one of the first races to appear in Illarion. They are taller than humans and have slender, almost gracile
 limbs. Their ears are pointed and their facial features appear to most as being noble and fair. Another distinctive feature of
 the Elves is their fabled longevity. In truth no one ever has set eyes upon an old looking Elf and they seem to be even less
-forthcoming concerning their ages as they are secretive on general principal. But it is rumored that there are Elves aged six
+forthcoming concerning their ages as they are secretive on general principal. But it is rumoured that there are Elves aged six
 or seven thousand years. Be that as it may, Elves do not reach majority until they are 180 years old. Such a thing does point
 to the fact that they actually get much older than all other races.</p>
 
@@ -41,7 +41,7 @@ it with all due respect. They tend to avoid leaving damaging traces on earth. Th
 them. What they extract from nature they try to restore in an equal manner. In accordance to this ideal their cities and settlements
 were erected around untouched nature, and still they remain to this day. Their houses are built in such a way that they fit perfectly
 in their surroundings. There are some reports of travelers, who got lost in the woods and passed by an Elvish settlement without
-noticing. The houses were only noted by outsiders, when the elves started pointing to their existence. These rumors led to the
+noticing. The houses were only noted by outsiders, when the elves started pointing to their existence. These rumours led to the
 belief that Elves possess some kind of magic enabling them to render their dwellings unperceivable for any outsiders. Some even
 believe that Elves can cause the trees to grow in a way creating rooms, stairs and terraces. But if these fantastic tales have
 any speck of truth in them, I cannot safely say. The only thing consistent is that all who have visited an Elven city tell of
