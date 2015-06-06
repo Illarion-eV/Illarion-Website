@@ -35,8 +35,8 @@ anyway because this makes it usually easier to find errors.</p>
 <p>The server is offline so nobody is able to play. But we are working to change this
 as soon as possible.</p>
 <?php elseif (Page::getPlayerCount() == 0): ?>
-<p>The server is up and running but nobody plays currently. This should stop noone from
-logging on. Usually other follow if someone is playing.</p>
+<p>The server is up and running, but there is currently nobody playing. This should stop no one from
+logging on. Usually others follow if someone is playing.</p>
 <?php else:
 
     $pgSQL =& Database::getPostgreSQL();
