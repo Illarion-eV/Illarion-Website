@@ -55,13 +55,13 @@ another God anymore.</p>
 there.</p>
 
 <p>A hundred years later, the chained Moshran escaped from his cell, with the help of someone
-from outside. But his three helpers swore that they had nothing to do with it. Rumors spread
+from outside. But his three helpers swore that they had nothing to do with it. Rumours spread
 that it was Nargùn and Cheerga, who broke his chains. Their intentions, if any, are still
 unclear.</p>
 
 <p>Since then, the world stays in an uneasy peace, as the God of Blood and Bones again walks in
 the lands of Illarion. Moshran, well hidden most supposedly by his three helpers, now starts to
-seek after the powerful artifacts, his sword and armor. He expect that they will help him to
+seek after the powerful artifacts, his sword and armour. He expect that they will help him to
 regain his once great power.</p>
 
 <p>Thus ends the Age of Isolation. Only the future will show us our destiny.</p>

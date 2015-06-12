@@ -19,7 +19,7 @@ with their own will. They weaved them together, creating structures and matter, 
 world with an energy that is now called "magic". Once animated, the world started to
 produce this energy, and concentrated and emitted it in many places and in large amounts.</p>
 
-<p>Then, the Elder Gods created four races: humans, elfs, dwarfs and halflings.</p>
+<p>Then, the Elder Gods created four races: humans, elves, dwarves and halflings.</p>
 
 <p>Centuries later, the Elder Gods selected eleven outstanding representatives from the growing
 number of mortals to train and teach them, giving them the purpose to lead an army in a coming

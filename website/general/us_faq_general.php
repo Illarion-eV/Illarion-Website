@@ -163,7 +163,7 @@ Page::Init();
 <ul>
 	<li class="question"><a id="gc1"></a><strong>What is an RPG and what makes Illarion special?</strong></li>
 	
-		<p>Role playing games (RPG) are a popular game genre. Players take on the role of a fantasy character and are able to do many things that may be impossible in Real Life. Illarion takes the concept of Role playing further than other games. Players are expected to immerse themselves completely into the life of their character. Whilst playing Illarion you cease to be John/Jane Smith from New York and instead take on the role of a fictional character by feeling, saying, and thinking what he or she would. Illarion is set in a medieval world with no electricity, cars, televisions or power tools. Whilst playing you are expected to stay in your chosen role and keep Out Of Character (OOC) talk to a bare minimum.</p>
+		<p>Role playing games (RPG) are a popular game genre. Players take on the role of a fantasy character and are able to do many things that may be impossible in Real Life. Illarion takes the concept of Role playing further than other games. Players are expected to immerse themselves completely into the life of their character. Whilst playing Illarion you cease to be John/Jane Smith from New York and instead take on the role of a fictional character by feeling, saying, and thinking what he or she would. Illarion is set in a mediaeval world with no electricity, cars, televisions or power tools. Whilst playing you are expected to stay in your chosen role and keep Out Of Character (OOC) talk to a bare minimum.</p>
 		
 
 	<li class="question"><a id="gc2"></a><strong>What are CMs and GMs?</strong></li>
@@ -173,7 +173,7 @@ Page::Init();
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
 		
-		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound medieval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too. Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
+		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound mediaeval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too. Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
 		
 
 	<li class="question"><a id="gc4"></a><strong>How do I find out an item's stats?</strong></li>
@@ -198,7 +198,7 @@ Page::Init();
 		
 	<li class="question"><a id="gc9"></a><strong>I've been reading about the special skill system of Illarion and Mental Capacity. What's that?</strong></li>
 	
-		<p>Illarion's skill system is based on "learning by doing", there are no skills points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items at a higher quality. A character may also develop combat skills, improving their ability to weild more advanced weapons or wear exotic armor. </p>	
+		<p>Illarion's skill system is based on "learning by doing", there are no skills points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items at a higher quality. A character may also develop combat skills, improving their ability to weild more advanced weapons or wear exotic armour. </p>	
 		
 		<p>The Mental Capacity refers to a character's ability to focus while improving. The more actions you do over time, the less you learn from each action. This way, it is on you how much time you want to invest on training your skills, the result after a given time will be the same. A character can reverse a 'high' degree of mental fatigue by performing tasks which are not skill-dependant such as talking to other characters and exploring. We have designed the skill system in this way to give players the opportunity to roleplay or train as much as they want without one style of playing being favoured by the game.</p>
 		

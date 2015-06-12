@@ -6,16 +6,16 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'us_elfes.php','us_story.php','us_dwarfs.php' ); ?>
+<?php navBarTop( 'us_elves.php','us_story.php','us_dwarves.php' ); ?>
 
 <h1>Haflings</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_elfes.php">Elfes</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarves.php">Dwarves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_lizards.php">Lizards</a></li>
 		<li class="end" />
@@ -51,7 +51,7 @@ talents to good use as a thief and cutpurse. Therefore it is well advised to kee
 belongings when there is a Halfling around with the emblem of Ronagan around the neck.</p>
 
 <?php cap(H); ?>
-<p>alflings have in general a very easy approach to life. Unlike the elves, dwarfs and humans they seldom worry
+<p>alflings have in general a very easy approach to life. Unlike the elves, dwarves and humans they seldom worry
 about the future and it’s outcome. They are very restful to be with, preferring a chat about relatives and friends
 over high politics. They also do not have a sense for ranks but value highly the importance
 of family and friends and loving care for their children. This is reflected by the structure of their society.

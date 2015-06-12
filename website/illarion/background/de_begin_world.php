@@ -21,7 +21,7 @@
 
 <h2>-5200 Schrift</h2>
 
-<p>Um -900 in Ausgrabungen gefundene schriftliche Elben-Dokumente werden auf etwa -5200
+<p>Um -900 in Ausgrabungen gefundene schriftliche Elfen-Dokumente werden auf etwa -5200
 datiert. Dabei handelt es sich um die ersten "Schriftstücke", die auf ledrigem Pergament
 niedergeschrieben wurden, die also Tragbar und flexibel waren. Beim ersten gefundenen
 Schriftstück handelt sich anscheinend um ein uraltes Gedicht oder Lied, eine
@@ -44,7 +44,7 @@ anscheinend wurde so etwas für unnötig befunden.</p>
 
 <p>Das erste geschichtliche Ereignis, was sich überhaupt an Hand von Aufzeichnungen
 genau datieren lässt, sind die Anfänge der Ork-Kriege. Diese Aufzeichnungen stammen
-von Elbischer Hand und lassen sich durch Abschriften aus den Archiven von Salkamar
+von elfischer Hand und lassen sich durch Abschriften aus den Archiven von Salkamar
 belegen.</p>
 
 <?php navBarBottom("de_overview.php", "de_early_orcmigrations.php"); ?>

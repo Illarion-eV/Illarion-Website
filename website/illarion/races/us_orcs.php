@@ -6,16 +6,16 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'us_dwarfs.php','us_story.php','us_lizards.php' ); ?>
+<?php navBarTop( 'us_dwarves.php','us_story.php','us_lizards.php' ); ?>
 
 <h1>Orcs</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/us_humans.php">Humans</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_elfes.php">Elfes</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_elves.php">Elves</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_halflings.php">Halflings</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarfs.php">Dwarfs</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/us_dwarves.php">Dwarves</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/us_orcs.php">Orcs</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/us_lizards.php">Lizards</a></li>
 		<li class="end" />
@@ -82,7 +82,7 @@ sound strange to him, like music from another culture always does.</p>
 <p>Orcs don't like to complicate matters. For them, it is best if a man speaks directly and with little words. That's why they
 sometimes have problems with elves, who always take their time, and
 prefer a more metaphoric speech. If a human insults an orc, the orc wouldn't immediatly strike him with a weapon, instead
-he would make a fierce, suiting answer, trying to make the other one look stupid. But since the orcish humor appears a little
+he would make a fierce, suiting answer, trying to make the other one look stupid. But since the orcish humour appears a little
 rough compared to a human's, it takes a lot for a human to insult an orc ( if he does not start to insult the orc's tribe or
 race ). In the most cases, it's the human who attacks first.</p>
 

@@ -111,7 +111,7 @@ bringt ihnen tatsächlich so etwas wie Respekt bei ihren Besatzern ein.</p>
 "Der lauteste Tyrann stirbt mit einer Faust im Gemächt", und "Traue keinem Koch, der
 dein Sklave ist".</p>
 
-<p>Schon zwei Monate danach trifft ein aus Elben und Zwergen bestehendes Heer ein,
+<p>Schon zwei Monate danach trifft ein aus Elfen und Zwergen bestehendes Heer ein,
 welche im Namen der Aramon-Allianz die Orkhorde aus Firnismühle vertreiben will, und
 unterstützt einen sehr aufgebrachten Mob von Halblingen.</p>
 
@@ -126,17 +126,17 @@ des albarischen Heeres, wird zerstört. Eine Orkische Kriegshorde, überraschend
 aus Ländern der Halblinge kommend, vernichtet zuerst die Überreste der belagernden
 albarischen Armee, und dringt noch am selben Tag plündernd in die Stadt ein.</p>
 
-<p>Der orkischen Horde folgt kurz darauf ein kleines Heer, bestehend aus Elben, Zwergen
+<p>Der orkischen Horde folgt kurz darauf ein kleines Heer, bestehend aus Elfen, Zwergen
 und seltsamerweise gerüsteten Halblingen, welche wiederum in die Stadt einfallen, um
 die Orks zu vertreiben. Dabei fallen die bisher weniger beschädigten Gebäude der
 Zerstörung anheim.</p>
 
 <p>Den Eindringlingen nicht gewachsen, verbündet sich Salkamar mit der freien Stadt
 Gynk. Diese Allianz schickt nun neue Truppen nach Naskur, sie treffen dort jedoch nicht
-auf Orks, sondern auf Elben und Zwerge. Daraus resultieren wiederum Feindseligkeiten,
-es ging das Gerücht, die Orks seien die Vorhut für Elben und Zwerge gewesen. Die Elben
+auf Orks, sondern auf Elfen und Zwerge. Daraus resultieren wiederum Feindseligkeiten,
+es ging das Gerücht, die Orks seien die Vorhut für Elfen und Zwerge gewesen. Die Elfen
 sehen zwar keinen Grund für Feindseligkeiten, ihre zwergischen Verbündeten jedoch sehen
-sich in ihrer Ehre verletzt . eine Tatsache, die die Elben allerdings sehr gut
+sich in ihrer Ehre verletzt . eine Tatsache, die die Elfen allerdings sehr gut
 nachempfinden können. Letzten Endes verweigert die Allianz von Aramon die Unterstützung
 bei der weiteren Verfolgung der Orks.</p>
 

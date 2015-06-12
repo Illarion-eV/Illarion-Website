@@ -65,7 +65,7 @@ begründet haben.</p>
 <p>Etwa um -2030 begründet ein König namens "Forthelm" die erste standardisierte
 Handelsschrift, die aus Buchstaben besteht. Dass es sich dabei um die selbe Person
 handelte, ist unwahrscheinlich. Aufgrund diverser Handelsbeziehungen wird diese Schrift
-teilweise sogar von Elben und Echsenmenschen, später auch Zwergen verwendet, ihre
+teilweise sogar von Elfen und Echsenmenschen, später auch Zwergen verwendet, ihre
 Verwendung schwindet jedoch nach dem Fall des Reiches - der König starb gegen -1982 in
 hohem Alter. Wegen unklarer Thronfolge - er hatte über 30 Söhne - entstanden viele
 kleine, unabhängige Fürstentümer, die untereinander oft Krieg führten.</p>
