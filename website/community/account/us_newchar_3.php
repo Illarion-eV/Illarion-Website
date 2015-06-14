@@ -142,7 +142,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The cognitive insight of your character. This attribute will be of importance for magicians in future and helps alchemists to brew potions. Intelligence affects the learning speed of the following skills: -">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="The cognitive insight of your character. This attribute will be of importance for magicians in future and helps alchemists to brew potions. The attribute grants a small bonus on learning all skills. Intelligence affects the learning speed of the following skills: -">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
