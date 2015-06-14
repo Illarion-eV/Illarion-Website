@@ -25,7 +25,7 @@
 <p>In the late summer of the year -1,583, a plague breaks out in Gynk. Presumably the
 pestilence took its beginning somewhere deep within the warm Gynkeesh swamps. The
 damp-warm climate of the swamps, upon which Gynk was built, and the swarms of mosquitoes
-seem to favor the illness. The wealthier deal of the populace burns expensive tree
+seem to favour the illness. The wealthier deal of the populace burns expensive tree
 resins in order to drive the mosquitoes from their chambers and are by far less
 susceptible fo the disease. Approximately one fourth of the poorer populace is eaten
 away by the plague, while the wealthy citizens find healing with priests and magi. The

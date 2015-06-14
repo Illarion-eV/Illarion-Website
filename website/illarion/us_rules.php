@@ -98,7 +98,7 @@ they have to inform the Illarion staff about this.
 <div><a id="names"></a></div>
 <h2>Names</h2>
 
-<p>Names of characters have to fit a medieval fantasy world and the race of the
+<p>Names of characters have to fit a mediaeval fantasy world and the race of the
 character. In addition, the following types of names are not allowed:</p>
 
 <ul>

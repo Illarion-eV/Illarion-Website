@@ -59,8 +59,8 @@ swore an oath never to fight against each other personally any more.</p>
 <p>Even after his defeat, Moshran was still convinced that it was his right to be the only
 master of the world and all beings. So the other Gods imprisoned and chained him in a cell, far
 below the surface, deep under the earth, hoping that some day he would return to his old self.
-But before they left him, they took the armor and the sword of Madrook Na’han away from him.
-Tanora took the cursed armor into her water-realm, and promised to hide and seal it well. As did
+But before they left him, they took the armour and the sword of Madrook Na’han away from him.
+Tanora took the cursed armour into her water-realm, and promised to hide and seal it well. As did
 Elara with the sword. It was evident, that without these artifacts, Moshran would be unable to
 regain the evil power he once controlled, and would most likely loose the evil influence.</p>
 

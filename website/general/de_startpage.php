@@ -27,8 +27,9 @@ Geißeln der Macht. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>,
 das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise 
 <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
+<?php Page::cap('I'); ?>
 <p class="hyphenate">
-Illarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
+llarion ist ein kostenloses Open Source-MMORPG, welches seinen Schwerpunkt
 auf echtes Rollenspiel legt. Alle Charaktere um dich herum werden sich wie
 lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt
 verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und
@@ -39,6 +40,20 @@ Deine Entscheidungen und Taten formen und gestalten diese Welt und werden
 eines Tages die Seiten der Geschichtsbücher füllen.</p>
 
 <p>Illarion - Welche Rolle wirst du spielen?</p>
+
+<?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
+<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
+<h2><?php echo $currGroup->gName; ?></h2>
+<?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
+<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
+	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->gName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->gName; ?>" class="lightwindow" onclick="return false;">
+		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Auf das Bild klicken um es in voller Größe zu sehen" />
+	</a>
+</div>
+<?php endforeach; ?>
+<?php endforeach; ?>
+
+<div class="clr"></div>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -65,6 +80,14 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
     $pgSQL->setQuery( $query );
     $quests = $pgSQL->loadAssocList();
 	if ( count($quests) > 0):
+?>
+
+<h1>Aktuelle News</h1>
+
+<?php
+    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
+    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
+    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
 ?>
 
 <h1>Quests und Events</h1>
@@ -120,29 +143,3 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <?php if ( count($quests) > 0): ?>
 <?php Page::insert_go_to_top_link(); ?>
 <?php endif; ?>
-
-<h1>Screenshots</h1>
-
-<?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
-<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
-<h2><?php echo $currGroup->gName; ?></h2>
-<?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
-<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
-	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->gName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->gName; ?>" class="lightwindow" onclick="return false;">
-		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Auf das Bild klicken um es in voller Größe zu sehen" />
-	</a>
-</div>
-<?php endforeach; ?>
-<?php endforeach; ?>
-
-<div class="clr"></div>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h1>Aktuelle News</h1>
-
-<?php
-    $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
-    $newsDb = new \News\NewsDatabase(IllaUser::auth('news'));
-    echo $newsRenderer->renderList($newsDb->getNewsList(3), 'de')
-?>

@@ -11,13 +11,13 @@
 	<h2>Monat: Naras</h2>
 
 	<b>Meaning</b>
-	<p>These chaotic people love gambling and have a very unconventional sense of humor.
+	<p>These chaotic people love gambling and have a very unconventional sense of humour.
 	It is difficult to assess them, and they greatly enjoy putting themselves in the
 	center of attention.</p>
 
 	<br />
 	<b>Positive characteristics</b>
-	<p>Humorous, sociable </p>
+	<p>Humourous, sociable </p>
 
 	<br />
 	<b>Negative characteristics</b>

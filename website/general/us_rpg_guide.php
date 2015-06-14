@@ -57,7 +57,7 @@ flexibility in the software by creativity, but more on this topic later.</p>
 
 <h2>The game world</h2>
 
-<p>The world of Illarion should be like a medieval country. To make this more interesting, we
+<p>The world of Illarion should be like a mediaeval country. To make this more interesting, we
 added things like magic, strange peoples (elves, dwarves, ...) and a lot of gods to the setting.
 We thought about a time, before complex machines were created. Besides these changes, the normal
 rules of nature apply like on the earth. The world is currently restricted to one island. If the
@@ -90,7 +90,7 @@ must be fulfilled can be found on the website.</p>
 
 <p>There is no script, so there are no fixed roles. Therefore choose a role that you always
 wanted to play. The only important thing is, that it fits to the setting of Illarion. An
-engineer of the arms industry would not fit in, while a medieval blacksmith would.<br />
+engineer of the arms industry would not fit in, while a mediaeval blacksmith would.<br />
 Once you have chosen a person, you should think about his personal background. The motivation
 of your character should be derived from your background: What are your goals? What do you like
 or hate?<br />
@@ -208,7 +208,7 @@ be useful.</p>
 <p>Learn to separate between these two levels. When a dwarf calls an orc a stinky beast, it
 would be a conflict between the dwarf and the orc, not between the player of the dwarf and the
 player of the orc. If the orc player changes to another of his characters, that is a dwarf too,
-both dwarfs could be close friends. This separation also counts for the boards on the website. A
+both dwarves could be close friends. This separation also counts for the boards on the website. A
 misunderstanding of both levels often leads to a disgusting battle between players on the
 boards.</p>
 
@@ -264,9 +264,9 @@ several dozen villagers, shops and a castle that reached over many screen widths
 a throne room and many luxuries). So don't let yourself be limited.<br />
 On the other hand there are logical borders, that aren't yet technically realized. For
 example you can dig in the ground with your shovel, even if the shovel is placed in your
-backpack instead of your hand. Also you can walk around always wearing your full armor and a
+backpack instead of your hand. Also you can walk around always wearing your full armour and a
 whole lot of weapons without someone noticing. It is up to you, to set yourself a limit here and
-put away your weapons before entering a temple, take off the armor while goldsmithing and taking
+put away your weapons before entering a temple, take off the armour while goldsmithing and taking
 the shovel in the hand to dig.</p>
 
 <?php insert_go_to_top_link(); ?>

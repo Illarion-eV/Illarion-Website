@@ -12,11 +12,11 @@
 
 	<b>Meaning</b>
 	<p>Those who are born under the sign of Ronagan tend to have a well-developed sense
-	of humor. They love freedom and will only releuctantly bow to laws or rules.</p>#
+	of humour. They love freedom and will only releuctantly bow to laws or rules.</p>#
 
 	<br />
 	<b>Positive characteristics</b>
-	<p>Humorous</p>
+	<p>Humourous</p>
 
 	<br />
 	<b>Negative characteristics</b>

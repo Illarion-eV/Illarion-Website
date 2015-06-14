@@ -1,7 +1,7 @@
 <?php
    include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
    create_header( "Illarion - Hintergrund - Client",
-                  "Die G&ouml;tterIllarion's.  ",
+                  "Die Götter Illarions.  ",
                   "Hintergrund, G&ouml;tter, Geschichte" );
    include_header();
 ?>

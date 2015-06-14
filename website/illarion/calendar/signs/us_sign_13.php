@@ -12,7 +12,7 @@
 
 	<b>Meaning</b>
 	<p>Ecstatic festivals and good wine are the preferences of those who are born in the
-	sign of the Mule. They are sociable, humorous, and straight-forward. Good musicians
+	sign of the Mule. They are sociable, humourous, and straight-forward. Good musicians
 	are oftenly found among them.</p>
 
 	<br />

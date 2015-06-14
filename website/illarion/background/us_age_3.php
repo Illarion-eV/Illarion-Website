@@ -70,7 +70,7 @@ those who looked at him.</p>
 of the evil creatures escaped, hiding in far away places or deep inside the earth.</p>
 
 <p>In great joy the mortals and the Gods celebrated their victory, only Moshran left them as he
-felt no joy but only emptiness. But he didn’t leave without taking with him the armor and the
+felt no joy but only emptiness. But he didn’t leave without taking with him the armour and the
 sword of Madrook Na’han, which was taken from his body. It belonged to him, so he thought, as
 his price was the highest to pay.</p>
 

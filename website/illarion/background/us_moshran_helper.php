@@ -13,7 +13,7 @@
 <h2>Dragorog - The master of the evil flame</h2>
 
 <p>This one has stolen the Dragon's eggs, and since then wears a black unholy dragon shaped
-armor. He is the master of the Dark Paladins, blasphemous, dark, unholy knights. He also is the
+armour. He is the master of the Dark Paladins, blasphemous, dark, unholy knights. He also is the
 master of many black Dragons, as far as these evil chaotic creatures can be controlled. The dark
 paladins are not dead or undead, but their life force seems to be perverted and unholy. Some
 Lords of the dark paladins also hire and breed whole Orc tribes and trolls. Their towns and
@@ -31,9 +31,9 @@ the world in disguise.</p>
 
 <h2>Cherass - The Undead Lord</h2>
 
-<p>Favoring the shape of death itself, this one is a master of the undead. He is the master of
+<p>Favouring the shape of death itself, this one is a master of the undead. He is the master of
 the Death Knights, strong unholy undead warriors. He also commands many Liches, other undead
-mages, necromancers and spell casters. There are rumors about a few powerful vampires under his
+mages, necromancers and spell casters. There are rumours about a few powerful vampires under his
 command, but until now, none of the stories about such creatures have proven to be true.</p>
 
 <?php navBarBottom("us_age_5.php", ""); ?>

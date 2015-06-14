@@ -8,46 +8,32 @@
 
    <?php navBarTop( "us_bck_25.php","us_bck_10.php","" ); ?>
 
-   <h2>Moshran - God of Blood and Bones.</h2>
+<h1>Moshran - God of Blood and Bones</h1>
 
-   <p>Prayed to for:<br />
-   Big battles, sharp blades, power and wealth without taking care of something. Orcish war god.
-   Power for necromantic spells or undead beings.</p>
+<?php cap(M); ?>
+<p>oshran is the god of blood and bones and his name remains unspoken by many, such is the fear he brings. He is often considered a powerful and determined warlord with tactical prowess and knowledge of hidden secrets. Blighted by raging madness, however, Moshran is blood thirsty, war-loving and ill-tempered. His rough sense of humour and unforgiving nature offers little hope to those who fail him or show any sign of weakness. He is believed only to help the strong, and his regime is one of violence and pain, treating the feeble with contempt. When witnessed in the world, Moshran most often appears as a strong orcish warlord, his tall frame covered in blood. Sometimes he takes the form of a powerful old Lich to instruct necromancers in hidden dark wisdom. He enjoys a good battle and considers the use of underhand tactics something to be honoured. The few who dare to deal with this unpredictable god soon learn that he demands unquestioning loyalty as he lends aid to the corrupt and ensures the weak remain in their place.</p>
 
-   <p>Personality:<br />
-   In most places just known as the Blood-God or Bone-Lord, people prefer not to call him by his
-   real name. Mighty, powerful, war-loving and blood lusty. Shows some hidden wisdom and sometimes
-   rough humor. Helps strong evil people; his regime is dominated by pain and violence.</p>
+<h2>Followers</h2>
+<p>Aside from some orcish tribes, such as those in the Kantabi Desert close to Cadomyr, few openly follow Moshran. Often his name will not even be spoken by those of good standing, out of fear of misfortune befalling them. He is venerated by orcs as the god of war and live sacrifices are made at altars drenched in blood. Beyond these orcs, however, his other followers are considered few, and generally evil. Followers tend to seek vengeance, devastating battles, easy power, destruction, or necromantic spells. The rituals and ceremonies followers perform to bring war and more blood almost always involve sacrifice.</p>
 
-   <p>Figure:<br />
-   Appears as a strong, tall orcish warlord, his clothes and weapons drenched in blood, ore as an
-   old Lich who teaches necromancers.</p>
+<p>Necromancers refer to Moshran as the 'Bone Lord' and seek hidden knowledge and power from him, something only ever given for a high price. These followers are not satisfied with immortality, they want eternal power as well. In return for loyalty, Moshran teaches and inspires his followers with unholy rituals to accomplish their goals. When a follower dies, Moshran weighs out the victims of his follower, giving consideration to effectiveness in brutality. If found worthy, the follower will return to the world as a powerful undead creature. If unworthy the follower is enslaved by Moshran and used to perform minor services. Over time, some of these slaves grow to become powerful demonic creatures and are released. A select few have even become assistants to Moshran. Power between his worshippers is in constant fluctuation, as they constantly vie to overthrow one another. Those who fail and fall from power beneath Moshran are marked by claws, branding the victim, who instead of release when they die will find only eternal torture at the hands of Moshran.</p>
+   
+<h2>Mas - Month of Blood</h2>
 
-   <p>Likes/Dislikes:<br />
-   Likes good battles, even with unfair methods. Expects unquestioned loyalty and living flesh as a
-   sacrificial offering. Dislikes weaknesses of all kind.</p>
+<p>Mas, the shortest of all months, was named after Moshran, the god of blood and bones. The month of blood is feared to bring great misfortune across all of Illarion and other civilised realms such as Albar, Salkamar and Gynk. Whilst mercenary gangs might use the days as an excuse for wild drinking and scuffles, some orc tribes celebrate the blood days as Radosh. The month is welcomed with joy and obeisance, before the orcs succumb to the ecstasy of wild and boisterous fighting. Huge caves are lit with torches and fires, and ceremonial fights are held; it is a common belief that many disputes and quarrels are solved in these fights. Generally these fights remain ceremonial and do not end too bloodily but in some of the least civilised tribes the warriors still "slay each another in heaps".</p>
 
-   <p>Followers:<br />
-   Moshran is the &quot;Blood God&quot; of several blood-thirsty orcish war tribes, who takes
-   living sacrifices. His altairs are often drenched in blood. His followers are few, evil beings.
-   Their rituals are always bloody. Sometimes, an evil orc shaman or warlord prays to Moshran,
-   telling the other orcs of the tribe to sacrifice the God under another name. Moshran priests
-   often hide their identities, because they will be attacked by the most righteous people. Evil
-   necromancers call Moshran the &quot;Bone Lord&quot;, because he grants them knowledge and power
-   - for a horrible price. Unlike the followers of Cherga, they are not satisfied with immortality
-   - they want power in eternity. Moshran teaches the most worthy and powerful evil ones dark,
-   runeless and unholy rituals. When a Moshran follower dies, Moshran will count the numbers of
-   that ones victims, and his effectivity. If the person was &quot;worthy&quot; enough, he will
-   perhaps be sent back as a powerful undead (most are slain by some powerful heroes), and if not,
-   he enslaves the soul to do minor services. Some of these &quot;servants&quot; have become
-   powerful demon-like creatures over some time, and proved worthy to roam the world again, or have
-   become Moshran&#39;s helpers. Amongst his helpers are always intrigues and plans to overthrow
-   the ones in a higher position. The soul of those who fail Moshran is forfeit. It is said that he
-   will brand them with his claws of death marking them as his alone. They may try to hide or seek
-   protection, but to no avail. He doesn&#39;t search for them as time playes in his hands.
-   Eventually they will stand in front of him and their soul will be tortured in eternity to give
-   pleasure to the Blood God.</p>
+<p>The wildest of tribes are still thought to perform sacrifices - rarely captives from other tribes and races, but more often volunteers from their own tribe who give themselves to the sacrificial dagger. It is rumoured that these tribes believe such a death is the greatest honour to bestow on a warrior as they will be reborn with Moshran's blessing in a strong body. This custom, as well as the rites of "slaying each another in heaps" has becomes very rare, because the loss of a good warrior or hunter usually causes any tribe great hardship. Generally, animals are now slaughtered and sacrificed to the gods and ancestors before being consumed during the evening feast.</p>
 
-   <?php navBarBottom( "us_bck_25.php", "" ); ?>
+<p>For many orcs, the days of Mas are also a memorial to one of their greatest leaders in history, Drokan Norotar. He is highly honoured as the hero and martyr who united the peaceful tribes of orcs and gave the orcish people a voice amongst all other races. Neighbours of his realm did not trust his peaceful intentions, however, and under the cover of negotiations he was trapped and murdered. The young realm broke apart and what followed brought much suffering to the orcs. The Flame-orcs see Drokan Norotar as a prophet who brought peace and civilisation to the wild tribes. Although not a Flame-orc himself, some of his writings had great influence on their culture. There is even a prophecy saying that a second Drokan Norotar, or even his reborn soul, will soon again reunite the tribes. In memory of him, the wild tribes of the orcs smear ash into their face and cut their hands and scalps with daggers, signifying how Drokan Norotar was beheaded and had his hands cut off. With their faces covered in blood they chant dirges and elegies over the full five days of Mas.</p>
+
+<p>In other races this feast has the more symbolic tradition of sacrificing a small animal, usually a chicken or rabbit, without many words. This is done in an attempt to calm Moshran, preventing wars and other bad luck. Usually there is no prayer, just a silent gesture. After the sacrifice, the people stay in their homes and hope that the Mas passes quickly without incident, so they can welcome a new year in.</p>
+
+<h2>Sign of the Zodiac - The Tactical Wyvern </h2>
+
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_16.png" alt="The Tactical Wyvern "/>
+
+<p>The winged, dragon-like Wyvern symbolises the few who are born in the short month of Mas. They are renowned for being unpredictable and many are great tacticians or strategists. Commanders, pirates, warlords, or even successful politicians can be found amongst them. Extremely driven, they are considered to be underhand, cunning, and aggressive in their pursuit of their ambitions. Tactical Wyverns are usually highly intelligent and use this to quickly manipulate and gain power over the simple minded. Bold, yet sometimes devious, Wyverns tend to chose unconventional, and sometimes spectacular, ways to reach goals.</p>
+
+<?php navBarBottom( "us_bck_25.php", "" ); ?>
 
 <?php include_footer(); ?>

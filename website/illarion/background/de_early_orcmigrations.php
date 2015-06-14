@@ -75,13 +75,13 @@ fruchtbares Land. </p>
 
 <h2>-2588 bis -2579 Die zweiten Ork-Kriege</h2>
 
-<p>In den Wäldern von Eldaril traf der Howling-Wolf-Clan auf Elben. Diese Elben
+<p>In den Wäldern von Eldaril traf der Howling-Wolf-Clan auf Elfen. Diese Elfen
 unterhielten Handelsbeziehungen mit den Plainfolk-Menschen, und hatten daher Gerüchte
 über Orks gehört, welche mit Dämonen im Bunde seien. Diese These sah man dadurch
 bestätigt, daß Jäger der Orks (unwissentlich) in geheiligte Stätten vorgedrungen waren,
 und selbige mit dem Blut erlegter Tiere besudelten. </p>
 
-<p>Der Howling-Wolf-Clan wurde schnell aus dem Wald vertrieben. Dabei gingen die Elben
+<p>Der Howling-Wolf-Clan wurde schnell aus dem Wald vertrieben. Dabei gingen die Elfen
 mit äußerster Präzision vor, die Bogenschützen verwendeten magische Pfeile, um ihr Ziel
 beim ersten Schuss tödlich zu treffen und somit dem Gegner Leiden zu ersparen. Zudem
 verwendeten die Schützen Magie, um ungesehen zu bleiben.</p>
@@ -90,36 +90,36 @@ verwendeten die Schützen Magie, um ungesehen zu bleiben.</p>
 
 <p>Kurz darauf setzten Orks des Nachts den Waldrand großflächig in Brand. Es dauerte
 mehrere Wochen, bis das Feuer, welches sich rasch ausgebreitet hatte, vollends erloschen
-war. Eine riesige Waldfläche sowie drei Dörfer der Elben fielen den Flammen zum Opfer,
+war. Eine riesige Waldfläche sowie drei Dörfer der Elfen fielen den Flammen zum Opfer,
 die fassungslosen Überlebenden wurden von den nachrückenden Orks am nächsten Abend
 gefangengenommen oder erschlagen. Als Dank für den Sieg wurden, nach orkischer
 Tradition, die am schwersten verwundeten Gefangenen den Göttern als Dank für den Sieg
 geopfert, und aus Mangel an anderer Nahrung kurzerhand gegessen.</p>
 
 <p>Schon drei Tage später, mitten in den Siegesfeierlichkeiten, wurde das Lager der
-Clans angegriffen. In großer Zahl waren Elben erschienen, gerüstet mit mächtigen Waffen
+Clans angegriffen. In großer Zahl waren Elfen erschienen, gerüstet mit mächtigen Waffen
 und Rüstungen, die zum Teil noch aus alten Kriegen stammten und solchen, die nach alter
-Kunst hergestellt worden waren. Elbische Magie schlug Breschen in die orkischen
+Kunst hergestellt worden waren. Elfische Magie schlug Breschen in die orkischen
 Palisaden, und während die Gefangenen flohen, sprangen Kriegstänzer und Schwertsänger
 mitten zwischen die verblüfften Orks. Schon nach kurzer Zeit wurde aus der Verblüffung
 der orkischen Krieger eine wilde Flucht: Einem Feind, der sich unnatürlich schnell
 bewegte, Blitz und Feuer werfen konnte und urplötzlich mitten in den eigenen Reihen
 auftauchte, war nichts entgegenzusetzen. Fast die Hälfte aller anwesenden Orks wurde
-innerhalb dieses einen Überraschungsangriffes getötet. Da auch die Elben Verluste
+innerhalb dieses einen Überraschungsangriffes getötet. Da auch die Elfen Verluste
 erlitten hatten, beschlossen sie, die Fliehenden nicht zu verfolgen, sondern auf
 Verstärkung zu warten und die Gefallenen zu ehren.</p>
 
-<p>Der Älteste des Waraxe-Clans entschied, sich möglichst schnell vom Gebiet der Elben
+<p>Der Älteste des Waraxe-Clans entschied, sich möglichst schnell vom Gebiet der Elfen
 zu entfernen, da ein Krieg erstens unnötig sei und zweitens die Stämme in ihrem durch
 Hunger und Kampf geschwächten Zustand gegen den Gegner nicht bestehen könnten. Der
 Howling-Wolf-Clan schloß sich der Entscheidung an, während der Nighthawk-Clan
 weiterkämpfen wollte.</p>
 
-<p>Der Bloody-Skull-Clan entschied sich, Unterhändler mit Geschenken zu den Elben zu
+<p>Der Bloody-Skull-Clan entschied sich, Unterhändler mit Geschenken zu den Elfen zu
 entsenden. Keiner der Unterhändler kam jedoch an.</p>
 
 <p>In den folgenden zehn Jahren kam es immer wieder zu kleineren Scharmützeln zwischen
-Orks und Elben, während die Ältesten der Elben diskutierten, wie Angesichts der Lage zu
+Orks und Elfen, während die Ältesten der Elfen diskutierten, wie Angesichts der Lage zu
 verfahren sei. Die Orks waren durch jahrelange Wanderung derart geschwächt, dass sie
 keine allzu große Gefahr darstellten, dennoch hatten sie gelernt, Bögen und Schwerter zu
 benutzen und herzustellen. Die Diskussion dauerte Jahrzehnte.</p>

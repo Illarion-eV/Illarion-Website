@@ -77,7 +77,7 @@ completely wiped out.</p>
 
 <p>In the forests of Eldaril, the Howling Wolf Clan encountered the elvenkind. These
 elves had been maintaing trade relationships with the Plainfolk humans. Thus, they head
-heard rumors of the orcs, who supposedly stood in alliance with demons. They considered
+heard rumours of the orcs, who supposedly stood in alliance with demons. They considered
 this thesis as confirmed by the hunters of the orcs having (unknowingly) trespassed into
 their sacred grounds, and having tarnished the latter with the blood of slain animals.
 The Howling Wolf Clan was quickly driven out of the forest. The elves applied
@@ -96,7 +96,7 @@ were sacrificed to the Gods in gratitude for the victory-due to the lack of any 
 foodstuffs, they were eaten.</p>
 
 <p>Merely three days later, still in the middle of victory celebrations, the encampment
-of the orcs was attacked. Numerous elves had appeared, clad in weapons and armor from
+of the orcs was attacked. Numerous elves had appeared, clad in weapons and armour from
 times of ancient wars and such that were crafted to follow the footsteps of ancient
 arts. Elven magic cast breaches into the orcish battlements, and while the captives took
 their flight, wardancers and bladesingers already lept into the midst of the stupefied

@@ -22,7 +22,7 @@ Seite bietet einen Überblick über die Speicherorte der Quelltexte.</p>
 <h2>Entwicklung der Spielinhalte</h2>
 
 <p>Als Spielinhalte werden alle Quests, NPCs, Monster und z.B. das Kampfsystem
-oder das Verhalten von Gegenständen bezeichnet. Spielinhalte sind zumeist in Lua&nbsp;5.1
+oder das Verhalten von Gegenständen bezeichnet. Spielinhalte sind zumeist in Lua&nbsp;5.2
 (und einer <a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">
 Illarion-spezifischen Erweiterung</a>) geschrieben mit der Ausnahme von fast allen NPCs,
 welche in unserer eigenen Sprache easyNPC verfasst wurden. Der Editor für easyNPC

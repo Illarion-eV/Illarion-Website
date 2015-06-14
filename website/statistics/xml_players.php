@@ -76,7 +76,7 @@
 				switch($current_race)
 				{
 					case 0: echo sprintf( $race_str, 'Humans', 'Menschen' ); break;
-					case 1: echo sprintf( $race_str, 'Dwarfs', 'Zwerge' ); break;
+					case 1: echo sprintf( $race_str, 'Dwarves', 'Zwerge' ); break;
 					case 2: echo sprintf( $race_str, 'Halflings', 'Halblinge' ); break;
 					case 3: echo sprintf( $race_str, 'Elves', 'Elfen' ); break;
 					case 4: echo sprintf( $race_str, 'Orcs', 'Orks' ); break;

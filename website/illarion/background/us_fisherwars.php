@@ -26,7 +26,7 @@
 very small town find a highly rich source of fish in the bay of a small island.</p>
 
 <p>Three weeks later, only one of the five fisher boats returns from those who had
-trailed there. The two seafarers reported of armored lizardpeople, who had lept roaring
+trailed there. The two seafarers reported of armoured lizardpeople, who had lept roaring
 from the water onto the boats and had slain all mates.</p>
 
 <p>A messenger of the town ran off on the same day to spread the word. When he returns
