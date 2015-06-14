@@ -136,7 +136,7 @@
 				case 1: echo 'Du hast schon Probleme dein eigenes Gewicht zu tragen. Dich mit mehr als nur Kleidung zu belasten ist ein Traum deines schwachen Körpers.'; break;
 				case 2: echo 'Deine Tasche kannst du gerade noch tragen, aber voll beladen sollte sie nicht sein.<br />Während längerer Wegstrecken brauchst du die eine oder andere Verschnaufpause.'; break;
 				case 3: echo 'Du bist genauso stark wie jede Person deines Alters ohne tägliches Training.<br />Du kannst zwar keine schweren Sachen heben, allerdings hast du keine Probleme, gewöhnliche Sachen zu tragen.'; break;
-				case 4: echo 'Du bist kräftiger als der durchschnitt, hebst schwerere Sachen ohne dich zu überanstrengen.<br />Selbst eine gute, starke Rüstung bereitet dir keine sonderlichen Probleme.'; break;
+				case 4: echo 'Du bist kräftiger als der Durchschnitt, hebst schwerere Sachen ohne dich zu überanstrengen.<br />Selbst eine gute, starke Rüstung bereitet dir keine sonderlichen Probleme.'; break;
 				case 5: echo 'Du hast überall Muskeln. Du kannst Dinge heben, bei denen andere schon vom Hinsehen aufgeben würden.<br />Allerdings musst du deswegen auch weite Kleidung bei deinem Schneider kaufen, sonst würdest du sie jedes Mal zerreißen, wenn du deine Muskeln anspannst.'; break;
 				case 6: echo 'Deine Stärke ist übernatürlich.'; break;
 				default: echo 'Deine Stärke ist unbekannt.'; break;
