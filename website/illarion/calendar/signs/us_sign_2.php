@@ -8,7 +8,7 @@
 		The dreamy Dolphin
 	</h1>
 
-	<h2>Monat: Tanos</h2>
+	<h2>Month: Tanos</h2>
 
 	<b>Meaning</b>
 	<p>The dolphins oftenly appear to be melancholic. They tend to dream of goals they

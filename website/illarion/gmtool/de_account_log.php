@@ -37,11 +37,6 @@
 	}
 
 	$loglist = getLogs( $accid );
-
-
-echo "<pre>";
-print_r($loglist);
-echo "</pre>";
 ?>
 
 <h1>Accountlog - <?php echo $account_login; ?></h1>

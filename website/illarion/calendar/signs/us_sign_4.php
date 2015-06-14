@@ -8,7 +8,7 @@
 		The consistent Bear
 	</h1>
 
-	<h2>Monat: Ushos</h2>
+	<h2>Month: Ushos</h2>
 
 	<b>Meaning</b>
 	<p>Those born in the month of Ushara are quiet and introverted people. They love

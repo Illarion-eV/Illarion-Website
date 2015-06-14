@@ -8,7 +8,7 @@
 		The pride Lion
 	</h1>
 
-	<h2>Monat: Zhas</h2>
+	<h2>Month: Zhas</h2>
 
 	<b>Meaning</b>
 	<p>These people value reliability. Friendship files a high rank for them. Most

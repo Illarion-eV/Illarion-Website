@@ -8,7 +8,7 @@
 		The busy Capricorn
 	</h1>
 
-	<h2>Monat: Irmas</h2>
+	<h2>Month: Irmas</h2>
 
 	<b>Meaning</b>
 	<p>Capricorns are oftenly good merchants or craftspeople. Material things are close

@@ -8,7 +8,7 @@
 		The willful Mule
 	</h1>
 
-	<h2>Monat: Adras</h2>
+	<h2>Month: Adras</h2>
 
 	<b>Meaning</b>
 	<p>Ecstatic festivals and good wine are the preferences of those who are born in the

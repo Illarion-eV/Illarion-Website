@@ -8,7 +8,7 @@
 		The lovable Dove
 	</h1>
 
-	<h2>Monat: Olos</h2>
+	<h2>Month: Olos</h2>
 
 	<b>Meaning</b>
 	<p>Especially lovable are the Doves. Their mothering and empathetic nature causes

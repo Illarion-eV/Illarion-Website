@@ -17,7 +17,7 @@
 	the month of Mas.</p>
 
 	<p>The origin of this festival has its seeds in the scripts of the Nokorakan Cycle,
-	the attempt of a compendium of past century.s prophecies. There one can read th
+	the attempt of a compendium of past century.s prophecies. There one can read the
 	following:</p>
 
 	<p style="font-style:italic;">"Flee from the signs of the long night.<br />
