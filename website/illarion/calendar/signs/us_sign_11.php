@@ -8,7 +8,7 @@
 		The elegant Falcon
 	</h1>
 
-	<h2>Monat: Findos</h2>
+	<h2>Month: Findos</h2>
 
 	<b>Meaning</b>
 	<p>The Falcons are full of bold beauty and attract alot of onlookers. They love

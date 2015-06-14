@@ -8,7 +8,7 @@
 		The sociable Raven
 	</h1>
 
-	<h2>Monat: Naras</h2>
+	<h2>Month: Naras</h2>
 
 	<b>Meaning</b>
 	<p>These chaotic people love gambling and have a very unconventional sense of humour.

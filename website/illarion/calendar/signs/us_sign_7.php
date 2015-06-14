@@ -8,7 +8,7 @@
 		The noble Dragon
 	</h1>
 
-	<h2>Monat: Bras</h2>
+	<h2>Month: Bras</h2>
 
 	<b>Meaning</b>
 	<p>Those who are born under the sign of the Dragon have a fiery temper. They are

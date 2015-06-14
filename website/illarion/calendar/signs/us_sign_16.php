@@ -8,7 +8,7 @@
 		The tactical Wyvern
 	</h1>
 
-	<h2>Monat: Mas</h2>
+	<h2>Month: Mas</h2>
 
 	<b>Meaning</b>
 	<p>This winged, dragon-like, evil creature symbolizes those few who were born in the

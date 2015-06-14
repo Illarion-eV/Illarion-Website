@@ -8,7 +8,7 @@
 		The brave Wolf
 	</h1>
 
-	<h2>Monat: Malas</h2>
+	<h2>Month: Malas</h2>
 
 	<b>Meaning</b>
 	<p>Those born in the month of Malas are honorful and oftenly value the good fight.

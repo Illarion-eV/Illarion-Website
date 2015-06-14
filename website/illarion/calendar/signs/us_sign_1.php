@@ -8,7 +8,7 @@
 		The wise Hind
 	</h1>
 
-	<h2>Monat: Elos</h2>
+	<h2>Month: Elos</h2>
 
 	<b>Meaning</b>
 	<p>Helpfulness and humility are a special characteristic of Hinds. As well as they

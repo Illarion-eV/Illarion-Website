@@ -8,7 +8,7 @@
 		The serious Bat
 	</h1>
 
-	<h2>Monat: Chos</h2>
+	<h2>Month: Chos</h2>
 
 	<b>Meaning</b>
 	<p>The people born under this sign seem cool and proud. They draw attention to
