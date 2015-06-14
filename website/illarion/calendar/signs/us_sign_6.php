@@ -8,7 +8,7 @@
 		The artful Fox
 	</h1>
 
-	<h2>Monat: Ronas</h2>
+	<h2>Month: Ronas</h2>
 
 	<b>Meaning</b>
 	<p>Those who are born under the sign of Ronagan tend to have a well-developed sense

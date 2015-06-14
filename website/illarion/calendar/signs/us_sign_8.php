@@ -8,7 +8,7 @@
 		The prudent Owl
 	</h1>
 
-	<h2>Monat: Eldas</h2>
+	<h2>Month: Eldas</h2>
 
 	<b>Meaning</b>
 	<p>People of this sign seem to be rather innocuous. They are reasonable, love books,

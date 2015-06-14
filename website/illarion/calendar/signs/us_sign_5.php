@@ -8,7 +8,7 @@
 		The beautiful Butterfly
 	</h1>
 
-	<h2>Monat: Siros</h2>
+	<h2>Month: Siros</h2>
 
 	<b>Meaning</b>
 	<p>The amiable aura of these people already shines from afar. The possess alot of
