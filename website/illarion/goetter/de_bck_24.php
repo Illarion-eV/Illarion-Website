@@ -18,7 +18,7 @@
 
 <p>Wenn ein Anhänger stirbt, wendet sich Zhambra deren Freunden zu, und wenn es sich zeigt, dass sie loyal und ihren Freunden gut gedient hat, führt Zhambra ihn ins Paradies. Haben sie keine Freunde, schickt Zhambra sie zurück, um neu geboren zu werden, mehr Freundschaften zu schließen und ein Leben in Loyalität zu führen. Jene aber, die andere betrogen haben, werden von Zhambra herausgefordert. Einige bleiben jedoch für immer allein, zu angsterfüllt, seine Herausforderung anzunehmen. Wer aber akzeptiert, wird in einem ewigen Kampf kämpfen müssen, bis er ehrenhaft stirbt. Nur dann wird er ins Paradies geführt, wenn er Freunde gefunden hat, ansonsten wiedergeboren, um es erneut zu versuchen.</p>
 
-<h2>Irmas - Monat der Treue</h2>
+<h2>Zhas - Monat der Treue</h2>
 
 <p>Der Zhas wurde nach Zhambra, dem Gott der Freundschaft und Loyalität, benannt. Der Monat Zhas ist eine arbeitsreiche Zeit für die Bauern und Landwirte in Runewick und Galmair, in der sie die Felder nach den erfrischenden Wassern des Tanos bearbeiten. Zhambra ist ein Hauptgott des salkamerianischen Pantheons und einige Städte in Salkamar feiern Gedichtsfeste während des Zhas, wohmöglich inspiriert von Elfenfesten. Am 12. Zhas feiern diese den Gedenktag genannt "Tag der Kirschblüte", an dem gedacht wird, dass nichts Ewig überdauert. Elfenlegenden erzählen von der Abspaltung und dem Fall eines Elfenhauses mit Namen "Narnil" und den Nachkommen dieses Hauses, den "Erume-Lie". Weit bekannt ist eine Übersetzung eines antiken Elfenliedes aus der Bibliothek von Nanuk Moonsilver:</p>
 
