@@ -6,7 +6,7 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_14.php","de_bck_10.php","de_bck_16.php" ); ?>
+<?php navBarTop( "de_bck_14.php","de_bck_10.php","de_bck_16.php" ); ?>
 
 <h1>Findari - Göttin der Luft</h1>
 

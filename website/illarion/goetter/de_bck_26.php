@@ -6,58 +6,28 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_25.php","de_bck_10.php","de_bck_99.php" ); ?>
+<?php navBarTop( "de_bck_25.php","de_bck_10.php","de_bck_99.php" ); ?>
 
-   <h2>Moshran - Gott des Blutes und der Gebeine </h2>
+<h1>Moshran - Gott des Blutes und der Gebeine</h1>
 
-   <p>Wird angebetet um:<br />
-   Den Sieg bei gro&szlig;e Schlachten davonzutragen, Macht und Reicht&uuml;mer zu erlangen und gen&uuml;gend
-   Kraft, um Geister- und Totenbeschw&ouml;rungen durchzuf&uuml;hren. Er ist der blutr&uuml;nstige Kriegsgott der
-   Orks.</p>
+<?php cap(M); ?>
+<p>rmorom ist der Gott des Handwerks und Handels. Er wird typischerweise als gerechter und ehrhafter Gott angesehen, der in den meisten Angelegenheiten der Sterblichen eine neutrale Position einnimmt und sich auf das Gesetz verlässt, um seine Arbeit zu schützen und sicherzustellen, dass die Geschäfte laufen und die Wirtschaft wachsen kann. Irmorom hat eine große Vorliebe für Handwerkskunst und Gold. Er besitzt eine positive Persönlichkeit, befindet sich gerne in Gesellschaft und plaudert und lehnt fast nie ein gutes Bier ab. Es kommt nur selten vor, dass ein Dieb Irmoroms Gefallen findet, da er an fairen Handel glaubt und nicht an das Stehlen von Reichtümern Anderer. Es wird gemunkelt, dass er meist in der Gestalt eines grauhaarigen Zwerges mit gräulicher, fast steinartiger Haut erscheint, manchmal als Mann, gekleidet in einer Schmiedeschürze und einem mächtigen Hammer.</p>
 
-   <p>Pers&ouml;nlichkeit:<br />
-   Er ist vielerorts nur als der &quot;Blutgott&quot; oder &quot;Sch&auml;delgott&quot; bekannt, denn
-   viele vermeiden es, Ihn bei seinem wahren Namen zu nennen. Er ist gewaltt&auml;tig, m&auml;chtig,
-   blutr&uuml;stig, und kriegsliebend. Er verf&uuml;gt &uuml;ber ungeahntes, verborgenes Wissen und hat eine
-   eigene, sehr rauhe Art von Humor. Er hilft starken und skrupellosen Sterblichen, die V&ouml;lker zu
-   unterwerfen. Seine Weltordnung ist gepr&auml;gt von Gewalt und Schmerz.</p>
+<h2>Anhänger</h2>
+<p>Diejenigen, die Irmorom dienen, sind meistens als Zwerg, Handwerker, oder Händler zu beschreiben, oder fallen in manchen Fällen gar unter alle drei dieser Kategorien. Sie beten zu Irmorom für Schutz während der Arbeit, feine Handwerkskunst, gute Geschäfte und Reichtum. Irmorom, der von manchen als der primäre Gott Galmairs angesehen wird, wird in einem Tempel angebetet, der sich in den Bergen am westlichen Stadtrand befindet, in der Nähe des Brunnens der Träume, dem einzigen Altar in Galmair, der sich nicht im Untergrund befindet.</p>
 
-   <p>Auftreten:<br />
-   Er erscheint als m&auml;chtiger Ork, gekleidet mit den Insignien eines Heeresf&uuml;hrers, seine Kleidung
-   und die Waffen sind blutgetr&auml;nkt; oder als ein alter Lich der junge Totenbeschw&ouml;rer
-   unterrichtet.</p>
+<p>Seine Anhänger ehren ihn oft sowohl mit Gebeten, wie auch mit Opfergaben in Form ihrer besten und wertvollsten Handwerksstücke an seinem Altar. Außerdem kommt es nicht selten vor, dass man zwei seiner Jünger dabei beobachten kann, wie sie einen handwerklichen Wettstreit führen, um festzustellen, wer mehr von Irmorom gesegnet ist. Obwohl die Anhänger Imoroms meistens Zwerge sind, ist es nicht ungewöhnlich, unter anderen Rassen Personen zu finden, die ihn anbeten, vor allem Handwerker oder Händler. Viele sammeln sich unter dem symbolischen Hammer, obwohl wenige einen Grund dafür sehen würden, einer Ansammlung heiterer Handwerker oder hart arbeitender Händler zu mistrauen. Wenn ein Anhänger Irmoroms stirbt, wird gesagt, dass dieser zu Irmoroms Hallen in den Bergen gebracht wird. Dort müssen sie ihr bestes Handwerksprodukt herstellen und wenn sie es schaffen, Irmorom zu beeindrucken, schickt er sie ins Paradis. Wenn ihnen dies nicht gelingt, werden sie wieder ins Leben zurückgeschickt, um abermals zu versuchen zu lernen und etwas von Wert herzustellen.</p>
 
-   <p>Vorlieben/ Abneigungen:<br />
-   Er mag gewaltige, blutige Schlachten. Ihm sind auch unfaire Methoden recht, um zu gewinnen. Er
-   empf&auml;ngt gerne lebende Opfergaben und er hasst jede Art von Schw&auml;che.</p>
+<h2>Irmas - Monat des Handwerks</h2>
 
-   <p>Anh&auml;nger:<br />
-   Er ist der &quot;Blutgott&quot; vieler wilder, blutr&uuml;nstiger Ork-Kriegsst&auml;mme, die Ihm zu Ehren
-   Sterbliche opfern. Seine Altare sind blutgetr&auml;nkte Zeugnisse Seines Charakters und seine wenigen
-   Anh&auml;nger sind abgrundtief b&ouml;se Kreaturen. Die notwendigen Rituale, um Ihn zu bes&auml;nftigen, sind
-   grausam und blutig.<br />
-   Selbst seine Anh&auml;nger wagen es nicht Moshran offen beim Namen zu nennen, nur einige Ork Schamane
-   und gro&szlig;e Anf&uuml;hrer beten offen zu Ihm, doch verf&uuml;hren sie h&auml;ufig die eigenen Untertanen, indem
-   sie ihnen vorgaukeln, einem anderen Gott als Moshran zu huldigen. Die meisten Priester Moshrans
-   zeigen sich aber selten in der &Ouml;ffentlichkeit, da sie st&auml;ndig mit der Verfolgung durch
-   aufrichtige B&uuml;rger rechnen m&uuml;ssen. B&ouml;se Geister- und Totenbeschw&ouml;rern nennen Moshran den
-   &quot;Sch&auml;delgott&quot;.<br />
-   Sie versprechen sich von Moshran unbegrenzte, absolute Macht; anders als Chergas Anh&auml;nger,
-   welche nach dem ewigen Leben trachten. Moshran ruft jene die Ihm am w&uuml;rdigsten erscheinen zu
-   sich und lehrt sie schwarze Rituale und unheilige Zeremonien.<br />
-   Wenn Moshran&#39;s Anh&auml;nger sterben, z&auml;hlt er die Morde und Verbrechen eines jeden. Wenn der
-   Betroffene verabscheuungsw&uuml;rdig und grausam genug war, wird er als m&auml;chtiger Untoter zur&uuml;ck
-   gesandt, wo sie meist von aufrichtigen K&auml;mpfern verfolgt werden. Wenn sie wertlos f&uuml;r Moshran
-   waren, verdammt er ihre Seelen, zwischen den Welten zu wandeln und geringere Dienste zu
-   verrichten. Manche dieser Diener haben &uuml;ber die Zeit eine gro&szlig;e Machtf&uuml;lle angesammelt und
-   wurden zu D&auml;monen-gleichen Kreaturen. Unter ihnen brechen h&auml;ufig K&auml;mpfe aus oder Intrigen werden
-   gesponnen, um eine h&ouml;here Machtposition zu erlangen.<br />
-   Die Seelen derer, die Moshran zu t&auml;uschen wagten, sind auf Ewigkeit verdammt. Er brandmarkt sie
-   mit seinen Klauen des Todes und kennzeichnet sie so als sein alleiniges Eigentum. Sie m&ouml;gen
-   versuchen, sich zu verbergen oder Schutz zu suchen, doch werden sie dadurch keine Erl&ouml;sung
-   finden. Moshran ist geduldig. Eines Tages werden sie vor Ihm stehen und dann werden ihre Seelen
-   auf ewig gepeinigt, um dem Blutgott Vergn&uuml;gen zu bereiten.</p>
+<p>Der Monat Irmas ist nach Irmorom benannt, dem Gott des Handwerks und Handels. Vom 1. bis 8. Irmas feiert Galmair ein großes Fest mit einer Parade der Handwerker und Händler. In Cadomyr wird ebenfalls ein weniger wildes Fest der Handwerker und Händler vom 1. bis 4. Irmas geifeiert. Jede größere Stadt in Salkamar, Gynk und Albar halten außerdem an irgendeinem Tag im Irmas ihren größten Markttag des Jahres ab. Die Zwerge von Sevenhill richten einen Wettbewerb namens "Der goldene Hammer" aus, der am 12. Irmas beginnt. Wettbewerbe für verschiedene Handwerke werden über drei oder vier Tage abgehalten, während die fünf Tage danach mit Feiern und Trinken verbracht werden und ein guter Teil des Monats benötigt wird, um wieder nüchtern zu werden.</p>
 
-   <?php navBarBottom( "de_bck_25.php", "de_bck_99.php" ); ?>
+<h2>Sternzeichen - Der fleißige Steinbock</h2>
+
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_9.png" alt="Der fleißige Steinbock"/>
+
+<p>Die unter dem Zeichen der Ziege geborenen, sind Meister des Feilschens und meistens erfolgreiche Händler oder Handwerker. Materielle Güter und Reichtum sind ihnen wichtig und alles hat einen bestimmten Wert. Sie reden gerne und sind in Gesellschaft, was sie zu wunderbaren Gesprächspartnern in jeglicher Gegenwart macht. Durch das Feilschen einiger fröhlicher Ziegen wird ein düsteres Wirtshaus schnell zu einer lebhaften, blühenden Einrichtung. Sie können impulsiv und ungeduldig sein, sind aber nur selten unfair und legen Wert auf gutes Feilschen. Dennoch sind sie von Natur aus geizig, also sollte man nicht erwarten, dass das Feilschen zu eigenen Gunsten endet, es sei denn, ihre ungestüme Persönlichkeit verleitet sie zu einem seltenen, schlechten Geschäft.</p>
+
+<?php navBarBottom( "de_bck_25.php", "de_bck_99.php" ); ?>
 
 <?php include_footer(); ?>

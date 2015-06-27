@@ -6,38 +6,32 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_22.php","de_bck_10.php","de_bck_24.php" ); ?>
+<?php navBarTop( "de_bck_22.php","de_bck_10.php","de_bck_24.php" ); ?>
 
-   <h2>Sirani - G&ouml;ttin der Liebe und der Freude</h2>
+<h1>Sirani - Göttin der Liebe und der Freude</h1>
 
-   <p>Wird angebetet um:<br />
-   Den Schutz der Liebenden und die Liebe selbst, um die Aufmerksamkeit einer geliebten Person zu
-   erhalten. Rat und Hilfe meist f&uuml;r jungen Frauen.</p>
+<?php cap(S); ?>
+<p>Sirani ist die Göttin der Liebe und Schönheit. Sie ist bekannt dafür, herzlich und gastfreundlich zu sein, sogar mitfühlend mit denen, die ihren Trost brauchen. Deshalb wird Sirani generell sowohl als friedliebend, wie auch als verführerisch angesehen. Jedoch ist sie auch dafür bekannt, impulsiv zu sein und schnell von ihren Begierden übermannt zu werden, die jeglichen Sinn für Vernunft überwältigen. Rauhe, grausame, oder sehr selbstsüchtige Leute lehnt sie ab und kann schnell in leidenschaftliche Wutausbrüche verfallen, wenn Frauen herablassend behandelt, oder gar beleidigt werden. Wenn sie über das Land streift, erscheint sie für gewöhnlich im Körper einer jungen und attraktiven Frau einer der Rassen. Da sie Feste und fröhliche Anlässe, sei es nur das Feiern des Leben selbst, liebt, schließt sie sich oft Festivitäten an. Auch an der Zurschaustellung von Liebe und Zuneigung findet sie gefallen, weshalb sie manchmal als Zeichen ihres Segens an den Hochzeiten von Sterblichen teilnimmt. Sie ist auch dafür bekannt, eine Schwäche für jene zu haben, die einsam sind und diesen zu helfen, indem sie dafür sorgt, dass sie Gesellschaft finden.</p>
 
-   <p>Pers&ouml;nlichkeit:<br />
-   Freundlich, intelligent, sympathisch , manchmal verhindert Ihr Verlangen nach Vergn&uuml;gungen Ihre
-   Vernunft.</p>
+<h2>Anhänger</h2>
+<p>Die Anhänger Siranis sind zahlreich und besonders viele junge Frauen blicken zu ihr als Mentorin und moralische Wegweiserin auf, in der Hoffnung, dass sie ihre Wünsche erfüllt. Als Bringerin der Liebe bekannt, wird Sirani oft von jenen angebetet, die nach Liebe suchen, oder bereits mit dieser gesegnet wurden. Ihre Anhänger suchen ihren Rat in Liebesdingen, den Schutz ihrer Nächsten und das Geheimnis ihrer Schönheit. Ihre umwerfende Schönheit und lebensfrohe Einstellung machen es offensichtlich, dass Königin Rosaline von Cadomyr von Sirani gesegnet ist. Königliche Hochzeiten und Vereinigungen artistokratischer Familien wurden einst bei der Perle von Sirani, tief in der Kantabiwüste abgehalten, während die der gewöhnlichen Bürger am Altar auf der Träne der Sirani stattfinden, die Teil des Kantabideltas südlich von Cadomyr ist.</p>
 
-   <p>Auftreten:<br />
-   Sie erscheint als eine junge, wundersch&ouml;ne Frau aller Rassen, besucht gerne Feste zur
-   Unterhaltung, manchmal hilft sie einfach einsamen Leuten und f&uuml;hrt sie zusammen.</p>
+<p>Obwohl viele junge Mädchen zunächst für ihre frühe Anhängerschaft Siranis verspottet werden, werden viele davon später zu Siranipriesterinnen und bringen der Welt so viel Trost und Gleichgewicht. Sie verschreiben sich der Pflege all dessen, was gut ist in diesem Leben. Die meisten versagen dem Krieg und feiern den Frieden und würden es als große Beleidigung ansehen, wenn jemand eine Waffe in ihren Tempel bringt. Siranis Anhänger sind oft geschickte Heiler und zusammen mit der großen Gastfreundschaft, die in ihren Tempeln angeboten wird, finden sich viele Bedürftige auf der Suche nach Nahrung und einem Dach über dem Kopf dort ein. Wenn ein Anhänger Siranis stirbt, blickt sie in dessen Herz und küsst ihn dann. Wenn derjenige ein gutes Leben geführt hat, wird er in einem gesegneten Paradis ankommen. Sollte er Falsches getan haben, dies jedoch bedauern, wird Siranis Kuss ihn erleuchten und wenn er im Paradis ankommt, ist ihm vergeben. Diejenigen jedoch, die böse sind und nichts bereuen, werden durch ihren Kuss gereinigt und als unschuldige Neugeborene auf die Welt zurück geschickt. Dabei verlieren sie jede Erinnerung an ihr frühes Leben und alle Schuld ist ihnen vergeben, sodass sie die Möglichkeit haben, neu zu beginnen und ein besseres Leben zu führen.</p>
 
-   <p>Vorlieben/ Abneigungen:<br />
-   Sie mag rauschende Feste, Liebe, Spa&szlig; und das Leben selbst. Sie pflegt Freundschaften und
-   verabscheut selbsts&uuml;chtige, ungehobelte Personen. Sie hasst die Missachtung von Frauen und kann
-   sehr aufbrausend und w&uuml;tend werden, wenn ihnen nicht die n&ouml;tige Wertsch&auml;tzung zuteil wird.</p>
+<h2>Siros - Monat der Liebe</h2>
 
-   <p>Anh&auml;nger:<br />
-   Viele junge Frauen beten zu Ihr, der Liebe wegen oder um Sch&ouml;nheit zu erlangen. Die meisten
-   Priester Siranis sind gute Heiler und glauben wie alle Ihre Anh&auml;nger an ein Leben in Friede und
-   Harmonie. Sie verabscheuen Gewalt und Waffen. In den Tempeln der G&ouml;ttin finden Fl&uuml;chtlinge
-   Obdach und Nahrung sowie Arbeit. Viele davon werden oft selbst zu Sirani-Anh&auml;nger.Ihre Anh&auml;nger
-   glauben, wenn sie sterben, wird Sirani in Ihr Herz schaut und wird sie ihnen einen Kuss geben.
-   Wenn sie gut waren und ein reines Herz haben, erwachen sie in einem wunderbaren Garten. Wenn die
-   weniger Guten Ihre Taten von Herzen bereuten, erlangen auch sie den g&ouml;ttlichen Kuss und erhalten
-   Einlass in den Garten der Erleuchtung. Die wahrlich B&ouml;sen und Unreinen werden durch der G&ouml;ttin
-   Kuss reingewaschen und werden als unschuldige Neugeborene wieder auf die Erde gesandt.</p>
+<p>Der Monat Siros ist nach Sirani benannt, der Göttin der Liebe, die weithin von allen Rassen gefeiert wird. Alle bekannten Kulturen haben Loyalitäts- und Vereinigungsrituale während des Monat Siros und Sirani ist und bleibt sehr populär in Salkamar, Gynk und auch unter den Serinjah. Zumeist jubilante Jahrmärkte oder Tanzfeste, ist jungen Paaren hier die Möglichkeit gegeben, sich zu treffen und womöglich ihre Ehegelübde abzulegen. Es gibt kein genaues Datum für diese Zelebration, jedoch findet sie meistens um den 12. Siros statt. Oft arrangieren die örtlichen Herrscher es so, dass an jedem Tag in einem anderen Dorf ein Fest stattfindet.</p>
 
-   <?php navBarBottom( "de_bck_22.php", "de_bck_24.php" ); ?>
+<p>Obwohl alle feiern, gibt es zwischen den einzelnen Rassen und Religionen Unterschiede. In elfischer Tradition, bringt der männliche Anwärter Zweige des Mevrannobaumes am Eingang des Hauses seiner Angebeteten an. Der Mevrannobaum lebt in Symbiose mit der Kletterpflanze Levrenni, die sich um Bäume schlingt, wenn diese noch jung sind und wunderschön blühen; alleine kann keine der beiden Pflanzen gedeihen. Wenn die Kandidatin Interesse hat, bindet sie einen Stängel der Levrennipflanze um den Ast des Mevrannobaumes. Unter den Halblingen sind es die Damen, die den ersten Schritt wagen, indem sie einen Kranz aus Blumen auf das Haupt ihres Geliebten legen. Wenn der Mann den Kranz nicht ablegt, gilt das Angebot als angenommen. Menschliche Traditionen sind weitaus komplizierter und sehr viel unterschiedlicher unter den einzelnen Kulturen und oft kein echtes Angebot, als viel mehr ein Ausdruck der Liebe. Dinge, die in einem Dorf als ehrhaft und liebenswert gelten, mögen in einem anderen als überaus beleidigend angesehen werden. Am gebräuchlichsten ist es, dass der Mann seine Angebetete um einen Tanz bittet, aber nicht alle Tänze sind für die Liebe. Sollte die Frau sich zu einem Mann hingezogen fühlen, gibt sie ihm als traditionelles Zeichen ihres Interesses eine Schleife, welche ihr zuvor in ihr Haar geflochten worden war. Wenn der Mann die Schleife um seinen Arm bindet, signalisiert er damit, dass er ihre Gefühle erwidert.</p>
+
+<p>Orks sind bekannt für ihre etwas rauere Art, ihrer Liebe Ausdruck zu verleihen. Nach ihrer Tradition, sucht der Mann gemeinsam mit einem Freund das Haus seiner Angebeteten auf und entführt sie. Da die Entführung sehr rituell abläuft, gibt es für gewöhnlich auf keiner der beiden Seiten Verletzungen, außer wenn die Frau ihren Verehrer bereits zuvor abgelehnt hatte. Für gewöhnlich wird die Entführte sofort zum Haus des Mannes gebracht, während ihre Familie sich draußen versammelt, um sie zu "retten". Wenn die Orkin die Türe öffnet und ihre Familie bittet einzutreten, ehe diese das Haus stürmt, gilt der Heiratsantrag als angenommen. Unter den Echsenmenschen wird die Ehe für gewöhnlich von den Eltern arrangiert und die Kinder haben dabei keinerlei Mitspracherecht. Dadurch ist es durchaus nicht ungewöhnlich, dass das Brautpaar sich am Tage des Fests zum ersten Mal trifft. Die Eltern machen ihre Pläne vor den Festivitäten und dann trifft sich das Paar im Haus des Mannes, ehe alle gemeinsam zum Tempel gehen, wo das Brautpaar vor einem Priester das Gelübde ablegt. Im Falle der Zwerge spielt der Schmied eine wichtige spirituelle Rolle bei der Zeremonie, die über das bloße Schmieden der Ringe hinausgeht. Ein Paar, welches heiraten möchte, wird von einem Schmied "verbunden", der zwei Ringe aus demselben Stück Metall schmiedet, die sich zu einem verbinden, wenn man sie zusammenführt. Traditionell werden diese Ringe über dem Ehebett des Paares angebracht und symbolisieren fortan ihre Verbundenheit und die Stärke, die ihre Vereinigung bringt.</p>
+
+<h2>Sternzeichen - Der schöne Schmetterling</h2>
+
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_5.png" alt="Der schöne Schmetterling"/>
+
+<p>Die liebenswürdige Aura der wunderschönen Schmetterlinge strahlt aus der Ferne. Die im Monat Siros Geborenen besitzen für gewöhnlich viel Charm und üben eine große Anziehung aus, besonders auf das andere Geschlecht. Sie lieben schöne Feste, genießen die Freiheit und kosten das Leben in vollen Zügen aus. Sich ihrer eigenen Attraktivität bewusst, können sie oft den Eindruck erwecken, arrogant zu sein, machen dies aber für gewöhnlich durch ihre Liebenswürdigkeit wieder wett. Sie greifen nur äußert selten zur Waffe und ziehen Harmonie und Einigkeit vor. Aber selbst Schmetterlinge können wütend werden, wenn man beispielsweise ihre Freiheiten einschränkt und sie davon abhält, sich frei zu bewegen, denn sie besitzen eine große Freiheitsliebe. Jemand, der unter dem Zeichen des Schmetterlings geboren ist und emotional sowie launisch ist, kann schnell weniger berechenbar werden und mit unüberlegten und unbegründeten Ausbrüchen reagieren.</p>
+
+<?php navBarBottom( "de_bck_22.php", "de_bck_24.php" ); ?>
 
 <?php include_footer(); ?>
