@@ -6,7 +6,7 @@
 
 	if (!$charid)
 	{
-		Messages::add((Page::isGerman() ? 'Fehler beim Übertragen der Charakter ID.' : 'Error while transfering the character ID.'), 'error' );
+		Messages::add((Page::isGerman() ? 'Fehler beim Übertragen der Charakter ID.' : 'Error while transferring the character ID.'), 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/community/account/'.Page::getLanguage().'_charlist.php' );
 		exit();
 	}

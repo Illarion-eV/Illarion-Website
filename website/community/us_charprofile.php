@@ -44,7 +44,7 @@
 
 	if (!$settings['show_profil'])
 	{
-		Page::redirect( Page::getURL().'/community/us_charprofile.php', 'Charakterprofil wurde nicht gefunden', 'error' );
+		Page::redirect( Page::getURL().'/community/us_charprofile.php', 'Character profile not found', 'error' );
 	}
 
 	if ( handleVote( $charid ) )
@@ -77,7 +77,7 @@
 	<?php if ( isset( $picture['file'] ) ): ?>
 	<a href="<?php echo $picture['file']; ?>" onclick="return false;" class="lightwindow" title="<? echo $pg_profil['chr_name']; ?>">
 	<?php endif; ?>
-		<img height="<? echo $picture['height']; ?>" width="<? echo $picture['width']; ?>" src="<? echo $picture['preview']; ?>" alt="Charakterbild" />
+		<img height="<? echo $picture['height']; ?>" width="<? echo $picture['width']; ?>" src="<? echo $picture['preview']; ?>" alt="Character Picture" />
 	<?php if ( isset( $picture['file'] ) ): ?>
 	</a>
 	<?php endif; ?>
@@ -105,7 +105,7 @@
 <?php elseif ($online_state == 1): ?>
 <p class="char_online_1"<?php echo ($settings['overwrite_online'] ? ' style="font-style:italic;"' : ''); ?>>Currently online</p>
 <?php else: ?>
-<p class="char_online_2">Onlinestate hidden</p>
+<p class="char_online_2">Online State hidden</p>
 <?php endif; ?>
 
 <div class="clr"></div>

@@ -1,7 +1,7 @@
 <?php
 	if (!IllaUser::auth('gmtool_chars'))
 	{
-		Messages::add((IllaUser::$lang=='de'?'Zugriff verweigert':'Access denieded'), 'error');
+		Messages::add((IllaUser::$lang=='de'?'Zugriff verweigert':'Access denied'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -12,7 +12,7 @@
 
 	if (!$charid)
 	{
-		Messages::add((IllaUser::$lang=='de'?'Charakter ID wurde nicht richtig übergeben':'Character ID was not transfered correctly'), 'error');
+		Messages::add((IllaUser::$lang=='de'?'Charakter ID wurde nicht richtig übergeben':'Character ID was not transferred correctly'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}

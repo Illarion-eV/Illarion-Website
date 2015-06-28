@@ -15,7 +15,7 @@
 
 	if (!isset( $_GET['charid'] ) || !is_numeric($_GET['charid']))
 	{
-		exit('Error - Character ID not correctly transfered.');
+		exit('Error - Character ID not correctly transferred.');
 	}
 
 	$charid = (int)$_GET['charid'];

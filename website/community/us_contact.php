@@ -47,15 +47,15 @@ the appropriate people.</p>
 
 	<li><a href="?contact=3">Reporting players</a> - To report a player breaking the rules.</li>
 
-	<li><a href="?contact=4">Reporting gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
+	<li><a href="?contact=4">Reporting Gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
 
-	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need gamemaster support
+	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need Gamemaster support
 	for a quest in Cadomyr you can ask for it here.</li>
 
-	<li><a href="?contact=6">RPG requests Galmair</a> - If you need gamemaster support
+	<li><a href="?contact=6">RPG requests Galmair</a> - If you need Gamemaster support
 	for a quest in Galmair you can ask for it here.</li>
 	
-	<li><a href="?contact=7">RPG requests Runewick</a> - If you need gamemaster support
+	<li><a href="?contact=7">RPG requests Runewick</a> - If you need Gamemaster support
 	for a quest in Runewick you can ask for it here.</li>
 
 	<li><a href="../mantis/">Bug reports</a> - Mistakes and errors you encounter
@@ -168,9 +168,9 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          "reconstruct your report with the server logs.",false);
       break;
       case 4: //Reporting GMs
-         define(_CONTACT_NAME,"Reporting gamemasters",false);
+         define(_CONTACT_NAME,"Reporting Gamemasters",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"In the situation that a gamemaster abused".
+         define(_CONTACT_DETAILS,"In the situation that a Gamemaster abused".
          " his or her powers to support or punish a player in an improper".
          " way you can report them here. Those reports are handled by an".
          " impartial party.",false);
@@ -178,21 +178,21 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
       case 5: //Cadomyr requests
          define(_CONTACT_NAME,"RPG requests for Cadomyr",false);
          define(_CONTACT_MAIL,"cadomyr@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 6: //Galmair requests
          define(_CONTACT_NAME,"RPG requests for Galmair",false);
          define(_CONTACT_MAIL,"galmair@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Galmair gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Galmair Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 7: //Runewick requests
          define(_CONTACT_NAME,"RPG requests for Runewick",false);
          define(_CONTACT_MAIL,"runewick@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Runewick gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Runewick Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
@@ -248,7 +248,7 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Evie",false);
@@ -258,17 +258,17 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
       case 41: //Bloodraven
          define(_CONTACT_NAME,"Bloodraven",false);
          define(_CONTACT_MAIL,"bloodraven@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 42: //Teflon
          define(_CONTACT_NAME,"Teflon",false);
          define(_CONTACT_MAIL,"teflon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
       break;
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       default:
          MainForm();

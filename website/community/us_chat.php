@@ -11,8 +11,8 @@ Page::Init();
 
 
 <p>This page establishes a connection to the Quakenet IRC
-Server network and enters the Illarion Chatroom. <br />
-In this chatroom the
+Server network and enters the Illarion Chat room. <br />
+In this chat room the
 <a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> AND
 the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 

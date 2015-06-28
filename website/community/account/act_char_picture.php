@@ -89,7 +89,7 @@
 
 			if(!move_uploaded_file($_FILES['picture']['tmp_name'],$path.$filename))
 			{
-				Messages::add( (Page::isGerman() ? 'Beim Speichern der Bilddatei ist ein Fehler aufgetreten.' : 'While storing the file an error occured.'), 'error' );
+				Messages::add( (Page::isGerman() ? 'Beim Speichern der Bilddatei ist ein Fehler aufgetreten.' : 'While storing the file an error occurred.'), 'error' );
 			}
 			else
 			{

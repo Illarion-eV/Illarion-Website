@@ -14,7 +14,7 @@
 
 	if (!$charid)
 	{
-		exit('Error - Character ID was not transfered correctly.');
+		exit('Error - Character ID was not transferred correctly.');
 	}
 
 	$pgSQL =& Database::getPostgreSQL( $server );

@@ -10,7 +10,7 @@
 
 	if (!$accid)
 	{
-		Messages::add((Page::isGerman()?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
+		Messages::add((Page::isGerman()?'Account ID wurde nicht richtig übergeben':'Account ID was not transferred correctly'), 'error');
 		includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}

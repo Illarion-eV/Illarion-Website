@@ -4,7 +4,7 @@
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		
-		Messages::add( (Page::isGerman() ?'Zugriff verweigert':'Access denieded'), 'error');
+		Messages::add( (Page::isGerman() ?'Zugriff verweigert':'Access denied'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}
@@ -14,7 +14,7 @@
 
 	if (!$charid)
 	{
-		Messages::add( (Page::isGerman() ?'Account ID wurde nicht richtig übergeben':'Account ID was not transfered correctly'), 'error');
+		Messages::add( (Page::isGerman() ?'Account ID wurde nicht richtig übergeben':'Account ID was not transferred correctly'), 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/de_gmtool.php' );
 		exit();
 	}

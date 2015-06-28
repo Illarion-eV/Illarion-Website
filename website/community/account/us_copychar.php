@@ -38,7 +38,7 @@
 </p><p><b>
 	Testserver characters are for testing only. E.g. you may not use testserver
 	characters to roleplay (i.e. the testserver is ooc-only) or to backup your
-	gameserver characters. Testserver characters will never be transfered back
+	gameserver characters. Testserver characters will never be transferred back
 	to the game server.
 </b></p>
 

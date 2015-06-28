@@ -8,7 +8,7 @@
 
 	if (!$charid)
 	{
-		Messages::add('Character ID was not transfered successfully.', 'error' );
+		Messages::add('Character ID was not transferred successfully.', 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/community/account/us_charlist.php' );
 		exit();
 	}
