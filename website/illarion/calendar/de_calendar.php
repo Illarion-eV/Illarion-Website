@@ -5,7 +5,6 @@
       "Kalender, Datum, Monat, Tierkreiszeichen",
       "",
       "lightwindow,lightwindow_de,calendar","prototype,effects,lightwindow");
-
       include_header();
 ?>
 
@@ -44,7 +43,7 @@ while ($this_month < 17)
 					
             <tr>
 	    <td colspan='3' rowspan='2'>
-	    <a href='signs/de_sign_<?php echo $this_month; ?>.php' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
+	    <a href='signs/de_sign_<?php echo $this_month; ?>.php' title='<?php echo $monate[$this_month-1] ?>' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
 	        <img src='images/image_<?php echo $this_month; ?>.gif' alt='Grafik'>
             </a>
 	    </td>

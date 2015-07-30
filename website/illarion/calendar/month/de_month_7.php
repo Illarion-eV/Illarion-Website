@@ -7,21 +7,7 @@
 
 	<h2>Monat der Opferung</h2>
 
-	<p>Bras ist nach Bràgon benannt, einem weiteren der fünf Schöpfungsgötter, welcher
-	der Welt die Sonne und das Feuer gegeben haben soll. Der Bras ist meist der heißeste
-	Monat im Jahr. Der längste Tag im Jahr gefolgt von der kürzesten Nacht des Jahres
-	ist der vierundzwanzigste Bras.</p>
+<p>Brás ist nach Brágon benannt, dem dritten bekannten Schöpfungsgott, der die Sonne erschuf und der Welt das Feuer schenkte. Einst als Monat der Opferung bekannt, werden Brandopfer heute nur noch selten in Illarion dargebracht. Der längste Tag des Jahres, gefolgt von der kürzesten Nacht, fällt auf den 24. Brás. Während dieser Nacht feiern die Elfen das Fest des Feuers und kleine, geschnitzte Holzstücke, welche zahlreiche Kerzen tragen, können auf vielen Seen und Flüssen schwimmend beobachtet werden. Menschen feiern den Monat auf etwas andere Art, mit langen Festen in Salkamar und Gynk, während derer alle möglichen Künstler ihre Fertigkeiten vorführen. In Albar neigen nur die Adeligen dazu zu feiern, indem sie dekadente Feste ausrichten, die den ganzen Monat Brás andauern. Es ist in vielen Regionen Albars nicht unüblich, dass Sondersteuern erhoben werden, um dies zu finanzieren.</p>
 
-	<p>Elfen feiern in dieser Nacht das Feuerfest, dem sie auf Seen und Flüße kleine,
-	geschnitzte Holzplättchen mit Kerzen schwimmen lassen.</p>
-
-	<p>Bei den Menschen wird es je nach Region unterschiedlich zelebriert:<br />
-	Salkamar und Gynk feiern diese Nacht mit einem langen Grillfest, bei denen alle
-	Arten von Künstlern ihr Können zur Schau stellen.<br />
-	In Albar hingegen feiern nur die Adeligen, dies aber dafür dann oft sogar den ganzen
-	Bràs hindurch.</p>
-
-	<p>Die Feste sind ausschweifend und dekadent, was meist dazu führt, dass in vielen
-	albarischen Regionen eine Sondersteuer gezahlt werden muß.</p>
 </div>
 <?php include_short_footer(); ?>

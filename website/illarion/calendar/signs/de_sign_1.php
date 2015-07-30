@@ -10,16 +10,7 @@
 
 	<h2>Monat: Elos</h2>
 
-	<b>Beschreibung:</b>
-	<p>Hilfsbereitschaft und Bescheidenheit ist ein besonderes Merkmal der Hirschkühe.
-	Ebenso suchen sie eher die Einsamkeit und sind meist zurückgezogen.</p>
+<p>Hilfsbereitschaft und Bescheidenheit sind spezielle Charakteristiken derer, die unter dem Zeichen der weisen Hirschkuh geboren wurden. Obwohl sie zu den meisten, denen sie begegnen höflich sind, sind sie zumeist schüchtern und suchen oft Abgeschiedenheit und führen stille und zurückgezogene Leben. Die unter dem Zeichen der Hirschkuh geborenen sammeln Weisheit, indem sie sehr nachdenkliche Leute sind, die all ihre Handlungen und die Anderer sorgfältig durchdenken. Trotz ihrer Weisheit, liegt es nicht in ihrer Natur, entscheidungskräftig zu sein und manchmal können sie sich tagelang mit der kleinsten Entscheidung quälen.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>weise, hilfsbereit, freundlich</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>oft unentschlossen</p>
 </div>
 <?php include_short_footer(); ?>

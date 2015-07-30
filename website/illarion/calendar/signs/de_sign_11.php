@@ -10,17 +10,7 @@
 
 	<h2>Monat: Findos</h2>
 
-	<b>Beschreibung:</b>
-	<p>Die Falken sind voller kühner Schönheit und ziehen immer viele Blicke auf sich.
-	Sie lieben Musik, Malerei und andere Künste. Unter der dünnen Schale ihrer Vernunft
-	schlummern viele verschiedene Wünsche.</p>
+<p>Falken sind von kühner Schönheit und ziehen oft viele Blicke auf sich. Sie sind kreativ und erfinderisch und besitzen einen auffälligen Stil. Künstlerisch begabt, lieben sie Musik, Malerei und andere Künste. Viele verschiedene Wünsche schlummern hinter einer dünnen Schicht der Vernunft, wodurch sie unbeständig oder flatterhaft erscheinen mögen. Elegante Falken neigen dazu, neugierig und oft unverschämt zu sein - sie können es sich leisten. Sie mögen zwar wankelmütig sein, aber langweilig sind sie nie.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>künstlerisch begabt, erfinderisch</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>sehr neugierig und oft flatterhaft</p>
 </div>
 <?php include_short_footer(); ?>

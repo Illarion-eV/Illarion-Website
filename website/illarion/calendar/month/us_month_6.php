@@ -7,12 +7,7 @@
 
 	<h2>Month of Generosity</h2>
 
-	<p>The second month of Summer was named after Ronagan, who is known in Albar, Gynk
-	and Salkamar as god of shadows, secrecy and thieves. The Serinjah know Ronagan as
-	god of freedom, fishermen and hunters, but also as god of secrecy and trickery.</p>
+<p>Ronas, the second month of summer was named after Ronagan. Although Ronagan is known as the god of shadows, secrecy and thieves throughout much of Albar, Gynk and Salkamar, Ronas is recognised by many as the month of generosity. The plains folk of the Serinjah know Ronagan as god of freedom, fishermen and hunters, but also as god of secrecy and trickery. It is rumoured that there are frequent secret meetings of self-proclaimed Ronagan followers, or thief guilds, in Galmair during Ronas. This rumour remains unproven but has been told for decades, again and again.</p>
 
-	<p>It is rumoured that there are secret meetings of Ronagan-followers - thief guilds
-	- in towns of Gynk, Salkamar and Albar. But this rumour is unproven and has been told
-	again and again over centuries.</p>
 </div>
 <?php include_short_footer(); ?>

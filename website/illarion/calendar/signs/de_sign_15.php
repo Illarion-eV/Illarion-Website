@@ -10,17 +10,7 @@
 
 	<h2>Monat: Chos</h2>
 
-	<b>Beschreibung:</b>
-	<p>Kühl und stolz erscheinen die Personen welche unter diesem Zeichen geboren
-	wurden. Sie fallen durch Würde, kultiviertes Auftreten und Ernsthaftigkeit auf. Wenn
-	man sie allerdings erzürnt, sollte man sich besser in Sicherheit begeben.</p>
+<p>Die unter dem Zeichen der ernsten Fledermaus geborenen, erscheinen ruhig und stolz, beizeitigen vielleicht gar abgehoben, auf Grund ihres kühlen Äußeren. Sie erregen Aufmerksamkeit auf Grund ihrer eleganten Erscheinung und der ernsten Würde, die sie ausstrahlen. Fledermäuse sind oft sehr ehrvoll und glühende Verteidiger der Gerechtigkeit, ohne jeglicher Neigung zu weichherzigem Mitleid. Sollte jemand eine Fledermaus wütend gemacht haben, so sollte derjenige mit einiger Dringlichkeit Schutz suchen, um die eigene Sicherheit zu gewähren. Die unter dem Zeichen der Fledermaus geborenen können nur seltenst beim Erzählen eines Witzes, oder gar mit einem Lächeln auf den Lippen beobachtet werden, denn für sie ist alles todernst. Stadtwachen und Richter sind oft im Chos geboren, aber gleichermaßen bringt der Monat auch weniger ehrvolle, aber dafür ebenso resolute Persönlichkeiten hervor.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>sehr gerecht, meist von kühler Anmut</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>zu ernst</p>
 </div>
 <?php include_short_footer(); ?>

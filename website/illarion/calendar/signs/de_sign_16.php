@@ -10,18 +10,7 @@
 
 	<h2>Monat: Mas</h2>
 
-	<b>Beschreibung:</b>
-	<p>Dieses geflügelte, drachenartige, böse Geschöpft symbolisiert die wenigen
-	Mas-Geborenen. Unter ihnen findet man viele unberechenbare, große Taktiker,
-	Strategen und Kriegsfürsten. Sie gelten als hinterhältig, gerissen und
-	aggressiv.</p>
+<p>Der geflügelte, drachenähnliche Lindwurm symbolisiert die wenigen, die im Monat Mas geboren sind. Sie sind weithin bekannt dafür, unvorhersehbar zu sein und viele gelten als große Taktiker oder Strategen. Kommandanten, Piraten, Kriegsherren, oder erfolgreiche Politiker sind unter ihnen zu finden. Von hohem Ehrgeiz, werden sie bei der Verfolgung ihrer Ziele als listig, gerissen und aggressiv angesehen. Taktische Lindwürmer sind für gewöhnlich hochintelligent und nutzen dies, um die von geringerem Verstand rasch zu manipulieren und Macht über sie zu gewinnen. Kühn, aber oft verschlagen, tendieren Lindwürmer dazu, ihre Ziele mit unkonventionellen und manchmal spektakulären Mitteln zu erreichen.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>sehr intelligent, gute Strategen</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>aggressiv, hinterhältig, machtsüchtig, eigenwillig</p>
 </div>
 <?php include_short_footer(); ?>

@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="male dwarf"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="female dwarf"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="male dwarf"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="female dwarf"/></td></tr></table>
 <?php cap(T); ?>
 <p>he dwarves are an old race. According to history, they were the third race who developed their own writing. In the very
 beginning it was based on pictograms – a simple and easy way to show the true meaning of the word. It was mainly used to

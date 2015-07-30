@@ -10,17 +10,7 @@
 
 	<h2>Monat: Ronas</h2>
 
-	<b>Beschreibung:</b>
-	<p>Jene die unter dem Zeichen Ronagans geboren sind haben oft einen ausgeprägten
-	Sinn für Humor. Sie sind sehr freiheitsliebend und beugen sich daher nur widerwillig
-	Gesetzen oder Regeln.</p>
+<p>Diejenigen, die unter dem Zeichen des schlauen Fuchses geboren wurden, besitzen oft einen raschen Verstand und einen ausgeprägten Sinn für Humor. Sie lieben die Freiheit und beugen sich nur äußerst widerwillig Gesetzen oder Regeln. Wenn sie sich eingeschränkt fühlen, neigen sie oft zur Launigkeit und manchmal zur Aggression, sodass man lieber nicht ihre Ungunst erregen sollte. Füchse werden ihre Ideale verteidigen und versuchen, ihre Ziele zu erreichen, auch wenn dies bedeutet, Gesetze zu brechen oder den Regeln der Gesellschaft zu widersprechen. Wahre Wüstlinge sind oft im Ronas geboren, ebenso wie manche Avantgardekünstler und Narren, die die Grenzen des Geschmacks austesten. Es wird oft spekuliert, dass Don Valerio Guiliani von Galmair im Monat Ronas geboren wurde, aber vielleicht wurde dieses Gerücht nur in Umlauf gebracht, um zu verbergen, dass er in Wirklichkeit ein wunderschöner Schmetterling ist.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>humorvoll</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>launisch, manchmal aggressiv</p>
 </div>
 <?php include_short_footer(); ?>

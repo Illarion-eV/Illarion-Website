@@ -10,18 +10,7 @@
 
 	<h2>Monat: Siros</h2>
 
-	<b>Beschreibung:</b>
-	<p>Schon von weiten strahlt einem die sympathische Aura dieser Personen entgegen.
-	Sie besitzen sehr viel Charme und Anziehungskraft vor allem auf das andere
-	Geschlecht. Sie lieben schöne Feste und genießn das Leben in vollen Zügen. Selten
-	greifen sie zur Waffe, sondern suchen viel mehr nach Harmonie und Einklang.</p>
+<p>Die liebenswürdige Aura der wunderschönen Schmetterlinge strahlt aus der Ferne. Die im Monat Siros Geborenen besitzen für gewöhnlich viel Charm und üben eine große Anziehung aus, besonders auf das andere Geschlecht. Sie lieben schöne Feste, genießen die Freiheit und kosten das Leben in vollen Zügen aus. Sich ihrer eigenen Attraktivität bewusst, können sie oft den Eindruck erwecken, arrogant zu sein, machen dies aber für gewöhnlich durch ihre Liebenswürdigkeit wieder wett. Sie greifen nur äußert selten zur Waffe und ziehen Harmonie und Einigkeit vor. Aber selbst Schmetterlinge können wütend werden, wenn man beispielsweise ihre Freiheiten einschränkt und sie davon abhält, sich frei zu bewegen, denn sie besitzen eine große Freiheitsliebe. Jemand, der unter dem Zeichen des Schmetterlings geboren ist und emotional sowie launisch ist, kann schnell weniger berechenbar werden und mit unüberlegten und unbegründeten Ausbrüchen reagieren.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>freundlich, sympathisch, freiheitsliebend</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>manchmal unvernünftig oder hochnäsig</p>
 </div>
 <?php include_short_footer(); ?>
