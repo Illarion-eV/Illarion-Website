@@ -7,27 +7,9 @@
 
 	<h2>Month of Harvest</h2>
 
-	<p>Olos was named after Oldra, the goddess of fertility and farming. In Albar and
-	Salkamar, the 24th Olos is celebrated as a thanksgiving day. It is a widely known
-	celebration day which is celebrated by many people and races with much devotion. An
-	exception is the lizard people. their traditions and culture know little of farming
-	and the harvesting of field crops. Lizardmen settlements usually ignore this day,
-	but it often happens that lizards join the festivities when they visit places far
-	from their homelands around this time.</p>
+<p>Olos, the month of harvest, was named after Oldra and all across Illarion, the 24th Olos is celebrated as a thanksgiving day. It is a widely known as a day of festivities amongst all the races except for the lizards who have little knowledge of farming and the harvesting of crops in their traditions and culture. Lizard settlements usually ignore this day, but many a lizard has joined the celebrations when travelling from their homelands. The priests of Oldra pronounced this day in Olos, as a blessing from the goddess herself but in all liklihood the weather conditions, and therefore the harvest season, define the date.</p>
 
-	<p>The priests of Oldra set the date of this day within the month of Olos, which is,
-	in their opinion, a day which is blessed by the goddess, but people also say that
-	weather and temperature conditions (and with this, the end of the harvest season)
-	are a main reason in setting the date. There are some local differences in how the
-	festivities are celebrated, but they are usually done with processions, and then
-	religious speeches and grain or fruit sacrifices, which then end with a big feast
-	in the evenings. Especially in poorer settlements, this day is looked forward to
-	because this is one of the few days that brings nourishment in satisfying amounts.
-	</p>
+<p>There are some local differences in how the festivities are celebrated, but they are usually done with processions, followed by religious speeches and grain or fruit sacrifices. These acts of thankfulness end with a big feast in the evenings. In poor settlements especially, this day is looked forward to because it is one of the few days that brings nourishment in satisfying amounts. These traditions are frowned upon in Albar, the origin of Cadomyr's ruling family, since the worshipping of Oldra and any other female deity has been forbidden for over five hundred years. A thanksgiving feast is tolerated but it is forbidden to say or express the name "Oldra" in any form. In Cadomyr, celebrations are not prohibited but as farming is doomed to fail in the desert realm, little recognition is given to the the festival.</p>
 
-	<p>This tradition is frowned upon in Albar, since the worshipping of Oldra (who is a
-	female goddess) is forbidden since about five hundred years. However, the
-	thanksgiving feast is allowed, even though it is forbidden to say or express the
-	name "Oldra" in any form.</p>
 </div>
 <?php include_short_footer(); ?>

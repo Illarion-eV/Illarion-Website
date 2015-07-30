@@ -7,28 +7,9 @@
 
 	<h2>Month of Abstinence</h2>
 
-	<p>Eldas was named after the creator god Eldan</p>
+<p>Eldas was named after the creator god Eldan. This month is in all cultures a month of peace and comtemplation. People reminisce about things that life gave them and remember the less fortunate in their prayers. The more devout mark the month of abstinence to abstain from their beloved or some favourite item they possess in order to remember the worth of all during this time of Eldas.</p>
 
-	<p>This month is in all cultures a month of peace and comtemplation. People
-	recollect on the things the live gave them and commemorate to the people who has
-	less luck then they. Its not unusal to abstain from a beloved or inured thing to
-	remember its worth during the time of Eldas.</p>
+<p>The Halflings of Yewdale celebrate the last week of Eldas with the so-called "Burrow Days", remembering the resistance at the time of the fall of Firnismill. Traditionally they withdraw into the woods for the entire week and spend the nights in self-made burrows or hollows, only eating fruits of the forest as no fire is allowed. At the end of the week they return in an armed procession to their village creating a great clamour, thus symbolising the recapture of the areas seized by the orcs. More modern halflings that live in towns, along with the upper class of the race, modify this practice by erecting tents in their gardens or maybe an inner courtyard of their house. Sometimes even a meat dish may be served, yet care is made to elaborately decorate it with fruits and mushrooms.</p>
 
-	<p>Halflings celebrated in the last week of Eldas the "Burrow Day". It bears in
-	remembrance the deprivations of the resistance at the time of the fall of Firnismill
-	(-1777).</p>
-
-	<p>Especially in the countryside many Halflings do still celebrate these days in a
-	quite traditional way. For the whole week they withdraw into the woods and spend the
-	nights in self-made burrows or hollows. In this week they only feed upon the fruits
-	of the forest. No fire is allowed to be lit.</p>
-
-	<p>At the end of the week they return in a procession into their villages. Thereby a
-	great clamor and noise is performed and the participants of the procession are
-	armed, thus symbolizing the recapture of the areas sized by the Orcs. Nowadays in
-	the towns and with Halflings of the upper class it has become common practice to
-	stay this week in tents erected in the garden or the inner courtyard of their
-	houses. There sometimes even meat dishes are served but they are decorated in the
-	form of fruits and mushrooms.</p>
 </div>
 <?php include_short_footer(); ?>
