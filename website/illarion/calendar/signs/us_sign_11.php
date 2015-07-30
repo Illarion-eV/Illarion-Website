@@ -10,17 +10,7 @@
 
 	<h2>Month: Findos</h2>
 
-	<b>Meaning</b>
-	<p>The Falcons are full of bold beauty and attract alot of onlookers. They love
-	music, painting, and other arts. Many various wishes slumber under their thin shell
-	of reason.</p>
+<p>Falcons are full of bold beauty and attract a lot of spectators. They are creative and inventive with obvious flair. Artistically talented, they love music, painting, and other arts. Many varied wishes slumber under their thin shell of reason and as a result they may seem flighty. An elegant Falcon tends to be very curious and sometimes impertinent - they can afford to be. They might be fickle, but one thing they will never be is boring.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Artistically talented, inventive</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Very curious and sometimes fickle</p>
 </div>
 <?php include_short_footer(); ?>

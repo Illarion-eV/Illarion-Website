@@ -10,17 +10,7 @@
 
 	<h2>Month: Olos</h2>
 
-	<b>Meaning</b>
-	<p>Especially lovable are the Doves. Their mothering and empathetic nature causes
-	many people to share their troubles with them. They love to watch things grow, are
-	full of vitality, and steadfast as well as dignified.</p>
+<p>Especially lovable are the compassionate Doves. Their mothering and empathetic nature entices many people to share their troubles with them. They love to watch things grow, are full of vitality, and steadfast as well as dignified. A Dove will share all they have with those who are in need, but their naivety can also leave them vulnerable to exploitation. With all the good will in the world, nevertheless, a lack of critical self awareness leads some Doves to become stiflingly overbearing when offering advice and sometimes it might be best to remain silent to allow others to grow and make their own mistakes in life.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Wise, like to share, helpful, good listeners </p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Naive, can behave like know-it-alls</p>
 </div>
 <?php include_short_footer(); ?>

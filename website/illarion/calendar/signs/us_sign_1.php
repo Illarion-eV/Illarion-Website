@@ -10,16 +10,7 @@
 
 	<h2>Month: Elos</h2>
 
-	<b>Meaning</b>
-	<p>Helpfulness and humility are a special characteristic of Hinds. As well as they
-	are oftenly withdrawn, they are likely to seek solitude.</p>
+<p>Helpfulness and humility are a special characteristic of the wise Hinds. Although friendly to most who encounter them they are commonly shy and are likely to seek solitude, living quiet and secluded lives. Hinds gather wisdom by being very thoughtful people, carefully considering their actions and those of others. Despite their wisdom, however, it is not in their nature to be decisive and sometimes the Hind might agonise over the implications of the smallest of decisions for days.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Wise, helpful, friendly</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Oftenly undecided</p>
 </div>
 <?php include_short_footer(); ?>
