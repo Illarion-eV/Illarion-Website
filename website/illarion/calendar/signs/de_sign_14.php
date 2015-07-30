@@ -10,17 +10,7 @@
 
 	<h2>Monat: Naras</h2>
 
-	<b>Beschreibung:</b>
-	<p>Diese chaotische Personen lieben Glückspiele und haben einen eigenwilligen Humor.
-	Man kann sie schlecht einschätzen und sie stellen sich sehr gerne in den
-	Mittelpunkt.</p>
+<p>Chaotische Menschen, die im Monat Naras geboren sind, haben eine Schwäche für Glücksspiel und besitzen oft einen ungewöhnlichen Sinn für Humor. Sie sind schwer einzuschätzen und es ist fast unmöglich, ihren nächsten Schritt einzuschätzen, abgesehen davon, dass sie es lieben, sich in den Mittelpunkt der Aufmerksamkeit zu stellen. Ihr Humor ist ausgeglichen und sie tendieren dazu, die Gesellschaft anderer zu genießen, aber soziale Raben sind dafür bekannt, schlecht organisiert und störend zu sein. Auf Grund ihrer Neigung anderen Streiche zu spielen und diejenigen öffentlich bloszustellen, die sie verärgern, mögen andere sich nicht so wohl in ihrer Umgebung fühlen. Raben sind als Teilnehmer an Turnieren oft arrogant und gewinnen mit unfairen Mitteln, feiern ihren Sieg jedoch garantiert ausgiebig und mit allen Zuschauern.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>humorvoll, gesellig</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>chaotisch, unberechenbar, arrogant, hinterlistig</p>
 </div>
 <?php include_short_footer(); ?>

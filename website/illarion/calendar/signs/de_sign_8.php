@@ -10,18 +10,7 @@
 
 	<h2>Monat: Eldas</h2>
 
-	<b>Beschreibung:</b>
-	<p>Personen dieses Zeichens wirken eher unscheinbar. Sie sind vernünftig, lieben
-	Bücher und gehen jeglicher Aggression aus dem Weg. Ihre große Diskretion hält sie
-	davon ab sich in das Leben anderer einzumischen. Sie hassen große Menschenmassen und
-	würden sich niemals in den Vordergrund drängeln.</p>
+<p>Leute die unter diesem Zeichen geboren wurden erscheinen recht harmlos. Sie sind vernünftig, lieben Bücher und vermeiden jedwede Aggression. Ihre erhebliche Diskretion hält sie davon ab, sich in die Leben Anderer einzumischen, selbst dann, wenn ihre Ansichten von großem Nutzen sein könnten. Besonnene Eulen sind oft ausweichend und würden sich niemals selbst in den Vordergrund rücken. Kultivierte Personen können unter diesem Zeichen geboren sein und sind oft introvertiert, lernen im Stillen und vermeiden große Ansammlungen von Leuten.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>sehr gebildet, vernünftig</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>ungesellig, sehr introvertiert</p>
 </div>
 <?php include_short_footer(); ?>
