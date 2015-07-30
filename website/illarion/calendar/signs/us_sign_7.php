@@ -10,17 +10,7 @@
 
 	<h2>Month: Bras</h2>
 
-	<b>Meaning</b>
-	<p>Those who are born under the sign of the Dragon have a fiery temper. They are
-	ambitious and intelligent. They usually reach highly-staked goals with ease, and
-	thus tend to challenge their destiny too much.</p>
+<p>Those who are born under the sign of the Dragon have a fiery temper and can be prone to rages. They are ambitious and intelligent. They usually achieve aspiring goals with ease, thus are prone to challenge their destiny too much. Their sense for justice and passion makes them good leaders. Noble Dragons tend to be commanding and impulsive, but with their elegance and grace, it is easy to fall for their charisma. It is no secret that Queen Rosaline Edwards of Cadomyr is a truly noble Dragon, born of the month of Brágon.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Possess a distinct sense for justice, passionate, strong, noble </p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Tend to be commanding, sometimes too impulsive</p>
 </div>
 <?php include_short_footer(); ?>
