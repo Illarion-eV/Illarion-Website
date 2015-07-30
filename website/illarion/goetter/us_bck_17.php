@@ -33,7 +33,7 @@ And their light will shine like a thousand suns to defy the darkness.<br>
 In the glistening brightness which they ignite, he may burn,<br> 
 lest his traces will be extinguished from the earth."</i></p>
 
-<h2>Sign of the Zodiac - The Wise Hind</h2>
+<h2>Sign of the Zodiac - The wise Hind</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_1.gif" alt="The Wise Hind"/>
 

@@ -23,7 +23,7 @@
 
 <p>There are some local differences in how the festivities are celebrated, but they are usually done with processions, followed by religious speeches and grain or fruit sacrifices. These acts of thankfulness end with a big feast in the evenings. In poor settlements especially, this day is looked forward to because it is one of the few days that brings nourishment in satisfying amounts. These traditions are frowned upon in Albar, the origin of Cadomyr's ruling family, since the worshipping of Oldra and any other female deity has been forbidden for over five hundred years. A thanksgiving feast is tolerated but it is forbidden to say or express the name "Oldra" in any form. In Cadomyr, celebrations are not prohibited but as farming is doomed to fail in the desert realm, little recognition is given to the the festival.</p>
 
-<h2>Sign of the Zodiac - The Lovable Dove</h2>
+<h2>Sign of the Zodiac - The lovable Dove</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_12.png" alt="The Lovable Dove"/>
 

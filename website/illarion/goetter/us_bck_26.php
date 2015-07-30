@@ -28,7 +28,7 @@
 
 <p>In other races this feast has the more symbolic tradition of sacrificing a small animal, usually a chicken or rabbit, without many words. This is done in an attempt to calm Moshran, preventing wars and other bad luck. Usually there is no prayer, just a silent gesture. After the sacrifice, the people stay in their homes and hope that the Mas passes quickly without incident, so they can welcome a new year in.</p>
 
-<h2>Sign of the Zodiac - The Tactical Wyvern </h2>
+<h2>Sign of the Zodiac - The tactical Wyvern </h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_16.png" alt="The Tactical Wyvern "/>
 

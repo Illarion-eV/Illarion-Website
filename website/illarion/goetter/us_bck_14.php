@@ -22,7 +22,7 @@
 
 <p>The second month of spring is named after the creator goddess Tanora, who is supposed to be identical with the water-goddess "Zelphia" of the lizard people. Known as the month of floods, as the winter snows melt and rain falls the rivers surge with bountiful waters bringing life to parched soils and plentiful fish. Even in the coldest lands the last of the sea ice melts to open routes cut off for the winter, allowing ships to sail again and distant coasts to thrive. A harbour feast is held to celebrate in many coastal towns such as Runewick.</p>
 
-<h2>Sign of the Zodiac - The Dreaming Dolphin</h2>
+<h2>Sign of the Zodiac - The dreaming Dolphin</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_2.png" alt="The Dreaming Dolphin"/>
 
