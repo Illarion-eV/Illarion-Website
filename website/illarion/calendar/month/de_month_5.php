@@ -7,69 +7,11 @@
 
 	<h2>Monat der Liebe</h2>
 
-	<p>Der Monat "Siros" ist nach Sirani benannt, der in Salkamar, Gynk und bei den
-	Serinjah bekannten Göttin der Liebe. Alle bekannten Kulturen feiern im Siros Treue-
-	oder Bindungsfeste. Diese, meist ausgelassenen Volksfeste, geben jungen Paaren die
-	Möglichkeit zu einem öffentlichen Eheversprechen. Es gibt kein genaues Datum für
-	dieses Fest, doch meist wird es um den 12. Siros abgehalten. Häufig sprechen sich
-	auch benachbarte Dörfer ab, um die Feste an unterschiedlichen Tagen im jeweiligen
-	Dorf abzuhalten.</p>
+<p>Der Monat Siros ist nach Sirani benannt, der Göttin der Liebe, die weithin von allen Rassen gefeiert wird. Alle bekannten Kulturen haben Loyalitäts- und Vereinigungsrituale während des Monat Siros und Sirani ist und bleibt sehr populär in Salkamar, Gynk und auch unter den Serinjah. Zumeist jubilante Jahrmärkte oder Tanzfeste, ist jungen Paaren hier die Möglichkeit gegeben, sich zu treffen und womöglich ihre Ehegelübde abzulegen. Es gibt kein genaues Datum für diese Zelebration, jedoch findet sie meistens um den 12. Siros statt. Oft arrangieren die örtlichen Herrscher es so, dass an jedem Tag in einem anderen Dorf ein Fest stattfindet.</p>
 
-	<p>Obwohl alle Völker diese Feierlichkeiten zelebrieren unterscheiden sie sich doch
-	nach Volk und Region:</p>
+<p>Obwohl alle feiern, gibt es zwischen den einzelnen Rassen und Religionen Unterschiede. In elfischer Tradition, bringt der männliche Anwärter Zweige des Mevrannobaumes am Eingang des Hauses seiner Angebeteten an. Der Mevrannobaum lebt in Symbiose mit der Kletterpflanze Levrenni, die sich um Bäume schlingt, wenn diese noch jung sind und wunderschön blühen; alleine kann keine der beiden Pflanzen gedeihen. Wenn die Kandidatin Interesse hat, bindet sie einen Stängel der Levrennipflanze um den Ast des Mevrannobaumes. Unter den Halblingen sind es die Damen, die den ersten Schritt wagen, indem sie einen Kranz aus Blumen auf das Haupt ihres Geliebten legen. Wenn der Mann den Kranz nicht ablegt, gilt das Angebot als angenommen. Menschliche Traditionen sind weitaus komplizierter und sehr viel unterschiedlicher unter den einzelnen Kulturen und oft kein echtes Angebot, als viel mehr ein Ausdruck der Liebe. Dinge, die in einem Dorf als ehrhaft und liebenswert gelten, mögen in einem anderen als überaus beleidigend angesehen werden. Am gebräuchlichsten ist es, dass der Mann seine Angebetete um einen Tanz bittet, aber nicht alle Tänze sind für die Liebe. Sollte die Frau sich zu einem Mann hingezogen fühlen, gibt sie ihm als traditionelles Zeichen ihres Interesses eine Schleife, welche ihr zuvor in ihr Haar geflochten worden war. Wenn der Mann die Schleife um seinen Arm bindet, signalisiert er damit, dass er ihre Gefühle erwidert.</p>
 
-	<p>Bei den Elfen liegt die Initiative zumeist bei den Männern, welche am Hauseingang
-	ihrer Geliebten in der Zeit des Festes Zweige des Mevrannonbaums anbringen. Dieser
-	Baum lebt in Symbiose mit einer anderen Pflanze mit Namen Levrenni. Levrenni sind
-	blühende Kletterpflanzen, die schon in der frühen Wachstumsphase beginnen an dem
-	Stamm des Baumes emporzuwachsen. Eine Pflanze kann dabei ohne die andere nur für
-	relativ kurze Zeit überleben. Wird das Ansinnen des Mannes von der Frau erhört, so
-	flechtet sie eine Levrenniranke um den dargebotenen Ast des Mevrannon.</p>
+<p>Orks sind bekannt für ihre etwas rauere Art, ihrer Liebe Ausdruck zu verleihen. Nach ihrer Tradition, sucht der Mann gemeinsam mit einem Freund das Haus seiner Angebeteten auf und entführt sie. Da die Entführung sehr rituell abläuft, gibt es für gewöhnlich auf keiner der beiden Seiten Verletzungen, außer wenn die Frau ihren Verehrer bereits zuvor abgelehnt hatte. Für gewöhnlich wird die Entführte sofort zum Haus des Mannes gebracht, während ihre Familie sich draußen versammelt, um sie zu "retten". Wenn die Orkin die Türe öffnet und ihre Familie bittet einzutreten, ehe diese das Haus stürmt, gilt der Heiratsantrag als angenommen. Unter den Echsenmenschen wird die Ehe für gewöhnlich von den Eltern arrangiert und die Kinder haben dabei keinerlei Mitspracherecht. Dadurch ist es durchaus nicht ungewöhnlich, dass das Brautpaar sich am Tage des Fests zum ersten Mal trifft. Die Eltern machen ihre Pläne vor den Festivitäten und dann trifft sich das Paar im Haus des Mannes, ehe alle gemeinsam zum Tempel gehen, wo das Brautpaar vor einem Priester das Gelübde ablegt. Im Falle der Zwerge spielt der Schmied eine wichtige spirituelle Rolle bei der Zeremonie, die über das bloße Schmieden der Ringe hinausgeht. Ein Paar, welches heiraten möchte, wird von einem Schmied "verbunden", der zwei Ringe aus demselben Stück Metall schmiedet, die sich zu einem verbinden, wenn man sie zusammenführt. Traditionell werden diese Ringe über dem Ehebett des Paares angebracht und symbolisieren fortan ihre Verbundenheit und die Stärke, die ihre Vereinigung bringt.</p>
 
-	<p>Bei den Halblingen werden in der Regel die Frauen aktiv. Am Tag des Festes
-	schmücken sie den Kopf ihres Geliebten mit einem Blumenkranz. Wenn der Mann den
-	Blumenkranz auf seinem Kopf behält, gilt das Angebot als angenommen.</p>
-
-	<p>Die menschliche Tradition ist hier relativ vage und unbestimmt. Dies mag auch
-	daran liegen, dass die Menschen mit dieser Thematik sehr offen und auch ungezwungen
-	umgehen. In dem Sinne sind diese Traditionen zumeist keine bindenden Eheversprechen
-	sondern eher ein Ausdruck der offenen Zuneigung. Doch gibt es auch hier sehr große
-	lokale Unterschiede und was in dem einen Dorf als angemessen und sittsam erscheint,
-	mag anderswo als tödliche Beleidigung oder Entehrung aufgenommen werden. Am
-	weitesten verbreitet ist aber das Vorgehen, auf der zentralen Feier den oder die
-	Angebetete zum Tanz aufzufordern. Sollte es sich mehr als um ein reines
-	Tanzvergnügen handeln, übergibt die Frau dem Mann ein buntes Band, welches zu
-	diesem Zweck in das Haar der Frau geflochten war. Diese Band gilt traditionell als
-	Zeichen der Zuneigung. Wenn sich der Mann das Band um den rechten Arm bindet, gilt
-	die Zuneigung als erwidert.</p>
-
-	<p>Die Orks haben in der Sicht der anderen Völker eine recht rüde Methode ihre
-	Zuneigung auszudrücken. In ihrer Tradition begibt sich der Freier zusammen mit
-	Freunden heimlich zum Haus der Geliebten und unternimmt eine Art Brautraub. Dieser
-	Raubzug ist in gewisser Weise ritualisiert, so daß es in der Regel dabei nicht zu
-	Verletzungen kommt. Dennoch ist es manchmal auch hier sogar zu Todesfällen gekommen,
-	insbesondere dann, wenn im Vorfeld ablehnende Signale der Frau missachtet wurden.
-	Generell wird die Frau umgehend in das Haus des Mannes geführt. Die Familie der
-	Frau unternimmt eine Befreiungsaktion. Man versammelt sich dazu vor dem Haus des
-	Mannes. Wenn vor der Erstürmung die "Entführte" die Tür des Hauses öffnet und ihre
-	Familienangehörige hereinbittet, gilt das Angebot als angenommen.</p>
-
-	<p>Echsenmenschen bilden dahingehend eine Ausnahme, dass Ehen in fast ausschließlich
-	allen Fällen von den Eltern arrangiert werden und den Kindern kein Mitspracherecht
-	eingeräumt wird. So ist es auch nicht unüblich, dass sich das Paar zum ersten Mal
-	am Fest der Bindung kennen lernt. Im Vorfeld der Feier werden von den Eltern die
-	entsprechenden Arrangements getroffen. Man trifft sich dann im Haus des angehenden
-	Bräutigams und begibt sich zusammen in den Tempel. Dort wird vor dem Priester das
-	Eheversprechen ausgesprochen.</p>
-
-	<p>Bei den Zwergen kommt dem Dorfschmied eine zentrale Bedeutung in der Anbahnung
-	und Schließung von Ehen zu. Schmied zu sein bedeutet nicht nur ein Handwerk
-	auszuüben, sondern ihre Tätigkeit ist in hohem Maße spirituell und religiös.
-	Schmiede sind in der Lage haltbare Verbindung von unterschiedlichen Materialien
-	herzustellen und auch magische Waffen zu erschaffen. Ein Paar, welches ihren Willen
-	auch füreinander zu leben erklärte, verband der Schmied symbolisch mit zwei
-	ineinander geschmiedeten Eisenringen; jeder Ring für sich existent und doch eng
-	umschlungen. So soll es den Charakter und die Dauerhaftigkeit der Verbindung
-	repäsentieren und wurde daher über dem gemeinsamen Bett aufgehängt.</p>
 </div>
 <?php include_short_footer(); ?>

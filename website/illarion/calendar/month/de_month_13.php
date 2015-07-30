@@ -7,19 +7,7 @@
 
 	<h2>Monat der Trunkenheit</h2>
 
-	<p>Nach Adron, dem Gott des Weines und des Feierns, wurde der Adras benannt. In Gynk
-	wird vom dritten bis zum siebten Adras ein Tavernenfest gefeiert und in vielen
-	salkamaerischen Dörfern und Städten werden über den ganzen Adras verteilt
-	Winzerfeste abgehalten. Selbst in Albar gibt es vom siebzehnten bis zum neunzehnten
-	Adras ein Weinfest, an dem alle Bürger - auch Leibeigene - gesetzlich
-	festgelegt das Recht dazu haben, sich mit Wein betrinken zu dürfen, welcher
-	ansonsten nur dem Adel vorbehalten ist.</p>
+<p>Adras, der Monat der Trunkenheit, wurde nach dem Gott des Feierns und des Weins Adron benannt. Ein Wirtshausfest wird zwischen dem 3. und 7. Adras in Galmair gefeiert und in vielen Dörfern in ganz Illarion werden Jahrgangsfeste gefeiert. Sogar in Cadomyr wird vom 17. bis 19. Adras ein Weinfest gefeiert, während dessen alle Bürger, sogar die Leibeigenen und Bürgen Wein trinken und sogar betrunken sein dürfen, etwas, das normalerweise der Oberschicht vorbehalten ist. Im ländlichen Albar verteilen Adelige während dieser Tage traditionell in den Tavernen kostenlos billigen Wein. Eine Geschichte erzählt davon, wie einst ein gieriger Graf diesen Wein für die Armen verwässerte und dafür von Adrons Fluch getroffen wurde. Jeder Tropfen Wein, der seine Lippen berührte, verwandelte sich fortan in Wasser, bis er seine Strafe für seine mangelnde Großzügigkeit zehnfach abgeleistet hatte.</p>
 
-	<p>Einige albarische Adelige in ländlicheren Gegenden veranlassen sogar, daß an
-	diesen Tagen in den Tavernen kostenlos billiger Wein ausgeschenkt wird. Es heißt,
-	daß einst ein sehr geiziger Graf den ausgeschenkten Wein mit Wasser mischen ließ,
-	und daß ihn daraufhin der Fluch Adrons getroffen habe. Seither verwandelte sich
-	jeder Tropfen Wein, den seine Lippen berührten in Wasser, bis er seinen Fehler
-	zehnmal wiedergutgemacht hatte.</p>
 </div>
 <?php include_short_footer(); ?>
