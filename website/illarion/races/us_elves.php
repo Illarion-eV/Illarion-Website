@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="male elf"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="female elf"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="male elf"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="female elf"/></td></tr></table>
 <?php cap(E); ?>
 <p>lves are a mysterious race of which information is difficult to obtain. They try to avoid attracting attention and very few
 have ever had the opportunity to gain a deeper insight into their society and their peculiar way of life. Therefore most of the

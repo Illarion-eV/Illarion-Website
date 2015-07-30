@@ -25,25 +25,25 @@
 <table class="center">
 <tr>
 <td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="male human"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="female human"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="male elf"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="female elf"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="male halfling"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="female halfling"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="male dwarf"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="female dwarf"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="male orc"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="female orc"/></td>
-<td> </td>
+<td> </td>
 <td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="lizard"/></td>
 </tr>
 </table>

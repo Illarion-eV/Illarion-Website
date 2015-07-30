@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="male human"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="female human"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="male human"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="female human"/></td></tr></table>
 <?php cap(H); ?>
 <p>umans remember few of their own history. A reason may be the facts that humans even lead wars against other human cities
 (which resulted in the destruction of much knowledge), and only the richer or educated human societies or people teach their

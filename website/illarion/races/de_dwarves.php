@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="männlicher Zwerg"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="weiblicher Zwerg"/></td></tr></table>
+<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="männlicher Zwerg"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="weiblicher Zwerg"/></td></tr></table>
 <?php cap(D); ?>
 <p>ie Zwerge sind eine altes Volk. Gemäß den Geschichtsbüchern waren Sie das dritte Volk, welches ein eigenständiges
 Schriftbild entwarf. Zu Beginn basierte es noch auf Piktogrammen – eine einfache und leicht zu gravierende Darstellung
