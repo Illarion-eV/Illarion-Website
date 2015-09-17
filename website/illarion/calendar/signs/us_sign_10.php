@@ -10,17 +10,7 @@
 
 	<h2>Month: Malas</h2>
 
-	<b>Meaning</b>
-	<p>Those born in the month of Malas are honorful and oftenly value the good fight.
-	They are always daring, dignified, and helpful. It is seldom for them to rest. They
-	are compliant but at the same time noble and see a wide horizon.</p>
+<p>Those born in the month of Malas are honourable and greatly value a good fight. Brave Wolves are always daring, dignified, and helpful. It is seldom for them to rest and they work well with others striving for the same goal. They are compliant and readily follow orders but also possess a certain noble quality with broad perspectives of a wide horizon. With high morale and an infectious fighting spirit, determined Wolves are powerful leaders of their pack. Often, however, they can become stubborn and sometimes snap with a ferocious temper. Many captains and generals are known to be born in Malas.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Honorful, possess fighting spirit, determined </p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Oftenly stubborn, sometimes fizz up</p>
 </div>
 <?php include_short_footer(); ?>

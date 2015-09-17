@@ -10,7 +10,7 @@
 
 	<h2>Monat: Irmas</h2>
 
-<p>Die unter dem Zeichen des Steinbocks geborenen, sind Meister des Feilschens und meistens erfolgreiche Händler oder Handwerker. Materielle Güter und Reichtum sind ihnen wichtig und alles hat einen bestimmten Wert. Sie reden gerne und sind in Gesellschaft, was sie zu wunderbaren Gesprächspartnern in jeglicher Gegenwart macht. Durch das Feilschen einiger fröhlicher Steinböcke wird ein düsteres Wirtshaus schnell zu einer lebhaften, blühenden Einrichtung. Sie können impulsiv und ungeduldig sein, sind aber nur selten unfair und legen Wert auf gutes Feilschen. Dennoch sind sie von Natur aus geizig, also sollte man nicht erwarten, dass das Feilschen zu eigenen Gunsten endet, es sei denn, ihre ungestüme Persönlichkeit verleitet sie zu einem seltenen, schlechten Geschäft.</p>
+<p>Die unter dem Zeichen des Steinbocks Geborenen sind Meister des Feilschens und meistens erfolgreiche Händler oder Handwerker. Materielle Güter und Reichtum sind ihnen wichtig und alles hat einen bestimmten Wert. Sie reden gerne und sind gesellig, was sie zu wunderbaren Gesprächspartnern in jeglicher Gesellschaft macht. Durch das Feilschen einiger fröhlicher Steinböcke wird ein düsteres Wirtshaus schnell zu einer lebhaften, blühenden Einrichtung. Sie können impulsiv und ungeduldig sein, sind aber nur selten unfair und legen Wert auf gutes Feilschen. Dennoch sind sie von Natur aus geizig, also sollte man nicht erwarten, dass das Feilschen zu eigenen Gunsten endet, es sei denn, ihre ungestüme Persönlichkeit verleitet sie zu einem seltenen, schlechten Geschäft.</p>
 	
 </div>
 <?php include_short_footer(); ?>

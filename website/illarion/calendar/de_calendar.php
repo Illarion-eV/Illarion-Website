@@ -15,7 +15,7 @@ $illa_year=illa_date('y');
 $illa_today=illa_date('d');
 $illa_month=illa_date('m');
     // Monatsnamen und beschreibung
-    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Bras","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
+    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Brás","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
     $monate_desc=array("Monat der<br/> Magie","Monat der<br/> Fluten","Monat der<br/> Treue","Monat der<br/> Aussaat","Monat der<br/> Liebe","Monat der Freigiebigkeit","Monat der<br/> Opferung","Monat des<br/> Fastens","Monat des<br/> Handwerks","Monat des<br/> J&auml;gers","Monat der<br/> bildenden K&uuml;nste","Monat der<br/> Ernte","Monat der<br/> Trunkenheit","Monat der<br/> vier Winde","Monat des<br/> Gedenkens","Monat des<br/> Blutes");
 ?>
 

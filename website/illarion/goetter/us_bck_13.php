@@ -22,7 +22,7 @@
 
 <p>The Halflings of Yewdale celebrate the last week of Eldas with the so-called "Burrow Days", remembering the resistance at the time of the fall of Firnismill. Traditionally they withdraw into the woods for the entire week and spend the nights in self-made burrows or hollows, only eating fruits of the forest as no fire is allowed. At the end of the week they return in an armed procession to their village creating a great clamour, thus symbolising the recapture of the areas seized by the orcs. More modern halflings that live in towns, along with the upper class of the race, modify this practice by erecting tents in their gardens or maybe an inner courtyard of their house. Sometimes even a meat dish may be served, yet care is made to elaborately decorate it with fruits and mushrooms.</p>
 
-<h2>Sign of the Zodiac - The Prudent Owl</h2>
+<h2>Sign of the Zodiac - The prudent Owl</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_8.gif" alt="The Consistent Bear"/>
 

@@ -27,7 +27,7 @@
 
 <p>Orcs are known for a somewhat rougher expression of their affection. Following their tradition the male secretly visits the house of the orcess with his comrades and "steals" her. This thievery is ritualistic so that there are usually no injuries received on each side, unless the orcess has previously rejected her suitor. Generally the female is brought immediately to the male's house, whilst her family gather outside to try to "save" her. If the "kidnapped" orcess opens the door and asks the family to come inside before the house is stormed the marriage offer is accepted. In lizard culture most weddings are arranged by the parents and the children are no voice so it is not unheard of for the festival to be the first time the couple meets. Parents make their agreements before the celebration and then the couple meet at the male's house before everyone proceeds to the temple to witness the marriage vows in front of a priest. In case of the dwarves, the local smith has an important spiritual role in the ceremony beyond the simple crafting of rings. A couple that wants to marry is "linked" by the smith who crafts two rings, forged from the same piece of metal, that interlink to form one when put together. Traditionally these rings are hung above the couple's bed, signifying their linkage and the strength their union brings.</p>
 
-<h2>Sign of the Zodiac - The Beautiful Butterfly</h2>
+<h2>Sign of the Zodiac - The beautiful Butterfly</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_5.png" alt="The Beautiful Butterfly"/>
 

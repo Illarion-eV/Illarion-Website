@@ -20,7 +20,7 @@
 
 <p>Findos is when the early harvest starts and at this time of year the fields around Runewick and Galmair are a hive of activity. As the peasants are busy working during Findos, few festivities are known at this time of the year. Findari is fine with that, as freedom from recurrent obligations matters more to her than being worshipped. Also know as the month of fine arts, many an entertainer finds this time free from the rigidity of official performances allows their creative spirit to flow and many a masterpiece originates during Findos.</p>
 
-<h2>Sign of the Zodiac - The Elegant Falcon</h2>
+<h2>Sign of the Zodiac - The elegant Falcon</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_11.gif" alt="The Elegant Falcon"/>
 

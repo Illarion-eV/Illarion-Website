@@ -22,7 +22,7 @@
 
 <p>The month of Malas was named after Malachín, god of hunting and honourable battles. Orcs are known to depart from civilised places such as Cadomyr or Galmair during Malas and gather at their ritual places. Orcish shamans initiate dances, recalling old tribal customs of the orcs. Also, in the plains far away from Illarion, the descendants of the Serinjah people hold huge gatherings of all tribes, starting on the 4th Malas and continuing over twenty days.</p>
 
-<h2>Sign of the Zodiac - The Brave Wolf</h2>
+<h2>Sign of the Zodiac - The brave Wolf</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_10.png" alt="The Brave Wolf"/>
 

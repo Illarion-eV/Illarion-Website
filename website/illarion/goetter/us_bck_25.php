@@ -22,7 +22,7 @@
 
 <p>Ronas, the second month of summer was named after Ronagan. Although Ronagan is known as the god of shadows, secrecy and thieves throughout much of Albar, Gynk and Salkamar, Ronas is recognised by many as the month of generosity. The plains folk of the Serinjah know Ronagan as god of freedom, fishermen and hunters, but also as god of secrecy and trickery. It is rumoured that there are frequent secret meetings of self-proclaimed Ronagan followers, or thief guilds, in Galmair during Ronas. This rumour remains unproven but has been told for decades, again and again.</p>
 
-<h2>Sign of the Zodiac - The Artful Fox</h2>
+<h2>Sign of the Zodiac - The artful Fox</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_6.png" alt="The Artful Fox"/>
 

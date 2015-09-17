@@ -10,17 +10,7 @@
 
 	<h2>Month: Chos</h2>
 
-	<b>Meaning</b>
-	<p>The people born under this sign seem cool and proud. They draw attention to
-	themselves with their dignity, sophisticated appearance, and earnestness. However,
-	should one enrage them, one would be advised to seek one's own safety.</p>
-
-	<br />
-	<b>Positive characteristics</b>
-	<p>Highly just, mostly of cool appearance</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Too serious</p>
+	<p>Those born under the sign of the serious Bat seem calm and proud, perhaps even aloof at times with their cool exterior. They draw attention to themselves with their dignity, sophisticated appearance, and earnestness. Bats are often highly honourable and are strong upholders justice without any tendancy towards tenderhearted mercy. Should one enrage a Bat, one would be advised to seek protection with some urgency for their own safety. It is rare to see any Bat cracking a joke or barely breaking a smile as everything to them is deadly serious. Town guards and judges are typically born in Chos, but equally some less honourable but similarly resolute individuals are born of this month.</p>
+	
 </div>
 <?php include_short_footer(); ?>

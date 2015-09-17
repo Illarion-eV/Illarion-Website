@@ -10,17 +10,7 @@
 
 	<h2>Month: Ushos</h2>
 
-	<b>Meaning</b>
-	<p>Those born in the month of Ushara are quiet and introverted people. They love
-	nature, and material things hold only little value to them. The are family people
-	and constantly strive for harmony.</p>
+<p>Those born in the month of Ushara are quiet and introverted people. They love nature, and material things hold only little value to them. They are family people and constantly strive for harmony. Balanced individuals who are quiet and wise are blessed by Ushara. With wisdom, there comes confidence and sometimes arrogance. Consistent Bears do not hesitate to pursue unconventional solutions and might stubbornly stick to their ways whilst the world about them changes. Rumour tells us that Archmage Elvaine Morgan of Runewick was actually born in the month of Ushos.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Balanced, quiet, wise</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Oftenly very self-willed or unconventional</p>
 </div>
 <?php include_short_footer(); ?>
