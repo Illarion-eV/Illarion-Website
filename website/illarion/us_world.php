@@ -27,7 +27,9 @@
 
 <h2><a name="1"></a>The North</h2>
 
-<p>High amongst the jagged peaks of the Nameless Mountains an eagle takes flight from its eyrie. Snow capped summits that pierce the firmament isolate the peninsula, dominating the plains, forests and deserts of Illarion below. Majestically the eagle soars above the mystery and turmoil of inexplicable wonders and unimaginable horrors that lie below.</p>
+<?php cap(H); ?>
+
+<p>igh amongst the jagged peaks of the Nameless Mountains an eagle takes flight from its eyrie. Snow capped summits that pierce the firmament isolate the peninsula, dominating the plains, forests and deserts of Illarion below. Majestically the eagle soars above the mystery and turmoil of inexplicable wonders and unimaginable horrors that lie below.</p>
 
 <p>From the elevated Galmair Plateau the surging Malachite Creek courses down towards Nargun's Plain to join the Bounding Stream. Nestled in the foothills, behind fortified walls that join with rocky outcrops lies the merchant town of Galmair. Countless entrances lead to cavernous halls, tunnels and mines cleaved deep into the mountains, an industrious world of little significance to the soaring eagle. Banking north over the fetid swamp, the eagle's sharp eyes pick out Galmair Harbour and entrances to the Temple of The Five. As the land is claimed by the lapping waters of Syrita Bay, scattered islands fleck the horizon.</p>
 
@@ -37,7 +39,9 @@
 
 <h2><a name="2"></a>The East</h2>
 
-<p>As waves crash against the eastern shore bordering the Northern Woods, a craggy outcrop known as Evil Rock looms from the ocean to dominate the skyline. Continuing south the eagle banks over the isolated Northern Harbour and the Pauldron Isle with its scattered ruins and restless cemeteries. From the ocean, marshland harbouring the ruins of a long forgotten temple forms the northern bank of the Bounding Stream. Further inland, where the Bounding Stream and Glowing River converge at the Spider's Mouth, the Hemp Necktie Inn sits on the island intersection of routes to all three realms.</p>
+<?php cap(A); ?>
+
+<p>s waves crash against the eastern shore bordering the Northern Woods, a craggy outcrop known as Evil Rock looms from the ocean to dominate the skyline. Continuing south the eagle banks over the isolated Northern Harbour and the Pauldron Isle with its scattered ruins and restless cemeteries. From the ocean, marshland harbouring the ruins of a long forgotten temple forms the northern bank of the Bounding Stream. Further inland, where the Bounding Stream and Glowing River converge at the Spider's Mouth, the Hemp Necktie Inn sits on the island intersection of routes to all three realms.</p>
 
 <p>Extending along the southern bank of the Bounding Stream, the Dead Marsh borders the bountiful Elstree Plain, overlooked by the mountain known only for Igruk's Cave and the dangers within. The eagle escalates high above the towering trees of Elstree Forest, unaffected by much of the mysterious enchantment hidden beneath the canopy. The grassy Eastland separates the huge expanse of forest from the windswept coast. From the isolated Eastport Harbour, the eagle swerves between the Twin Mountains and over the curiosity that is known to some as Wonderland, before gliding towards the Dewy Swamps.</p>
 
@@ -47,7 +51,9 @@
 
 <h2><a name="3"></a>The Centre</h2>
 
-<p>The eagle rises sharply to soar clear of the Dragon's Lair, mindful of the power that lies within. Lava courses from the volcano laying waste to the land along the northern flank of the mountain. The putrid swampland of Death's Stench stretches as far as the Three Fingertips which protrude into Snakehead Bay. Further along Snakehead Coast, Mount Snakehead rises to overlook the bay, with numerous islands scattered before it.</p>
+<?php cap(T); ?>
+
+<p>he eagle rises sharply to soar clear of the Dragon's Lair, mindful of the power that lies within. Lava courses from the volcano laying waste to the land along the northern flank of the mountain. The putrid swampland of Death's Stench stretches as far as the Three Fingertips which protrude into Snakehead Bay. Further along Snakehead Coast, Mount Snakehead rises to overlook the bay, with numerous islands scattered before it.</p>
 
 <p>Soaring north towards the Border mountains, the sharp eyes of the eagle picks out elven ruins hidden amongst the trees. Carved into the mountain face lie the entrances to Cherass' Citidal and the Glittering Cave. Banking left, the eagle follows the Glowing River upstream as it surges along the eastern flank of the Border Mountains. In the shadows of rocky outcrops, the eagle glides unhindered over the scar of destruction known as Death Swath. Water gushes from the Glowing Gate, cutting through the lava flows of the Glowing Forest below, steam rising to envelope the gnarled remains of a long-dead forest. Crossing the Wight Canal and blazing Firelimes the eagle circles curiously over the ruins that stretch along the western shore of Snakehead Bay, only the Lighthouse Harbour still intact.</p>
 
@@ -57,7 +63,9 @@
 
 <h2><a name="4"></a>The South</h2>
 
-<p>Stretching from the mountains to the ocean, the Kantabi Desert dominates the southwest of Illarion. The eagle glides over desolate lands strewn with ruined settlements and long abandoned work camps indicative of more prosperous times before fortified outlaw encampments encroached. Cascading from high in the Nameless Mountains, the Kantabi River cleaves through the desert as it courses south towards the Great Ocean where it diverges to form the fertile Kantabi Delta. The ominous Mount Letma rises to overlook the delta and Kata Island as waves of the Great Ocean crash onto its rocky flanks.</p>
+<?php cap(S); ?>
+
+<p>tretching from the mountains to the ocean, the Kantabi Desert dominates the southwest of Illarion. The eagle glides over desolate lands strewn with ruined settlements and long abandoned work camps indicative of more prosperous times before fortified outlaw encampments encroached. Cascading from high in the Nameless Mountains, the Kantabi River cleaves through the desert as it courses south towards the Great Ocean where it diverges to form the fertile Kantabi Delta. The ominous Mount Letma rises to overlook the delta and Kata Island as waves of the Great Ocean crash onto its rocky flanks.</p>
 
 <p>As the eagle banks over the coast it passes the now Lost Harbour and across the estuary, new Cadomyr Harbour. Further north lies Cape Farewell and Faber's Guard House serves as the last lookout across the bay to Pirate Cove. Flanked by the impenetrable Nameless Mountains and the Great Ocean, Cadomyr's foreboding fortress walls rise from the golden sands, the hot desert sun reflecting off the uniform sandstone walls. Flags billow proudly from the battlements that guard the monuments to glorious feats of past rulers, as the eagle soars nonchalantly above the hierarchy below.</p>
 
