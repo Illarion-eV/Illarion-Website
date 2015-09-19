@@ -1,0 +1,24 @@
+{
+    "name": "illarion/website",
+    "type": "project",
+    "homepage": "http://illarion.org",
+    "license": "AGPL-3",
+    "authors": [
+        {
+          "name": "Martin Karing",
+          "email": "nitram@illarion.org",
+          "homepage": "http://illarion.org",
+          "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "webmaster@illarion.org",
+        "irc": "irc://irc.quakenet.org/illarion",
+        "issues": "http://illarion.org/mantis/",
+        "forum": "http://illarion.org/community/forums/index.php",
+        "source": "https://github.com/Illarion-eV/Illarion-Website"
+    },
+    "require": {
+        "slim/slim": "2.6.2"
+    }
+}
