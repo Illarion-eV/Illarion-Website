@@ -36,7 +36,8 @@ SQL;
         return LOGIN_RESULT_NO_DB_CONN;
     }
 
-    $accId = pg_fetch_result($result, 0, 0);
+    $accId = pg_fetch_result($result, 0);
+    pg_free_result($result);
 
     if ($accId === false) {
         return LOGIN_RESULT_INVALID_CREDENTIALS;

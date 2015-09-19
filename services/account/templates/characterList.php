@@ -32,7 +32,7 @@ $illarionserver = [];
 $testserver = [];
 $devserver = [];
 
-while (!is_null($charData = pg_fetch_row($result))) {
+while (($charData = pg_fetch_row($result)) !== false) {
     $resultData = ['name' => $charData[0], 'status' => $charData[1], 'lastsave' => $charData[2]];
     switch ($charData[3]) {
         case 'illarionserver':

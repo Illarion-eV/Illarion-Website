@@ -1,7 +1,7 @@
 <?php
 define('IN_ACCOUNT_SERVICE', true);
 
-require __DIR__ . '../../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/authenticate.php';
 
 use Illarion\Services\Account;
@@ -88,7 +88,5 @@ $app->get('/caps/:sessionId', 'authenticate', function() use ($app) {
     $app->response()->headers->set('Content-Type', 'application/json');
     $app->render('capabilities.php');
 })->conditions($sessionIdCondition);
-
-
 
 $app->run();

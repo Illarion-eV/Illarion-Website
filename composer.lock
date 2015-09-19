@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "845d5bff92576bc4a9f29b8a164d8c89",
+    "hash": "248ea327a02cf7d61e0a20c918ed45be",
+    "content-hash": "323f3d67a4afc23ed9696cd3336e92f0",
     "packages": [
         {
             "name": "slim/slim",
@@ -32,7 +33,7 @@
                     "Slim": "."
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
