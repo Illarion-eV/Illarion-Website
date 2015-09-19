@@ -27,13 +27,27 @@ if ($result == false) {
     throw new \RuntimeException("Database connection is not working", 500);
 }
 
-$accountInfo = pg_fetch_row($result);
+$accountInfo = pg_fetch_assoc($result);
 if ($accountInfo === false) {
     throw new \RuntimeException("Database connection is not working", 500);
 }
 
-$resultArray = ['createChars' => ($accountInfo[0] > $accountInfo[3]),
-                'accessDevserver' => boolval($accountInfo[2]),
-                'state' => intval($accountInfo[1])];
+$resultArray = [
+    'illarionserver' => [
+        'createCharacters' => ($accountInfo['acc_maxchars'] > $accountInfo['acc_chars']),
+        'transferFrom' => []
+    ],
+    'testserver' => [
+        'createCharacters' => false,
+        'transferFrom' => (boolval($accountInfo['acc_devserver_access']) ?
+            ['illarionserver', 'devserver'] : ['illarionserver'])
+    ],
+    'devserver' => [
+        'createCharacters' => boolval($accountInfo['acc_devserver_access']),
+        'transferFrom' => (boolval($accountInfo['acc_devserver_access']) ?
+            ['illarionserver', 'testserver'] : [])
+    ],
+    'state' => intval($accountInfo['acc_state'])
+];
 
 echo json_encode($resultArray);
