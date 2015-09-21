@@ -1,22 +1,22 @@
 <?php
    include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-   Page::setTitle( 'Die Welt' );
+   Page::setTitle( 'Das Land Illarion' );
    Page::setDescription( 'Übersicht über die Spielwelt.' );
    Page::setKeywords( array( 'Welt', 'Illarion', 'Karte', 'Cadomyr', 'Galmair', 'Runewick' ) );
 
    Page::setXHTML();
    Page::Init();
 ?>
-<h1>Die Welt Illarion</h1>
+<h1>Das Land Illarion</h1>
 
 <h2>Inhalt</h2>
 <ul>
 <li><a class="hidden" href="#0">Weltkarte</a></li>
-<li><a class="hidden" href="#1">Der Norden</a></li>
-<li><a class="hidden" href="#2">Der Osten</a></li>
-<li><a class="hidden" href="#3">Das Zentrum</a></li>
-<li><a class="hidden" href="#4">Der Süden</a></li>
+<li><a class="hidden" href="#1">Die Hügel des Nordens und der Syritasee</a></li>
+<li><a class="hidden" href="#2">Der Elsbaumwald und die östlichen Gestade</a></li>
+<li><a class="hidden" href="#3">Der Schlangenkopfberg und das glühende Zentrum</a></li>
+<li><a class="hidden" href="#4">Die heiße Kantabiwüste und die Südküste</a></li>
 </ul>
 
 <h2><a name="0"></a>Weltkarte</h2>

@@ -1,22 +1,22 @@
 <?php
    include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
-   Page::setTitle( 'The World' );
+   Page::setTitle( 'The Land Illarion' );
    Page::setDescription( 'An overview of the game world.' );
    Page::setKeywords( array( 'World', 'Illarion', 'Map', 'Cadomyr', 'Galmair', 'Runewick' ) );
 
    Page::setXHTML();
    Page::Init();
 ?>
-<h1>The World Illarion</h1>
+<h1>The Land Illarion</h1>
 
 <h2>Content</h2>
 <ul>
 <li><a class="hidden" href="#0">World Map</a></li>
-<li><a class="hidden" href="#1">The North</a></li>
-<li><a class="hidden" href="#2">The East</a></li>
-<li><a class="hidden" href="#3">The Centre</a></li>
-<li><a class="hidden" href="#4">The South</a></li>
+<li><a class="hidden" href="#1">Northern Foothills and Lake Syrita</a></li>
+<li><a class="hidden" href="#2">Elstree Forest and the Eastern Shores</a></li>
+<li><a class="hidden" href="#3">Mount Snakehead and the Fiery Centre</a></li>
+<li><a class="hidden" href="#4">The hot Kantabi Desert and the Southern Coast</a></li>
 </ul>
 
 <h2><a name="0"></a>World Map</h2>
@@ -37,7 +37,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Elstree and the Eastern Shores</h2>
+<h2><a name="2"></a>Elstree Forest and the Eastern Shores</h2>
 
 <?php cap(A); ?>
 
@@ -61,7 +61,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Kantabi and the Southern Coast</h2>
+<h2><a name="4"></a>The hot Kantabi Desert and the Southern Coast</h2>
 
 <?php cap(S); ?>
 
