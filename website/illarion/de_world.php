@@ -25,7 +25,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>Der Norden</h2>
+<h2><a name="1"></a>Die Hügel des Nordens und der Syritasee</h2>
 
 <?php cap(H); ?>
 
@@ -33,11 +33,11 @@
 
 <p>Aus der Hochebene Galmairs fließt der Malachitbach hinab auf die Nargunebene, um sich dem <u>Mächtigen Strom</u> anzuschließen. Tief versteckt in den Gebirgsausläufern und hinter verstärken Mauern, die sich mit den felsigen Ausläufern verbinden, liegt die Händlerstadt Galmair. Zahllose Eingänge führen in das Innere von Höhlen, Tunneln und Minen, die tief in die Berge geschnitten sind - eine geschäftige Welt, die für den dahingleitenden Adler nur wenig Bedeutung hat. Im Norden der stinkenden Sümpfe erkennen die scharfen Augen des Adlers den Hafen Galmairs und die Eingänge zum Tempel der Fünf. Dort, wo das Land in der Syritabucht von den Wellen eingeschlossen wird, zieren weit verstreute Inseln den Horizont.</p>
 
-<p>Die üppigen Grassteppen der Ebene der Stille dehnen sich weit nach Osten aus, bis hin zu den Nördlichen Wäldern, durchbrochen einzig durch den Syritakanal, der das Land auf seinem Fluss zum <u>Mächtigen Strom</u> tief durchschneidet. Während der Adler schwerelos über die Wälder hinweggleitet, kreist er einige Male neugierig über der Lichtung, die als Rabans Hain bekannt ist. Weiter im Norden stößt der Vogel ein stechendes Kreischen aus, als er über den mächtigen Festungswänden des Unüberwindbaren Limes plötzlich abdreht, die die übrigen Teile der Halbinsel abtrennen. Selbst in solch großer Höhe wagt es der mächtige Adler nicht, in die Wolken über dem düster anmutenden, tiefen Wald einzudringen.</p>
+<p>Die üppigen Grassteppen der Ebene der Stille dehnen sich weit nach Osten aus, bis hin zu den Nördlichen Wäldern, durchbrochen einzig durch den Syritakanal, der das Land auf seinem Fluss zum <u>Mächtigen Strom</u> tief durchschneidet. Während der Adler schwerelos über die Wälder hinweggleitet, kreist er einige Male neugierig über der Lichtung, die als Rabans Hain bekannt ist. Weiter im Norden stößt der Vogel ein stechendes Kreischen aus, als er über den mächtigen Festungswänden des Unüberwindbaren Limes, der die übrigen Teile der Halbinsel abtrennt, plötzlich abdreht. Selbst in solch großer Höhe wagt es der mächtige Adler nicht, in die Wolken über dem düster anmutenden, tiefen Wald einzudringen.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>Der Osten</h2>
+<h2><a name="2"></a>Der Elsbaumwald und die östlichen Gestade</h2>
 
 <?php cap(D); ?>
 
@@ -49,7 +49,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>Das Zentrum</h2>
+<h2><a name="3"></a>Der Schlangenkopfberg und das glühende Zentrum</h2>
 
 <?php cap(D); ?>
 
@@ -61,7 +61,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Der Süden</h2>
+<h2><a name="4"></a>Die heiße Kantabiwüste und die Südküste</h2>
 
 <?php cap(I); ?>
 

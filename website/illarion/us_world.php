@@ -25,7 +25,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>The North</h2>
+<h2><a name="1"></a>Northern Foothills and Lake Syrita</h2>
 
 <?php cap(H); ?>
 
@@ -37,7 +37,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="2"></a>The East</h2>
+<h2><a name="2"></a>Elstree and the Eastern Shores</h2>
 
 <?php cap(A); ?>
 
@@ -49,7 +49,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="3"></a>The Centre</h2>
+<h2><a name="3"></a>Mount Snakehead and the Fiery Centre</h2>
 
 <?php cap(T); ?>
 
@@ -61,7 +61,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>The South</h2>
+<h2><a name="4"></a>Kantabi and the Southern Coast</h2>
 
 <?php cap(S); ?>
 
