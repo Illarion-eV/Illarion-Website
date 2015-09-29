@@ -13,7 +13,7 @@
 <h2>Content</h2>
 <ul>
 <li><a class="hidden" href="#0">World Map</a></li>
-<li><a class="hidden" href="#1">Northern Foothills and Lake Syrita</a></li>
+<li><a class="hidden" href="#1">Northern Foothills and Syrita Bay</a></li>
 <li><a class="hidden" href="#2">Elstree Forest and the Eastern Shores</a></li>
 <li><a class="hidden" href="#3">Mount Snakehead and the Fiery Centre</a></li>
 <li><a class="hidden" href="#4">The hot Kantabi Desert and the Southern Coast</a></li>
@@ -25,7 +25,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>Northern Foothills and Lake Syrita</h2>
+<h2><a name="1"></a>Northern Foothills and Syrita Bay</h2>
 
 <?php cap(H); ?>
 

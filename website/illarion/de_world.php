@@ -13,7 +13,7 @@
 <h2>Inhalt</h2>
 <ul>
 <li><a class="hidden" href="#0">Weltkarte</a></li>
-<li><a class="hidden" href="#1">Die Hügel des Nordens und der Syritasee</a></li>
+<li><a class="hidden" href="#1">Die Hügel des Nordens und die Syritabucht</a></li>
 <li><a class="hidden" href="#2">Der Elsbaumwald und die östlichen Gestade</a></li>
 <li><a class="hidden" href="#3">Der Schlangenkopfberg und das glühende Zentrum</a></li>
 <li><a class="hidden" href="#4">Die heiße Kantabiwüste und die Südküste</a></li>
@@ -25,7 +25,7 @@
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="1"></a>Die Hügel des Nordens und der Syritasee</h2>
+<h2><a name="1"></a>Die Hügel des Nordens und die Syritabucht</h2>
 
 <?php cap(H); ?>
 
