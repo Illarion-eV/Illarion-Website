@@ -44,14 +44,6 @@ maps in the Git repo are exactly in the way they are supposed to be on the serve
 
 <?php else: ?>
 
-<p>The reload of the server should be done now. Now following is the output of the console:</p>
-
-<p>Removing the old map data:</p>
-
-<pre style="max-height: 130pt;overflow-y: scroll;"><?php
-    echo htmlentities(`sudo -u testserver rm /usr/share/servers/testserver/map/Illarion_* -f -v`);
-?></pre>
-
 <p>Causing the server to reload the maps:</p>
 
 <pre style="max-height: 130pt;overflow-y: scroll;"><?php
