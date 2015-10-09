@@ -7,12 +7,7 @@
 
 	<h2>Month of Four Winds</h2>
 
-	<p>Named after Nargùn, the month of Naras is a month that can have warm and sunny
-	days as well as icy hailstorms. During Naras, it can even hail or snow a bit in
-	south Salkamar and Gynk (although it never gets cold enough to snow in those areas
-	during winter. Gynk is known for a lot of winter rain.)</p>
+<p>Named after Nargùn, Naras, the month of the four winds is marked by changeable weather, with warm and sunny days broken up by icy hail storms. During Naras, it might even snow in the Kantabi Desert, despite the searing heat which ordinarily lasts every season. In the lands of Salkamar and Gynk, renowned for a lot of winter rain, rainbows might be seen during Naras from time to time as bright sunlight unexpectedly penetrates the gloom. The month of Naras is known for quick, and sometimes dangerous, changes in the weather, especially close to the coasts where a freak wave might whip the unsuspecting traveller out to sea. Dark clouds and fickle winds all too often torment the unwary. One is advised to be prepared for any kind of weather when leaving Runewick and wandering along the coast towards Galmair. The weather of the Kantabi Desert is more predictable, as the mountains shelter the land against the moods of Nargùn.</p>
 
-	<p>The month of Naras is known for quick changes in the weather, especially close to
-	the coasts. In the Serin-planes, this effect is usually almost unnoticeable.</p>
 </div>
 <?php include_short_footer(); ?>

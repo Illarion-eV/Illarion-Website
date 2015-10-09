@@ -10,17 +10,7 @@
 
 	<h2>Monat: Bras</h2>
 
-	<b>Beschreibung:</b>
-	<p>Die im Zeichen des Drachen geborenen haben ein feuriges Temperament. Sie sind
-	ehrgeizig und intelligent. Hochgesteckte Ziele erreichen sie meist mit Leichtigkeit
-	und sie neigen dazu ihr Schicksal zu sehr herauszufordern.</p>
+<p>Die unter dem Zeichen des Drachen geborenen haben ein feuriges Temperament und können zu Wutausbrüchen neigen. Sie sind ehrgeizig und intelligent. Normalerweise erreichen sie angestrebte Ziele recht einfach, wodurch sie dazu neigen, ihr Schicksal zu sehr herauszufordern. Ihr Sinn für Gerechtigkeit und ihre Leidenschaft machen sie zu guten Anführern. Noble Drachen tendieren dazu, gebieterisch und impulsiv zu sein, aber durch ihre Eleganz und Grazie ist es leicht, ihrer Ausstrahlung zu verfallen. Es ist kein Geheimnis, dass Königin Rosaline Edwards von Cadomyr ein wahrer nobler Drache ist, geboren im Monat des Brágon.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>ausgeprägter Gerechtigkeitssinn, leidenschaftlich, stark, edel</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>neigen dazu Befehle zu erteilen, sind manchmal zu impulsiv</p>
 </div>
 <?php include_short_footer(); ?>

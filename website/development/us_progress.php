@@ -41,7 +41,7 @@
 
 <h2><a href="http://illarion.org/mantis/view.php?id=9823" target="_blank">Milestone III: Magic</a></h2>
 
-<p>Magic is a mandatory feature für a fantasy game. With this milestone arcane magic will return to the game and also, we'll release divine magic for priests. Adjustments to craft like actions like alchemy will also be included.</p>
+<p>Magic is a mandatory feature for a fantasy game. With this milestone arcane magic will return to the game and also, we'll release divine magic for priests. Adjustments to craft like actions like alchemy will also be included.</p>
 
 <h3>Highlights</h3>
 

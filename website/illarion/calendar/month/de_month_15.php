@@ -7,15 +7,7 @@
 
 	<h2>Monat des Gedenkens</h2>
 
-	<p>Chos wurde nach Cheerga benannt, der "grauen Dame", welche die Seelen der
-	Verstorbenen einsammelt und in die Welt jenseits des Todes bringt. Viele Völker, die
-	in Gegenden leben, in denen es im Winter so kalt wird daß es schneien kann, haben im
-	Chos keine Möglichkeit des Ackerbaus oder der Landwirtschaft und leben meist von
-	über das Jahr hindurch gesammelten Vorräten.</p>
+<p>Der Monat Chos ist nach Cherga, der "Grauen Herrin" benannt, die die Seelen der Verstorbenen einsammelt und in ihr Reich auf der anderen Seite des Todes bringt. Dunkle und kalte Wintertage erinnern die Leute an ihre Verwundbarkeit und Krankheit verbreitet sich schneller. Viele, die in Gebieten leben, in denen es schneit, können keinen Ackerbau betreiben und sind deswegen auf Vorräte angewiesen, die über das Jahr angesammelt wurden. Selbst im wärmeren Süden Illarions, wo Schnee extrem selten ist und in manchem Gebieten gar völlig unbekannt, ist der Monat Chos eine Zeit des bescheidenen Lebens und des Gedenkens der Toten. Fast alle Rassen, Völker und Religionen halten im Chos einen Gedenktag für die Toten ab. Die Anhänger und Priester Chergas halten oft in gut beheizten Kapellen auf Friedhöfen Zeremonien ab.</p>
 
-	<p>Im südlichen Salkamar und in Gynk jedoch ist Schnee extrem selten und teilweise
-	gänzlich unbekannt. Dennoch gibt es in nahezu allen Völkern im Chos den einen oder
-	anderen Erinnerungstag an die Verstorbenen. Anhänger und Priester Chergas feiern
-	Gedächtnisfeiern in zumeist gut beheizten Kapellen auf Friedhöfen.</p>
 </div>
 <?php include_short_footer(); ?>

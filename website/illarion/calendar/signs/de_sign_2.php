@@ -10,18 +10,7 @@
 
 	<h2>Monat: Tanos</h2>
 
-	<b>Beschreibung:</b>
-	<p>Oft melancholisch wirken die Delphine. Sie träumen oft von Zielen die sie nicht
-	erreichen können und hadern mit ihrem Schicksal. Sie sind meist sehr ruhig, gerecht
-	und haben einen guten Geschmack. Ständig suchen sie die Nähe ihrer Lieben und
-	streben nach deren Aufmerksamkeit.</p>
+<p>Delfine erscheinen oft melancholisch. Sie tendieren dazu, von Zielen zu träumen, die sie niemals erreichen können und hadern ständig mit ihrem Schicksal. Für gewöhnlich sind sie außerdem sehr ruhig, gerecht und verfügen über guten Geschmack. Sie suchen stets die Nähe ihrer Geliebten und streben nach deren Aufmerksamkeit und Anerkennung. Träumerische Delfine sind nicht jedermanns bevorzugter Gefährte, da sie dazu neigen, traurig und besorgt zu sein. Ungeduldige werden niemals die Gedanken und Wege eines träumerischen Delfins nachvollziehen können.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>geduldig</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>oft traurig oder bekümmert</p>
 </div>
 <?php include_short_footer(); ?>

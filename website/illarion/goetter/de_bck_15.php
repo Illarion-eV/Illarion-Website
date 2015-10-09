@@ -6,7 +6,7 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_14.php","de_bck_10.php","de_bck_16.php" ); ?>
+<?php navBarTop( "de_bck_14.php","de_bck_10.php","de_bck_16.php" ); ?>
 
 <h1>Findari - Göttin der Luft</h1>
 
@@ -14,7 +14,7 @@
 <p>indari ist die Göttin des Elements Luft. Es liegt nicht in Findaris Natur, sich den Dingen aufzuzwingen, aber wie jeder Wind den sie entsendet, verändert auch sie die Welt - ob zum Guten oder Schlechten liegt dabei immer im Auge des Betrachters. Als gutherziges Wesen, ist sie als freundliche Göttin ohne böswilligen Vorhaben bekannt. Diejenigen, die ihre Wege nicht verstehen, werden die Vernichtung, die ihre Stürme hinterlassen, jedoch nicht als Chance betrachten, etwas Neues aufzubauen, sondern als reine Zerstörung. In den seltenen Fällen da Findari eine sterbliche Hülle anlegt, zeigt sie sich in der Gestalt einer alterslosen, blonden Frau mit hellblauer Kleidung, die selbst dort tanzt, wo andere der Verzweiflung verfallen sind. Sie zieht Musik und die feinen Künste vor, aber nur, solange diese nicht Regeln unterliegen, sondern dazu dienen, eigene Gefühle und Gedanken auszudrücken.</p>
 
 <h2>Anhänger</h2>
-<p>Findaris Anhänger waren schon immer wenige, da sie sich nie groß um Tempel kümmerte oder darum, angebetet zu werden. Es wird behauptet, dass sie dennoch manchmal einen Anhänger auswählt, um ihn zu einem Seher oder wandernden Propheten zu machen, oder vielleicht sogar zu einem großen Barden oder Künstler. Wie alle der Alten Götter, wird auch sie im Tempel der Fünf im Osten Galmairs verehrt. Außerdem gibt es die Kapelle der Fünf, östlich der Kantabi Wüste, wo die Namen der Fünf in Ehren gehalten werden. Die Seefahrer Runewicks sind dafür bekannt, zu ihr zu beten, jedoch mehr aus Angst vor Stürmen als aus wahrer Verehrung. Im Laufe der Zeit sind viele von Findaris Anhängern zu Adron übergegangen, den sie in den neuen Tempeln verehren.</p>
+<p>Findaris Anhänger waren schon immer wenige, da sie sich nie groß um Tempel kümmerte oder darum, angebetet zu werden. Es wird behauptet, dass sie dennoch manchmal einen Anhänger auswählt, um ihn zu einem Seher oder wandernden Propheten zu machen, oder vielleicht sogar zu einem großen Barden oder Künstler. Wie alle der Alten Götter, wird auch sie im Tempel der Fünf im Osten Galmairs verehrt. Außerdem gibt es die Kapelle der Fünf, östlich der Kantabiwüste, wo die Namen der Fünf in Ehren gehalten werden. Die Seefahrer Runewicks sind dafür bekannt, zu ihr zu beten, jedoch mehr aus Angst vor Stürmen als aus wahrer Verehrung. Im Laufe der Zeit sind viele von Findaris Anhängern zu Adron übergegangen, den sie in den neuen Tempeln verehren.</p>
 
 <h2>Findos - Monat der bildenen Künste</h2>
 

@@ -10,18 +10,7 @@
 
 	<h2>Month: Siros</h2>
 
-	<b>Meaning</b>
-	<p>The amiable aura of these people already shines from afar. The possess alot of
-	charm and force of attraction.especially to the opposite gender. They love beautiful
-	festivals and enjoy life to its fullest. Only seldomly do they reach for the weapon,
-	moreover they seek harmony and unison.</p>
+<p>The amiable aura of beautiful Butterflies shines from afar. Those born during the month of Siros typically possess a lot of charm and force of attraction, especially to the opposite gender. They love beautiful festivals, enjoy freedom, and live life to its full extent. Awareness of their own attractiveness can on occasion give an impression of smugness but their amiability can usually overcome this. Only seldomly do they reach for the weapon, usually preferring to seek harmony and unison. Even a Butterfly can become angered, however, if you limit their freedom and prevent them from flying freely as they hold a great love for liberty. An emotional, moody Butterfly becomes somewhat less predictable lashing out with rash and unreasoned actions.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Friendly, amiable, hold a love for liberty</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Sometimes unreasonable or stuck-up</p>
 </div>
 <?php include_short_footer(); ?>

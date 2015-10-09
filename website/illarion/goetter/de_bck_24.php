@@ -6,43 +6,39 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_23.php","de_bck_10.php","de_bck_25.php" ); ?>
+<?php navBarTop( "de_bck_23.php","de_bck_10.php","de_bck_25.php" ); ?>
 
-   <h2>Zhambra - Gott der Freundschaft und Treue</h2>
+<h1>Zhambra - Gott der Freundschaft und Treue</h1>
 
-   <p>Wird angebetet f&uuml;r:<br />
-   Schutz der Freundschaft, Treue und heiliger Gel&uuml;bde, orkischer Blutsbruder-Rituale, Schutz der
-   Getreuen in der Schlacht.</p>
+<?php cap(Z); ?>
+<p>hambra ist der Gott der Freundschaft und Loyalität. Er ist dafür bekannt, freundlich, mitfühlend, rechtschaffend und ehrenhaft zu sein. Zhambra schätzt Kameradschaft und Diziplin, sowie Klugheit im Krieg als auch in der Diplomatie. Seine strikte Natur lehnt hinterhältiges Verhalten und Betrügerei ab und er wird jene niederschlagen, die untreu sind oder andere verraten. Meistens tritt er als ein junger und freundlicher Adeliger in glänzender Rüstung in Erscheinung. Es gibt Gerüchte, dass er auf dem Schlachtfeld erscheint, um treue Soldaten zu retten und sie vor gefährlichen Situationen zu beschützen. Zhambra animiert andere an seiner Stelle zu handeln, schafft so Freundschaften selbst in den düstersten Situationen und erwählt jene, die selbstlos und loyal sind und das Wohlergehen ihrer Freunde vor das eigene stellen.</p>
 
-   <p>Pers&ouml;nlichkeit:<br />
-   Freundliches, sympathisches Auftreten, intelligent und ehrenhaft. Kennt aber keine Gnade mit
-   denen, die ihn oder andere hintergehen und ist dabei sehr konsequent in seinem Verhalten.</p>
+<h2>Anhänger</h2>
+<p>Jene, die Zhambra verehren wollen, können seiner Präsenz in Stätten des Rechtes und Gesetzes habhaft werden. So ist es nicht überraschend, dass er ein Schutzgott Cadomyrs ist und dass ein erlesener Tempel zu seinen Ehren nahe dem Palast erichtet wurde. Oft wird er angebetet, um Schutz für Freunde, Familie oder im Kampf zu erbitten. Seine Anhänger gehören oft zur Adelsschicht, doch auch der niedrigste Soldat wird sich um seinen Segen bemühen. Ritter, Paladine und Soldaten wenden sich zu ihm, um Tapferkeit zu erbitten, um jene um sich herum zu schützen und ihnen zu dienen. Zhambra wird auch angerufen, geht es darum seine Loyalität zu erklären oder in orkischen Blutsbrüderritualen. Gibt ein Anhänger Zhambras sein Wort, so ist es ein Versprechen, das so gut wie erfüllt ist. Seine Anhänger meiden Täschung und Untreue so weit es nur möglich ist und sind bemüht, all das, was gerecht und gut ist in der Welt, zu erhalten.</p>
 
-   <p>Auftreten:<br />
-   Zumeist als freundlicher Edelmann. Manchmal erscheint Zhambra auch in strahlender R&uuml;stung, wenn
-   er Kriegern in gef&auml;hrlichen Augenblicken zur Seite tritt. Er handelt oft durch Dritte und
-   schlie&szlig;t viele Freundschaften, selbst noch w&auml;hrend der Schlacht.</p>
+<p>Wenn ein Anhänger stirbt, wendet sich Zhambra seinen Freunden zu, und wenn es sich zeigt, dass er loyal und seinen Freunden gut gedient hat, führt Zhambra ihn ins Paradies. Haben sie keine Freunde, schickt Zhambra sie zurück, um neu geboren zu werden, mehr Freundschaften zu schließen und ein Leben in Loyalität zu führen. Jene aber, die andere betrogen haben, werden von Zhambra herausgefordert. Einige bleiben jedoch für immer allein, zu angsterfüllt, seine Herausforderung anzunehmen. Wer aber akzeptiert, wird in einem ewigen Kampf kämpfen müssen, bis er ehrenhaft stirbt. Nur dann wird er ins Paradies geführt, wenn er Freunde gefunden hat, ansonsten wiedergeboren, um es erneut zu versuchen.</p>
 
-   <p>Vorlieben/ Abneigungen:<br />
-   Liebt Loyalit&auml;t und Freundschaft, sowie ehrenhafte Menschen. Verabscheut schmutzige Tricks.</p>
+<h2>Zhas - Monat der Treue</h2>
 
-   <p>Anh&auml;nger:<br />
-   Die Anh&auml;nger Zhambras sind geradlinig und ergebene Gefolgsleute, die an Ehre und Recht glauben.
-   Sie versuchen h&auml;ufig, Andere zu retten und stehen im Kampf gegen das B&ouml;se. Zhambra wird
-   gehuldigt von Adligen, Rittern, H&ouml;flingen und von vielen Kriegern. Sie glauben daran , dass nach
-   ihrem Tode sich eine gro&szlig;e Anzahl von Freunden versammelt, und dass, wenn sie einen wirklichen
-   Freund vorweisen k&ouml;nnen (unter der Toten oder den Lebenden), Zhambra sie bei der Hand nehmen und
-   ins Paradies f&uuml;hren wird. Haben sie keinen solchen Freund wird Zhambra ihnen bei der
-   Wiedergeburt behilflich sein, damit sie Freundschaften schlie&szlig;en k&ouml;nnen. Waren sie im Leben
-   schlechte Menschen und haben bewusst andere hintergangen, dann wird ihnen Zhambra einen eisernen
-   Handschuh vor die F&uuml;&szlig;e werfen, den sie aufnehmen m&uuml;ssen. Es wird berichtet, dass viele von jenen
-   lange Zeit in den Hallen Zhambras ausharren m&uuml;ssen, weil sie aus panischer Angst nicht wagen,
-   den Handschuh aufzunehmen. Tun sie es, und st&uuml;lpen sich den Handschuh &uuml;ber, dann wird ein
-   Schwert erscheinen. Sie finden sich auf einem ewigen Schlachtfeld wieder, wo sie k&auml;mpfen sollen,
-   um endlich ehrenvoll zu sterben. Erst dann entl&auml;sst man sie zur&uuml;ck in die Halle der G&ouml;tter, um,
-   wenn sie nun gelernt haben was Treue bedeutet, wiedergeboren zu werden und Freundschaften zu
-   schlie&szlig;en, oder -so sie schon welche besa&szlig;en, durch Zhambra ins Paradies geleitet werden.</p>
+<p>Der Zhas wurde nach Zhambra, dem Gott der Freundschaft und Loyalität, benannt. Der Monat Zhas ist eine arbeitsreiche Zeit für die Bauern und Landwirte in Runewick und Galmair, in der sie die Felder nach den erfrischenden Wassern des Tanos bearbeiten. Zhambra ist ein Hauptgott des salkamerianischen Pantheons und einige Städte in Salkamar feiern Gedichtsfeste während des Zhas, wohmöglich inspiriert von Elfenfesten. Am 12. Zhas feiern diese den Gedenktag genannt "Tag der Kirschblüte", an dem gedacht wird, dass nichts Ewig überdauert. Elfenlegenden erzählen von der Abspaltung und dem Fall eines Elfenhauses mit Namen "Narnil" und den Nachkommen dieses Hauses, den "Erume-Lie". Weit bekannt ist eine Übersetzung eines antiken Elfenliedes aus der Bibliothek von Nanuk Moonsilver:</p>
 
-   <?php navBarBottom( "de_bck_23.php", "de_bck_25.php" ); ?>
+<p><i>"Zum Fluss bin ich allein gegangen,<br>
+Wasser zu schöpfen.<br>
+Um mich herum fielen zart wie Schnee,<br>
+die Blätter der Kirschblüte.<br>
+Mit anmutiger Leichtigkeit gleiten sie dahin,<br>
+in ihrer sterbenden Schönheit.<br>
+Das Wasser trug die weiße Pracht hinfort,<br>
+mein Herz ihnen folgend.<br>
+Fröstelnd zittern die leeren Äste,<br>
+kühl ist mir im Wind."</i></p>
+
+<h2>Sternzeichen - Der stolze Löwe</h2>
+
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_3.png" alt="Der stolze Löwe"/>
+
+<p>Jene, die im Monat Zhas geboren wurden, weisen für gewöhnlich eine große Verlässlichkeit auf. Freundschaft ist hochgeschätzt und Löwen suchen meist die Kameradschaft jener, denen sie wirklich vertrauen können und formen so Bande, die oft ein Leben lang halten. Sie sind aufrichtig und ehrenhaft, häufig mit rechtschaffenden Zügen, was sie dazu führt, Ritter oder Paladin zu werden. Einen loyalen Löwen als Freunde zu haben heißt, einen Kameraden für das gesamte Leben zu haben, der unerschütterlich an deiner Seite stehen wird und nicht zögert, dich mit einem ehrlichen Wort zu erinnern, solltest du vom gerechten Weg abkommen. Standhafte Löwen verfolgen entschlossen ihre Gründe und ihren Glauben, während die weniger Diziplinierten unter ihren Entschlüssen zu leiden haben. Hintergeht man einen Löwen, zieht es immensen Zorn nach sich und ist er einmal erzürnt, lässt er sich nicht mehr so leicht besänftigen.</p>
+
+<?php navBarBottom( "de_bck_23.php", "de_bck_25.php" ); ?>
 
 <?php include_footer(); ?>

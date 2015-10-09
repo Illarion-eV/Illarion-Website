@@ -20,7 +20,7 @@
 
 <p>Ushos, named after the creator goddess Ushara, is the last month of spring and is known as the month of sowing. Farmers plant most of their crops at this time of year and the fields around Runewick and Galmair will be freshly dug with seeds sown by the end of the month. In Galmair they celebrate the "Crocodile Feast" from the 3rd to 17th Ushos. This is a huge, long-lasting street festival in which the people wear animal masks and consume large amounts of alcoholic drinks. Frequently guards have to rescue drunk or even drowned people from the swamps and brooks around Galmair. In Gynk, birthplace of Don Valerio Guilianni, there is even a rumour that the Crocodile Feast was so named because it is a feast for the crocodiles who lurk the stagnant waterways.</p>
 
-<h2>Sign of the Zodiac - The Consistent Bear</h2>
+<h2>Sign of the Zodiac - The consistent Bear</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_4.gif" alt="The Consistent Bear"/>
 

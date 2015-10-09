@@ -10,18 +10,7 @@
 
 	<h2>Month: Eldas</h2>
 
-	<b>Meaning</b>
-	<p>People of this sign seem to be rather innocuous. They are reasonable, love books,
-	and avoid any possible aggression. Their vast discretion keeps them from interfering
-	with the lives of other people. They hate large crowds of people and would never
-	push into the foreground.</p>
+<p>People of this sign seem to be rather innocuous. They are reasonable, love books, and avoid any possible aggression. Their vast discretion keeps them from interfering with the lives of other people, even when their insight may be of such value. Prudent Owls are elusive creatures and would never push themselves to the foreground. The cultured individual may be born under this sign and are usually introverted, quietly studious and elect to avoid large gatherings.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Very cultured, reasonable </p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Unsociable, very introverted</p>
 </div>
 <?php include_short_footer(); ?>

@@ -10,17 +10,7 @@
 
 	<h2>Monat: Adras</h2>
 
-	<b>Beschreibung:</b>
-	<p>Rauschende Feste und guter Wein sind Vorlieben der Esel-Geborenen. Sie sind
-	gesellig, humorvoll und direkt. Oft sind sehr gute Musiker unter ihnen zu finden.
-	</p>
+<p>Diejenigen die unter dem Zeichen des eigenwilligen Esels geboren wurden, lieben ekstatische Feste und guten Wein. Sie sind sozial, humorvoll und geradeheraus, neigen jedoch auch zu Melancholie, wenn die Dinge nicht zu ihrem Vorteil laufen. Talentierte Musiker und Barden, besonders die berühmten Unterhalter der Elite, sind oft im Monat Adras geboren. Auch zählen viele lautstarke Trunkenbolde mit ihren weniger kultivierten Liedern zu diesen Reihen. Trotz ihrer vielen positiven Charaktereigenschaften neigen Esel dazu, rücksichtslos mit den Gefühlen anderer umzugehen, können egoistisch sein und oft auch in unpassender Gesellschaft offen ihre Meinung aussprechen. Aus nicht nachvollziehbaren Gründen, ist der Esel das häufigste Sternzeichen in Illarion.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>gute Unterhalter, musikalisch begabt</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>rücksichtslos in Bezug auf Gefühle anderer</p>
 </div>
 <?php include_short_footer(); ?>

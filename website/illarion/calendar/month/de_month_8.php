@@ -7,29 +7,9 @@
 
 	<h2>Monat des Fastens</h2>
 
-	<p>Der Monat Eldas wurde nach dem Schöpfungsgott Eldan benannt.</p>
-	<p>Dieser Monat ist in eigentlich allen Kulturen ein Monat der Ruhe und des
-	Gedenkens. Man besinnt sich auf das, was das Leben einem gegeben hat und gedenkt
-	denen, die im Leben weniger Glück hatten als man selbst. Es ist nicht unüblich, in
-	der Zeit des Eldas auf etwas, was einem lieb oder gewohnt geworden ist zu
-	verzichten. Dadurch soll sich der Wert einer, vielleicht schon alltäglich gewordenen
-	Sache, erneut vor Augen geführt werden.</p>
+<p>Eldas wurde nach dem Schöpfungsgott Eldan benannt. Dieser Monat ist in allen Kulturen ein Monat des Friedens und der Nachdenklichkeit. Die Leute denken über die Dinge nach, die ihnen das Leben geschenkt hat und erinnern sich in ihren Gebeten derer, die weniger Glück haben. Die Frommeren üben sich im Monat der Enthaltsamkeit in Abstinenz ihres Liebhabers oder eines geliebten Gegenstands, den sie besitzen, um sich während dieser Tage des Eldas an den Wert aller Dinge zu erinnern.</p>
 
-	<p>Halblinge feiern in der letzten Woche des Eldas das sogenannte "Erdhöhlenfest".
-	Es dient als Erinnerung an die Entbehrungen im Widerstand zur Zeit des Falls von
-	Firnismühle (-1777). Viele Halblinge, gerade auf dem Land in der Umgebung von
-	Firnismühle ehren diese Tage immer noch sehr traditionell, indem sie sich für eine
-	Woche in die Wälder der Umgebung zurückziehen und dort in selbst gebauten Erdhöhlen
-	übernachten. In dieser Woche ernähren sie sich ausschließlich von den Früchten der
-	Wälder.</p>
+<p>Die Halblinge aus Eibenthal feiern die letzte Woche des Eldas mit den sogenannten "Höhlentagen" und erinnern damit an den Widerstand während der Zeit des Niedergangs von Firnismühle. Traditionell ziehen sie sich für die Dauer der gesamten Woche in Wälder zurück und verbringen dort die Nächte in selbstgebauten Höhlen oder Gruben, sich ausschließlich von Früchten des Waldes ernährend, da jegliches Feuer verboten ist. Am Ende der Woche kehren sie in einer gerüsteten Prozession zurück und verursachen dabei großen Lärm, um die Wiedereinnahme der Gebiete zu symbolisieren, die einst von den Orks besetzt gewesen waren. Modernere Halblinge die in Städten leben, sowie die Oberschicht der Rasse, variieren diese Tradition, indem sie Zelte in ihren Gärten oder vielleicht einem Innenhof ihres Hauses aufstellen. Manchmal mag sogar ein Fleischgericht serviert werden, obwohl dieses dann mit viel Bedacht und großer Sorgfalt üppig mit Früchten und Pilzen dekoriert wird.</p>
 
-	<p>Es darf kein Feuer entzündet werden. Nach Abschluss der Woche ziehen sie in einer
-	Art Prozession wieder ins Dorf ein. Dabei wird viel Geschrei und Lärm gemacht und
-	die Teilnehmer der Prozession sind bewaffnet. Hierdurch wird die Rückeroberung der
-	von den Orks besetzten Gebiete symbolisiert. In den Städten und auch bei den höher
-	gestellten Halblingen hat es sich mit der Zeit eingebürgert, diese Woche meist im
-	Garten oder Innenhof des Hauses in jurtenähnlichen Zelten zu verbringen. Hier werden
-	zum Teil auch Fleischspeisen zu sich genommen, die aber dann in Form von Früchten
-	und Pilzen dekoriert sind.</p>
 </div>
 <?php include_short_footer(); ?>

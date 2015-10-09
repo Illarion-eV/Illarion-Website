@@ -11,11 +11,11 @@
 <h1>Elara - Goddess of Wisdom and Knowledge</h1>
 
 <?php cap(E); ?>
-<p>lara is the goddess of wisdom and knowledge. She is considered to be both wise and calm, yet her pensive attitude may sometimes distance her.  Just as Eldan did before her, she often seeks the solitude of a life as a hermit. When she has been seen, she has appeared as a tall and ageless woman, often surrounded by books and scrolls. Elara avoids big crowds where possible and dislikes spontaneous or crude actions.  Her restrained personality rejects wealth or any other kind of transitory merits, desiring the lasting value of learning and the preservation of knowledge in books. She favours those with dedication and may appear in disguise to offer insight to those in need and to help solve a difficult conundrum.</p>
+<p>lara is the goddess of wisdom and knowledge. She is considered to be both wise and calm, yet her pensive attitude may sometimes distance her.  Just as Eldan did before her, she often seeks the solitude of a life as a hermit. When she has been seen, she has appeared as a tall and ageless woman, often surrounded by books and scrolls. Elara avoids big crowds where possible and dislikes spontaneous or crude actions.  Her restrained personality rejects wealth or any other kind of transitory merits, desiring the lasting value of learning and the preservation of knowledge in books. She favours those with dedication and may appear in disguise to offer insight to those in need and to help solve a difficult conundrum.</p>
 
 <h2>Followers</h2>
 <p>Elara is one of the three patron gods of Runewick where a book is found dedicated as a shrine to her in the library. Her followers believe in the power of wisdom and knowledge. Self-discipline is an important part of life to those who revere Elara as they consider everything and everybody to fit into an ordered plan, no matter what people do. Most followers of Elara are learned individuals, often scholars, healers, druids, mages, or occasionally hermits. Students look to her for advice with their studies whilst others ask for ideas, better understanding or fair judgement. Some pray to be told great secrets, or even the meaning of life. Legend tells of one holy man who was told the meaning of life after fervent prayers. Unable to bear the truth he went mad and pleaded with Elara to take the knowledge from him. Once she took it back he died content and with a peaceful smile on his face.</p>
-<p>Those who follow Elara believe that when they die, the knowledge they have gained will be written on scrolls. Their life learnings lead them to answer three great questions regarding the reason for greed, the reason for violence, and the reason for suffering. Most followers who reach the position where they claim to be close to answering such questions are harmonious, righteous and pensive individuals.</p>
+<p>Those who follow Elara believe that when they die, the knowledge they have gained will be written on scrolls. Their life learnings lead them to answer three great questions regarding the reason for greed, the reason for violence, and the reason for suffering. Most followers who reach the position where they claim to be close to answering such questions are harmonious, righteous and pensive individuals.</p>
    
 <h2>Elos - Month of Magic</h2>
 
@@ -33,11 +33,11 @@ And their light will shine like a thousand suns to defy the darkness.<br>
 In the glistening brightness which they ignite, he may burn,<br> 
 lest his traces will be extinguished from the earth."</i></p>
 
-<h2>Sign of the Zodiac - The Wise Hind</h2>
+<h2>Sign of the Zodiac - The wise Hind</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_1.gif" alt="The Wise Hind"/>
 
-<p>Helpfulness and humility are a special characteristic of the wise Hinds. Although friendly to most who encounter them they are commonly shy and are likely to seek solitude, living quiet and secluded lives. Hinds gather wisdom by being very thoughtful people, carefully considering their actions and those of others. Despite their wisdom, however, it is not in their nature to be decisive and sometimes the Hind might agonise over the implications of the smallest of decisions for days.</p>
+<p>Helpfulness and humility are a special characteristic of the wise Hinds. Although friendly to most who encounter them they are commonly shy and are likely to seek solitude, living quiet and secluded lives. Hinds gather wisdom by being very thoughtful people, carefully considering their actions and those of others. Despite their wisdom, however, it is not in their nature to be decisive and sometimes the Hind might agonise over the implications of the smallest of decisions for days.</p>
 
 <?php navBarBottom( "us_bck_16.php", "us_bck_18.php" ); ?>
 

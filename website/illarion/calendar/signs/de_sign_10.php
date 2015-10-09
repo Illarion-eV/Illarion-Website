@@ -10,17 +10,7 @@
 
 	<h2>Monat: Malas</h2>
 
-	<b>Beschreibung:</b>
-	<p>Im Monat Malas Geborene sind ehrenvoll und schätzen oft den guten Kampf. Sie sind
-	stets mutig, würdevoll und hilfsbereit. Selten ruhen sie sich aus, sie sind
-	nachgiebig doch gleichzeitig edel und besitzen einen weiten Horizont.</p>
+<p>Die im Monat Malas Geborenen sind ehrenvoll und schätzen einen guten Kampf sehr. Mutige Wölfe sind immer wagemutig, würdevoll und hilfsbereit. Sie ruhen nur selten und arbeiten gut mit anderen zusammen, die dasselbe Ziel verfolgen. Sie sind entgegenkommend und folgen bereitwillig Befehlen, haben aber auch eine gewisse noble Seite, mit vielschichtigen Ansichten und einem breiten Horizont. Ihre ausgeprägten Moralvorstellungen und ansteckende Kampfeslust machen entschlossene Wölfe zu mächtigen Anführern ihres Rudels im Kampf. Oft werden sie jedoch stur und manchmal geht ihr wildes Temperament mit ihnen durch. Viele Hauptmänner und Generäle sind bekanntermaßen im Monat Malas geboren.</p>
 
-	<br />
-	<b>Positive Eigenschaften</b>
-	<p>ehrenwert, Kämpfernatur, zielstrebig</p>
-
-	<br />
-	<b>Negative Eigenschaften</b>
-	<p>oft stur, manchmal aufbrausend</p>
 </div>
 <?php include_short_footer(); ?>

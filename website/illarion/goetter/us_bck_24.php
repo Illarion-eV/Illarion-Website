@@ -33,7 +33,7 @@ My heart to follow.<br>
 Freezing, the empty branches shiver<br>
 I am freezing in the wind."</i></p>
 
-<h2>Sign of the Zodiac - The Pride Lion</h2>
+<h2>Sign of the Zodiac - The pride Lion</h2>
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_3.png" alt="The Pride Lion"/>
 

@@ -7,12 +7,7 @@
 
 	<h2>Monat der Freigiebigkeit</h2>
 
-	<p>Der zweite Monat des Sommers wurde nach Ronagan benannt. Dieser ist in Albar,
-	Gynk und Salkamar als der Gott der Schatten, der Heimlichkeit und der Diebe bekannt.
-	Ronagan wird bei den Serinjah als Gott der Freiheit, als Fischer und Jäger verehrt,
-	aber auch als Gott der Heimlichkeit und der Tricks.</p>
-	<p>In Gynk und Salkamar und sogar in den Städten Albars soll es geheime Treffen von
-	Ronagan-Anhängern geben - Diebesgilden - doch das ist ein unbewiesenes Gerücht,
-	welches seit Jahrhunderten wieder und wieder die Runde zieht.</p>
+<p>Ronas, der zweite Sommermonat, ist nach Ronagan benannt. Obwohl Ronagan in großen Teilen Albars, Gynks und Salkamars als Gott der Schatten, Geheimnisse und Diebe bekannt ist, wird Ronas von vielen als Monat der Großzügigkeit angesehen. Die Steppenvölker der Serinjah kennen Ronagan als Gott der Freiheit, Fischer und Jäger, aber auch als Gott der Geheimnisse und des Schwindels. Gerüchten zufolge, finden im Ronas regelmäßig in Galmair geheime Treffen von selbsternannten Ronaganjüngern oder Diebesgilden statt. Diese Gerüchte wurden nie bewiesen, halten sich jedoch seit Jahrzehnten hartnäckig und werden immer und immer wieder erzählt.</p>
+
 </div>
 <?php include_short_footer(); ?>

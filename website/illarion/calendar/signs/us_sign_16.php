@@ -10,18 +10,7 @@
 
 	<h2>Month: Mas</h2>
 
-	<b>Meaning</b>
-	<p>This winged, dragon-like, evil creature symbolizes those few who were born in the
-	month of Mas. Many unpredictable and grand tacticians, strategists, and warlords can
-	be found among them. They are considered to be underhand, cunning, and
-	aggressive.</p>
+<p>The winged, dragon-like Wyvern symbolises the few who are born in the short month of Mas. They are renowned for being unpredictable and many are great tacticians or strategists. Commanders, pirates, warlords, or even successful politicians can be found amongst them. Extremely driven, they are considered to be underhand, cunning, and aggressive in their pursuit of their ambitions. Tactical Wyverns are usually highly intelligent and use this to quickly manipulate and gain power over the simple minded. Bold, yet sometimes devious, Wyverns tend to chose unconventional, and sometimes spectacular, ways to reach goals.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Very intelligent, good strategists</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Aggressive, devious, powerhungry, unconventional</p>
 </div>
 <?php include_short_footer(); ?>

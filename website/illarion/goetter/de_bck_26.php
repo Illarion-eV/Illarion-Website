@@ -6,58 +6,35 @@
    include_header();
 ?>
 
-   <?php navBarTop( "de_bck_25.php","de_bck_10.php","de_bck_99.php" ); ?>
+<?php navBarTop( "de_bck_25.php","de_bck_10.php","de_bck_99.php" ); ?>
 
-   <h2>Moshran - Gott des Blutes und der Gebeine </h2>
+<h1>Moshran - Gott des Blutes und der Gebeine</h1>
 
-   <p>Wird angebetet um:<br />
-   Den Sieg bei gro&szlig;e Schlachten davonzutragen, Macht und Reicht&uuml;mer zu erlangen und gen&uuml;gend
-   Kraft, um Geister- und Totenbeschw&ouml;rungen durchzuf&uuml;hren. Er ist der blutr&uuml;nstige Kriegsgott der
-   Orks.</p>
+<?php cap(M); ?>
+<p>oshran ist der Gott des Blutes und der Knochen. Sein Name bleibt unter Vielen oft unausgesprochen, so groß ist die Angst vor ihm. Er wird oft als mächtiger und entschlossener Kriegsherr angesehen, mit großem taktischen Talent und Wissen über versteckte Geheimnisse. Von brennendem Wahnsinn geblendet, ist Moshran jedoch blutdürstig, kriegsliebend und schlechtgelaunt. Sein rauer Sinn für Humor und sein gnadenloser Charakter lassen denjenigen wenig Hoffnung, die ihn entäuschen oder jegliche Anzeichen von Schwäche zeigen. Es wird angenommen, dass er nur den Starken hilft und seine Führung zeichnet sich durch Gewalt und Schmerz aus, in der die Schwachen mit Abscheu behandelt werden. Wenn er auf der Welt wandelt, erscheint Moshran meistens als starker, orkischer Kriegsherr, dessen große Gestalt mit Blut bedeckt ist. Manchmal nimmt er auch die Gestalt eines mächtigen alten Lich an, um Totenbeschwörer in düstere, verborgene Weisheiten einzuführen. Er genießt einen guten Kampf und sieht das Verwenden von hinterlistigen Taktiken als etwas ehrenhaftes an. Die wenigen, die es wagen, sich auf diesen unberechenbaren Gott einzulassen, lernen schnell, dass er absolute Loyalität verlangt und den Korrupten beisteht, während er sicherstellt, dass die Schwachen auf ihrem Platz bleiben.</p>
 
-   <p>Pers&ouml;nlichkeit:<br />
-   Er ist vielerorts nur als der &quot;Blutgott&quot; oder &quot;Sch&auml;delgott&quot; bekannt, denn
-   viele vermeiden es, Ihn bei seinem wahren Namen zu nennen. Er ist gewaltt&auml;tig, m&auml;chtig,
-   blutr&uuml;stig, und kriegsliebend. Er verf&uuml;gt &uuml;ber ungeahntes, verborgenes Wissen und hat eine
-   eigene, sehr rauhe Art von Humor. Er hilft starken und skrupellosen Sterblichen, die V&ouml;lker zu
-   unterwerfen. Seine Weltordnung ist gepr&auml;gt von Gewalt und Schmerz.</p>
+<h2>Anhänger</h2>
+<p>Abgesehen von einigen Orkstämmen, wie beispielsweise dem in der Kantabiwüste nahe Cadomyrs, beten nur sehr wenige Moshran offen an. Sein Name wird von vielen, denen es gut geht, oft nicht einmal ausgesprochen, aus Furcht, dass ihnen dies Unglück bringen könnte. Er wird von den Orks als Gott des Krieges angebetet, die ihm an blutbesudelten Altären Lebendopfer darbringen. Außer diesen Orks jedoch, gelten seine anderen Anhänger als selten und generell böse. Seine Anhänger lechzen meist nach Rache, verheerenden Schlachten, schneller Macht, Zerstörung oder nekromantischen Zaubern. Die Rituale und Zeremonien, die seine Jünger durchführen um Krieg und mehr Blut heraufzubeschwören, beinhalten fast immer ein Opfer.</p>
 
-   <p>Auftreten:<br />
-   Er erscheint als m&auml;chtiger Ork, gekleidet mit den Insignien eines Heeresf&uuml;hrers, seine Kleidung
-   und die Waffen sind blutgetr&auml;nkt; oder als ein alter Lich der junge Totenbeschw&ouml;rer
-   unterrichtet.</p>
+<p>Nekromanten und Totenbeschwörer sprechen von Moshran als "der Herr der Knochen" und ersuchen von ihm verborgenes Wissen und Macht, etwas, das er ausschließlich zu einem sehr hohen Preis gewährt. Diese Jünger geben sich nicht mit Unsterblichkeit zufrieden, sie lüsten auch nach ewiger Macht. Im Gegenzug für Loyalität, unterrichtet und inspiriert Moshran seine Anhänger mit unheiligen Ritualen, die sie zum Ziel ihrer Pläne führen sollen. Wenn einer seiner Anhänger stirbt, wägt Moshran dessen Opfer, seine Effektivität und Brutalität ab. Sollte sich derjenige als würdig erweisen, wird der Anhänger als mächtiger Untoter in die Welt zurückgeschickt. Sollte dies nicht der Fall sein, wird Moshran denjenigen versklaven und für niedere Arbeiten missbrauchen. Mit der Zeit werden viele dieser Sklaven zu mächtigen dämonischen Kreaturen, die Moshran dann entfesselt. Einige wenige Auserwählte wurden gar zu Moshrans Assistenten. Die Machtverhältnisse unter Moshrans Anhängern sind in ständigem Wandel, da diese kontinuierlich Intrigen spinnen, um sich gegenseitig auszustechen. Diejenigen, die versagen und unter Moshran ihre Macht verlieren, werden durch ihn mit Klauen gezeichnet und statt freigelassen zu werden, erwartet sie nach ihrem Tod nur ewige Folter durch Moshran selbst.</p>
 
-   <p>Vorlieben/ Abneigungen:<br />
-   Er mag gewaltige, blutige Schlachten. Ihm sind auch unfaire Methoden recht, um zu gewinnen. Er
-   empf&auml;ngt gerne lebende Opfergaben und er hasst jede Art von Schw&auml;che.</p>
 
-   <p>Anh&auml;nger:<br />
-   Er ist der &quot;Blutgott&quot; vieler wilder, blutr&uuml;nstiger Ork-Kriegsst&auml;mme, die Ihm zu Ehren
-   Sterbliche opfern. Seine Altare sind blutgetr&auml;nkte Zeugnisse Seines Charakters und seine wenigen
-   Anh&auml;nger sind abgrundtief b&ouml;se Kreaturen. Die notwendigen Rituale, um Ihn zu bes&auml;nftigen, sind
-   grausam und blutig.<br />
-   Selbst seine Anh&auml;nger wagen es nicht Moshran offen beim Namen zu nennen, nur einige Ork Schamane
-   und gro&szlig;e Anf&uuml;hrer beten offen zu Ihm, doch verf&uuml;hren sie h&auml;ufig die eigenen Untertanen, indem
-   sie ihnen vorgaukeln, einem anderen Gott als Moshran zu huldigen. Die meisten Priester Moshrans
-   zeigen sich aber selten in der &Ouml;ffentlichkeit, da sie st&auml;ndig mit der Verfolgung durch
-   aufrichtige B&uuml;rger rechnen m&uuml;ssen. B&ouml;se Geister- und Totenbeschw&ouml;rern nennen Moshran den
-   &quot;Sch&auml;delgott&quot;.<br />
-   Sie versprechen sich von Moshran unbegrenzte, absolute Macht; anders als Chergas Anh&auml;nger,
-   welche nach dem ewigen Leben trachten. Moshran ruft jene die Ihm am w&uuml;rdigsten erscheinen zu
-   sich und lehrt sie schwarze Rituale und unheilige Zeremonien.<br />
-   Wenn Moshran&#39;s Anh&auml;nger sterben, z&auml;hlt er die Morde und Verbrechen eines jeden. Wenn der
-   Betroffene verabscheuungsw&uuml;rdig und grausam genug war, wird er als m&auml;chtiger Untoter zur&uuml;ck
-   gesandt, wo sie meist von aufrichtigen K&auml;mpfern verfolgt werden. Wenn sie wertlos f&uuml;r Moshran
-   waren, verdammt er ihre Seelen, zwischen den Welten zu wandeln und geringere Dienste zu
-   verrichten. Manche dieser Diener haben &uuml;ber die Zeit eine gro&szlig;e Machtf&uuml;lle angesammelt und
-   wurden zu D&auml;monen-gleichen Kreaturen. Unter ihnen brechen h&auml;ufig K&auml;mpfe aus oder Intrigen werden
-   gesponnen, um eine h&ouml;here Machtposition zu erlangen.<br />
-   Die Seelen derer, die Moshran zu t&auml;uschen wagten, sind auf Ewigkeit verdammt. Er brandmarkt sie
-   mit seinen Klauen des Todes und kennzeichnet sie so als sein alleiniges Eigentum. Sie m&ouml;gen
-   versuchen, sich zu verbergen oder Schutz zu suchen, doch werden sie dadurch keine Erl&ouml;sung
-   finden. Moshran ist geduldig. Eines Tages werden sie vor Ihm stehen und dann werden ihre Seelen
-   auf ewig gepeinigt, um dem Blutgott Vergn&uuml;gen zu bereiten.</p>
+<h2>Mas - Monat des Blutes</h2>
 
-   <?php navBarBottom( "de_bck_25.php", "de_bck_99.php" ); ?>
+<p>Mas, der kürzeste aller Monate, wurde nach Moshran, dem Gott des Blutes und der Knochen benannt. Der Monat des Blutes wird gefürchtet und bringt großes Unglück über ganz Illarion und andere zivilisierte Reiche, wie Albar, Salkamar und Gynk. Während Söldnertruppen diesen Monat als Grund für wilde Trinkgelage und Schlägereien nutzen mögen, feiern einige Orkstämme die Bluttage als Radosh. Der Monat wird voller Freude und Ehrerbietung erwartet, ehe die Orks sich der Ekstase wilder und ungestümer Kämpfe hingeben. Riesige Höhlen werden mit Fackeln und Feuern erleuchtet und zeremonielle Kämpfe werden ausgetragen; es wird allgemein geglaubt, dass viele Dispute und Streitereien in diesen Kämpfen geregelt werden. Generell bleiben die Kämpfe zeremoniell und enden nicht in all zu viel Blut, aber in vielen der am wenigsten zivilisierten Orkstämme, "schlachten sich die Krieger gegenseitig zu hauf ab".</p>
+
+<p>Von den wildesten Stämmen wird angenommen, dass sie immer noch Opferrituale durchführen - selten Gefangene anderer Stämme und Rassen, sondern oft Freiwillige aus ihren eigenen Reihen, die sich dem Opferdolch hingeben. Gerüchten nach glauben diese Stämme, dass ein solcher Tod die größte Ehre ist, die einem Krieger zuteil werden kann, da sie nach ihrem Tod mit Moshrans Segen in einem starken Körper wiedergeboren werden. Dieser Brauch, wie auch das "gegenseitige zu hauf Abschlachten", ist mittlerweile sehr selten geworden, da der Verlust starker Krieger und guter Jäger normalerweise ein großer Verlust für fast jeden Stamm ist. Für gewöhnlich werden heutzutage Tiere geschlachtet und den Göttern und Ahnen geopfert, ehe diese dann während den Festivitäten am Abend verspeist werden.</p>
+
+<p>Für viele Orks sind die Tage des Mas auch eine Zeit des Gedenkens eines ihrer größten Anführer in der Geschichte, Drokan Norotar. Er wird verehrt und ist hochangesehen als der Held und Märtyrer, der die friedlichen Orkstämme vereinte und den orkischen Völkern eine Stimme unter den anderen Rassen gab. Die Nachbarn seines Reiches trauten seinen friedlichen Absichten jedoch nicht und er wurde unter dem Vorwand von Verhandlungen gefangen genommen und ermordet. Das junge Reich zerbrach und was folgte, brachte den Orks großes Leid. Die Flammenorks verehren Drokan Norotar als Prophet, der den wilden Stämmen Frieden und Zivilisation brachte. Obwohl er selbst kein Flammenork war, hatten einige seiner Schriften großen Einfluss auf deren Kultur. Es gibt sogar eine Prophezeiung, nach der bald ein zweiter Drokan Norotar, oder gar eine Reinkarnation seiner Seele geboren werden soll, der die Stämme ein weiteres Mal vereinen wird. Um seine Erinnerung zu ehren, schmieren sich die wilden Stämme der Orks Asche ins Gesicht und ritzen ihre Hände und Kopfhaut auf, um zu symbolisieren, wie Drokan Norotar geköpft wurde und seine Hände abgetrennt wurden. Mit Blut verschmierten Gesichtern stimmen sie während der gesamten fünf Tage des Mas Klagelieder und Elegien an.</p>
+
+<p>Unter anderen Rassen hat das Fest oft die eher symbolische Tradition, bei der ohne viele Worte ein kleines Tier, normalerweise ein Hühnchen oder Hase geopfert wird. Dies wird in der Hoffnung getan, Moshran damit zu besänftigen und Kriege und Pech abzuwenden. Für gewöhnlich gibt es hierbei keine Gebete, sondern nur eine stille Geste. Nach dem Opfer verbleiben die Leute in ihren Häusern und hoffen, dass der Mas schnell vorbeizieht, sodass sie ein neues Jahr willkommen heißen können.</p>
+
+<h2>Sternzeichen - Der taktische Lindwurm</h2>
+
+<img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_16.png" alt="Der taktische Lindwurm"/>
+
+<p>Der geflügelte, drachenähnliche Lindwurm symbolisiert die wenigen, die im Monat Mas geboren sind. Sie sind weithin bekannt dafür, unvorhersehbar zu sein und viele gelten als große Taktiker oder Strategen. Kommandanten, Piraten, Kriegsherren, oder erfolgreiche Politiker sind unter ihnen zu finden. Von hohem Ehrgeiz, werden sie bei der Verfolgung ihrer Ziele als listig, gerissen und aggressiv angesehen. Taktische Lindwürmer sind für gewöhnlich hochintelligent und nutzen dies, um die von geringerem Verstand rasch zu manipulieren und Macht über sie zu gewinnen. Kühn, aber oft verschlagen, tendieren Lindwürmer dazu, ihre Ziele mit unkonventionellen und manchmal spektakulären Mitteln zu erreichen.</p>
+
+<?php navBarBottom( "de_bck_25.php", "de_bck_99.php" ); ?>
 
 <?php include_footer(); ?>

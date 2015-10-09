@@ -5,7 +5,6 @@
       "Kalender, Datum, Monat, Tierkreiszeichen",
       "",
       "lightwindow,lightwindow_de,calendar","prototype,effects,lightwindow");
-
       include_header();
 ?>
 
@@ -16,7 +15,7 @@ $illa_year=illa_date('y');
 $illa_today=illa_date('d');
 $illa_month=illa_date('m');
     // Monatsnamen und beschreibung
-    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Bras","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
+    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Brás","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
     $monate_desc=array("Monat der<br/> Magie","Monat der<br/> Fluten","Monat der<br/> Treue","Monat der<br/> Aussaat","Monat der<br/> Liebe","Monat der Freigiebigkeit","Monat der<br/> Opferung","Monat des<br/> Fastens","Monat des<br/> Handwerks","Monat des<br/> J&auml;gers","Monat der<br/> bildenden K&uuml;nste","Monat der<br/> Ernte","Monat der<br/> Trunkenheit","Monat der<br/> vier Winde","Monat des<br/> Gedenkens","Monat des<br/> Blutes");
 ?>
 
@@ -44,7 +43,7 @@ while ($this_month < 17)
 					
             <tr>
 	    <td colspan='3' rowspan='2'>
-	    <a href='signs/de_sign_<?php echo $this_month; ?>.php' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
+	    <a href='signs/de_sign_<?php echo $this_month; ?>.php' title='<?php echo $monate[$this_month-1] ?>' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
 	        <img src='images/image_<?php echo $this_month; ?>.gif' alt='Grafik'>
             </a>
 	    </td>
