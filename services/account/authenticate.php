@@ -6,6 +6,9 @@ namespace Illarion\Services\Account;
  * the required session data
  */
 
+use Slim\Route;
+use Slim\Slim;
+
 if (!defined('IN_ACCOUNT_SERVICE')) { exit(); }
 
 const LOGIN_RESULT_NO_DB_CONN = -1;
@@ -68,6 +71,7 @@ SQL;
 
 const AUTH_RESULT_NO_DB_CONN = -1;
 const AUTH_RESULT_INVALID_SESSION = -2;
+const SESSION_ID_CONDITION = ['sessionId' => '[a-f0-9]{32}'];
 
 /**
  * Authenticate the current session using the provided session id
@@ -122,6 +126,26 @@ SQL;
         return false;
     }
     return pg_affected_rows($result) > 0;
+}
+
+function getAuthMiddleware() {
+    $app = Slim::getInstance();
+    return function(Route $route) use ($app) {
+        $sessionId = $route->getParam('sessionId');
+        $result = authenticate($sessionId);
+        switch ($result) {
+            case AUTH_RESULT_NO_DB_CONN:
+                $app->halt(503, 'Database connection failed.');
+                break;
+            case AUTH_RESULT_INVALID_SESSION:
+                $app->halt(401, 'Session is invalid');
+                break;
+            default:
+                $env = $app->environment();
+                $env['illarion.accountId'] = $result;
+                break;
+        }
+    };
 }
 
 
