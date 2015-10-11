@@ -95,7 +95,7 @@ killed and restarted.</p>
 <p>The server is not running and can be started now.</p>
 <?php endif; ?>
 
-<p><a href="<?php echo Page::getSecureURL(); ?>/restart/us_restart.php">Refresh page</a></p>
+<p><a href="<?php echo Page::getSecureURL(); ?>/restart/us_restart_ts.php">Refresh page</a></p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -110,7 +110,7 @@ testserver is not running.</p>
 
 <?php else: ?>
 
-<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart.php" method="post">
+<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart_ts.php" method="post">
     <input type="submit" name="submit" value="Start Testserver"<?php echo ($running_server ? ' disabled="disabled" class="disabled"' : ''); ?> />
     <input type="hidden" name="mode" value="start" />
 </form>
@@ -131,7 +131,7 @@ is crashed.</p>
 
 <?php else: ?>
 
-<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart.php" method="post">
+<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart_ts.php" method="post">
     <input type="submit" name="submit" value="Shutdown testserver"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
     <input type="hidden" name="mode" value="stop" />
 </form>
@@ -152,7 +152,7 @@ cases the status diagnostic will show if you are able to use the shutdown or if 
 
 <?php else: ?>
 
-<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart.php" method="post">
+<form action="<?php echo Page::getSecureURL(); ?>/restart/us_restart_ts.php" method="post">
     <input type="submit" name="submit" value="Kill testserver"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
     <input type="hidden" name="mode" value="kill" />
 </form>
