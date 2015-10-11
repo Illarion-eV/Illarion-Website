@@ -5,7 +5,26 @@ use Illarion\Services\Account;
 
 $app = \Slim\Slim::getInstance();
 
-$app->post('/account', function() use ($app) {
+$app->post('/account/check/name', function() use ($app) {
+    $testedName = $app->request->post('name');
+
+    $app->response()->setStatus(200);
+    $app->view()->set('testName', $testedName);
+    $app->response()->headers->set('Content-Type', 'application/json');
+    $app->render('testAccountName.php');
+});
+
+$app->post('/account/check/email', function() use ($app) {
+    $testedMail = $app->request->post('email');
+
+    $app->response()->setStatus(200);
+    $app->view()->set('testMail', $testedMail);
+    $app->response()->headers->set('Content-Type', 'application/json');
+    $app->render('testAccountMail.php');
+});
+
+/* Register a new account */
+$app->put('/account', function() use ($app) {
     // TODO: To be continued
 });
 
