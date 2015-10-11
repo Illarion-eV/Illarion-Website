@@ -1,0 +1,21 @@
+Grüße %username%,
+
+mit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel
+Illarion vorgenommen.
+
+Die Adresse wird erst aktiviert, wenn du auf den folgenden Link drückst. Damit
+stimmst du gleichzeitig zu von uns E-Mails zu erhalten. Die Adresse wird in
+keinem Fall an Dritte weitergeben.
+
+E-Mail Adresse aktivieren:
+%activationUrl%
+
+Solltest du dich nicht registriert haben, dann kannst du diese E-Mail einfach
+ignorieren. Wir werden bis die E-Mail Adresse aktiviert ist, nichts weiter an
+diese Adresse schicken.
+
+Viele Grüße und willkommen bei Illarion,
+Das Team von Illarion
+http://illarion.org
+
+PS: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!

@@ -19,6 +19,7 @@
         "source": "https://github.com/Illarion-eV/Illarion-Website"
     },
     "require": {
-        "slim/slim": "2.6.2"
+        "slim/slim": "2.6.2",
+        "phpmailer/phpmailer": "v5.2.13"
     }
 }
