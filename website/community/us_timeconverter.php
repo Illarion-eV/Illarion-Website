@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 
 	Page::setTitle( 'Timeconverter' );
-	Page::setDescription( 'The page is used to calculate the reallife time to the illarion time' );
+	Page::setDescription( 'The page is used to calculate the real life time to the illarion time' );
 	Page::setKeywords( array( 'time', 'convert', 'converter' ) );
 
 	Page::setXHTML();
@@ -60,10 +60,10 @@
 	}
 ?>
 
-<h1>Timeconverter</h1>
+<h1>Time Converter</h1>
 
 <?php if ($show_result): ?>
-<h2>Result of the time convertion</h2>
+<h2>Result of the time conversion</h2>
 
 <table>
 	<colgroup>

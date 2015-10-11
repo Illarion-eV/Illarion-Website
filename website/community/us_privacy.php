@@ -23,7 +23,7 @@
 
 <h2>Purpose of Registering</h2>
 
-<p>We offer you the opportunity to sign up for our website. The information entered when signing up, as shown in the registration form (user name, email adress) is collected and stored solely for use by our website. When signing up for our website, we also store your IP address and the date and time you registered. This serves to protect us in the event a third party improperly and without your knowledge makes use of your data to sign up for our site. None of this information is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.</p>
+<p>We offer you the opportunity to sign up for our website. The information entered when signing up, as shown in the registration form (user name, email address) is collected and stored solely for use by our website. When signing up for our website, we also store your IP address and the date and time you registered. This serves to protect us in the event a third party improperly and without your knowledge makes use of your data to sign up for our site. None of this information is transferred to third parties. Nor is any of this information matched to any information that may be collected by other components of our website.</p>
 
 <h2>Newsletter</h2>
 

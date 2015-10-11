@@ -10,7 +10,7 @@ $charid = ( isset( $_GET['charid'] )  && is_numeric($_GET['charid']) ? (int)$_GE
 
 if (!$charid)
 {
-	exit('Error - Character ID was not transfered correctly.');
+	exit('Error - Character ID was not transferred correctly.');
 }
 
 $pgSQL =& Database::getPostgreSQL();

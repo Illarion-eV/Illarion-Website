@@ -19,7 +19,7 @@
 
 	if (!isset($_GET['coll'])):
 ?>
-<h1>Fanart</h1>
+<h1>Fan Art</h1>
 
 <h2>Overview</h2>
 

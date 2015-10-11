@@ -5,14 +5,14 @@ function checkEmail()
 	var submitElement = document.getElementById("submit");
 	if(!EMail(email))
 	{
-		addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail adress is invalid')) );
+		addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail address is invalid')) );
 		submitElement.className = 'disabled';
 		submitElement.disabled = true;
 		return true;
 	}
 	else
 	{
-		addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist in Ordnung' : 'E-Mail adress is okay')) );
+		addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist in Ordnung' : 'E-Mail address is okay')) );
 		submitElement.className = '';
 		submitElement.disabled = false;
 	}

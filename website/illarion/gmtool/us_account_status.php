@@ -15,7 +15,7 @@
 	$accid = ( is_numeric($_GET['id']) ? (int)$_GET['id'] : 0 );
 	if (!$accid)
 	{
-		Messages::add('Account ID was not transfered correctly', 'error');
+		Messages::add('Account ID was not transferred correctly', 'error');
 		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}

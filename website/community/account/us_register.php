@@ -15,7 +15,7 @@
 		else
 		{
 			Messages::add('Activation key is invalid.', 'error');
-			Messages::add('At times it happens that the browser sends the activation request twice because the website did not respond fast enougth. In this case the account is activated and the error message appears. Please just try to login into your account.', 'note');
+			Messages::add('At times it happens that the browser sends the activation request twice because the website did not respond fast enough. In this case the account is activated and the error message appears. Please just try to login into your account.', 'note');
 		}
 	}
 
@@ -31,7 +31,7 @@
 
 			if ( IllaUser::register() )
 			{
-				Messages::add('Register successfully. Now you get an email you can use to activate your account.', 'info');
+				Messages::add('Registration was successful. You will now receive an email to activate your account.', 'info');
 				Page::addPiwikGoal(1);
 				includeWrapper::includeOnce( Page::getRootPath().'/general/us_startpage.php' );
 				exit();

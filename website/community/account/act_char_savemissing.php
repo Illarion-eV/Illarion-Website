@@ -69,7 +69,7 @@
     		}
     		if ( $new_bodyheight < $limits['minbodyheight'] || $new_bodyheight > $limits['maxbodyheight'] )
     		{
-    		    Messages::add((Page::isGerman() ? 'Die gewählte Körpergröße ist außerhalb der Zulässigen Grenzen.' : 'The chosen bodyheight is out of Range').' '.$limits['minbodyheight'].'&lt;'.$new_bodyheight.'&lt;'.$limits['maxbodyheight'], 'error');
+    		    Messages::add((Page::isGerman() ? 'Die gewählte Körpergröße ist außerhalb der Zulässigen Grenzen.' : 'The chosen body height is out of Range').' '.$limits['minbodyheight'].'&lt;'.$new_bodyheight.'&lt;'.$limits['maxbodyheight'], 'error');
     		    return;
     		}
 

@@ -326,7 +326,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.heise.de">Link to the Heise.de homepage</a>
 	<br /><br />
-	Heise is known for the serious german computer magazine c't. On the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
+	Heise is known for the serious German computer magazine c't. On the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
 	you can find a number of screenshots and even the downloader.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
@@ -336,7 +336,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <p>
 	<a rel="external" href="http://www.computerbild.de">Link to the Computerbild homepage</a>
 	<br /><br />
-	Computerbild is one of the most popular german computer magazines. The editorial staff took their own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
+	Computerbild is one of the most popular German computer magazines. The editorial staff took their own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
 	.
 </p>
 <?php Page::insert_go_to_top_link(); ?>

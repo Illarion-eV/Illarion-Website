@@ -99,7 +99,7 @@ $(document).ready(function() {
 		var submitElement = $('#submit');
 		
 		if(!EMail(email)) {
-			addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail adress is invalid')) );
+			addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail address is invalid')) );
 			mailOK = false;
 			submitElement.addClass('disabled');
 			submitElement[0].disabled = true;
@@ -121,7 +121,7 @@ $(document).ready(function() {
 				}
 				lastEmailReceived = answer[0];
 				if (answer[1] == 1) {
-					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist in Ordnung' : 'E-Mail adress is okay')) );
+					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist in Ordnung' : 'E-Mail address is okay')) );
 					mailOK = true;
 					if (nameOK && passOK) {
 						submitElement.removeClass('disabled');
@@ -130,7 +130,7 @@ $(document).ready(function() {
 				}
 				else
 				{
-					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist vergeben' : 'E-Mail adress is taken')) );
+					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist vergeben' : 'E-Mail address is taken')) );
 					mailOK = false;
 					submitElement.addClass('disabled');
 					submitElement[0].disabled = true;

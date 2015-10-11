@@ -69,6 +69,7 @@
 			<dd><?php echo $account_data['acc_lastseen']; ?></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Last IP</dt>
+
 			<dd><?php echo $account_data['acc_lastip']; ?></dd>
 			<dd class="spacer">&nbsp;</dd>
 			<dt>Character Limit</dt>
