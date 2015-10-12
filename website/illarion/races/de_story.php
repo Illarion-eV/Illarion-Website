@@ -22,32 +22,6 @@
 	</ul>
 </div>
 
-<table class="center">
-<tr>
-<td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="männlicher Mensch"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="weiblicher Mensch"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="männlicher Elf"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="weiblicher Elf"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="männlicher Halbling"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="weiblicher Halbling"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_m.png" alt="männlicher Zwerg"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/dwarf_f.png" alt="weiblicher Zwerg"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="männlicher Ork"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="weiblicher Ork"/></td>
-<td> </td>
-<td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="Echsenmensch"/></td>
-</tr>
-</table>
-
 <?php cap(E); ?>
 
 <p>in Adler schraubt sich immer höher in den Himmel über Illarion. Auf der Suche nach Beute
