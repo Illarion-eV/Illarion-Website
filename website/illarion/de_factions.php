@@ -12,15 +12,10 @@
 
 <h2>Inhalt</h2>
 <ul>
-<li><a class="hidden" href="#0">Die Welt Illarion</a></li>
 <li><a class="hidden" href="#1">Cadomyr - Reich von Ruhm und Ehre</a></li>
 <li><a class="hidden" href="#2">Galmair - Reich des aufstrebenden Wohlstands</a></li>
 <li><a class="hidden" href="#3">Runewick - Reich der Weisheit und Magie</a></li>
 </ul>
-
-<h2><a name="0"></a>Die Welt Illarion</h2>
-
-<center><a href="<?php echo Page::getURL(); ?>/general/de_map_of_illarion.jpg"><img width="600" height="497" src="<?php echo $url; ?>/general/de_bigthumb_map_of_illarion.jpg" alt="Karte von Illarion"/></a></center>
 
 <h2><a name="1"></a>Cadomyr - Reich von Ruhm und Ehre</h2>
 
