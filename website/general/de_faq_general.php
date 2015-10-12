@@ -92,7 +92,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs7"></a><strong>Aus welchen Völkern und Klassen kann ich wählen?</strong></li>
 	
-		<p>In Illarion gibt es sechs spielbare <a href="http://illarion.org/illarion/races/de_story.php">Völker</a>: Menschen, Halblinge, Zwerge, Elfen, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
+		<p>In Illarion gibt es sechs spielbare <a href="http://illarion.org/illarion/races/de_races.php">Völker</a>: Menschen, Halblinge, Zwerge, Elfen, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
 		
 		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein Alleskönner.
 Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nur deine Vorstellungskraft beschränkt was deine Charaktere werden können.</p>

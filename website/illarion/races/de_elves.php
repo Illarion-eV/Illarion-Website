@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_humans.php','de_story.php','de_halflings.php' ); ?>
+<?php navBarTop( 'de_humans.php','de_races.php','de_halflings.php' ); ?>
 
 <h1>Elfen</h1>
 

@@ -92,7 +92,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs7"></a><strong>From what races and classes can I chose?</strong></li>
 	
-		<p>Illarion features six playable <a href="http://illarion.org/illarion/races/us_story.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
+		<p>Illarion features six playable <a href="http://illarion.org/illarion/races/us_races.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
 		
 		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. Except for magic, you can combine as many skills as you like, only your imagination limits what your characters may become.
 		

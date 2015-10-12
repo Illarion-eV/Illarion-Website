@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'us_elves.php','us_story.php','us_dwarves.php' ); ?>
+<?php navBarTop( 'us_elves.php','us_races.php','us_dwarves.php' ); ?>
 
 <h1>Haflings</h1>
 

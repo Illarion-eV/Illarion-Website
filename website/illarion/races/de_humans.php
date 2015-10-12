@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_story.php','de_story.php','de_elves.php' ); ?>
+<?php navBarTop( 'de_races.php','de_races.php','de_elves.php' ); ?>
 
 <h1>Menschen</h1>
 

@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_dwarves.php','de_story.php','de_lizards.php' ); ?>
+<?php navBarTop( 'de_dwarves.php','de_races.php','de_lizards.php' ); ?>
 
 <h1>Orks</h1>
 

@@ -6,7 +6,7 @@
 	include_header();
 ?>
 
-<?php navBarTop( 'de_halflings.php','de_story.php','de_orcs.php' ); ?>
+<?php navBarTop( 'de_halflings.php','de_races.php','de_orcs.php' ); ?>
 
 <h1>Zwerge</h1>
 
