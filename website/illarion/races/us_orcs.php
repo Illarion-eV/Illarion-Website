@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="male orc"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="female orc"/></td></tr></table>
 <?php cap(T); ?>
 <p>he average orc is a little shorter than a human. Their skin is greenish, and two of the lower jaw teeth are longer than the
 others, and reach a little over the lips.</p>

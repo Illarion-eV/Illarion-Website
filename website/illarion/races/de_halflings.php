@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="männlicher Halbling"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="weiblicher Halbling"/></td></tr></table>
 <?php cap(F); ?>
 <p>ür die Unwissenden sehen die Halblinge wie die Kinder der Menschen aus und tatsächlich haben sie einige Ähnlichkeiten
 mit der Statur der Menschen. Doch der augenfälligste Unterschied, neben ihrer geringen Körpergröße, sind ihre großen und

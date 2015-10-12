@@ -8,7 +8,7 @@
 
 <?php navBarTop( 'us_lizards.php','us_story.php','us_humans.php' ); ?>
 
-<h1>Races of the world</h1>
+<h1>Races of the world Illarion</h1>
 
 <div class="menu">
 	<ul class="menu_top">
@@ -21,7 +21,6 @@
 		<li class="end" />
 	</ul>
 </div>
-
 
 <?php cap(A); ?>
 

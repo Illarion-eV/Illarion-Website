@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/elf_m.png" alt="männlicher Elf"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/elf_f.png" alt="weiblicher Elf"/></td></tr></table>
 <?php cap(D); ?>
 <p>ie Elfen sind ein geheimnisvolles Volk, über die man nur sehr wenig in Erfahrung bringen kann. Sie vermeiden es,
 jedwede Art von Information nach außen dringen zu lassen und nur wenige hatten die Möglichkeit, einen tieferen Einblick

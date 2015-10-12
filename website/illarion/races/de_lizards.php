@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="Echsenmensch"/></td></tr></table>
 <?php cap(E); ?>
 <p>ine sehr erstaunliche Rasse sind die Echsenmenschen. Sie sind ein wenig kleiner als ein durchschnittlicher Mensch,
 laufen auf zwei Beinen und haben einen starken Schwanz, um Gleichgewicht und Beweglichkeit zu gewährleisten, wenn sie

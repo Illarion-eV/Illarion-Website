@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="male halfling"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="female halfling"/></td></tr></table>
 <?php cap(T); ?>
 <p>o the ignorant, Halflings look like the children of humans and indeed their appearance is similar to them. The most
 significant difference besides their small height are their big and hairy feet, which they proudly present in public as they

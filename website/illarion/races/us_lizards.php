@@ -22,7 +22,6 @@
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="lizard"/></td></tr></table>
 <?php cap(A); ?>
 <p> very astonishing race are the lizardmen. They are a little smaller than the average human, walk on two legs, with a strong
 tail to add balance and agility when running, jumping or swimming. Their anatomy is astonishing : they seem to be reptiles, but
