@@ -36,7 +36,7 @@ You are reading these lines, so it is very likely that my life has come to an en
 <p>Know that this place might be dangerous sometimes. I myself saw the huge club of an ogre from a far lesser distance than I ever wanted, and I must tell you it was a sight one hardly ever forgets. And when searching those old ruins for interesting artifacts, I disturbed the one or other dried-up mummy. Do not expect these undead things to stay asleep when you approach their coffins. So, you can use the ticket, travel to Illarion, start a new life, or just leave it be - the choice, dear nephew, is up to you.</p>
 
 <p>Yours sincerly,</p>
-<p>Your old uncle Todd</i></p>
+<p>Your old uncle Todd</p></i>
 	
 <?php insert_go_to_top_link(); ?>
 
