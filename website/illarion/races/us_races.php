@@ -22,57 +22,22 @@
 	</ul>
 </div>
 
-<?php cap(A); ?>
+<?php cap(G); ?>
 
-<p>n eagle is escalating higher and higher into the sky above Illarion. In search of prey, it
-scans the vast lands. It sees the Nameless Mountains, seemingly touching the firmament with their
-jagged peaks and snowcapped summits, guarding the wealthy merchant town of <a href="http://illarion.org/illarion/us_factions.php#2" class="eyecatcher">Galmair</a>. With its sharp eyes it recognizes the hidden entrances to
-the great Hammefall mines of the <a href="us_dwarves.php" class="eyecatcher">dwarves</a>, who dug deep into the heart of the mountain ranges to rob the
-cold stone of its most precious treasures.</p>
+<i><p>reetings, my nephew.
+You are reading these lines, so it is very likely that my life has come to an end. I have been a little ill lately, and people of my age tend to feel it when their time has come, thus I am writing this letter. I have not gathered many riches, and only a few things and some copper coins will remain after the burial costs have been covered. But I like to tell you about the place I came to like, and where I lived over the last seventeen years.</p>
 
-<p>The howling of the wolf packs is accompanying the eagle who is gliding down the flanks of the
-Nameless Mountains into the Sentry Forest. Here and there a group of Eldan Oaks rises above
-the continuous cover of tree tops and in the thick netting of branches the <a href="us_elves.php" class="eyecatcher">elven</a> dwellings are
-hard to recognise, as their existence seldom leaves marks in the untouched nature.</p>
+<p>Illarion is a land unlike every other I have come across in all my wanderings. Unlike those cities in Albar or Salkamar which you might have seen, and not only <a href="us_humans.php" class="eyecatcher">humans</a> like me and you do live here. You will also find stubborn <a href="us_dwarves.php" class="eyecatcher">dwarves</a>, <a href="us_elves.php" class="eyecatcher">elves</a>, cozy <a href="us_halflings.php" class="eyecatcher">halflings</a> and sometimes wild <a href="us_orcs.php" class="eyecatcher">orcs</a> - and even these strange <a href="us_lizards.php" class="eyecatcher">lizard</a> folk people who seem to hiss prayers all over the time.</p> 
 
-<p>Further on the eagle flies and on its way the mountains are replaced by a gentle rolling
-hilly landscape of Yewdale, only intermittent by the Anthil Brook, slowly streaming towards the sea. In this
-fertile area to the feet of the towers of the mysterious city of <a href="http://illarion.org/illarion/us_factions.php#3" class="eyecatcher">Runewick</a>, the cottages of the <a href="us_halflings.php" class="eyecatcher">halflings</a> can be found, whose dwellings are surrounded by well maintained gardens and fields.</p>
+<p>Illarion is located beyond dozens of horizons, so you will indeed have to travel by ship to reach this interesting land. Don't worry about the costs of the trip, you will find a ticket in the small package which should have come with my letter, along with a few copper coins. Those may not be many, but perhaps enough for you to start a new life over here - as far as I heard, your business did not turn out to go far too well anyhow.</p>
 
-<?php cap(E); ?>
+<p>So you will find a small <a href="us_halflings.php" class="eyecatcher">halfling</a> settlement called Yewdale in the west of this land, a few <a href="us_orcs.php" class="eyecatcher">orcs</a> in the scorching Kantabi desert, a <a href="us_orcs.php" class="eyecatcher">dwarven</a> mine is in the mountains just a few miles away from here, and there is even a <a href="us_elves.php" class="eyecatcher">elven</a> outpost in a dark forest nearby. Where to find the <a href="us_lizards.php" class="eyecatcher">lizards</a> I do not know, but I'd start my search at the shore.</p>
 
-<p>re long the eagle reaches the endless wastelands and inhospitable Kantabi desert. Few and far
-between a column of smoke rises into the sky, testifying the dwellings and campgrounds of the
-<a href="us_orcs.php" class="eyecatcher">orcs</a>. Their battle cries echo far across the plains and everyone hearing their shouts is well
-advised to enter their realm with great care.</p>
+<p>Know that this place might be dangerous sometimes. I myself saw the huge club of an ogre from a far lesser distance than I ever wanted, and I must tell you it was a sight one hardly ever forgets. And when searching those old ruins for interesting artifacts, I disturbed the one or other dried-up mummy. Do not expect these undead things to stay asleep when you approach their coffins. So, you can use the ticket, travel to Illarion, start a new life, or just leave it be - the choice, dear nephew, is up to you.</p>
 
-<p>Finally the eagle reaches the windswept coast and comes across the big city of the proud
-<a href="us_humans.php" class="eyecatcher">humans</a> of <a href="http://illarion.org/illarion/us_factions.php#1" class="eyecatcher">Cadomyr</a>, on which walls and battlements the flags flap in the wind. Between the towers and roofs it recognizes the buzz of activity filling the market place and the sunbeams are reflected by
-the armour of the knights riding on horse back and trying to find their way through the crowd.</p>
-
-<p>Starting from the harbour the eagle follows the huge merchant ships setting out on their
-perilous trips across the sea. Above the rolling waves it recognizes the dim outline of the
-great praying halls, which were built by the Lizardmen deep below the surface. They live in an
-element which is alien to the eagle and while it circles in the sky the <a href="us_lizards.php" class="eyecatcher">lizardmen</a> are gliding
-gently through the sea and only their glistening scales can sometimes be seen through the
-water.</p>
-
-<?php cap(T); ?>
-
-<p>he world of Illarion is filled with unexplainable wonders and mysterious places, unutterable
-horrors and dangerous locations. Out of the dark past demons and monsters arise, longing for the
-lives of the mortals. Therefore it is not astonishing that in this magical world in which
-everyone's destiny is fading, the races seek refuge and comfort with the <a href="http://illarion.org/illarion/goetter/us_bck_10.php" class="eyecatcher">Gods</a>. Sixteen deities
-determine the life in Illarion and exert influence on everything that proves to be beneficial to
-them. In consequence, wars have been started and reconciled, whole families seized power and were
-overthrown. May it be that there are a few madmen who renounce their existence and defy their
-will, but there is no god, who is unaware of the existence of each living being, no matter how
-insignificant. It would be unwise to ignore such facts.</p>
-
-<p>For the eagle this world is truly alien. Nevertheless it continues to circle above Illarion.
-But from far up in the sky, it enjoys the broad view of all places and with its sharp eyes it can
-see everything happening on this world.</p>
-
+<p>Yours sincerly,</br>
+Your old uncle Todd</i></p>
+	
 <?php insert_go_to_top_link(); ?>
 
 <?php include_footer(); ?>
