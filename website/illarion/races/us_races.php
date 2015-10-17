@@ -8,7 +8,7 @@
 
 <?php navBarTop( 'us_lizards.php','us_races.php','us_humans.php' ); ?>
 
-<h1>Races of the world Illarion</h1>
+<h1>Races of Illarion</h1>
 
 <div class="menu">
 	<ul class="menu_top">

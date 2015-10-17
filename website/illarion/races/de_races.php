@@ -8,7 +8,7 @@
 
 <?php navBarTop( 'de_lizards.php','de_races.php','de_humans.php' ); ?>
 
-<h1>Die Völker der Welt Illarion</h1>
+<h1>Die Völker von Illarion</h1>
 
 <div class="menu">
 	<ul class="menu_top">
