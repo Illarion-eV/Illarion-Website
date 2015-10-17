@@ -34,7 +34,7 @@
 
 <p>Know that this place can also be terribly dangerous at times though. I myself saw the huge fist of a golem at far closer proximity than one would ever wish for, and I must tell you it was a sight one never forgets. Also beware when searching ancient ruins for interesting artefacts, I have disturbed the occasional dried-up mummy. Do not expect these undead beings to stay asleep when you rummage around their coffins.</p>
 
-<p>So, you can use the ticket, travel to Illarion, seek adventure, and start a new life, or just leave it be - the choice, dear nephew, is entirely yours.</p>
+<p>So, you can use the ticket, travel to <a href="http://illarion.org/illarion/us_world.php" class="eyecatcher">Illarion</a>, seek adventure, and start a new life, or just leave it be - the choice, dear nephew, is entirely yours.</p>
 
 <p>In any case I wish you well my boy.</p>
 <p>Your old uncle Todd</p></i>
