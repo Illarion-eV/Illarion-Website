@@ -22,22 +22,23 @@
 	</ul>
 </div>
 
-<?php cap(G); ?>
+<?php cap(M); ?>
 
-<i><p>reetings, my nephew.
-You are reading these lines, so it is very likely that my life has come to an end. I have been a little ill lately, and people of my age tend to feel it when their time has come, thus I am writing this letter. I have not gathered many riches, and only a few things and some copper coins will remain after the burial costs have been covered. But I like to tell you about the place I came to love, and where I lived over the last seventeen years.</p>
+<i><p>y dear nephew,</p>
 
-<p>It is unlike the lands of Albar or Salkamar, which you may have seen, and not only <a href="us_humans.php" class="eyecatcher">humans</a> like you and I live here. You will also find stubborn <a href="us_dwarves.php" class="eyecatcher">dwarves</a>, wise <a href="us_elves.php" class="eyecatcher">elves</a>, cozy <a href="us_halflings.php" class="eyecatcher">halflings</a> and sometimes wild <a href="us_orcs.php" class="eyecatcher">orcs</a> - and even these strange <a href="us_lizards.php" class="eyecatcher">lizard</a> folk people who seem to hiss prayers all over the time.</p> 
+<p>You are reading these lines, so it is very likely that my life has come to an end. I have been feeling a little ill lately, and people of my age tend to know when their time has come, thus I write you this letter. I have not gathered many riches, and only the odd keepsake and a few coins will come to you after the burial costs have been covered. I want to tell you, however, of this place I have come to love and call home these past seventeen years.</p>
 
-<p>Illarion is located beyond dozens of horizons, so you will indeed have to travel by ship to reach this interesting land. Don't worry about the costs of the trip, you will find a ticket in the small package which should have come with my letter, along with a few copper coins. Those may not be many, but perhaps enough for you to start a new life over here - as far as I heard, your business did not turn out to go far too well anyhow.</p>
+<p><a href="http://illarion.org/illarion/us_world.php" class="eyecatcher">Illarion</a> is located beyond a dozen horizons across the Great Ocean, so you will indeed need to be prepared to sail by ship to reach this fascinating land. Don't worry about the cost of the trip, you will find a ticket in the small package which should have come with my letter, along with a few silver coins. Alas there may not be too many coins, but perhaps enough for you to start a new life over here as I heard your latest business venture did not turn out too well.</p>
 
-<p>So you will find a small <a href="us_halflings.php" class="eyecatcher">halfling</a> settlement called Yewdale in the west of this land, a few <a href="us_orcs.php" class="eyecatcher">orcs</a> in the scorching Kantabi desert, a <a href="us_orcs.php" class="eyecatcher">dwarven</a> mine is in the mountains just a few miles away from here, and there is even an <a href="us_elves.php" class="eyecatcher">elven</a> outpost in a dark forest nearby. Where to find the <a href="us_lizards.php" class="eyecatcher">lizards</a> I do not know, but I'd start my search at the shore.</p>
+<p>You will find <a href="http://illarion.org/illarion/us_world.php" class="eyecatcher">Illarion</a> vastly different to the lands of Albar, Salkamar and Gynk that you are familiar with. Three realms, <a href="http://illarion.org/illarion/us_factions.php#1" class="eyecatcher">Cadomyr</a>, <a href="http://illarion.org/illarion/us_factions.php#2" class="eyecatcher">Galmair</a> and <a href="http://illarion.org/illarion/us_factions.php#3" class="eyecatcher">Runewick</a> dominate the land but not only <a href="us_humans.php" class="eyecatcher">humans</a> like you and I live here. Stubborn <a href="us_dwarves.php" class="eyecatcher">dwarves</a> mine the Nameless Mountains and wise <a href="us_elves.php" class="eyecatcher">elves</a> inhabit the dense forests. In the southeast you will find a small and homely <a href="us_halflings.php" class="eyecatcher">halfling</a> settlement called Yewdale, whilst wild <a href="us_orcs.php" class="eyecatcher">orcs</a> roam the Kantabi Desert. Even some strange <a href="us_lizards.php" class="eyecatcher">lizards</a> folk who seem to hiss prayers all the time frequent these shores.</p>
 
-<p>Know that this place might be dangerous sometimes. I myself saw the huge club of an ogre from a far lesser distance than I ever wanted, and I must tell you it was a sight one hardly ever forgets. And when searching those old ruins for interesting artifacts, I disturbed the one or other dried-up mummy. Do not expect these undead things to stay asleep when you approach their coffins. So, you can use the ticket, travel to Illarion, start a new life, or just leave it be - the choice, dear nephew, is up to you.</p>
+<p>Know that this place can also be terribly dangerous at times though. I myself saw the huge fist of a golem at far closer proximity than one would ever wish for, and I must tell you it was a sight one never forgets. Also beware when searching ancient ruins for interesting artefacts, I have disturbed the occasional dried-up mummy. Do not expect these undead beings to stay asleep when you rummage around their coffins.</p>
 
-<p>Yours sincerly,</p>
+<p>So, you can use the ticket, travel to Illarion, seek adventure, and start a new life, or just leave it be - the choice, dear nephew, is entirely yours.</p>
+
+<p>In any case I wish you well my boy.</p>
 <p>Your old uncle Todd</p></i>
-	
+
 <?php insert_go_to_top_link(); ?>
 
 <?php include_footer(); ?>
