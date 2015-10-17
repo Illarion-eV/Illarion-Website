@@ -24,7 +24,7 @@
 
 <?php cap(S); ?>
 
-<i><p>eid gegrüsset, werter Neffe.</p>
+<i><p>eid gegrüßt, werter Neffe.</p>
 <p>Da ihr nun diese Zeilen lest, ist es wahrscheinlich, dass mein Leben sein Ende fand. Ich war ein wenig krank in den letzten Tagen, und jene, die ein solches Alter erreichten wie ich es tat, pflegen zu verspüren, wenn ihre Zeit gekommen ist. Drum sei es, dass ich diesen Brief nun verfasse. Ich sammelte nicht viele Reichtümer, welche ich Euch hinterlassen könnte, nur ein paar Dinge und Kupfermünzen mögen bleiben, sobald der Totengräber bezahlt ist. Doch möchte ich euch berichten von jenem Orte, welchen ich zu schätzen lernte, und an welchem ich die letzten siebzehn Jahre zu leben pflegte.</p>
 
 <p><a href="http://illarion.org/illarion/de_world.php" class="eyecatcher">Illarion</a> liegt hinter dutzenden Horizonten an anderen Ufern des Großen Ozeans, also werdet Ihr per Schiff reisen müssen, um dieses interessante Land zu erreichen. Sorgt Euch nicht um die Reisekosten, denn anbei solltet Ihr ein Dokument und einige Silberstücke finden, welche Euch die Überfahrt ermöglichen werden. Es mögen nicht viele Münzen sein, doch sollte es reichen, um hier ein neues Leben zu beginnen. Wie ich erfahren musste, liefen Eure Geschäfte nicht zu Eurem Erhoffen.</p>
