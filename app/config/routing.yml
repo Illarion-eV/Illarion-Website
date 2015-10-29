@@ -1,0 +1,4 @@
+illarion_security:
+    resource: "@IllarionSecurityBundle/Resources/config/routing.yml"
+    prefix:   /
+
