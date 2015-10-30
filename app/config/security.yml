@@ -5,13 +5,15 @@ security:
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
         illarion:
-            id: illarion_security_user_provider
-        in_memory:
-            memory: ~
+            entity:
+                class: IllarionSecurityBundle:Accounts\Account
+                property: accLogin
+        #in_memory:
+        #    memory: ~
 
     encoders:
-        Illarion\SecurityBundle\Security\User\IllarionUser:
-            id: illarion_security_user_provider
+        Illarion\SecurityBundle\Entity\Accounts\Account:
+            id: illarion_security_password_encoder
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -23,8 +25,14 @@ security:
             anonymous: ~
             # activate different ways to authenticate
 
-            # http_basic: ~
+            http_basic: ~
             # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+            provider: illarion
+
+    access_control:
+        # Authenticated access is required for the account system
+        - { path: ^/account, roles: ROLE_USER }

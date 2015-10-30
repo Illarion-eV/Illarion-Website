@@ -1,6 +1,3 @@
 services:
     illarion_security_password_encoder:
         class: Illarion\SecurityBundle\Security\Password\IllarionPasswordEncoder
-
-    illarion_security_user_provider:
-        class: Illarion\SecurityBundle\Security\User\IllarionUserProvider

@@ -1,11 +1,13 @@
 <?php
 
 namespace Illarion\SecurityBundle\Entity\Accounts;
+use Symfony\Component\Security\Core\User\EquatableInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Account
  */
-class Account
+class Account implements UserInterface, EquatableInterface
 {
     /**
      * @var integer
@@ -253,6 +255,50 @@ class Account
     public function getAccLang()
     {
         return $this->accLang;
+    }
+
+    public function isEqualTo(UserInterface $user)
+    {
+        if (!$user instanceof Account) {
+            return false;
+        }
+
+        if ($this->getPassword() !== $user->getPassword()) {
+            return false;
+        }
+
+        if ($this->getSalt() !== $user->getSalt()) {
+            return false;
+        }
+
+        if ($this->getUsername() !== $user->getUsername()) {
+            return false;
+        }
+        return true;
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    public function getPassword()
+    {
+        return $this->getAccPasswd();
+    }
+
+    public function getSalt()
+    {
+        return '$1$illarion$';
+    }
+
+    public function getUsername()
+    {
+        return $this->getAccLogin();
+    }
+
+    public function eraseCredentials()
+    {
     }
 }
 
