@@ -19,6 +19,7 @@ vendor/*
 /app/SymfonyRequirements.php
 /app/check.php
 /website/bundles
+/bin
 *.phar
 .idea/*
 *.iml

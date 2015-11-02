@@ -35,11 +35,12 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/rest-bundle": "1.7.2",
         "jms/serializer-bundle": "1.0.0",
-        "packagist/yuicompressor-bin": "v2.4.8",
-        "symfony/translation": "v2.7.6"
+        "packagist/yuicompressor-bin": "v2.4.8"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "phpunit/phpunit": "~5.0",
+        "phpunit/php-code-coverage": "dev-master#b8436b000263f6d72fbad1d36890e247ce84857e"
     },
     "scripts": {
         "post-install-cmd": [
