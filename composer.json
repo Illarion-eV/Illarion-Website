@@ -33,9 +33,10 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "friendsofsymfony/rest-bundle": "1.7.2",
-        "jms/serializer-bundle": "1.0.0",
-        "packagist/yuicompressor-bin": "v2.4.8"
+        "friendsofsymfony/rest-bundle": "~1.7",
+        "jms/serializer-bundle": "~1.0",
+        "packagist/yuicompressor-bin": "~2.4",
+        "nelmio/api-doc-bundle": "~2.10"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

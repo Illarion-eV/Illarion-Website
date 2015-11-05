@@ -1,18 +1,18 @@
 <?php
 
-namespace Illarion\SecurityBundle\Entity\Accounts;
-use Symfony\Component\Security\Core\User\EquatableInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
+namespace Illarion\DatabaseBundle\Entity\Accounts;
+
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Account
  */
-class Account implements UserInterface, EquatableInterface
+class Account
 {
     /**
      * @var integer
      */
-    private $id;
+    private $accId;
 
     /**
      * @var string
@@ -54,15 +54,36 @@ class Account implements UserInterface, EquatableInterface
      */
     private $accLang;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $illarionServerChars;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $testServerChars;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $devServerChars;
+
+    public function __construct()
+    {
+        $this->illarionServerChars = new ArrayCollection();
+        $this->testServerChars = new ArrayCollection();
+        $this->devServerChars = new ArrayCollection();
+    }
 
     /**
      * Get id
      *
      * @return integer
      */
-    public function getId()
+    public function getAccId()
     {
-        return $this->id;
+        return $this->accId;
     }
 
     /**
@@ -75,7 +96,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccLogin($accLogin)
     {
         $this->accLogin = $accLogin;
-    
+
         return $this;
     }
 
@@ -99,7 +120,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccPasswd($accPasswd)
     {
         $this->accPasswd = $accPasswd;
-    
+
         return $this;
     }
 
@@ -123,7 +144,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccEmail($accEmail)
     {
         $this->accEmail = $accEmail;
-    
+
         return $this;
     }
 
@@ -147,7 +168,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccRegisterdate($accRegisterdate)
     {
         $this->accRegisterdate = $accRegisterdate;
-    
+
         return $this;
     }
 
@@ -171,7 +192,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccLastip($accLastip)
     {
         $this->accLastip = $accLastip;
-    
+
         return $this;
     }
 
@@ -195,7 +216,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccState($accState)
     {
         $this->accState = $accState;
-    
+
         return $this;
     }
 
@@ -219,7 +240,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccMaxchars($accMaxchars)
     {
         $this->accMaxchars = $accMaxchars;
-    
+
         return $this;
     }
 
@@ -243,7 +264,7 @@ class Account implements UserInterface, EquatableInterface
     public function setAccLang($accLang)
     {
         $this->accLang = $accLang;
-    
+
         return $this;
     }
 
@@ -257,48 +278,16 @@ class Account implements UserInterface, EquatableInterface
         return $this->accLang;
     }
 
-    public function isEqualTo(UserInterface $user)
-    {
-        if (!$user instanceof Account) {
-            return false;
-        }
-
-        if ($this->getPassword() !== $user->getPassword()) {
-            return false;
-        }
-
-        if ($this->getSalt() !== $user->getSalt()) {
-            return false;
-        }
-
-        if ($this->getUsername() !== $user->getUsername()) {
-            return false;
-        }
-        return true;
+    public function getIllarionServerChars() {
+        return $this->illarionServerChars;
     }
 
-    public function getRoles()
-    {
-        return ['ROLE_USER'];
+    public function getTestServerChars() {
+        return $this->testServerChars;
     }
 
-    public function getPassword()
-    {
-        return $this->getAccPasswd();
-    }
-
-    public function getSalt()
-    {
-        return '$1$illarion$';
-    }
-
-    public function getUsername()
-    {
-        return $this->getAccLogin();
-    }
-
-    public function eraseCredentials()
-    {
+    public function getDevServerChars() {
+        return $this->devServerChars;
     }
 }
 

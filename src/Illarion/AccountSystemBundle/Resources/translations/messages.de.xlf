@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>The name is good.</source>
+                <target state="translated">Der Name ist in Ordnung.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>This account is already in use.</source>
+                <target state="translated">Dieser Name ist bereits in Verwendung.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>This e-mail address is good.</source>
+                <target state="translated">Die E-Mail Adresse ist in Ordnung.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>This e-mail address is already in use.</source>
+                <target state="translated">Diese E-Mail Adresse ist bereits in Verwendung.</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Missing data. This function requires either the "name" or the "email" field to be populated.</source>
+                <target state="translated">Fehlende Daten. Diese Funktion erwartet, dass entweder das "name" oder das "email" Feld gefüllt ist.</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>The validation of the submitted values failed.</source>
+                <target state="translated">Die Validierung der übertragenen Daten ist fehlgeschlagen.</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Missing data. This function requires at least the name and the password field to be populated.</source>
+                <target state="translated">Fehlende Daten. Diese Funktion erwartet, dass zumindest Name und Passwort eingetragen sind.</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Account created.</source>
+                <target state="translated">Account wurde erstellt.</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>The name or the E-Mail address is already used.</source>
+                <target state="translated">Der Name oder die E-Mail-Adresse ist bereits in Verwendung.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

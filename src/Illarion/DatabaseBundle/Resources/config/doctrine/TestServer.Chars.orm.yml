@@ -1,0 +1,55 @@
+Illarion\DatabaseBundle\Entity\TestServer\Chars:
+    type: entity
+    table: chars
+    schema: testserver
+    repositoryClass: Illarion\DatabaseBundle\Entity\TestServer\CharsRepository
+    id:
+        chrPlayerid:
+            type: integer
+            column: chr_playerid
+            id: true
+    fields:
+        chrAccid:
+            type: integer
+            column: chr_accid
+        chrStatus:
+            type: integer
+            column: chr_status
+        chrStatustime:
+            type: bigint
+            column: chr_statustime
+        chrStatusgm:
+            type: integer
+            column: chr_statusgm
+        chrStatusreason:
+            type: string
+            length: '250'
+            column: chr_statusreason
+        chrLastip:
+            type: string
+            length: '39'
+            column: chr_lastip
+        chrOnlinetime:
+            type: bigint
+            column: chr_onlinetime
+        chrLastsavetime:
+            type: bigint
+            column: chr_lastsavetime
+        chrRace:
+            type: integer
+            column: chr_race
+        chrSex:
+            type: smallint
+            column: chr_sex
+        chrName:
+            type: string
+            length: '50'
+            column: chr_name
+    manyToOne:
+        account:
+            targetEntity: Illarion\DatabaseBundle\Entity\Accounts\Account
+            joinColumn:
+                name: chr_accid
+                referencedColumnName: acc_id
+            inversedBy: testServerChars
+    lifecycleCallbacks: {  }

@@ -16,9 +16,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new \JMS\SerializerBundle\JMSSerializerBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+            new Illarion\DatabaseBundle\IllarionDatabaseBundle(),
             new Illarion\SecurityBundle\IllarionSecurityBundle(),
+            new Illarion\AccountSystemBundle\IllarionAccountSystemBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

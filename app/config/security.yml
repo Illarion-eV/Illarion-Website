@@ -5,15 +5,13 @@ security:
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
         illarion:
-            entity:
-                class: IllarionSecurityBundle:Accounts\Account
-                property: accLogin
+            id: illarion.security.user.provider
         #in_memory:
         #    memory: ~
 
     encoders:
-        Illarion\SecurityBundle\Entity\Accounts\Account:
-            id: illarion_security_password_encoder
+        Illarion\SecurityBundle\Security\User\User:
+            id: illarion.security.password.encoder
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -33,6 +31,11 @@ security:
 
             provider: illarion
 
+    role_hierarchy:
+        ROLE_GAMEMASTER: ROLE_PLAYER
+
     access_control:
         # Authenticated access is required for the account system
-        - { path: ^/account, roles: ROLE_USER }
+        - { path: ^/account/account,       roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [POST] } # Create Accounts
+        - { path: ^/account,               roles: ROLE_PLAYER }
+        - { path: ^/account/account/check, roles: IS_AUTHENTICATED_ANONYMOUSLY } # Get Account information
