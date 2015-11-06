@@ -259,6 +259,34 @@ class AccountController extends FOSRestController implements ClassResourceInterf
     }
 
     /**
+     * Remove the currently logged in account completely.
+     *
+     * @return View
+     * @RestAnnotations\Delete("/account")
+     * @RestAnnotations\View()
+     * @ApiDoc(
+     *     resource = true,
+     *     description = "Delete a existing account",
+     *     statusCodes = {
+     *         200 = "Returned in case the account was successfully deleted."
+     *     }
+     * )
+     */
+    public function deleteAction()
+    {
+        $usr = $this->get('security.token_storage')->getToken()->getUser();
+        $account = $usr->getAccount();
+
+        $em = $this->getDoctrineManager();
+        $em->remove($account);
+        $em->flush();
+
+        $translator = $this->get('translator');
+
+        return $this->view()->create($translator->trans("Account deleted."), 200);
+    }
+
+    /**
      * Check if a account name and/or a e-mail address is still free to be used. While both fields are set as optional,
      * at least one of the two has to be set. The request is considered as illegal in case no data is attached to it.
      *

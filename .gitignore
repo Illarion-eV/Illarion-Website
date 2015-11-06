@@ -12,12 +12,13 @@ website/ssl/shared
 website/php_errors.log
 cache/*
 website/sync.ffs_db
-vendor/*
+/vendor
 /app/config/parameters.yml
 /app/cache
 /app/logs
 /app/SymfonyRequirements.php
 /app/check.php
+/app/bootstrap.php.cache
 /website/bundles
 /bin
 *.phar
