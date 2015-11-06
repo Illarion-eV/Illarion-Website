@@ -2,6 +2,7 @@
 
 namespace Illarion\AccountSystemBundle\Controller;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\DBAL\Exception\TableNotFoundException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
@@ -63,6 +64,30 @@ class AccountController extends FOSRestController implements ClassResourceInterf
     }
 
     /**
+     * Convert a list of character entities to the data set that contains all the information required by a user of the
+     * account system.
+     *
+     * @param ArrayCollection $chars the characters
+     * @return array the data generated for the json
+     */
+    private static function buildCharList(ArrayCollection $chars)
+    {
+        $list = array();
+        foreach ($chars as $char)
+        {
+            $list[] = array(
+                'name' => $char->getChrName(),
+                'code' => $char->getChrStatus(),
+                'race' => $char->getChrRace(),
+                'sex' => $char->getChrSex(),
+                'lastSaveTime' => $char->getChrLastsavetime(),
+                'onlineTime' => $char->getChrOnlinetime()
+            );
+        }
+        return $list;
+    }
+
+    /**
      * Create a new account. This will right away create a new account if the supplied values allow it.
      *
      * @param Request $request
@@ -81,7 +106,7 @@ class AccountController extends FOSRestController implements ClassResourceInterf
      */
     public function postAction(Request $request)
     {
-        $form = $this->createForm(new AccountType());
+        $form = $this->createForm(new AccountType(false));
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
@@ -121,6 +146,95 @@ class AccountController extends FOSRestController implements ClassResourceInterf
                 $em->flush();
 
                 $view = $this->view()->create($translator->trans('Account created.'), 201);
+            }
+            catch (UniqueConstraintViolationException $ex)
+            {
+                $result = array();
+                $result['error'] = array(
+                    'code' => 400,
+                    'message' => $translator->trans('The name or the E-Mail address is already used.'),
+                );
+                $view = $this->view()->create($result, 400);
+            }
+        } else {
+            $result = array();
+            $result['error'] = array(
+                'code' => 400,
+                'message' => $translator->trans('The validation of the submitted values failed.'),
+                'form' => $form
+            );
+            $view = $this->view()->create($result, 400);
+        }
+
+        return $view;
+    }
+
+    /**
+     * Update the information of the currently logged in account. This function will raise a error in case no entries
+     * are changed. Only values that are part of the data send will be updated.
+     *
+     * @param Request $request
+     * @return View
+     * @RestAnnotations\Put("/account")
+     * @RestAnnotations\View()
+     * @ApiDoc(
+     *     resource = true,
+     *     description = "Update a existing account",
+     *     input = "Illarion\AccountSystemBundle\Form\AccountType",
+     *     statusCodes = {
+     *         202 = "Returned in case the account was correctly updated.",
+     *         400 = "In case the payload for the request was illegal."
+     *     }
+     * )
+     */
+    public function putAction(Request $request)
+    {
+        $form = $this->createForm(new AccountType(true));
+        $form->handleRequest($request);
+
+        $translator = $this->get('translator');
+
+        if (!$form->isSubmitted())
+        {
+            $result = array();
+            $result['error'] = array(
+                'code' => 400,
+                'message' => $translator->trans('Missing data. This function requires any filled entry.'),
+                'form' => $form
+            );
+            $view = $this->view()->create($result, 400);
+        }
+        elseif ($form->isValid())
+        {
+            $data = $form->getData();
+            $em = $this->getDoctrineManager();
+
+            $usr = $this->get('security.token_storage')->getToken()->getUser();
+            $account = $usr->getAccount();
+
+            $passwordEncoder = $this->get('illarion.security.password.encoder');
+
+            if (strlen($data['name']) > 0)
+            {
+                $account->setAccLogin($data['name']);
+            }
+            if (strlen($data['email']) > 0)
+            {
+                $account->setAccEmail($data['email']);
+            }
+            if (strlen($data['password']) > 0)
+            {
+                $account->setAccPasswd($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
+            }
+            $account->setAccLastip($request->getClientIp());
+            $account->setAccLang($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
+
+            try
+            {
+                $em->merge($account);
+                $em->flush();
+
+                $view = $this->view()->create($translator->trans('Account updated.'), 202);
             }
             catch (UniqueConstraintViolationException $ex)
             {
@@ -256,22 +370,5 @@ class AccountController extends FOSRestController implements ClassResourceInterf
         $class = $metadata->getName();
 
         return $em->getRepository($class);
-    }
-
-    private static function buildCharList($chars)
-    {
-        $list = array();
-        foreach ($chars as $char)
-        {
-            $list[] = array(
-                'name' => $char->getChrName(),
-                'code' => $char->getChrStatus(),
-                'race' => $char->getChrRace(),
-                'sex' => $char->getChrSex(),
-                'lastSaveTime' => $char->getChrLastsavetime(),
-                'onlineTime' => $char->getChrOnlinetime()
-            );
-        }
-        return $list;
     }
 }
