@@ -38,6 +38,18 @@
                 <source>The name or the E-Mail address is already used.</source>
                 <target state="translated">Der Name oder die E-Mail-Adresse ist bereits in Verwendung.</target>
             </trans-unit>
+            <trans-unit id="10">
+                <source>Missing data. This function requires any filled entry.</source>
+                <target state="translated">Fehlende Daten. Diese Funktion benötigt mindestens einen Wert.</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Account updated.</source>
+                <target state="translated">Account aktuallisiert.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Account deleted.</source>
+                <target state="translated">Account gelöscht.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
