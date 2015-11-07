@@ -2,7 +2,7 @@
 
 namespace Illarion\AccountSystemBundle\Controller;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Exception\TableNotFoundException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
@@ -31,6 +31,8 @@ class AccountController extends FOSRestController
      * @RestAnnotations\Get("/account")
      * @RestAnnotations\View()
      * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Get the basic account information and the character lists.",
      *     statusCodes = {
@@ -77,10 +79,10 @@ class AccountController extends FOSRestController
      * Convert a list of character entities to the data set that contains all the information required by a user of the
      * account system.
      *
-     * @param ArrayCollection $chars the characters
+     * @param Collection $chars the characters
      * @return array the data generated for the json
      */
-    private static function buildCharList(ArrayCollection $chars)
+    private static function buildCharList(Collection $chars)
     {
         $list = array();
         foreach ($chars as $char)
@@ -188,6 +190,8 @@ class AccountController extends FOSRestController
      * @RestAnnotations\Put("/account")
      * @RestAnnotations\View()
      * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Update a existing account",
      *     input = "Illarion\AccountSystemBundle\Form\AccountType",
@@ -280,6 +284,8 @@ class AccountController extends FOSRestController
      * @RestAnnotations\Delete("/account")
      * @RestAnnotations\View()
      * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Delete a existing account",
      *     statusCodes = {

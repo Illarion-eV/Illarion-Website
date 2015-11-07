@@ -5,3 +5,7 @@ account:
 accountCheck:
     type:     rest
     resource: @IllarionAccountSystemBundle/Controller/AccountCheckController.php
+
+character:
+    type:     rest
+    resource: @IllarionAccountSystemBundle/Controller/CharacterController.php

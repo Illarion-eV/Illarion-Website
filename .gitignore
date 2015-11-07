@@ -22,5 +22,5 @@ website/sync.ffs_db
 /website/bundles
 /bin
 *.phar
-.idea/*
+/.idea
 *.iml

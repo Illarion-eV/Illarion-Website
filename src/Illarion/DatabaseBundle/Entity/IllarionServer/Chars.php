@@ -75,6 +75,11 @@ class Chars
     private $account;
 
     /**
+     * @var Race
+     */
+    private $race;
+
+    /**
      * Get id
      *
      * @return integer
@@ -354,6 +359,14 @@ class Chars
     public function getAccount()
     {
         return $this->account;
+    }
+
+    /**
+     * @return race
+     */
+    public function getRace()
+    {
+        return $this->race;
     }
 }
 

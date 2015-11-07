@@ -2,7 +2,6 @@ Illarion\DatabaseBundle\Entity\DevServer\Chars:
     type: entity
     table: chars
     schema: devserver
-    repositoryClass: Illarion\DatabaseBundle\Entity\DevServer\CharsRepository
     id:
         chrPlayerid:
             type: integer

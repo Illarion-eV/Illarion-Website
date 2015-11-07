@@ -2,7 +2,6 @@ Illarion\DatabaseBundle\Entity\Accounts\Account:
     type: entity
     table: account
     schema: accounts
-    repositoryClass: Illarion\DatabaseBundle\Entity\Accounts\AccountRepository
     uniqueConstraints:
         acc_name_idx:
             columns: [ accLogin ]

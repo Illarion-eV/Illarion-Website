@@ -2,7 +2,6 @@ Illarion\DatabaseBundle\Entity\IllarionServer\Chars:
     type: entity
     table: chars
     schema: illarionserver
-    repositoryClass: Illarion\DatabaseBundle\Entity\IllarionServer\CharsRepository
     id:
         chrPlayerid:
             type: integer
@@ -52,4 +51,10 @@ Illarion\DatabaseBundle\Entity\IllarionServer\Chars:
                 name: chr_accid
                 referencedColumnName: acc_id
             inversedBy: illarionServerChars
+        race:
+            targetEntity: Race
+            joinColumn:
+                name: chr_race
+                referencedColumnName: race_id
+            inversedBy: chars
     lifecycleCallbacks: {  }
