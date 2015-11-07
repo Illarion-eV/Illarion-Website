@@ -7,15 +7,20 @@ use Doctrine\DBAL\Exception\TableNotFoundException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
-use FOS\RestBundle\Routing\ClassResourceInterface;
 use FOS\RestBundle\View\View;
-use Illarion\AccountSystemBundle\Form\AccountCheckType;
 use Illarion\AccountSystemBundle\Form\AccountType;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
-use Symfony\Component\HttpFoundation\Request;
+use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use Symfony\Component\HttpFoundation\Request;
 
-class AccountController extends FOSRestController implements ClassResourceInterface
+/**
+ * This is the controller that contains the operations that are relevant to handle the personal account.
+ *
+ * @package Illarion\AccountSystemBundle\Controller
+ * @RestAnnotations\RouteResource("account")
+ */
+class AccountController extends FOSRestController
 {
     /**
      * Get the basic information about the account. This function will also return the list of characters on all servers
@@ -36,6 +41,11 @@ class AccountController extends FOSRestController implements ClassResourceInterf
     public function getAction()
     {
         $usr = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!($usr instanceof User))
+        {
+            throw new \LogicException("The used user has a unexpected type. It is not a user of the illarion security system.");
+        }
         $account = $usr->getAccount();
 
         $data = array(
@@ -210,6 +220,11 @@ class AccountController extends FOSRestController implements ClassResourceInterf
             $em = $this->getDoctrineManager();
 
             $usr = $this->get('security.token_storage')->getToken()->getUser();
+
+            if (!($usr instanceof User))
+            {
+                throw new \LogicException("The used user has a unexpected type. It is not a user of the illarion security system.");
+            }
             $account = $usr->getAccount();
 
             $passwordEncoder = $this->get('illarion.security.password.encoder');
@@ -274,104 +289,21 @@ class AccountController extends FOSRestController implements ClassResourceInterf
      */
     public function deleteAction()
     {
-        $usr = $this->get('security.token_storage')->getToken()->getUser();
+        $tokenStorage = $this->get('security.token_storage');
+        $secToken = $tokenStorage->getToken();
+        $usr = $secToken->getUser();
         $account = $usr->getAccount();
 
         $em = $this->getDoctrineManager();
         $em->remove($account);
         $em->flush();
 
+        $tokenStorage->setToken(null);
+        $this->get('request')->getSession()->invalidate();
+
         $translator = $this->get('translator');
 
         return $this->view()->create($translator->trans("Account deleted."), 200);
-    }
-
-    /**
-     * Check if a account name and/or a e-mail address is still free to be used. While both fields are set as optional,
-     * at least one of the two has to be set. The request is considered as illegal in case no data is attached to it.
-     *
-     * @param Request $request
-     * @return View
-     * @RestAnnotations\Post("/account/check")
-     * @RestAnnotations\View()
-     * @ApiDoc(
-     *     resource = true,
-     *     description = "Checks if a account name and/or e-mail address is still free to be used.",
-     *     input = "Illarion\AccountSystemBundle\Form\AccountCheckType",
-     *     statusCodes = {
-     *         200 = "Returned when the check was performed, no matter the outcome.",
-     *         400 = "In case the payload for the request was illegal."
-     *     }
-     * )
-     */
-    public function postCheckAction(Request $request)
-    {
-        $form = $this->createForm(new AccountCheckType());
-        $form->handleRequest($request);
-
-        $translator = $this->get('translator');
-
-        if (!$form->isSubmitted())
-        {
-            $result = array();
-            $result['error'] = array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires either the "name" or the "email" field to be populated.'),
-                'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
-        }
-        elseif ($form->isValid())
-        {
-            $data = $form->getData();
-            $repository = $this->getAccountRepository();
-
-            $result = array();
-            if (strlen($data['name']) > 0)
-            {
-                if (null === $repository->findOneBy(['accLogin' => $data['name']])) {
-                    $result['name'] = array(
-                        'ok' => true,
-                        'value' => $data['name'],
-                        'description' => $translator->trans('The name is good.')
-                    );
-                } else {
-                    $result['name'] = array(
-                        'ok' => false,
-                        'value' => $data['name'],
-                        'description' => $translator->trans('This account is already in use.')
-                    );
-                }
-            }
-
-            if (strlen($data['email']) > 0)
-            {
-                if (null === $repository->findOneBy(['accEmail' => $data['email']])) {
-                    $result['email'] = array(
-                        'ok' => true,
-                        'value' => $data['email'],
-                        'description' => $translator->trans('This e-mail address is good.')
-                    );
-                } else {
-                    $result['email'] = array(
-                        'ok' => false,
-                        'value' => $data['email'],
-                        'description' => $translator->trans('This e-mail address is already in use.')
-                    );
-                }
-            }
-            $view = $this->view()->create($result, 200);
-        } else {
-            $result = array();
-            $result['error'] = array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
-        }
-
-        return $view;
     }
 
     /**
@@ -383,20 +315,5 @@ class AccountController extends FOSRestController implements ClassResourceInterf
     {
         $doctrine = $this->get('doctrine');
         return $doctrine->getManager(null);
-    }
-
-    /**
-     * Get the object repository that interacts with the account table.
-     *
-     * @return \Doctrine\Common\Persistence\ObjectRepository
-     */
-    private function getAccountRepository()
-    {
-        $em = $this->getDoctrineManager();
-
-        $metadata = $em->getClassMetadata('IllarionDatabaseBundle:Accounts\Account');
-        $class = $metadata->getName();
-
-        return $em->getRepository($class);
     }
 }
