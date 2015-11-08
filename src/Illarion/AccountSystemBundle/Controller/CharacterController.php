@@ -38,6 +38,8 @@ class CharacterController extends FOSRestController
      * @RestAnnotations\QueryParam(name="server", requirements="illarionserver|testserver|devserver", description="The server the character is expected to be created on.")
      * @RestAnnotations\View()
      * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Get the information for the character creation.",
      *     parameters = {
@@ -75,7 +77,6 @@ class CharacterController extends FOSRestController
         $result = array();
 
         $raceRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Race'));
-        $raceTypeRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceTypes'));
         $result['race'] = array();
 
         $criteria = new Criteria();

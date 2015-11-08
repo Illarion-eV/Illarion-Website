@@ -50,6 +50,10 @@
                 <source>Account deleted.</source>
                 <target state="translated">Account gelöscht.</target>
             </trans-unit>
+            <trans-unit id="13">
+                <source>The name supplies as server identifier is invalid.</source>
+                <target state="translated">Die Bezeichnung des Servers der abgefragt werden soll ist ungültig.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
