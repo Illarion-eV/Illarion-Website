@@ -34,6 +34,13 @@ class Chars extends Server\Chars
     private $account;
 
     /**
+     * @var Player
+     *
+     * @ORM\OneToOne(targetEntity="Illarion\DatabaseBundle\Entity\IllarionServer\Player", mappedBy="character")
+     */
+    private $player;
+
+    /**
      * Set race
      *
      * @param \Illarion\DatabaseBundle\Entity\TestServer\Race $race
@@ -79,5 +86,29 @@ class Chars extends Server\Chars
     public function getAccount()
     {
         return $this->account;
+    }
+
+    /**
+     * Set player
+     *
+     * @param \Illarion\DatabaseBundle\Entity\TestServer\Player $player
+     *
+     * @return Chars
+     */
+    public function setPlayer(\Illarion\DatabaseBundle\Entity\TestServer\Player $player = null)
+    {
+        $this->player = $player;
+
+        return $this;
+    }
+
+    /**
+     * Get player
+     *
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\Player
+     */
+    public function getPlayer()
+    {
+        return $this->player;
     }
 }

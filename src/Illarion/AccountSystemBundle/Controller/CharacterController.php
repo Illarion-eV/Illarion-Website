@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\Criteria;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
+use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\DatabaseBundle\Entity\Server\Race;
 use Illarion\DatabaseBundle\Entity\Server\RaceBeard;
 use Illarion\DatabaseBundle\Entity\Server\RaceHair;
@@ -15,6 +16,7 @@ use Illarion\DatabaseBundle\Entity\Server\RaceTypes;
 use Illarion\DatabaseBundle\Entity\Server\StartPackItems;
 use Illarion\DatabaseBundle\Entity\Server\StartPacks;
 use Illarion\DatabaseBundle\Entity\Server\StartPackSkills;
+use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\File\Exception\UnexpectedTypeException;
 use Symfony\Component\HttpFoundation\Request;
@@ -52,26 +54,14 @@ class CharacterController extends FOSRestController
      *     }
      * )
      */
-    public function getAction(Request $request, $server)
+    public function getCreateAction(Request $request, $server)
     {
-        $translator = $this->get('translator');
-
         $german = ($request->getPreferredLanguage(array('de', 'en')) == 'de');
 
-        switch ($server)
+        $schema = $this->getSchemaFromServerIdent($server);
+        if ($schema instanceof View)
         {
-            case 'illarionserver': $schema = 'IllarionServer'; break;
-            case 'testserver': $schema = 'TestServer'; break;
-            case 'devserver': $schema = 'DevServer'; break;
-            default:
-                return $this->view()->create(array(
-                    'error' => array(
-                        'code' => 400,
-                        'message' => $translator->trans('The name supplies as server identifier is invalid.'),
-                        'value' => $server,
-                        'requirement' => 'illarionserver|testserver|devserver'
-                    )
-                ), 400);
+            return $schema;
         }
 
         $result = array();
@@ -234,6 +224,100 @@ class CharacterController extends FOSRestController
     }
 
     /**
+     * Get the general information for the character creation. This function will return the required data for all
+     * possible races.
+     *
+     * @param Request $request the request that is handled
+     * @param string $server the server the creation information are requested for
+     * @param integer $charId the ID of the character
+     * @return View
+     * @RestAnnotations\Get("/character/{server}/{charId}")
+     * @RestAnnotations\QueryParam(name="server", requirements="illarionserver|testserver|devserver", description="The server the character is expected to be created on.")
+     * @RestAnnotations\QueryParam(name="charId", requirements="%d+", description="The ID of the character that is requested.")
+     * @RestAnnotations\View()
+     * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
+     *     resource = true,
+     *     description = "Get the information about a specific character.",
+     *     parameters = {
+     *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"},
+     *         {"name"="charId", "dataType"="number", "required"=true, "requirements"="%d+"}
+     *     },
+     *     statusCodes = {
+     *         200 = "The character is valid, belongs to the logged in account and was correctly fetched.",
+     *         400 = "In case the server value was illegal.",
+     *         401 = "In case the character does not belong to the logged in account.",
+     *         500 = "In case fetching the data from the database failed."
+     *     }
+     * )
+     */
+    public function getAction(Request $request, $server, $charId)
+    {
+        $translator = $this->get('translator');
+        $german = ($request->getPreferredLanguage(array('de', 'en')) == 'de');
+
+        $account = $this->getLoggedInAccount();
+        $schema = $this->getSchemaFromServerIdent($server);
+        if ($schema instanceof View)
+        {
+            return $schema;
+        }
+
+        $charsRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Chars'));
+
+        $char = $charsRepo->findOneBy(array('accId' => $account->getId(), 'playerId' => $charId));
+        if ($char === null || !($char instanceof Chars))
+        {
+            $translator = $this->get('translator');
+            return $this->view()->create(array(
+                'error' => array(
+                    'code' => 401,
+                    'message' => $translator->trans('The character could not be located in the current account.'),
+                    'value' => array('server' => $server, 'charId' => $charId)
+                )
+            ), 401);
+        }
+
+        $player = $char->getPlayer(); 
+        return $this->view()->create(array(
+            'id' => $char->getPlayerId(),
+            'name' => $char->getName(),
+            'race' => $char->getRaceId(),
+            'raceType' => $char->getRaceTypeId(),
+            'attributes' => array(
+                'agility' => $player->getAgility(),
+                'constitution' => $player->getConsitution(),
+                'dexterity' => $player->getDexterity(),
+                'essence' => $player->getEssence(),
+                'intelligence' => $player->getIntelligence(),
+                'perception' => $player->getPerception(),
+                'strength' => $player->getStrength(),
+                'willpower' => $player->getWillpower()
+            ),
+            'dateOfBirth' => $player->getDateOfBirth(),
+            'bodyHeight' => $player->getHeight(),
+            'bodyWeight' => $player->getWeight(),
+            'paperDoll' => array(
+                'hairId' => $player->getHairId(),
+                'beardId' => $player->getBeardId(),
+                'hairColour' => self::getColorValue(
+                    $player->getHairColorRed(),
+                    $player->getHairColorGreen(),
+                    $player->getHairColorBlue(),
+                    $player->getHairColorAlpha()
+                ),
+                'skinColour' => self::getColorValue(
+                    $player->getSkinColorRed(),
+                    $player->getSkinColorGreen(),
+                    $player->getSkinColorBlue(),
+                    $player->getSkinColorAlpha()
+                )
+            )
+        ), 200);
+    }
+
+    /**
      * Get the standard manager of doctrine.
      *
      * @return \Doctrine\Common\Persistence\ObjectManager|object
@@ -242,6 +326,22 @@ class CharacterController extends FOSRestController
     {
         $doctrine = $this->get('doctrine');
         return $doctrine->getManager(null);
+    }
+
+    /**
+     * Get the account that is currently authenticated.
+     *
+     * @return \Illarion\DatabaseBundle\Entity\Accounts\Account
+     */
+    private function getLoggedInAccount()
+    {
+        $usr = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!($usr instanceof User))
+        {
+            throw new UnexpectedTypeException($usr, User::class);
+        }
+        return $usr->getAccount();
     }
 
     /**
@@ -258,6 +358,33 @@ class CharacterController extends FOSRestController
         $class = $metadata->getName();
 
         return $em->getRepository($class);
+    }
+
+    /**
+     * Get the schema identifier of the server in case the mapping is good or a object that represents the mapping
+     * error.
+     *
+     * @param string $server the server identifier
+     * @return View|string the schema name or a view that contains the error
+     */
+    private function getSchemaFromServerIdent($server)
+    {
+        switch ($server)
+        {
+            case 'illarionserver': return 'IllarionServer';
+            case 'testserver': return 'TestServer';
+            case 'devserver': return 'DevServer';
+            default:
+                $translator = $this->get('translator');
+                return $this->view()->create(array(
+                    'error' => array(
+                        'code' => 400,
+                        'message' => $translator->trans('The name supplies as server identifier is invalid.'),
+                        'value' => $server,
+                        'requirement' => 'illarionserver|testserver|devserver'
+                    )
+                ), 400);
+        }
     }
 
     /**

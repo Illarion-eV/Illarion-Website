@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\MappedSuperclass()
  */
-class Chars
+abstract class Chars
 {
     /**
      * @var integer
@@ -18,14 +18,14 @@ class Chars
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
-    private $playerid;
+    private $playerId;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="chr_accid", type="integer")
      */
-    private $accid;
+    private $accId;
 
     /**
      * @var integer
@@ -100,13 +100,13 @@ class Chars
     /**
      * Set playerid
      *
-     * @param integer $playerid
+     * @param integer $playerId
      *
      * @return Chars
      */
-    public function setPlayerid($playerid)
+    public function setPlayerId($playerId)
     {
-        $this->playerid = $playerid;
+        $this->playerId = $playerId;
 
         return $this;
     }
@@ -116,33 +116,33 @@ class Chars
      *
      * @return integer
      */
-    public function getPlayerid()
+    public function getPlayerId()
     {
-        return $this->playerid;
+        return $this->playerId;
     }
 
     /**
-     * Set accid
+     * Set accId
      *
-     * @param integer $accid
+     * @param integer $accId
      *
      * @return Chars
      */
-    public function setAccid($accid)
+    public function setAccId($accId)
     {
-        $this->accid = $accid;
+        $this->accId = $accId;
 
         return $this;
     }
 
     /**
-     * Get accid
+     * Get accId
      *
      * @return integer
      */
-    public function getAccid()
+    public function getAccId()
     {
-        return $this->accid;
+        return $this->accId;
     }
 
     /**
@@ -384,4 +384,11 @@ class Chars
     {
         return $this->name;
     }
+
+    /**
+     * Get player
+     *
+     * @return \Illarion\DatabaseBundle\Entity\Server\Player
+     */
+    public abstract function getPlayer();
 }

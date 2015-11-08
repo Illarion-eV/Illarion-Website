@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Illarion\DatabaseBundle\Entity\Server;
 
 /**
- * Race
+ * Items
  *
  * @ORM\Table(schema="illarionserver", name="items")
  * @ORM\Entity
