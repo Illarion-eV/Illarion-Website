@@ -8,7 +8,8 @@ use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
-use Illarion\AccountSystemBundle\Form\AccountType;
+use Illarion\AccountSystemBundle\Form\AccountCreateType;
+use Illarion\AccountSystemBundle\Form\AccountUpdateType;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
@@ -51,10 +52,10 @@ class AccountController extends FOSRestController
         $account = $usr->getAccount();
 
         $data = array(
-            'name' => $account->getAccLogin(),
-            'state' => $account->getAccState(),
-            'maxChars' => $account->getAccMaxchars(),
-            'lang' => $account->getAccLang() ? 'de' : 'en',
+            'name' => $account->getLogin(),
+            'state' => $account->getState(),
+            'maxChars' => $account->getMaxChars(),
+            'lang' => $account->getLanguage() ? 'de' : 'en',
             'chars' => array()
         );
 
@@ -109,7 +110,7 @@ class AccountController extends FOSRestController
      * @ApiDoc(
      *     resource = true,
      *     description = "Create a new account.",
-     *     input = "Illarion\AccountSystemBundle\Form\AccountType",
+     *     input = "Illarion\AccountSystemBundle\Form\AccountCreateType",
      *     statusCodes = {
      *         201 = "Returned in case the account was correctly created.",
      *         400 = "In case the payload for the request was illegal."
@@ -118,7 +119,7 @@ class AccountController extends FOSRestController
      */
     public function postAction(Request $request)
     {
-        $form = $this->createForm(new AccountType(false));
+        $form = $this->createForm(new AccountCreateType());
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
@@ -140,17 +141,17 @@ class AccountController extends FOSRestController
             $passwordEncoder = $this->get('illarion.security.password.encoder');
 
             $newAccount = new Account();
-            $newAccount->setAccLogin($data['name']);
+            $newAccount->setLogin($data['name']);
             if (strlen($data['email']) > 0)
             {
-                $newAccount->setAccEmail($data['email']);
+                $newAccount->setEMail($data['email']);
             }
-            $newAccount->setAccPasswd($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
-            $newAccount->setAccRegisterdate(new \DateTime());
-            $newAccount->setAccLastip($request->getClientIp());
-            $newAccount->setAccLang($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
-            $newAccount->setAccState(3);
-            $newAccount->setAccMaxchars(5);
+            $newAccount->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
+            $newAccount->setRegisterDate(new \DateTime());
+            $newAccount->setLastIp($request->getClientIp());
+            $newAccount->setLanguage($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
+            $newAccount->setState(3);
+            $newAccount->setMaxChars(5);
 
             try
             {
@@ -194,7 +195,7 @@ class AccountController extends FOSRestController
      *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Update a existing account",
-     *     input = "Illarion\AccountSystemBundle\Form\AccountType",
+     *     input = "Illarion\AccountSystemBundle\Form\AccountUpdateType",
      *     statusCodes = {
      *         202 = "Returned in case the account was correctly updated.",
      *         400 = "In case the payload for the request was illegal."
@@ -203,7 +204,7 @@ class AccountController extends FOSRestController
      */
     public function putAction(Request $request)
     {
-        $form = $this->createForm(new AccountType(true));
+        $form = $this->createForm(new AccountUpdateType());
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
@@ -233,20 +234,16 @@ class AccountController extends FOSRestController
 
             $passwordEncoder = $this->get('illarion.security.password.encoder');
 
-            if (strlen($data['name']) > 0)
-            {
-                $account->setAccLogin($data['name']);
-            }
             if (strlen($data['email']) > 0)
             {
-                $account->setAccEmail($data['email']);
+                $account->setEMail($data['email']);
             }
             if (strlen($data['password']) > 0)
             {
-                $account->setAccPasswd($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
+                $account->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
             }
-            $account->setAccLastip($request->getClientIp());
-            $account->setAccLang($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
+            $account->setLastIp($request->getClientIp());
+            $account->setLanguage($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
 
             try
             {

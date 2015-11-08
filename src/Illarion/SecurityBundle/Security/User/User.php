@@ -32,7 +32,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     public function getPassword()
     {
-        return $this->account->getAccPasswd();
+        return $this->account->getPassword();
     }
 
     /**
@@ -48,7 +48,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     public function getUsername()
     {
-        return $this->account->getAccLogin();
+        return $this->account->getLogin();
     }
 
     /**
@@ -60,7 +60,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function isAccountNonLocked()
     {
-        return $this->account->getAccState() <= 3;
+        return $this->account->getState() <= 3;
     }
 
     public function isCredentialsNonExpired()
@@ -70,7 +70,7 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function isEnabled()
     {
-        return $this->account->getAccState() >= 3;
+        return $this->account->getState() >= 3;
     }
 
     public function eraseCredentials()

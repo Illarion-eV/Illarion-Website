@@ -26,7 +26,7 @@ class UserProvider implements UserProviderInterface
 
     public function loadUserByUsername($username)
     {
-        $account = $this->repository->findOneBy(array('accLogin' => $username));
+        $account = $this->repository->findOneBy(array('login' => $username));
         return new User($account);
     }
 

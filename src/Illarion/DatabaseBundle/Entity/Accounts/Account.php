@@ -2,292 +2,425 @@
 
 namespace Illarion\DatabaseBundle\Entity\Accounts;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Account
+ *
+ * @ORM\Table(
+ *     schema="accounts",
+ *     name="account",
+ *     uniqueConstraints={
+ *         @ORM\UniqueConstraint(name="acc_name_idx", columns={"accLogin"}),
+ *         @ORM\UniqueConstraint(name="acc_email_idx", columns={"accEmail"})
+ *     },
+ *     indexes={
+ *         @ORM\Index(name="acc_name_password_idx", columns={"accLogin", "accPasswd"})
+ *     }
+ * )
+ * @ORM\Entity
  */
 class Account
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="acc_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\SequenceGenerator(sequenceName="accounts.account_seq", allocationSize=10, initialValue=1)
      */
-    private $accId;
+    private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="acc_login", type="string", length=50, nullable=false)
      */
-    private $accLogin;
+    private $login;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="acc_passwd", type="string", length=50, nullable=false)
      */
-    private $accPasswd;
+    private $password;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="acc_email", type="string", length=50, nullable=true)
      */
-    private $accEmail;
+    private $eMail;
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="acc_registerdate", type="datetime", nullable=false)
      */
-    private $accRegisterdate;
+    private $registerDate;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="acc_lastip", type="string", length=39, nullable=false)
      */
-    private $accLastip;
+    private $lastIp;
 
     /**
      * @var integer
+     *
+     * @ORM\Column(name="acc_state", type="integer", nullable=false)
      */
-    private $accState;
+    private $state;
 
     /**
      * @var integer
+     *
+     * @ORM\Column(name="acc_maxchars", type="integer", nullable=false)
      */
-    private $accMaxchars;
+    private $maxChars;
 
     /**
      * @var integer
+     *
+     * @ORM\Column(name="acc_lang", type="smallint", nullable=false)
      */
-    private $accLang;
+    private $language;
 
     /**
-     * @var ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Illarion\DatabaseBundle\Entity\IllarionServer\Chars", mappedBy="account")
      */
     private $illarionServerChars;
 
     /**
-     * @var ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Illarion\DatabaseBundle\Entity\TestServer\Chars", mappedBy="account")
      */
     private $testServerChars;
 
     /**
-     * @var ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Illarion\DatabaseBundle\Entity\DevServer\Chars", mappedBy="account")
      */
     private $devServerChars;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
-        $this->illarionServerChars = new ArrayCollection();
-        $this->testServerChars = new ArrayCollection();
-        $this->devServerChars = new ArrayCollection();
+        $this->illarionServerChars = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->testServerChars = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->devServerChars = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
 
     /**
      * Get id
      *
      * @return integer
      */
-    public function getAccId()
+    public function getId()
     {
-        return $this->accId;
+        return $this->id;
     }
 
     /**
-     * Set accLogin
+     * Set login
      *
-     * @param string $accLogin
+     * @param string $login
      *
      * @return Account
      */
-    public function setAccLogin($accLogin)
+    public function setLogin($login)
     {
-        $this->accLogin = $accLogin;
+        $this->login = $login;
 
         return $this;
     }
 
     /**
-     * Get accLogin
+     * Get login
      *
      * @return string
      */
-    public function getAccLogin()
+    public function getLogin()
     {
-        return $this->accLogin;
+        return $this->login;
     }
 
     /**
-     * Set accPasswd
+     * Set password
      *
-     * @param string $accPasswd
+     * @param string $password
      *
      * @return Account
      */
-    public function setAccPasswd($accPasswd)
+    public function setPassword($password)
     {
-        $this->accPasswd = $accPasswd;
+        $this->password = $password;
 
         return $this;
     }
 
     /**
-     * Get accPasswd
+     * Get password
      *
      * @return string
      */
-    public function getAccPasswd()
+    public function getPassword()
     {
-        return $this->accPasswd;
+        return $this->password;
     }
 
     /**
-     * Set accEmail
+     * Set eMail
      *
-     * @param string $accEmail
+     * @param string $eMail
      *
      * @return Account
      */
-    public function setAccEmail($accEmail)
+    public function setEMail($eMail)
     {
-        $this->accEmail = $accEmail;
+        $this->eMail = $eMail;
 
         return $this;
     }
 
     /**
-     * Get accEmail
+     * Get eMail
      *
      * @return string
      */
-    public function getAccEmail()
+    public function getEMail()
     {
-        return $this->accEmail;
+        return $this->eMail;
     }
 
     /**
-     * Set accRegisterdate
+     * Set registerDate
      *
-     * @param \DateTime $accRegisterdate
+     * @param \DateTime $registerDate
      *
      * @return Account
      */
-    public function setAccRegisterdate($accRegisterdate)
+    public function setRegisterDate($registerDate)
     {
-        $this->accRegisterdate = $accRegisterdate;
+        $this->registerDate = $registerDate;
 
         return $this;
     }
 
     /**
-     * Get accRegisterdate
+     * Get registerDate
      *
      * @return \DateTime
      */
-    public function getAccRegisterdate()
+    public function getRegisterDate()
     {
-        return $this->accRegisterdate;
+        return $this->registerDate;
     }
 
     /**
-     * Set accLastip
+     * Set lastIp
      *
-     * @param string $accLastip
+     * @param string $lastIp
      *
      * @return Account
      */
-    public function setAccLastip($accLastip)
+    public function setLastIp($lastIp)
     {
-        $this->accLastip = $accLastip;
+        $this->lastIp = $lastIp;
 
         return $this;
     }
 
     /**
-     * Get accLastip
+     * Get lastIp
      *
      * @return string
      */
-    public function getAccLastip()
+    public function getLastIp()
     {
-        return $this->accLastip;
+        return $this->lastIp;
     }
 
     /**
-     * Set accState
+     * Set state
      *
-     * @param integer $accState
+     * @param integer $state
      *
      * @return Account
      */
-    public function setAccState($accState)
+    public function setState($state)
     {
-        $this->accState = $accState;
+        $this->state = $state;
 
         return $this;
     }
 
     /**
-     * Get accState
+     * Get state
      *
      * @return integer
      */
-    public function getAccState()
+    public function getState()
     {
-        return $this->accState;
+        return $this->state;
     }
 
     /**
-     * Set accMaxchars
+     * Set maxChars
      *
-     * @param integer $accMaxchars
+     * @param integer $maxChars
      *
      * @return Account
      */
-    public function setAccMaxchars($accMaxchars)
+    public function setMaxChars($maxChars)
     {
-        $this->accMaxchars = $accMaxchars;
+        $this->maxChars = $maxChars;
 
         return $this;
     }
 
     /**
-     * Get accMaxchars
+     * Get maxChars
      *
      * @return integer
      */
-    public function getAccMaxchars()
+    public function getMaxChars()
     {
-        return $this->accMaxchars;
+        return $this->maxChars;
     }
 
     /**
-     * Set accLang
+     * Set language
      *
-     * @param integer $accLang
+     * @param integer $language
      *
      * @return Account
      */
-    public function setAccLang($accLang)
+    public function setLanguage($language)
     {
-        $this->accLang = $accLang;
+        $this->language = $language;
 
         return $this;
     }
 
     /**
-     * Get accLang
+     * Get language
      *
      * @return integer
      */
-    public function getAccLang()
+    public function getLanguage()
     {
-        return $this->accLang;
+        return $this->language;
     }
 
-    public function getIllarionServerChars() {
+    /**
+     * Add illarionServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\IllarionServer\Chars $illarionServerChar
+     *
+     * @return Account
+     */
+    public function addIllarionServerChar(\Illarion\DatabaseBundle\Entity\IllarionServer\Chars $illarionServerChar)
+    {
+        $this->illarionServerChars[] = $illarionServerChar;
+
+        return $this;
+    }
+
+    /**
+     * Remove illarionServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\IllarionServer\Chars $illarionServerChar
+     */
+    public function removeIllarionServerChar(\Illarion\DatabaseBundle\Entity\IllarionServer\Chars $illarionServerChar)
+    {
+        $this->illarionServerChars->removeElement($illarionServerChar);
+    }
+
+    /**
+     * Get illarionServerChars
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIllarionServerChars()
+    {
         return $this->illarionServerChars;
     }
 
-    public function getTestServerChars() {
+    /**
+     * Add testServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\TestServer\Chars $testServerChar
+     *
+     * @return Account
+     */
+    public function addTestServerChar(\Illarion\DatabaseBundle\Entity\TestServer\Chars $testServerChar)
+    {
+        $this->testServerChars[] = $testServerChar;
+
+        return $this;
+    }
+
+    /**
+     * Remove testServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\TestServer\Chars $testServerChar
+     */
+    public function removeTestServerChar(\Illarion\DatabaseBundle\Entity\TestServer\Chars $testServerChar)
+    {
+        $this->testServerChars->removeElement($testServerChar);
+    }
+
+    /**
+     * Get testServerChars
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTestServerChars()
+    {
         return $this->testServerChars;
     }
 
-    public function getDevServerChars() {
+    /**
+     * Add devServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\DevServer\Chars $devServerChar
+     *
+     * @return Account
+     */
+    public function addDevServerChar(\Illarion\DatabaseBundle\Entity\DevServer\Chars $devServerChar)
+    {
+        $this->devServerChars[] = $devServerChar;
+
+        return $this;
+    }
+
+    /**
+     * Remove devServerChar
+     *
+     * @param \Illarion\DatabaseBundle\Entity\DevServer\Chars $devServerChar
+     */
+    public function removeDevServerChar(\Illarion\DatabaseBundle\Entity\DevServer\Chars $devServerChar)
+    {
+        $this->devServerChars->removeElement($devServerChar);
+    }
+
+    /**
+     * Get devServerChars
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDevServerChars()
+    {
         return $this->devServerChars;
     }
 }
-

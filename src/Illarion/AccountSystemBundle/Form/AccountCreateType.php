@@ -6,19 +6,12 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AccountType extends AbstractType
+class AccountCreateType extends AbstractType
 {
-    private $forUpdate;
-
-    public function __construct($forUpdate)
-    {
-        $this->forUpdate = $forUpdate;
-    }
-
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', 'text', array('required' => !$this->forUpdate));
-        $builder->add('password', 'password', array('required' => !$this->forUpdate));
+        $builder->add('name', 'text');
+        $builder->add('password', 'password');
         $builder->add('email', 'email', array('required' => false));
     }
 
