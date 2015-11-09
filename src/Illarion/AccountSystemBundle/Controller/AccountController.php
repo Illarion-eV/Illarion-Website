@@ -11,8 +11,10 @@ use FOS\RestBundle\View\View;
 use Illarion\AccountSystemBundle\Form\AccountCreateType;
 use Illarion\AccountSystemBundle\Form\AccountUpdateType;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
+use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use Symfony\Component\HttpFoundation\File\Exception\UnexpectedTypeException;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -88,13 +90,18 @@ class AccountController extends FOSRestController
         $list = array();
         foreach ($chars as $char)
         {
+            if (!($char instanceof Chars))
+            {
+                throw new UnexpectedTypeException($char, Chars::class);
+            }
+
             $list[] = array(
-                'name' => $char->getChrName(),
-                'code' => $char->getChrStatus(),
-                'race' => $char->getChrRace(),
-                'sex' => $char->getChrSex(),
-                'lastSaveTime' => $char->getChrLastsavetime(),
-                'onlineTime' => $char->getChrOnlinetime()
+                'name' => $char->getName(),
+                'status' => $char->getStatus(),
+                'race' => $char->getRaceTypeId(),
+                'sex' => $char->getRaceTypeId(),
+                'lastSaveTime' => $char->getLastsavetime(),
+                'onlineTime' => $char->getOnlinetime()
             );
         }
         return $list;

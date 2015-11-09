@@ -36,7 +36,7 @@ class Chars extends Server\Chars
     /**
      * @var Player
      *
-     * @ORM\OneToOne(targetEntity="Illarion\DatabaseBundle\Entity\IllarionServer\Player", mappedBy="character")
+     * @ORM\OneToOne(targetEntity="Illarion\DatabaseBundle\Entity\TestServer\Player", mappedBy="character")
      */
     private $player;
 

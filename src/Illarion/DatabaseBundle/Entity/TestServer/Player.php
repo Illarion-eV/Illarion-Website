@@ -40,7 +40,7 @@ class Player extends Server\Player
     /**
      * Get character
      *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\Chars
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\Chars
      */
     public function getCharacter()
     {
