@@ -35,6 +35,16 @@ class SkillGroups
     private $nameEn;
 
     /**
+     * Get groupId
+     *
+     * @return integer
+     */
+    public function getGroupId()
+    {
+        return $this->groupId;
+    }
+
+    /**
      * Set groupId
      *
      * @param integer $groupId
@@ -49,13 +59,13 @@ class SkillGroups
     }
 
     /**
-     * Get groupId
+     * Get nameDe
      *
-     * @return integer
+     * @return string
      */
-    public function getGroupId()
+    public function getNameDe()
     {
-        return $this->groupId;
+        return $this->nameDe;
     }
 
     /**
@@ -73,13 +83,13 @@ class SkillGroups
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -94,15 +104,5 @@ class SkillGroups
         $this->nameEn = $nameEn;
 
         return $this;
-    }
-
-    /**
-     * Get nameEn
-     *
-     * @return string
-     */
-    public function getNameEn()
-    {
-        return $this->nameEn;
     }
 }

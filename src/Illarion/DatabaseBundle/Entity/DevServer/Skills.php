@@ -24,6 +24,16 @@ class Skills extends Server\Skills
     private $group;
 
     /**
+     * Get group
+     *
+     * @return \Illarion\DatabaseBundle\Entity\DevServer\SkillGroups
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
      * Set group
      *
      * @param \Illarion\DatabaseBundle\Entity\DevServer\SkillGroups $group
@@ -35,15 +45,5 @@ class Skills extends Server\Skills
         $this->group = $group;
 
         return $this;
-    }
-
-    /**
-     * Get group
-     *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\SkillGroups
-     */
-    public function getGroup()
-    {
-        return $this->group;
     }
 }

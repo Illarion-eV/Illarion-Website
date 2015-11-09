@@ -309,6 +309,16 @@ abstract class Player
     private $skinColorAlpha;
 
     /**
+     * Get playerId
+     *
+     * @return integer
+     */
+    public function getPlayerId()
+    {
+        return $this->playerId;
+    }
+
+    /**
      * Set playerId
      *
      * @param integer $playerId
@@ -323,13 +333,13 @@ abstract class Player
     }
 
     /**
-     * Get playerId
+     * Get posX
      *
      * @return integer
      */
-    public function getPlayerId()
+    public function getPosX()
     {
-        return $this->playerId;
+        return $this->posX;
     }
 
     /**
@@ -347,13 +357,13 @@ abstract class Player
     }
 
     /**
-     * Get posX
+     * Get posY
      *
      * @return integer
      */
-    public function getPosX()
+    public function getPosY()
     {
-        return $this->posX;
+        return $this->posY;
     }
 
     /**
@@ -371,13 +381,13 @@ abstract class Player
     }
 
     /**
-     * Get posY
+     * Get posZ
      *
      * @return integer
      */
-    public function getPosY()
+    public function getPosZ()
     {
-        return $this->posY;
+        return $this->posZ;
     }
 
     /**
@@ -395,13 +405,13 @@ abstract class Player
     }
 
     /**
-     * Get posZ
+     * Get faceTo
      *
      * @return integer
      */
-    public function getPosZ()
+    public function getFaceTo()
     {
-        return $this->posZ;
+        return $this->faceTo;
     }
 
     /**
@@ -419,13 +429,13 @@ abstract class Player
     }
 
     /**
-     * Get faceTo
+     * Get age
      *
      * @return integer
      */
-    public function getFaceTo()
+    public function getAge()
     {
-        return $this->faceTo;
+        return $this->age;
     }
 
     /**
@@ -443,13 +453,13 @@ abstract class Player
     }
 
     /**
-     * Get age
+     * Get weight
      *
      * @return integer
      */
-    public function getAge()
+    public function getWeight()
     {
-        return $this->age;
+        return $this->weight;
     }
 
     /**
@@ -467,13 +477,13 @@ abstract class Player
     }
 
     /**
-     * Get weight
+     * Get height
      *
      * @return integer
      */
-    public function getWeight()
+    public function getHeight()
     {
-        return $this->weight;
+        return $this->height;
     }
 
     /**
@@ -491,13 +501,13 @@ abstract class Player
     }
 
     /**
-     * Get height
+     * Get hitPoints
      *
      * @return integer
      */
-    public function getHeight()
+    public function getHitPoints()
     {
-        return $this->height;
+        return $this->hitPoints;
     }
 
     /**
@@ -515,13 +525,13 @@ abstract class Player
     }
 
     /**
-     * Get hitPoints
+     * Get manaPoints
      *
      * @return integer
      */
-    public function getHitPoints()
+    public function getManaPoints()
     {
-        return $this->hitPoints;
+        return $this->manaPoints;
     }
 
     /**
@@ -539,13 +549,13 @@ abstract class Player
     }
 
     /**
-     * Get manaPoints
+     * Get attitude
      *
      * @return integer
      */
-    public function getManaPoints()
+    public function getAttitude()
     {
-        return $this->manaPoints;
+        return $this->attitude;
     }
 
     /**
@@ -563,13 +573,13 @@ abstract class Player
     }
 
     /**
-     * Get attitude
+     * Get luck
      *
      * @return integer
      */
-    public function getAttitude()
+    public function getLuck()
     {
-        return $this->attitude;
+        return $this->luck;
     }
 
     /**
@@ -587,13 +597,13 @@ abstract class Player
     }
 
     /**
-     * Get luck
+     * Get strength
      *
      * @return integer
      */
-    public function getLuck()
+    public function getStrength()
     {
-        return $this->luck;
+        return $this->strength;
     }
 
     /**
@@ -611,13 +621,13 @@ abstract class Player
     }
 
     /**
-     * Get strength
+     * Get dexterity
      *
      * @return integer
      */
-    public function getStrength()
+    public function getDexterity()
     {
-        return $this->strength;
+        return $this->dexterity;
     }
 
     /**
@@ -635,13 +645,13 @@ abstract class Player
     }
 
     /**
-     * Get dexterity
+     * Get consitution
      *
      * @return integer
      */
-    public function getDexterity()
+    public function getConsitution()
     {
-        return $this->dexterity;
+        return $this->consitution;
     }
 
     /**
@@ -659,13 +669,13 @@ abstract class Player
     }
 
     /**
-     * Get consitution
+     * Get agility
      *
      * @return integer
      */
-    public function getConsitution()
+    public function getAgility()
     {
-        return $this->consitution;
+        return $this->agility;
     }
 
     /**
@@ -683,13 +693,13 @@ abstract class Player
     }
 
     /**
-     * Get agility
+     * Get intelligence
      *
      * @return integer
      */
-    public function getAgility()
+    public function getIntelligence()
     {
-        return $this->agility;
+        return $this->intelligence;
     }
 
     /**
@@ -707,13 +717,13 @@ abstract class Player
     }
 
     /**
-     * Get intelligence
+     * Get perception
      *
      * @return integer
      */
-    public function getIntelligence()
+    public function getPerception()
     {
-        return $this->intelligence;
+        return $this->perception;
     }
 
     /**
@@ -731,13 +741,13 @@ abstract class Player
     }
 
     /**
-     * Get perception
+     * Get willpower
      *
      * @return integer
      */
-    public function getPerception()
+    public function getWillpower()
     {
-        return $this->perception;
+        return $this->willpower;
     }
 
     /**
@@ -755,13 +765,13 @@ abstract class Player
     }
 
     /**
-     * Get willpower
+     * Get foodPoints
      *
      * @return integer
      */
-    public function getWillpower()
+    public function getFoodPoints()
     {
-        return $this->willpower;
+        return $this->foodPoints;
     }
 
     /**
@@ -779,13 +789,13 @@ abstract class Player
     }
 
     /**
-     * Get foodPoints
+     * Get appearance
      *
      * @return integer
      */
-    public function getFoodPoints()
+    public function getAppearance()
     {
-        return $this->foodPoints;
+        return $this->appearance;
     }
 
     /**
@@ -803,13 +813,13 @@ abstract class Player
     }
 
     /**
-     * Get appearance
+     * Get lifeState
      *
      * @return integer
      */
-    public function getAppearance()
+    public function getLifeState()
     {
-        return $this->appearance;
+        return $this->lifeState;
     }
 
     /**
@@ -827,13 +837,13 @@ abstract class Player
     }
 
     /**
-     * Get lifeState
+     * Get magicType
      *
      * @return integer
      */
-    public function getLifeState()
+    public function getMagicType()
     {
-        return $this->lifeState;
+        return $this->magicType;
     }
 
     /**
@@ -851,13 +861,13 @@ abstract class Player
     }
 
     /**
-     * Get magicType
+     * Get magicFlagsBard
      *
      * @return integer
      */
-    public function getMagicType()
+    public function getMagicFlagsBard()
     {
-        return $this->magicType;
+        return $this->magicFlagsBard;
     }
 
     /**
@@ -875,13 +885,13 @@ abstract class Player
     }
 
     /**
-     * Get magicFlagsBard
+     * Get magicFlagsDruid
      *
      * @return integer
      */
-    public function getMagicFlagsBard()
+    public function getMagicFlagsDruid()
     {
-        return $this->magicFlagsBard;
+        return $this->magicFlagsDruid;
     }
 
     /**
@@ -899,13 +909,13 @@ abstract class Player
     }
 
     /**
-     * Get magicFlagsDruid
+     * Get magicFlagsMage
      *
      * @return integer
      */
-    public function getMagicFlagsDruid()
+    public function getMagicFlagsMage()
     {
-        return $this->magicFlagsDruid;
+        return $this->magicFlagsMage;
     }
 
     /**
@@ -923,13 +933,13 @@ abstract class Player
     }
 
     /**
-     * Get magicFlagsMage
+     * Get magicFlagsPriest
      *
      * @return integer
      */
-    public function getMagicFlagsMage()
+    public function getMagicFlagsPriest()
     {
-        return $this->magicFlagsMage;
+        return $this->magicFlagsPriest;
     }
 
     /**
@@ -947,13 +957,13 @@ abstract class Player
     }
 
     /**
-     * Get magicFlagsPriest
+     * Get lastMusic
      *
      * @return integer
      */
-    public function getMagicFlagsPriest()
+    public function getLastMusic()
     {
-        return $this->magicFlagsPriest;
+        return $this->lastMusic;
     }
 
     /**
@@ -971,13 +981,13 @@ abstract class Player
     }
 
     /**
-     * Get lastMusic
+     * Get poisonPoints
      *
      * @return integer
      */
-    public function getLastMusic()
+    public function getPoisonPoints()
     {
-        return $this->lastMusic;
+        return $this->poisonPoints;
     }
 
     /**
@@ -995,13 +1005,13 @@ abstract class Player
     }
 
     /**
-     * Get poisonPoints
+     * Get mentalCapacity
      *
      * @return integer
      */
-    public function getPoisonPoints()
+    public function getMentalCapacity()
     {
-        return $this->poisonPoints;
+        return $this->mentalCapacity;
     }
 
     /**
@@ -1019,13 +1029,13 @@ abstract class Player
     }
 
     /**
-     * Get mentalCapacity
+     * Get dateOfBirth
      *
      * @return integer
      */
-    public function getMentalCapacity()
+    public function getDateOfBirth()
     {
-        return $this->mentalCapacity;
+        return $this->dateOfBirth;
     }
 
     /**
@@ -1043,13 +1053,13 @@ abstract class Player
     }
 
     /**
-     * Get dateOfBirth
+     * Get hairId
      *
      * @return integer
      */
-    public function getDateOfBirth()
+    public function getHairId()
     {
-        return $this->dateOfBirth;
+        return $this->hairId;
     }
 
     /**
@@ -1067,13 +1077,13 @@ abstract class Player
     }
 
     /**
-     * Get hairId
+     * Get beardId
      *
      * @return integer
      */
-    public function getHairId()
+    public function getBeardId()
     {
-        return $this->hairId;
+        return $this->beardId;
     }
 
     /**
@@ -1091,13 +1101,13 @@ abstract class Player
     }
 
     /**
-     * Get beardId
+     * Get hairColorRed
      *
      * @return integer
      */
-    public function getBeardId()
+    public function getHairColorRed()
     {
-        return $this->beardId;
+        return $this->hairColorRed;
     }
 
     /**
@@ -1115,13 +1125,13 @@ abstract class Player
     }
 
     /**
-     * Get hairColorRed
+     * Get hairColorGreen
      *
      * @return integer
      */
-    public function getHairColorRed()
+    public function getHairColorGreen()
     {
-        return $this->hairColorRed;
+        return $this->hairColorGreen;
     }
 
     /**
@@ -1139,13 +1149,13 @@ abstract class Player
     }
 
     /**
-     * Get hairColorGreen
+     * Get hairColorBlue
      *
      * @return integer
      */
-    public function getHairColorGreen()
+    public function getHairColorBlue()
     {
-        return $this->hairColorGreen;
+        return $this->hairColorBlue;
     }
 
     /**
@@ -1163,13 +1173,13 @@ abstract class Player
     }
 
     /**
-     * Get hairColorBlue
+     * Get hairColorAlpha
      *
      * @return integer
      */
-    public function getHairColorBlue()
+    public function getHairColorAlpha()
     {
-        return $this->hairColorBlue;
+        return $this->hairColorAlpha;
     }
 
     /**
@@ -1187,13 +1197,13 @@ abstract class Player
     }
 
     /**
-     * Get hairColorAlpha
+     * Get skinColorRed
      *
      * @return integer
      */
-    public function getHairColorAlpha()
+    public function getSkinColorRed()
     {
-        return $this->hairColorAlpha;
+        return $this->skinColorRed;
     }
 
     /**
@@ -1211,13 +1221,13 @@ abstract class Player
     }
 
     /**
-     * Get skinColorRed
+     * Get skinColorGreen
      *
      * @return integer
      */
-    public function getSkinColorRed()
+    public function getSkinColorGreen()
     {
-        return $this->skinColorRed;
+        return $this->skinColorGreen;
     }
 
     /**
@@ -1235,13 +1245,13 @@ abstract class Player
     }
 
     /**
-     * Get skinColorGreen
+     * Get skinColorBlue
      *
      * @return integer
      */
-    public function getSkinColorGreen()
+    public function getSkinColorBlue()
     {
-        return $this->skinColorGreen;
+        return $this->skinColorBlue;
     }
 
     /**
@@ -1259,13 +1269,13 @@ abstract class Player
     }
 
     /**
-     * Get skinColorBlue
+     * Get skinColorAlpha
      *
      * @return integer
      */
-    public function getSkinColorBlue()
+    public function getSkinColorAlpha()
     {
-        return $this->skinColorBlue;
+        return $this->skinColorAlpha;
     }
 
     /**
@@ -1283,21 +1293,21 @@ abstract class Player
     }
 
     /**
-     * Get skinColorAlpha
-     *
-     * @return integer
-     */
-    public function getSkinColorAlpha()
-    {
-        return $this->skinColorAlpha;
-    }
-
-    /**
      * Get character
      *
      * @return \Illarion\DatabaseBundle\Entity\Server\Chars
      */
     public abstract function getCharacter();
+
+    /**
+     * Get essence
+     *
+     * @return integer
+     */
+    public function getEssence()
+    {
+        return $this->essence;
+    }
 
     /**
      * Set essence
@@ -1314,12 +1324,9 @@ abstract class Player
     }
 
     /**
-     * Get essence
+     * Get items
      *
-     * @return integer
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function getEssence()
-    {
-        return $this->essence;
-    }
+    public abstract function getItems();
 }

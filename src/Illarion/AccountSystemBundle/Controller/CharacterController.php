@@ -2,11 +2,14 @@
 
 namespace Illarion\AccountSystemBundle\Controller;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
+use Illarion\DatabaseBundle\Entity\Server\Items;
+use Illarion\DatabaseBundle\Entity\Server\PlayerItems;
 use Illarion\DatabaseBundle\Entity\Server\Race;
 use Illarion\DatabaseBundle\Entity\Server\RaceBeard;
 use Illarion\DatabaseBundle\Entity\Server\RaceHair;
@@ -227,7 +230,6 @@ class CharacterController extends FOSRestController
      * Get the general information for the character creation. This function will return the required data for all
      * possible races.
      *
-     * @param Request $request the request that is handled
      * @param string $server the server the creation information are requested for
      * @param integer $charId the ID of the character
      * @return View
@@ -252,11 +254,8 @@ class CharacterController extends FOSRestController
      *     }
      * )
      */
-    public function getAction(Request $request, $server, $charId)
+    public function getAction($server, $charId)
     {
-        $translator = $this->get('translator');
-        $german = ($request->getPreferredLanguage(array('de', 'en')) == 'de');
-
         $account = $this->getLoggedInAccount();
         $schema = $this->getSchemaFromServerIdent($server);
         if ($schema instanceof View)
@@ -313,7 +312,8 @@ class CharacterController extends FOSRestController
                     $player->getSkinColorBlue(),
                     $player->getSkinColorAlpha()
                 )
-            )
+            ),
+            'items' => self::getItems($player->getItems())
         ), 200);
     }
 
@@ -428,5 +428,36 @@ class CharacterController extends FOSRestController
             'blue' => $blue,
             'alpha' => $alpha
         );
+    }
+
+    /**
+     * Build a item list for a specific character of the items worn on the body.
+     *
+     * @param Collection $items the items
+     * @return array the data set relevant for the data transfer
+     */
+    private static function getItems($items)
+    {
+        $result = array();
+        foreach($items as $item)
+        {
+            if (!($item instanceof PlayerItems))
+            {
+                throw new UnexpectedTypeException($item, PlayerItems::class);
+            }
+
+            if ($item->getInContainer() != 0 || $item->getDepot() != 0)
+            {
+                continue;
+            }
+
+            $result[] = array(
+                'id' => $item->getItemId(),
+                'position' => $item->getLineNumber(),
+                'number' => $item->getNumber(),
+                'quality' => $item->getQuality()
+            );
+        }
+        return $result;
     }
 }

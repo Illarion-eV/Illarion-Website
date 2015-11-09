@@ -32,6 +32,16 @@ class RaceHair extends Server\RaceHair
     private $raceType;
 
     /**
+     * Get raceType
+     *
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\RaceTypes
+     */
+    public function getRaceType()
+    {
+        return $this->raceType;
+    }
+
+    /**
      * Set raceType
      *
      * @param \Illarion\DatabaseBundle\Entity\TestServer\RaceTypes $raceType
@@ -43,15 +53,5 @@ class RaceHair extends Server\RaceHair
         $this->raceType = $raceType;
 
         return $this;
-    }
-
-    /**
-     * Get raceType
-     *
-     * @return \Illarion\DatabaseBundle\Entity\TestServer\RaceTypes
-     */
-    public function getRaceType()
-    {
-        return $this->raceType;
     }
 }

@@ -28,6 +28,15 @@ class Race extends Server\Race
     private $types;
 
     /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->chars = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->types = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * Add char
      *
      * @param \Illarion\DatabaseBundle\Entity\TestServer\Chars $char
@@ -59,14 +68,6 @@ class Race extends Server\Race
     public function getChars()
     {
         return $this->chars;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->chars = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->types = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**

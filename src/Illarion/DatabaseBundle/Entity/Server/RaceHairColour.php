@@ -66,6 +66,16 @@ class RaceHairColour
     private $alpha;
 
     /**
+     * Get raceId
+     *
+     * @return integer
+     */
+    public function getRaceId()
+    {
+        return $this->raceId;
+    }
+
+    /**
      * Set raceId
      *
      * @param integer $raceId
@@ -80,13 +90,13 @@ class RaceHairColour
     }
 
     /**
-     * Get raceId
+     * Get typeId
      *
      * @return integer
      */
-    public function getRaceId()
+    public function getTypeId()
     {
-        return $this->raceId;
+        return $this->typeId;
     }
 
     /**
@@ -104,13 +114,13 @@ class RaceHairColour
     }
 
     /**
-     * Get typeId
+     * Get red
      *
      * @return integer
      */
-    public function getTypeId()
+    public function getRed()
     {
-        return $this->typeId;
+        return $this->red;
     }
 
     /**
@@ -128,13 +138,13 @@ class RaceHairColour
     }
 
     /**
-     * Get red
+     * Get green
      *
      * @return integer
      */
-    public function getRed()
+    public function getGreen()
     {
-        return $this->red;
+        return $this->green;
     }
 
     /**
@@ -152,13 +162,13 @@ class RaceHairColour
     }
 
     /**
-     * Get green
+     * Get blue
      *
      * @return integer
      */
-    public function getGreen()
+    public function getBlue()
     {
-        return $this->green;
+        return $this->blue;
     }
 
     /**
@@ -176,13 +186,13 @@ class RaceHairColour
     }
 
     /**
-     * Get blue
+     * Get alpha
      *
      * @return integer
      */
-    public function getBlue()
+    public function getAlpha()
     {
-        return $this->blue;
+        return $this->alpha;
     }
 
     /**
@@ -197,15 +207,5 @@ class RaceHairColour
         $this->alpha = $alpha;
 
         return $this;
-    }
-
-    /**
-     * Get alpha
-     *
-     * @return integer
-     */
-    public function getAlpha()
-    {
-        return $this->alpha;
     }
 }

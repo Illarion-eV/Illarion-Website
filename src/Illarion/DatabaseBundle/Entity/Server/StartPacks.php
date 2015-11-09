@@ -35,6 +35,16 @@ abstract class StartPacks
     private $nameEn;
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Set id
      *
      * @param integer $id
@@ -49,13 +59,13 @@ abstract class StartPacks
     }
 
     /**
-     * Get id
+     * Get nameDe
      *
-     * @return integer
+     * @return string
      */
-    public function getId()
+    public function getNameDe()
     {
-        return $this->id;
+        return $this->nameDe;
     }
 
     /**
@@ -73,13 +83,13 @@ abstract class StartPacks
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -94,16 +104,6 @@ abstract class StartPacks
         $this->nameEn = $nameEn;
 
         return $this;
-    }
-
-    /**
-     * Get nameEn
-     *
-     * @return string
-     */
-    public function getNameEn()
-    {
-        return $this->nameEn;
     }
 
     /**

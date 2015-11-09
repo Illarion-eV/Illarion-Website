@@ -54,6 +54,10 @@
                 <source>The name supplies as server identifier is invalid.</source>
                 <target state="translated">Die Bezeichnung des Servers der abgefragt werden soll ist ungültig.</target>
             </trans-unit>
+            <trans-unit id="14">
+                <source>The character could not be located in the current account.</source>
+                <target state="translated">Die Charakter konnte in dem aktuellen Account nicht gefunden werden.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

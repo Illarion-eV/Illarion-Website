@@ -131,6 +131,16 @@ class Account
     }
 
     /**
+     * Get login
+     *
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
      * Set login
      *
      * @param string $login
@@ -145,13 +155,13 @@ class Account
     }
 
     /**
-     * Get login
+     * Get password
      *
      * @return string
      */
-    public function getLogin()
+    public function getPassword()
     {
-        return $this->login;
+        return $this->password;
     }
 
     /**
@@ -169,13 +179,13 @@ class Account
     }
 
     /**
-     * Get password
+     * Get eMail
      *
      * @return string
      */
-    public function getPassword()
+    public function getEMail()
     {
-        return $this->password;
+        return $this->eMail;
     }
 
     /**
@@ -193,13 +203,13 @@ class Account
     }
 
     /**
-     * Get eMail
+     * Get registerDate
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getEMail()
+    public function getRegisterDate()
     {
-        return $this->eMail;
+        return $this->registerDate;
     }
 
     /**
@@ -217,13 +227,13 @@ class Account
     }
 
     /**
-     * Get registerDate
+     * Get lastIp
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getRegisterDate()
+    public function getLastIp()
     {
-        return $this->registerDate;
+        return $this->lastIp;
     }
 
     /**
@@ -241,13 +251,13 @@ class Account
     }
 
     /**
-     * Get lastIp
+     * Get state
      *
-     * @return string
+     * @return integer
      */
-    public function getLastIp()
+    public function getState()
     {
-        return $this->lastIp;
+        return $this->state;
     }
 
     /**
@@ -265,13 +275,13 @@ class Account
     }
 
     /**
-     * Get state
+     * Get maxChars
      *
      * @return integer
      */
-    public function getState()
+    public function getMaxChars()
     {
-        return $this->state;
+        return $this->maxChars;
     }
 
     /**
@@ -289,13 +299,13 @@ class Account
     }
 
     /**
-     * Get maxChars
+     * Get language
      *
      * @return integer
      */
-    public function getMaxChars()
+    public function getLanguage()
     {
-        return $this->maxChars;
+        return $this->language;
     }
 
     /**
@@ -310,16 +320,6 @@ class Account
         $this->language = $language;
 
         return $this;
-    }
-
-    /**
-     * Get language
-     *
-     * @return integer
-     */
-    public function getLanguage()
-    {
-        return $this->language;
     }
 
     /**

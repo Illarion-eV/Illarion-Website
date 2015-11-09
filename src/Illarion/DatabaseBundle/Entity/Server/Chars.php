@@ -98,6 +98,16 @@ abstract class Chars
     private $name;
 
     /**
+     * Get playerid
+     *
+     * @return integer
+     */
+    public function getPlayerId()
+    {
+        return $this->playerId;
+    }
+
+    /**
      * Set playerid
      *
      * @param integer $playerId
@@ -112,13 +122,13 @@ abstract class Chars
     }
 
     /**
-     * Get playerid
+     * Get accId
      *
      * @return integer
      */
-    public function getPlayerId()
+    public function getAccId()
     {
-        return $this->playerId;
+        return $this->accId;
     }
 
     /**
@@ -136,13 +146,13 @@ abstract class Chars
     }
 
     /**
-     * Get accId
+     * Get status
      *
      * @return integer
      */
-    public function getAccId()
+    public function getStatus()
     {
-        return $this->accId;
+        return $this->status;
     }
 
     /**
@@ -160,13 +170,13 @@ abstract class Chars
     }
 
     /**
-     * Get status
+     * Get statustime
      *
      * @return integer
      */
-    public function getStatus()
+    public function getStatustime()
     {
-        return $this->status;
+        return $this->statustime;
     }
 
     /**
@@ -184,13 +194,13 @@ abstract class Chars
     }
 
     /**
-     * Get statustime
+     * Get statusgm
      *
      * @return integer
      */
-    public function getStatustime()
+    public function getStatusgm()
     {
-        return $this->statustime;
+        return $this->statusgm;
     }
 
     /**
@@ -208,13 +218,13 @@ abstract class Chars
     }
 
     /**
-     * Get statusgm
+     * Get statusreason
      *
-     * @return integer
+     * @return string
      */
-    public function getStatusgm()
+    public function getStatusreason()
     {
-        return $this->statusgm;
+        return $this->statusreason;
     }
 
     /**
@@ -232,13 +242,13 @@ abstract class Chars
     }
 
     /**
-     * Get statusreason
+     * Get lastip
      *
      * @return string
      */
-    public function getStatusreason()
+    public function getLastip()
     {
-        return $this->statusreason;
+        return $this->lastip;
     }
 
     /**
@@ -256,13 +266,13 @@ abstract class Chars
     }
 
     /**
-     * Get lastip
+     * Get onlinetime
      *
-     * @return string
+     * @return integer
      */
-    public function getLastip()
+    public function getOnlinetime()
     {
-        return $this->lastip;
+        return $this->onlinetime;
     }
 
     /**
@@ -280,13 +290,13 @@ abstract class Chars
     }
 
     /**
-     * Get onlinetime
+     * Get lastsavetime
      *
      * @return integer
      */
-    public function getOnlinetime()
+    public function getLastsavetime()
     {
-        return $this->onlinetime;
+        return $this->lastsavetime;
     }
 
     /**
@@ -304,13 +314,13 @@ abstract class Chars
     }
 
     /**
-     * Get lastsavetime
+     * Get raceId
      *
      * @return integer
      */
-    public function getLastsavetime()
+    public function getRaceId()
     {
-        return $this->lastsavetime;
+        return $this->raceId;
     }
 
     /**
@@ -328,13 +338,13 @@ abstract class Chars
     }
 
     /**
-     * Get raceId
+     * Get raceTypeId
      *
      * @return integer
      */
-    public function getRaceId()
+    public function getRaceTypeId()
     {
-        return $this->raceId;
+        return $this->raceTypeId;
     }
 
     /**
@@ -352,13 +362,13 @@ abstract class Chars
     }
 
     /**
-     * Get raceTypeId
+     * Get name
      *
-     * @return integer
+     * @return string
      */
-    public function getRaceTypeId()
+    public function getName()
     {
-        return $this->raceTypeId;
+        return $this->name;
     }
 
     /**
@@ -373,16 +383,6 @@ abstract class Chars
         $this->name = $name;
 
         return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**

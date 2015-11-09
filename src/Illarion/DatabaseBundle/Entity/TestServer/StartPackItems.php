@@ -34,6 +34,16 @@ class StartPackItems extends Server\StartPackItems
     private $item;
 
     /**
+     * Get startPack
+     *
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\StartPacks
+     */
+    public function getStartPack()
+    {
+        return $this->startPack;
+    }
+
+    /**
      * Set startPack
      *
      * @param \Illarion\DatabaseBundle\Entity\TestServer\StartPacks $startPack
@@ -48,13 +58,13 @@ class StartPackItems extends Server\StartPackItems
     }
 
     /**
-     * Get startPack
+     * Get item
      *
-     * @return \Illarion\DatabaseBundle\Entity\TestServer\StartPacks
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\Items
      */
-    public function getStartPack()
+    public function getItem()
     {
-        return $this->startPack;
+        return $this->item;
     }
 
     /**
@@ -69,15 +79,5 @@ class StartPackItems extends Server\StartPackItems
         $this->item = $item;
 
         return $this;
-    }
-
-    /**
-     * Get item
-     *
-     * @return \Illarion\DatabaseBundle\Entity\TestServer\Items
-     */
-    public function getItem()
-    {
-        return $this->item;
     }
 }

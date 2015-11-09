@@ -53,6 +53,16 @@ class RaceBeard
     private $nameEn;
 
     /**
+     * Get raceId
+     *
+     * @return integer
+     */
+    public function getRaceId()
+    {
+        return $this->raceId;
+    }
+
+    /**
      * Set raceId
      *
      * @param integer $raceId
@@ -67,13 +77,13 @@ class RaceBeard
     }
 
     /**
-     * Get raceId
+     * Get typeId
      *
      * @return integer
      */
-    public function getRaceId()
+    public function getTypeId()
     {
-        return $this->raceId;
+        return $this->typeId;
     }
 
     /**
@@ -91,13 +101,13 @@ class RaceBeard
     }
 
     /**
-     * Get typeId
+     * Get beardId
      *
      * @return integer
      */
-    public function getTypeId()
+    public function getBeardId()
     {
-        return $this->typeId;
+        return $this->beardId;
     }
 
     /**
@@ -115,13 +125,13 @@ class RaceBeard
     }
 
     /**
-     * Get beardId
+     * Get nameDe
      *
-     * @return integer
+     * @return string
      */
-    public function getBeardId()
+    public function getNameDe()
     {
-        return $this->beardId;
+        return $this->nameDe;
     }
 
     /**
@@ -139,13 +149,13 @@ class RaceBeard
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -160,15 +170,5 @@ class RaceBeard
         $this->nameEn = $nameEn;
 
         return $this;
-    }
-
-    /**
-     * Get nameEn
-     *
-     * @return string
-     */
-    public function getNameEn()
-    {
-        return $this->nameEn;
     }
 }

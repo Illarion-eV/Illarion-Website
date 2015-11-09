@@ -26,6 +26,7 @@ class StartPacks extends Server\StartPacks
      * @ORM\OneToMany(targetEntity="Illarion\DatabaseBundle\Entity\TestServer\StartPackSkills", mappedBy="startPack")
      */
     private $skills;
+
     /**
      * Constructor
      */

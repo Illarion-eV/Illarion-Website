@@ -41,6 +41,16 @@ class Chars extends Server\Chars
     private $player;
 
     /**
+     * Get race
+     *
+     * @return \Illarion\DatabaseBundle\Entity\DevServer\Race
+     */
+    public function getRace()
+    {
+        return $this->race;
+    }
+
+    /**
      * Set race
      *
      * @param \Illarion\DatabaseBundle\Entity\DevServer\Race $race
@@ -55,13 +65,13 @@ class Chars extends Server\Chars
     }
 
     /**
-     * Get race
+     * Get account
      *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\Race
+     * @return \Illarion\DatabaseBundle\Entity\Accounts\Account
      */
-    public function getRace()
+    public function getAccount()
     {
-        return $this->race;
+        return $this->account;
     }
 
     /**
@@ -79,13 +89,13 @@ class Chars extends Server\Chars
     }
 
     /**
-     * Get account
+     * Get player
      *
-     * @return \Illarion\DatabaseBundle\Entity\Accounts\Account
+     * @return \Illarion\DatabaseBundle\Entity\DevServer\Player
      */
-    public function getAccount()
+    public function getPlayer()
     {
-        return $this->account;
+        return $this->player;
     }
 
     /**
@@ -100,15 +110,5 @@ class Chars extends Server\Chars
         $this->player = $player;
 
         return $this;
-    }
-
-    /**
-     * Get player
-     *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\Player
-     */
-    public function getPlayer()
-    {
-        return $this->player;
     }
 }

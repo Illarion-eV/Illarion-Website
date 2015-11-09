@@ -50,6 +50,7 @@ class RaceTypes extends Server\RaceTypes
      * })
      */
     private $race;
+
     /**
      * Constructor
      */
@@ -198,6 +199,16 @@ class RaceTypes extends Server\RaceTypes
     }
 
     /**
+     * Get race
+     *
+     * @return \Illarion\DatabaseBundle\Entity\TestServer\Race
+     */
+    public function getRace()
+    {
+        return $this->race;
+    }
+
+    /**
      * Set race
      *
      * @param \Illarion\DatabaseBundle\Entity\TestServer\Race $race
@@ -209,15 +220,5 @@ class RaceTypes extends Server\RaceTypes
         $this->race = $race;
 
         return $this;
-    }
-
-    /**
-     * Get race
-     *
-     * @return \Illarion\DatabaseBundle\Entity\TestServer\Race
-     */
-    public function getRace()
-    {
-        return $this->race;
     }
 }

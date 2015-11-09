@@ -30,6 +30,16 @@ abstract class RaceTypes
     private $typeId;
 
     /**
+     * Get raceId
+     *
+     * @return integer
+     */
+    public function getRaceId()
+    {
+        return $this->raceId;
+    }
+
+    /**
      * Set raceId
      *
      * @param integer $raceId
@@ -44,13 +54,13 @@ abstract class RaceTypes
     }
 
     /**
-     * Get raceId
+     * Get typeId
      *
      * @return integer
      */
-    public function getRaceId()
+    public function getTypeId()
     {
-        return $this->raceId;
+        return $this->typeId;
     }
 
     /**
@@ -65,16 +75,6 @@ abstract class RaceTypes
         $this->typeId = $typeId;
 
         return $this;
-    }
-
-    /**
-     * Get typeId
-     *
-     * @return integer
-     */
-    public function getTypeId()
-    {
-        return $this->typeId;
     }
 
     /**

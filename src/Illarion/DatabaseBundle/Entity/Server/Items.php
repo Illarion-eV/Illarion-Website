@@ -140,6 +140,16 @@ class Items
     private $level;
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Set id
      *
      * @param integer $id
@@ -154,13 +164,13 @@ class Items
     }
 
     /**
-     * Get id
+     * Get volume
      *
      * @return integer
      */
-    public function getId()
+    public function getVolume()
     {
-        return $this->id;
+        return $this->volume;
     }
 
     /**
@@ -178,13 +188,13 @@ class Items
     }
 
     /**
-     * Get volume
+     * Get weight
      *
      * @return integer
      */
-    public function getVolume()
+    public function getWeight()
     {
-        return $this->volume;
+        return $this->weight;
     }
 
     /**
@@ -202,13 +212,13 @@ class Items
     }
 
     /**
-     * Get weight
+     * Get agingSpeed
      *
      * @return integer
      */
-    public function getWeight()
+    public function getAgingSpeed()
     {
-        return $this->weight;
+        return $this->agingSpeed;
     }
 
     /**
@@ -226,13 +236,13 @@ class Items
     }
 
     /**
-     * Get agingSpeed
+     * Get objectAfterRotId
      *
      * @return integer
      */
-    public function getAgingSpeed()
+    public function getObjectAfterRotId()
     {
-        return $this->agingSpeed;
+        return $this->objectAfterRotId;
     }
 
     /**
@@ -250,13 +260,13 @@ class Items
     }
 
     /**
-     * Get objectAfterRotId
+     * Get script
      *
-     * @return integer
+     * @return string
      */
-    public function getObjectAfterRotId()
+    public function getScript()
     {
-        return $this->objectAfterRotId;
+        return $this->script;
     }
 
     /**
@@ -274,13 +284,13 @@ class Items
     }
 
     /**
-     * Get script
+     * Get rotsInInventory
      *
-     * @return string
+     * @return boolean
      */
-    public function getScript()
+    public function getRotsInInventory()
     {
-        return $this->script;
+        return $this->rotsInInventory;
     }
 
     /**
@@ -298,13 +308,13 @@ class Items
     }
 
     /**
-     * Get rotsInInventory
+     * Get brightness
      *
-     * @return boolean
+     * @return integer
      */
-    public function getRotsInInventory()
+    public function getBrightness()
     {
-        return $this->rotsInInventory;
+        return $this->brightness;
     }
 
     /**
@@ -322,13 +332,13 @@ class Items
     }
 
     /**
-     * Get brightness
+     * Get worth
      *
      * @return integer
      */
-    public function getBrightness()
+    public function getWorth()
     {
-        return $this->brightness;
+        return $this->worth;
     }
 
     /**
@@ -346,13 +356,13 @@ class Items
     }
 
     /**
-     * Get worth
+     * Get buyStack
      *
      * @return integer
      */
-    public function getWorth()
+    public function getBuyStack()
     {
-        return $this->worth;
+        return $this->buyStack;
     }
 
     /**
@@ -370,13 +380,13 @@ class Items
     }
 
     /**
-     * Get buyStack
+     * Get maxStack
      *
      * @return integer
      */
-    public function getBuyStack()
+    public function getMaxStack()
     {
-        return $this->buyStack;
+        return $this->maxStack;
     }
 
     /**
@@ -394,13 +404,13 @@ class Items
     }
 
     /**
-     * Get maxStack
+     * Get nameDe
      *
-     * @return integer
+     * @return string
      */
-    public function getMaxStack()
+    public function getNameDe()
     {
-        return $this->maxStack;
+        return $this->nameDe;
     }
 
     /**
@@ -418,13 +428,13 @@ class Items
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -442,13 +452,13 @@ class Items
     }
 
     /**
-     * Get nameEn
+     * Get descriptionDe
      *
      * @return string
      */
-    public function getNameEn()
+    public function getDescriptionDe()
     {
-        return $this->nameEn;
+        return $this->descriptionDe;
     }
 
     /**
@@ -466,13 +476,13 @@ class Items
     }
 
     /**
-     * Get descriptionDe
+     * Get descriptionEn
      *
      * @return string
      */
-    public function getDescriptionDe()
+    public function getDescriptionEn()
     {
-        return $this->descriptionDe;
+        return $this->descriptionEn;
     }
 
     /**
@@ -490,13 +500,13 @@ class Items
     }
 
     /**
-     * Get descriptionEn
+     * Get rareness
      *
-     * @return string
+     * @return integer
      */
-    public function getDescriptionEn()
+    public function getRareness()
     {
-        return $this->descriptionEn;
+        return $this->rareness;
     }
 
     /**
@@ -514,13 +524,13 @@ class Items
     }
 
     /**
-     * Get rareness
+     * Get name
      *
-     * @return integer
+     * @return string
      */
-    public function getRareness()
+    public function getName()
     {
-        return $this->rareness;
+        return $this->name;
     }
 
     /**
@@ -538,13 +548,13 @@ class Items
     }
 
     /**
-     * Get name
+     * Get level
      *
-     * @return string
+     * @return integer
      */
-    public function getName()
+    public function getLevel()
     {
-        return $this->name;
+        return $this->level;
     }
 
     /**
@@ -559,15 +569,5 @@ class Items
         $this->level = $level;
 
         return $this;
-    }
-
-    /**
-     * Get level
-     *
-     * @return integer
-     */
-    public function getLevel()
-    {
-        return $this->level;
     }
 }

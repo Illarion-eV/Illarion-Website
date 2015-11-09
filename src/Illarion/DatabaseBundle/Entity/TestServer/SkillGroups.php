@@ -19,6 +19,7 @@ class SkillGroups extends Server\SkillGroups
      * @ORM\OneToMany(targetEntity="Illarion\DatabaseBundle\Entity\TestServer\Skills", mappedBy="group")
      */
     private $skills;
+
     /**
      * Constructor
      */

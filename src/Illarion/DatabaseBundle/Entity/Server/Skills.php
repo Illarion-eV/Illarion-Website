@@ -49,6 +49,16 @@ class Skills
     private $nameEn;
 
     /**
+     * Get skillId
+     *
+     * @return integer
+     */
+    public function getSkillId()
+    {
+        return $this->skillId;
+    }
+
+    /**
      * Set skillId
      *
      * @param integer $skillId
@@ -63,13 +73,13 @@ class Skills
     }
 
     /**
-     * Get skillId
+     * Get groupId
      *
      * @return integer
      */
-    public function getSkillId()
+    public function getGroupId()
     {
-        return $this->skillId;
+        return $this->groupId;
     }
 
     /**
@@ -87,13 +97,13 @@ class Skills
     }
 
     /**
-     * Get groupId
+     * Get name
      *
-     * @return integer
+     * @return string
      */
-    public function getGroupId()
+    public function getName()
     {
-        return $this->groupId;
+        return $this->name;
     }
 
     /**
@@ -111,13 +121,13 @@ class Skills
     }
 
     /**
-     * Get name
+     * Get nameDe
      *
      * @return string
      */
-    public function getName()
+    public function getNameDe()
     {
-        return $this->name;
+        return $this->nameDe;
     }
 
     /**
@@ -135,13 +145,13 @@ class Skills
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -156,15 +166,5 @@ class Skills
         $this->nameEn = $nameEn;
 
         return $this;
-    }
-
-    /**
-     * Get nameEn
-     *
-     * @return string
-     */
-    public function getNameEn()
-    {
-        return $this->nameEn;
     }
 }

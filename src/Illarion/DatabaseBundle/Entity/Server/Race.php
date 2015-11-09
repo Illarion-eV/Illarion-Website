@@ -203,6 +203,16 @@ abstract class Race
     private $name;
 
     /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Set id
      *
      * @param integer $id
@@ -217,13 +227,13 @@ abstract class Race
     }
 
     /**
-     * Get id
+     * Get nameDe
      *
-     * @return integer
+     * @return string
      */
-    public function getId()
+    public function getNameDe()
     {
-        return $this->id;
+        return $this->nameDe;
     }
 
     /**
@@ -241,13 +251,13 @@ abstract class Race
     }
 
     /**
-     * Get nameDe
+     * Get nameEn
      *
      * @return string
      */
-    public function getNameDe()
+    public function getNameEn()
     {
-        return $this->nameDe;
+        return $this->nameEn;
     }
 
     /**
@@ -265,13 +275,13 @@ abstract class Race
     }
 
     /**
-     * Get nameEn
+     * Get ageMin
      *
-     * @return string
+     * @return integer
      */
-    public function getNameEn()
+    public function getAgeMin()
     {
-        return $this->nameEn;
+        return $this->ageMin;
     }
 
     /**
@@ -289,13 +299,13 @@ abstract class Race
     }
 
     /**
-     * Get ageMin
+     * Get ageMax
      *
      * @return integer
      */
-    public function getAgeMin()
+    public function getAgeMax()
     {
-        return $this->ageMin;
+        return $this->ageMax;
     }
 
     /**
@@ -313,13 +323,13 @@ abstract class Race
     }
 
     /**
-     * Get ageMax
+     * Get weightMin
      *
      * @return integer
      */
-    public function getAgeMax()
+    public function getWeightMin()
     {
-        return $this->ageMax;
+        return $this->weightMin;
     }
 
     /**
@@ -337,13 +347,13 @@ abstract class Race
     }
 
     /**
-     * Get weightMin
+     * Get weightMax
      *
      * @return integer
      */
-    public function getWeightMin()
+    public function getWeightMax()
     {
-        return $this->weightMin;
+        return $this->weightMax;
     }
 
     /**
@@ -361,13 +371,13 @@ abstract class Race
     }
 
     /**
-     * Get weightMax
+     * Get heightMin
      *
      * @return integer
      */
-    public function getWeightMax()
+    public function getHeightMin()
     {
-        return $this->weightMax;
+        return $this->heightMin;
     }
 
     /**
@@ -385,13 +395,13 @@ abstract class Race
     }
 
     /**
-     * Get heightMin
+     * Get heightMax
      *
      * @return integer
      */
-    public function getHeightMin()
+    public function getHeightMax()
     {
-        return $this->heightMin;
+        return $this->heightMax;
     }
 
     /**
@@ -409,13 +419,13 @@ abstract class Race
     }
 
     /**
-     * Get heightMax
+     * Get agilityMin
      *
      * @return integer
      */
-    public function getHeightMax()
+    public function getAgilityMin()
     {
-        return $this->heightMax;
+        return $this->agilityMin;
     }
 
     /**
@@ -433,13 +443,13 @@ abstract class Race
     }
 
     /**
-     * Get agilityMin
+     * Get agilityMax
      *
      * @return integer
      */
-    public function getAgilityMin()
+    public function getAgilityMax()
     {
-        return $this->agilityMin;
+        return $this->agilityMax;
     }
 
     /**
@@ -457,13 +467,13 @@ abstract class Race
     }
 
     /**
-     * Get agilityMax
+     * Get constitutionMin
      *
      * @return integer
      */
-    public function getAgilityMax()
+    public function getConstitutionMin()
     {
-        return $this->agilityMax;
+        return $this->constitutionMin;
     }
 
     /**
@@ -481,13 +491,13 @@ abstract class Race
     }
 
     /**
-     * Get constitutionMin
+     * Get constitutionMax
      *
      * @return integer
      */
-    public function getConstitutionMin()
+    public function getConstitutionMax()
     {
-        return $this->constitutionMin;
+        return $this->constitutionMax;
     }
 
     /**
@@ -505,13 +515,13 @@ abstract class Race
     }
 
     /**
-     * Get constitutionMax
+     * Get dexterityMin
      *
      * @return integer
      */
-    public function getConstitutionMax()
+    public function getDexterityMin()
     {
-        return $this->constitutionMax;
+        return $this->dexterityMin;
     }
 
     /**
@@ -529,13 +539,13 @@ abstract class Race
     }
 
     /**
-     * Get dexterityMin
+     * Get dexterityMax
      *
      * @return integer
      */
-    public function getDexterityMin()
+    public function getDexterityMax()
     {
-        return $this->dexterityMin;
+        return $this->dexterityMax;
     }
 
     /**
@@ -553,13 +563,13 @@ abstract class Race
     }
 
     /**
-     * Get dexterityMax
+     * Get essenceMin
      *
      * @return integer
      */
-    public function getDexterityMax()
+    public function getEssenceMin()
     {
-        return $this->dexterityMax;
+        return $this->essenceMin;
     }
 
     /**
@@ -577,13 +587,13 @@ abstract class Race
     }
 
     /**
-     * Get essenceMin
+     * Get essenceMax
      *
      * @return integer
      */
-    public function getEssenceMin()
+    public function getEssenceMax()
     {
-        return $this->essenceMin;
+        return $this->essenceMax;
     }
 
     /**
@@ -601,13 +611,13 @@ abstract class Race
     }
 
     /**
-     * Get essenceMax
+     * Get intelligenceMin
      *
      * @return integer
      */
-    public function getEssenceMax()
+    public function getIntelligenceMin()
     {
-        return $this->essenceMax;
+        return $this->intelligenceMin;
     }
 
     /**
@@ -625,13 +635,13 @@ abstract class Race
     }
 
     /**
-     * Get intelligenceMin
+     * Get intelligenceMax
      *
      * @return integer
      */
-    public function getIntelligenceMin()
+    public function getIntelligenceMax()
     {
-        return $this->intelligenceMin;
+        return $this->intelligenceMax;
     }
 
     /**
@@ -649,13 +659,13 @@ abstract class Race
     }
 
     /**
-     * Get intelligenceMax
+     * Get perceptionMin
      *
      * @return integer
      */
-    public function getIntelligenceMax()
+    public function getPerceptionMin()
     {
-        return $this->intelligenceMax;
+        return $this->perceptionMin;
     }
 
     /**
@@ -673,13 +683,13 @@ abstract class Race
     }
 
     /**
-     * Get perceptionMin
+     * Get perceptionMax
      *
      * @return integer
      */
-    public function getPerceptionMin()
+    public function getPerceptionMax()
     {
-        return $this->perceptionMin;
+        return $this->perceptionMax;
     }
 
     /**
@@ -697,13 +707,13 @@ abstract class Race
     }
 
     /**
-     * Get perceptionMax
+     * Get strengthMin
      *
      * @return integer
      */
-    public function getPerceptionMax()
+    public function getStrengthMin()
     {
-        return $this->perceptionMax;
+        return $this->strengthMin;
     }
 
     /**
@@ -721,13 +731,13 @@ abstract class Race
     }
 
     /**
-     * Get strengthMin
+     * Get strengthMax
      *
      * @return integer
      */
-    public function getStrengthMin()
+    public function getStrengthMax()
     {
-        return $this->strengthMin;
+        return $this->strengthMax;
     }
 
     /**
@@ -745,13 +755,13 @@ abstract class Race
     }
 
     /**
-     * Get strengthMax
+     * Get willpowerMin
      *
      * @return integer
      */
-    public function getStrengthMax()
+    public function getWillpowerMin()
     {
-        return $this->strengthMax;
+        return $this->willpowerMin;
     }
 
     /**
@@ -769,13 +779,13 @@ abstract class Race
     }
 
     /**
-     * Get willpowerMin
+     * Get willpowerMax
      *
      * @return integer
      */
-    public function getWillpowerMin()
+    public function getWillpowerMax()
     {
-        return $this->willpowerMin;
+        return $this->willpowerMax;
     }
 
     /**
@@ -793,13 +803,13 @@ abstract class Race
     }
 
     /**
-     * Get willpowerMax
+     * Get attributesPointsMax
      *
      * @return integer
      */
-    public function getWillpowerMax()
+    public function getAttributePointsMax()
     {
-        return $this->willpowerMax;
+        return $this->attributePointsMax;
     }
 
     /**
@@ -817,13 +827,13 @@ abstract class Race
     }
 
     /**
-     * Get attributesPointsMax
+     * Get name
      *
-     * @return integer
+     * @return string
      */
-    public function getAttributePointsMax()
+    public function getName()
     {
-        return $this->attributePointsMax;
+        return $this->name;
     }
 
     /**
@@ -838,16 +848,6 @@ abstract class Race
         $this->name = $name;
 
         return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**

@@ -34,6 +34,16 @@ class StartPackSkills extends Server\StartPackSkills
     private $startPack;
 
     /**
+     * Get skill
+     *
+     * @return \Illarion\DatabaseBundle\Entity\DevServer\Skills
+     */
+    public function getSkill()
+    {
+        return $this->skill;
+    }
+
+    /**
      * Set skill
      *
      * @param \Illarion\DatabaseBundle\Entity\DevServer\Skills $skill
@@ -48,13 +58,13 @@ class StartPackSkills extends Server\StartPackSkills
     }
 
     /**
-     * Get skill
+     * Get startPack
      *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\Skills
+     * @return \Illarion\DatabaseBundle\Entity\DevServer\StartPacks
      */
-    public function getSkill()
+    public function getStartPack()
     {
-        return $this->skill;
+        return $this->startPack;
     }
 
     /**
@@ -69,15 +79,5 @@ class StartPackSkills extends Server\StartPackSkills
         $this->startPack = $startPack;
 
         return $this;
-    }
-
-    /**
-     * Get startPack
-     *
-     * @return \Illarion\DatabaseBundle\Entity\DevServer\StartPacks
-     */
-    public function getStartPack()
-    {
-        return $this->startPack;
     }
 }

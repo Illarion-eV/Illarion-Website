@@ -37,6 +37,16 @@ class StartPackSkills
     private $skillValue;
 
     /**
+     * Get packId
+     *
+     * @return integer
+     */
+    public function getPackId()
+    {
+        return $this->packId;
+    }
+
+    /**
      * Set packId
      *
      * @param integer $packId
@@ -51,13 +61,13 @@ class StartPackSkills
     }
 
     /**
-     * Get packId
+     * Get skillId
      *
      * @return integer
      */
-    public function getPackId()
+    public function getSkillId()
     {
-        return $this->packId;
+        return $this->skillId;
     }
 
     /**
@@ -75,13 +85,13 @@ class StartPackSkills
     }
 
     /**
-     * Get skillId
+     * Get skillValue
      *
      * @return integer
      */
-    public function getSkillId()
+    public function getSkillValue()
     {
-        return $this->skillId;
+        return $this->skillValue;
     }
 
     /**
@@ -96,15 +106,5 @@ class StartPackSkills
         $this->skillValue = $skillValue;
 
         return $this;
-    }
-
-    /**
-     * Get skillValue
-     *
-     * @return integer
-     */
-    public function getSkillValue()
-    {
-        return $this->skillValue;
     }
 }

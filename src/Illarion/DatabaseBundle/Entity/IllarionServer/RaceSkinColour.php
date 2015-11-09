@@ -25,6 +25,16 @@ class RaceSkinColour extends Server\RaceSkinColour
     private $raceType;
 
     /**
+     * Get raceType
+     *
+     * @return \Illarion\DatabaseBundle\Entity\IllarionServer\RaceTypes
+     */
+    public function getRaceType()
+    {
+        return $this->raceType;
+    }
+
+    /**
      * Set raceType
      *
      * @param \Illarion\DatabaseBundle\Entity\IllarionServer\RaceTypes $raceType
@@ -36,15 +46,5 @@ class RaceSkinColour extends Server\RaceSkinColour
         $this->raceType = $raceType;
 
         return $this;
-    }
-
-    /**
-     * Get raceType
-     *
-     * @return \Illarion\DatabaseBundle\Entity\IllarionServer\RaceTypes
-     */
-    public function getRaceType()
-    {
-        return $this->raceType;
     }
 }

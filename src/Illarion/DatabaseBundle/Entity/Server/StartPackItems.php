@@ -51,6 +51,16 @@ abstract class StartPackItems
     private $quality;
 
     /**
+     * Get packId
+     *
+     * @return integer
+     */
+    public function getPackId()
+    {
+        return $this->packId;
+    }
+
+    /**
      * Set packId
      *
      * @param integer $packId
@@ -65,13 +75,13 @@ abstract class StartPackItems
     }
 
     /**
-     * Get packId
+     * Get linenumber
      *
      * @return integer
      */
-    public function getPackId()
+    public function getLinenumber()
     {
-        return $this->packId;
+        return $this->linenumber;
     }
 
     /**
@@ -89,13 +99,13 @@ abstract class StartPackItems
     }
 
     /**
-     * Get linenumber
+     * Get itemId
      *
      * @return integer
      */
-    public function getLinenumber()
+    public function getItemId()
     {
-        return $this->linenumber;
+        return $this->itemId;
     }
 
     /**
@@ -113,13 +123,13 @@ abstract class StartPackItems
     }
 
     /**
-     * Get itemId
+     * Get number
      *
      * @return integer
      */
-    public function getItemId()
+    public function getNumber()
     {
-        return $this->itemId;
+        return $this->number;
     }
 
     /**
@@ -137,13 +147,13 @@ abstract class StartPackItems
     }
 
     /**
-     * Get number
+     * Get quality
      *
      * @return integer
      */
-    public function getNumber()
+    public function getQuality()
     {
-        return $this->number;
+        return $this->quality;
     }
 
     /**
@@ -158,16 +168,6 @@ abstract class StartPackItems
         $this->quality = $quality;
 
         return $this;
-    }
-
-    /**
-     * Get quality
-     *
-     * @return integer
-     */
-    public function getQuality()
-    {
-        return $this->quality;
     }
 
     /**

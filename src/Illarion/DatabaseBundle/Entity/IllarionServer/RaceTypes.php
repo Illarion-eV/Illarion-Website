@@ -199,6 +199,16 @@ class RaceTypes extends Server\RaceTypes
     }
 
     /**
+     * Get race
+     *
+     * @return \Illarion\DatabaseBundle\Entity\IllarionServer\Race
+     */
+    public function getRace()
+    {
+        return $this->race;
+    }
+
+    /**
      * Set race
      *
      * @param \Illarion\DatabaseBundle\Entity\IllarionServer\Race $race
@@ -210,15 +220,5 @@ class RaceTypes extends Server\RaceTypes
         $this->race = $race;
 
         return $this;
-    }
-
-    /**
-     * Get race
-     *
-     * @return \Illarion\DatabaseBundle\Entity\IllarionServer\Race
-     */
-    public function getRace()
-    {
-        return $this->race;
     }
 }
