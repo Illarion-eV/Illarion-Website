@@ -1300,6 +1300,15 @@ abstract class Player
     public abstract function getCharacter();
 
     /**
+     * Set character
+     *
+     * @param Chars $character
+     *
+     * @return Player
+     */
+    public abstract function setCharacter(Chars $character = null);
+
+    /**
      * Get essence
      *
      * @return integer

@@ -58,6 +58,30 @@
                 <source>The character could not be located in the current account.</source>
                 <target state="translated">Die Charakter konnte in dem aktuellen Account nicht gefunden werden.</target>
             </trans-unit>
+            <trans-unit id="15">
+                <source>Game Server</source>
+                <target state="translated">Spiel-Server</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>Test Server</source>
+                <target state="translated">Test-Server</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>Development Server</source>
+                <target state="translated">Entwicklungs-Server</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>This account is not allowed to create a character on this server.</source>
+                <target state="translated">Dieser Account darf auf dem Server keine Charaktere erstellen.</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>Missing data. This function requires all data fields to be filled.</source>
+                <target state="translated">Fehlende Daten. Diese Funktion erfordert alle Werte.</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>Character created.</source>
+                <target state="translated">Charakter erstellt.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

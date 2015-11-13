@@ -3,6 +3,7 @@
 namespace Illarion\DatabaseBundle\Entity\Server;
 
 use Doctrine\ORM\Mapping as ORM;
+use Illarion\DatabaseBundle\Entity\Accounts\Account;
 
 /**
  * Chars
@@ -384,6 +385,38 @@ abstract class Chars
 
         return $this;
     }
+
+    /**
+     * Get account
+     *
+     * @return Account
+     */
+    public abstract function getAccount();
+
+    /**
+     * Set account
+     *
+     * @param Account $account
+     *
+     * @return Chars
+     */
+    public abstract function setAccount(Account $account = null);
+
+    /**
+     * Get race
+     *
+     * @return Race
+     */
+    public abstract function getRace();
+
+    /**
+     * Set race
+     *
+     * @param Race $race
+     *
+     * @return Chars
+     */
+    public abstract function setRace(Race $race = null);
 
     /**
      * Get player

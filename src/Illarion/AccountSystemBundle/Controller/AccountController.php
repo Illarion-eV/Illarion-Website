@@ -8,13 +8,13 @@ use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
+use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\AccountCreateType;
 use Illarion\AccountSystemBundle\Form\AccountUpdateType;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
-use Symfony\Component\HttpFoundation\File\Exception\UnexpectedTypeException;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -48,9 +48,8 @@ class AccountController extends FOSRestController
         $usr = $this->get('security.token_storage')->getToken()->getUser();
 
         if (!($usr instanceof User))
-        {
-            throw new \LogicException("The used user has a unexpected type. It is not a user of the illarion security system.");
-        }
+            throw new UnexpectedTypeException($usr, User::class);
+
         $account = $usr->getAccount();
 
         $data = array(
@@ -73,6 +72,34 @@ class AccountController extends FOSRestController
             $data['chars']['devserver'] = self::buildCharList($account->getDevServerChars());
         } catch (TableNotFoundException $ignored) {}
 
+        $data['chars']['create'] = array();
+
+        $translator = $this->get('translator');
+
+        if (count($data['chars']['illarionserver']) < $account->getMaxChars())
+        {
+            $data['chars']['create'][] = array(
+                'route' => $this->generateUrl('account_post_character', array('server' => 'illarionserver')),
+                'name' => $translator->trans('Game Server')
+            );
+        }
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_TESTSERVER_ACCESS'))
+        {
+            $data['chars']['create'][] = array(
+                'route' => $this->generateUrl('account_post_character', array('server' => 'testserver')),
+                'name' => $translator->trans('Test Server')
+            );
+        }
+
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_DEVSERVER_ACCESS'))
+        {
+            $data['chars']['create'][] = array(
+                'route' => $this->generateUrl('account_post_character', array('server' => 'devserver')),
+                'name' => $translator->trans('Development Server')
+            );
+        }
+
         $view = $this->view()->create($data, 200);
 
         return $view;
@@ -91,9 +118,7 @@ class AccountController extends FOSRestController
         foreach ($chars as $char)
         {
             if (!($char instanceof Chars))
-            {
                 throw new UnexpectedTypeException($char, Chars::class);
-            }
 
             $list[] = array(
                 'name' => $char->getName(),
@@ -149,10 +174,10 @@ class AccountController extends FOSRestController
 
             $newAccount = new Account();
             $newAccount->setLogin($data['name']);
+
             if (strlen($data['email']) > 0)
-            {
                 $newAccount->setEMail($data['email']);
-            }
+
             $newAccount->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
             $newAccount->setRegisterDate(new \DateTime());
             $newAccount->setLastIp($request->getClientIp());
@@ -176,7 +201,9 @@ class AccountController extends FOSRestController
                 );
                 $view = $this->view()->create($result, 400);
             }
-        } else {
+        }
+        else
+        {
             $result = array();
             $result['error'] = array(
                 'code' => 400,
@@ -234,21 +261,18 @@ class AccountController extends FOSRestController
             $usr = $this->get('security.token_storage')->getToken()->getUser();
 
             if (!($usr instanceof User))
-            {
-                throw new \LogicException("The used user has a unexpected type. It is not a user of the illarion security system.");
-            }
+                throw new UnexpectedTypeException($usr, User::class);
+
             $account = $usr->getAccount();
 
             $passwordEncoder = $this->get('illarion.security.password.encoder');
 
             if (strlen($data['email']) > 0)
-            {
                 $account->setEMail($data['email']);
-            }
+
             if (strlen($data['password']) > 0)
-            {
                 $account->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
-            }
+
             $account->setLastIp($request->getClientIp());
             $account->setLanguage($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
 

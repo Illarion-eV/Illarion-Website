@@ -294,4 +294,20 @@ abstract class PlayerItems
 
         return $this;
     }
+
+    /**
+     * Set player
+     *
+     * @param Player $player
+     *
+     * @return PlayerSkills
+     */
+    public abstract function setPlayer(Player $player = null);
+
+    /**
+     * Get player
+     *
+     * @return Player
+     */
+    public abstract function getPlayer();
 }

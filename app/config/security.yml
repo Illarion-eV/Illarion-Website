@@ -32,7 +32,8 @@ security:
             provider: illarion
 
     role_hierarchy:
-        ROLE_ADMIN:      ROLE_GAMEMASTER
+        ROLE_ADMIN:      ROLE_GAMEMASTER, ROLE_DEVELOPER
+        ROLE_DEVELOPER:  ROLE_PLAYER, ROLE_TESTSERVER_ACCESS, ROLE_DEVSERVER_ACCESS
         ROLE_GAMEMASTER: ROLE_PLAYER
 
     access_control:
