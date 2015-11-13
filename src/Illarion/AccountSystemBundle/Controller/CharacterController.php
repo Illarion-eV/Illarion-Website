@@ -10,6 +10,7 @@ use FOS\RestBundle\View\View;
 use Illarion\AccountSystemBundle\Exception\AttributeOutOfRangeException;
 use Illarion\AccountSystemBundle\Exception\ColourNotFoundException;
 use Illarion\AccountSystemBundle\Exception\IllegalValueException;
+use Illarion\AccountSystemBundle\Exception\NotSupportedException;
 use Illarion\AccountSystemBundle\Exception\StartPackNotFoundException;
 use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\CharacterCreateType;
@@ -328,7 +329,7 @@ class CharacterController extends FOSRestController
      *     authentication = true,
      *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
-     *     description = "Create a new account.",
+     *     description = "Create a new character.",
      *     input = "Illarion\AccountSystemBundle\Form\CharacterCreateType",
      *     parameters = {
      *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"}
@@ -608,6 +609,47 @@ class CharacterController extends FOSRestController
         }
 
         return $view;
+    }
+
+    /**
+     * Update the values of a character.
+     *
+     * @param Request $request
+     * @param string $server the server the creation information are requested for
+     * @param integer $charId the ID of the character
+     * @return View
+     * @RestAnnotations\Get("/character/{server}/{charId}")
+     * @RestAnnotations\QueryParam(name="server", requirements="illarionserver|testserver|devserver", description="The server the character is expected to be created on.")
+     * @RestAnnotations\QueryParam(name="charId", requirements="%d+", description="The ID of the character that is requested.")
+     * @RestAnnotations\View()
+     * @ApiDoc(
+     *     authentication = true,
+     *     authenticationRoles = {"ROLE_PLAYER"},
+     *     resource = true,
+     *     description = "Update a character.",
+     *     input = "Illarion\AccountSystemBundle\Form\CharacterUpdateType",
+     *     parameters = {
+     *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"},
+     *         {"name"="charId", "dataType"="number", "required"=true, "requirements"="%d+"}
+     *     },
+     *     statusCodes = {
+     *         200 = "Returned in case the character was correctly updated.",
+     *         400 = "In case the payload for the request was illegal or in case the server value is illegal",
+     *         401 = "In case the account does not contain the character requested.",
+     *         500 = "In case fetching the data from the database failed."
+     *     }
+     * )
+     */
+    public function putAction(Request $request, $server, $charId)
+    {
+        $schema = $this->getSchemaFromServerIdent($server);
+        if ($schema instanceof View)
+            return $schema;
+
+        if ($schema === 'testserver' && $schema == 'devserver')
+            throw new NotSupportedException('Updating the character information is currently only supported on the illarion server.');
+
+
     }
 
     /**
