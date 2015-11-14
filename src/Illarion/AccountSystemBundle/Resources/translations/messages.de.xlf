@@ -82,6 +82,10 @@
                 <source>Character created.</source>
                 <target state="translated">Charakter erstellt.</target>
             </trans-unit>
+            <trans-unit id="21">
+                <source>Character updated.</source>
+                <target state="translated">Charakter aktuallisiert.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

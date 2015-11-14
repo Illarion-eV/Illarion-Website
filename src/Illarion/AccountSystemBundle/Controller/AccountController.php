@@ -278,7 +278,7 @@ class AccountController extends FOSRestController
 
             try
             {
-                $em->merge($account);
+                $em->persist($account);
                 $em->flush();
 
                 $view = $this->view()->create($translator->trans('Account updated.'), 202);

@@ -14,6 +14,8 @@ use Illarion\AccountSystemBundle\Exception\NotSupportedException;
 use Illarion\AccountSystemBundle\Exception\StartPackNotFoundException;
 use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\CharacterCreateType;
+use Illarion\AccountSystemBundle\Form\CharacterUpdateType;
+use Illarion\DatabaseBundle\Entity\Homepage\CharacterDetails;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\DatabaseBundle\Entity\Server\Player;
 use Illarion\DatabaseBundle\Entity\Server\PlayerItems;
@@ -261,20 +263,9 @@ class CharacterController extends FOSRestController
         if ($schema instanceof View)
             return $schema;
 
-        $charsRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Chars'));
-
-        $char = $charsRepo->findOneBy(array('accId' => $account->getId(), 'playerId' => $charId));
-        if ($char === null || !($char instanceof Chars))
-        {
-            $translator = $this->get('translator');
-            return $this->view()->create(array(
-                'error' => array(
-                    'code' => 401,
-                    'message' => $translator->trans('The character could not be located in the current account.'),
-                    'value' => array('server' => $server, 'charId' => $charId)
-                )
-            ), 401);
-        }
+        $char = $this->getCharacter($schema, $account->getId(), $charId);
+        if ($char instanceof View)
+            return $char;
 
         $player = $char->getPlayer(); 
         return $this->view()->create(array(
@@ -354,259 +345,254 @@ class CharacterController extends FOSRestController
         if (($schema === 'TestServer' && !$authManager->isGranted('ROLE_TESTSERVER_ACCESS')) ||
             ($schema === 'DevServer' && !$authManager->isGranted('ROLE_DEVSERVER_ACCESS')))
         {
-            return $this->view()->create(array(
-                'error' => array(
-                    'code' => 401,
-                    'message' => $translator->trans('This account is not allowed to create a character on this server.'),
-                    'value' => $server
-                )
-            ), 401);
+            return $this->view()->create(array('error' => array(
+                'code' => 401,
+                'message' => $translator->trans('This account is not allowed to create a character on this server.'),
+                'value' => $server
+            )), 401);
         }
 
         $form = $this->createForm(new CharacterCreateType());
         $form->handleRequest($request);
 
         if (!$form->isSubmitted()) {
-            $result = array();
-            $result['error'] = array(
+            return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('Missing data. This function requires all data fields to be filled.'),
                 'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            )), 400);
         }
-        elseif ($form->isValid())
+
+        if (!$form->isValid())
         {
-
-            $data = $form->getData();
-            $em = $this->getDoctrineManager();
-
-            /** @var Chars $newCharacter */
-            /** @var Player $newPlayer */
-            switch ($schema)
-            {
-                case 'IllarionServer':
-                    $newCharacter = new IllarionServer\Chars();
-                    $newPlayer = new IllarionServer\Player();
-                    break;
-                case 'TestServer':
-                    $newCharacter = new TestServer\Chars();
-                    $newPlayer = new TestServer\Player();
-                    break;
-                case 'DevServer':
-                    $newCharacter = new DevServer\Chars();
-                    $newPlayer = new DevServer\Player();
-                    break;
-                default: throw new \RuntimeException();
-            }
-
-            $raceRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Race'));
-            $raceDef = $raceRepo->findOneBy(array('id' => $data['race']));
-            if (!($raceDef instanceof Race))
-                throw new UnexpectedTypeException($raceDef, Race::class);
-
-            $account = $this->getLoggedInAccount();
-
-            // Check attributes
-            if (self::isInRange($data['agility'], $raceDef->getAgilityMin(), $raceDef->getAgilityMax()))
-                throw new AttributeOutOfRangeException('agility', $data['agility'],
-                    $raceDef->getAgilityMin(), $raceDef->getAgilityMax());
-
-            if (self::isInRange($data['constitution'], $raceDef->getConstitutionMin(), $raceDef->getConstitutionMax()))
-                throw new AttributeOutOfRangeException('constitution', $data['constitution'],
-                    $raceDef->getConstitutionMin(), $raceDef->getConstitutionMax());
-
-            if (self::isInRange($data['dexterity'], $raceDef->getDexterityMin(), $raceDef->getDexterityMax()))
-                throw new AttributeOutOfRangeException('dexterity', $data['dexterity'],
-                    $raceDef->getDexterityMin(), $raceDef->getDexterityMax());
-
-            if (self::isInRange($data['essence'], $raceDef->getEssenceMin(), $raceDef->getEssenceMax()))
-                throw new AttributeOutOfRangeException('essence', $data['essence'],
-                    $raceDef->getEssenceMin(), $raceDef->getEssenceMax());
-
-            if (self::isInRange($data['intelligence'], $raceDef->getIntelligenceMin(), $raceDef->getIntelligenceMax()))
-                throw new AttributeOutOfRangeException('intelligence', $data['intelligence'],
-                    $raceDef->getIntelligenceMin(), $raceDef->getIntelligenceMax());
-
-            if (self::isInRange($data['perception'], $raceDef->getPerceptionMin(), $raceDef->getPerceptionMax()))
-                throw new AttributeOutOfRangeException('perception', $data['perception'],
-                    $raceDef->getPerceptionMin(), $raceDef->getPerceptionMax());
-
-            if (self::isInRange($data['strength'], $raceDef->getStrengthMin(), $raceDef->getStrengthMax()))
-                throw new AttributeOutOfRangeException('strength', $data['strength'],
-                    $raceDef->getStrengthMin(), $raceDef->getStrengthMax());
-
-            if (self::isInRange($data['willpower'], $raceDef->getWillpowerMin(), $raceDef->getWillpowerMax()))
-                throw new AttributeOutOfRangeException('willpower', $data['willpower'],
-                    $raceDef->getWillpowerMin(), $raceDef->getWillpowerMax());
-
-            $totalAttributes = 0;
-            $totalAttributes += $data['agility'];
-            $totalAttributes += $data['constitution'];
-            $totalAttributes += $data['dexterity'];
-            $totalAttributes += $data['essence'];
-            $totalAttributes += $data['intelligence'];
-            $totalAttributes += $data['perception'];
-            $totalAttributes += $data['strength'];
-            $totalAttributes += $data['willpower'];
-
-            if ($totalAttributes <> $raceDef->getAttributePointsMax())
-                throw new AttributeOutOfRangeException('race_attribute_points_max', $totalAttributes,
-                    $raceDef->getAttributePointsMax(), $raceDef->getAttributePointsMax());
-
-            $newCharacter->setAccount($account);
-            $newCharacter->setName($data['name']);
-            $newCharacter->setRace($raceDef);
-            $newCharacter->setRaceTypeId($data['sex']);
-            $em->persist($newCharacter);
-
-            $newPlayer->setCharacter($newCharacter);
-
-            // Apply attributes
-            $newPlayer->setAgility($data['agility']);
-            $newPlayer->setConsitution($data['constitution']);
-            $newPlayer->setDexterity($data['dexterity']);
-            $newPlayer->setEssence($data['essence']);
-            $newPlayer->setIntelligence($data['intelligence']);
-            $newPlayer->setPerception($data['perception']);
-            $newPlayer->setStrength($data['strength']);
-            $newPlayer->setWillpower($data['willpower']);
-
-            // Check and apply colors (Hair)
-            $hairColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHairColour'));
-            $hairColorDef = $hairColours->findOneBy(array(
-                'rhc_race_id' => $raceDef->getId(),
-                'rhc_type_id' => $data['sex'],
-                'rhc_red' => $data['hairColorRed'],
-                'rhc_green' => $data['hairColorGreen'],
-                'rhc_blue' => $data['hairColorBlue'],
-                'rhc_alpha' => $data['hairColorAlpha']));
-            if ($hairColorDef === null)
-                throw new ColourNotFoundException('Hair', $raceDef->getId(), $data['sex'],
-                    $data['hairColorRed'], $data['hairColorGreen'], $data['hairColorBlue'], $data['hairColorAlpha']);
-            if (!($hairColorDef instanceof RaceHairColour))
-                throw new UnexpectedTypeException($hairColorDef, RaceHairColour::class);
-
-            $newPlayer->setHairColorRed($hairColorDef->getRed());
-            $newPlayer->setHairColorGreen($hairColorDef->getGreen());
-            $newPlayer->setHairColorBlue($hairColorDef->getBlue());
-            $newPlayer->setHairColorAlpha($hairColorDef->getAlpha());
-
-            // Check and apply colors (Skin)
-            $skinColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceSkinColour'));
-            $skinColorDef = $skinColours->findOneBy(array(
-                'rsc_race_id' => $raceDef->getId(),
-                'rsc_type_id' => $data['sex'],
-                'rsc_red' => $data['skinColorRed'],
-                'rsc_green' => $data['skinColorGreen'],
-                'rsc_blue' => $data['skinColorBlue'],
-                'rsc_alpha' => $data['skinColorAlpha']));
-            if ($skinColorDef === null)
-                throw new ColourNotFoundException('Skin', $raceDef->getId(), $data['sex'],
-                    $data['skinColorRed'], $data['skinColorGreen'], $data['skinColorBlue'], $data['skinColorAlpha']);
-            if (!($skinColorDef instanceof RaceSkinColour))
-                throw new UnexpectedTypeException($skinColorDef, RaceSkinColour::class);
-
-            $newPlayer->setSkinColorRed($skinColorDef->getRed());
-            $newPlayer->setSkinColorGreen($skinColorDef->getGreen());
-            $newPlayer->setSkinColorBlue($skinColorDef->getBlue());
-            $newPlayer->setSkinColorAlpha($skinColorDef->getAlpha());
-
-            if ($data['hairId'] === 0)
-                $newPlayer->setHairId(0);
-            else
-            {
-                $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHair'));
-                $hair = $hairIdRef->findOneBy(array(
-                    'rh_race_id' => $raceDef->getId(),
-                    'rh_type_id' => $data['sex'],
-                    'rh_hair_id' => $data['hairId']
-                ));
-                if ($hair === null)
-                    throw new IllegalValueException('hair id', $data['hairId']);
-                else
-                    $newPlayer->setHairId($data['hairId']);
-            }
-
-            if ($data['beardId'] === 0)
-                $newPlayer->setHairId(0);
-            else
-            {
-                $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceBeard'));
-                $hair = $hairIdRef->findOneBy(array(
-                    'rb_race_id' => $raceDef->getId(),
-                    'rb_type_id' => $data['sex'],
-                    'rb_beard_id' => $data['beardId']
-                ));
-                if ($hair === null)
-                    throw new IllegalValueException('beard id', $data['beardId']);
-                else
-                    $newPlayer->setHairId($data['beardId']);
-            }
-
-            $em->persist($newPlayer);
-
-            $startPacks = $this->getRepository(self::getRepositioryIdentifier($schema, 'StartPacks'));
-            $startPack = $startPacks->findOneBy(array('id' => $data['startPack']));
-            if ($startPack === null)
-                throw new StartPackNotFoundException($data['startPack']);
-            if (!($startPack instanceof StartPacks))
-                throw new UnexpectedTypeException($startPack, StartPacks::class);
-
-            foreach ($startPack->getSkills() as $skill)
-            {
-                if (!($skill instanceof StartPackSkills))
-                    throw new UnexpectedTypeException($skill, StartPackSkills::class);
-
-                /** @var PlayerSkills $playerSkill */
-                switch ($schema)
-                {
-                    case 'illarionserver': $playerSkill = new IllarionServer\PlayerSkills(); break;
-                    case 'testserver': $playerSkill = new TestServer\PlayerSkills(); break;
-                    case 'devserver': $playerSkill = new DevServer\PlayerSkills(); break;
-                    default: throw new \RuntimeException();
-                }
-
-                $playerSkill->setPlayer($newPlayer);
-                $playerSkill->setSkillId($skill->getSkillId());
-                $playerSkill->setValue($skill->getSkillValue());
-                $em->persist($playerSkill);
-            }
-
-            foreach ($startPack->getItems() as $item)
-            {
-                if (!($item instanceof StartPackItems))
-                    throw new UnexpectedTypeException($item, StartPackItems::class);
-
-                /** @var PlayerItems $playerItem */
-                switch ($schema)
-                {
-                    case 'illarionserver': $playerItem = new IllarionServer\PlayerItems(); break;
-                    case 'testserver': $playerItem = new TestServer\PlayerItems(); break;
-                    case 'devserver': $playerItem = new DevServer\PlayerItems(); break;
-                    default: throw new \RuntimeException();
-                }
-
-                $playerItem->setPlayer($newPlayer);
-                $playerItem->setItemId($item->getItemId());
-                $playerItem->setLineNumber($item->getLinenumber());
-                $playerItem->setNumber($item->getNumber());
-                $playerItem->setQuality($item->getQuality());
-                $em->persist($playerItem);
-            }
-
-            $view = $this->view()->create($translator->trans('Character created.'), 201);
-        }
-        else
-        {
-            $result = array();
-            $result['error'] = array(
+            return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('The validation of the submitted values failed.'),
                 'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            )), 400);
         }
+
+        $data = $form->getData();
+        $em = $this->getDoctrineManager();
+
+        /** @var Chars $newCharacter */
+        /** @var Player $newPlayer */
+        switch ($schema)
+        {
+            case 'IllarionServer':
+                $newCharacter = new IllarionServer\Chars();
+                $newPlayer = new IllarionServer\Player();
+                break;
+            case 'TestServer':
+                $newCharacter = new TestServer\Chars();
+                $newPlayer = new TestServer\Player();
+                break;
+            case 'DevServer':
+                $newCharacter = new DevServer\Chars();
+                $newPlayer = new DevServer\Player();
+                break;
+            default: throw new \RuntimeException();
+        }
+
+        $raceRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Race'));
+        $raceDef = $raceRepo->findOneBy(array('id' => $data['race']));
+        if (!($raceDef instanceof Race))
+            throw new UnexpectedTypeException($raceDef, Race::class);
+
+        $account = $this->getLoggedInAccount();
+
+        // Check attributes
+        if (self::isInRange($data['agility'], $raceDef->getAgilityMin(), $raceDef->getAgilityMax()))
+            throw new AttributeOutOfRangeException('agility', $data['agility'],
+                $raceDef->getAgilityMin(), $raceDef->getAgilityMax());
+
+        if (self::isInRange($data['constitution'], $raceDef->getConstitutionMin(), $raceDef->getConstitutionMax()))
+            throw new AttributeOutOfRangeException('constitution', $data['constitution'],
+                $raceDef->getConstitutionMin(), $raceDef->getConstitutionMax());
+
+        if (self::isInRange($data['dexterity'], $raceDef->getDexterityMin(), $raceDef->getDexterityMax()))
+            throw new AttributeOutOfRangeException('dexterity', $data['dexterity'],
+                $raceDef->getDexterityMin(), $raceDef->getDexterityMax());
+
+        if (self::isInRange($data['essence'], $raceDef->getEssenceMin(), $raceDef->getEssenceMax()))
+            throw new AttributeOutOfRangeException('essence', $data['essence'],
+                $raceDef->getEssenceMin(), $raceDef->getEssenceMax());
+
+        if (self::isInRange($data['intelligence'], $raceDef->getIntelligenceMin(), $raceDef->getIntelligenceMax()))
+            throw new AttributeOutOfRangeException('intelligence', $data['intelligence'],
+                $raceDef->getIntelligenceMin(), $raceDef->getIntelligenceMax());
+
+        if (self::isInRange($data['perception'], $raceDef->getPerceptionMin(), $raceDef->getPerceptionMax()))
+            throw new AttributeOutOfRangeException('perception', $data['perception'],
+                $raceDef->getPerceptionMin(), $raceDef->getPerceptionMax());
+
+        if (self::isInRange($data['strength'], $raceDef->getStrengthMin(), $raceDef->getStrengthMax()))
+            throw new AttributeOutOfRangeException('strength', $data['strength'],
+                $raceDef->getStrengthMin(), $raceDef->getStrengthMax());
+
+        if (self::isInRange($data['willpower'], $raceDef->getWillpowerMin(), $raceDef->getWillpowerMax()))
+            throw new AttributeOutOfRangeException('willpower', $data['willpower'],
+                $raceDef->getWillpowerMin(), $raceDef->getWillpowerMax());
+
+        $totalAttributes = 0;
+        $totalAttributes += $data['agility'];
+        $totalAttributes += $data['constitution'];
+        $totalAttributes += $data['dexterity'];
+        $totalAttributes += $data['essence'];
+        $totalAttributes += $data['intelligence'];
+        $totalAttributes += $data['perception'];
+        $totalAttributes += $data['strength'];
+        $totalAttributes += $data['willpower'];
+
+        if ($totalAttributes <> $raceDef->getAttributePointsMax())
+            throw new AttributeOutOfRangeException('race_attribute_points_max', $totalAttributes,
+                $raceDef->getAttributePointsMax(), $raceDef->getAttributePointsMax());
+
+        $newCharacter->setAccount($account);
+        $newCharacter->setName($data['name']);
+        $newCharacter->setRaceId($raceDef->getId());
+        $newCharacter->setRaceTypeId($data['sex']);
+        $em->persist($newCharacter);
+        $em->flush();
+        $em->refresh($newCharacter);
+
+        $newPlayer->setPlayerId($newCharacter->getPlayerId());
+
+        // Apply attributes
+        $newPlayer->setAgility($data['agility']);
+        $newPlayer->setConsitution($data['constitution']);
+        $newPlayer->setDexterity($data['dexterity']);
+        $newPlayer->setEssence($data['essence']);
+        $newPlayer->setIntelligence($data['intelligence']);
+        $newPlayer->setPerception($data['perception']);
+        $newPlayer->setStrength($data['strength']);
+        $newPlayer->setWillpower($data['willpower']);
+
+        // Check and apply colors (Hair)
+        $hairColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHairColour'));
+        $hairColorDef = $hairColours->findOneBy(array(
+            'rhc_race_id' => $raceDef->getId(),
+            'rhc_type_id' => $data['sex'],
+            'rhc_red' => $data['hairColorRed'],
+            'rhc_green' => $data['hairColorGreen'],
+            'rhc_blue' => $data['hairColorBlue'],
+            'rhc_alpha' => $data['hairColorAlpha']));
+        if ($hairColorDef === null)
+            throw new ColourNotFoundException('Hair', $raceDef->getId(), $data['sex'],
+                $data['hairColorRed'], $data['hairColorGreen'], $data['hairColorBlue'], $data['hairColorAlpha']);
+        if (!($hairColorDef instanceof RaceHairColour))
+            throw new UnexpectedTypeException($hairColorDef, RaceHairColour::class);
+
+        $newPlayer->setHairColorRed($hairColorDef->getRed());
+        $newPlayer->setHairColorGreen($hairColorDef->getGreen());
+        $newPlayer->setHairColorBlue($hairColorDef->getBlue());
+        $newPlayer->setHairColorAlpha($hairColorDef->getAlpha());
+
+        // Check and apply colors (Skin)
+        $skinColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceSkinColour'));
+        $skinColorDef = $skinColours->findOneBy(array(
+            'rsc_race_id' => $raceDef->getId(),
+            'rsc_type_id' => $data['sex'],
+            'rsc_red' => $data['skinColorRed'],
+            'rsc_green' => $data['skinColorGreen'],
+            'rsc_blue' => $data['skinColorBlue'],
+            'rsc_alpha' => $data['skinColorAlpha']));
+        if ($skinColorDef === null)
+            throw new ColourNotFoundException('Skin', $raceDef->getId(), $data['sex'],
+                $data['skinColorRed'], $data['skinColorGreen'], $data['skinColorBlue'], $data['skinColorAlpha']);
+        if (!($skinColorDef instanceof RaceSkinColour))
+            throw new UnexpectedTypeException($skinColorDef, RaceSkinColour::class);
+
+        $newPlayer->setSkinColorRed($skinColorDef->getRed());
+        $newPlayer->setSkinColorGreen($skinColorDef->getGreen());
+        $newPlayer->setSkinColorBlue($skinColorDef->getBlue());
+        $newPlayer->setSkinColorAlpha($skinColorDef->getAlpha());
+
+        if ($data['hairId'] === 0)
+            $newPlayer->setHairId(0);
+        else
+        {
+            $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHair'));
+            $hair = $hairIdRef->findOneBy(array(
+                'rh_race_id' => $raceDef->getId(),
+                'rh_type_id' => $data['sex'],
+                'rh_hair_id' => $data['hairId']
+            ));
+            if ($hair === null)
+                throw new IllegalValueException('hair id', $data['hairId']);
+            else
+                $newPlayer->setHairId($data['hairId']);
+        }
+
+        if ($data['beardId'] === 0)
+            $newPlayer->setHairId(0);
+        else
+        {
+            $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceBeard'));
+            $hair = $hairIdRef->findOneBy(array(
+                'rb_race_id' => $raceDef->getId(),
+                'rb_type_id' => $data['sex'],
+                'rb_beard_id' => $data['beardId']
+            ));
+            if ($hair === null)
+                throw new IllegalValueException('beard id', $data['beardId']);
+            else
+                $newPlayer->setHairId($data['beardId']);
+        }
+
+        $em->persist($newPlayer);
+
+        $startPacks = $this->getRepository(self::getRepositioryIdentifier($schema, 'StartPacks'));
+        $startPack = $startPacks->findOneBy(array('id' => $data['startPack']));
+        if ($startPack === null)
+            throw new StartPackNotFoundException($data['startPack']);
+        if (!($startPack instanceof StartPacks))
+            throw new UnexpectedTypeException($startPack, StartPacks::class);
+
+        foreach ($startPack->getSkills() as $skill)
+        {
+            if (!($skill instanceof StartPackSkills))
+                throw new UnexpectedTypeException($skill, StartPackSkills::class);
+
+            /** @var PlayerSkills $playerSkill */
+            switch ($schema)
+            {
+                case 'illarionserver': $playerSkill = new IllarionServer\PlayerSkills(); break;
+                case 'testserver': $playerSkill = new TestServer\PlayerSkills(); break;
+                case 'devserver': $playerSkill = new DevServer\PlayerSkills(); break;
+                default: throw new \RuntimeException();
+            }
+
+            $playerSkill->setPlayer($newPlayer);
+            $playerSkill->setSkillId($skill->getSkillId());
+            $playerSkill->setValue($skill->getSkillValue());
+            $em->persist($playerSkill);
+        }
+
+        foreach ($startPack->getItems() as $item)
+        {
+            if (!($item instanceof StartPackItems))
+                throw new UnexpectedTypeException($item, StartPackItems::class);
+
+            /** @var PlayerItems $playerItem */
+            switch ($schema)
+            {
+                case 'illarionserver': $playerItem = new IllarionServer\PlayerItems(); break;
+                case 'testserver': $playerItem = new TestServer\PlayerItems(); break;
+                case 'devserver': $playerItem = new DevServer\PlayerItems(); break;
+                default: throw new \RuntimeException();
+            }
+
+            $playerItem->setPlayer($newPlayer);
+            $playerItem->setItemId($item->getItemId());
+            $playerItem->setLineNumber($item->getLinenumber());
+            $playerItem->setNumber($item->getNumber());
+            $playerItem->setQuality($item->getQuality());
+            $em->persist($playerItem);
+        }
+        $em->flush();
+
+        $view = $this->view()->create($translator->trans('Character created.'), 201);
 
         return $view;
     }
@@ -633,7 +619,7 @@ class CharacterController extends FOSRestController
      *         {"name"="charId", "dataType"="number", "required"=true, "requirements"="%d+"}
      *     },
      *     statusCodes = {
-     *         200 = "Returned in case the character was correctly updated.",
+     *         202 = "Returned in case the character was correctly updated.",
      *         400 = "In case the payload for the request was illegal or in case the server value is illegal",
      *         401 = "In case the account does not contain the character requested.",
      *         500 = "In case fetching the data from the database failed."
@@ -646,10 +632,65 @@ class CharacterController extends FOSRestController
         if ($schema instanceof View)
             return $schema;
 
-        if ($schema === 'testserver' && $schema == 'devserver')
+        if ($schema === 'TestServer' && $schema == 'DevServer')
             throw new NotSupportedException('Updating the character information is currently only supported on the illarion server.');
 
+        $account = $this->getLoggedInAccount();
+        $char = $this->getCharacter($schema, $account->getId(), $charId);
+        if ($char instanceof View)
+            return $char;
 
+        $translator = $this->get('translator');
+
+        $form = $this->createForm(new CharacterUpdateType());
+        $form->handleRequest($request);
+
+        if (!$form->isSubmitted()) {
+            return $this->view()->create(array('error' => array(
+                'code' => 400,
+                'message' => $translator->trans('Missing data. This function requires any filled entry.'),
+                'form' => $form
+            )), 400);
+        }
+
+        if (!$form->isValid())
+        {
+            return $this->view()->create(array('error' => array(
+                'code' => 400,
+                'message' => $translator->trans('The validation of the submitted values failed.'),
+                'form' => $form
+            ), 400));
+        }
+
+        $data = $form->getData();
+        $charDetailsRepo = $this->getRepository(self::getRepositioryIdentifier('Homepage', 'CharacterDetails'));
+        $oldDetails = $charDetailsRepo->findOneBy(array('char_id' => $char->getPlayerId()));
+
+        if ($oldDetails == null || !($oldDetails instanceof CharacterDetails))
+        {
+            $details = new CharacterDetails();
+            $details->setCharId($char->getPlayerId());
+        }
+        else
+            $details = $oldDetails;
+
+        if (isset($data['descriptionDe']))
+            $details->setDescriptionDe($data['descriptionDe']);
+        if (isset($data['descriptionEn']))
+            $details->setDescriptionEn($data['descriptionEn']);
+        if (isset($data['storyDe']))
+            $details->setDescriptionDe($data['storyDe']);
+        if (isset($data['storyEn']))
+            $details->setDescriptionEn($data['storyEn']);
+
+        // TODO: Picture implementation
+
+        $em = $this->getDoctrineManager();
+        $em->persist($details);
+
+        $em->flush();
+
+        return $this->view()->create($translator->trans('Character updated.'), 202);
     }
 
     /**
@@ -794,5 +835,33 @@ class CharacterController extends FOSRestController
     private static function isInRange($value, $min, $max)
     {
         return ($value >= $min) && ($value <= $max);
+    }
+
+    /**
+     * Get a specific character that belongs to a account.
+     *
+     * @param string $schema the schema name the character is fetched from
+     * @param integer $accId the id of the account
+     * @param integer $charId the id of the character that is expected
+     * @return View|Chars a view that contains a error message or the character
+     */
+    private function getCharacter($schema, $accId, $charId)
+    {
+        $charsRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Chars'));
+
+        $char = $charsRepo->findOneBy(array('accId' => $accId, 'playerId' => $charId));
+        if ($char == null || !($char instanceof Chars))
+        {
+            $translator = $this->get('translator');
+            return $this->view()->create(array(
+                'error' => array(
+                    'code' => 401,
+                    'message' => $translator->trans('The character could not be located in the current account.'),
+                    'value' => array('server' => $schema, 'charId' => $charId)
+                )
+            ), 401);
+        }
+
+        return $char;
     }
 }

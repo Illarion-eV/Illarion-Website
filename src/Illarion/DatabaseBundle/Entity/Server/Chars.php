@@ -410,15 +410,6 @@ abstract class Chars
     public abstract function getRace();
 
     /**
-     * Set race
-     *
-     * @param Race $race
-     *
-     * @return Chars
-     */
-    public abstract function setRace(Race $race = null);
-
-    /**
      * Get player
      *
      * @return \Illarion\DatabaseBundle\Entity\Server\Player
