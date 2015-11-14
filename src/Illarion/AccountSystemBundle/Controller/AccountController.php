@@ -12,6 +12,7 @@ use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\AccountCreateType;
 use Illarion\AccountSystemBundle\Form\AccountUpdateType;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
+use Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
@@ -158,62 +159,81 @@ class AccountController extends FOSRestController
 
         if (!$form->isSubmitted())
         {
-            $result = array();
-            $result['error'] = array(
+            return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('Missing data. This function requires at least the name and the password field to be populated.'),
                 'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            )), 400);
         }
-        elseif ($form->isValid())
+
+        if (!$form->isValid())
         {
-            $data = $form->getData();
-            $em = $this->getDoctrineManager();
-            $passwordEncoder = $this->get('illarion.security.password.encoder');
-
-            $newAccount = new Account();
-            $newAccount->setLogin($data['name']);
-
-            if (strlen($data['email']) > 0)
-                $newAccount->setEMail($data['email']);
-
-            $newAccount->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
-            $newAccount->setRegisterDate(new \DateTime());
-            $newAccount->setLastIp($request->getClientIp());
-            $newAccount->setLanguage($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
-            $newAccount->setState(3);
-            $newAccount->setMaxChars(5);
-
-            try
-            {
-                $em->persist($newAccount);
-                $em->flush();
-
-                $view = $this->view()->create($translator->trans('Account created.'), 201);
-            }
-            catch (UniqueConstraintViolationException $ex)
-            {
-                $result = array();
-                $result['error'] = array(
-                    'code' => 400,
-                    'message' => $translator->trans('The name or the E-Mail address is already used.'),
-                );
-                $view = $this->view()->create($result, 400);
-            }
-        }
-        else
-        {
-            $result = array();
-            $result['error'] = array(
+            return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('The validation of the submitted values failed.'),
                 'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            )), 400);
         }
 
-        return $view;
+        $data = $form->getData();
+        $em = $this->getDoctrineManager();
+        $passwordEncoder = $this->get('illarion.security.password.encoder');
+
+        $newAccount = new Account();
+        $newAccount->setLogin($data['name']);
+
+        $newAccount->setPassword($passwordEncoder->encodePassword($data['password'], '$1$illarion$'));
+        $newAccount->setRegisterDate(new \DateTime());
+        $newAccount->setLastIp($request->getClientIp());
+        $newAccount->setLanguage($request->getPreferredLanguage(array('de', 'en')) == 'de' ? 0 : 1);
+        $newAccount->setState(3);
+        $newAccount->setMaxChars(5);
+
+        try
+        {
+            $em->persist($newAccount);
+            $em->flush();
+        }
+        catch (UniqueConstraintViolationException $ex)
+        {
+            return $this->view()->create(array('error' => array(
+                'code' => 400,
+                'message' => $translator->trans('The name or the E-Mail address is already used.')
+            )), 400);
+        }
+
+        if (strlen($data['email']) > 0)
+        {
+            $unconfirmedMail = new AccountUnconfirmed();
+            $unconfirmedMail->setAccount($newAccount);
+            $unconfirmedMail->setNewMail($data['email']);
+            $em->persist($unconfirmedMail);
+            $em->flush();
+            $em->refresh($newAccount);
+            $em->refresh($unconfirmedMail);
+
+            $messageData = array(
+                'name' => $data['name'],
+                'activation_route' => $this->generateUrl('account_account_confirm', array(
+                    'id' => $newAccount->getId(),
+                    'uuid' => $unconfirmedMail->getId()
+                ))
+            );
+
+            $message = \Swift_Message::newInstance();
+            $message->setSubject('Hello Email');
+            $message->setFrom('accounts@illarion.org', 'Illarion');
+            $message->setTo($data['email'], $data['name']);
+            $message->setBody(
+                $this->renderView('IllarionAccountSystemBundle:email:newAccountMailAddress.html.twig', $messageData),
+                'text/html');
+            $message->addPart(
+                $this->renderView( 'IllarionAccountSystemBundle:email:newAccountMailAddress.txt.twig', $messageData),
+                'text/plain');
+            $this->get('mailer')->send($message);
+        }
+
+        return $this->view()->create($translator->trans('Account created.'), 201);
     }
 
     /**

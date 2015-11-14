@@ -1,4 +1,0 @@
-services:
-#    illarion_account_system.example:
-#        class: Illarion\AccountSystemBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]

@@ -8,6 +8,9 @@ accountCheck:
     resource:    @IllarionAccountSystemBundle/Controller/AccountCheckController.php
     name_prefix: account_
 
+accountConfirm:
+    type:        annotation
+    resource:    @IllarionAccountSystemBundle/Controller/AccountConfirmController.php
 character:
     type:        rest
     resource:    @IllarionAccountSystemBundle/Controller/CharacterController.php

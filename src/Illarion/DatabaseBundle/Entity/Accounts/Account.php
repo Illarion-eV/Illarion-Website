@@ -110,6 +110,13 @@ class Account
     private $devServerChars;
 
     /**
+     * @var AccountUnconfirmed
+     *
+     * @ORM\OneToOne(targetEntity="Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed", mappedBy="account")
+     */
+    private $unconfirmed;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -422,5 +429,29 @@ class Account
     public function getDevServerChars()
     {
         return $this->devServerChars;
+    }
+
+    /**
+     * Set unconfirmed
+     *
+     * @param \Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed $unconfirmed
+     *
+     * @return Account
+     */
+    public function setUnconfirmed(\Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed $unconfirmed = null)
+    {
+        $this->unconfirmed = $unconfirmed;
+
+        return $this;
+    }
+
+    /**
+     * Get unconfirmed
+     *
+     * @return \Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed
+     */
+    public function getUnconfirmed()
+    {
+        return $this->unconfirmed;
     }
 }

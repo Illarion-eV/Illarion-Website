@@ -296,15 +296,6 @@ abstract class PlayerItems
     }
 
     /**
-     * Set player
-     *
-     * @param Player $player
-     *
-     * @return PlayerSkills
-     */
-    public abstract function setPlayer(Player $player = null);
-
-    /**
      * Get player
      *
      * @return Player

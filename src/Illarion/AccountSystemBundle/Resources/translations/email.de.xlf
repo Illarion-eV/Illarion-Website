@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Hello %name%</source>
+                <target>Hallo %name%</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>this e-mail address was linked to a account at the online roleplaying game Illarion. We will not send you any e-mail until you confirmed that this e-mail address is yours.</source>
+                <target>diese E-Mail Adresse wurde mit einem Account bei dem Online-Rollenspiel Illarion verknüpft. Wir werden diese Adresse nicht verwenden bis sie bestätigt wurde.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>If you did not register with the game you can safely ignore this e-mail. We will not use it again.</source>
+                <target>Solltest du deine E-Mail Adresse nicht bei uns verwendet haben, kannst du diese E-Mail einfach ignorieren. Wir werden sie nicht mehr benutzen.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Please use the following link to confirm that this is your e-mail address:</source>
+                <target>Bitte benutze den folgenden Link um die E-Mail Adresse zu bestätigen:</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Confirm Address</source>
+                <target>Adresse bestätigen</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Regards</source>
+                <target>Viele Grüße</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>The Team of Illarion</source>
+                <target>Das Team von Illarion</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

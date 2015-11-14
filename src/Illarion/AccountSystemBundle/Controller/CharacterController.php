@@ -79,7 +79,7 @@ class CharacterController extends FOSRestController
 
         $result = array();
 
-        $raceRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Race'));
+        $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
         $result['race'] = array();
 
         $criteria = new Criteria();
@@ -174,7 +174,7 @@ class CharacterController extends FOSRestController
             $result['race'][] = $raceArray;
         }
 
-        $startPackRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'StartPacks'));
+        $startPackRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'StartPacks'));
         $result['startPacks'] = array();
         foreach($startPackRepo->findAll() as $startPack)
         {
@@ -394,7 +394,7 @@ class CharacterController extends FOSRestController
             default: throw new \RuntimeException();
         }
 
-        $raceRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Race'));
+        $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
         $raceDef = $raceRepo->findOneBy(array('id' => $data['race']));
         if (!($raceDef instanceof Race))
             throw new UnexpectedTypeException($raceDef, Race::class);
@@ -469,7 +469,7 @@ class CharacterController extends FOSRestController
         $newPlayer->setWillpower($data['willpower']);
 
         // Check and apply colors (Hair)
-        $hairColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHairColour'));
+        $hairColours = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceHairColour'));
         $hairColorDef = $hairColours->findOneBy(array(
             'rhc_race_id' => $raceDef->getId(),
             'rhc_type_id' => $data['sex'],
@@ -489,7 +489,7 @@ class CharacterController extends FOSRestController
         $newPlayer->setHairColorAlpha($hairColorDef->getAlpha());
 
         // Check and apply colors (Skin)
-        $skinColours = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceSkinColour'));
+        $skinColours = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceSkinColour'));
         $skinColorDef = $skinColours->findOneBy(array(
             'rsc_race_id' => $raceDef->getId(),
             'rsc_type_id' => $data['sex'],
@@ -512,7 +512,7 @@ class CharacterController extends FOSRestController
             $newPlayer->setHairId(0);
         else
         {
-            $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceHair'));
+            $hairIdRef = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceHair'));
             $hair = $hairIdRef->findOneBy(array(
                 'rh_race_id' => $raceDef->getId(),
                 'rh_type_id' => $data['sex'],
@@ -528,7 +528,7 @@ class CharacterController extends FOSRestController
             $newPlayer->setHairId(0);
         else
         {
-            $hairIdRef = $this->getRepository(self::getRepositioryIdentifier($schema, 'RaceBeard'));
+            $hairIdRef = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceBeard'));
             $hair = $hairIdRef->findOneBy(array(
                 'rb_race_id' => $raceDef->getId(),
                 'rb_type_id' => $data['sex'],
@@ -542,7 +542,7 @@ class CharacterController extends FOSRestController
 
         $em->persist($newPlayer);
 
-        $startPacks = $this->getRepository(self::getRepositioryIdentifier($schema, 'StartPacks'));
+        $startPacks = $this->getRepository(self::getRepositoryIdentifier($schema, 'StartPacks'));
         $startPack = $startPacks->findOneBy(array('id' => $data['startPack']));
         if ($startPack === null)
             throw new StartPackNotFoundException($data['startPack']);
@@ -563,7 +563,7 @@ class CharacterController extends FOSRestController
                 default: throw new \RuntimeException();
             }
 
-            $playerSkill->setPlayer($newPlayer);
+            $playerSkill->setPlayerId($newCharacter->getPlayerId());
             $playerSkill->setSkillId($skill->getSkillId());
             $playerSkill->setValue($skill->getSkillValue());
             $em->persist($playerSkill);
@@ -583,7 +583,7 @@ class CharacterController extends FOSRestController
                 default: throw new \RuntimeException();
             }
 
-            $playerItem->setPlayer($newPlayer);
+            $playerItem->setPlayerId($newCharacter->getPlayerId());
             $playerItem->setItemId($item->getItemId());
             $playerItem->setLineNumber($item->getLinenumber());
             $playerItem->setNumber($item->getNumber());
@@ -663,7 +663,7 @@ class CharacterController extends FOSRestController
         }
 
         $data = $form->getData();
-        $charDetailsRepo = $this->getRepository(self::getRepositioryIdentifier('Homepage', 'CharacterDetails'));
+        $charDetailsRepo = $this->getRepository(self::getRepositoryIdentifier('Homepage', 'CharacterDetails'));
         $oldDetails = $charDetailsRepo->findOneBy(array('char_id' => $char->getPlayerId()));
 
         if ($oldDetails == null || !($oldDetails instanceof CharacterDetails))
@@ -769,7 +769,7 @@ class CharacterController extends FOSRestController
      * @param string $table the name of the table
      * @return string the full identifier
      */
-    private static function getRepositioryIdentifier($schema, $table)
+    private static function getRepositoryIdentifier($schema, $table)
     {
         return 'IllarionDatabaseBundle:' . $schema . '\\' . $table;
     }
@@ -847,7 +847,7 @@ class CharacterController extends FOSRestController
      */
     private function getCharacter($schema, $accId, $charId)
     {
-        $charsRepo = $this->getRepository(self::getRepositioryIdentifier($schema, 'Chars'));
+        $charsRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Chars'));
 
         $char = $charsRepo->findOneBy(array('accId' => $accId, 'playerId' => $charId));
         if ($char == null || !($char instanceof Chars))
