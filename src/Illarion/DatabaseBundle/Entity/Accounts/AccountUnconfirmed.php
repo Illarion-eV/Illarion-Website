@@ -40,7 +40,7 @@ class AccountUnconfirmed
      *
      * @ORM\OneToOne(targetEntity="Illarion\DatabaseBundle\Entity\Accounts\Account", inversedBy="unconfirmed")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="au_id", referencedColumnName="acc_id"),
+     *   @ORM\JoinColumn(name="au_acc_id", referencedColumnName="acc_id"),
      * })
      */
     private $account;

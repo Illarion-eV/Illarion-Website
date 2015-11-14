@@ -17,6 +17,7 @@ use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
  * This is the controller that contains the operations that are relevant to handle the personal account.
@@ -80,7 +81,7 @@ class AccountController extends FOSRestController
         if (count($data['chars']['illarionserver']) < $account->getMaxChars())
         {
             $data['chars']['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'illarionserver')),
+                'route' => $this->generateUrl('account_post_character', array('server' => 'illarionserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Game Server')
             );
         }
@@ -88,7 +89,7 @@ class AccountController extends FOSRestController
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_TESTSERVER_ACCESS'))
         {
             $data['chars']['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'testserver')),
+                'route' => $this->generateUrl('account_post_character', array('server' => 'testserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Test Server')
             );
         }
@@ -96,7 +97,7 @@ class AccountController extends FOSRestController
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_DEVSERVER_ACCESS'))
         {
             $data['chars']['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'devserver')),
+                'route' => $this->generateUrl('account_post_character', array('server' => 'devserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Development Server')
             );
         }
@@ -387,7 +388,7 @@ class AccountController extends FOSRestController
                 'activation_route' => $this->generateUrl('account_account_confirm', array(
                     'id' => $account->getId(),
                     'uuid' => $unconfirmedMail->getId()
-                ))
+                ), UrlGeneratorInterface::ABSOLUTE_URL)
             );
 
             $translator = $this->get('translator');
