@@ -15,7 +15,7 @@ class AccountConfirmController extends Controller
      * @param string $uuid the uuid assigned to the new mail
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/account/confirm/{id}-{uuid}", name="account_account_confirm", methods="GET", requirements={
-     *     "id": "\d+"
+     *     "id": "\d+",
      *     "uuid": "[a-z0-9-]+"
      * })
      */

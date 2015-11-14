@@ -11,7 +11,7 @@ class CharacterCreateType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', 'string');
+        $builder->add('name', 'text');
         $builder->add('race', 'integer', array(
             'constraints' => array(
                 new Range(array('min' => 0, 'max' => 5))

@@ -30,6 +30,10 @@
                 <source>The Team of Illarion</source>
                 <target>Das Team von Illarion</target>
             </trans-unit>
+            <trans-unit id="8">
+                <source>Confirm E-Mail Address</source>
+                <target>E-Mail Adresse bestätigen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
