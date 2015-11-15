@@ -24,28 +24,28 @@ class CharacterDetails
     /**
      * @var string
      *
-     * @ORM\Column(name="description_de", type="test")
+     * @ORM\Column(name="description_de", type="text")
      */
     private $descriptionDe;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description_us", type="test")
+     * @ORM\Column(name="description_us", type="text")
      */
     private $descriptionEn;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="story_de", type="test")
+     * @ORM\Column(name="story_de", type="text")
      */
     private $storyDe;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="story_us", type="test")
+     * @ORM\Column(name="story_us", type="text")
      */
     private $storyEn;
 
@@ -97,11 +97,11 @@ class CharacterDetails
     /**
      * Set descriptionDe
      *
-     * @param \test $descriptionDe
+     * @param string $descriptionDe
      *
      * @return CharacterDetails
      */
-    public function setDescriptionDe(\test $descriptionDe)
+    public function setDescriptionDe($descriptionDe)
     {
         $this->descriptionDe = $descriptionDe;
 
@@ -111,7 +111,7 @@ class CharacterDetails
     /**
      * Get descriptionDe
      *
-     * @return \test
+     * @return string
      */
     public function getDescriptionDe()
     {
@@ -121,11 +121,11 @@ class CharacterDetails
     /**
      * Set descriptionEn
      *
-     * @param \test $descriptionEn
+     * @param string $descriptionEn
      *
      * @return CharacterDetails
      */
-    public function setDescriptionEn(\test $descriptionEn)
+    public function setDescriptionEn($descriptionEn)
     {
         $this->descriptionEn = $descriptionEn;
 
@@ -135,7 +135,7 @@ class CharacterDetails
     /**
      * Get descriptionEn
      *
-     * @return \test
+     * @return string
      */
     public function getDescriptionEn()
     {
@@ -145,11 +145,11 @@ class CharacterDetails
     /**
      * Set storyDe
      *
-     * @param \test $storyDe
+     * @param string $storyDe
      *
      * @return CharacterDetails
      */
-    public function setStoryDe(\test $storyDe)
+    public function setStoryDe($storyDe)
     {
         $this->storyDe = $storyDe;
 
@@ -159,7 +159,7 @@ class CharacterDetails
     /**
      * Get storyDe
      *
-     * @return \test
+     * @return string
      */
     public function getStoryDe()
     {
@@ -169,11 +169,11 @@ class CharacterDetails
     /**
      * Set storyEn
      *
-     * @param \test $storyEn
+     * @param string $storyEn
      *
      * @return CharacterDetails
      */
-    public function setStoryEn(\test $storyEn)
+    public function setStoryEn($storyEn)
     {
         $this->storyEn = $storyEn;
 
@@ -183,7 +183,7 @@ class CharacterDetails
     /**
      * Get storyEn
      *
-     * @return \test
+     * @return string
      */
     public function getStoryEn()
     {

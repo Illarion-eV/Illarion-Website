@@ -122,11 +122,7 @@ class AccountController extends FOSRestController
             if (!($char instanceof Chars))
                 throw new UnexpectedTypeException($char, Chars::class);
 
-            $t1 = new \DateTime();
-            $t2 = new \DateTime();
-            $t2->add(new \DateInterval('PT' . $char->getOnlinetime() . 'S'));
-            $onlineTime = $t2->diff($t1);
-            $lastSaveDate = $t1;
+            $lastSaveDate = new \DateTime();;
             $lastSaveDate->setTimestamp($char->getLastsavetime());
 
             $list[] = array(
@@ -135,7 +131,7 @@ class AccountController extends FOSRestController
                 'race' => $char->getRaceTypeId(),
                 'sex' => $char->getRaceTypeId(),
                 'lastSaveTime' => $lastSaveDate,
-                'onlineTime' => $onlineTime
+                'onlineTime' => 'PT' . $char->getOnlinetime() . 'S'
             );
         }
         return $list;
