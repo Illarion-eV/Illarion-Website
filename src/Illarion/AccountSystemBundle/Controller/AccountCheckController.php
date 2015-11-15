@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
  * The controller that takes care for checking the account that is used.
  *
  * @package Illarion\AccountSystemBundle\Controller
- * @RestAnnotations\RouteResource("check")
+ * @RestAnnotations\RouteResource("AccountCheck")
  */
 class AccountCheckController extends FOSRestController
 {

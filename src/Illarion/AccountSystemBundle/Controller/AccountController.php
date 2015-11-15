@@ -74,13 +74,13 @@ class AccountController extends FOSRestController
             $data['chars']['devserver'] = self::buildCharList($account->getDevServerChars());
         } catch (TableNotFoundException $ignored) {}
 
-        $data['chars']['create'] = array();
+        $data['create'] = array();
 
         $translator = $this->get('translator');
 
         if (count($data['chars']['illarionserver']) < $account->getMaxChars())
         {
-            $data['chars']['create'][] = array(
+            $data['create'][] = array(
                 'route' => $this->generateUrl('account_post_character', array('server' => 'illarionserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Game Server')
             );
@@ -88,7 +88,7 @@ class AccountController extends FOSRestController
 
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_TESTSERVER_ACCESS'))
         {
-            $data['chars']['create'][] = array(
+            $data['create'][] = array(
                 'route' => $this->generateUrl('account_post_character', array('server' => 'testserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Test Server')
             );
@@ -96,7 +96,7 @@ class AccountController extends FOSRestController
 
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_DEVSERVER_ACCESS'))
         {
-            $data['chars']['create'][] = array(
+            $data['create'][] = array(
                 'route' => $this->generateUrl('account_post_character', array('server' => 'devserver'), UrlGeneratorInterface::ABSOLUTE_URL),
                 'name' => $translator->trans('Development Server')
             );
@@ -122,13 +122,20 @@ class AccountController extends FOSRestController
             if (!($char instanceof Chars))
                 throw new UnexpectedTypeException($char, Chars::class);
 
+            $t1 = new \DateTime();
+            $t2 = new \DateTime();
+            $t2->add(new \DateInterval('PT' . $char->getOnlinetime() . 'S'));
+            $onlineTime = $t2->diff($t1);
+            $lastSaveDate = $t1;
+            $lastSaveDate->setTimestamp($char->getLastsavetime());
+
             $list[] = array(
                 'name' => $char->getName(),
                 'status' => $char->getStatus(),
                 'race' => $char->getRaceTypeId(),
                 'sex' => $char->getRaceTypeId(),
-                'lastSaveTime' => $char->getLastsavetime(),
-                'onlineTime' => $char->getOnlinetime()
+                'lastSaveTime' => $lastSaveDate,
+                'onlineTime' => $onlineTime
             );
         }
         return $list;
