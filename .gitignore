@@ -12,6 +12,7 @@ website/ssl/shared
 website/php_errors.log
 cache/*
 website/sync.ffs_db
+/.composer
 /vendor
 /app/config/parameters.yml
 /app/cache
