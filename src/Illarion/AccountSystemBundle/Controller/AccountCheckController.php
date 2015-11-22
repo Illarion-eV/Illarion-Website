@@ -6,6 +6,10 @@ use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
 use Illarion\AccountSystemBundle\Form\AccountCheckType;
+use Illarion\AccountSystemBundle\Model\AccountCheckResponse;
+use Illarion\AccountSystemBundle\Model\CheckResponse;
+use Illarion\AccountSystemBundle\Model\ErrorResponse;
+use JMS\Serializer\SerializationContext;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -29,6 +33,7 @@ class AccountCheckController extends FOSRestController
      *     resource = true,
      *     description = "Checks if a account name and/or e-mail address is still free to be used.",
      *     input = "Illarion\AccountSystemBundle\Form\AccountCheckType",
+     *     output = "Illarion\AccountSystemBundle\Model\AccountCheckResponse",
      *     statusCodes = {
      *         200 = "Returned when the check was performed, and the name and the e-mail is okay.",
      *         400 = "In case the payload for the request was illegal.",
@@ -43,77 +48,81 @@ class AccountCheckController extends FOSRestController
 
         $translator = $this->get('translator');
 
+        $result = new AccountCheckResponse();
+
         if (!$form->isSubmitted())
         {
-            $result = array();
-            $result['error'] = array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires either the "name" or the "email" field to be populated.'),
-                'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('Missing data. This function requires either the "name" or the "email" field to be populated.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
-        elseif ($form->isValid())
+
+        if (!$form->isValid())
         {
-            $data = $form->getData();
-            $repository = $this->getAccountRepository();
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('The validation of the submitted values failed.'));
+            $errorData->setForm($form);
 
-            $result = array();
-            $resultCode = 200;
-            if (strlen($data['name']) > 0)
-            {
-                if (null === $repository->findOneBy(['accLogin' => $data['name']])) {
-                    $result['name'] = array(
-                        'ok' => true,
-                        'value' => $data['name'],
-                        'description' => $translator->trans('The name is good.')
-                    );
-                } else {
-                    $resultCode = 409;
-                    $result['name'] = array(
-                        'ok' => false,
-                        'value' => $data['name'],
-                        'description' => $translator->trans('This account is already in use.')
-                    );
-                }
-            }
+            $result->setError($errorData);
 
-            if (strlen($data['email']) > 0)
-            {
-                if (null === $repository->findOneBy(['accEmail' => $data['email']])) {
-                    $result['email'] = array(
-                        'ok' => true,
-                        'value' => $data['email'],
-                        'description' => $translator->trans('This e-mail address is good.')
-                    );
-                } else {
-                    $resultCode = 409;
-                    $result['email'] = array(
-                        'ok' => false,
-                        'value' => $data['email'],
-                        'description' => $translator->trans('This e-mail address is already in use.')
-                    );
-                }
-            }
-            $result['code'] = $resultCode;
-            $view = $this->view()->create($result, $resultCode);
-        } else {
-            $result = array();
-            $result['error'] = array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            );
-            $view = $this->view()->create($result, 400);
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
-        return $view;
+        $data = $form->getData();
+        $repository = $this->getAccountRepository();
+
+        $resultCode = 200;
+        if (strlen($data['name']) > 0)
+        {
+            $checkData = new CheckResponse();
+            $checkData->setCheckType('name');
+            $checkData->setCheckedValue($data['name']);
+
+            if (null === $repository->findOneBy(['accLogin' => $data['name']])) {
+                $checkData->setSuccess(true);
+                $checkData->setDescription($translator->trans('The name is good.'));
+            } else {
+                $resultCode = 409;
+                $checkData->setSuccess(false);
+                $checkData->setDescription($translator->trans('This account is already in use.'));
+            }
+            $result->addChecks($checkData);
+        }
+
+        if (strlen($data['email']) > 0)
+        {
+            $checkData = new CheckResponse();
+            $checkData->setCheckType('email');
+            $checkData->setCheckedValue($data['email']);
+
+            if (null === $repository->findOneBy(['accEmail' => $data['email']])) {
+                $checkData->setSuccess(true);
+                $checkData->setDescription($translator->trans('This e-mail address is good.'));
+            } else {
+                $resultCode = 409;
+                $checkData->setSuccess(false);
+                $checkData->setDescription($translator->trans('This e-mail address is already in use.'));
+            }
+        }
+
+        return $this->view()->create($result, $resultCode,
+            SerializationContext::create()->setGroups('success'));
     }
 
     /**
      * Get the standard manager of doctrine.
      *
-     * @return \Doctrine\Common\Persistence\ObjectManager|object
+     * @return \Doctrine\Common\Persistence\ObjectManager
      */
     private function getDoctrineManager()
     {

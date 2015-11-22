@@ -11,10 +11,20 @@ use FOS\RestBundle\View\View;
 use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\AccountCreateType;
 use Illarion\AccountSystemBundle\Form\AccountUpdateType;
+use Illarion\AccountSystemBundle\Model\AccountCreateResponse;
+use Illarion\AccountSystemBundle\Model\AccountDeleteResponse;
+use Illarion\AccountSystemBundle\Model\AccountGetCharResponse;
+use Illarion\AccountSystemBundle\Model\AccountGetCharsResponse;
+use Illarion\AccountSystemBundle\Model\AccountGetCreateResponse;
+use Illarion\AccountSystemBundle\Model\AccountGetResponse;
+use Illarion\AccountSystemBundle\Model\AccountUpdateResponse;
+use Illarion\AccountSystemBundle\Model\ErrorResponse;
+use Illarion\AccountSystemBundle\Model\SuccessResponse;
 use Illarion\DatabaseBundle\Entity\Accounts\Account;
 use Illarion\DatabaseBundle\Entity\Accounts\AccountUnconfirmed;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\SecurityBundle\Security\User\User;
+use JMS\Serializer\SerializationContext;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -39,6 +49,7 @@ class AccountController extends FOSRestController
      *     authentication = true,
      *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
+     *     output="Illarion\AccountSystemBundle\Model\AccountGetResponse",
      *     description = "Get the basic account information and the character lists.",
      *     statusCodes = {
      *         200 = "In case the request was correctly processed."
@@ -54,52 +65,60 @@ class AccountController extends FOSRestController
 
         $account = $usr->getAccount();
 
-        $data = array(
-            'name' => $account->getLogin(),
-            'state' => $account->getState(),
-            'maxChars' => $account->getMaxChars(),
-            'lang' => $account->getLanguage() ? 'de' : 'en',
-            'chars' => array()
-        );
-
-        $data['chars']['illarionserver'] = self::buildCharList($account->getIllarionServerChars());
-
-        try
-        {
-            $data['chars']['testserver'] = self::buildCharList($account->getTestServerChars());
-        } catch (TableNotFoundException $ignored) {}
-
-        try
-        {
-            $data['chars']['devserver'] = self::buildCharList($account->getDevServerChars());
-        } catch (TableNotFoundException $ignored) {}
-
-        $data['create'] = array();
+        $data = new AccountGetResponse();
+        $data->setName($account->getLogin());
+        $data->setState($account->getState());
+        $data->setMaxChars($account->getMaxChars());
+        $data->setLang($account->getLanguage() ? 'de' : 'en');
 
         $translator = $this->get('translator');
 
-        if (count($data['chars']['illarionserver']) < $account->getMaxChars())
+        $data->addChars(self::buildCharList(
+            $translator->trans('Game Server'),
+            'illarionserver',
+            $account->getIllarionServerChars()));
+
+        try
         {
-            $data['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'illarionserver'), UrlGeneratorInterface::ABSOLUTE_URL),
-                'name' => $translator->trans('Game Server')
-            );
+            $data->addChars(self::buildCharList(
+                $translator->trans('Test Server'),
+                'testserver',
+                $account->getTestServerChars()));
+        } catch (TableNotFoundException $ignored) {}
+
+        try
+        {
+            $data->addChars(self::buildCharList(
+                $translator->trans('Development Server'),
+                'devserver',
+                $account->getDevServerChars()));
+        } catch (TableNotFoundException $ignored) {}
+
+        if (count($account->getIllarionServerChars()) < $account->getMaxChars())
+        {
+            $createInfo = new AccountGetCreateResponse();
+            $createInfo->setRoute($this->generateUrl('account_post_character', array('server' => 'illarionserver')));
+            $createInfo->setName($translator->trans('Game Server'));
+            $createInfo->setId('illarionserver');
+            $data->addCreate($createInfo);
         }
 
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_TESTSERVER_ACCESS'))
         {
-            $data['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'testserver'), UrlGeneratorInterface::ABSOLUTE_URL),
-                'name' => $translator->trans('Test Server')
-            );
+            $createInfo = new AccountGetCreateResponse();
+            $createInfo->setRoute($this->generateUrl('account_post_character', array('server' => 'testserver')));
+            $createInfo->setName($translator->trans('Test Server'));
+            $createInfo->setId('testserver');
+            $data->addCreate($createInfo);
         }
 
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_DEVSERVER_ACCESS'))
         {
-            $data['create'][] = array(
-                'route' => $this->generateUrl('account_post_character', array('server' => 'devserver'), UrlGeneratorInterface::ABSOLUTE_URL),
-                'name' => $translator->trans('Development Server')
-            );
+            $createInfo = new AccountGetCreateResponse();
+            $createInfo->setRoute($this->generateUrl('account_post_character', array('server' => 'devserver')));
+            $createInfo->setName($translator->trans('Development Server'));
+            $createInfo->setId('devserver');
+            $data->addCreate($createInfo);
         }
 
         $view = $this->view()->create($data, 200);
@@ -111,12 +130,17 @@ class AccountController extends FOSRestController
      * Convert a list of character entities to the data set that contains all the information required by a user of the
      * account system.
      *
+     * @param string $serverName
+     * @param string $serverId
      * @param Collection $chars the characters
-     * @return array the data generated for the json
+     * @return AccountGetCharsResponse the data generated for the json
      */
-    private static function buildCharList(Collection $chars)
+    private static function buildCharList($serverName, $serverId, Collection $chars)
     {
-        $list = array();
+        $list = new AccountGetCharsResponse();
+        $list->setName($serverName);
+        $list->setId($serverId);
+
         foreach ($chars as $char)
         {
             if (!($char instanceof Chars))
@@ -125,14 +149,15 @@ class AccountController extends FOSRestController
             $lastSaveDate = new \DateTime();;
             $lastSaveDate->setTimestamp($char->getLastsavetime());
 
-            $list[] = array(
-                'name' => $char->getName(),
-                'status' => $char->getStatus(),
-                'race' => $char->getRaceTypeId(),
-                'sex' => $char->getRaceTypeId(),
-                'lastSaveTime' => $lastSaveDate,
-                'onlineTime' => 'PT' . $char->getOnlinetime() . 'S'
-            );
+            $response = new AccountGetCharResponse();
+            $response->setName($char->getName());
+            $response->setStatus($char->getStatus());
+            $response->setRaceId($char->getRaceId());
+            $response->setRaceTypeId($char->getRaceTypeId());
+            $response->setLastSaveTime($char->getLastsavetime());
+            $response->setOnlineTime($char->getOnlinetime());
+
+            $list->addChar($response);
         }
         return $list;
     }
@@ -148,6 +173,7 @@ class AccountController extends FOSRestController
      *     resource = true,
      *     description = "Create a new account.",
      *     input = "Illarion\AccountSystemBundle\Form\AccountCreateType",
+     *     output = "Illarion\AccountSystemBundle\Model\AccountCreateResponse",
      *     statusCodes = {
      *         201 = "Returned in case the account was correctly created.",
      *         400 = "In case the payload for the request was illegal."
@@ -161,22 +187,30 @@ class AccountController extends FOSRestController
 
         $translator = $this->get('translator');
 
+        $result = new AccountCreateResponse();
+
         if (!$form->isSubmitted())
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires at least the name and the password field to be populated.'),
-                'form' => $form
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('Missing data. This function requires at least the name and the password field to be populated.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         if (!$form->isValid())
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('The validation of the submitted values failed.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         $data = $form->getData();
@@ -201,10 +235,14 @@ class AccountController extends FOSRestController
         }
         catch (UniqueConstraintViolationException $ex)
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The name or the E-Mail address is already used.')
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('The name or the E-Mail address is already used.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         if (isset($data['email']))
@@ -212,7 +250,13 @@ class AccountController extends FOSRestController
             $this->storeAndRequestMailConfirm($newAccount, $data['email']);
         }
 
-        return $this->view()->create($translator->trans('Account created.'), 201);
+        $successData = new SuccessResponse();
+        $successData->setStatus(201);
+        $successData->setMessage($translator->trans('Account created.'));
+
+        $result->setSuccess($successData);
+        return $this->view()->create($result, 201,
+            SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -229,6 +273,7 @@ class AccountController extends FOSRestController
      *     resource = true,
      *     description = "Update a existing account",
      *     input = "Illarion\AccountSystemBundle\Form\AccountUpdateType",
+     *     output = "Illarion\AccountSystemBundle\Model\AccountUpdateResponse",
      *     statusCodes = {
      *         202 = "Returned in case the account was correctly updated.",
      *         400 = "In case the payload for the request was illegal."
@@ -242,22 +287,30 @@ class AccountController extends FOSRestController
 
         $translator = $this->get('translator');
 
+        $result = new AccountUpdateResponse();
+
         if (!$form->isSubmitted())
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires any filled entry.'),
-                'form' => $form
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('Missing data. This function requires any filled entry.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         if (!$form->isValid())
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('The validation of the submitted values failed.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         $data = $form->getData();
@@ -285,10 +338,14 @@ class AccountController extends FOSRestController
         }
         catch (UniqueConstraintViolationException $ex)
         {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The name or the E-Mail address is already used.')
-            )), 400);
+            $errorData = new ErrorResponse();
+            $errorData->setStatus(400);
+            $errorData->setMessage($translator->trans('The name or the E-Mail address is already used.'));
+            $errorData->setForm($form);
+
+            $result->setError($errorData);
+            return $this->view()->create($result, 400,
+                SerializationContext::create()->setGroups('error'));
         }
 
         if (isset($data['email']))
@@ -296,7 +353,13 @@ class AccountController extends FOSRestController
             $this->storeAndRequestMailConfirm($account, $data['email']);
         }
 
-        return $this->view()->create($translator->trans('Account updated.'), 202);
+        $successData = new SuccessResponse();
+        $successData->setStatus(202);
+        $successData->setMessage($translator->trans('Account updated.'));
+
+        $result->setSuccess($successData);
+        return $this->view()->create($result, 202,
+            SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -310,6 +373,7 @@ class AccountController extends FOSRestController
      *     authenticationRoles = {"ROLE_PLAYER"},
      *     resource = true,
      *     description = "Delete a existing account",
+     *     output = "Illarion\AccountSystemBundle\Model\AccountDeleteResponse",
      *     statusCodes = {
      *         200 = "Returned in case the account was successfully deleted."
      *     }
@@ -331,7 +395,15 @@ class AccountController extends FOSRestController
 
         $translator = $this->get('translator');
 
-        return $this->view()->create($translator->trans("Account deleted."), 200);
+        $result = new AccountDeleteResponse();
+
+        $successData = new SuccessResponse();
+        $successData->setStatus(200);
+        $successData->setMessage($translator->trans('Account deleted.'));
+
+        $result->setSuccess($successData);
+        return $this->view()->create($result, 200,
+            SerializationContext::create()->setGroups('success'));
     }
 
     /**
