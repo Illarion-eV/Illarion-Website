@@ -15,7 +15,18 @@ use Illarion\AccountSystemBundle\Exception\StartPackNotFoundException;
 use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\CharacterCreateType;
 use Illarion\AccountSystemBundle\Form\CharacterUpdateType;
+use Illarion\AccountSystemBundle\Model\AttributesResponse;
+use Illarion\AccountSystemBundle\Model\CharacterCreationResponse;
+use Illarion\AccountSystemBundle\Model\ColourResponse;
+use Illarion\AccountSystemBundle\Model\IdNameResponse;
+use Illarion\AccountSystemBundle\Model\MinMaxResponse;
+use Illarion\AccountSystemBundle\Model\RaceResponse;
+use Illarion\AccountSystemBundle\Model\RaceTypeResponse;
+use Illarion\AccountSystemBundle\Model\StartPackItemsResponse;
+use Illarion\AccountSystemBundle\Model\StartPackResponse;
+use Illarion\DatabaseBundle\Entity\DevServer;
 use Illarion\DatabaseBundle\Entity\Homepage\CharacterDetails;
+use Illarion\DatabaseBundle\Entity\IllarionServer;
 use Illarion\DatabaseBundle\Entity\Server\Chars;
 use Illarion\DatabaseBundle\Entity\Server\Player;
 use Illarion\DatabaseBundle\Entity\Server\PlayerItems;
@@ -29,12 +40,10 @@ use Illarion\DatabaseBundle\Entity\Server\RaceTypes;
 use Illarion\DatabaseBundle\Entity\Server\StartPackItems;
 use Illarion\DatabaseBundle\Entity\Server\StartPacks;
 use Illarion\DatabaseBundle\Entity\Server\StartPackSkills;
+use Illarion\DatabaseBundle\Entity\TestServer;
 use Illarion\SecurityBundle\Security\User\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\Request;
-use Illarion\DatabaseBundle\Entity\IllarionServer;
-use Illarion\DatabaseBundle\Entity\TestServer;
-use Illarion\DatabaseBundle\Entity\DevServer;
 
 /**
  * This controller is used for all interactions with characters.
@@ -62,6 +71,7 @@ class CharacterController extends FOSRestController
      *     parameters = {
      *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"}
      *     },
+     *     output = "Illarion\AccountSystemBundle\Model\CharacterCreationResponse",
      *     statusCodes = {
      *         200 = "Returned in case the data was correctly fetched and returned",
      *         400 = "In case the server value was illegal.",
@@ -77,152 +87,124 @@ class CharacterController extends FOSRestController
         if ($schema instanceof View)
             return $schema;
 
-        $result = array();
+        $result = new CharacterCreationResponse();
 
         $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
-        $result['race'] = array();
 
         $criteria = new Criteria();
         $criteria->where($criteria->expr()->lte('id', 5));
         $criteria->orderBy(array('id' => 'ASC'));
-        foreach($raceRepo->matching($criteria) as $race)
-        {
+        foreach ($raceRepo->matching($criteria) as $race) {
             if (!($race instanceof Race))
                 throw new UnexpectedTypeException($race, Race::class);
 
+            $raceEntry = new RaceResponse();
+            $raceEntry->setId($race->getId());
+            $raceEntry->setName($german ? $race->getNameDe() : $race->getNameEn());
 
-            $raceArray = array(
-                'id' => $race->getId(),
-                'name' => ($german ? $race->getNameDe() : $race->getNameEn()),
-                'attributes' => array(
-                    'age' => self::getMinMaxArray($race->getAgeMin(), $race->getAgeMax()),
-                    'height' => self::getMinMaxArray($race->getHeightMin(), $race->getHeightMax()),
-                    'weight' => self::getMinMaxArray($race->getWeightMin(), $race->getWeightMax()),
-                    'agility' => self::getMinMaxArray($race->getAgilityMin(), $race->getAgilityMax()),
-                    'constitution' => self::getMinMaxArray($race->getConstitutionMin(), $race->getConstitutionMax()),
-                    'dexterity' => self::getMinMaxArray($race->getDexterityMin(), $race->getDexterityMax()),
-                    'essence' => self::getMinMaxArray($race->getEssenceMin(), $race->getEssenceMax()),
-                    'intelligence' => self::getMinMaxArray($race->getIntelligenceMin(), $race->getIntelligenceMax()),
-                    'perception' => self::getMinMaxArray($race->getPerceptionMin(), $race->getPerceptionMax()),
-                    'strength' => self::getMinMaxArray($race->getStrengthMin(), $race->getStrengthMax()),
-                    'willpower' => self::getMinMaxArray($race->getWillpowerMin(), $race->getWillpowerMax()),
-                    'maxPoints' => $race->getAttributePointsMax()
-                ),
-            );
+            $attributes = new AttributesResponse();
+            $attributes->setAge(new MinMaxResponse($race->getAgeMin(), $race->getAgeMax()));
+            $attributes->setHeight(new MinMaxResponse($race->getHeightMin(), $race->getHeightMax()));
+            $attributes->setWeight(new MinMaxResponse($race->getWeightMin(), $race->getWeightMax()));
+            $attributes->setAgility(new MinMaxResponse($race->getAgilityMin(), $race->getAgilityMax()));
+            $attributes->setConstitution(new MinMaxResponse($race->getConstitutionMin(), $race->getConstitutionMax()));
+            $attributes->setDexterity(new MinMaxResponse($race->getDexterityMin(), $race->getDexterityMax()));
+            $attributes->setEssence(new MinMaxResponse($race->getEssenceMin(), $race->getEssenceMax()));
+            $attributes->setIntelligence(new MinMaxResponse($race->getIntelligenceMin(), $race->getIntelligenceMax()));
+            $attributes->setPerception(new MinMaxResponse($race->getPerceptionMin(), $race->getPerceptionMax()));
+            $attributes->setStrength(new MinMaxResponse($race->getStrengthMin(), $race->getStrengthMax()));
+            $attributes->setWillpower(new MinMaxResponse($race->getWillpowerMin(), $race->getWillpowerMax()));
+            $attributes->setTotalAttributePoints($race->getAttributePointsMax());
+
+            $raceEntry->setAttributes($attributes);
 
             $raceArray['types'] = array();
-            foreach($race->getTypes() as $raceType)
-            {
+            foreach ($race->getTypes() as $raceType) {
                 if (!($raceType instanceof RaceTypes))
                     throw new UnexpectedTypeException($raceType, RaceTypes::class);
 
-                $typeArray = array('id' => $raceType->getTypeId());
+                $type = new RaceTypeResponse();
+                $type->setId($raceType->getTypeId());
 
-                $typeArray['beards'] = array();
-                foreach($raceType->getBeards() as $beard)
-                {
+                foreach ($raceType->getBeards() as $beard) {
                     if (!($beard instanceof RaceBeard))
                         throw new UnexpectedTypeException($beard, RaceBeard::class);
 
-
-                    $typeArray['beards'][] = array(
-                        'id' => $beard->getBeardId(),
-                        'name' => $german ? $beard->getNameDe() : $beard->getNameEn()
-                    );
+                    $type->addBeard(new IdNameResponse(
+                        $beard->getBeardId(),
+                        $german ? $beard->getNameDe() : $beard->getNameEn()
+                    ));
                 }
 
-                $typeArray['hairs'] = array();
-                foreach($raceType->getHairs() as $hair)
-                {
+                foreach ($raceType->getHairs() as $hair) {
                     if (!($hair instanceof RaceHair))
                         throw new UnexpectedTypeException($hair, RaceHair::class);
 
-
-                    $typeArray['hairs'][] = array(
-                        'id' => $hair->getHairId(),
-                        'name' => $german ? $hair->getNameDe() : $hair->getNameEn()
-                    );
+                    $type->addHair(new IdNameResponse(
+                        $hair->getHairId(),
+                        $german ? $hair->getNameDe() : $hair->getNameEn()
+                    ));
                 }
 
-                $typeArray['hairColours'] = array();
-                foreach($raceType->getHairColours() as $hairColour)
-                {
+                foreach ($raceType->getHairColours() as $hairColour) {
                     if (!($hairColour instanceof RaceHairColour))
                         throw new UnexpectedTypeException($hairColour, RaceHairColour::class);
 
-
-                    $typeArray['hairColours'][] = self::getColorValue(
+                    $type->addHairColour(new ColourResponse(
                         $hairColour->getRed(), $hairColour->getGreen(), $hairColour->getGreen(), $hairColour->getAlpha()
-                    );
+                    ));
                 }
 
-                $typeArray['skinColours'] = array();
-                foreach($raceType->getSkinColours() as $skinColour)
-                {
+                foreach ($raceType->getSkinColours() as $skinColour) {
                     if (!($skinColour instanceof RaceSkinColour))
                         throw new UnexpectedTypeException($skinColour, RaceSkinColour::class);
 
-
-                    $typeArray['skinColours'][] = self::getColorValue(
+                    $type->addSkinColour(new ColourResponse(
                         $skinColour->getRed(), $skinColour->getGreen(), $skinColour->getGreen(), $skinColour->getAlpha()
-                    );
+                    ));
                 }
 
-                $raceArray['types'][] = $typeArray;
+                $raceEntry->addType($type);
             }
 
-            $result['race'][] = $raceArray;
+            $result->addRace($raceEntry);
         }
 
         $startPackRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'StartPacks'));
-        $result['startPacks'] = array();
-        foreach($startPackRepo->findAll() as $startPack)
-        {
+        foreach ($startPackRepo->findAll() as $startPack) {
             if (!($startPack instanceof StartPacks))
-            {
                 throw new UnexpectedTypeException($startPack, StartPacks::class);
-            }
 
-            $startPackArray = array(
-                'id' => $startPack->getId(),
-                'name' => $german ? $startPack->getNameDe() : $startPack->getNameEn(),
-                'skills' => array(),
-                'items' => array()
-            );
+            $startPackEntry = new StartPackResponse();
+            $startPackEntry->setId($startPack->getId());
+            $startPackEntry->setName($german ? $startPack->getNameDe() : $startPack->getNameEn());
 
-            foreach($startPack->getSkills() as $packSkill)
-            {
+            foreach ($startPack->getSkills() as $packSkill) {
                 if (!($packSkill instanceof StartPackSkills))
-                {
                     throw new UnexpectedTypeException($packSkill, StartPackSkills::class);
-                }
 
-                $startPackArray['skills'][] = array(
-                    'id' => $packSkill->getSkillId(),
-                    'value' => $packSkill->getSkillValue()
-                );
+                $startPackEntry->addSkill(new IdNameResponse($packSkill->getSkillId(), $packSkill->getSkillValue()));
             }
 
-            foreach($startPack->getItems() as $packItem)
-            {
+            foreach ($startPack->getItems() as $packItem) {
                 if (!($packItem instanceof StartPackItems))
                     throw new UnexpectedTypeException($packItem, StartPackItems::class);
 
-
                 $item = $packItem->getItem();
 
-                $startPackArray['items'][] = array(
-                    'itemId' => $packItem->getItemId(),
-                    'position' => $packItem->getLinenumber(),
-                    'number' => $packItem->getNumber(),
-                    'quality' => $packItem->getQuality(),
-                    'name' => $german ? $item->getNameDe() : $item->getNameEn(),
-                    'unitWorth' => $item->getWorth(),
-                    'unitWeight' => $item->getWeight()
-                );
+                $itemEntry = new StartPackItemsResponse();
+                $itemEntry->setItemId($packItem->getItemId());
+                $itemEntry->setPosition($packItem->getLinenumber());
+                $itemEntry->setNumber($packItem->getNumber());
+                $itemEntry->setQuality($packItem->getQuality());
+                $itemEntry->setName($german ? $item->getNameDe() : $item->getNameEn());
+                $itemEntry->setUnitWorth($item->getWorth());
+                $itemEntry->setUnitWeight($item->getWeight());
+
+                $startPackEntry->addItem($itemEntry);
             }
 
-            $result['startPacks'][] = $startPackArray;
+            $result->addStartPack($startPackEntry);
         }
 
         return $this->view()->create($result, 200);
@@ -267,7 +249,7 @@ class CharacterController extends FOSRestController
         if ($char instanceof View)
             return $char;
 
-        $player = $char->getPlayer(); 
+        $player = $char->getPlayer();
         return $this->view()->create(array(
             'id' => $char->getPlayerId(),
             'name' => $char->getName(),
@@ -343,8 +325,8 @@ class CharacterController extends FOSRestController
 
         $authManager = $this->get('security.authorization_checker');
         if (($schema === 'TestServer' && !$authManager->isGranted('ROLE_TESTSERVER_ACCESS')) ||
-            ($schema === 'DevServer' && !$authManager->isGranted('ROLE_DEVSERVER_ACCESS')))
-        {
+            ($schema === 'DevServer' && !$authManager->isGranted('ROLE_DEVSERVER_ACCESS'))
+        ) {
             return $this->view()->create(array('error' => array(
                 'code' => 401,
                 'message' => $translator->trans('This account is not allowed to create a character on this server.'),
@@ -363,8 +345,7 @@ class CharacterController extends FOSRestController
             )), 400);
         }
 
-        if (!$form->isValid())
-        {
+        if (!$form->isValid()) {
             return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('The validation of the submitted values failed.'),
@@ -377,8 +358,7 @@ class CharacterController extends FOSRestController
 
         /** @var Chars $newCharacter */
         /** @var Player $newPlayer */
-        switch ($schema)
-        {
+        switch ($schema) {
             case 'IllarionServer':
                 $newCharacter = new IllarionServer\Chars();
                 $newPlayer = new IllarionServer\Player();
@@ -391,7 +371,8 @@ class CharacterController extends FOSRestController
                 $newCharacter = new DevServer\Chars();
                 $newPlayer = new DevServer\Player();
                 break;
-            default: throw new \RuntimeException();
+            default:
+                throw new \RuntimeException();
         }
 
         $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
@@ -510,8 +491,7 @@ class CharacterController extends FOSRestController
 
         if ($data['hairId'] === 0)
             $newPlayer->setHairId(0);
-        else
-        {
+        else {
             $hairIdRef = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceHair'));
             $hair = $hairIdRef->findOneBy(array(
                 'rh_race_id' => $raceDef->getId(),
@@ -526,8 +506,7 @@ class CharacterController extends FOSRestController
 
         if ($data['beardId'] === 0)
             $newPlayer->setHairId(0);
-        else
-        {
+        else {
             $hairIdRef = $this->getRepository(self::getRepositoryIdentifier($schema, 'RaceBeard'));
             $hair = $hairIdRef->findOneBy(array(
                 'rb_race_id' => $raceDef->getId(),
@@ -549,18 +528,23 @@ class CharacterController extends FOSRestController
         if (!($startPack instanceof StartPacks))
             throw new UnexpectedTypeException($startPack, StartPacks::class);
 
-        foreach ($startPack->getSkills() as $skill)
-        {
+        foreach ($startPack->getSkills() as $skill) {
             if (!($skill instanceof StartPackSkills))
                 throw new UnexpectedTypeException($skill, StartPackSkills::class);
 
             /** @var PlayerSkills $playerSkill */
-            switch ($schema)
-            {
-                case 'illarionserver': $playerSkill = new IllarionServer\PlayerSkills(); break;
-                case 'testserver': $playerSkill = new TestServer\PlayerSkills(); break;
-                case 'devserver': $playerSkill = new DevServer\PlayerSkills(); break;
-                default: throw new \RuntimeException();
+            switch ($schema) {
+                case 'illarionserver':
+                    $playerSkill = new IllarionServer\PlayerSkills();
+                    break;
+                case 'testserver':
+                    $playerSkill = new TestServer\PlayerSkills();
+                    break;
+                case 'devserver':
+                    $playerSkill = new DevServer\PlayerSkills();
+                    break;
+                default:
+                    throw new \RuntimeException();
             }
 
             $playerSkill->setPlayerId($newCharacter->getPlayerId());
@@ -569,18 +553,23 @@ class CharacterController extends FOSRestController
             $em->persist($playerSkill);
         }
 
-        foreach ($startPack->getItems() as $item)
-        {
+        foreach ($startPack->getItems() as $item) {
             if (!($item instanceof StartPackItems))
                 throw new UnexpectedTypeException($item, StartPackItems::class);
 
             /** @var PlayerItems $playerItem */
-            switch ($schema)
-            {
-                case 'illarionserver': $playerItem = new IllarionServer\PlayerItems(); break;
-                case 'testserver': $playerItem = new TestServer\PlayerItems(); break;
-                case 'devserver': $playerItem = new DevServer\PlayerItems(); break;
-                default: throw new \RuntimeException();
+            switch ($schema) {
+                case 'illarionserver':
+                    $playerItem = new IllarionServer\PlayerItems();
+                    break;
+                case 'testserver':
+                    $playerItem = new TestServer\PlayerItems();
+                    break;
+                case 'devserver':
+                    $playerItem = new DevServer\PlayerItems();
+                    break;
+                default:
+                    throw new \RuntimeException();
             }
 
             $playerItem->setPlayerId($newCharacter->getPlayerId());
@@ -653,8 +642,7 @@ class CharacterController extends FOSRestController
             )), 400);
         }
 
-        if (!$form->isValid())
-        {
+        if (!$form->isValid()) {
             return $this->view()->create(array('error' => array(
                 'code' => 400,
                 'message' => $translator->trans('The validation of the submitted values failed.'),
@@ -666,12 +654,10 @@ class CharacterController extends FOSRestController
         $charDetailsRepo = $this->getRepository(self::getRepositoryIdentifier('Homepage', 'CharacterDetails'));
         $oldDetails = $charDetailsRepo->findOneBy(array('char_id' => $char->getPlayerId()));
 
-        if ($oldDetails == null || !($oldDetails instanceof CharacterDetails))
-        {
+        if ($oldDetails == null || !($oldDetails instanceof CharacterDetails)) {
             $details = new CharacterDetails();
             $details->setCharId($char->getPlayerId());
-        }
-        else
+        } else
             $details = $oldDetails;
 
         if (isset($data['descriptionDe']))
@@ -744,11 +730,13 @@ class CharacterController extends FOSRestController
      */
     private function getSchemaFromServerIdent($server)
     {
-        switch ($server)
-        {
-            case 'illarionserver': return 'IllarionServer';
-            case 'testserver': return 'TestServer';
-            case 'devserver': return 'DevServer';
+        switch ($server) {
+            case 'illarionserver':
+                return 'IllarionServer';
+            case 'testserver':
+                return 'TestServer';
+            case 'devserver':
+                return 'DevServer';
             default:
                 $translator = $this->get('translator');
                 return $this->view()->create(array(
@@ -772,18 +760,6 @@ class CharacterController extends FOSRestController
     private static function getRepositoryIdentifier($schema, $table)
     {
         return 'IllarionDatabaseBundle:' . $schema . '\\' . $table;
-    }
-
-    /**
-     * Get a array containing the minimal and the maximal value. The array is prepared for json data
-     *
-     * @param mixed $minValue min value
-     * @param mixed $maxValue max value
-     * @return array json prepared data array
-     */
-    private static function getMinMaxArray($minValue, $maxValue)
-    {
-        return array('min' => $minValue, 'max' => $maxValue);
     }
 
     /**
@@ -814,8 +790,7 @@ class CharacterController extends FOSRestController
     private static function getItems($items)
     {
         $result = array();
-        foreach($items as $item)
-        {
+        foreach ($items as $item) {
             if (!($item instanceof PlayerItems))
                 throw new UnexpectedTypeException($item, PlayerItems::class);
 
@@ -850,8 +825,7 @@ class CharacterController extends FOSRestController
         $charsRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Chars'));
 
         $char = $charsRepo->findOneBy(array('accId' => $accId, 'playerId' => $charId));
-        if ($char == null || !($char instanceof Chars))
-        {
+        if ($char == null || !($char instanceof Chars)) {
             $translator = $this->get('translator');
             return $this->view()->create(array(
                 'error' => array(

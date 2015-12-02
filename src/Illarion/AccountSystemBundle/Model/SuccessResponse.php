@@ -3,7 +3,6 @@
 namespace Illarion\AccountSystemBundle\Model;
 
 use JMS\Serializer\Annotation as JMS;
-use Symfony\Component\Form\FormTypeInterface;
 
 class SuccessResponse
 {
