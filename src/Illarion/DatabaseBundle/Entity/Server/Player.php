@@ -117,7 +117,7 @@ abstract class Player
      *
      * @ORM\Column(name="ply_constitution", type="smallint")
      */
-    private $consitution;
+    private $constitution;
 
     /**
      * @var integer
@@ -645,25 +645,25 @@ abstract class Player
     }
 
     /**
-     * Get consitution
+     * Get constitution
      *
      * @return integer
      */
-    public function getConsitution()
+    public function getConstitution()
     {
-        return $this->consitution;
+        return $this->constitution;
     }
 
     /**
-     * Set consitution
+     * Set constitution
      *
-     * @param integer $consitution
+     * @param integer $constitution
      *
      * @return Player
      */
-    public function setConsitution($consitution)
+    public function setConstitution($constitution)
     {
-        $this->consitution = $consitution;
+        $this->constitution = $constitution;
 
         return $this;
     }

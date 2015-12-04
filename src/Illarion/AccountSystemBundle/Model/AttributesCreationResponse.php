@@ -4,7 +4,7 @@ namespace Illarion\AccountSystemBundle\Model;
 
 use JMS\Serializer\Annotation as JMS;
 
-class AttributesResponse
+class AttributesCreationResponse
 {
     /**
      * The value range for the age of the character.

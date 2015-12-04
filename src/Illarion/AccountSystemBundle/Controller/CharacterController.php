@@ -15,8 +15,12 @@ use Illarion\AccountSystemBundle\Exception\StartPackNotFoundException;
 use Illarion\AccountSystemBundle\Exception\UnexpectedTypeException;
 use Illarion\AccountSystemBundle\Form\CharacterCreateType;
 use Illarion\AccountSystemBundle\Form\CharacterUpdateType;
-use Illarion\AccountSystemBundle\Model\AttributesResponse;
+use Illarion\AccountSystemBundle\Model\AttributesCreationResponse;
+use Illarion\AccountSystemBundle\Model\CharacterAttributesResponse;
 use Illarion\AccountSystemBundle\Model\CharacterCreationResponse;
+use Illarion\AccountSystemBundle\Model\CharacterGetResponse;
+use Illarion\AccountSystemBundle\Model\CharacterItemResponse;
+use Illarion\AccountSystemBundle\Model\CharacterPaperDollResponse;
 use Illarion\AccountSystemBundle\Model\ColourResponse;
 use Illarion\AccountSystemBundle\Model\IdNameResponse;
 use Illarion\AccountSystemBundle\Model\MinMaxResponse;
@@ -102,7 +106,7 @@ class CharacterController extends FOSRestController
             $raceEntry->setId($race->getId());
             $raceEntry->setName($german ? $race->getNameDe() : $race->getNameEn());
 
-            $attributes = new AttributesResponse();
+            $attributes = new AttributesCreationResponse();
             $attributes->setAge(new MinMaxResponse($race->getAgeMin(), $race->getAgeMax()));
             $attributes->setHeight(new MinMaxResponse($race->getHeightMin(), $race->getHeightMax()));
             $attributes->setWeight(new MinMaxResponse($race->getWeightMin(), $race->getWeightMax()));
@@ -230,6 +234,7 @@ class CharacterController extends FOSRestController
      *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"},
      *         {"name"="charId", "dataType"="number", "required"=true, "requirements"="%d+"}
      *     },
+     *     output = "Illarion\AccountSystemBundle\Model\CharacterGetResponse",
      *     statusCodes = {
      *         200 = "The character is valid, belongs to the logged in account and was correctly fetched.",
      *         400 = "In case the server value was illegal.",
@@ -250,42 +255,59 @@ class CharacterController extends FOSRestController
             return $char;
 
         $player = $char->getPlayer();
-        return $this->view()->create(array(
-            'id' => $char->getPlayerId(),
-            'name' => $char->getName(),
-            'race' => $char->getRaceId(),
-            'raceType' => $char->getRaceTypeId(),
-            'attributes' => array(
-                'agility' => $player->getAgility(),
-                'constitution' => $player->getConsitution(),
-                'dexterity' => $player->getDexterity(),
-                'essence' => $player->getEssence(),
-                'intelligence' => $player->getIntelligence(),
-                'perception' => $player->getPerception(),
-                'strength' => $player->getStrength(),
-                'willpower' => $player->getWillpower()
-            ),
-            'dateOfBirth' => $player->getDateOfBirth(),
-            'bodyHeight' => $player->getHeight(),
-            'bodyWeight' => $player->getWeight(),
-            'paperDoll' => array(
-                'hairId' => $player->getHairId(),
-                'beardId' => $player->getBeardId(),
-                'hairColour' => self::getColorValue(
-                    $player->getHairColorRed(),
-                    $player->getHairColorGreen(),
-                    $player->getHairColorBlue(),
-                    $player->getHairColorAlpha()
-                ),
-                'skinColour' => self::getColorValue(
-                    $player->getSkinColorRed(),
-                    $player->getSkinColorGreen(),
-                    $player->getSkinColorBlue(),
-                    $player->getSkinColorAlpha()
-                )
-            ),
-            'items' => self::getItems($player->getItems())
-        ), 200);
+
+        $result = new CharacterGetResponse();
+        $result->setId($char->getPlayerId());
+        $result->setName($char->getName());
+        $result->setRace($char->getRaceId());
+        $result->setRaceType($char->getRaceTypeId());
+
+        $attributes = new CharacterAttributesResponse();
+        $attributes->setAgility($player->getAgility());
+        $attributes->setConstitution($player->getConstitution());
+        $attributes->setDexterity($player->getDexterity());
+        $attributes->setEssence($player->getEssence());
+        $attributes->setIntelligence($player->getIntelligence());
+        $attributes->setPerception($player->getPerception());
+        $attributes->setStrength($player->getStrength());
+        $attributes->setWillpower($player->getWillpower());
+        $result->setAttributes($attributes);
+
+        $result->setDateOfBirth($player->getDateOfBirth());
+        $result->setBodyHeight($player->getHeight());
+        $result->setBodyWeight($player->getWeight());
+
+        $paperDoll = new CharacterPaperDollResponse();
+        $paperDoll->setHairId($player->getHairId());
+        $paperDoll->setBeardId($player->getBeardId());
+        $paperDoll->setSkinColour(new ColourResponse(
+            $player->getSkinColorRed(),
+            $player->getSkinColorGreen(),
+            $player->getSkinColorBlue(),
+            $player->getSkinColorAlpha()));
+        $paperDoll->setHairColour(new ColourResponse(
+            $player->getHairColorRed(),
+            $player->getHairColorGreen(),
+            $player->getHairColorBlue(),
+            $player->getHairColorAlpha()));
+        $result->setPaperDoll($paperDoll);
+
+        foreach ($player->getItems() as $item) {
+            if (!($item instanceof PlayerItems))
+                throw new UnexpectedTypeException($item, PlayerItems::class);
+
+            if ($item->getInContainer() != 0 || $item->getDepot() != 0)
+                continue;
+
+            $itemData = new CharacterItemResponse();
+            $itemData->setId($item->getItemId());
+            $itemData->setPosition($item->getLineNumber());
+            $itemData->setNumber($item->getNumber());
+            $itemData->setQuality($item->getQuality());
+            $result->addItem($itemData);
+        }
+
+        return $this->view()->create($result, 200);
     }
 
     /**

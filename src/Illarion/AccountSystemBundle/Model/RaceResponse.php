@@ -29,8 +29,8 @@ class RaceResponse
     /**
      * The attribute limits of the race.
      *
-     * @var AttributesResponse
-     * @JMS\Type("Illarion\AccountSystemBundle\Model\AttributesResponse")
+     * @var AttributesCreationResponse
+     * @JMS\Type("Illarion\AccountSystemBundle\Model\AttributesCreationResponse")
      * @JMS\SerializedName("attributes")
      * @JMS\Since("1.0")
      */
@@ -79,7 +79,7 @@ class RaceResponse
     }
 
     /**
-     * @return AttributesResponse
+     * @return AttributesCreationResponse
      */
     public function getAttributes()
     {
@@ -87,9 +87,9 @@ class RaceResponse
     }
 
     /**
-     * @param AttributesResponse $attributes
+     * @param AttributesCreationResponse $attributes
      */
-    public function setAttributes(AttributesResponse $attributes)
+    public function setAttributes(AttributesCreationResponse $attributes)
     {
         $this->attributes = $attributes;
     }
