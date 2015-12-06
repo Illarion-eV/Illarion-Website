@@ -17,17 +17,21 @@ use Illarion\AccountSystemBundle\Form\CharacterCreateType;
 use Illarion\AccountSystemBundle\Form\CharacterUpdateType;
 use Illarion\AccountSystemBundle\Model\AttributesCreationResponse;
 use Illarion\AccountSystemBundle\Model\CharacterAttributesResponse;
+use Illarion\AccountSystemBundle\Model\CharacterCreateResponse;
 use Illarion\AccountSystemBundle\Model\CharacterCreationResponse;
 use Illarion\AccountSystemBundle\Model\CharacterGetResponse;
 use Illarion\AccountSystemBundle\Model\CharacterItemResponse;
 use Illarion\AccountSystemBundle\Model\CharacterPaperDollResponse;
+use Illarion\AccountSystemBundle\Model\CharacterUpdateResponse;
 use Illarion\AccountSystemBundle\Model\ColourResponse;
+use Illarion\AccountSystemBundle\Model\ErrorResponse;
 use Illarion\AccountSystemBundle\Model\IdNameResponse;
 use Illarion\AccountSystemBundle\Model\MinMaxResponse;
 use Illarion\AccountSystemBundle\Model\RaceResponse;
 use Illarion\AccountSystemBundle\Model\RaceTypeResponse;
 use Illarion\AccountSystemBundle\Model\StartPackItemsResponse;
 use Illarion\AccountSystemBundle\Model\StartPackResponse;
+use Illarion\AccountSystemBundle\Model\SuccessResponse;
 use Illarion\DatabaseBundle\Entity\DevServer;
 use Illarion\DatabaseBundle\Entity\Homepage\CharacterDetails;
 use Illarion\DatabaseBundle\Entity\IllarionServer;
@@ -46,6 +50,7 @@ use Illarion\DatabaseBundle\Entity\Server\StartPacks;
 use Illarion\DatabaseBundle\Entity\Server\StartPackSkills;
 use Illarion\DatabaseBundle\Entity\TestServer;
 use Illarion\SecurityBundle\Security\User\User;
+use JMS\Serializer\SerializationContext;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -87,11 +92,16 @@ class CharacterController extends FOSRestController
     {
         $german = ($request->getPreferredLanguage(array('de', 'en')) == 'de');
 
-        $schema = $this->getSchemaFromServerIdent($server);
-        if ($schema instanceof View)
-            return $schema;
-
         $result = new CharacterCreationResponse();
+
+        $schema = $this->getSchemaFromServerIdent($server);
+        if ($schema instanceof ErrorResponse)
+        {
+            $result->setError($schema);
+            return $this->view()->create($result, $schema->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
+
 
         $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
 
@@ -211,7 +221,7 @@ class CharacterController extends FOSRestController
             $result->addStartPack($startPackEntry);
         }
 
-        return $this->view()->create($result, 200);
+        return $this->view()->create($result, 200, SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -246,17 +256,27 @@ class CharacterController extends FOSRestController
     public function getAction($server, $charId)
     {
         $account = $this->getLoggedInAccount();
+
+        $result = new CharacterGetResponse();
+
         $schema = $this->getSchemaFromServerIdent($server);
-        if ($schema instanceof View)
-            return $schema;
+        if ($schema instanceof ErrorResponse)
+        {
+            $result->setError($schema);
+            return $this->view()->create($result, $schema->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
 
         $char = $this->getCharacter($schema, $account->getId(), $charId);
-        if ($char instanceof View)
-            return $char;
+        if ($char instanceof ErrorResponse)
+        {
+            $result->setError($char);
+            return $this->view()->create($result, $char->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
 
         $player = $char->getPlayer();
 
-        $result = new CharacterGetResponse();
         $result->setId($char->getPlayerId());
         $result->setName($char->getName());
         $result->setRace($char->getRaceId());
@@ -307,7 +327,7 @@ class CharacterController extends FOSRestController
             $result->addItem($itemData);
         }
 
-        return $this->view()->create($result, 200);
+        return $this->view()->create($result, 200, SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -326,6 +346,7 @@ class CharacterController extends FOSRestController
      *     resource = true,
      *     description = "Create a new character.",
      *     input = "Illarion\AccountSystemBundle\Form\CharacterCreateType",
+     *     output = "Illarion\AccountSystemBundle\Model\CharacterCreateResponse",
      *     parameters = {
      *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"}
      *     },
@@ -339,9 +360,14 @@ class CharacterController extends FOSRestController
      */
     public function postAction(Request $request, $server)
     {
+        $result = new CharacterCreateResponse();
         $schema = $this->getSchemaFromServerIdent($server);
-        if ($schema instanceof View)
-            return $schema;
+        if ($schema instanceof ErrorResponse)
+        {
+            $result->setError($schema);
+            return $this->view()->create($result, $schema->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
 
         $translator = $this->get('translator');
 
@@ -349,30 +375,36 @@ class CharacterController extends FOSRestController
         if (($schema === 'TestServer' && !$authManager->isGranted('ROLE_TESTSERVER_ACCESS')) ||
             ($schema === 'DevServer' && !$authManager->isGranted('ROLE_DEVSERVER_ACCESS'))
         ) {
-            return $this->view()->create(array('error' => array(
-                'code' => 401,
-                'message' => $translator->trans('This account is not allowed to create a character on this server.'),
-                'value' => $server
-            )), 401);
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(401);
+            $errorResp->setMessage($translator->trans('This account is not allowed to create a character on this server.'));
+            $errorResp->setValue($server);
+            $result->setError($errorResp);
+
+            return $this->view()->create($result, 401, SerializationContext::create()->setGroups('error'));
         }
 
         $form = $this->createForm(new CharacterCreateType());
         $form->handleRequest($request);
 
         if (!$form->isSubmitted()) {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires all data fields to be filled.'),
-                'form' => $form
-            )), 400);
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(400);
+            $errorResp->setMessage($translator->trans('Missing data. This function requires all data fields to be filled.'));
+            $errorResp->setForm($form);
+            $result->setError($errorResp);
+
+            return $this->view()->create($result, 400, SerializationContext::create()->setGroups('error'));
         }
 
         if (!$form->isValid()) {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            )), 400);
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(400);
+            $errorResp->setMessage($translator->trans('The validation of the submitted values failed.'));
+            $errorResp->setForm($form);
+            $result->setError($errorResp);
+
+            return $this->view()->create($result, 400, SerializationContext::create()->setGroups('error'));
         }
 
         $data = $form->getData();
@@ -463,7 +495,7 @@ class CharacterController extends FOSRestController
 
         // Apply attributes
         $newPlayer->setAgility($data['agility']);
-        $newPlayer->setConsitution($data['constitution']);
+        $newPlayer->setConstitution($data['constitution']);
         $newPlayer->setDexterity($data['dexterity']);
         $newPlayer->setEssence($data['essence']);
         $newPlayer->setIntelligence($data['intelligence']);
@@ -603,9 +635,13 @@ class CharacterController extends FOSRestController
         }
         $em->flush();
 
-        $view = $this->view()->create($translator->trans('Character created.'), 201);
+        $successData = new SuccessResponse();
+        $successData->setStatus(201);
+        $successData->setMessage($translator->trans('Character created.'));
 
-        return $view;
+        $result->setSuccess($successData);
+        return $this->view()->create($result, 201,
+            SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -615,7 +651,7 @@ class CharacterController extends FOSRestController
      * @param string $server the server the creation information are requested for
      * @param integer $charId the ID of the character
      * @return View
-     * @RestAnnotations\Get("/character/{server}/{charId}")
+     * @RestAnnotations\Put("/character/{server}/{charId}")
      * @RestAnnotations\QueryParam(name="server", requirements="illarionserver|testserver|devserver", description="The server the character is expected to be created on.")
      * @RestAnnotations\QueryParam(name="charId", requirements="%d+", description="The ID of the character that is requested.")
      * @RestAnnotations\View()
@@ -625,6 +661,7 @@ class CharacterController extends FOSRestController
      *     resource = true,
      *     description = "Update a character.",
      *     input = "Illarion\AccountSystemBundle\Form\CharacterUpdateType",
+     *     output = "Illarion\AccountSystemBundle\Model\CharacterUpdateResponse",
      *     parameters = {
      *         {"name"="server", "dataType"="string", "required"=true, "requirements"="illarionserver|testserver|devserver"},
      *         {"name"="charId", "dataType"="number", "required"=true, "requirements"="%d+"}
@@ -639,9 +676,15 @@ class CharacterController extends FOSRestController
      */
     public function putAction(Request $request, $server, $charId)
     {
+        $result = new CharacterUpdateResponse();
+
         $schema = $this->getSchemaFromServerIdent($server);
-        if ($schema instanceof View)
-            return $schema;
+        if ($schema instanceof ErrorResponse)
+        {
+            $result->setError($schema);
+            return $this->view()->create($result, $schema->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
 
         if ($schema === 'TestServer' && $schema == 'DevServer')
             throw new NotSupportedException('Updating the character information is currently only supported on the illarion server.');
@@ -649,7 +692,11 @@ class CharacterController extends FOSRestController
         $account = $this->getLoggedInAccount();
         $char = $this->getCharacter($schema, $account->getId(), $charId);
         if ($char instanceof View)
-            return $char;
+        {
+            $result->setError($char);
+            return $this->view()->create($result, $char->getStatus(),
+                SerializationContext::create()->setGroups('error'));
+        }
 
         $translator = $this->get('translator');
 
@@ -657,19 +704,25 @@ class CharacterController extends FOSRestController
         $form->handleRequest($request);
 
         if (!$form->isSubmitted()) {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('Missing data. This function requires any filled entry.'),
-                'form' => $form
-            )), 400);
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(400);
+            $errorResp->setMessage($translator->trans('Missing data. This function requires any filled entry.'));
+            $errorResp->setForm($form);
+            $result->setError($errorResp);
+
+            return $this->view()->create($result, $errorResp->getStatus(),
+                SerializationContext::create()->setGroups('error'));
         }
 
         if (!$form->isValid()) {
-            return $this->view()->create(array('error' => array(
-                'code' => 400,
-                'message' => $translator->trans('The validation of the submitted values failed.'),
-                'form' => $form
-            ), 400));
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(400);
+            $errorResp->setMessage($translator->trans('The validation of the submitted values failed.'));
+            $errorResp->setForm($form);
+            $result->setError($errorResp);
+
+            return $this->view()->create($result, $errorResp->getStatus(),
+                SerializationContext::create()->setGroups('error'));
         }
 
         $data = $form->getData();
@@ -698,7 +751,11 @@ class CharacterController extends FOSRestController
 
         $em->flush();
 
-        return $this->view()->create($translator->trans('Character updated.'), 202);
+        $successResp = new SuccessResponse();
+        $successResp->setStatus(202);
+        $successResp->setMessage($translator->trans('Character updated.'));
+        $result->setSuccess($successResp);
+        return $this->view()->create($result, 202, SerializationContext::create()->setGroups('success'));
     }
 
     /**
@@ -748,7 +805,7 @@ class CharacterController extends FOSRestController
      * error.
      *
      * @param string $server the server identifier
-     * @return View|string the schema name or a view that contains the error
+     * @return ErrorResponse|string the schema name or a view that contains the error
      */
     private function getSchemaFromServerIdent($server)
     {
@@ -761,14 +818,11 @@ class CharacterController extends FOSRestController
                 return 'DevServer';
             default:
                 $translator = $this->get('translator');
-                return $this->view()->create(array(
-                    'error' => array(
-                        'code' => 400,
-                        'message' => $translator->trans('The name supplies as server identifier is invalid.'),
-                        'value' => $server,
-                        'requirement' => 'illarionserver|testserver|devserver'
-                    )
-                ), 400);
+
+                $errorResp = new ErrorResponse();
+                $errorResp->setStatus(400);
+                $errorResp->setMessage($translator->trans('The name supplies as server identifier is invalid.'));
+                return $errorResp;
         }
     }
 
@@ -784,51 +838,6 @@ class CharacterController extends FOSRestController
         return 'IllarionDatabaseBundle:' . $schema . '\\' . $table;
     }
 
-    /**
-     * Prepare a rgba color value for the transfer as json data.
-     *
-     * @param mixed $red
-     * @param mixed $green
-     * @param mixed $blue
-     * @param mixed $alpha
-     * @return array the data
-     */
-    private static function getColorValue($red, $green, $blue, $alpha)
-    {
-        return array(
-            'red' => $red,
-            'green' => $green,
-            'blue' => $blue,
-            'alpha' => $alpha
-        );
-    }
-
-    /**
-     * Build a item list for a specific character of the items worn on the body.
-     *
-     * @param Collection $items the items
-     * @return array the data set relevant for the data transfer
-     */
-    private static function getItems($items)
-    {
-        $result = array();
-        foreach ($items as $item) {
-            if (!($item instanceof PlayerItems))
-                throw new UnexpectedTypeException($item, PlayerItems::class);
-
-            if ($item->getInContainer() != 0 || $item->getDepot() != 0)
-                continue;
-
-            $result[] = array(
-                'id' => $item->getItemId(),
-                'position' => $item->getLineNumber(),
-                'number' => $item->getNumber(),
-                'quality' => $item->getQuality()
-            );
-        }
-        return $result;
-    }
-
     private static function isInRange($value, $min, $max)
     {
         return ($value >= $min) && ($value <= $max);
@@ -840,7 +849,7 @@ class CharacterController extends FOSRestController
      * @param string $schema the schema name the character is fetched from
      * @param integer $accId the id of the account
      * @param integer $charId the id of the character that is expected
-     * @return View|Chars a view that contains a error message or the character
+     * @return ErrorResponse|Chars a view that contains a error message or the character
      */
     private function getCharacter($schema, $accId, $charId)
     {
@@ -849,13 +858,11 @@ class CharacterController extends FOSRestController
         $char = $charsRepo->findOneBy(array('accId' => $accId, 'playerId' => $charId));
         if ($char == null || !($char instanceof Chars)) {
             $translator = $this->get('translator');
-            return $this->view()->create(array(
-                'error' => array(
-                    'code' => 401,
-                    'message' => $translator->trans('The character could not be located in the current account.'),
-                    'value' => array('server' => $schema, 'charId' => $charId)
-                )
-            ), 401);
+
+            $errorResp = new ErrorResponse();
+            $errorResp->setStatus(401);
+            $errorResp->setMessage($translator->trans('The character could not be located in the current account.'));
+            return $errorResp;
         }
 
         return $char;

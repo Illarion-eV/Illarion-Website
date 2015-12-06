@@ -38,6 +38,16 @@ class ErrorResponse
     private $form;
 
     /**
+     * Additional values for this error message.
+     *
+     * @var string
+     * @JMS\Type("string")
+     * @JMS\SerializedName("value")
+     * @JMS\Since("1.0")
+     */
+    private $value;
+
+    /**
      * @return int
      */
     public function getStatus()
@@ -83,5 +93,21 @@ class ErrorResponse
     public function setForm($form)
     {
         $this->form = $form;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
     }
 }

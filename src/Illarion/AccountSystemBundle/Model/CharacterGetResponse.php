@@ -108,6 +108,19 @@ class CharacterGetResponse
     private $items;
 
     /**
+     * Error information regarding character get response.
+     *
+     * This is only present if fetching the data failed.
+     *
+     * @var ErrorResponse
+     * @JMS\Type("Illarion\AccountSystemBundle\Model\ErrorResponse")
+     * @JMS\SerializedName("error")
+     * @JMS\Groups({"error"})
+     * @JMS\Since("1.0")
+     */
+    private $error;
+
+    /**
      * @return int
      */
     public function getId()
@@ -275,5 +288,21 @@ class CharacterGetResponse
     public function addItem(CharacterItemResponse $item)
     {
         $this->items[] = $item;
+    }
+
+    /**
+     * @return ErrorResponse
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param ErrorResponse $error
+     */
+    public function setError($error)
+    {
+        $this->error = $error;
     }
 }

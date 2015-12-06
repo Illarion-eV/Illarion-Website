@@ -12,6 +12,7 @@ class CharacterCreationResponse
      * @var array
      * @JMS\Type("array<Illarion\AccountSystemBundle\Model\RaceResponse>")
      * @JMS\SerializedName("races")
+     * @JMS\Groups({"success"})
      * @JMS\Since("1.0")
      */
     private $races;
@@ -22,9 +23,23 @@ class CharacterCreationResponse
      * @var array
      * @JMS\Type("array<Illarion\AccountSystemBundle\Model\StartPackResponse>")
      * @JMS\SerializedName("startPacks")
+     * @JMS\Groups({"success"})
      * @JMS\Since("1.0")
      */
     private $startPacks;
+
+    /**
+     * Error information regarding character creation response.
+     *
+     * This is only present if fetching the data failed.
+     *
+     * @var ErrorResponse
+     * @JMS\Type("Illarion\AccountSystemBundle\Model\ErrorResponse")
+     * @JMS\SerializedName("error")
+     * @JMS\Groups({"error"})
+     * @JMS\Since("1.0")
+     */
+    private $error;
 
     /**
      * @return array
@@ -74,5 +89,21 @@ class CharacterCreationResponse
     public function addStartPack(StartPackResponse $startPack)
     {
         $this->startPacks[] = $startPack;
+    }
+
+    /**
+     * @return ErrorResponse
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param ErrorResponse $error
+     */
+    public function setError($error)
+    {
+        $this->error = $error;
     }
 }
