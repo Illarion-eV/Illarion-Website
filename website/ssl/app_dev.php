@@ -1,1 +1,1 @@
-<?php include __DIR__.'/app_dev.php';
+<?php include __DIR__.'/../app_dev.php';
