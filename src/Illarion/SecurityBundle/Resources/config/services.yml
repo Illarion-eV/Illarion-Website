@@ -1,0 +1,7 @@
+services:
+    illarion.security.password.encoder:
+        class: Illarion\SecurityBundle\Security\Password\IllarionPasswordEncoder
+
+    illarion.security.user.provider:
+        class: Illarion\SecurityBundle\Security\User\UserProvider
+        arguments: ["@doctrine"]

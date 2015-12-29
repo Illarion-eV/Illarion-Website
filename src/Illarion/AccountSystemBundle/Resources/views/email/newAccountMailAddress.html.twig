@@ -1,0 +1,17 @@
+{% trans_default_domain "email" %}
+<p>{% trans %}Hello %name%{% endtrans %},</p>
+<p>
+    {% trans %}this e-mail address was linked to a account at the online roleplaying game Illarion. We will not send you any e-mail until you confirmed that this e-mail address is yours.{% endtrans %}
+</p>
+<p>
+    {% trans %}If you did not register with the game you can safely ignore this e-mail. We will not use it again.{% endtrans %}
+</p>
+<p>{% trans %}Please use the following link to confirm that this is your e-mail address:{% endtrans %}</p>
+<p style="font-size:large;">
+    <a href="{{ activation_route }}">{% trans %}Confirm Address{% endtrans %}</a>
+</p>
+<p>
+    {% trans %}Regards{% endtrans %},<br />
+    {% trans %}The Team of Illarion{% endtrans %}<br />
+    <a href="http://illarion.org">http://illarion.org</a>
+</p>

@@ -1,0 +1,44 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        illarion:
+            id: illarion.security.user.provider
+        #in_memory:
+        #    memory: ~
+
+    encoders:
+        Illarion\SecurityBundle\Security\User\User:
+            id: illarion.security.password.encoder
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            # activate different ways to authenticate
+
+            http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+            provider: illarion
+
+    role_hierarchy:
+        ROLE_ADMIN:      ROLE_GAMEMASTER, ROLE_DEVELOPER
+        ROLE_DEVELOPER:  ROLE_PLAYER, ROLE_TESTSERVER_ACCESS, ROLE_DEVSERVER_ACCESS
+        ROLE_GAMEMASTER: ROLE_PLAYER
+
+    access_control:
+        # Authenticated access is required for the account system
+        - { path: ^/account,                 roles: ROLE_PLAYER }
+        - { path: ^/account/account,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [POST] } # Create Accounts
+        - { path: ^/account/account/check,   roles: IS_AUTHENTICATED_ANONYMOUSLY } # Check account credentials
+        - { path: ^/account/account/confirm, roles: IS_AUTHENTICATED_ANONYMOUSLY } # Confirm e-mail

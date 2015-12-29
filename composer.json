@@ -18,7 +18,73 @@
         "forum": "http://illarion.org/community/forums/index.php",
         "source": "https://github.com/Illarion-eV/Illarion-Website"
     },
+    "autoload": {
+        "psr-4": { "": "src/" },
+        "files": [ "app/AppKernel.php" ]
+    },
     "require": {
-        "slim/slim": "2.6.2"
+        "php": ">=5.3.9",
+        "symfony/config": "~2.7",
+        "symfony/class-loader": "~2.7",
+        "symfony/console": "~2.7",
+        "symfony/dependency-injection": "~2.7",
+        "symfony/event-dispatcher": "~2.7",
+        "symfony/expression-language": "~2.7",
+        "symfony/finder": "~2.7",
+        "symfony/form": "~2.7",
+        "symfony/http-kernel": "~2.7",
+        "symfony/locale": "~2.7",
+        "symfony/routing": "~2.7",
+        "symfony/security-bundle": "~2.7",
+        "symfony/yaml": "~2.7",
+        "symfony/validator": "~2.7",
+        "symfony/assetic-bundle": "~2.7",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "symfony/var-dumper": "~2.7",
+        "symfony/debug-bundle": "~2.7",
+        "symfony/web-profiler-bundle": "~2.7",
+        "doctrine/orm": "~2.5",
+        "doctrine/doctrine-bundle": "~1.6",
+        "sensio/distribution-bundle": "~4.0",
+        "sensio/framework-extra-bundle": "~3.0",
+        "incenteev/composer-parameter-handler": "~2.1",
+        "friendsofsymfony/rest-bundle": "~1.7",
+        "jms/serializer-bundle": "~1.0",
+        "packagist/yuicompressor-bin": "~2.4",
+        "nelmio/api-doc-bundle": "~2.10"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~2.3",
+        "phpunit/phpunit": "~5.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "website",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
     }
 }

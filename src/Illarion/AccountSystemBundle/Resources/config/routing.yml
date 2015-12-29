@@ -1,0 +1,17 @@
+account:
+    type:        rest
+    resource:    @IllarionAccountSystemBundle/Controller/AccountController.php
+    name_prefix: account_
+
+accountCheck:
+    type:        rest
+    resource:    @IllarionAccountSystemBundle/Controller/AccountCheckController.php
+    name_prefix: account_
+
+accountConfirm:
+    type:        annotation
+    resource:    @IllarionAccountSystemBundle/Controller/AccountConfirmController.php
+character:
+    type:        rest
+    resource:    @IllarionAccountSystemBundle/Controller/CharacterController.php
+    name_prefix: account_
