@@ -3,6 +3,7 @@
 namespace Illarion\SecurityBundle\Security\User;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Illarion\DatabaseBundle\Entity\Accounts\Account;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -27,12 +28,17 @@ class UserProvider implements UserProviderInterface
     public function loadUserByUsername($username)
     {
         $account = $this->repository->findOneBy(array('login' => $username));
+        if ($account == null || !($account instanceof Account)) {
+            $ex = new UsernameNotFoundException();
+            $ex->setUsername($username);
+            throw $ex;
+        }
         return new User($account);
     }
 
     public function refreshUser(UserInterface $user)
     {
-        if (!$this->supportsClass($user)) {
+        if (!($user instanceof User)) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', get_class($user)));
         }
 
