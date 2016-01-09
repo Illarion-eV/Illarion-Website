@@ -60,8 +60,8 @@ class AccountCheckController extends FOSRestController
             $result->setError($errorData);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (!$form->isValid())
@@ -74,8 +74,8 @@ class AccountCheckController extends FOSRestController
             $result->setError($errorData);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $data = $form->getData();
@@ -88,7 +88,7 @@ class AccountCheckController extends FOSRestController
             $checkData->setCheckType('name');
             $checkData->setCheckedValue($data['name']);
 
-            if (null === $repository->findOneBy(['accLogin' => $data['name']])) {
+            if (null === $repository->findOneBy(['login' => $data['name']])) {
                 $checkData->setSuccess(true);
                 $checkData->setDescription($translator->trans('The name is good.'));
             } else {
@@ -105,7 +105,7 @@ class AccountCheckController extends FOSRestController
             $checkData->setCheckType('email');
             $checkData->setCheckedValue($data['email']);
 
-            if (null === $repository->findOneBy(['accEmail' => $data['email']])) {
+            if (null === $repository->findOneBy(['eMail' => $data['email']])) {
                 $checkData->setSuccess(true);
                 $checkData->setDescription($translator->trans('This e-mail address is good.'));
             } else {
@@ -115,8 +115,8 @@ class AccountCheckController extends FOSRestController
             }
         }
 
-        return $this->view()->create($result, $resultCode,
-            SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, $resultCode)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**

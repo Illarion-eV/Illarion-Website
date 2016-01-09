@@ -11,11 +11,11 @@ use Doctrine\ORM\Mapping as ORM;
  *     schema="accounts",
  *     name="account",
  *     uniqueConstraints={
- *         @ORM\UniqueConstraint(name="acc_name_idx", columns={"accLogin"}),
- *         @ORM\UniqueConstraint(name="acc_email_idx", columns={"accEmail"})
+ *         @ORM\UniqueConstraint(name="acc_name_idx", columns={"login"}),
+ *         @ORM\UniqueConstraint(name="acc_email_idx", columns={"eMail"})
  *     },
  *     indexes={
- *         @ORM\Index(name="acc_name_password_idx", columns={"accLogin", "accPasswd"})
+ *         @ORM\Index(name="acc_name_password_idx", columns={"login", "password"})
  *     }
  * )
  * @ORM\Entity

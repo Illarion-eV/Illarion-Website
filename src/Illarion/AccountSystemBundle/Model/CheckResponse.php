@@ -21,7 +21,7 @@ class CheckResponse
      *
      * @var string
      * @JMS\Type("string")
-     * @JMS\SerializedName("checkedValue")
+     * @JMS\SerializedName("checkedType")
      * @JMS\Since("1.0")
      */
     private $checkType;

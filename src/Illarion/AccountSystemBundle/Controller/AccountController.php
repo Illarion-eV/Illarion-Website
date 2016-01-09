@@ -197,8 +197,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (!$form->isValid())
@@ -209,8 +209,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $data = $form->getData();
@@ -241,8 +241,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (isset($data['email']))
@@ -255,8 +255,8 @@ class AccountController extends FOSRestController
         $successData->setMessage($translator->trans('Account created.'));
 
         $result->setSuccess($successData);
-        return $this->view()->create($result, 201,
-            SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 201)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**
@@ -297,8 +297,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (!$form->isValid())
@@ -309,8 +309,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $data = $form->getData();
@@ -344,8 +344,8 @@ class AccountController extends FOSRestController
             $errorData->setForm($form);
 
             $result->setError($errorData);
-            return $this->view()->create($result, 400,
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (isset($data['email']))
@@ -358,8 +358,8 @@ class AccountController extends FOSRestController
         $successData->setMessage($translator->trans('Account updated.'));
 
         $result->setSuccess($successData);
-        return $this->view()->create($result, 202,
-            SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 202)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**
@@ -402,8 +402,8 @@ class AccountController extends FOSRestController
         $successData->setMessage($translator->trans('Account deleted.'));
 
         $result->setSuccess($successData);
-        return $this->view()->create($result, 200,
-            SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 200)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**

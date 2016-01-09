@@ -2,7 +2,6 @@
 
 namespace Illarion\AccountSystemBundle\Controller;
 
-use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
@@ -98,8 +97,8 @@ class CharacterController extends FOSRestController
         if ($schema instanceof ErrorResponse)
         {
             $result->setError($schema);
-            return $this->view()->create($result, $schema->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $schema->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
 
@@ -221,7 +220,8 @@ class CharacterController extends FOSRestController
             $result->addStartPack($startPackEntry);
         }
 
-        return $this->view()->create($result, 200, SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 200)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**
@@ -263,16 +263,16 @@ class CharacterController extends FOSRestController
         if ($schema instanceof ErrorResponse)
         {
             $result->setError($schema);
-            return $this->view()->create($result, $schema->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $schema->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $char = $this->getCharacter($schema, $account->getId(), $charId);
         if ($char instanceof ErrorResponse)
         {
             $result->setError($char);
-            return $this->view()->create($result, $char->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $char->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $player = $char->getPlayer();
@@ -327,7 +327,8 @@ class CharacterController extends FOSRestController
             $result->addItem($itemData);
         }
 
-        return $this->view()->create($result, 200, SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 200)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**
@@ -365,8 +366,8 @@ class CharacterController extends FOSRestController
         if ($schema instanceof ErrorResponse)
         {
             $result->setError($schema);
-            return $this->view()->create($result, $schema->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $schema->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $translator = $this->get('translator');
@@ -381,7 +382,8 @@ class CharacterController extends FOSRestController
             $errorResp->setValue($server);
             $result->setError($errorResp);
 
-            return $this->view()->create($result, 401, SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 401)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $form = $this->createForm(new CharacterCreateType());
@@ -394,7 +396,8 @@ class CharacterController extends FOSRestController
             $errorResp->setForm($form);
             $result->setError($errorResp);
 
-            return $this->view()->create($result, 400, SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (!$form->isValid()) {
@@ -404,7 +407,8 @@ class CharacterController extends FOSRestController
             $errorResp->setForm($form);
             $result->setError($errorResp);
 
-            return $this->view()->create($result, 400, SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, 400)
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $data = $form->getData();
@@ -640,8 +644,8 @@ class CharacterController extends FOSRestController
         $successData->setMessage($translator->trans('Character created.'));
 
         $result->setSuccess($successData);
-        return $this->view()->create($result, 201,
-            SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 201)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**
@@ -682,8 +686,8 @@ class CharacterController extends FOSRestController
         if ($schema instanceof ErrorResponse)
         {
             $result->setError($schema);
-            return $this->view()->create($result, $schema->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $schema->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if ($schema === 'TestServer' && $schema == 'DevServer')
@@ -694,8 +698,8 @@ class CharacterController extends FOSRestController
         if ($char instanceof View)
         {
             $result->setError($char);
-            return $this->view()->create($result, $char->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $char->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $translator = $this->get('translator');
@@ -710,8 +714,8 @@ class CharacterController extends FOSRestController
             $errorResp->setForm($form);
             $result->setError($errorResp);
 
-            return $this->view()->create($result, $errorResp->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $errorResp->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         if (!$form->isValid()) {
@@ -721,8 +725,8 @@ class CharacterController extends FOSRestController
             $errorResp->setForm($form);
             $result->setError($errorResp);
 
-            return $this->view()->create($result, $errorResp->getStatus(),
-                SerializationContext::create()->setGroups('error'));
+            return $this->view()->create($result, $errorResp->getStatus())
+                ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
 
         $data = $form->getData();
@@ -755,7 +759,8 @@ class CharacterController extends FOSRestController
         $successResp->setStatus(202);
         $successResp->setMessage($translator->trans('Character updated.'));
         $result->setSuccess($successResp);
-        return $this->view()->create($result, 202, SerializationContext::create()->setGroups('success'));
+        return $this->view()->create($result, 202)
+            ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'success')));
     }
 
     /**

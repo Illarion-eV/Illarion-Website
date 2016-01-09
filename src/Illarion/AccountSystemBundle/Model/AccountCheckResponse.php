@@ -28,7 +28,7 @@ class AccountCheckResponse
      * @JMS\Groups({"success"})
      * @JMS\Since("1.0")
      */
-    private $checks;
+    private $checks = array();
 
     /**
      * @return ErrorResponse
