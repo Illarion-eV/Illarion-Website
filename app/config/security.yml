@@ -38,7 +38,7 @@ security:
 
     access_control:
         # Authenticated access is required for the account system
-        - { path: ^/account,                 roles: ROLE_PLAYER }
-        - { path: ^/account/account,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [POST] } # Create Accounts
-        - { path: ^/account/account/check,   roles: IS_AUTHENTICATED_ANONYMOUSLY } # Check account credentials
         - { path: ^/account/account/confirm, roles: IS_AUTHENTICATED_ANONYMOUSLY } # Confirm e-mail
+        - { path: ^/account/account/check,   roles: IS_AUTHENTICATED_ANONYMOUSLY } # Check account credentials
+        - { path: ^/account/account,         roles: IS_AUTHENTICATED_ANONYMOUSLY, methods: [POST] } # Create Accounts
+        - { path: ^/account,                 roles: ROLE_PLAYER }
