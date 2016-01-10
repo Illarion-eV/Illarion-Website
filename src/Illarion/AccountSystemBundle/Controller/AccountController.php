@@ -42,6 +42,7 @@ class AccountController extends FOSRestController
      * in case there are any. This function requires a logged in user as it relies on the account information of the
      * user that is currently logged into the system.
      *
+     * @param Request $request
      * @return View
      * @RestAnnotations\Get("/account")
      * @RestAnnotations\View()
@@ -56,7 +57,7 @@ class AccountController extends FOSRestController
      *     }
      * )
      */
-    public function getAction()
+    public function getAction(Request $request)
     {
         $usr = $this->get('security.token_storage')->getToken()->getUser();
 
@@ -72,6 +73,7 @@ class AccountController extends FOSRestController
         $data->setLang($account->getLanguage() ? 'de' : 'en');
 
         $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
 
         $data->addChars(self::buildCharList(
             $translator->trans('Game Server'),
@@ -186,6 +188,7 @@ class AccountController extends FOSRestController
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
 
         $result = new AccountCreateResponse();
 
@@ -286,6 +289,7 @@ class AccountController extends FOSRestController
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
 
         $result = new AccountUpdateResponse();
 
@@ -365,6 +369,7 @@ class AccountController extends FOSRestController
     /**
      * Remove the currently logged in account completely.
      *
+     * @param Request $request
      * @return View
      * @RestAnnotations\Delete("/account")
      * @RestAnnotations\View()
@@ -379,12 +384,15 @@ class AccountController extends FOSRestController
      *     }
      * )
      */
-    public function deleteAction()
+    public function deleteAction(Request $request)
     {
         $tokenStorage = $this->get('security.token_storage');
         $secToken = $tokenStorage->getToken();
         $usr = $secToken->getUser();
         $account = $usr->getAccount();
+
+        $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
 
         $em = $this->getDoctrineManager();
         $em->remove($account);

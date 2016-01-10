@@ -47,6 +47,7 @@ class AccountCheckController extends FOSRestController
         $form->handleRequest($request);
 
         $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
 
         $result = new AccountCheckResponse();
 

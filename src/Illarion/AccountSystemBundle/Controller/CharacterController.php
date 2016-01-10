@@ -89,7 +89,10 @@ class CharacterController extends FOSRestController
      */
     public function getCreateAction(Request $request, $server)
     {
-        $german = ($request->getPreferredLanguage(array('de', 'en')) == 'de');
+        $translator = $this->get('translator');
+        $preferredLocale = $request->getPreferredLanguage(array('de', 'en'));
+        $translator->setLocale($preferredLocale);
+        $german = ($preferredLocale == 'de');
 
         $result = new CharacterCreationResponse();
 
@@ -100,7 +103,6 @@ class CharacterController extends FOSRestController
             return $this->view()->create($result, $schema->getStatus())
                 ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
-
 
         $raceRepo = $this->getRepository(self::getRepositoryIdentifier($schema, 'Race'));
 
@@ -228,6 +230,7 @@ class CharacterController extends FOSRestController
      * Get the general information for the character creation. This function will return the required data for all
      * possible races.
      *
+     * @param Request $request
      * @param string $server the server the creation information are requested for
      * @param integer $charId the ID of the character
      * @return View
@@ -253,8 +256,11 @@ class CharacterController extends FOSRestController
      *     }
      * )
      */
-    public function getAction($server, $charId)
+    public function getAction(Request $request, $server, $charId)
     {
+        $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
+
         $account = $this->getLoggedInAccount();
 
         $result = new CharacterGetResponse();
@@ -361,6 +367,9 @@ class CharacterController extends FOSRestController
      */
     public function postAction(Request $request, $server)
     {
+        $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
+
         $result = new CharacterCreateResponse();
         $schema = $this->getSchemaFromServerIdent($server);
         if ($schema instanceof ErrorResponse)
@@ -369,8 +378,6 @@ class CharacterController extends FOSRestController
             return $this->view()->create($result, $schema->getStatus())
                 ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
-
-        $translator = $this->get('translator');
 
         $authManager = $this->get('security.authorization_checker');
         if (($schema === 'TestServer' && !$authManager->isGranted('ROLE_TESTSERVER_ACCESS')) ||
@@ -680,6 +687,9 @@ class CharacterController extends FOSRestController
      */
     public function putAction(Request $request, $server, $charId)
     {
+        $translator = $this->get('translator');
+        $translator->setLocale($request->getPreferredLanguage(array('de', 'en')));
+
         $result = new CharacterUpdateResponse();
 
         $schema = $this->getSchemaFromServerIdent($server);
@@ -701,8 +711,6 @@ class CharacterController extends FOSRestController
             return $this->view()->create($result, $char->getStatus())
                 ->setSerializationContext(SerializationContext::create()->setGroups(array('Default', 'error')));
         }
-
-        $translator = $this->get('translator');
 
         $form = $this->createForm(new CharacterUpdateType());
         $form->handleRequest($request);
