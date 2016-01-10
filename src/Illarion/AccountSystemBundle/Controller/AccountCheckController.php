@@ -113,6 +113,7 @@ class AccountCheckController extends FOSRestController
                 $checkData->setSuccess(false);
                 $checkData->setDescription($translator->trans('This e-mail address is already in use.'));
             }
+            $result->addChecks($checkData);
         }
 
         return $this->view()->create($result, $resultCode)
