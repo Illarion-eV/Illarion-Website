@@ -11,6 +11,16 @@ use JMS\Serializer\Annotation as JMS;
 class AccountGetCharResponse
 {
     /**
+     * The ID of the character.
+     *
+     * @var int
+     * @JMS\Type("integer")
+     * @JMS\SerializedName("id")
+     * @JMS\Since("1.0")
+     */
+    private $id;
+
+    /**
      * The name of the character.
      *
      * @var string
@@ -27,7 +37,7 @@ class AccountGetCharResponse
      * 30: banned
      * 31: temporary banned
      *
-     * @var integer
+     * @var int
      * @JMS\Type("integer")
      * @JMS\SerializedName("status")
      * @JMS\Since("1.0")
@@ -37,7 +47,7 @@ class AccountGetCharResponse
     /**
      * The ID of the race of this character.
      *
-     * @var integer
+     * @var int
      * @JMS\Type("integer")
      * @JMS\SerializedName("raceId")
      * @JMS\Since("1.0")
@@ -50,7 +60,7 @@ class AccountGetCharResponse
      * 0: male
      * 1: female
      *
-     * @var integer
+     * @var int
      * @JMS\Type("integer")
      * @JMS\SerializedName("raceTypeId")
      * @JMS\Since("1.0")
@@ -76,6 +86,22 @@ class AccountGetCharResponse
      * @JMS\Since("1.0")
      */
     private $onlineTime;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return string

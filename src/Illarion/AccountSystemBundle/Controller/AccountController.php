@@ -152,6 +152,7 @@ class AccountController extends FOSRestController
             $lastSaveDate->setTimestamp($char->getLastsavetime());
 
             $response = new AccountGetCharResponse();
+            $response->setId($char->getPlayerId());
             $response->setName($char->getName());
             $response->setStatus($char->getStatus());
             $response->setRaceId($char->getRaceId());
