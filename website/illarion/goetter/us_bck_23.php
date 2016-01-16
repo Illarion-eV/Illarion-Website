@@ -19,7 +19,7 @@
 
 <p>Although many young girls are ridiculed for their early following of Sirani, some go on to become priestesses and bring much comfort and balance to the world. They dedicate themselves to tending all that is good in life. Most abhor war and celebrate peace, and will consider it to be a grave insult to bring a weapon into her temple. Sirani’s followers are often skilled in healing and along with the great hospitality that is offered at her temples, many of the needy find themselves drawn to seek food and shelter. When a follower of Sirani dies, Sirani looks into their heart and then kisses them. If they have led a good life, they will arrive in a blissful paradise. If they wronged, yet hold regrets for their past mistakes, Sirani’s kiss will enlighten them, and they will arrive in paradise forgiven. Those who are evil, however, and hold no regrets, will be cleansed by her kiss and return to the world as an innocent newborn, losing both their memories and their guilt to be given a fresh start to live a better life.</p>
    
-<p>The firnis blossom is a beloved companion of Sirani's followers and play usually an important role in all kinds of masses and ceremonies in her name. Many believe the firnis blossom to be an embodiment of the beauty of the goddess herself.</p>
+<p>The firnis blossom is a beloved companion of Sirani's followers and usually play an important role in all kinds of masses and ceremonies in her name. Many believe the firnis blossom to be an embodiment of the beauty of the goddess herself.</p>
 
 <h2>Siros - Month of Love</h2>
 
