@@ -18,8 +18,8 @@ class RaceSkinColour extends Server\RaceSkinColour
      *
      * @ORM\ManyToOne(targetEntity="Illarion\DatabaseBundle\Entity\DevServer\RaceTypes", inversedBy="skinColours")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="rh_race_id", referencedColumnName="rt_race_id"),
-     *   @ORM\JoinColumn(name="rh_type_id", referencedColumnName="rt_type_id")
+     *   @ORM\JoinColumn(name="rsc_race_id", referencedColumnName="rt_race_id"),
+     *   @ORM\JoinColumn(name="rsc_type_id", referencedColumnName="rt_type_id")
      * })
      */
     private $raceType;

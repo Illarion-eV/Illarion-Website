@@ -18,8 +18,8 @@ class RaceHairColour extends Server\RaceHairColour
      *
      * @ORM\ManyToOne(targetEntity="Illarion\DatabaseBundle\Entity\TestServer\RaceTypes", inversedBy="hairColours")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="rh_race_id", referencedColumnName="rt_race_id"),
-     *   @ORM\JoinColumn(name="rh_type_id", referencedColumnName="rt_type_id")
+     *   @ORM\JoinColumn(name="rhc_race_id", referencedColumnName="rt_race_id"),
+     *   @ORM\JoinColumn(name="rhc_type_id", referencedColumnName="rt_type_id")
      * })
      */
     private $raceType;
