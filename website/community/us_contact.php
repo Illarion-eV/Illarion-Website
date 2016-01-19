@@ -86,12 +86,9 @@ Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
 Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
-    <li><a href="?contact=31">Obsydien</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Cadomyr (EU)</li>
-    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=41">Bloodraven</a> - German speaking GM for Runewick (EU)</li>
-    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Runewick (US)</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM</li>
+    <li><a href="?contact=34">Slightly</a> - English speaking GM</li>
+    <li><a href="?contact=42">Teflon</a> - German speaking GM</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>

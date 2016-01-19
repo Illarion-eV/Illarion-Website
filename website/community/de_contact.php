@@ -94,12 +94,9 @@ Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick.
 Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <ul>
-	 <li><a href="?contact=31">Obsydien</a> - Englischsprachiger GM für Cadomyr (US)</li>
-	 <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM für Cadomyr (EU)</li>
-   <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM für Galmair (EU)</li>
-   <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM für Galmair (EU)</li>
-   <li><a href="?contact=41">Bloodraven</a> - Deutschsprachiger GM für Runewick (EU)</li>
-   <li><a href="?contact=15">Zephyrius</a> - Englischsprachiger GM für Runewick (US)</li>
+   <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM</li>
+   <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM</li>
+   <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
