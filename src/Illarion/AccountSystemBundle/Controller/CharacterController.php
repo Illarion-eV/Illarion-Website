@@ -166,7 +166,7 @@ class CharacterController extends FOSRestController
                         throw new UnexpectedTypeException($hairColour, RaceHairColour::class);
 
                     $type->addHairColour(new ColourResponse(
-                        $hairColour->getRed(), $hairColour->getGreen(), $hairColour->getGreen(), $hairColour->getAlpha()
+                        $hairColour->getRed(), $hairColour->getGreen(), $hairColour->getBlue(), $hairColour->getAlpha()
                     ));
                 }
 
@@ -175,7 +175,7 @@ class CharacterController extends FOSRestController
                         throw new UnexpectedTypeException($skinColour, RaceSkinColour::class);
 
                     $type->addSkinColour(new ColourResponse(
-                        $skinColour->getRed(), $skinColour->getGreen(), $skinColour->getGreen(), $skinColour->getAlpha()
+                        $skinColour->getRed(), $skinColour->getGreen(), $skinColour->getBlue(), $skinColour->getAlpha()
                     ));
                 }
 
