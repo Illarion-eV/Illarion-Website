@@ -7,7 +7,7 @@
 	{
 		if (IllaUser::activate( $_GET['activate'] ))
 		{
-			Messages::add('Account wurde aktiviert', 'info');
+			Messages::add('Account wurde aktiviert.', 'info');
 			Page::addPiwikGoal(2);
 			includeWrapper::includeOnce( Page::getRootPath().'/community/account/de_newchar.php' );
 			exit();
@@ -15,7 +15,7 @@
 		else
 		{
 			Messages::add('Aktivierungsschlüssel ist ungültig.', 'error');
-			Messages::add('Es passiert manchmal das die Anfrage zur Aktivierung vom Browser doppelt gesendet wird, weil die Website nicht schnell genug reagierte. In dem Fall erscheint die Fehlermeldung, aber der Account wird trotzdem aktiviert. Versuch dich in deinen Account einzuloggen.', 'note');
+			Messages::add('Es passiert manchmal, dass die Anfrage zur Aktivierung vom Browser doppelt gesendet wird, weil die Website nicht schnell genug reagierte. In dem Fall erscheint diese Fehlermeldung, aber der Account wird trotzdem aktiviert. Versuch dich in deinen Account einzuloggen.', 'note');
 		}
 	}
 
@@ -38,7 +38,7 @@
 			}
 			else
 			{
-				Messages::add('Registrierung fehlgeschlagen.', 'error');
+				Messages::add('Registrierung fehlgeschlagen. Überprüfe den verwendeten Loginnamen. Sonderzeichen sind nicht erlaubt.', 'error');
 			}
 		}
 	}
@@ -67,7 +67,7 @@ ist, mehr als einen Account zu erstellen.</p>
 optional. Die E-Mail-Adresse muss gültig sein, da zu dieser eine E-Mail geschickt wird, um den
 Account zu aktivieren.</p>
 
-<p>Damit dieses Formular benutzt werden kann, muss der Browser JavaScript unterstützen
+<p>Damit dieses Formular benutzt werden kann, muss der Browser JavaScript unterstützen.
 </p>
 
 <?php if (isTorRequest()): ?>
@@ -76,12 +76,12 @@ TOR-Proxynetzwerk verwendest. Eine Registrierung bei Illarion ist nur dann
 möglich, wenn du diesen Proxy ausschaltest.</p>
 <?php endif; ?>
 
-<h2>Account Informationen</h2>
+<h2>Accountinformationen</h2>
 
 <form action="<?php echo Page::getURL(); ?>/community/account/de_register.php" method="post">
 	<table style="width:100%">
 		<tr>
-			<td style="width:130px;"><a title="" class="tooltip" onmouseover="Tip('Dieser Name muss auf dem Server einzigartig sein, und dient dazu, Dich auf der Homepage (Dein Account) einzuloggen. Er besteht aus mindestens 5 und maximal 32 Zeichen. Groß- und Kleinbuchstaben, sowie Zahlen, Binde- und Unterstriche sind erlaubt.',TITLE,'Login Name',WIDTH,-300);" onmouseout="UnTip();">Login Name:</a></td>
+			<td style="width:130px;"><a title="" class="tooltip" onmouseover="Tip('Dieser Name muss auf dem Server einzigartig sein, und dient dazu, Dich auf der Homepage (Dein Account) einzuloggen. Er besteht aus mindestens 5 und maximal 32 Zeichen. Groß- und Kleinbuchstaben, sowie Zahlen, Binde- und Unterstriche sind erlaubt. Andere Sonderzeichen inklusive Leerzeichen sind nicht erlaubt.',TITLE,'Loginname',WIDTH,-300);" onmouseout="UnTip();">Loginname:</a></td>
 			<td style="width:10px;"></td>
 			<td style="width:162px;"><input type="text" name="username" id="username" value="" /> *</td>
 			<td style="text-indent:15px;" id="check_username"></td>

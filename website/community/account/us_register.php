@@ -15,7 +15,7 @@
 		else
 		{
 			Messages::add('Activation key is invalid.', 'error');
-			Messages::add('At times it happens that the browser sends the activation request twice because the website did not respond fast enough. In this case the account is activated and the error message appears. Please just try to login into your account.', 'note');
+			Messages::add('Sometimes, the browser sends the activation request twice because the website did not respond fast enough. In this case the account is activated and the error message appears. Please just try to login into your account.', 'note');
 		}
 	}
 
@@ -38,7 +38,7 @@
 			}
 			else
 			{
-				Messages::add('Register failed', 'error');
+				Messages::add('Registration failed. Check your used login name. Special characters are not allowed.', 'error');
 			}
 		}
 	}
@@ -80,7 +80,7 @@ register at Illarion.</p>
 <form action="<?php echo Page::getURL(); ?>/community/account/us_register.php" method="post">
 	<table style="width:100%;">
 		<tr>
-			<td style="width:130px;"><a title="" class="tooltip" onmouseover="Tip('This name needs to be unique on the server and it\'s used to login to your account. The name contains at least 5 and maximal 32 characters. Capital and non-capital letters, as well as digits, underlines and hyphens are possible.',TITLE,'Login name',WIDTH,-300);" onmouseout="UnTip();">Login name:</a></td>
+			<td style="width:130px;"><a title="" class="tooltip" onmouseover="Tip('This name needs to be unique on the server and it\'s used to login to your account. The name contains at least 5 and maximal 32 characters. Capital and non-capital letters, as well as digits, underlines and hyphens are possible. Other special characters such as spaces are not allowed.',TITLE,'Login name',WIDTH,-300);" onmouseout="UnTip();">Login name:</a></td>
 			<td style="width:10px;"></td>
 			<td style="width:162px;"><input type="text" name="username" id="username" value="" /> *</td>
 			<td style="text-indent:15px;" id="check_username"></td>
