@@ -53,6 +53,9 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 	<li><a class="hidden" href="#22">Gamona</a></li>
 	<li><a class="hidden" href="#23">GameFee</a></li>
 </ul>
+
+<span style="display: inline-block; line-height: 1.2; font-family: Arial, sans-serif; font-size: 12px; width: 100px; text-align: center;"><a href="http://www.giga.de/downloads/illarion/#utm_source=PS&utm_medium=BL&utm_campaign=Badge"><img src="http://www.giga.de/static/badges/img/3316628.png" width="100" height="100" alt="Illarion bei GIGA" /></a><br />Illarion</span>
+
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
 
