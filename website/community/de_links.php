@@ -369,8 +369,8 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 <div><a id="24"></a></div>
 <h2>Giga</h2>
 <p>
-	<a rel="external" href="http://www.giga.de/downloads/illarion/">Illarion bei Giga.de</a>
+	<a rel="external" href="http://www.giga.de/">Link zur Giga Homepage</a>
 	<br /><br />
-	Die bekannte Plattform Giga.de hat Illarion mit Höchstwertung von 5 Sternen ausgezeichnet. Auch du kannst Illarion auf Giga bewerten!
+	Die bekannte Plattform Giga.de hat <a rel="external" href="http://www.giga.de/downloads/illarion/">lllarion</a> mit der Höchstwertung von 5 Sternen ausgezeichnet. Auch du kannst Illarion auf Giga bewerten!
 </p>
 <?php Page::insert_go_to_top_link(); ?>

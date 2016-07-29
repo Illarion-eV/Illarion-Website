@@ -364,8 +364,8 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="24"></a></div>
 <h2>Giga</h2>
 <p>
-	<a rel="external" href="http://www.giga.de/downloads/illarion/">Illarion on Giga</a>
+	<a rel="external" href="http://www.giga.de/">Link to the Giga homepage</a>
 	<br /><br />
-	The famous website Giga.de rated Illarion with the highest grade - five stars! You can also rate Illarion on Giga.de.
+	The famous website Giga.de rated <a rel="external" href="http://www.giga.de/downloads/illarion/">lllarion</a> with the highest grade - five stars! You can also rate Illarion on Giga.de.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
