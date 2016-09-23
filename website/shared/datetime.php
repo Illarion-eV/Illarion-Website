@@ -75,10 +75,9 @@ class IllaDateTime {
 		if ($timestamp === false) {
 			$timestamp = time();
 		}
-		if (!class_exists('User') || !IllaUser::loggedIn()) {
+		if (!class_exists('IllaUser') || !IllaUser::loggedIn()) {
 			return $timestamp;
 		}
-
 		$server_offset = (int)(date('O', time())) / 100;
 		$new_stamp = floor($timestamp - 3600 * ($server_offset - IllaUser::$time_offset));
 		$dst = (int)date('I', $new_stamp);
@@ -103,10 +102,9 @@ class IllaDateTime {
 		if ($timestamp === false) {
 			return time();
 		}
-		if (!class_exists('User') || !IllaUser::loggedIn()) {
+		if (!class_exists('IllaUser') || !IllaUser::loggedIn()) {
 			return $timestamp;
 		}
-
 		$server_offset = (int)(date('O', time())) / 100;
 		$new_stamp = floor($timestamp + 3600 * ($server_offset - IllaUser::$time_offset));
 		$dst = (int)date('I', $new_stamp);
