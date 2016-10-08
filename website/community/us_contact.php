@@ -130,7 +130,7 @@ E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a><br />
 Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Register court: Amtsgericht Kempten<br /> 
 Register No.: VR 30767 <br /><br />
-Copyright 1997-2015 by Illarion e.V. - A free online role playing game<br />
+The website and its content is licensed under AGPLv3.<br /><br />
 This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
 
