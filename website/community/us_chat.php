@@ -28,7 +28,6 @@ the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 
 <h2>Chat</h2>
 
-<!--<iframe src="http://webchat.quakenet.org/?channels=illarion&amp;uio=OT10cnVlJjExPTI0Ng32" width="700" height="500"></iframe>-->
 <iframe src="http://webchat.quakenet.org/?randomnick=1&channels=illarion&prompt=1&uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
 
 <?php include_footer(); ?>
