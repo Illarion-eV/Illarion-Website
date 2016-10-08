@@ -17,10 +17,8 @@ the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 
 <p>In case you want to use a dedicated IRC client you may connect with the following information</p>
 <dl>
-	<dt>Server:</dt>
-	<dd>irc.quakenet.org</dd>
-	<dt>Channel:</dt>
-	<dd>#illarion</dd>
+	<dt>Server: irc.quakenet.org</dt>
+	<dt>Channel: #illarion</dt>
 </dl>
 
 <p><span style="font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
