@@ -40,7 +40,7 @@ The decisions that you make while playing Illarion will actually impact and
 shape the world around you. Your actions will determine the events that will
 one day fill the pages of Illarion's history books.</p>
 
-<p>Illarion - What role will you play?</p>
+<p>Illarion - What role will you play? <a href="/illarion/us_java_download.php">Download now and start your adventure!</a></p>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
