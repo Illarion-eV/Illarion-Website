@@ -56,8 +56,6 @@ one day fill the pages of Illarion's history books.</p>
 
 <div class="clr"></div>
 
-<?php Page::insert_go_to_top_link(); ?>
-
 <?php
 	$pgSQL =& Database::getPostgreSQL();
 
