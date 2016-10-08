@@ -11,9 +11,8 @@ Page::Init();
 
 
 <p>This page establishes a connection to the Quakenet IRC
-Server network and enters the Illarion Chat room. <br />
-In this chat room the
-<a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> AND
+Server network and enters the Illarion Chat room. In this chat room the
+<a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> and
 the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 
 <p>In case you want to use a dedicated IRC client you may connect with the following information</p>
@@ -24,7 +23,7 @@ the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 	<dd>#illarion</dd>
 </dl>
 
-<p><span style="color:#F00;font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
+<p><span style="font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
 
 <h2>Chat</h2>
 
