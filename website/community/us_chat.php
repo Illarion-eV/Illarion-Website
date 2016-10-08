@@ -9,6 +9,11 @@ Page::Init();
 
 <h1>Illarion IRC Chat</h1>
 
+<h2>Chat</h2>
+
+<iframe src="http://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
+
+<h2>Information</h2>
 
 <p>This page establishes a connection to the Quakenet IRC
 Server network and enters the Illarion Chat room. In this chat room the
@@ -22,9 +27,5 @@ the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 </dl>
 
 <p><span style="font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
-
-<h2>Chat</h2>
-
-<iframe src="http://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
 
 <?php include_footer(); ?>
