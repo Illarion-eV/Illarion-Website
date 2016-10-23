@@ -11,7 +11,7 @@
 
 <h1>Entwicklungsfortschritt</h1>
 
-<p>Die Entwicklung Illarions folgt klar definierten Meilensteinen, welche darauf abzielen, für die existierenden Spielbereiche einen Zustand zu erreichen, der keine zukünftige Überarbeitung mehr erfordert. Somit soll das Spiel anschließend nur noch durch Verbesserungen und zusätzliche Inhalte verbessert werden, wobei keine grundlegenden Probleme oder Fehler mehr auftreten.</p>
+<p>Die Entwicklung Illarions folgt klar definierten Meilensteinen, welche darauf abzielen, für die existierenden Spielbereiche einen Zustand zu erreichen, der keine zukünftige Überarbeitung mehr erfordert. Somit soll das Spiel anschließend nur noch durch Verbesserungen und zusätzliche Inhalte verbessert werden, wobei keine grundlegenden Probleme oder Fehler mehr auftreten. Die Meilensteine werden nicht der Reihenfolge nach abgeschlossen sondern parallel bearbeitet. Die Zahlen entsprechen hierbei der prognostizierten Fertigstellungsreihenfolge.</p>
 
 <p>Wenn du bei der Entwicklung Illarions mithelfen willst, wende dich an einen der <a href="http://illarion.org/community/de_contact.php#4">Entwickler</a> oder schau einfach mal im <a href="http://illarion.org/community/de_chat.php">Chat</a> vorbei. Klicke auf Titel der Meilensteine, um auf die entsprechende Zusammenstellung der Entwicklungspunkte im Mantis-Bugtracker zu gelangen.</p>
 
