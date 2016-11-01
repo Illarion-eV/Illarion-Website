@@ -48,8 +48,6 @@
 				<?php else: ?>
 				<a href="<?php echo Page::getURL(); ?>/community/account/de_newchar.php">Neuen Charakter erstellen</a>
 				<?php endif; ?>
-				<br/>
-				<a href="<?php echo Page::getURL(); ?>/community/account/de_copychar.php">Charakter auf den Testserver kopieren</a>
 			</td>
 		</tr>
 	</tfoot>
