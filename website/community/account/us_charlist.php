@@ -50,8 +50,6 @@
 				<?php else: ?>
 				<a href="<?php echo Page::getURL(); ?>/community/account/us_newchar.php">Create a new character</a>
 				<?php endif; ?>
-				<br/>
-				<a href="<?php echo Page::getURL(); ?>/community/account/us_copychar.php">Copy character to testserver</a>
 			</td>
 		</tr>
 	</tfoot>

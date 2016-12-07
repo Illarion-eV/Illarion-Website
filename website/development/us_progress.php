@@ -11,7 +11,7 @@
 
 <h1>Development Progress</h1>
 
-<p>Illarion's development follows clearly specified milestones. Those milestones stand for a state of the game that does not require any future reworking on existing features. Hence, only improvements and new features will be added without fundamental flaws or bugs. </p>
+<p>Illarion's development follows clearly specified milestones. Those milestones stand for a state of the game that does not require any future reworking on existing features. Hence, only improvements and new features will be added without fundamental flaws or bugs. The milestones are worked on in parallel and not in sequence. The number gives the predicted sequence of completion, though.</p>
 
 <p>If you want to help to develop Illarion, please contact one of the <a href="http://illarion.org/community/us_contact.php#4">developers</a> or join the <a href="http://illarion.org/community/us_chat.php">chat</a>. Click on the title of a milestone to learn more about the individual development items on Mantis Bugtracker.</p>
 

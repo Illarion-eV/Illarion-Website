@@ -9,25 +9,23 @@ Page::Init();
 
 <h1>Illarion IRC Chat</h1>
 
+<h2>Chat</h2>
+
+<iframe src="http://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
+
+<h2>Information</h2>
 
 <p>This page establishes a connection to the Quakenet IRC
-Server network and enters the Illarion Chat room. <br />
-In this chat room the
-<a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> AND
+Server network and enters the Illarion Chat room. In this chat room the
+<a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> and
 the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
 
 <p>In case you want to use a dedicated IRC client you may connect with the following information</p>
 <dl>
-	<dt>Server:</dt>
-	<dd>irc.quakenet.org</dd>
-	<dt>Channel:</dt>
-	<dd>#illarion</dd>
+	<dt>Server: irc.quakenet.org</dt>
+	<dt>Channel: #illarion</dt>
 </dl>
 
-<p><span style="color:#F00;font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
-
-<h2>Chat</h2>
-
-<iframe src="http://webchat.quakenet.org/?channels=illarion&amp;uio=OT10cnVlJjExPTI0Ng32" width="700" height="500"></iframe>
+<p><span style="font-weight:bold;">Important:</span> Javascript must be enabled to use this chat client.</p>
 
 <?php include_footer(); ?>

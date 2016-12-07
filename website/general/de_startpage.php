@@ -39,7 +39,7 @@ der <a href="/illarion/goetter/de_bck_10.php">Götter</a>.
 Deine Entscheidungen und Taten formen und gestalten diese Welt und werden 
 eines Tages die Seiten der Geschichtsbücher füllen.</p>
 
-<p>Illarion - Welche Rolle wirst du spielen?</p>
+<p>Illarion - Welche Rolle wirst du spielen? <a href="/illarion/de_java_download.php">Lade das Spiel herunter und beginne dein Abenteuer!</a></p>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
@@ -54,8 +54,6 @@ eines Tages die Seiten der Geschichtsbücher füllen.</p>
 <?php endforeach; ?>
 
 <div class="clr"></div>
-
-<?php Page::insert_go_to_top_link(); ?>
 
 <?php
 	$pgSQL =& Database::getPostgreSQL();
