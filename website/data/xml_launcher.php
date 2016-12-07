@@ -54,8 +54,8 @@ SQL;
 		<?php foreach($quests as $key=>$quest): ?>
 		<item>
 			<id><?php echo $quest['q_id']; ?></id>
-			<title lang="de"><?php echo htmlspecialchars($quest['q_title_de']); ?></title>
-			<title lang="en"><?php echo htmlspecialchars($quest['q_title_us']); ?></title>
+			<title lang="de"><?php echo htmlspecialchars(utf8_decode($quest['q_title_de'])); ?></title>
+			<title lang="en"><?php echo htmlspecialchars(utf8_decode($quest['q_title_us'])); ?></title>
 			<link><?php echo Page::getURL(); ?>/statistics/quests.php?id=<?php echo $quest['q_id']; ?></link>
             <?php if ($quest['q_starttime'] == NULL): ?>
             <date />

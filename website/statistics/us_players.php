@@ -182,7 +182,7 @@ as soon as possible.</p>
 	<tr>
 		<td class="title">
 			<a style="font-weight:bold;" href="<?php echo Page::getURL(); ?>/statistics/us_quests.php?id=<?php echo $quest['q_id']; ?>">
-				<?php echo ( is_null($quest['q_title_us']) ? $quest['q_title_de'] : $quest['q_title_us'] ); ?>
+				<?php echo ( is_null($quest['q_title_us']) ? utf8_decode($quest['q_title_de']) : utf8_decode($quest['q_title_us']) ); ?>
 			</a>
 		</td>
 		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Official Quest' : 'Player Quest'); ?></td>

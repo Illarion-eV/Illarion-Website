@@ -19,6 +19,12 @@
 		{
 		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
 		}
+		
+		$quest[q_content_de] = utf8_decode($quest[q_content_de]);
+		$quest[q_content_us] = utf8_decode($quest[q_content_us]);
+		$quest[q_title_de] = utf8_decode($quest[q_title_de]);
+		$quest[q_title_us] = utf8_decode($quest[q_title_us]);
+		
 		return $quest;
 	}
 
@@ -51,7 +57,7 @@
 				return false;
 			}
 		}
-
+		
 		$temp = preg_replace( '/([^\s]{50})[^\s]*/', '\1', $temp );
 		$temp = htmlspecialchars( $temp  );
 		$temp = preg_replace( '/\s*(\n\r|\r\n|\n|\r){2}(\n\r|\r\n|\n|\r)+\s*/', '</p><p>', $temp );
