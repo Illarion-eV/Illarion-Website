@@ -19,7 +19,6 @@
 		{
 		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
 		}
-		
 		return $quest;
 	}
 
@@ -52,7 +51,7 @@
 				return false;
 			}
 		}
-		
+
 		$temp = preg_replace( '/([^\s]{50})[^\s]*/', '\1', $temp );
 		$temp = htmlspecialchars( $temp  );
 		$temp = preg_replace( '/\s*(\n\r|\r\n|\n|\r){2}(\n\r|\r\n|\n|\r)+\s*/', '</p><p>', $temp );
