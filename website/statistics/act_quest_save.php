@@ -4,7 +4,7 @@
 		$data = ( isset( $data ) && is_string( $data ) ? trim( (string)$data ) : '' );
 		$data = stripslashes( $data );
 		$data = ( strlen( $data ) > 0 ? $data : null );
-		return utf8_encode($data);
+		return $data;
 	}
 
 	if (IllaUser::loggedIn())

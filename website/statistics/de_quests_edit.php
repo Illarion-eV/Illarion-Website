@@ -17,7 +17,6 @@
 
 	list( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year ) = loadQuestEditData( $id );
 
-	echo "<script type='text/javascript'>alert('$month');</script>";
 	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 1, $year));
 	$current_year  = (int)date('Y');
 

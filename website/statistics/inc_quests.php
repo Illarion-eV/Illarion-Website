@@ -20,11 +20,6 @@
 		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
 		}
 		
-		$quest[q_content_de] = utf8_decode($quest[q_content_de]);
-		$quest[q_content_us] = utf8_decode($quest[q_content_us]);
-		$quest[q_title_de] = utf8_decode($quest[q_title_de]);
-		$quest[q_title_us] = utf8_decode($quest[q_title_us]);
-		
 		return $quest;
 	}
 
