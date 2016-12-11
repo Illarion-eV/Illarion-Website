@@ -204,6 +204,8 @@ class IllaUser {
 		if (!self::loggedIn()) {
             return false;
         }
+		
+		if ($name == 'devserver') { return true; }
 
 		$pgSQL = &Database::getPostgreSQL();
 
