@@ -15,7 +15,7 @@
 
 <p>Wenn du bei der Entwicklung Illarions mithelfen willst, wende dich an einen der <a href="http://illarion.org/community/de_contact.php#4">Entwickler</a> oder schau einfach mal im <a href="http://illarion.org/community/de_chat.php">Chat</a> vorbei. Klicke auf Titel der Arbeitspakete, um auf die entsprechende Zusammenstellung der Entwicklungspunkte im Mantis-Bugtracker zu gelangen.</p>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9659" target="_blank">Arbeitspaket Stabiler Zustand für Reviewer und Werbung</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9659" target="_blank">Stabiler Zustand für Reviewer und Werbung</a></h2>
 
 <p>Dieses Arbeitspaket zielt darauf ab, das Spiel von Fehlern zu befreien und den Eindruck während der ersten Spielstunde und den Weg dorthin zu verbessern. Der gesamte Weg vom Auffinden des Spiels, seiner Installation und dem Start ins Spiel ist enthalten. Inhalte, die sich nicht in der ersten Spielstunde bemerkbar machen, sind nicht Inhalt des Arbeitspakets, seien sie noch so wichtig für das Spiel.</p>
 
@@ -27,7 +27,7 @@
     <li>Aktualisierung der Homepage</li>
 </ul>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9822" target="_blank">Arbeitspaket Neue Gegenstände und verbessertes Handwerk</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9822" target="_blank">Neue Gegenstände und verbessertes Handwerk</a></h2>
 
 <p>Mit diesem Arbeitspaket werden dem Spiel eine sinnvolle Anzahl von Gegenständen hinzugefügt, insbesondere Waffen und Rüstungen. Ihr Nutzen und ihre Herstellung werden in Hinblick auf die Handwerke, deren Verteilung über die Städte, Ressourcen, Verbrauchsmaterialien und Preise gestaltet.</p>
 
@@ -39,7 +39,7 @@
     <li>Verbesserung des Sammelns von Ressourcen</li>
 </ul>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9823" target="_blank">Arbeitspaket Magie</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9823" target="_blank">Magie</a></h2>
 
 <p>Magie ist ein notwendiges Features eines Fantasyspiels. Mit diesem Arbeitspaket werden wir die arkane Magie wieder einführen und ebenso die heilige Magie der Götter. Entsprechende Anpassungen an handwerksähnliche Systeme wie Alchemie werden erfolgen.</p>
 
@@ -51,7 +51,7 @@
     <li>Handwerksähnliche Verzauberungen und Alchemieverbesserungen</li>
 </ul>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9914" target="_blank">Arbeitspaket Überarbeitung des Kampfsystems</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9914" target="_blank">Überarbeitung des Kampfsystems</a></h2>
 
 <p>Das derzeitige Kampfsystem bedarf einer Überarbeitung, um fairer, klarer und verlässlicher zu werden. Dieses Arbeitspaket wird für die Spieler nur wenige sichtbare Veränderungen bringen, jedoch zu einem deutlich verbesserten und flexibleren Kampfsystem führen.</p>
 
@@ -63,7 +63,7 @@
     <li>Der Nutzen der verschiedenen Waffen und Rüstungen wird fairer verteilt</li>
 </ul>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9825" target="_blank">Arbeitspaket Sandkasten und Immersion</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9825" target="_blank">Sandkasten und Immersion</a></h2>
 
 <p>Illarion steht im Wettbewerb mit anderen Spielen. Um sich als Indie-Spiel abzuheben, bedarf es Features, die kein anderes Spiel aufweisen kann. Mit diesem Arbeitspaket wollen wir solche Features einführen, die der Immersion dienen und dem Spieler zusätzliche Freiräume ermöglichen, seinen Charakter auszuspielen.</p>
 
@@ -75,7 +75,7 @@
     <li>Erhöhung der Atmosphäre im Spiel</li>
 </ul>
 
-<h2><a href="http://illarion.org/mantis/view.php?id=9824" target="_blank">Arbeitspaket Inhalte, Quests und Dungeons</a></h2>
+<h2><a href="http://illarion.org/mantis/view.php?id=9824" target="_blank">Inhalte, Quests und Dungeons</a></h2>
 
 <p>Durch das Hinzufügen weiterer Quests und Dungeons soll in diesem Arbeitspaket die Attraktivität des Spiels erhöht werden. Mit ihnen soll der Hintergrund des Spiels ("Lore") dem Spieler nähergebracht werden. Bücher, NPCs, Inschriften und Ereignisse sollen an jedem wichtigen Ort den Hintergrund präsent machen.</p>
 
