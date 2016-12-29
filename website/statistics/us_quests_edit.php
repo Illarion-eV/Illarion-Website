@@ -4,7 +4,7 @@
 
 	IllaUser::requireLogin();
 
-	Page::setTitle( 'Questplaner' );
+	Page::setTitle( 'Quest Planner' );
 	Page::setDescription( 'This page allows you to create, edit and delete quests.' );
 	Page::setKeywords( array( 'Online', 'player', 'Quests' ) );
 
@@ -17,7 +17,7 @@
 
 	list( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year ) = loadQuestEditData( $id );
 
-	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 0, $year));
+	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 1, $year));
 	$current_year  = (int)date('Y');
 ?>
 
@@ -44,7 +44,7 @@
 	</p>
 	<h2>Additional information about the quest</h2>
 	<p>
-		<b>Starttime:</b>
+		<b>Start Time:</b>
 		<select name="time_d" id="time_d"<?php echo ( $tba ? ' disabled="disabled" class="disabled"' : '' ); ?>>
 			<?php for($i=1;$i<=$days_in_month;++$i): ?>
 			<option value="<?php echo $i; ?>"<?php echo ($i == $day ? ' selected="selected"' : ''); ?>><?php echo $i; ?>.</option>
@@ -63,7 +63,7 @@
 			<?php endfor; ?>
 		</select>
 
-		um
+		at
 
 		<select name="time_h" id="time_h"<?php echo ( $tba ? ' disabled="disabled" class="disabled"' : '' ); ?>>
 			<?php for($i=0;$i<=23;++$i): ?>
@@ -80,7 +80,7 @@
 		<br />
 
 		<input type="checkbox" name="tba" id="tba" value="tba" onclick="disableDatepicker()"<?php echo ( $tba ? ' checked="checked"' : '' ); ?> />
-		<label for="tba">Starttime is to be announced</label>
+		<label for="tba">Start Time is to be announced</label>
 	</p>
 	<p>
 		<b>Quest type:</b><br />
@@ -90,7 +90,7 @@
 			<option value='1'<?php echo ( $type==1 ? ' selected="selected"' : '' ); ?>>Official Quest</option>
 		</select>
 		<?php else: ?>
-		<span>Spieler-Quest</span>
+		<span>Player-Quest</span>
 		<input type="hidden" name="type" value="2" />
 		<?php endif; ?>
 	</p>
