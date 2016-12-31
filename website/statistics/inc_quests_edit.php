@@ -111,10 +111,10 @@
 			$pgSQL->setQuery( $query );
 			$quest_data = $pgSQL->loadAssocRow();
 
-			$title_de = utf8_decode($quest_data['q_title_de']);
-			$title_us = utf8_decode($quest_data['q_title_us']);
-			$content_de = utf8_decode($quest_data['q_content_de']);
-			$content_us = utf8_decode($quest_data['q_content_us']);
+			$title_de = $quest_data['q_title_de'];
+			$title_us = $quest_data['q_title_us'];
+			$content_de = $quest_data['q_content_de'];
+			$content_us = $quest_data['q_content_us'];
 
 			$type = $quest_data['q_type'];
 			$status = $quest_data['q_status'];
