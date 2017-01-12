@@ -143,7 +143,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und hilft Alchemisten, magische Tränke zu erzeugen. Das Attribut gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Stabmagie.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -167,7 +167,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie ist für Druiden von entscheidender Bedeutung und wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
