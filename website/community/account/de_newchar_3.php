@@ -127,7 +127,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Ziegel brennen, Ackerbau und Holzfällen.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Holzfällen, Graben, Gerben und Weben, Ackerbau und Landwirtschaft.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -135,7 +135,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Brauen, Töpfern, Edelsteinschleifen, Glasblasen, Rüstschmied, Feinschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -151,7 +151,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf und hilft Alchemisten, magische Tränke zu erzeugen. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf und hilft Alchemisten, magische Tränke zu erzeugen. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie, Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -167,7 +167,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie ist für Druiden von entscheidender Bedeutung und wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie ist für Druiden von entscheidender Bedeutung und wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
