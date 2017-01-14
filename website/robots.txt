@@ -1,5 +1,11 @@
 # robots.txt zu http://illarion.org
 
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
 User-Agent: *
 Disallow: /ssl/
 Disallow: /_hp_admin_files_/
@@ -15,4 +21,3 @@ Disallow: /_hp_admin_files_/
 Disallow: /illarion/gmtool/
 Disallow: /new/
 Allow: /
-
