@@ -20,7 +20,7 @@
 						.PHP_EOL." LEFT JOIN illarionserver.chars AS gm ON gmpager.pager_gm = gm.chr_playerid"
 						.PHP_EOL." WHERE gmpager.pager_status = ".$pgSQL->Quote($filter)
 						.PHP_EOL." ORDER BY illarionserver.gmpager.pager_time DESC"
-						.PHP_EOL." LIMIT 30;";
+						.PHP_EOL." LIMIT 100;";
 //		echo $query;
       	$pgSQL->setQuery( $query );
 		
