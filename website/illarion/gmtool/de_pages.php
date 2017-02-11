@@ -48,6 +48,7 @@
             echo "<h2>";
             echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['oid']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
+            echo $page['pager_text'];
             echo "</td></tr>";
 
             // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
