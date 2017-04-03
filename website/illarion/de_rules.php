@@ -236,9 +236,9 @@ einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 <div><a id="forum"></a></div>
 <h2>Forum und Chat</h2>
 
-<p>Auf dem Forum und dem Illarion-Chat gelten die <a href=https://tools.ietf.org/pdf/rfc1855>Netiquette-Richtlinien</a>. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind zu vermeiden. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
+<p>Auf dem Forum und dem Illarion-Chat gelten die <a href="https://tools.ietf.org/pdf/rfc1855">Netiquette-Richtlinien</a>. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind zu vermeiden. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
 
-<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a hreaf=http://illarion.org/community/de_contact.php?contact=3>Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href=http://illarion.org/community/us_contact.php?contact=4]Illarion>Vorstand des Illarion e.V.</a> zu melden.</p>
+<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="http://illarion.org/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="http://illarion.org/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
