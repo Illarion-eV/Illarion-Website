@@ -47,7 +47,7 @@ the appropriate people.</p>
 
 	<li><a href="?contact=3">Reporting players</a> - To report a player breaking the rules.</li>
 
-	<li><a href="?contact=4">Reporting Gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
+	<li><a href="?contact=4">Reporting Staff Members</a> - If you feel there is an issue relating to a Gamemaster (GM) or developer.</li>
 
 	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need Gamemaster support
 	for a quest in Cadomyr you can ask for it here.</li>
@@ -165,9 +165,9 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          "reconstruct your report with the server logs.",false);
       break;
       case 4: //Reporting GMs
-         define(_CONTACT_NAME,"Reporting Gamemasters",false);
+         define(_CONTACT_NAME,"Reporting Staff Member",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"In the situation that a Gamemaster abused".
+         define(_CONTACT_DETAILS,"In the situation that a Gamemaster or Developer abused".
          " his or her powers to support or punish a player in an improper".
          " way you can report them here. Those reports are handled by an".
          " impartial party.",false);

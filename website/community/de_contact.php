@@ -49,9 +49,9 @@ der Webseite, können hier gestellt werden</li>
 <li><a href="?contact=3">Spieler melden</a> - Spieler, die die Regeln
 von Illarion verletzt haben, können hier gemeldet werden</li>
 
-<li><a href="?contact=4">Gamemaster melden</a> - hier kann man, so es
+<li><a href="?contact=4">Teammitglied melden</a> - hier kann man, so es
 nötig ist, sich über das Verhalten und Vorgehen eines
-Gamemasters beschweren</li>
+Gamemasters oder Entwicklers beschweren</li>
 
 <li><a href="?contact=5">RPG-Anfragen Cadomyr</a> - sollte die Unterstützung
 eines Gamemasters für ein Quest in Cadomyr benötigt werden, kann hier
@@ -173,9 +173,9 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          "können.",false);
       break;
       case 4: //Reporting players
-         define(_CONTACT_NAME,"Gamemaster melden",false);
+         define(_CONTACT_NAME,"Teammitglied melden",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"Sollte ein Gamemaster seine ".
+         define(_CONTACT_DETAILS,"Sollte ein Gamemaster oder Entwickler seine ".
          "Möglichkeiten dazu missbrauchen, Spieler in einem ".
          "unangemessenen Maß zu bestrafen oder zu unterstützen, ".
          "kann das hier gemeldet werden.<br />Die Meldungen werden von ".
