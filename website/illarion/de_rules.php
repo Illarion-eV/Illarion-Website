@@ -13,8 +13,7 @@
 <h1>Spielregeln</h1>
 
 <?php Page::cap('A'); ?>
-<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die im Spiel Illarion
-gelten. Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
+<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die im Spiel Illarion gelten. 
 Sie decken die meisten Situationen in Illarion ab und im
 Zweifelsfalle gibt es die Gamemaster, die sich um Streitfälle kümmern können. 
 Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
@@ -22,6 +21,13 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 <p><b>Wir spielen miteinander, nicht gegeneinander.</b></p>
 
 <p>Wer Illarion nach diesem Grundsatz spielt, kann eigentlich nichts falsch machen.</p>
+
+<p>Wir wollen eine offene und tolerante Community sein.
+Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
+einschließlich rassistischer oder sexistischer Äußerungen, 
+die sich gegen andere Spieler richten, werden nicht toleriert. 
+Dies gilt für alle Plattformen von Illarion: 
+das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
 
 <h2>Inhalt</h2>
 <ul>
@@ -34,6 +40,7 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 <li><a class="hidden" href="#ooc">Out of character (OOC)</a></li>
 <li><a class="hidden" href="#language">Sprache eines Charakters und Emotes</a></li>
 <li><a class="hidden" href="#behavior">Verhalten im Spiel</a></li>
+<li><a class="hidden" href="#forum">Forum und Chat</a></li>
 <li><a class="hidden" href="#bugs">Ausnutzen von Spielschwächen</a></li>
 <li><a class="hidden" href="#copyright">Open Source und das Urheberrecht</a></li>
 </ul>
@@ -213,12 +220,6 @@ Spiel strengstens verboten. Außerdem dürfen durch alle Schilderungen im Spiel
 die Wertvorstellungen und moralischen Grundsätze aller beteiligten Spieler und
 zufälliger Zuhörer nicht verletzt werden.</p>
 
-<p>Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
-einschließlich rassistischer oder sexistischer Äußerungen, 
-die sich gegen andere Spieler richten, werden nicht toleriert. 
-Dies gilt für alle Plattformen von Illarion: 
-das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
-
 <p>Auf Regelverstöße anderer Spieler darf nicht ebenfalls mit einem Regelverstoß
 (z.B. OOC-Nachrichten) reagiert werden. Solche Verfehlungen werden völlig
 unabhängig der Situation ebenfalls bestraft. Des Weiteren ist es nicht
@@ -229,6 +230,15 @@ Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
 <p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
 Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
 einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="forum"></a></div>
+<h2>Forum und Chat</h2>
+
+<p>Auf dem Forum und dem Illarion-Chat gelten die <a href=https://tools.ietf.org/pdf/rfc1855>Netiquette-Richtlinien</a>. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind zu vermeiden. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
+
+<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a hreaf=http://illarion.org/community/de_contact.php?contact=3>Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href=http://illarion.org/community/us_contact.php?contact=4]Illarion>Vorstand des Illarion e.V.</a> zu melden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
