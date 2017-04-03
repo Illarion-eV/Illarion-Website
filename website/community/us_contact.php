@@ -165,7 +165,7 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          "reconstruct your report with the server logs.",false);
       break;
       case 4: //Reporting GMs
-         define(_CONTACT_NAME,"Reporting Staff Member",false);
+         define(_CONTACT_NAME,"Reporting Staff Members",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
          define(_CONTACT_DETAILS,"In the situation that a Gamemaster or Developer abused".
          " his or her powers to support or punish a player in an improper".
