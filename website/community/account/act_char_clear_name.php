@@ -45,6 +45,11 @@ if (!($chardata = loadCharacterData($charid, $server)))
     exit();
 }
 
+if ($chardata['is_gm'] != 't')
+{
+    exit();
+}
+
 $rememberingChars = array();
 if ($_POST['clear'] == 'known_names' || $_POST['clear'] == 'all')
 {

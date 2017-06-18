@@ -61,7 +61,7 @@
 				<td style="width:150px">Name:</td>
 				<td><?php echo $chardata['chr_name']; ?></td>
 			</tr>
-            <?php if ($chardata['is_gm']): ?>
+            <?php if ($chardata['is_gm'] == 't'): ?>
                 <tr>
                     <td style="width:150px">Naming:</td>
                     <td>
