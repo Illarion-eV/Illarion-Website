@@ -1,10 +1,10 @@
 <?php
 	function loadCharacterData( $charid, $server )
 	{
-		$pgSQL =& Database::getPostgreSQL( $server );
+		$pgSQL =& Database::getPostgreSQL();
 
-		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob'
-		.PHP_EOL.' FROM chars AS c'
+		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob, EXISTS(SELECT * FROM gms WHERE gm_charid = c.chr_playerid) AS is_gm'
+		.PHP_EOL.' FROM '.$server.'.chars AS c'
 		.PHP_EOL.' INNER JOIN player AS p ON p.ply_playerid = c.chr_playerid'
 		.PHP_EOL.' WHERE c.chr_playerid = '.$pgSQL->Quote( $charid )
 		.PHP_EOL.' AND c.chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
@@ -17,8 +17,6 @@
 			return false;
 		}
 
-		$db_hp =& Database::getPostgreSQL( 'homepage' );
-
 		if ($server == 'devserver')
 		{
 			$chardata['picture'] = '';
@@ -26,24 +24,24 @@
 		else
 		{
 			$query = 'SELECT picture'
-			.PHP_EOL.' FROM character_details'
-			.PHP_EOL.' WHERE char_id = '.$db_hp->Quote( $charid )
+			.PHP_EOL.' FROM homepage.character_details'
+			.PHP_EOL.' WHERE char_id = '.$pgSQL->Quote( $charid )
 			;
-			$db_hp->setQuery( $query );
-			$char_details = $db_hp->loadAssocRow();
+            $pgSQL->setQuery( $query );
+			$char_details = $pgSQL->loadAssocRow();
 			if (!count($char_details))
 			{
-				$query = 'INSERT INTO character_details ( char_id )'
-				.PHP_EOL.' VALUES ( '.$db_hp->Quote( $charid ).' )'
+				$query = 'INSERT INTO homepage.character_details ( char_id )'
+				.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $charid ).' )'
 				;
-				$db_hp->setQuery( $query );
-				$db_hp->query();
+                $pgSQL->setQuery( $query );
+                $pgSQL->query();
 
 				$query = 'SELECT picture'
-				.PHP_EOL.' FROM character_details'
-				.PHP_EOL.'WHERE char_id = '.$db_hp->Quote( $charid );
-				$db_hp->setQuery( $query );
-				$char_details = $db_hp->loadAssocRow();
+				.PHP_EOL.' FROM homepage.character_details'
+				.PHP_EOL.'WHERE char_id = '.$pgSQL->Quote( $charid );
+                $pgSQL->setQuery( $query );
+				$char_details = $pgSQL->loadAssocRow();
 			}
 			$chardata['picture'] = $char_details['picture'];
 			unset($char_details);

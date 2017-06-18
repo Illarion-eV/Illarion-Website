@@ -57,6 +57,47 @@
 				<td style="width:150px">Name:</td>
 				<td><?php echo $chardata['chr_name']; ?></td>
 			</tr>
+            <?php if ($chardata['is_gm']): ?>
+                <tr>
+                    <td style="width:150px">Naming:</td>
+                    <td>
+                        <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                            <button type="submit"
+                                    style="margin-right:10px;"
+                                    title="Clears the known name assignments to this character. All character who named this character will forget it.">
+                                Clear known names
+                            </button>
+                            <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                            <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                            <input type="hidden" name="action" value="char_clear_name" />
+                            <input type="hidden" name="clear" value="known_names" />
+                        </form>
+                        <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                            <button type="submit"
+                                    style="margin-right:10px;"
+                                    title="Clear all introductions the character has done.">
+                                Clear introduce
+                            </button>
+                            <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                            <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                            <input type="hidden" name="action" value="char_clear_name" />
+                            <input type="hidden" name="clear" value="introduce" />
+                        </form>
+                        <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                            <button type="submit"
+                                    style="margin-right:10px;"
+                                    title="Clear both the known names and the introductions. The character will become fully unknown.">
+                                Clear both
+                            </button>
+                            <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                            <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                            <input type="hidden" name="action" value="char_clear_name" />
+                            <input type="hidden" name="clear" value="all" />
+                        </form>
+                        <div style="clear: both" ></div>
+                    </td>
+                </tr>
+            <?php endif; ?>
 			<tr>
 				<td style="width:150px">Race:</td>
 				<td><?php echo IllarionData::getRaceName($chardata['chr_race']); ?></td>
