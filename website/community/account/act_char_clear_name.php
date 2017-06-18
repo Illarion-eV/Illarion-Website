@@ -23,7 +23,7 @@ if (!is_numeric($_POST['charid']))
 //	$pgSQL =& Database::getPostgreSQL( $server );
 $pgSQL =& Database::getPostgreSQL();
 
-$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
+$charid = ( isset( $_POST['charid'] ) && is_numeric($_POST['charid']) ? (int)$_POST['charid'] : 0 );
 
 if (!$charid)
 {
