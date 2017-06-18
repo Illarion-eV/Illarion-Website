@@ -3,9 +3,9 @@
 	{
 		$pgSQL =& Database::getPostgreSQL();
 
-		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob, EXISTS(SELECT * FROM gms WHERE gm_charid = c.chr_playerid) AS is_gm'
+		$query = 'SELECT c.chr_playerid, c.chr_name, c.chr_status, c.chr_race, c.chr_sex, p.ply_body_height, p.ply_weight, p.ply_agility, p.ply_constitution, p.ply_essence, p.ply_perception, p.ply_intelligence, p.ply_willpower, p.ply_strength, p.ply_dexterity, p.ply_dob, EXISTS(SELECT * FROM '.$server.'.gms WHERE gm_charid = c.chr_playerid) AS is_gm'
 		.PHP_EOL.' FROM '.$server.'.chars AS c'
-		.PHP_EOL.' INNER JOIN player AS p ON p.ply_playerid = c.chr_playerid'
+		.PHP_EOL.' INNER JOIN '.$server.'.player AS p ON p.ply_playerid = c.chr_playerid'
 		.PHP_EOL.' WHERE c.chr_playerid = '.$pgSQL->Quote( $charid )
 		.PHP_EOL.' AND c.chr_accid = '.$pgSQL->Quote( IllaUser::$ID )
 		;
