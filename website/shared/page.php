@@ -657,7 +657,7 @@ class Page {
 	* Add a additional js file to the page
 	*
 	* @access public
-	* @param string $new_js The js file that shall be added
+	* @param string|array $new_js The js file that shall be added
 	*/
 	static public function addJavaScript($new_js) {
 		if (is_array($new_js)) {
