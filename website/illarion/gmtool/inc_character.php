@@ -431,7 +431,7 @@
 	    $char_data = $pgSQL->loadAssocRow();
 
         $query = 'SELECT *'
-	    .PHP_EOL.' FROM accounts.raceattr'
+	    .PHP_EOL.' FROM '.$server.'.raceattr'
 	    .PHP_EOL.' WHERE id IN ( -1, '.$pgSQL->Quote( $char_data['chr_race'] ).' )'
 	    .PHP_EOL.' ORDER BY id DESC'
 	    ;
