@@ -60,12 +60,12 @@ points and selecting a starting package.</p>
 <ul>
   <li>Operating System:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1</li>
+      <li>Windows XP, Vista, 7, 8, 8.1, 10</li>
       <li>Linux</li>
       <li>MacOS X 10.6 or more recent</li>
     </ul>
   </li>
-  <li>Graphics card: 64MB memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>Graphics card: 64 MB memory, driver supporting OpenGL, Shader 2.0 support</li>
   <li>CPU: Dual core processor with 1.4 GHz</li>
   <li>Java 7 update 6</li>
 </ul>
@@ -74,12 +74,12 @@ points and selecting a starting package.</p>
 <ul>
   <li>Operating system:
     <ul>
-      <li>Windows Vista, 7, 8, 8.1</li>
+      <li>Windows Vista, 7, 8, 8.1, 10</li>
       <li>Linux</li>
       <li>MacOS X 10.65 or more recent</li>
     </ul>
   </li>
-  <li>Graphics card: 128MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>Graphics card: 128 MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
   <li>CPU: Dual core processor with 2.0 GHz</li>
   <li>Java 7 newest version(64-bit Version if you have a 64-bit operating system installed)</li>
 </ul>
@@ -93,7 +93,7 @@ website.</p>
 
 <h2>Installation</h2>
 
-<p>During the first launch of the Illarion-Launcher a short installation
+<p>During the first launch of the Illarion Launcher a short installation
 assistent will request the required information. In case you got a old
 installation of Illarion, the old settings will be used.</p>
 

@@ -60,12 +60,12 @@ ausgewählt hast.</p>
 <ul>
   <li>Betriebssystem:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1</li>
+      <li>Windows XP, Vista, 7, 8, 8.1, 10</li>
       <li>Linux</li>
       <li>MacOS X 10.6 oder neuer</li>
     </ul>
   </li>
-  <li>Grafikkarte: 64MB Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
+  <li>Grafikkarte: 64 MB Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
   <li>CPU: Zwei-Kern-Prozessor mit 1,4 GHz</li>
   <li>Java 7 Update 6</li>
 </ul>
@@ -74,12 +74,12 @@ ausgewählt hast.</p>
 <ul>
   <li>Betriebssystem:
     <ul>
-      <li>Windows Vista, 7, 8, 8.1</li>
+      <li>Windows Vista, 7, 8, 8.1, 10</li>
       <li>Linux</li>
       <li>MacOS X 10.65 oder neuer</li>
     </ul>
   </li>
-  <li>Grafikkarte: 128MB dedizierten-Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
+  <li>Grafikkarte: 128 MB dedizierten-Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
   <li>CPU: Zwei-Kern-Prozessor mit 2,0 GHz</li>
   <li>Java 7 neuste Verion (64-bit Version auf 64-bit Betriebssystemen)</li>
 </ul>
