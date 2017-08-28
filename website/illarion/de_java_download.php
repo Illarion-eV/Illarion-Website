@@ -93,7 +93,7 @@ werden.</p>
 
 <h2>Installation</h2>
 
-<p>Bei ersten Start des Illarion-Starters fragt ein kurzer
+<p>Beim ersten Start des Illarion-Starters fragt ein kurzer
 Installationsassistent die noch fehlenden Einstellungen ab. Wenn es schon 
 eine alte Installation von Illarion auf dem Rechner gab, dann werden die bestehenden Einstellungen werden weiterhin
 benutzt.</p>
