@@ -88,7 +88,6 @@ Thus, all requests that affect the game world should be directed to them.</p>
 <ul>
     <li><a href="?contact=45">Silverwing</a> - German speaking GM</li>
     <li><a href="?contact=34">Slightly</a> - English speaking GM</li>
-    <li><a href="?contact=42">Teflon</a> - German speaking GM</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -105,7 +104,6 @@ Contact them especially if you want to join the development team of Illarion.</p
     <li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
 	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
 	<li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
-	<li><a href="?contact=22">Martin</a> - Graphics</li>
 	<li><a href="?contact=40">Evie</a> - Maps</li>
 </ul>
 

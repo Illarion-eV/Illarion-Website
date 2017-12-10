@@ -96,7 +96,6 @@ Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 <ul>
    <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM</li>
    <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM</li>
-   <li><a href="?contact=42">Teflon</a> - Deutschsprachiger GM</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -112,7 +111,6 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 <li><a href="?contact=25">Vilarion</a> - Server, Serveradministration</li>
 <li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
 <li><a href="?contact=11">Estralis Seborian</a> - Spielinhalte</li>
-<li><a href="?contact=22">Martin</a> - Grafik</li>
 <li><a href="?contact=40">Evie</a> - Karte</li>
 </ul>
 
