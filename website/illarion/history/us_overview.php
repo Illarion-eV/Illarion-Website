@@ -14,7 +14,7 @@
 rummage around in the great libraries, to poke your nose deep into big old books? Well, at least
 for me it is!</p>
 
-<p>Let's see. Scholars do devide the history of Illarion into three parts: The history of the
+<p>Let's see. Scholars do divide the history into three parts: The history of the
 Gods, the history of the mortals and the history of Illarion.</p>
 
 <div class="clr"></div>
@@ -33,28 +33,27 @@ Gods, the history of the mortals and the history of Illarion.</p>
 <h2>The History of the mortals</h2>
 
 <ul>
-	<li><a href="us_early_orcmigrations.php#1">The First Mortals</a></li>
-	<li><a href="us_early_orcmigrations.php#2">The Rise of Moshran’s Children</a></li>
-	<li><a href="us_early_orcmigrations.php#3">Fire and the Vengeance of Elves</a></li>
-	<li><a href="us_early_orcmigrations.php#4">The Descent of Dwarven Kind</a></li>
-    
-    <li><a href="us_early_orcmigrations.php#1">The Curse of Narnil</a></li>
-	<li><a href="us_early_orcmigrations.php#2">Norodaj and the Sea Dragons</a></li>
-	<li><a href="us_early_orcmigrations.php#3">The Looting of Firnismill</a></li>
-	<li><a href="us_early_orcmigrations.php#4">Human Wars and the Rise of Refugees</a></li>
-    <li><a href="us_early_orcmigrations.php#2">Lor-Angur, The Seat of Magic</a></li>
-	<li><a href="us_early_orcmigrations.php#3">The Rise and Fall of Kharud</a></li>
-	<li><a href="us_early_orcmigrations.php#4">An Island Lost</a></li>
+	<li><a href="us_mortals_1.php">The First Mortals</a></li>
+	<li><a href="us_mortals_2.php">The Rise of Moshran's Children</a></li>
+	<li><a href="us_mortals_3.php">Fire and the Vengeance of Elves</a></li>
+	<li><a href="us_mortals_4.php">The Descent of Dwarven Kind</a></li>
+    <li><a href="us_mortals_5.php">The Curse of Narnil</a></li>
+	<li><a href="us_mortals_6.php">Norodaj and the Sea Dragons</a></li>
+	<li><a href="us_mortals_7.php">The Looting of Firnismill</a></li>
+	<li><a href="us_mortals_8.php">Human Wars and the Rise of Refugees</a></li>
+    <li><a href="us_mortals_9.php">Lor-Angur, The Seat of Magic</a></li>
+	<li><a href="us_mortals_10.php">The Rise and Fall of Kharud</a></li>
+	<li><a href="us_mortals_11.php">An Island Lost</a></li>
 </ul>
 
 <h2>The History of Illarion</h2>
 
 <ul>
-	<li><a href="us_early_orcmigrations.php#1">A Forgotten Land</a></li>
-	<li><a href="us_early_orcmigrations.php#2">New Beginnings</a></li>
-	<li><a href="us_early_orcmigrations.php#3">Glory, Wisdom and Prosperity</a></li>
-	<li><a href="us_early_orcmigrations.php#4">Foolhardiness, Arrogance and Greed</a></li>
-    <li><a href="us_early_orcmigrations.php#4">An Uneasy Equilibrium</a></li>
+	<li><a href="us_illarion_1.php">A Forgotten Land</a></li>
+	<li><a href="us_illarion_2.php">New Beginnings</a></li>
+	<li><a href="us_illarion_3.php">Glory, Wisdom and Prosperity</a></li>
+	<li><a href="us_illarion_4.php">Foolhardiness, Arrogance and Greed</a></li>
+    <li><a href="us_illarion_5.php">An Uneasy Equilibrium</a></li>
 </ul>
 
 <?php insert_go_to_top_link(); ?>
