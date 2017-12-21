@@ -59,7 +59,7 @@ Besiedlung der alten Regionen.</p>
 
 <p>Hundert Jahre vergingen und Gerüchte wurden laut, dass Moshran seinem Kerker entkommen ist,
 entkommen mit fremder Hilfe. Seine drei Helfer schworen aber, sie hätten nichts damit zu tun.
-Man sagt sich, dass es Nargùn und Cheerga waren, die seine Fesseln sprengten. Ihre Absichten,
+Man sagt sich, dass es Nargùn und Cherga waren, die seine Fesseln sprengten. Ihre Absichten,
 wenn es welche gab, sind immer noch unbekannt.</p>
 
 <p>Seit dieser Zeit befindet sich die Welt in einem trügerischen Frieden, denn der Blutgott
