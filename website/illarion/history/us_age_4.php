@@ -17,7 +17,7 @@
 
 <p>Despite the immense sacrifice made by Moshran to give them freedom, few chose to follow him in this new age. With rejection his mood grew darker and a bitterness maligned his once admired character. Shunned by those who owed him most, Moshran cursed the ingratitude of all the races and he became overcome with thoughts of hatred and vengeance.</p>
 
-<p>Brágon watched as tainted by the evil of Madrook, the darkness began to consume Moshran. Still convinced Moshran could find salvation from his destructive fate, Brágon sought to help him. Together they created the orcs, a testament to Moshran’s sacrifice and  relief to his isolation. Born of Brágon’s fire and infused with the anger of Moshran, however, the orcs were unpredictable in nature and lusted for war. They quickly spread chaos, bringing conflict to each territory they entered. Their actions provoked anger amongst the other Younger Gods, but as some orcs followed the paths of honourable warriors they were protected by Brágon.</p>
+<p>Brágon watched as tainted by the evil of Madrook, the darkness began to consume Moshran. Still convinced Moshran could find salvation from his destructive fate, Brágon sought to help him. Together they created the orcs, a testament to Moshran's sacrifice and  relief to his isolation. Born of Brágon's fire and infused with the anger of Moshran, however, the orcs were unpredictable in nature and lusted for war. They quickly spread chaos, bringing conflict to each territory they entered. Their actions provoked anger amongst the other Younger Gods, but as some orcs followed the paths of honourable warriors they were protected by Brágon.</p>
 
 <p>Thus, the Age of Concord drew to an uneasy close and the <a href="us_age_5.php">Age of Discord</a> began.</p>
 
