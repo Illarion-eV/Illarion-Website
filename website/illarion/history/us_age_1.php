@@ -32,7 +32,7 @@ arising between their kind. They might have been send to preserve the true essen
 existence, to collect powers as battle preparations, as a stronghold, or they just created the
 world for another purpose.</p>
 
-<p>The known history starts with the Age of Dawn.</p>
+<p>The known history starts with the <a href="us_age_2.php">Age of Dawn.</a>.</p>
 
 <?php navBarBottom("us_overview.php", "us_age_2.php"); ?>
 
