@@ -1,25 +1,27 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The Age of Dawn",
+	"Das Zeitalter der Dämmerung",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_age_1.php","de_overview.php","de_age_3.php"); ?>
 
-<h1>The Age of Dawn</h1>
+<h1>Das Zeitalter der Dämmerung</h1>
 
-<?php cap(F); ?>
-<p>leeing a mighty foe, the Elder Gods came to this world, formulating their protection as they moulded the land to their needs. Combining their powers they formed unstructured elements which through their will they weaved together to give structures and matter. Findari formed the vast sky and beneath it Tanora created the ocean. Ushara made soil, rock and the mountains to form the land. Brágon brought light into the world and Eldan made every being aware of itself. They animated the world with an energy we now recognise as the divine power that is mana. Still the world produces this energy, giving life to the land and explaining so many of its wonders.</p>
+<?php cap(A); ?>
+<p>uf der Flucht vor einem mächtigen Feind kamen die alten Götter in diese Welt. Zu ihrem Schutz begannen sie die Welt nach ihren Vorstellungen zu formen. Sie vereinten ihre Kräfte und schufen allein mit ihrem Willen die formlosen Elemente. Sie woben sie zusammen, schufen dadurch Struktur und Materie. Findari schuf den unermesslichen Himmel unter dem Tanora das Meer kreierte. Ushara erschuf das Land aus Erde, Stein und Gebirge. Brágon brachte Licht und Wärme in die Welt und Eldan beseelte alle Wesen, auf dass sie sich ihrer selbst bewusst würden. Sie belebten die Welt mit einer Energie, die wir heute als das göttliche Mana kennen. Noch immer wirkt diese Energie und schafft Leben und erklärt so manches Wunder in der Welt.</p>
+ 
+<p>Als nächstes erschufen die Alten vier sterbliche Rassen: Menschen, Elfen, Zwerge und Halblinge. Die erste große Stadt, Nabranoo, wurde gegründet und zur Residenz der Götter erkoren. Andere Städte folgten, denn die unterschiedlichen Völker vermehrten sich rasch. Hunderte von Jahren vergingen ohne dass ein Zeichen der Gefahr den Horizont verdüsterte, doch die Götter unterbrachen zu keiner Zeit ihrer Vorbereitungen auf die kommenden Kämpfe.</p>
+ 
+<p>Als es so weit war erwählten die Alten elf herausragende Vertreter aus der wachsenden Zahl der Sterblichen, um sie auszubilden und zu unterrichten. Ihnen sollte die Führung der gewaltigen Armeen in einem kommenden Kampf übertragen werden.</p>
 
-<p>Next, the Elder Gods created four races: humans, elves, dwarves and halflings. The first city, Nabranoo, was founded as the seat of the Gods. Other cities followed as their creations prospered and populated the new lands. Centuries passed without hint of the danger to come but the Gods did not neglect their preparations.<p>
-
-<p>In time the Elder Gods would come to select eleven outstanding representatives of the mortal races to train and teach, intent on them leading an immense army into the approaching battle. Charismatic Adron was renowned for his sociability, whilst Cherga was favoured for her dignified solemnity. Wisest amongst the scholars, Elara was chosen for her vast knowledge and fair judgement. Irmorom meanwhile was considered the most gifted craftsman and merchant of the age. The honourable Malachín showed great prowess as a hunter and in battle. Moshran had distinguished himself as a great tactician and strategist, whereas Nargùn thrived on chaos with his good fortune surpassing all others. Oldra was an accomplished healer noted for her compassion and humility. Artful Ronagan had long evaded any authority with his stealth and quick wit. Beautiful Sirani was chosen for her charming allure and last but not least, loyal Zhambra for his comradeship. Growing close to their prodigies, the Elder Gods invested ever more power in them, influencing their mind and altering their very existence to become more like their own. The restrictions of life and death were overcome and in time these chosen ones would become known as the Younger Gods.<p>
-
-<p>Amongst them, Moshran was the most acclaimed and respected of all the Younger Gods. Closest to the ordinary people, he was a hero of the masses. Strict in his principles and proud of his position, he nonetheless found opportunity to help the people and many looked to him with deep reverence.<p>
-
-<p>As the Age of Dawn drew to a close the unnamed enemy found a path to this realm and so began the <a href="de_age_3.php">Age of Struggle</a>.<p>
+<p>Für seine Geselligkeit bekannt war der charismatische Adron während Cherga für ehrwürdige Feierlichkeit stand. Die Weiseste unter den Gebildeten, Elara, wurde aufgrund ihrer enormen Weisheit und ihrem Sinn für Gerechtigkeit ausgewählt. Irmorom seinerseits wurde als begabtester Handwerker und Händler seiner Zeit als würdig erachtet. Der ehrwürdige Malachín war für seine Tapferkeit in der Schlacht und bei der Jagd berühmt. Moshran galt als herausragender Taktiker und Stratege, wohingegen Nargùns Erfolg auf seinem unermesslichen Glück im Angesicht des Chaos basierte. Als ausgebildete Heilerin war Oldra gerühmt für Mitgefühl und Menschlichkeit. Der raffinierte Ronagan vermied mit Geschick und flinkem Verstand jeden Kontakt zur Obrigkeit. Die wunderschöne Sirani wurde ob ihrer anmutigen Reize erwählt und der treue Zhambra auf Grund seiner Kameradschaft. Ihre enge Verbindung zu den Göttern änderte ihre sterbliche Seele in mehr als nur einer Weise. Die alten Götter veränderten deren Existenz und machten sie ihnen gleich. Damit durchbrachen sie die Schranken des Lebens und des Todes und wurden  später als die jüngeren Götter bekannt.</p>
+ 
+<p>Unter den jüngeren Göttern war Moshran der bekannteste und am meisten respektierte. Er stand als wahrer Held der Massen den einfachen Sterblichen am nächsten. Er hatte unerschütterliche Prinzipien und war stolz auf seine Position, doch diente er den Völkern in vielerlei Hinsicht. Viele schauten in tiefstem Respekt zu ihm auf.</p>
+ 
+<p>Das Zeitalter der Dämmerung neigte sich seinem Ende entgegen als der namenlose Feind einen Weg in diese Welt fand. Und so beginnt das <a href="de_age_3.php">Zeitalter des Kampfes</a>.</p>
 
 <?php navBarBottom("de_age_1.php", "de_age_3.php"); ?>
 

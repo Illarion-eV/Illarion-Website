@@ -1,19 +1,19 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"An Uneasy Equilibrium",
-	"Hintergrund, G�tter, Geschichte");
+	"Das ruhelose Gleichgewicht",
+	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_illarion_4.php","de_overview.php",""); ?>
 
-<h1>An Uneasy Equilibrium</h1>
+<h1>Das ruhelose Gleichgewicht</h1>
 
-<?php cap(A); ?>
-<p> precarious power struggle persisted as the three realms continued to vie for dominance. Their rulers remained mindful of their duty as guardians of the powerful gems gifted by the Gods, yet eager to acquire the missing diamond and seal their own pre-eminence.</p>
-    
-<p>The Year 35 after the defeat of Kharud saw a rare act of collaboration between the faction rulers. Hearing of the plight of a distant island across the Great Ocean the faction leaders saw a chance to bolster their fledgling realms. Unwilling to be undone by either of their counterparts, all three rulers made the voyage to Gobaith to offer sanctuary to her inhabitants with promises of glory, wisdom and prosperity for their new citizens. In those last days, refugees were plucked from the sinking island as it crumbled beneath the wrath of the Gods. The influx of new arrivals heralded much change with opportunities to be seized and challenges to be met as the people of Illarion shaped their own destiny in the years to come.</p>
+<?php cap(D); ?>
+<p>er heikle Machtkampf geht weiter. Alle drei Reiche streben nach Dominanz. Ihre Herrscher folgen ihren Pflichten als Hüter der Steine der Macht, die ihnen von den Göttern verliehen wurden. Das hält sie jedoch nicht davon ab, nach dem fehlenden Diamanten zu streben, der ihnen eine Vorrangstellung einräumen würde.</p>
+ 
+<p>Das Jahr 35 sah einen seltenen Akt der Zusammenarbeit der drei Reiche. Als sie von der Notlage einer kleinen Insel im Großen Ozean hörten, sahen alle drei Anführer die Chance ihre jungen Reiche zu stärken. Um nicht ihren Kontrahenten das Feld zu überlassen, reisten alle drei nach Gobaith um die dortigen Einheimischen mit dem Versprechen von Ruhm, Weisheit und Wohlstand zu ködern. Als Gobaith unter dem Zorn der Götter zerbrach und im Meer versank, retteten sie die Leute vor dem sicheren Verderben. Der Zustrom der Neuankömmlinge brachte viele Veränderungen mit sich. Neue Möglichkeiten und Herausforderungen stehen in den kommenden Jahren vor den Einwohnern Illarions.</p>
 
 <?php navBarBottom("de_illarion_4.php", ""); ?>
 

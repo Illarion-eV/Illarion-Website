@@ -1,29 +1,29 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The Rise of Moshran's Children",
+	"Der Aufstieg der Kinder Moshrans",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_mortals_1.php","de_overview.php","de_mortals_3.php"); ?>
 
-<h1>The Rise of Moshran's Children</h1>
+<h1>Der Aufstieg der Kinder Moshrans</h1>
 
-<?php cap(T); ?>
-<p><i>he company of merchants were a merry bunch. As the wagon trundled across the plains there was much joviality with tales of past deals and hearty songs. As light began to fade, we camped for the night overlooking the river. Around the campfire the caravan leader, an old, bearded Gynkese fellow whose weathered skin told a story itself, began a tale of orcs that had once plundered these plains.</i></p>
+<?php cap(D); ?>
+<p><i>ie Kaufleute waren eine fröhliche Gesellschaft. Während die Wagen über die Ebenen rumpelten vertrieben sie sich die Zeit mit Geschichten und deftigen Liedern. In der Dämmerung schlugen wir unser Lager an einem Fluss auf. Der Anführer der Karawane, ein alter, bärtiger Gynkese, dessen wettergegerbtes Gesicht von vielen Dingen berichtete, erzählte eine Geschichte von Orks, die einstmals diese Ebenen plünderten.</i></p>
 
-<p>From their birth orcs had banded together as clans, wandering the plains in search of a homeland. Centuries later, following the Andrilai River, they gathered at Lake Talith, where three rivers converge to form the Vorthain Current. Grubuk Thunderhand, eldest seer of the Bloody Skull Clan, spoke on the shores of the lake. He had dreamt of a falcon that guided him along a black river that flowed into this lake, to a new land for orcs.</p>
+<p>Auf der Suche nach einer Heimat zogen die Orks seit ihrer Erschaffung in Clans durch die Welt. Nach einigen hundert Jahren Suche folgten sie dem Andrilai Fluss um sich am Talith See zu versammeln in den sich drei Flüsse ergießen und den Vorthain Strom begründen. Grubuk Donnerhand, Ältester Seher des Bloody-Skull-Clans, rief alle Clans am Ufer des Sees zusammen, und erklärt, ein Falke habe ihm im Traum den Weg in eine neue Heimat gewiesen. Ein schwarzer Fluss, der in den See münde, würde sie in ihre neue Heimat führen.</p>
 
-<p>Come spring the clans travelled around the lake, crossing Thornwater to camp at the mouth of the Black Current. Three days passed before the river swollen with glacial ice melt cascaded from the mountains laden with black mud. Rejoicing the orc clans followed the Black Current to its source high in the plateaus of Norbuk, meaning 'Strong Land'. Here they settled in rich hunting grounds.</p>
+<p>Im folgenden Frühjahr zogen die Clans um den See, überquerten den Thornwater und schlugen ihre Lager an der Mündung des Black Current auf. Nach drei Tagen schwoll der Fluss durch die Eisschmelze an und brachte schwarzen Schlamm in seinen Fluten von den Bergen mit. Unter großem Jubel folgten die Stämme dem Strom flussaufwärts bis in die Hochebenen von Norbuk, was "Starkes Land" bedeutet. Hier ließen sie sich in reichen Jagdgründen nieder.</p>
 
-<p>Orcs, ignited by Brágon's fire and infused with Moshran's rage, however, lust for blood and war. Ceaseless fighting amongst their own kind means it takes a brave or foolish warrior to pronounce himself warlord over all orcs. Tuchak Bloodfist dared and alas, Tuchak Bloodfist was slain. Once mighty clans splintered and warmongers spread across the lands leaving a trail of terror and destruction.</p>
+<p>Gezeugt aus Bragons Feuer und beseelt durch Moshrans Zorn war ihre Gier nach Blut und Kampf immens. Endlose interne Kämpfe entbrannten als tapfere oder törichte Krieger sich zum Warlord über alle Orks erheben wollten. Tuchak Bloodfist wagte es und wurde erschlagen. Einstmals mächtige Clans zerfielen und Krieg zog über das Land, hinter sich eine Spur von Schrecken und Zerstörung.</p>
 
-<p>Led by Krugg Bloodfist, younger brother of Tuchak, war cries of the Bloodfist Clan echoed across the plains as they robbed and pillaged settlements of the Serinjah. Pressing further into human territories, scouts eventually came upon the city of Albar.</p>
-
-<p>Krugg was astonished by his scout's description of the immense fortifications of Albar and dismayed to learn the Albarian army marched not far behind. His pleas to other orc clans went unheeded and the Bloodfist Clan faced annihilation. In a desperate measure Krugg sacrificed thirty captives, including himself, in a blood ritual. A horde of monsters led by a demon decimated the approaching Albarian legions allowing the rest of the Bloodfist Clan to flee back to the plains.</p>
-
-<p>Stories of demon magic, countless monsters and bloodthirsty orcs spread quickly through the human territories. Salkamaerian paladins rose to join Albar in a march against this new foe that threatened all of mankind. Mercenaries paid with coin from wealthy cities swelled the legions and the Serinjah tribes gathered to revenge their kin. As the last survivors of the Bloodfist Clan scattered the army advanced deep into orcish territory, building vast fortifications along the Draikon River. These outposts would serve to protect against raiding orcs for centuries to come.</p>
+<p>Geführt von Krugg Bloodfist, einem jüngeren Bruder Tuchaks, hallten die Kriegsschreie des Bloodfist-Clan über die Ebene. Der Clan überfiel und plünderte Siedlungen der Serinjah. In den darauffolgenden Jahren drang der Bloodfist-Clan bis in zivilisierte Gebiete vor, Späher der Orks erreichten die Stadt Albar.</p>
+ 
+<p>Erstaunt vom Bericht über eine befestigte Siedlung solcher Größe und mit der Albarischen Armee im Nacken, zog sich Krugg Bloodfist zurück und sandte Boten zu den anderen großen Clans. Diese verweigerten jegliche Unterstützung, und der Bloodfist-Clan wurde nahezu aufgerieben. Um seinen Clan zu retten, opferte Krugg Bloodfist dreißig Gefangene und sich selbst in einem Blutritual. Kurz darauf dezimiert eine große Horde Monster, von einem Dämonen angeführt, die Albarische Armee. Der Rest des Bloodfist-Clans zog sich währenddessen an die Grenzen der orkischen Gebiete zurück.</p>
+ 
+<p>Die Kunde von Dämonenmagie, Monstern und blutrünstigen Orks verbreitete sich schnell in den Städten der Menschen. Salkamärianische Paladine heuerten Söldner an, um die einst verfeindete Stadt Albar zu unterstützen, und das entstandene Heer fand schnell die Unterstützung der Serinjah-Stämme. Der Bloodfist-Clan wurde innerhalb eines halben Jahres aufgerieben und verstreut. Die menschliche Armee drang weit in orkisches Gebiet vor und errichtete eine Reihe befestigter Stellungen entlang des Draikon-Flusses. Über Jahrzehnte hinweg wurden von dort aus Angriffe auf die orkischen Clans geführt.</p>
 
 <?php navBarBottom("de_mortals_1.php", "de_mortals_3.php"); ?>
 

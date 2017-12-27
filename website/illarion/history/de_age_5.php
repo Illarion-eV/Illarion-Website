@@ -1,31 +1,33 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The Age of Discord",
+	"Das Zeitalter der Zwietracht",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_age_4.php","de_overview.php","de_age_6.php"); ?>
 
-<h1>The Age of Discord</h1>
+<h1>Das Zeitalter der Zwietracht</h1>
 
-<?php cap(D); ?>
-<p>espite Brágon's hope, Moshran succumbed to his desire for revenge. Secretly, Moshran created three immortal beings, naming them Dragorog, Bjolmur, and Cherass. Bound to him, he gave these creatures immense, almost god-like powers and taught them much knowledge.</p>
+<?php cap(E); ?>
+<p>ntgegen Brágons Hoffnung gab Moshran nie das Gelöbnis auf, die ihm gegenüber gezeigte Feindseligkeit zurück zu zahlen. In aller Verschwiegenheit erschuf Moshran drei unsterbliche Wesen. Er gab diesen Geschöpfen ungeheure Kräfte und lehrte sie vieles. Er nannte sie Dragorog, Bjolmur und Cherass, hauchte ihnen beinahe gottgleiche Kräfte ein und brachte ihnen viel Wissen bei. Er band sie an sich, um sich für alle Ewigkeit ihrer Loyalität zu vergewissern.</p>
+ 
+<p>Getrieben von dem unerträglichen Verlangen nach mehr Macht, suchte Moshran nach den Überresten der einst so mächtigen Armee von Madrook Na'han. Er fand dämonengleiche Geschöpfe, augenlose Bestien und weitere unaussprechlich schreckliche Kreaturen, versteckt in den tiefsten Höhlen und wurde von ihnen als ihr Führer anerkannt. Sie erkannten in ihm die Macht und die Stimme ihres früheren Herrn. Als die Zahl seiner Kreaturen stieg, ließ Moshran sie auf die Sterblichen los, sogar auf die Orks, seine eigenen Geschöpfe. Damit forderte er den Widerstand der anderen Götter heraus.</p>
+ 
+<p>Zum ersten Mal agierten seine drei Schöpfungen völlig offen, eroberten Land und unterwarfen die Sterblichen, ohne die Gebiete der anderen Götter zu respektieren. Moshran war sogar in der Lage, den Einfluss Tanoras über einige Gewässer in seinen Gebieten zu brechen, bis ihr dies Gewahr wurde und sie die anderen Orte schützte. Zhambra, Irmorom und Malachín versuchten mit Moshran zu sprechen, er aber lachte nur über sie und rief seine drei unheiligen Geschöpfe und deren verdorbenen Armeen, um sie zu bekämpfen. Nach einem langen Kampf gegen vier starke Gegner mussten sich Zhambra, Irmorom und Malachín zurückziehen.</p>
+ 
+<p>Moshrans Macht wurde schnell größer, da seit Urzeiten Macht und Erfolg ihre Anhänger finden. Neben den Orks schworen auch Angehörige anderer Rassen, hauptsächlich Menschen, Moshran die Treue. Moshran schaffte es, Zwietracht zwischen den verschiedenen Rassen zu säen. Sein Ansinnen fiel auf fruchtbaren Boden, Vorurteile und Hass gegenüber anderen Rassen entstanden und begannen, wie eine unaufhaltsame Seuche zu grassieren. Misstrauen beherrschte die Gedanken vieler.</p>
 
-<p>Driven by an unbearable need for power, Moshran sought the remains of the once mighty army of Madrook Na'han. He found the demon-like creatures, eyeless beasts and other unspeakable horrors lurking deep underground. They answered his command, recognising within him the power and voice of their former master. As their numbers multiplied Moshran released them upon the mortals, even against the orcs, drawing protest from the other Gods.</p>
+<p>Während Moshrans Horden im Untergrund Festungen und Außenposten errichteten, von wo aus sie die Länder mit Schrecken überzogen, beratschlagten die anderen Götter was zu tun sei. Sie entschieden sich, einigen auserwählten Sterblichen, Stärke und Macht zu verleihen, die über das normale Maß der Dinge hinausging. So sollten sie im Kampf gegen Untote und anderen Ungetüme bestehen können. Die anderen Rassen begannen nun, sich selbst mit einer verblüffenden Effizienz gegen die Kreaturen Moshrans zu verteidigen. In den langen Kriegen, die seit dem tobten, wurden viele neue starke Runen von den sterblichen Magiern erforscht und geschaffen.</p>
+ 
+<p>Zwischenzeitlich bemerkte Brágon seinen Fehler und kehrte zurück aus der Welt, in die er sich zurückgezogen hatte. Mit sich brachte er einige seiner Geschöpfe, edle und mächtige Drachen. Als er die Situation erkannte und die vom Krieg verheerten Länder sah, bot er den anderen Göttern seine Unterstützung an, um die Ordnung wiederherzustellen. Feuer brach aus als Drachen oberhalb der am Boden kämpfenden Armeen der Sterblichen und  Horden Moshrans hinwegfegten. Die Horden Moshrans wurden immer weiter zurückgedrängt, bis schließlich Malachin Moshran in einem letzten Kampf gegenüberstand, dessen schiere Macht die umliegenden Länder verwüstete. Als ihr Meister im Begriff war zu verlieren, waren die drei Diener Moshrans gezwungen zu fliehen. Allerdings ging Dragorog nicht ohne die Eier eines Drachen von Bragon zu stehlen.</p>
 
-<p>For the first time Moshran's three protégés entered the fray, seizing land and conquering people, disregarding the realms of the other Gods. Moshran managed to cut off Tanora's power over some of the few bodies of water in his lands, before she recognised the threat and protected all other waters. Zhambra, Irmorom and Malachín tried to talk Moshran from his path to destruction but he laughed at their pleas and called forth his three creatures and their corrupted armies. Drawn into battle against four strong enemies, eventually Zhambra, Irmorom and Malachín were driven to retreat.</p>
-
-<p>Moshran's influence was quickly expanding and as ever might and victory had their followers. Humans in particular began to pledge their loyalty once more to Moshran. Propagating mistrust amongst the races, prejudice and hatred grew to divide the civilisations. While Moshran's hordes were busy building strongholds underground to spread terror on the surface, the other Gods convened to discuss what should be done. A number of mortals chosen by the other Gods were strengthened and trained in battle. Rising up to defend themselves armies of different races battled Moshran's creatures. As ever war brought great advances, not least the discovery of many powerful runes, as each rival sought to gain the upper hand.</p>
-
-<p>Brágon realising his mistake returned to the mortal plane, bringing with him noble and mighty dragons. With war ravaging the lands he offered the support of his dragons in hope of restoring order. Fire erupted as dragons swept overhead, the mortal armies clashing with Moshran's hordes below, pushing them back. In a final battle Malachín duelled Moshran, their raging power shattering the surrounding lands. As their master faced defeat, Moshran's three servants were forced to flee. Dragorog did not leave, however, without stealing the eggs of one of Brágon's dragons.</p>
-
-<p>Even in defeat Moshran remained defiant, convinced of his right to be master of all. Imprisoned by the other Gods, he was chained in a cell deep beneath the surface  Moshran raged as the armour and sword of Madrook Na'han were seized. Tanora took the cursed armour deep into her watery realm, sealing it beneath the ocean. Likewise, Elara was charged with hiding the great sword beyond the reach of any other. Without these powerful artefacts Moshran would be unable to regain the destructive force he once controlled, and perhaps in time that evil would lose influence over him. It was still hoped that someday he would recover and return to his old self.</p>
-
-<p>With the war over, much of the territory taken was regained, but victory had cost many lives. Moshran's three followers retreated back into hiding. The lands were left devastated with only a few surrounding islands habitable for many years to come until the plants and animals returned to the wastelands. The Gods swore an oath to never again raise a hand to one of their own kind or be drawn into battle themselves. Recognising the theft of his dragon's eggs, Brágon left some under the guardianship of Tanora and the Younger Gods before once again he departed.</p>
-
-<p>As the Age of Discord came to an end, a new suffering came with the <a href="de_age_6.php">Age of Isolation</a>.</p>
+<p>Sogar nach seiner Niederlage war Moshran der Überzeugung, dass er berechtigt war, über diese Welt und all ihre Lebewesen zu herrschen. Und so nahmen ihn die anderen Götter gefangen und sperrten ihn in einen Raum tief unter der Oberfläche. Sie hofften, dass er eines Tages zu sich selbst zurückfinden würde. Doch bevor sie ihn dort zurückließen, nahmen sie ihm die Rüstung und das Schwert Madrook Na'hans. Jedem war bewusst, dass Moshran ohne diese Artefakte die bösen Mächte, die er einst beherrschte, nicht zurückerlangen konnte, und er so wahrscheinlich eines Tages von dem bösen Einfluss befreit werden würde. Tanora erhielt die verfluchte Rüstung und verbarg sie an einem geheimen Ort in ihrem Unterwasserreich und versprach, dass keiner je wieder Hand an sie legen würde. Genauso tat es Elara mit dem verfluchten Schwert. Noch immer brannte die Hoffnung, dass Moshran sich eines Tages erholen würde und zu seinem alten Ich zurückfände.</p>
+ 
+<p>Mit dem Ende des Kriegs waren die meisten Gebiete zurückerobert worden, doch der Sieg hatte viele Leben gefordert. Die drei Diener Moshrans zogen sich an unbekannte Orte zurück. Die Länder wurden verwüstet zurückgelassen, sodass für viele Jahre nur ein paar Inseln darum herum bewohnbar waren, bis Pflanzen und Tiere wieder in das Ödland zurückkehrten. Die Götter legten einen Eid ab, dass sie nie wieder die Hand gegen einen ihresgleichen heben würden oder sich in einen Kampf untereinander ziehen ließen. Als Bragon den Diebstahl der Dracheneier bemerkte, gab er ein paar in die Obhut von Tanora und den Jüngeren Göttern, bevor er sich erneut zurückzog.</p>
+ 
+Als das Zeitalter der Zwietracht zu einem Ende kam, entwickelte sich mit dem <a href="de_age_6.php">Zeitalter der Isolation</a> ein neues Leiden.</p>
 
 <?php navBarBottom("de_age_4.php", "de_age_6.php"); ?>
 

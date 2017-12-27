@@ -1,25 +1,25 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"Norodaj and the Sea Dragons",
+	"Die Norodaj und die Seedrachen",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_mortals_5.php","de_overview.php","de_mortals_7.php"); ?>
 
-<h1>Norodaj and the Sea Dragons</h1>
+<h1>Die Norodaj und die Seedrachen</h1>
 
-<?php cap(C); ?>
-<p><i>old winds and endless rain muted the joyful voices of my company as we battled against the elements. One had to wonder what delicious spices, valuable draperies or precious jewellery drove the merchantmen of my company so far north but without doubt they knew exactly how to make a profit. As we huddled around the campfire that night in the bitter cold only another tale of these forlorn lands from the Master lifted our spirits.</p></i>
+<?php cap(A); ?>
+<p><i>Am folgenden Tage trieb kalter Wind einen nicht enden wollenden Regen vor sich her. Der Kampf gegen die Widrigkeiten des Wetters ließ uns alles andere vergessen. Man kann nur staunen welch edle Gewürze, wertvolle Stoffe oder kostbare Juwelen die Händler meiner Karawane so weit im Norden suchten. Zweifellos wussten sie genau wo sie einen Gewinn herausschlagen konnten. Am Abend drängten wir uns um unser Lagerfeuer, das uns Wärme spendete und lauschten einer Geschichte über dieses scheinbar verlassene Land.</p>
+ 
+<p>In der eisigen Tundra des Nordens, die sich hinter dem Aramon Gebirge erstreckte trafen die Orks der Waraxe und Howling Wolf Clans auf die Norodaj. Nach den geheimnisvollen Elfen und verschwunden Zwergen schien dieses raue Seefahrervolk, das wie die Orks in Fell und Leder gekleidet Speere und Äxte schleuderte, ihnen ähnlich. Sie kämpften, schrien und starben wie man erwarten konnte. Die Orks zogen die Küste entlang und brandschatzen mit wachsender Zuversicht ein Dorf nach dem Anderen.</p>
+ 
+<p>Gewarnt durch Berichte über die Tod und Zerstörung bringenden Orks sammelten sich einige Norodaj Clans auf einer Inselkette, die eine wunderschöne Bucht vor den Unruhen des offenen Meeres abschirmte. Unbeeindruckt plünderten die Orks die Küste, warfen verbrannten Hausrat und Gefangene in die See. Sie nahmen wohl wahr, dass die Norodaj unverwandt beobachteten. Doch angestachelt von Blut und Zerstörungswut vermochten sie nicht erkennen, dass in den Augen der stoisch zuschauenden Männer, Frauen und Kinder keine Angst sondern Zuversicht lag.</p>
 
-<p>Crossing the mountains to the icy north, the Waraxe and Howling Wolf clans encountered the Norodaj. After unfathomable elves and vanishing dwarves, these rough sea folk dressed in furs and leathers, wielding axes and spears seemed more familiar to the orcen kind. They fought and screamed and died like they should and the orcs moved along the coast plundering and burning villages with growing confidence.</p>
-
-<p>Word spread of their destruction and a number of Norodaj clans assembled further along the coast on a chain of islands that encircled a beautiful bay. Undeterred the orcs plundered the shores, tossing burning wreckage and unfortunate captives into the waters as they goaded the silent Norodaj fishermen watching from the islands. So embroiled by their lust for blood and destruction the orcs failed to notice their lack of terror with man, woman and child looking on stoically, almost expectantly.</p>
-
-<p>It was not by chance the Norodaj had chosen this particular bay for refuge. Little did the orcs know, these tranquil waters and rich fishing grounds were not only home to these few human clans. For many years now the Norodaj humans and lizardmen in these parts had lived in harmony. With their shared reverence for Tanora they had declared the bay to be holy waters.</p>
-
-<p>Beneath the tranquil waters yellow eyes watched as they patiently awaited their orders. Without warning, fearsome lizardmen leapt from the water, roaring cries of “Glory to the Goddess!” as they slew many of the orcs where they stood. The bay was the entrance to a vast underwater temple dedicated to their goddess Zelphia and the temple guards were unforgiving towards the blasphemous orcs that had desecrated the holy waters they defended. Their scales glistening with water and crests raised, the armoured warriors were a formidable sight never before encountered by the orcs. Terrorised, the few surviving orcs fled with horrific tales of roaring sea dragons that reared from the waters.</p>
+<p>Es war kein Zufall, dass die Norodaj gerade diesen Ort als Zuflucht gewählt hatten. Nur sie wussten, welche anderen Wesen in diesen geschützten Wassern mit seinen reichen Fischgründen hausten. Seit Menschengedenken lebten hier Norodaj und Echsenmenschen in Harmonie zusammen. Vereint in ihrem Glauben an Tanora hielten beide die Bucht als heiliges Wasser der Göttin in Ehren.</p>
+ 
+<p>Gelbe Augen verfolgten aufmerksam das Treiben am Ufer und warteten auf das Signal um Losschlagen. Ohne jede Vorwarnung schossen furchtlose Echsenkrieger aus dem Wasser. Ihr Kriegsschei „Ehre der Göttin!“ war das Letzte, was mancher Ork hörte, bevor er auch nur zu einer Waffe greifen konnte und tot zusammenbrach. In der Bucht gab es einen Eingang in einen verlassenen Tempel, der Zelphia geweiht war. Die Tempelkrieger verteidigten die heiligen Wasser gegen die in ihren Augen blasphemischen Orks mit aller Härte. Die Sonne spiegelte sich im Wasser auf den Schuppen und mächtigen Rüstungen der hoch aufgerichtet angreifenden Echsen, ein Anblick, der für die Orks völlig ungewohnt war. Voller Furcht flohen die wenigen überlebenden Orks. Viele ihrer Geschichten berichten heute noch von brüllenden Seedrachen, die aus dem Meer kamen.</p>
 
 <?php navBarBottom("de_mortals_5.php", "de_mortals_7.php"); ?>
 

@@ -19,7 +19,7 @@
 
 <p>Amongst them, Moshran was the most acclaimed and respected of all the Younger Gods. Closest to the ordinary people, he was a hero of the masses. Strict in his principles and proud of his position, he nonetheless found opportunity to help the people and many looked to him with deep reverence.<p>
 
-<p>As the Age of Dawn drew to a close the unnamed enemy found a path to this realm and so began the <a href="us_age_3.php">Age of Struggle</a>.<p>
+<p>As the Age of Dawn drew to a close the unnamed enemy found a path to this realm and so began the <a href="us_age_3.php">Age of Struggle</a>.</p>
 
 <?php navBarBottom("us_age_1.php", "us_age_3.php"); ?>
 

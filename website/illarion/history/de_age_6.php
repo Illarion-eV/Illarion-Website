@@ -1,45 +1,59 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The Age of Isolation",
+	"Das Zeitalter der Isolation",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_age_5.php","de_overview.php","de_age_7.php"); ?>
 
-<h1>The Age of Isolation</h1>
+<h1>Das Zeitalter der Isolation</h1>
 
 <?php cap(F); ?>
-<i><p>ire, the world is on fire!</p>
+<i><p>euer,<br>
+Die Welt steht in Flammen!</p>
 
-<p>It's burning in his heart, and filling him with pain.<br>
-It's giving him the warmth of terror to reign.</p>
+<p>Es brennt in seinem Herzen<br>
+Erfüllt ihn mit Schmerzen.<br>
+Mit Schrecken zu regieren<br>
+Ist was die Flammen ihm bieten.</p>
 
-<p>Breathing the mortal's heat, draining the mortal soul.<br>
-To fill him with their warmth and make his life whole.</p>
+<p>Atmet die sterbliche Hitze<br>
+Bringt sein Leben auf die Spitze.<br>
+Trinkt von der sterblichen Seele<br>
+Füllt mit Wärme seine Kehle.</p>
+ 
+<p>Er trinkt das heiße Blut<br>
+Spürt des Lebens Flut.<br>
+Es strömt durch seine Venen<br>
+Läßt Vernunft wie Beherrschung fehlen.</p>
 
-<p>He drinks the heated blood, essential taste of life.<br>
-It rushes in his veins gives him the madman's drive.</p>
+<p>Schlüpft in lebendiges Fleisch<br> 
+Dringt in jeden Bereich.<br>
+Im Gehirn spielt er mit Gedanken<br>
+Erlaubt ihm stetig davon zu tanken.</p>
 
-<p>Slipping into living flesh, gliding into the brain.<br>
-Playing there with thoughts and will, to keep a steady drain.</p>
+<p>Feuer,<br>
+Die Welt steht wahrlich in Flammen.</p>
 
-<p>Fire, the world for sure is on fire.</p>
+<p>Er geht durch die Flammen<br>
+Lodert mit ihnen zusammen.<br>
+Sie erwarten dunkle, verdorbene Kreation<br>
+Geprägt und geführt durch Aversion.</p>
 
-<p>He's walking through the flames, they greet him in anticipation.<br>
-Expecting him to build his own dark doomed creation.</p>
+<p>Zerstörung wird er verbreiten<br>
+Bei seiner Suche nach seinem alten Schatz<br>
+Die Wunden der Welt werden bleiben<br>
+Unvergessen bis in alle Ewigkeiten.</p>
 
-<p>Destruction he will spread, in seeking his old treasure.<br>
-The pain his arm will bring, will be without measure.</p>
+<p>Aufgezeichnet von Norogan Wainaught</p></i>
+ 
+<p>Obwohl die Götter nie wieder die Hand gegeneinander hoben, hatten ihre Kämpfe enormes Misstrauen ausgelöst und immernoch verwüsteten Kriege die Länder. Die jüngeren Götter versuchten die Konflikte durch kleinere, taktische Kriege und endlose Diskussionen zu lösen, doch Argwohn war zwischen den Sterblichen erwachsen. Obgleich Moshran tief im Inneren der Erde gefangen war, hatten seine niederträchtigen Absichten Erfolg auf der Oberfläche. Nach solch bitteren Jahren des Kriegs bevorzugten es die Rassen unter ihresgleichen zu bleiben. Der größte Teil der alten Städte und der anderen Orte, die früher von Leuten aller Rassen bewohnt wurden, waren zerstört, keine von ihnen existierte noch und keiner versuchte, sie wieder aufzubauen. Die Saat der Missgunst und des Misstrauens zwischen den Völkern gedieh weiterhin. Einige Rassen bekämpften sich und sogar während Zeiten des Friedens bedrohte die immerwährende Präsenz des Krieges die Länder.</p>
 
-<p>Recorded by Norogan Wainaught</i></p>
-
-<p>Although the Gods never again raised a hand against one another, their struggles had nurtured immense distrust and war still ravaged the lands. The Younger Gods sought to solve conflict through smaller, tactical wars and endless discussions but suspicions were rife amongst the mortals. Despite Moshran being imprisoned deep underground, his foul intentions continued to prosper on the surface. After such bitter years of war the races preferred to stay amongst their own kind. Most of the great cities of old and other places once inhabited by all races were destroyed and no attempt was made to rebuild them. Some races fought each other and even during times of peace the ever present scourge of war threatened the lands.</p>
-
-<p>Some hundred years later the chained Moshran escaped from his cell. Although it was clear someone had aided him, his three servants denied any involvement. Rumours spread that Nargùn and Cherga had broken his chains, although their reasoning remains unclear. Protected by his faithful servants, Moshran searches for the precious artefacts he claimed as his own. Still tainted by evil he yearns the power of the sword and armour of Madrook Na'han to exact his revenge.</p>
-
-<p>As the God of Blood and Bones came to walk the lands again the Age of Isolation drew to a close.</p>
+<p>Einige Hundert Jahre später entkam der angekettete Moshran aus seiner Zelle. Obwohl klar war, dass ihm jemand geholf hatte, bestritten seine drei Diener eine Beteiligung daran. Gerüchte verbreiteten sich, dass Nargun und Cherga seine Ketten gelöst haben, allerdings blieben ihre Gründe unbekannt. Beschützt von seinen treuen Dienern suchte Moshran nach den kostbaren Artefakten, die er als sein Eigen ansah. Noch immer verdorben vom Bösen sehnte er sich nach der Macht des Schwerts und der Rüstung von Madrook Na'han um seine Rache zu bekommen.</p>
+ 
+<p>Als der Gott des Bluts und der Knochen erneut durch die Länder wandelte, kam das Zeitalter der Isolation zum Ende.</p>
 
 <?php navBarBottom("de_age_5.php", "de_age_7.php"); ?>
 

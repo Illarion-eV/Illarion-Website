@@ -1,25 +1,25 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The Descent of Dwarvenkind",
-	"Hintergrund, G�tter, Geschichte");
+	"Der Abstieg der Zwerge",
+	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_mortals_3.php","de_overview.php","de_mortals_5.php"); ?>
 
-<h1>The Descent of Dwarvenkind</h1>
+<h1>Der Abstieg der Zwerge</h1>
 
 <?php cap(W); ?>
-<p><i>Whatever hushed trade had occurred with the few elves that emerged from the forest clearly left the merchants delighted and songs were sung with gusto come the morning. The company only quietened again when the terrain became more difficult and all efforts were focussed on fording purling rivers and traversing valleys without loss of wagon or beast. Under the towering Aramon Mountains, the good humour quickly returned around the campfire, helped along by some generous flagons of mead. As the merrymaking settled for the night, a tale of little shiny warriors began.</i></p>
+<p><i>as immer die Elfen tauschten, die im Schatten aus den Wäldern kamen, die Händler waren zufrieden. Lieder wurden gesungen bis die Sonne aufging. Unsere Gesellschaft wurde ruhiger als die Straße rauer wurde. Wilde Furte und zerklüftete Täler forderten all unsere Kraft wenn wir keinen Wagen verlieren wollten. Als die hoch aufragenden Aramon Berge endlich vor uns lagen, kehrte die Freude an unsere Lagerfeuer zurück. Einige Flaschen Met wurden hervorgeholt und die Geschichte über die kleinen glänzenden Krieger ging von Mund zu Mund.</i></p>
 
-<p>In the foothills of the Aramon Mountains scouts from the Waraxe Clan came across a settlement of dwarves. For centuries the dwarves had inhabited the vale, toiling in extensive mines and conveying ore and gems to the surface. Their furnaces always ablaze and workshops never silent, smiths mastered metals never before encountered by the orcs, producing robust tools, powerful weapons and impregnable platemail.</p>
+<p>Späher des Waraxe-Clans trafen am Fuße des Aramon-Gebirges auf eine Siedlung von Zwergen. Die Zwerge, welche in großangelegten Minen jahrhundertelang Erze und Edelsteine zu Tage förderten. Die Öfen wurden niemals kalt und aus den Werkstätten drang Tag und Nacht der Klang der Hämmer. Die Schmiede verfügten über Werkzeuge, Plattenrüstungen und Waffen aus gehärtetem Stahl, wie sie die Orks noch nie zu Gesicht bekommen hatten.</p>
 
-<p>Attempts to loot the dwarven settlement proved disastrous. To the dismay of the orcen warriors their spears and arrows simply bounced off the metal clad dwarven defenders. The Waraxe Clan was quickly forced to retreat and warnings soon spread to the other clans of the fierce 'little shiny warriors' that inhabited the mountains.</p>
+<p>Die Plünderung einer zwergischen Siedlung erwies sich als totaler Fehlschlag. Die verblüfften Krieger des Waraxe-Clans mussten feststellen, dass ihre Speere und Pfeile beinahe wirkungslos vom Gegner abprallten. Der Waraxe-Clan wurde schnell zum Rückzug gezwungen und Warnungen  vor den "Kleinen, glänzenden Kriegern" machten bei anderen Clans die Runde.</p>
+ 
+<p>Alarmiert durch den Kontakt mit den Orks, beschloss der Ältestenrat der Zwerge, die Siedlungen selbst in die Minen zu verlegen. Erstens böte man so eine geringere Angriffsfläche, zweitens hätte man so die Gelegenheit, weitaus tiefere Stollen anzulegen und noch tiefer zu graben. Die ohnehin schon als Lagerhallen genutzten Minenhöhlen wurden als Wohnhöhlen ausgebaut, die Eingänge getarnt.</p>
 
-<p>Contact with the orcs alarmed the dwarves to such an extent the council of elders decided to transfer all settlements underground where they could be better defended. Countless concealed entrances served a warren of tunnels. As they excavated deep into the mountain to expand their mines, exhausted galleries were converted into noisy workshops, grand halls, domestic quarters, kitchens and armouries.</p>
-
-<p>Many years later when orcs returned to the Aramon Mountains they found only abandoned settlements. Suspicious over the disappearance of the dwarves from such a rich valley, scouts dispersed in search of them. Those unlucky enough to stray near one of the entrances to the underground fortress were never seen again. The orcs became convinced evil mountain spirits had devoured the dwarves and their own scouts. For years to come the Aramon Mountains were considered a cursed land by the orcs and they would pass through it as swiftly as possible.</p>
+<p>Viele Jahre später kehrten die orkischen Stämme zurück. Als die Späher, auf dem Weg durch das Gebirge, mehrere völlig verlassene Siedlungen aber keinen einzigen Zwerg vorfanden, wurden die Orks misstrauisch. Sie entsandten Späher in alle Richtungen. Diejenigen unglücklichen Späher, welche wirklich in die Nähe einer Zwergenmine gelangten, kehrten nie zurück. So entstand die Sage, dass böse Geister in den Bergen die Zwerge und auch die Späher gefressen hätten. Auch heute noch wird das Aramon-Gebirge von den Orks so schnell wie möglich überquert Es gilt seither als verfluchtes Land.</p>
 
 <?php navBarBottom("de_mortals_3.php", "de_mortals_5.php"); ?>
 

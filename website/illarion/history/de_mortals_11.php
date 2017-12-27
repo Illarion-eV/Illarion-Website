@@ -1,27 +1,29 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"An Island",
+	"Eine Insel",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("de_mortals_10.php","de_overview.php",""); ?>
 
-<h1>An Island</h1>
+<h1>Eine Insel</h1>
 
-<?php cap(O); ?>
-<p><i>ur whole company boarded the ship the following morning, such was the faith in our Master. As we sat out on deck drawing away from his sombre memories he shared with us a tale of hope found but then lost.</p></i>
+<?php cap(U); ?>
+<p><i>nsere gesamte Truppe ging am folgenden Morgen an Bord. Wir hatten Vertrauen in unseren Anführer. An Deck, fern der traurigen Erinnerungen erzählte er uns eine Geschichte über das Finden und Verlieren.</i></p>
 
-<p>The tiny island of Hope in the Great Ocean, that would later become known as Gobaith, had became a symbol of hope for some refugees fleeing the anarchy that swept across the lands as the old empires collapsed. The land was fertile with vast forests and the mountains were rich with minerals, yet only lizards inhabited the coastal waters. An old lighthouse and haunted temple ruins were all that indicated past settlement of the island but this tiny enclave seemed untouched by the destruction that had swept the mainland.</p>
+<p>Eine winzige Insel im Großen Ozean, die man später Gobaith nennen wird, wurde zum Symbol für die Hoffnung einiger Vertriebener, die vor der landauf und landab wütenden Gesetzlosigkeit, die dem Zusammenbuch der alten Reiche nachfolgte, geflohen waren. Das Land war fruchtbar, die Wälder dicht und in den Bergen fanden sich abbauwürdige Erzvorkommen. Lediglich einige Echsen bewohnten die Küste. Ein verlassener Leuchtturm und Ruinen eines verlassenen Tempels zeugten von längst vergangener Besiedelung. Die Schrecken des Krieges hatten diesen Flecken Land verschont.</p>
+ 
+<p>Die ersten Kolonisten träumten von einem neuen Anfang. Einer Welt, wo jeder gleich wäre. Sie gelobten die Vergangenheit ruhen zu lassen, die Fehden zu begraben, die so viel Leid über die Sterblichen gebracht hatten. Die Siedlung Trolls Bane wurde gegründet, benannt nach dem ersten Zwergenkönig Udan Trollbane. In der ersten Zeit schweißte alle Flüchtlinge ein einfaches Ziel zusammen, Überleben.</p>
+ 
+<p>Doch nicht alle konnten die Vergangenheit hinter sich lassen. Man wollte wieder unter seinesgleichen sein und so entstanden Gilden, Stämme und Kulte in der wachsenden Bevölkerung. Die Rassen begannen sich ein weiteres Mal zu separieren. Die Zwerge taten den ersten Schritt und gruben ihre eigenen Wohnhöhlen in die Tiefen der Kupferberge. Dort entstand die Zwergenfeste Silberbrand. Die Siedlungen Greenbriar, Vanima und Northerot, später umbenannt in Varshikar, folgten bald darauf. Auch einige kleinere unbedeutende Dörfer wurden errichtet. Einige brachten es zu Ruhm oder wurden berüchtigt. Andere waren nur für wenige von Bedeutung, die dort ihren Beschäftigungen nachgingen und fielen später der Vergessenheit anheim.</p>
+ 
+<p>Man sagt, dass die Alten Götter, enttäuscht ob der fortschreitenden Selbstzerstörung ihrer eigenen Geschöpfe, erneut in die Ebene der Sterblichen eintraten. Das Leuchtfeuer der Hoffnung überbrachte eine Warnung der Jüngeren Götter und prophezeite den Untergang. Der Zorn der Alten Götter war so groß, dass ihr Kommen nicht unbemerkt bleiben konnte. Auch wenn Gobaith nur ein winziger, unbedeutender Fleck im Ozean war, die Insel zahlte den höchsten Preis für die selbstzerstörerischen Tendenzen der Sterblichen. Manch einer mag sagen, die Bestrafung war überfällig und es war an der Zeit, dass die Kolonisten die Konsequenzen der Flucht vor Krieg und Verantwortung zu spüren bekamen.</p>
+ 
+<p>In dem Moment, an dem Tanora aus den Fluten stieg, tobte das Meer und Tol Vanima sowie Greenbriar versanken in den Fluten. Die Erde bebte unter dem Zorn Usharas, begrub Silberbrand und zerstörte viele der verbliebenen Gebäude. Als sich die Insulaner in ihrer Verzweiflung vereinigten, brachte Eldan Verwirrung und Chaos. Die Insulaner wurden von Visionen heimgesucht, stolperten Illusionen nach und verloren die Kontrolle über ihre Gedanken. Wie Blei lag die Luft schwer auf dem Land als Findari mit unglaublichen Stürmen über die Insel hereinbrach. Die Ankunft Brágons brachte einen nie dagewesenen Metoritenschauer, der alles unter sich begrub. Die Welt stand in hellen Flammen und die Bewohner suchten ihr Heil in der Flucht. In Illarion vernahm man die Hilferufe über den großen Ozean und während die Insel unter dem Wüten der Götter zu Staub zerfiel, wurden die Überlebenden aus dem Ozean gefischt. Die Versprechen über Ehre, Weisheit und Reichtum gaben den Verzweifelten neuen Mut.</p>
 
-<p>The first colonists of the island held dreams of a new beginning, a place where all would be treated as equals. They pledged to leave their past behind and forget the bitter feuds of the mortal races that had brought about such suffering. The settlement 'Troll's Bane' was established, named after the first dwarven king, Udan Trollbane. In these early days refugees of all races cowered together with a shared goal, simply to survive.</p>
-
-<p>The past is difficult to leave behind though and not all could forget what had been left behind. Desires to be amongst their own kind drove division amongst the fledgling population and guilds, tribes, cults and races began to separate once more. The dwarves took the first steps, digging out their own caves beneath the Copper Mountains, creating the magnificent stronghold of Silverbrand. The settlements of Greenbriar, Vanima, and Northerot, later called Varshikar, soon followed, along with a number of smaller communities. In time some achieved great feats or even established great notoriety. Others simply went about their daily business and would never be remembered by any but those dear to them.</p>
-
-<p>Frustrated at the constant devastation wrought by their own creations, it is said the Elder Gods once more returned to the mortal plane. The Beacon of Hope brought prophecies of doom, a warning from the Younger Gods of what was to come. Such was the wrath of the Elder Gods they would not arrive unnoticed. Although Gobaith was a speck in the ocean and held no great significance, the isolated island paid the ultimate price for the self destructiveness of the mortal races. Some will claim punishment was long overdue and it was time the colonists suffered for fleeing war and responsibility. As Tanora returned to the oceans, the seas swelled and Tol Vanima and Greenbriar sunk beneath the waves. The ground shook with the power of Ushara, burying Silverbrand and damaging buildings across the island. As the islanders desperately congregated in the remaining settlements energy released by Eldan's return disrupted minds, creating havoc as the population was terrorised by visions, illusions and loss of control. The air grew heavy and the arrival of Findari brought immense thunderstorms. The coming of Brágon dealt the final blow as meteors rained down devastating anything in their path. The land ablaze, people fled looking for whatever salvation they could find. Only Illarion heard the plight of this distant island across the Great Ocean and in those last days refugees were plucked from the sinking island as it crumbled beneath the wrath of the Gods. With promises of glory, wisdom and prosperity there was new hope.</p>
-
-<p><i>Illarion was Barlak's symbol of hope. This was his refuge, his chance to lay his memories of the past to rest and spend his last years at peace. For me, Illarion held a different kind of hope. Illarion promised wealth in whatever form it may come and experiences that could only have been imagined in my former life, in short this new land offered me hope of a future.</i></p>
+<p><i>Illarion war Barlaks Symbol der Hoffnung. Dort war seine Zuflucht, seine Chance die Sorgen der Vergangenheit beiseite zu legen und seine letzten Tage in Frieden zu verbringen. Für mich jedoch barg Illarion eine völlig andere Hoffnung. Illarion versprach einen Überfluss egal welcher Art. Was immer ich in meinem früheren Leben erlebte, dieses Land bot mir Hoffnung.</i></p>
 
 <?php navBarBottom("de_mortals_10.php", ""); ?>
 

@@ -1,31 +1,31 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"The First Mortals",
+	"Die ersten Geschlechter",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("","de_overview.php","de_mortals_2.php"); ?>
 
-<h1>The First Mortals</h1>
+<h1>Die ersten Geschlechter</h1>
+
+<?php cap(I); ?>
+<p>Im Schatten Nabranoos spross vor vielen tausend Jahren neues Leben. Menschen, Elfen, Zwerge und Halblinge zogen aus, das Land zu besiedeln. Ihnen folgten Echsenmenschen und Orks. Jede Rasse entwickelte sich unterschiedlich, so wie auch Kinder ihren eigenen Weg gehen müssen.</p>
+ 
+<p>Manchmal hielten Schreiber die offizielle Version der Geschichte auf Pergamenten und in Büchern fest. Denkmäler zeugen von wichtigen Personen und Ereignissen. Doch das meiste wissen wir, weil das Erlebte als Lieder, Gedichte und Geschichten am Lagerfeuer an Kinder und Kindeskinder weitergegeben wurde.</p>
+ 
+<p><i>Manch Wanderers Pfad, ins Dunkel er führt<br>
+Durch die Schatten von Nabranoo.<br>
+Manch steiniger Grat, das Bündel geschnürt<br>
+Durch die Schatten von Nabranoo.<br>
+Verderbnis ist Zeuge von Frevelnder Tat,<br>
+Das Dunkel zu meiden sei wertvoller Rat,<br>
+Manch Wanderers Herz, im Dunkel verführt<br>
+Durch die Schatten von Nabranoo.</i></p>
 
 <?php cap(M); ?>
-<p>any thousands of years ago in the shade of Nabranoo, new life was born. Humans, elves, dwarves and halflings sprung forth to populate the lands, only later to be joined by orcs and lizardmen. Each race took their own path as sons and daughters forged their way in life.</p>
-
-<p>Scribes make official records of events, books may even be written of some deeds, and monuments are built to mark great feats. All too often though history is told through the memories of those that lived it and their children after them, as songs are sung, poems recited, and stories told around the campfire.</p>
-
-<p><i>Many a wanderer's path leads to darkness.<br>
-By the shadows of Nabranoo.<br>
-A stony ridge with a packed bundle.<br>
-By the shadows of Nabranoo.<br>
-Ruin is the witness of iniquitous deeds.<br>
-To avoid the darkness is good council.<br>
-Many a wanderer's heart seduced in the dark.<br>
-By the shadows of Nabranoo.</i></p>
-
-<?php cap(M); ?>
-<p><i>y own journey began when a caravan of Gynkese merchants passed through our little village on the Salkamaerian border. Willing to accept my company for a small fee as cliché demands, I thrust the couple of old maps grabbed from my Master's study into greedy hands. Whether it was curiosity or pure foolishness that drove me to take this journey, I seized the opportunity. For years I had crept into my Master's library, leafing through dusty books and parchments. I could have little idea where my journey might take me but I didn't care. To witness with my own eyes, something of these lands I had read so fervently about, would surpass any words or paintings of these wonders.</i></p>
+<p><i>eine eigene Reise begann, als eines Tages eine Karawane gynkesischer Händler durch unseren kleinen Ort an der salkamerianischen Grenze zog. Sie nahmen mich für einen kleinen Obolus mit und unbedarft wie ich war, vertraute ich einigen alter Karten, die ich von meinem Herren gestohlen hatte. Ich mag heute nicht mehr sagen ob mich Neugier oder schlicht Dummheit bewogen hat, die Reise anzutreten. Jahrelang war meine Welt die, der staubigen Pergamente und alten Bücher meines Herren. Ich hatte keine Ahnung wohin mich meine Reise führen würde und es war mir auch egal. Ich hatte die Chance all die Länder zu sehen, über die ich gelesen hatte denn kein Wort oder Bild kann die wahren Wunder der Welt beschreiben.</i></p>
 
 <?php navBarBottom("de_overview.php", "de_mortals_2.php"); ?>
 

@@ -1,19 +1,19 @@
 <?php
 	include_once ($_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php");
 	create_header("Illarion - Geschichte",
-	"A Forgotten Land",
+	"Ein vergessenes Land",
 	"Hintergrund, Götter, Geschichte");
 	include_header();
 ?>
 
 <?php navBarTop("","de_overview.php","de_illarion_2.php"); ?>
 
-<h1>A Forgotten Land</h1>
+<h1>Ein vergessenes Land/h1>
 
-<?php cap(A); ?>
-<p>lthough appearing on early maps and in some expedition and trade logs found amongst the archives of the old empires, remarkably little is recorded about the early history and settlement of Illarion. Scattered elven ruins along the Glowing River, ancient pyramids in the Kantabi Desert and the abandoned houses of Pauldron all evidence past inhabitation of the lands. Few manuscripts of these communities survive, however, and even less seems to document their mysterious demise.</p>
+<?php cap(S); ?>
+<p>chon in den Archiven der alten Imperien finden sich Karten und Berichte, auf denen von Illarion die Rede ist. Zerfallene Elfenruinen entlang des Leuchtenden Flusses, urzeitliche Pyramiden in der Kantabiwüste und die verlassenen Häuser auf der Schulterplatte künden von den früheren Bewohnern. Nur wenig Schriftliches ist von ihnen überliefert und noch viel weniger hat bisher das Geheimnis ihres Niedergangs preisgegeben.</p>
 
-<p>Occasional references can be found of the vast Insurmountable Limes that stretch across the north east, partitioning the remainder of the peninsula. The construction predates the establishment of the new realms of Illarion and the fall of Kharud. Vague stories are told alluding to a terror that lies beyond the fortifications but to date no known survivors have returned from explorations of the ominously dark forested headland beyond.</p>
+<p>Hin und wieder finden sich Verweise auf den verlassenen unüberwindlichen Grenzwall, der sich im Norden erstreckt und die Halbinsel vom Rest der Welt trennt. Er geht zurück auf die Zeit, in der Kharud fiel und die neuen Reiche Illarions aufstiegen. Die Geschichten lassen vermuten, dass hinter der Befestigung ein unvorstellbarer Schrecken haust, denn bisher ist niemand bekannt, der lebend aus den endlosen dunklen Wäldern hinter der Mauer zurückkehrte.</p>
 
 <?php navBarBottom("de_overview.php", "de_illarion_2.php"); ?>
 
