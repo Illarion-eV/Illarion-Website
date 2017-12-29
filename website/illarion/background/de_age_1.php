@@ -20,7 +20,7 @@ die wir diesem Keim verliehen haben."</p>
 <?php cap(A); ?>
 
 <p>ls ihre letzten Worte verklangen, zerbrach sie ihren Stab als Zeichen der Opferung. Ihr
-lebloser Körper fiehl zu Boden und die Energie, die ihrem Körper inne war, suchte sich ein neues
+lebloser Körper fiel zu Boden und die Energie, die ihrem Körper inne war, suchte sich ein neues
 Behältnis. Das einzige was man bei ihr fand war eine Schriftrolle, welche mit einem Siegel
 verschlossen war.</p>
 
