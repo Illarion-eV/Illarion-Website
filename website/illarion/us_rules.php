@@ -225,7 +225,7 @@ right after resurrection ("res-killing") is not allowed.</p>
 <div><a id="forum"></a></div>
 <h2>Forum and Chat</h2>
 
-<p>On the Forum and the Illarion Chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links shall be omitted. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
+<p>On the Forum and the Illarion Chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links are prohibited. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
 
 <p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="http://illarion.org/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum. Likewise, complaints about staff members shall be reported to the <a href="http://illarion.org/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
 
