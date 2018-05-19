@@ -197,7 +197,7 @@
 				case 2: echo 'You cannot be considered as being really fit. Only an influenza can bring you down, thus you should take good care of your health. But with good care and some rest you will be up on your feet again.'; break;
 				case 3: echo 'Your body is fit and can take some damage without giving up, and you can endure several illnesses without fearing for your life.'; break;
 				case 4: echo 'As far as you remember, you have never been severely ill. With an influenza a hot soup always got you back on your feet without you having to rest for long.'; break;
-				case 5: echo 'As long as you can remember you have never been ill, you body also seems to endure more stress than everyone else\'s.'; break;
+				case 5: echo 'As long as you can remember you have never been ill, your body also seems to endure more stress than everyone else\'s.'; break;
 				case 6: echo 'Your constition is supernatural.'; break;
 				default: echo 'Your constition is unknown.'; break;
 			}
