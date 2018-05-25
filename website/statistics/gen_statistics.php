@@ -35,6 +35,6 @@
 
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_highscores.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_actaccounts.php';
-	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_email.php';
+	//include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_email.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_diagramm.php';
 ?>
