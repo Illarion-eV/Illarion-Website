@@ -362,7 +362,7 @@ class Page {
 		if (self::checkSSL()) {
 			return self::$media_url;
 		} else {
-			return self::ssl_media_url;
+			return self::$ssl_media_url;
 		}
 	}
 
