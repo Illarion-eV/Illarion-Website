@@ -1299,7 +1299,7 @@ class Page {
 
         $relativePath = substr($file, $docRootLen);
         if (strncmp($file, '/ssl', 4)) {
-            return Page::getURL() . $relativePath;
+            return Page::getCurrentURL() . $relativePath;
         }
         return Page::getSecureURL() . substr($relativePath, 4);
     }
