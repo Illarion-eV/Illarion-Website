@@ -37,6 +37,13 @@ class Page {
 	static private $media_url;
 
 	/**
+	* The ssl default url of the static media
+	*
+	* @const string
+	*/
+	static private $ssl_media_url;
+
+	/**
 	* The default non-ssl port of the page
 	*
 	* @const int
@@ -84,6 +91,7 @@ class Page {
 		
 		Page::$ssl_url = 'https://' . $_SERVER['SERVER_NAME'];
 		Page::$ssl_image_url = Page::$ssl_url . '/shared/pics';
+		Page::$ssl_media_url = Page::$ssl_url . '/media';
 		
         Page::$base_path = '/var/www/illarion/website';
         Page::$base_images_path = Page::$base_path . '/shared/pics';
@@ -351,7 +359,11 @@ class Page {
 	* @return string
 	*/
 	static public function getMediaURL() {
-		return self::$media_url;
+		if (self::checkSSL()) {
+			return self::$media_url;
+		} else {
+			return self::ssl_media_url;
+		}
 	}
 
 	/**
