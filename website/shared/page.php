@@ -1100,7 +1100,7 @@ class Page {
 		if (count($_POST) > 0) {
 			return;
 		}
-		$correct_host = str_replace('http://', '', self::getURL());
+		$correct_host = str_replace('https://', '', self::getURL());
 
 		if ($_SERVER["SERVER_NAME"] !== $correct_host) {
 			self::redirect(self::getCurrentURL() . $_SERVER["REQUEST_URI"]);
