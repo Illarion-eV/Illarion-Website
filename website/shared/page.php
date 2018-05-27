@@ -85,7 +85,7 @@ class Page {
 	static private $base_ssl_path;
 
     static function initPaths() {
-		Page::$url = 'http://' . $_SERVER['SERVER_NAME'];
+		Page::$url = 'https://' . $_SERVER['SERVER_NAME'];
 		Page::$image_url = Page::$url . '/shared/pics';
 		Page::$media_url = Page::$url . '/media';
 		
