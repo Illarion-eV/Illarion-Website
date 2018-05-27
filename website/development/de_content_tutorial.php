@@ -33,8 +33,8 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <ul>
 <li>Link zum Repository für Spielinhalte: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>Einen kostenlosen Account auf <a href="https://github.com">github.com</a></li>
-<li>Einen modernen, guten Texteditor wie <a href="http://notepad-plus-plus.org">Notepad++</a></li>
-<li>Einen einfach zu benutzenden Git-Client wie <a href="http://sourcetreeapp.com">SourceTree</a> unter Windows und Mac, oder den Konsolenclient unter Linux</li>
+<li>Einen modernen, guten Texteditor wie <a href="https://notepad-plus-plus.org">Notepad++</a></li>
+<li>Einen einfach zu benutzenden Git-Client wie <a href="https://sourcetreeapp.com">SourceTree</a> unter Windows und Mac, oder den Konsolenclient unter Linux</li>
 </ul>
 	
 <h4>Bemerkungen</h4>
@@ -110,9 +110,9 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Schreibe deine eigenen NPCs mit easyNPC.</li>
 <li>Gestalte Dungeons mit dem Mapeditor.</li>
 <li>Schreibe Quests oder wirke an Kampf- und Magiesystem mit.</li>
-<li>Illarion benutzt Lua 5.2, ein <a href="http://www.lua.org/pil/contents.html">Buch, das Lua 5.0 behandelt</a> ist online verfügbar.</li>
+<li>Illarion benutzt Lua 5.2, ein <a href="https://www.lua.org/pil/contents.html">Buch, das Lua 5.0 behandelt</a> ist online verfügbar.</li>
 <li>Schau dir die <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion-Erweiterung zu Lua</a> an.</li>
 <li>Hol dir deinen eigenen <a href="https://drive.google.com/folderview?id=0B-ZaHxrl0yMkfklqRDhQam11QnRxTk83b1J1NVY2eHY0OHQ0U0tWQUc1enZ3eldKV0Z2SXc">lokalen Illarion-Server</a>, um damit zu experimentieren.</li>
-<li>Lerne mehr über <a href="http://git-scm.com/book">Git</a>, das schnelle verteilte Versionierungssystem.</li>
-<li>Sprich mit unseren Inhaltsentwicklern im <a href="http://illarion.org/community/de_chat.php">IRC-Chat</a> (#illarion im QuakeNet).</li>
+<li>Lerne mehr über <a href="https://git-scm.com/book">Git</a>, das schnelle verteilte Versionierungssystem.</li>
+<li>Sprich mit unseren Inhaltsentwicklern im <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">IRC-Chat</a> (#illarion im QuakeNet).</li>
 </ul>

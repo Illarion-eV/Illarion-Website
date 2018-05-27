@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0+" codebase="http://illarion.org/illarion/download" href="illarion_client.jnlp">
+<jnlp spec="1.0+" codebase="https://illarion.org/illarion/download" href="illarion_client.jnlp">
 	<information>
 		<title>Illarion Client</title>
 		<vendor>Illarion e.V.</vendor>
-		<homepage href="http://illarion.org" />
+		<homepage href="https://illarion.org" />
 		<description>A graphical client for the Illarion online role playing game.</description>
 		<icon href="icon.gif"/>
 		<offline-allowed/>

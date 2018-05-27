@@ -12,89 +12,89 @@
 	$de_inactive = <<<TXT
 Lieber Spieler,
 
-du hast dich vor einer Weile beim Online-Rollenspiel Illarion (http://illarion.org) angemeldet, jedoch schon länger nicht mehr eingeloggt bzw. mit deinem Charakter nicht weiter gespielt.
+du hast dich vor einer Weile beim Online-Rollenspiel Illarion (https://illarion.org) angemeldet, jedoch schon länger nicht mehr eingeloggt bzw. mit deinem Charakter nicht weiter gespielt.
 
 Da wir Illarion ständig weiterentwickeln und daher immer an Verbesserungsvorschlägen und Kritik interessiert sind, würden wir dich bitten, auf diese E-Mail kurz zu antworten und uns die Gründe dafür zu nennen, warum du nicht weiter gespielt hast.
 
 Herzlichen Dank schon im Voraus,
 Das Team von Illarion
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$us_inactive = <<<TXT
 Dear player,
 
-some time ago, you have created an account for the online roleplaying game Illarion (http://illarion.org), but you did not log in recently or did not really start playing the game.
+some time ago, you have created an account for the online roleplaying game Illarion (https://illarion.org), but you did not log in recently or did not really start playing the game.
 
 Since we are permanently developing the game and therefore are looking for suggestions and criticism, we would kindly ask you to shortly answer this e-mail, telling us the reasons why you ceased playing.
 
 Thank you very much in advance,
 The Illarion Staff
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$de_notactivated = <<<TXT
 Lieber Spieler,
 
-vor einigen Tagen hast du dich beim Online-Rollenspiel Illarion (http://illarion.org) angemeldet. Allerdings hast du deinen neuen Account niemals aktiviert.
+vor einigen Tagen hast du dich beim Online-Rollenspiel Illarion (https://illarion.org) angemeldet. Allerdings hast du deinen neuen Account niemals aktiviert.
 
 Sollte es ein Problem bei der Aktivierung deines Accounts gegeben haben, wende dich bitte an den Support von Illarion. Dazu kannst du auf diese E-Mail einfach antworten oder im Forum von Illarion nach Hilfe fragen.
 
 Dein Aktivierungslink war:
-http://illarion.org/community/account/de_register.php?activate=%s
+https://illarion.org/community/account/de_register.php?activate=%s
 
 Wenn du nicht daran interessiert bist, deinen Illarion-Account zu aktivieren, ignoriere diese E-Mail bitte. Es werden dann keine weiteren E-Mails von Illarion an dich geschickt.
 
 Mit freundlichen Grüßen,
 Das Team von Illarion
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$us_notactivated = <<<TXT
 Dear player,
 
-some days ago you registered at the online roleplaying game Illarion (http://illarion.org), but you never activated your account.
+some days ago you registered at the online roleplaying game Illarion (https://illarion.org), but you never activated your account.
 
 In case there was a problem with the activation of your account, please contact the technical support of Illarion. To do this, you can just answer to this e-mail or write a help request at the board of Illarion.
 
 Your activation link was:
-http://illarion.org/community/account/us_register.php?activate=%s
+https://illarion.org/community/account/us_register.php?activate=%s
 
 If you are not interested in activating your Illarion account, please just ignore this e-mail. There wont be further e-mails sent to you.
 
 Yours sincerely,
 The Illarion Staff
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$de_veryinactive = <<<TXT
 Lieber Spieler,
 
-das Online-Rollenspiel Illarion (http://illarion.org) vermisst dich! Es ist einige Zeit vergangen, seitdem du mit deinen Charakteren das Land Illarion besucht hast und seitdem ist sicherlich eine Menge passiert. Dein Account ist weiterhin spielbar und wir würden uns freuen, dich wieder als Spieler begrüßen zu können.
+das Online-Rollenspiel Illarion (https://illarion.org) vermisst dich! Es ist einige Zeit vergangen, seitdem du mit deinen Charakteren das Land Illarion besucht hast und seitdem ist sicherlich eine Menge passiert. Dein Account ist weiterhin spielbar und wir würden uns freuen, dich wieder als Spieler begrüßen zu können.
 
 Solltest du allerdings entschieden haben, nie wieder Illarion spielen zu wollen, so sind wir sehr an den Gründen dafür interessiert. Jeder Spieler, der Illarion verlässt, ist ein Verlust für die Community und zeigt uns, dass wir das Spiel verbessern können. Bitte teile uns als Antwort auf diese E-Mail mit, warum du dich dazu entschlossen hast, Illarion zu verlassen.
 
 Herzlichen Dank und hoffentlich bis bald,
 Das Team von Illarion 
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$us_veryinactive = <<<TXT
 Dear player,
 
-the online roleplaying game Illarion (http://illarion.org) misses you! It has been a while since you visited the world Illarion with your characters. In the meantime, many events have taken place in the game. Your account remains active and we are looking forward to welcoming you once again as a player.
+the online roleplaying game Illarion (https://illarion.org) misses you! It has been a while since you visited the world Illarion with your characters. In the meantime, many events have taken place in the game. Your account remains active and we are looking forward to welcoming you once again as a player.
 
 If you decided not to play Illarion anymore, we would kindly ask you to tell us the reasons for this decision. Every player who leaves Illarion is a loss for the community and encourages us to improve the game. Please give us the reasons for your decision to abandon Illarion as answer to this e-mail.
 
 Thank you very much and see you soon,
 The Illarion Staff 
 
-http://illarion.org
+https://illarion.org
 TXT;
 
 	$pgsql =& Database::getPostgreSQL();

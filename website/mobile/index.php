@@ -21,7 +21,7 @@ if (ereg('de', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 	$IsGerman = false;
 }
 //set FootlineText
-$footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; <a href="http://www.illarion.org">www.illarion.org</a></p>'
+$footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; <a href="https://www.illarion.org">www.illarion.org</a></p>'
 //'<p>'.echo( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspiel' : 'Free MMORPG with real role play' ).'<br/>	&copy;2014 &bull; www.illarion.org</p>'
 ?>
 <!DOCTYPE html> 
@@ -343,7 +343,7 @@ $footlinetext = '<p>'.( $IsGerman == true ? 'Freies MMORPG mit echtem Rollenspie
 <div data-role="dialog" id="ReloadPage" data-theme="a"> 
 		<button onClick="window.location.reload()">Reload data</button>
 		<a href="#Start"><button>Home</button></a>
-		<a href="http://www.illarion.org"><button>Homepage</button></a>
+		<a href="https://www.illarion.org"><button>Homepage</button></a>
 </div> 
 
 </body>

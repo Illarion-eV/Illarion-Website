@@ -13,7 +13,7 @@
 		<City_Town>Friedrichshafen</City_Town>
 		<Country>Deutschland</Country>
 		<State_Province />
-		<Company_WebSite_URL>http://illarion.org</Company_WebSite_URL>
+		<Company_WebSite_URL>https://illarion.org</Company_WebSite_URL>
 		<Contact_Info>
 			<Author_First_Name>Jan</Author_First_Name>
 			<Author_Last_Name>Falke</Author_Last_Name>
@@ -110,16 +110,16 @@ Auch Du wirst Dich dem Zauber dieser Welt nicht entziehen können!</Char_Desc_20
 	</Program_Descriptions>
 	<Web_Info>
 		<Application_URLs>
-			<Application_Info_URL>http://illarion.org</Application_Info_URL>
+			<Application_Info_URL>https://illarion.org</Application_Info_URL>
 			<Application_Order_URL />
-			<Application_Screenshot_URL>http://illarion.org/illarion/screenshots_new_client/dji04.jpg</Application_Screenshot_URL>
-			<Application_Icon_URL>http://illarion.org/logo.gif</Application_Icon_URL>
-			<Application_XML_File_URL>http://pad.illarion.org/illarion.pad.xml</Application_XML_File_URL>
+			<Application_Screenshot_URL>https://illarion.org/illarion/screenshots_new_client/dji04.jpg</Application_Screenshot_URL>
+			<Application_Icon_URL>https://illarion.org/logo.gif</Application_Icon_URL>
+			<Application_XML_File_URL>https://pad.illarion.org/illarion.pad.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>http://download.illarion.org/</Primary_Download_URL>
-			<Secondary_Download_URL>http://javaclient.illarion.org/illarion_client.jnlp</Secondary_Download_URL>
-			<Additional_Download_URL_1>http://www.illarion.org/illarion/IllarionSetup097.exe</Additional_Download_URL_1>
+			<Primary_Download_URL>https://illarion.org/illarion/de_java_download.php</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>
 	</Web_Info>

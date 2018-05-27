@@ -23,7 +23,7 @@
 	  <li><a href="Illarion_e.V._-_Satzung.pdf">Illarion e.V. - Satzung</a> (pdf)</li>
    </ul>
    <p>Da beide Seiten (ihr und der Verein) davon profitieren k&ouml;nnen und sollen, haben wir uns Gedanken gemacht, welche Vorteile wir f&uuml;r F&ouml;rdermitglieder schaffen. Grundgedanke ist dabei, dass keine Vorteile im Spiel aus diesen Boni entstehen d&uuml;rfen, denn sonst w&auml;re es ein verkappter Bezahl-Account - kurz, wer zahlt w&uuml;rde im Spiel bessere Chancen haben und dies wollen wir vermeiden.
-   Folgende Vorteile werden ab sofort f&uuml;r F&ouml;rdermitglieder auf <a href="http://illarion.org/community/de_contact.php?contact=25">Anfrage</a> gew&auml;hrt:</p>
+   Folgende Vorteile werden ab sofort f&uuml;r F&ouml;rdermitglieder auf <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=25">Anfrage</a> gew&auml;hrt:</p>
    <ul>
       <li>Eine eigene E-Mail-Adresse als Weiterleitung an die im Account hinterlegte Adresse, z.B. charaktername@illarion.org</li>
       <li>Erhöhung der maximalen Charaktere des Account von 5 auf 7</li>

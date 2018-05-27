@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	if (!isset($_GET['action']))
 	{
-		header('Location: http://illarion.org');
+		header('Location: https://illarion.org');
 		exit();
 	}
 	$cnt = ( is_numeric($_GET['cnt']) ? (int)$_GET['cnt'] : 0 );

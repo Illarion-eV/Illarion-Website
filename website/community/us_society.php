@@ -29,7 +29,7 @@ Please find the Illarion Society statutes below.</p>
    <p>Because both sides should have a benefit, we thought about advantages for those members. 
    As a fundamental idea we don't want to offer any in-game advantages, 
    because this would be just a premium game account for people who are able to pay.
-   The following benefits are available for support members on <a href="http://illarion.org/community/de_contact.php?contact=25">request</a> right now:</p>
+   The following benefits are available for support members on <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=25">request</a> right now:</p>
    <ul>
       <li>Your own forwarding email address to your specified account email address (e.g. charactername@illarion.org)</li>
       <li>Increase of the maximum character number for your account from 5 to 7</li>

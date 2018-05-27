@@ -120,7 +120,7 @@ character. In addition, the following types of names are not allowed:</p>
 <div><a id="world"></a></div>
 <h2>The game world</h2>
 
-<p>The description of the game world as published on http://www.illarion.org is mandatory. 
+<p>The description of the game world as published on <?php echo Page::getURL(); ?> is mandatory. 
 The races allowed to play are limited to the races offered to choose during the character 
 creation in the account system. It's not allowed to roleplay any mixed-race characters.</p>
 
@@ -227,7 +227,7 @@ right after resurrection ("res-killing") is not allowed.</p>
 
 <p>On the Forum and the Illarion Chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links are prohibited. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
 
-<p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="http://illarion.org/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum. Likewise, complaints about staff members shall be reported to the <a href="http://illarion.org/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
+<p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum. Likewise, complaints about staff members shall be reported to the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -248,10 +248,10 @@ offer an advantage to the player are not allowed.</p>
 <h2>Open source and copyright</h2>
 
 <p>The sources of the Java software (client and development tools) are released
-under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.
+under <a href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.
 The sources of server, scripts and maps are released under
-<a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
-These sources are thus <a href="http://illarion.org/development/us_opensource.php">
+<a href="https://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
+These sources are thus <a href="<?php echo Page::getURL(); ?>/development/us_opensource.php">
 available for public review</a> and usage. </p>
 
 <p>All other content of Illarion, pictures, sound effects,

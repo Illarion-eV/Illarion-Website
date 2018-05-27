@@ -11,11 +11,11 @@ Page::Init();
 
 <h2>Chat</h2>
 
-<iframe src="http://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
+<iframe src="https://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
 
 <h2>Information</h2>
 
-<p>Auf dieser Seite wird eine Verbindung zum Quakenet IRC-Servernetzwerk hergestellt um dem Illarion-Chat beizutreten. In diesem Chat gelten sowohl die <a href="<?php echo $url; ?>/illarion/de_rules.php">Regeln von Illarion</a> als auch die <a href="http://www.quakenet.org/">Regeln von Quakenet</a>.</p>
+<p>Auf dieser Seite wird eine Verbindung zum Quakenet IRC-Servernetzwerk hergestellt um dem Illarion-Chat beizutreten. In diesem Chat gelten sowohl die <a href="<?php echo $url; ?>/illarion/de_rules.php">Regeln von Illarion</a> als auch die <a href="https://www.quakenet.org/">Regeln von Quakenet</a>.</p>
 <p>Solltest du einen anderen IRC-Client verwenden wollen sind dies die nötigen Zugangsdaten:</p>
 <dl>
 	<dt>Server: irc.quakenet.org</dt>

@@ -2,7 +2,7 @@
    // Bookmark redirect script
 
    $target = $_GET['target'];
-   $url = "http://illarion.org";
+   $url = "https://illarion.org";
    $description = "Illarion";
 
    switch( $target )
@@ -106,7 +106,7 @@
    	case "alltagz":
    	   $newurl = "http://www.alltagz.de/bookmarks/?action=add&address=$url&title=$description";
    	default:
-   	   $newurl = "http://illarion.org";
+   	   $newurl = "https://illarion.org";
       break;
    }
 

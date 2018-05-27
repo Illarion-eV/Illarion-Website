@@ -35,8 +35,8 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <ul>
 <li>Link to the game content repository: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>A free account on <a href="https://github.com">github.com</a></li>
-<li>A modern, good editor like <a href="http://notepad-plus-plus.org">Notepad++</a></li>
-<li>An easy to use Git client like <a href="http://sourcetreeapp.com">SourceTree</a> on Windows and Mac, or the console client on Linux</li>
+<li>A modern, good editor like <a href="https://notepad-plus-plus.org">Notepad++</a></li>
+<li>An easy to use Git client like <a href="https://sourcetreeapp.com">SourceTree</a> on Windows and Mac, or the console client on Linux</li>
 </ul>
 	
 <h4>Remarks</h4>
@@ -113,9 +113,9 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <li>Write your own NPCs with easyNPC.</li>
 <li>Shape the map with the map editor.</li>
 <li>Create quests or help developing the fighting and magic system.</li>
-<li>Illarion uses Lua 5.2, a <a href="http://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
+<li>Illarion uses Lua 5.2, a <a href="https://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
 <li>See the <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion extension to Lua</a>.</li>
 <li>Get your own <a href="https://drive.google.com/folderview?id=0B-ZaHxrl0yMkfklqRDhQam11QnRxTk83b1J1NVY2eHY0OHQ0U0tWQUc1enZ3eldKV0Z2SXc">local Illarion server</a> to play around with.</li>
-<li>Learn more about <a href="http://git-scm.com/book">Git</a>, the fast and distributed version control system.</li>
-<li>Talk to our content developers in the <a href="http://illarion.org/community/us_chat.php">IRC chat</a> (#illarion on QuakeNet).</li>
+<li>Learn more about <a href="https://git-scm.com/book">Git</a>, the fast and distributed version control system.</li>
+<li>Talk to our content developers in the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">IRC chat</a> (#illarion on QuakeNet).</li>
 </ul>

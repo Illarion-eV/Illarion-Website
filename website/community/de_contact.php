@@ -136,7 +136,7 @@ Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Registergericht: Amtsgericht Kempten<br />
 Registernummer: VR 30767<br /><br />
 Die Seite und ihre Inhalte sind unter der AGPLv3 lizensiert.<br /><br />
-Diese Seite ist gültiges <a href="http://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> und <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
+Diese Seite ist gültiges <a href="https://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> und <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
  
 <?php Page::insert_go_to_top_link(); ?>

@@ -8,7 +8,7 @@ var supported = /MSIE ((5\.5)|[6789])/.test(navigator.userAgent) &&
 navigator.platform == "Win32";
 
 var realSrc;
-var blankSrc = "http://illarion.org/shared/pics/blank.gif";
+var blankSrc = "https://illarion.org/shared/pics/blank.gif";
 var isPrinting = false;
 
 if (supported) fixImage();

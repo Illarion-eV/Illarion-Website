@@ -341,16 +341,16 @@ class IllaUser {
 		if (self::german()) {
 			$mail->Subject = 'Registrierung bei Illarion';
 			$mail->Body = "Grüße " . self::$name . ",\n\nmit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel "
-			 . "Illarion (http://illarion.org) vorgenommen, die mit folgendem Link nun vervollständigt werden kann:\n\n"
-			 . "http://illarion.org/community/account/de_register.php?activate={$valid_key}\n\nSolltest Du Dich nicht bei Illarion "
-			 . "registriert haben, ignoriere diese Mail bitte einfach.\n\nDas Team von Illarion\nhttp://illarion.org"
+			 . "Illarion (" . Page::getURL() . ") vorgenommen, die mit folgendem Link nun vervollständigt werden kann:\n\n"
+			 . Page::getURL() . "/community/account/de_register.php?activate={$valid_key}\n\nSolltest Du Dich nicht bei Illarion "
+			 . "registriert haben, ignoriere diese Mail bitte einfach.\n\nDas Team von Illarion\n" . Page::getURL()
 			 . "\n\n\nP.S.: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!";
 		}else {
 			$mail->Subject = 'Registration at Illarion';
 			$mail->Body = "Greetings " . self::$name . ",\n\nwith this email adress a registration at the online RPG Illarion "
-			 . "(http://illarion.org) was done. The registration process can be completed by clicking the following link:\n\n"
-			 . "http://illarion.org/community/account/us_register.php?activate={$valid_key}\n\nIn case you are not the one who "
-			 . "registered at Illarion, please ignore this email.\n\nThe team of Illarion\nhttp://illarion.org"
+			 . "(" . Page::getURL() . ") was done. The registration process can be completed by clicking the following link:\n\n"
+			 . Page::getURL() . "/community/account/us_register.php?activate={$valid_key}\n\nIn case you are not the one who "
+			 . "registered at Illarion, please ignore this email.\n\nThe team of Illarion\n" . Page::getURL()
 			 . "\n\n\nP.S.: We appreciate any feedback concerning your first impressions about the game!";
 		}
 

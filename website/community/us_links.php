@@ -61,7 +61,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Debian</h2>
 
 <p>
-	<a rel="external" href="http://www.debian.org/">Link to the Debian website</a>
+	<a rel="external" href="https://www.debian.org/">Link to the Debian website</a>
 	<br /><br />
 	Illarion uses the Debian operating system for its servers.
 	Debian systems currently use the Linux kernel or the FreeBSD kernel.
@@ -73,7 +73,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Libgdx</h2>
 
 <p>
-	<a rel="external" href="http://libgdx.badlogicgames.com/">Link to the Libgdx website</a>
+	<a rel="external" href="https://libgdx.badlogicgames.com/">Link to the Libgdx website</a>
 	<br /><br />
 	Libgdx is a Java game development framework that provides a unified API that works across all supported platforms.
 	This allows the developers to create a game that can be played on various different operating systems without having to make drastic changes.
@@ -113,7 +113,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Java</h2>
 
 <p>
-	<a rel="external" href="http://www.java.com/">Link to the Oracle Java website</a>
+	<a rel="external" href="https://www.java.com/">Link to the Oracle Java website</a>
 	<br /><br />
 	http://www.java.com/  - Java is the global standard for developing and delivering mobile applications, 
 	games, Web-based content, and enterprise software.
@@ -140,7 +140,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>LWJGL</h2>
 
 <p>
-	<a rel="external" href="http://www.lwjgl.org/">Link to the LWJGL website</a>
+	<a rel="external" href="https://www.lwjgl.org/">Link to the LWJGL website</a>
 	<br /><br />
 	LWJGL provides Illarions developers access to high performance cross-platform libraries such as OpenGL, OpenCL and OpenAL.
 </p>
@@ -165,7 +165,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>CAcert</h2>
 
 <p>
-	<a rel="external" href="http://www.cacert.org/">Link to the CAcert website</a>
+	<a rel="external" href="https://www.cacert.org/">Link to the CAcert website</a>
 	<br /><br />
 	CAcert.org is a community driven, Certificate Authority that issues certificates to the public at large for free. 
 	These certificates are used on the Illarion website and also in the game client.
@@ -178,7 +178,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Boost</h2>
 
 <p>
-	<a rel="external" href="http://www.boost.org/">Link to the Boost website</a>
+	<a rel="external" href="https://www.boost.org/">Link to the Boost website</a>
 	<br /><br />
 	Boost provides free peer-reviewed portable C++ source libraries.
 	These allow the developers to utilise their time more efficiently by using tried and 
@@ -192,7 +192,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Lua</h2>
 
 <p>
-	<a rel="external" href="http://www.lua.org/">Link to the Lua website</a>
+	<a rel="external" href="https://www.lua.org/">Link to the Lua website</a>
 	<br /><br />
 	Lua is a powerful, fast, lightweight, embeddable scripting language.
 	It is used to create the scripts for the NPCs, Alchemy system and it will also 
@@ -206,7 +206,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>PostgreSQL</h2>
 
 <p>
-	<a rel="external" href="http://www.postgresql.org/">Link to the PostgreSQL website</a>
+	<a rel="external" href="https://www.postgresql.org/">Link to the PostgreSQL website</a>
 	<br /><br />
 	PostgreSQL is a powerful, open source object-relational database system.
 	It has more than 15 years of active development and a proven 
@@ -234,7 +234,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>GCC</h2>
 
 <p>
-	<a rel="external" href="http://gcc.gnu.org/">Link to the GCC website</a>
+	<a rel="external" href="https://gcc.gnu.org/">Link to the GCC website</a>
 	<br /><br />
 	GCC is a part of the GNU Project.
 	It is used to compile the game server.
@@ -260,7 +260,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>PHP</h2>
 
 <p>
-	<a rel="external" href="http://www.php.net/">Link to the PHP website</a>
+	<a rel="external" href="https://www.php.net/">Link to the PHP website</a>
 	<br /><br />
 	PHP is an HTML-embedded scripting language.
 	It is used extensively in the creation and maintenance of the Illarion website.
@@ -286,7 +286,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <h2>Mantis Bug Tracker</h2>
 
 <p>
-	<a rel="external" href="http://www.mantisbt.org/">Link to the Mantis Bug Tracker website</a>
+	<a rel="external" href="https://www.mantisbt.org/">Link to the Mantis Bug Tracker website</a>
 	<br /><br />
 	MantisBT is a popular free web-based bug tracking system. It is used by Illarion as a tool to report bugs,
 	suggest features and assign workloads to developers.
@@ -297,13 +297,13 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="19"></a></div>
 <h2>YourKit</h2>
 <p>
-	<a rel="external" href="http://www.yourkit.com">Link to the YourKit homepage</a>
+	<a rel="external" href="https://www.yourkit.com">Link to the YourKit homepage</a>
 	<br /><br />
 	YourKit is a full-featured Java Profiler that is developed by YourKit, LLC.
 	<br />
 	YourKit is kindly supporting Illarion with free open source licenses for the Profiler.
-	Besides the <a rel="external" href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
-	YourKit, LLC also develops the <a rel="external" href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
+	Besides the <a rel="external" href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
+	YourKit, LLC also develops the <a rel="external" href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
 	<br /><br />
 	Illarion uses the YourKit Java Profiler to identify problems and performance bottlenecks in the Java applications.
 </p>
@@ -312,7 +312,7 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="install4j"></a></div>
 <h2>Install4J</h2>
 <p>
-	<a rel="external" href="http://www.ej-technologies.com/products/install4j/overview.html">Link to the Install4j homepage</a>
+	<a rel="external" href="https://www.ej-technologies.com/products/install4j/overview.html">Link to the Install4j homepage</a>
 	<br /><br />
 	Install4j is a powerful multi-platform Java installer builder that
 	generates native installers and application launchers for Java
@@ -325,9 +325,9 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="20"></a></div>
 <h2>Heise online</h2>
 <p>
-	<a rel="external" href="http://www.heise.de">Link to the Heise.de homepage</a>
+	<a rel="external" href="https://www.heise.de">Link to the Heise.de homepage</a>
 	<br /><br />
-	Heise is known for the serious German computer magazine c't. On the <a rel="external" href="http://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
+	Heise is known for the serious German computer magazine c't. On the <a rel="external" href="https://www.heise.de/download/illarion-1138348.html">page for Illarion</a>
 	you can find a number of screenshots and even the downloader.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
@@ -335,9 +335,9 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="21"></a></div>
 <h2>Computer Bild</h2>
 <p>
-	<a rel="external" href="http://www.computerbild.de">Link to the Computerbild homepage</a>
+	<a rel="external" href="https://www.computerbild.de">Link to the Computerbild homepage</a>
 	<br /><br />
-	Computerbild is one of the most popular German computer magazines. The editorial staff took their own screenshots for the <a rel="external" href="http://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
+	Computerbild is one of the most popular German computer magazines. The editorial staff took their own screenshots for the <a rel="external" href="https://www.computerbild.de/download/Illarion-2095288.html">Illarion page</a>
 	.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
@@ -364,8 +364,8 @@ The following game sites have taken Illarion on to their listings. We would like
 <div><a id="24"></a></div>
 <h2>Giga</h2>
 <p>
-	<a rel="external" href="http://www.giga.de/">Link to the Giga homepage</a>
+	<a rel="external" href="https://www.giga.de/">Link to the Giga homepage</a>
 	<br /><br />
-	The famous website Giga.de rated <a rel="external" href="http://www.giga.de/downloads/illarion/">lllarion</a> with the highest grade - five stars! You can also rate Illarion on Giga.de.
+	The famous website Giga.de rated <a rel="external" href="https://www.giga.de/downloads/illarion/">lllarion</a> with the highest grade - five stars! You can also rate Illarion on Giga.de.
 </p>
 <?php Page::insert_go_to_top_link(); ?>

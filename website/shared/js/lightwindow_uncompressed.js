@@ -155,8 +155,8 @@ lightwindow.prototype = {
 			EOLASFix : 'swf,wmv,fla,flv',
 			overlay : {
 				opacity : 0.7,
-				image : 'http://illarion.org/shared/pics/black.png',
-				presetImage : 'http://illarion.org/shared/pics/black-70.png'
+				image : 'https://illarion.org/shared/pics/black.png',
+				presetImage : 'https://illarion.org/shared/pics/black-70.png'
 			},
 			skin : 	{
 				main : null,

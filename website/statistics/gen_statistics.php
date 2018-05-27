@@ -1,5 +1,5 @@
 <?php
-	// wget --output-document="/home/nitram/public_html/last_hp_stats.html" -q "http://illarion.org/statistics/gen_statistics.php"
+	// wget --output-document="/home/nitram/public_html/last_hp_stats.html" -q "https://illarion.org/statistics/gen_statistics.php"
 
 	set_time_limit( 0 );
 

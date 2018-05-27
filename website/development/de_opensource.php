@@ -13,9 +13,9 @@
 <?php Page::cap('I'); ?>
 
 <p>llarion wird als quelloffenes Projekt entwickelt. Die Quellen der Java-Software
-sind unter der <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>
+sind unter der <a href="https://www.gnu.org/licenses/gpl.html">GPLv3</a>
 veröffentlicht während die Quellen des Servers, der Karten und der Spielinhalte
-unter der <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>
+unter der <a href="https://www.gnu.org/licenses/agpl.html">AGPLv3</a>
 veröffentlicht sind. Alle Quellen sind jedem frei zugänglich. Diese
 Seite bietet einen Überblick über die Speicherorte der Quelltexte.</p>
 

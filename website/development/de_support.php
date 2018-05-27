@@ -78,7 +78,7 @@ ist ein Grundlegendes Verständnis für allgemeine Programmierung und prozedural
 Programmierung erforderlich.</p>
 
 <ul>
-	<li>Allgemeines LUA-Tutorial: <a href="http://lua-users.org/wiki/TutorialDirectory">LINK</a></li>
+	<li>Allgemeines LUA-Tutorial: <a href="https://lua-users.org/wiki/TutorialDirectory">LINK</a></li>
 	<li>Dokumentation zu den Illarion spezifischen LUA-Befehlen: <a href="<?php echo Page::getURL(); ?>/~martin/scripting/luadocu.pdf">LINK</a></li>
 </ul>
 

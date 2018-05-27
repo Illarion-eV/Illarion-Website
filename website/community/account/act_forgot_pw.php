@@ -50,7 +50,7 @@
     				. "jetzt ein neues Passwort eingeben, indem Du auf den folgenden Link klickst:\n\n"
     				. Page::getURL()."/community/account/de_forgot_pw.php?id=".$valid_key."\n\n"
     				. "Wenn Du kein neues Passwort eingeben willst, dann ignoriere diese E-Mail einfach. Dein altes Passwort bleibt dann "
-    				. "weiterhin gültig.\n\nDas Team von Illarion\nhttp://illarion.org";
+    				. "weiterhin gültig.\n\nDas Team von Illarion\nhttps://illarion.org";
     			}
     			else
     			{
@@ -59,7 +59,7 @@
     				. " You are now able to enter a new password after following this link:\n\n"
     				. Page::getURL()."/community/account/us_forgot_pw.php?id=".$valid_key."\n\n"
     				. "In case you don't want to enter a new password please just ignore this email. Your old password remains valid."
-    				. "\n\nThe team of Illarion\nhttp://illarion.org";
+    				. "\n\nThe team of Illarion\nhttps://illarion.org";
     			}
     			if(!$mail->Send())
     			{

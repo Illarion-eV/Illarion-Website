@@ -72,19 +72,19 @@ Page::Init();
 		
 	<li class="question"><a id="gs2"></a><strong>Wieviel kostet Illarion? Gibt es eine Monatsgebühr oder einen Itemshop?</strong></li>
 		
-		<p>Illarion ist vollständig kostenlos. Du wirst garantiert niemals einen Cent für Illarion zahlen müssen. Es gibt keine Premiumitems und keinen Itemshop. Illarion wird von dem nicht gewinnorientierten Verein <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a> betrieben. Wenn du möchtest, kannst du die Arbeit des Vereins mit einer freiwilligen <a href="http://illarion.org/community/de_society.php">Spende</a> unterstützen oder indem du ein Fördermitglied wirst.</p>
+		<p>Illarion ist vollständig kostenlos. Du wirst garantiert niemals einen Cent für Illarion zahlen müssen. Es gibt keine Premiumitems und keinen Itemshop. Illarion wird von dem nicht gewinnorientierten Verein <a href="<?php echo Page::getURL(); ?>/community/de_society.php">Illarion e.V.</a> betrieben. Wenn du möchtest, kannst du die Arbeit des Vereins mit einer freiwilligen <a href="<?php echo Page::getURL(); ?>/community/de_society.php">Spende</a> unterstützen oder indem du ein Fördermitglied wirst.</p>
 		
 	<li class="question"><a id="gs3"></a><strong>Was sind die Systemanforderungen von Illarion?</strong></li>
 
-	    <p>Illarion ist ein plattformübergreifendes Spiel, welches auf Windows, Linux und MacOS läuft. Du kannst die Systemanforderungen auf der <a href="http://illarion.org/illarion/de_java_download.php">Downloadseite der Homepage</a> einsehen. Du brauchst vor allem einen Computer mit einer Grafikkarte, die Shaders 2.0 und OpenGL unterstützt. Einige Betriebssysteme wie Windows Vista unterstützen den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller der Grafikkarte.</p>
+	    <p>Illarion ist ein plattformübergreifendes Spiel, welches auf Windows, Linux und MacOS läuft. Du kannst die Systemanforderungen auf der <a href="<?php echo Page::getURL(); ?>/illarion/de_java_download.php">Downloadseite der Homepage</a> einsehen. Du brauchst vor allem einen Computer mit einer Grafikkarte, die Shaders 2.0 und OpenGL unterstützt. Einige Betriebssysteme wie Windows Vista unterstützen den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller der Grafikkarte.</p>
 
 	<li class="question"><a id="gs4"></a><strong>Was brauche ich, um spielen zu können?</strong></li>
 		
-		<p>Um Illarion spielen zu können musst du zuerst einen <a href="http://illarion.org/community/account/de_register.php">Account registrieren</a> und einen Charakter erstellen. Wenn das erledigt ist, lade den <a href="http://illarion.org/illarion/de_java_download.php">Spielclient</a> herunter. Dann bist du bereit in die Welt von Illarion einzutauchen!</p>
+		<p>Um Illarion spielen zu können musst du zuerst einen <a href="<?php echo Page::getURL(); ?>/community/account/de_register.php">Account registrieren</a> und einen Charakter erstellen. Wenn das erledigt ist, lade den <a href="<?php echo Page::getURL(); ?>/illarion/de_java_download.php">Spielclient</a> herunter. Dann bist du bereit in die Welt von Illarion einzutauchen!</p>
 					
 	<li class="question"><a id="gs5"></a><strong>Wo kann ich das Spiel herunterladen?</strong></li>
 		
-		<p>Illarion kann für viele Betriebssysteme auf der <a href="http://illarion.org/illarion/de_java_download.php">Download-Seite der Homepage</a> heruntergeladen werden. Während des Setups wirst dazu aufgefordert, ein Verzeichnis zu wählen, in dem Charakterdaten gespeichert werden. Es ist ratsam, einen Ordner zu wählen, den du auch wiederfindest.</p>
+		<p>Illarion kann für viele Betriebssysteme auf der <a href="<?php echo Page::getURL(); ?>/illarion/de_java_download.php">Download-Seite der Homepage</a> heruntergeladen werden. Während des Setups wirst dazu aufgefordert, ein Verzeichnis zu wählen, in dem Charakterdaten gespeichert werden. Es ist ratsam, einen Ordner zu wählen, den du auch wiederfindest.</p>
 		
 	<li class="question"><a id="gs6"></a><strong>Wie logge ich mich ein?</strong></li>
 	
@@ -92,7 +92,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs7"></a><strong>Aus welchen Völkern und Klassen kann ich wählen?</strong></li>
 	
-		<p>In Illarion gibt es sechs spielbare <a href="http://illarion.org/illarion/races/de_races.php">Völker</a>: Menschen, Halblinge, Zwerge, Elfen, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
+		<p>In Illarion gibt es sechs spielbare <a href="<?php echo Page::getURL(); ?>/illarion/races/de_races.php">Völker</a>: Menschen, Halblinge, Zwerge, Elfen, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
 		
 		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein Alleskönner.
 Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nur deine Vorstellungskraft beschränkt was deine Charaktere werden können.</p>
@@ -103,7 +103,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="gs9"></a><strong>Ich habe ein technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
 		
-		<p>Es gibt ein genau dafür vorgesehenes <a href="http://illarion.org/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="http://illarion.org/community/sw_chat.php">Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
+		<p>Es gibt ein genau dafür vorgesehenes <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="<?php echo Page::getURL(); ?>/community/sw_chat.php">Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
 		
 </ul>
 
@@ -144,7 +144,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="fs7"></a><strong>Welches Reich sollte ich wählen?</strong></li>
 		
-		<p>Auf Illarion gibt es drei Fraktionen, die das Land unter sich aufgeteilt haben: das <a href="http://illarion.org/illarion/de_factions.php#2">reiche Galmair</a>, das <a href="http://illarion.org/illarion/de_factions.php#1">edle Cadomyr</a> und das <a href="http://illarion.org/illarion/de_factions.php#3">weise Runewick</a>. Wähle einfach das Reich aus, dessen Motive am besten zu deinem Charakter passen. Du kannst dich auch später im Spiel noch umentscheiden oder sogar ein Vogelfreier werden.</p>
+		<p>Auf Illarion gibt es drei Fraktionen, die das Land unter sich aufgeteilt haben: das <a href="<?php echo Page::getURL(); ?>/illarion/de_factions.php#2">reiche Galmair</a>, das <a href="<?php echo Page::getURL(); ?>/illarion/de_factions.php#1">edle Cadomyr</a> und das <a href="<?php echo Page::getURL(); ?>/illarion/de_factions.php#3">weise Runewick</a>. Wähle einfach das Reich aus, dessen Motive am besten zu deinem Charakter passen. Du kannst dich auch später im Spiel noch umentscheiden oder sogar ein Vogelfreier werden.</p>
 		
 	<li class="question"><a id="fs8"></a><strong>Gibt es im Spiel Lagerplätze?</strong></li>
 		
@@ -169,7 +169,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc2"></a><strong>Was sind CMs und GMs?</strong></li>
 	
-		<p>Ein CM ist ein <a href="http://illarion.org/community/de_contact.php#2">Community-Manager</a>. Ihr Aufgabe ist es, neuen Spielern zu helfen und mögliche Konflikte zwischen Spielern zu schlichten. Sind die ersten, an die du dich wenden solltest, wenn es sich nicht um ein technisches Problem handelt. GM steht für <a href="http://illarion.org/community/de_contact.php#3">Gamemaster</a>. Die GMs tragen dynamische Inhalte (Quests, Events usw.) zum Spiel bei und wachen auch über die Einhaltung der Regeln.</p>
+		<p>Ein CM ist ein <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#2">Community-Manager</a>. Ihr Aufgabe ist es, neuen Spielern zu helfen und mögliche Konflikte zwischen Spielern zu schlichten. Sind die ersten, an die du dich wenden solltest, wenn es sich nicht um ein technisches Problem handelt. GM steht für <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#3">Gamemaster</a>. Die GMs tragen dynamische Inhalte (Quests, Events usw.) zum Spiel bei und wachen auch über die Einhaltung der Regeln.</p>
 		
 
 	<li class="question"><a id="gc3"></a><strong>Warum sprechen die alle so komisch?</strong></li>
@@ -187,7 +187,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc6"></a><strong>Wie kann ich anderen Spielern im Spiel eine Botschaft zukommen lassen?</strong></li>
 	
-		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sich der <a href="http://illarion.org/community/de_chat.php">globale Chat</a> auf der Homepage. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="http://illarion.org/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
+		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sich der <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">globale Chat</a> auf der Homepage. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
 		
 	<li class="question"><a id="gc7"></a><strong>Das Spiel hat Steuern von mir eingetrieben! Was soll das?</strong></li>
 	
@@ -216,26 +216,26 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 	
 	<li class="question"><a id="co1"></a><strong>Ich habe gelesen, dass Illarion 'Open Source' ist. Was bedeutet das?</strong></li>
 	
-		<p>Illarion ist ein freies Spiel, nicht nur kostenfrei sondern auch der Spielcode ist frei verwendbar. Der Sourcecode der Java-Software (Client und Entwicklungstools) ist unter der <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a> veröffentlicht. Der Sourcecode des Servers, der Skripte und der Karten ist unter der <a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a> veröffentlicht.
-		Somit kann jeder den <a href="http://illarion.org/development/de_opensource.php">Quellcode einsehen</a> und auch verwenden.</p>
+		<p>Illarion ist ein freies Spiel, nicht nur kostenfrei sondern auch der Spielcode ist frei verwendbar. Der Sourcecode der Java-Software (Client und Entwicklungstools) ist unter der <a href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a> veröffentlicht. Der Sourcecode des Servers, der Skripte und der Karten ist unter der <a href="https://www.gnu.org/licenses/agpl-3.0">AGPLv3</a> veröffentlicht.
+		Somit kann jeder den <a href="<?php echo Page::getURL(); ?>/development/de_opensource.php">Quellcode einsehen</a> und auch verwenden.</p>
 		
 	<li class="question"><a id="co2"></a><strong>Ich habe einen Fehler gefunden oder habe einen Vorschlag. Wie melde ich sowas?</strong></li>
 		
-		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen den <a href="http://illarion.org/mantis/index.php">Mantis Bugtracker</a>. Dies ist das Fehlerverwaltungssystem der Entwickler. Du kannst ebenso Fehler und Vorschläge am <a href="http://illarion.org/community/forums/index.php">Forums</a> schreiben, allerdings besteht die Chance, dass sie dort von den Entwicklern nicht sofort gesehen werden.<p>
+		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen den <a href="<?php echo Page::getURL(); ?>/mantis/index.php">Mantis Bugtracker</a>. Dies ist das Fehlerverwaltungssystem der Entwickler. Du kannst ebenso Fehler und Vorschläge am <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> schreiben, allerdings besteht die Chance, dass sie dort von den Entwicklern nicht sofort gesehen werden.<p>
 
 	<li class="question"><a id="co3"></a><strong>Können Spieler Bücher, NPCs oder sogar Quests selber schreiben?</strong></li>
 	
-		<p>Jawohl! Illarion schätzt alle Inhalte, die von Spielern erstellt wurden, und gibt ihnen die Möglichkeit, die Welt mitzugestalten. <a href="http://illarion.org/community/de_contact.php#4">Wende dich an einen Entwickler</a> und ließ das <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklungstutorial</a>, um erste Informationen zu erhalten.</p>
+		<p>Jawohl! Illarion schätzt alle Inhalte, die von Spielern erstellt wurden, und gibt ihnen die Möglichkeit, die Welt mitzugestalten. <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#4">Wende dich an einen Entwickler</a> und ließ das <a href="<?php echo Page::getURL(); ?>/development/de_content_tutorial.php">Entwicklungstutorial</a>, um erste Informationen zu erhalten.</p>
 		
 	<li class="question"><a id="co4"></a><strong>Wie kann ich Illarion helfen? Was muss ich können?</strong></li>
 	
-		<p>Illarion kann man auf vielerlei Arten unterstützen. Du könntest dem Verein <a href="http://illarion.org/community/de_society.php">Illarion e.V.</a> beitreten, die <a href="http://illarion.org/development/de_content_tutorial.php">Entwicklung des Spieles</a> unterstützen oder dabei helfen, das Spiel <a href="http://illarion.org/community/forums/viewforum.php?f=77">bekannter zu machen</a>. Erzähl auch deinen Freunden von Illarion!</p>
+		<p>Illarion kann man auf vielerlei Arten unterstützen. Du könntest dem Verein <a href="<?php echo Page::getURL(); ?>/community/de_society.php">Illarion e.V.</a> beitreten, die <a href="<?php echo Page::getURL(); ?>/development/de_content_tutorial.php">Entwicklung des Spieles</a> unterstützen oder dabei helfen, das Spiel <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">bekannter zu machen</a>. Erzähl auch deinen Freunden von Illarion!</p>
 		
-		<p>Wenn du fortgeschrittene Fähigkeiten in Java, C++, LUA, PHP oder mit 3D-Grafiken hast, wende dich doch an einen der <a href="http://illarion.org/community/de_contact.php#4">Entwickler</a>, um deinen Beitrag zur Entwicklung beizusteuern. Beachte hierbei, dass Illarion kein gewinnorientierte Projekt ist und somit auch keine Vergütung gezahlt werden kann.</p>
+		<p>Wenn du fortgeschrittene Fähigkeiten in Java, C++, LUA, PHP oder mit 3D-Grafiken hast, wende dich doch an einen der <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#4">Entwickler</a>, um deinen Beitrag zur Entwicklung beizusteuern. Beachte hierbei, dass Illarion kein gewinnorientierte Projekt ist und somit auch keine Vergütung gezahlt werden kann.</p>
 		
 	<li class="question"><a id="co5"></a><strong>Welche Features sind für die Zukunft noch geplant?</strong></li>
 	
-		<p>Die Entwicklung Illarions folgt sechs klar definierten <a href="http://illarion.org/development/de_progress.php">Meilensteinen</a>. Diese Meilensteine stehen für einen Zustand des Spieles, der keine weitere Nacharbeit von bestehenden Features mehr erfordert. Handwerk und Kampf werden überarbeitet werden und weitere Magiearten werden dem Spiel hinzugefügt. Ebenso werden wir weitere Features hinzufügen, die kein anderes Spiel zu bieten hat, um die Besonderheit der Welt Illarion zu betonen.</p>
+		<p>Die Entwicklung Illarions folgt sechs klar definierten <a href="<?php echo Page::getURL(); ?>/development/de_progress.php">Meilensteinen</a>. Diese Meilensteine stehen für einen Zustand des Spieles, der keine weitere Nacharbeit von bestehenden Features mehr erfordert. Handwerk und Kampf werden überarbeitet werden und weitere Magiearten werden dem Spiel hinzugefügt. Ebenso werden wir weitere Features hinzufügen, die kein anderes Spiel zu bieten hat, um die Besonderheit der Welt Illarion zu betonen.</p>
 	
 </ul>
 

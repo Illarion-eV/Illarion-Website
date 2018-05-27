@@ -129,7 +129,7 @@ zulässig:</p>
 <div><a id="world"></a></div>
 <h2>Die Spielwelt</h2>
 
-<p>Die Beschreibung der Spielwelt, wie auf http://www.illarion.org veröffentlicht, ist verpflichtend.
+<p>Die Beschreibung der Spielwelt, wie auf <?php echo Page::getURL(); ?> veröffentlicht, ist verpflichtend.
 Bei der Auswahl der Rassen eines Charakters ist die Auswahl auf die bei der Charaktererstellung angegebenen Rassen begrenzt.
 Auch über das Rollenspiel ist es nicht erlaubt, Mischlingscharaktere irgendeiner Art zu spielen.</p>
 
@@ -238,7 +238,7 @@ einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 
 <p>Auf dem Forum und im Illarion-Chat sind übliche Netiquette zu wahren. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind verboten. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
 
-<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="http://illarion.org/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="http://illarion.org/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
+<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -260,11 +260,11 @@ so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 <h2>Open Source und das Urheberrecht</h2>
 
 <p>Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) ist unter
-der <a href="http://www.gnu.org/licenses/gpl-3.0">
+der <a href="https://www.gnu.org/licenses/gpl-3.0">
 GPLv3</a> veröffentlicht. Die Serversoftware, alle Skripte und Karten sind unter 
-der <a href="http://www.gnu.org/licenses/agpl-3.0">
+der <a href="https://www.gnu.org/licenses/agpl-3.0">
 AGPLv3</a> veröffentlicht.
-Diese Quellen sind somit <a href="http://illarion.org/development/de_opensource.php">
+Diese Quellen sind somit <a href="<?php echo Page::getURL(); ?>/development/de_opensource.php">
 öffentlich einsehbar</a> und verwendbar.</p>
 
 <p>Alle anderen Inhalte von Illarion, das

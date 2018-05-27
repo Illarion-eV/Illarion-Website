@@ -1,4 +1,4 @@
-# robots.txt zu http://illarion.org
+# robots.txt zu https://illarion.org
 
 User-agent: SemrushBot
 Disallow: /

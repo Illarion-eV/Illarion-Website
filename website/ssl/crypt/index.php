@@ -54,7 +54,7 @@
     <li>contains special characters</li>
     <li>contains the above in seemingly arbitrary order</li>
 </ul>
-If you're having trouble to remember all your passwords, than have a look at <a href="http://keepassx.org">http://keepassx.org</a>
+If you're having trouble to remember all your passwords, than have a look at <a href="https://keepassx.org">https://keepassx.org</a>
 </p>
 
 <p>Please enter the password that shall be crypted:</p>

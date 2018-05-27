@@ -1,10 +1,10 @@
 <?php
    if( ereg( 'de', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) )
    {
-   	header('Location: http://' . $_SERVER['SERVER_NAME'] . '/general/de_startpage.php');
+   	header('Location: https://' . $_SERVER['SERVER_NAME'] . '/general/de_startpage.php');
    }
    else
    {
-      header('Location: http://' . $_SERVER['SERVER_NAME'] . '/general/us_startpage.php');
+      header('Location: https://' . $_SERVER['SERVER_NAME'] . '/general/us_startpage.php');
    }
 ?>

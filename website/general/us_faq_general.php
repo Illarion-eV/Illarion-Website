@@ -72,19 +72,19 @@ Page::Init();
 		
 	<li class="question"><a id="gs2"></a><strong>How much do I have to pay for Illarion? Is there a monthly fee or an item shop?</strong></li>
 		
-		<p>Illarion is completely free. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="http://illarion.org/community/us_society.php">Illarion e.V.</a>. If you want, you can support the work of the society by a voluntary <a href="http://illarion.org/community/us_society.php">donation</a> or by becoming a supporting member.</p>
+		<p>Illarion is completely free. You have the guarantee that you will never have to pay a cent for this game. There are no premium items nor an item shop. Illarion is run a non profit organisation called <a href="<?php echo Page::getURL(); ?>/community/us_society.php">Illarion e.V.</a>. If you want, you can support the work of the society by a voluntary <a href="<?php echo Page::getURL(); ?>/community/us_society.php">donation</a> or by becoming a supporting member.</p>
 		
 	<li class="question"><a id="gs3"></a><strong>What are the system requirements for Illarion?</strong></li>
 
-	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="http://illarion.org/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
+	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
 
 	<li class="question"><a id="gs4"></a><strong>What do I need to play?</strong></li>
 		
-		<p>To play Illarion, you must first <a href="http://illarion.org/community/account/us_register.php">register an account</a> and create a character. Once these are complete, <a href="http://illarion.org/illarion/us_java_download.php">download</a> the game client. You are then ready to immerse yourself in the world of Illarion!</p>
+		<p>To play Illarion, you must first <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">register an account</a> and create a character. Once these are complete, <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download</a> the game client. You are then ready to immerse yourself in the world of Illarion!</p>
 					
 	<li class="question"><a id="gs5"></a><strong>Where can I download the game?</strong></li>
 		
-		<p>Illarion can be downloaded for many operation systems on the <a href="http://illarion.org/illarion/us_java_download.php">download page</a>. During the setup, you will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.</p>
+		<p>Illarion can be downloaded for many operation systems on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page</a>. During the setup, you will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.</p>
 		
 	<li class="question"><a id="gs6"></a><strong>How do I log into the game?</strong></li>
 	
@@ -92,7 +92,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs7"></a><strong>From what races and classes can I chose?</strong></li>
 	
-		<p>Illarion features six playable <a href="http://illarion.org/illarion/races/us_races.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
+		<p>Illarion features six playable <a href="<?php echo Page::getURL(); ?>/illarion/races/us_races.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
 		
 		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. Except for magic, you can combine as many skills as you like, only your imagination limits what your characters may become.
 		
@@ -102,7 +102,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs9"></a><strong>I have a technical problem. Where can I get support?</strong></li>
 		
-		<p>There is a dedicated <a href="http://illarion.org/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="http://illarion.org/community/us_chat.php">chat</a> to get in contact with the gamemasters, developers and other players.</p>
+		<p>There is a dedicated <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">chat</a> to get in contact with the gamemasters, developers and other players.</p>
 		
 </ul>
 
@@ -143,7 +143,7 @@ Page::Init();
 		
 	<li class="question"><a id="fs7"></a><strong>What faction should I chose?</strong></li>
 		
-		<p>The land Illarion is divided between three factions: <a href="http://illarion.org/illarion/us_factions.php#2">Wealthy Galmair</a>, <a href="http://illarion.org/illarion/us_factions.php#1">noble Cadomyr</a> and <a href="http://illarion.org/illarion/us_factions.php#3">wise Runewick</a>. Just pick the faction that fits the motives of your character best. You can revise your decisions later in the game or even become an outlaw.</p>
+		<p>The land Illarion is divided between three factions: <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#2">Wealthy Galmair</a>, <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#1">noble Cadomyr</a> and <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#3">wise Runewick</a>. Just pick the faction that fits the motives of your character best. You can revise your decisions later in the game or even become an outlaw.</p>
 		
 	<li class="question"><a id="fs8"></a><strong>Does the game have storage facilities?</strong></li>
 		
@@ -168,7 +168,7 @@ Page::Init();
 
 	<li class="question"><a id="gc2"></a><strong>What are CMs and GMs?</strong></li>
 	
-		<p>A CM is a <a href="http://illarion.org/community/us_contact.php#2">Community Manager</a>. Their role is to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue. A GM is a <a href="http://illarion.org/community/us_contact.php#3">Gamemaster</a>. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion.</p>
+		<p>A CM is a <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#2">Community Manager</a>. Their role is to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue. A GM is a <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#3">Gamemaster</a>. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion.</p>
 		
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
@@ -186,7 +186,7 @@ Page::Init();
 
 	<li class="question"><a id="gc6"></a><strong>How do I send global chat messages?</strong></li>
 	
-		 <p>In order not to distract players from the actual game, the <a href="http://illarion.org/community/us_chat.php">global chat</a> can be found on the website. We might grant powerful mages a special ability to communicate by telepathy in the game. If you need to spread a message, you can always hire another player as a messenger or use the <a href="http://illarion.org/community/forums/index.php">Forums</a> to leave messages on the town walls.</p>
+		 <p>In order not to distract players from the actual game, the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">global chat</a> can be found on the website. We might grant powerful mages a special ability to communicate by telepathy in the game. If you need to spread a message, you can always hire another player as a messenger or use the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> to leave messages on the town walls.</p>
 		
 	<li class="question"><a id="gc7"></a><strong>The game took taxes from me! What is this all about?</strong></li>
 	
@@ -213,26 +213,26 @@ Page::Init();
 	<li class="question"><a id="co1"></a><strong>I read Illarion is Open Source. What does that mean?</strong></li>
 	
 		<p>Illarion is a free game, not just in terms of cost, but also in terms of free code. The sources of the Java software (client and development tools) are released
-		under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>. The sources of server, scripts and maps are released under <a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
-		These sources are thus <a href="http://illarion.org/development/us_opensource.php">available for public review</a> and usage.</p>
+		under <a href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a>. The sources of server, scripts and maps are released under <a href="https://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
+		These sources are thus <a href="<?php echo Page::getURL(); ?>/development/us_opensource.php">available for public review</a> and usage.</p>
 		
 	<li class="question"><a id="co2"></a><strong>I found a bug or have a feature request. How do I report it?</strong></li>
 		
-		<p>The best way to report a bug or request features for the game or website is to use the <a href="http://illarion.org/mantis/index.php">Mantis Bugtracker</a> which is the Bug Reporting system used by the developers. You can also post bugs and feature requests in the <a href="http://illarion.org/community/forums/index.php">Forums</a> but there is a chance they may not be seen by the developers.</p>
+		<p>The best way to report a bug or request features for the game or website is to use the <a href="<?php echo Page::getURL(); ?>/mantis/index.php">Mantis Bugtracker</a> which is the Bug Reporting system used by the developers. You can also post bugs and feature requests in the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> but there is a chance they may not be seen by the developers.</p>
 
 	<li class="question"><a id="co3"></a><strong>Can players write books, NPCs or even quests?</strong></li>
 	
-		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="http://illarion.org/community/us_contact.php#4">Contact a developer</a> and read the <a href="http://illarion.org/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
+		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">Contact a developer</a> and read the <a href="<?php echo Page::getURL(); ?>/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
 		
 	<li class="question"><a id="co4"></a><strong>How can I contribute to Illarion? What skills are needed?</strong></li>
 	
-		<p>There are many ways in which you can contribute to Illarion. You could support the <a href="http://illarion.org/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="http://illarion.org/development/us_content_tutorial.php">development of the game</a> or help to <a href="http://illarion.org/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
+		<p>There are many ways in which you can contribute to Illarion. You could support the <a href="<?php echo Page::getURL(); ?>/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="<?php echo Page::getURL(); ?>/development/us_content_tutorial.php">development of the game</a> or help to <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
 		
-		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="http://illarion.org/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
+		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
 		
 	<li class="question"><a id="co5"></a><strong>What features are planned for the future?</strong></li>
 	
-		<p>Illarion's development follows six clearly specified <a href="http://illarion.org/development/us_progress.php">milestones</a>. Those milestones stand for a state of the game that does not require any future reworking on existing features. Crafting and fighting shall be reworked and more types of magic will be added to the game. Also, we'll add unique features to the game no other game can offer to enhance the immersion and uniqueness of the world Illarion.</p>
+		<p>Illarion's development follows six clearly specified <a href="<?php echo Page::getURL(); ?>/development/us_progress.php">milestones</a>. Those milestones stand for a state of the game that does not require any future reworking on existing features. Crafting and fighting shall be reworked and more types of magic will be added to the game. Also, we'll add unique features to the game no other game can offer to enhance the immersion and uniqueness of the world Illarion.</p>
 	
 </ul>
 

@@ -5,11 +5,11 @@
 * div.banner_right,
 * .pngfix,
 * div.rating div.icon img {
-	behavior: url("http://illarion.org/shared/js/iepngfix.htc");
+	behavior: url("https://illarion.org/shared/js/iepngfix.htc");
 }
 
 body {
-	behavior:url("http://illarion.org/shared/js/csshover2.htc");
+	behavior:url("https://illarion.org/shared/js/csshover2.htc");
 }
 
 * html a#lightwindow_galleries_tab,
@@ -41,7 +41,7 @@ dl.messages dd.error {
 
 tr.row0 td {
 	background:transparent none repeat scroll 0 0;
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://illarion.org/shared/pics/black-25.png');
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://illarion.org/shared/pics/black-25.png');
 }
 
 div.head_button,
