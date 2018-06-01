@@ -73,11 +73,11 @@
 <h2><?php echo $pg_profil['chr_name']; ?></h2>
 
 <?php if (is_array($picture)): ?>
-<div class="charprofil_picture" style="height:<? echo $picture['height']; ?>px;width:<? echo $picture['width']; ?>px;">
+<div class="charprofil_picture" style="height:<?php echo $picture['height']; ?>px;width:<?php echo $picture['width']; ?>px;">
 	<?php if ( isset( $picture['file'] ) ): ?>
-	<a href="<?php echo $picture['file']; ?>" onclick="return false;" class="lightwindow" title="<? echo $pg_profil['chr_name']; ?>">
+	<a href="<?php echo $picture['file']; ?>" onclick="return false;" class="lightwindow" title="<?php echo $pg_profil['chr_name']; ?>">
 	<?php endif; ?>
-		<img height="<? echo $picture['height']; ?>" width="<? echo $picture['width']; ?>" src="<? echo $picture['preview']; ?>" alt="Character Picture" />
+		<img height="<?php echo $picture['height']; ?>" width="<?php echo $picture['width']; ?>" src="<?php echo $picture['preview']; ?>" alt="Character Picture" />
 	<?php if ( isset( $picture['file'] ) ): ?>
 	</a>
 	<?php endif; ?>
