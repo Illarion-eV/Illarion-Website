@@ -25,7 +25,7 @@ Manch Wanderers Herz, im Dunkel verführt<br>
 Durch die Schatten von Nabranoo.</i></p>
 
 <?php cap(M); ?>
-<p><i>eine eigene Reise begann, als eines Tages eine Karawane gynkesischer Händler durch unseren kleinen Ort an der salkamerianischen Grenze zog. Sie nahmen mich für einen kleinen Obolus mit und unbedarft wie ich war, vertraute ich einigen alter Karten, die ich von meinem Herren gestohlen hatte. Ich mag heute nicht mehr sagen ob mich Neugier oder schlicht Dummheit bewogen hat, die Reise anzutreten. Jahrelang war meine Welt die, der staubigen Pergamente und alten Bücher meines Herren. Ich hatte keine Ahnung wohin mich meine Reise führen würde und es war mir auch egal. Ich hatte die Chance all die Länder zu sehen, über die ich gelesen hatte denn kein Wort oder Bild kann die wahren Wunder der Welt beschreiben.</i></p>
+<p><i>eine eigene Reise begann, als eines Tages eine Karawane gynkesischer Händler durch unseren kleinen Ort an der salkamerianischen Grenze zog. Sie nahmen mich für einen kleinen Obolus mit und unbedarft wie ich war, vertraute ich einigen alten Karten, die ich von meinem Herren gestohlen hatte. Ich mag heute nicht mehr sagen ob mich Neugier oder schlicht Dummheit bewogen hatte, die Reise anzutreten. Jahrelang war meine Welt die der staubigen Pergamente und alten Bücher meines Herren. Ich hatte keine Ahnung wohin mich meine Reise führen würde und es war mir auch egal. Ich hatte die Chance all die Länder zu sehen, über die ich gelesen hatte, denn kein Wort oder Bild kann die wahren Wunder der Welt beschreiben.</i></p>
 
 <?php navBarBottom("de_overview.php", "de_mortals_2.php"); ?>
 
