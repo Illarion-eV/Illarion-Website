@@ -9,12 +9,6 @@ Page::Init();
 
 <h1>Illarion Chat</h1>
 
-<h2>Illarion Discord Server</h2>
-
-<iframe src="https://discordapp.com/widget?id=401855954272124940&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-
-<h3>Information about Discord</h3>
-
 
 
 <h2>Illarion IRC Chat</h2>
