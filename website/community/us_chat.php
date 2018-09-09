@@ -7,15 +7,25 @@ Page::setXHTML();
 Page::Init();
 ?>
 
-<h1>Illarion IRC Chat</h1>
+<h1>Illarion Chat</h1>
 
-<h2>Chat</h2>
+<h2>Illarion Discord Server</h2>
+
+<iframe src="https://discordapp.com/widget?id=401855954272124940&amp;theme=dark" width="700" height="500" allowtransparency="true" frameborder="0"></iframe>
+
+<h3>Information about Discord</h3>
+
+<p>This page establishes a connection to Discord to join the Illarion server. On this server, the <a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> and <a href="https://discordapp.com/guidelines">the rules of Discord</a> apply.</p>
+
+<p>If you want to connect directly to Discord, here is the invitation link: <a href="https://discord.gg/yj3htPN"</a></p>
+
+<h2>Illarion IRC Chat</h2>
 
 <iframe src="https://webchat.quakenet.org/?channels=illarion&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
 
-<h2>Information</h2>
+<h3>Information about IRC</h3>
 
-<p>This page establishes a connection to the Quakenet IRC
+<p>This applet establishes a connection to the Quakenet IRC
 Server network and enters the Illarion Chat room. In this chat room the
 <a href="<?php echo $url; ?>/illarion/us_rules.php">rules of Illarion</a> and
 the rules of <a href="http://www.quakenet.org/">Quakenet</a> apply.</p>
