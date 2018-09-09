@@ -1,7 +1,7 @@
 <?php
 include ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
 Page::setTitle( 'Illarion - Chat' );
-Page::setDescription( 'This webchat client allows access to the Illarion IRC channel without an additional IRC client needed.' );
+Page::setDescription( 'This page allows access to the Illarion chat without an additional client needed.' );
 Page::setKeywords( array( 'Chat, IRC' ) );
 Page::setXHTML();
 Page::Init();
