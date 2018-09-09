@@ -11,7 +11,7 @@ Page::Init();
 
 <h2>Chat</h2>
 
-<iframe src="http://webchat.quakenet.org/?randomnick=1&amp;channels=illarion&amp;prompt=1&amp;uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
+<iframe src="https://webchat.quakenet.org/?channels=illarion&uio=OT10cnVlJjExPTEzMw1a" width="700" height="500"></iframe>
 
 <h2>Information</h2>
 
