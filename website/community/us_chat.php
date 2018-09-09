@@ -11,7 +11,7 @@ Page::Init();
 
 <h2>Illarion Discord Server</h2>
 
-<iframe src="https://discordapp.com/widget?id=401855954272124940" width="700" height="500"></iframe>
+
 
 <h3>Information about Discord</h3>
 

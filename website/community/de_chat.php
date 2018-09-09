@@ -11,7 +11,7 @@ Page::Init();
 
 <h2>Illarion Discord-Server</h2>
 
-<iframe src="https://discordapp.com/widget?id=401855954272124940" width="700" height="500"></iframe>
+
 
 <h3>Information über Discord</h3>
 
@@ -26,6 +26,7 @@ Page::Init();
 <h3>Information über IRC</h3>
 
 <p>Auf dieser Seite wird eine Verbindung zum Quakenet IRC-Servernetzwerk hergestellt um dem Illarion-Chat beizutreten. In diesem Chat gelten sowohl die <a href="<?php echo $url; ?>/illarion/de_rules.php">Regeln von Illarion</a> als auch die <a href="https://www.quakenet.org/">Regeln von Quakenet</a>.</p>
+
 <p>Solltest du einen anderen IRC-Client verwenden wollen sind dies die nötigen Zugangsdaten:</p>
 <dl>
 	<dt>Server: irc.quakenet.org</dt>
