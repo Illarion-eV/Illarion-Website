@@ -20,6 +20,8 @@
 <?php Page::cap('I'); ?>
 <p class="hyphenate">llarion is an online game where genuine roleplay is enforced. The main design principle is a focus on the interaction with other players. All the player characters you will encounter during your time here are living, breathing inhabitants of the mysterious world of Illarion. Each character has its own past, goals, strengths, flaws and personality. Experience glorious adventures as noble knight or live the life of a hardworking craftsman, acquisitive merchant or charismatic priest of the gods.</p>
 
+<p class="hyphenate">Illarion - What role will you play? <a href="/illarion/us_java_download.php">Download now and start your adventure!</a></p>
+
 <h2>The World Illarion</h2>
 <p class="hyphenate">A mature high fantasy setting where elves meet orcs is placed in a persistent, open world with tangible lore. Sixteen gods are worshipped by the citizens of three factions. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy <a href="/illarion/us_factions.php#2">Galmair</a> or wise <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
@@ -34,8 +36,6 @@
 
 <h2>Immersive mechanics</h2>
 <p class="hyphenate">The game mechanics employed keep the balance between complexity, innovation and motivation of players. Illarion shows a classic, slow-paced gameplay with isometric retro graphics while still using modern technologies.</p>
-
-<p>Illarion - What role will you play? <a href="/illarion/us_java_download.php">Download now and start your adventure!</a></p>
 
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
