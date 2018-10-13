@@ -15,10 +15,10 @@
 	
 ?>
 
-<h1>Illarion</h1>
+<h1>Illarion - Carve yourself a new life</h1>
 
-<h2>Roleplaying</h2>
-<p class="hyphenate">Illarion is an online game where genuine roleplay is enforced. The main design principle is a focus on the interaction with other players. All the player characters you will encounter during your time here are living, breathing inhabitants of the mysterious world of Illarion. Each character has its own past, goals, strengths, flaws and personality. Experience glorious adventures as noble knight or live the life of a hardworking craftsman, acquisitive merchant or charismatic priest of the gods.</p>
+<?php Page::cap('I'); ?>
+<p class="hyphenate">llarion is an online game where genuine roleplay is enforced. The main design principle is a focus on the interaction with other players. All the player characters you will encounter during your time here are living, breathing inhabitants of the mysterious world of Illarion. Each character has its own past, goals, strengths, flaws and personality. Experience glorious adventures as noble knight or live the life of a hardworking craftsman, acquisitive merchant or charismatic priest of the gods.</p>
 
 <h2>The World Illarion</h2>
 <p class="hyphenate">A mature high fantasy setting where elves meet orcs is placed in a persistent, open world with tangible lore. Sixteen gods are worshipped by the citizens of three factions. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy <a href="/illarion/us_factions.php#2">Galmair</a> or wise <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
