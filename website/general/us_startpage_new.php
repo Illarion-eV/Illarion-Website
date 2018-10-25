@@ -51,31 +51,6 @@
 
 <div class="clr"></div>
 
-<?php
-	$pgSQL =& Database::getPostgreSQL();
-
-	if(IllaUser::auth('quests'))
-	{
-		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
-		.PHP_EOL.' FROM homepage.quests'
-		.PHP_EOL.' WHERE q_status != 3'
-		.PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
-		;
-	}
-	else
-	{
-		$query = 'SELECT q_title_de, q_title_us, q_status, q_id, q_type, q_starttime'
-		.PHP_EOL.' FROM homepage.quests'
-		.PHP_EOL.' WHERE q_status != 3 AND ( q_type != 2 OR q_user_id = '.$pgSQL->Quote( IllaUser::$ID ).' )'
-		.PHP_EOL.' ORDER BY q_starttime ASC, q_status DESC, q_type DESC, COALESCE( q_title_us , q_title_de ) ASC'
-		;
-	}
-
-	$pgSQL->setQuery( $query );
-	$quests = $pgSQL->loadAssocList();
-	if ( count($quests) > 0):
-?>
-
 <h1>Latest news</h1>
 
 <?php
