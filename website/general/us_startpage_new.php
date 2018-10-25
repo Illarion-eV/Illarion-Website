@@ -76,64 +76,12 @@
 	if ( count($quests) > 0):
 ?>
 
-<h1>News</h1>
+<h1>Latest news</h1>
 
 <?php
 $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
 $newsDb = new \News\NewsDatabase();
-echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
+echo $newsRenderer->renderList($newsDb->getNewsList(1), 'en')
 ?>
 
-<h1>Quests and Events</h1>
-
-<h2>Announced Events</h2>
-
-<table class="quests">
-	<?php foreach($quests as $key=>$quest): ?>
-	<?php
-		if ($quest['q_type'] == 2)
-		{
-			$quest['q_status'] = 3;
-		}
-		if (!is_null( $quest['q_starttime'] ))
-		{
-		    $quest['q_starttime'] = strtotime( $quest['q_starttime'] );
-		}
-	?>
-	<tr>
-		<td class="title">
-			<a style="font-weight:bold;" href="<?php echo Page::getURL(); ?>/statistics/us_quests.php?id=<?php echo $quest['q_id']; ?>">
-				<?php echo ( is_null($quest['q_title_us']) ? $quest['q_title_de'] : $quest['q_title_us'] ); ?>
-			</a>
-		</td>
-		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Official Quest' : 'Player Quest'); ?></td>
-		<td class="status<?php echo $quest['q_status']; ?>">
-			<?php
-				switch($quest['q_status'])
-				{
-					case 0:	echo 'Quest is planned'; break;
-					case 1:	echo 'Quest starts soon'; break;
-					case 2:	echo 'Quest takes place now'; break;
-					case 3:	echo 'Not activated'; break;
-				}
-				if (!is_null( $quest['q_starttime'] ))
-				{
-					echo '<br />', strftime( '%d. %B %Y %I:%M %P', IllaDateTime::TimestampWithOffset( $quest['q_starttime'] ) );
-				}
-			?>
-		</td>
-	</tr>
-	<?php endforeach; ?>
-</table>
-
-<?php endif; ?>
-
-<?php if (IllaUser::auth('quests')): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New quest</button></p>
-<?php elseif (IllaUser::loggedIn()): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New player quest</button></p>
-<?php endif; ?>
-
-<?php if ( count($quests) > 0): ?>
 <?php Page::insert_go_to_top_link(); ?>
-<?php endif; ?>
