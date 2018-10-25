@@ -58,5 +58,3 @@ $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
 $newsDb = new \News\NewsDatabase();
 echo $newsRenderer->renderList($newsDb->getNewsList(1), 'en')
 ?>
-
-<?php Page::insert_go_to_top_link(); ?>
