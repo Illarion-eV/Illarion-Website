@@ -84,8 +84,8 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 
 <h4>Share your work using Windows/Mac</h4>
 <ul>
-<li>In SourceTree, right-click the "upstream"-remote in the left hand side list, select "Pull from upstream" and choose "master" as "Remote branch to pull" to update your local copy with the version currently in the game.</li> 
-<li>You need to click "Refresh" first if "master" is not listed.</li>
+<li>In SourceTree, right-click the "upstream"-remote in the left hand side list, select "Pull from upstream" and choose "develop" as "Remote branch to pull" to update your local copy with the development version. The version  currently in the game you can find in the branch "master".</li> 
+<li>You need to click "Refresh" first if "develop" or "master" are not listed. For the website repository, there is only the branch "master".</li>
 <li>Click the "Commit" icon in the top bar to prepare a set of changes to send.</li>
 <li>View your changes by selecting each file, then add them to the commit by using the single arrow up or add all of them by using the double arrow up.</li>
 <li>Enter a meaningful commit message in imperative (like I did here). It should be something like, "Fix spelling error in NPC John Doe". If you need more than one line, use a short descriptive title and leave the second line blank.</li>
@@ -94,7 +94,7 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 </ul>
 <h4>Share your work using Linux/Console</h4>
 <ul>
-<li>git pull upstream master</li>
+<li>git pull upstream develop</li>
 <li>git add [files to commit]</li>
 <li>git commit</li>
 <li>git push</li>

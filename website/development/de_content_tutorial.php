@@ -81,8 +81,8 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 
 <h4>Teilen deiner Arbeit unter Windows/Mac</h4>
 <ul>
-<li>Um deine lokale Kopie mit der Version zu aktualisieren, die gerade im Spiel vorhanden ist, wähle in SourceTree mittels Rechtsklick die "upstream"-Remote aus der Liste auf der linken Seite, wähle "Pull from upstream" und dann "master" als "Remote branch to pull"</li>
-<li>Falls "master" nicht aufgelistet ist, musst du erst auf "Refresh" klicken.</li>
+<li>Um deine lokale Kopie mit der Entwicklungsversion zu aktualisieren, wähle in SourceTree mittels Rechtsklick die "upstream"-Remote aus der Liste auf der linken Seite, wähle "Pull from upstream" und dann "develop" als "Remote branch to pull". Die Version, die gerade im Spiel vorhanden ist, ist im Branch "master".</li>
+<li>Falls "develop" oder "master" nicht aufgelistet sind, musst du erst auf "Refresh" klicken. Für die Website wird nur der Branch "master" gepflegt.</li>
 <li>Drücke den "Commit"-Knopf in der oberen Leiste um einen Satz von Änderungen zum Versenden vorzubereiten.</li>
 <li>Überprüfe deine Änderung durch Anwählen jeder einzelnen Datei. Füge sie deinem "Commit" mit dem Aufwärtspfeil hinzu oder füge alle Dateien mit dem doppelten Aufwärtspfeil hinzu.</li>
 <li>Gebe eine aussagekräftige "commit message" im Imperativ ein (wie ich hier). Beachte, dass die Nachricht in Englisch geschrieben werden muss. Sie sollte in etwa lauten: "Fix spelling error in NPC John Doe". Falls du mehr als eine kurze Zeile benötigst, benutze einen prägnanten Titel und lass die zweite Zeile leer.</li>
@@ -91,7 +91,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 </ul>
 <h4>Teilen deiner Arbeit unter Linux oder der Konsole</h4>
 <ul>
-<li>git pull upstream master</li>
+<li>git pull upstream develop</li>
 <li>git add [Geänderte Dateien]</li>
 <li>git commit</li>
 <li>git push</li>
