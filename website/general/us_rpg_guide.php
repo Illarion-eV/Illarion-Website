@@ -57,8 +57,8 @@ flexibility in the software by creativity, but more on this topic later.</p>
 
 <h2>The game world</h2>
 
-<p>The world of Illarion should be like a mediaeval country. To make this more interesting, we
-added things like magic, strange peoples (elves, dwarves, ...) and a lot of gods to the setting.
+<p>The world of Illarion should be like a medieval country. To make this more interesting, we
+added things like magic, strange peoples (elves, dwarves,...) and a lot of gods to the setting.
 We thought about a time, before complex machines were created. Besides these changes, the normal
 rules of nature apply like on the earth. The world is currently restricted to one island. If the
 population grows and time passes, we will add other islands, which are, of course, already known
