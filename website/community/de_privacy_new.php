@@ -16,13 +16,9 @@
 <p>I. Informationen über uns als Verantwortliche<br>II. Rechte der Nutzer und Betroffenen<br>III. Informationen zur Datenverarbeitung</p>
 <h3>I. Informationen über uns als Verantwortliche</h3>
 <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
-<p><span style="color: #ff0000;">Musterfirma/Musterunternehmer<br>Musterstraße 1<br>12345 Musterstadt<br>Deutschland</span></p>
-<p><span style="color: #ff0000;">Telefon: Telefonnummer<br>Telefax: Faxnummer<br>E-Mail: muster@mustermail.xy</span></p>
-<p>Datenschutzbeauftragte/r beim Anbieter ist:</p>
-<p><span style="color: #ff0000;">Maxie Musterfrau&nbsp;</span></p>
-<p><span style="color: #ff0000;">[nachfolgende Angaben sind zu ergänzen, sofern ein Externer Datenschutzbeauftragter bestellt ist]</span></p>
-<p><span style="color: #ff0000;">Musterstraße 1<br>12345 Musterstadt<br>Deutschland</span></p>
-<p><span style="color: #ff0000;">Telefon: Telefonnummer<br>Telefax: Faxnummer<br>E-Mail: datenschutz@mustermail.xy</span></p>
+<p>Illarion e.V.<br>Registergericht: Amtsgericht Kempten<br>Registernummer: VR 30767<br>Deutschland</p>
+<p>E-Mail: committee@illarion.org</p>
+
 <h3>II. Rechte der Nutzer und Betroffenen</h3>
 <p>Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung haben die Nutzer und Betroffenen das Recht</p>
 <ul>
@@ -103,7 +99,7 @@
 <p>Allerdings nutzen wir Matomo mit der Anonymisierungsfunktion „Automatically Anonymize Visitor IPs“. Diese Anonymisierungsfunktion kürzt Ihre IP-Adresse um zwei Bytes, sodass eine Zuordnung zu Ihnen bzw. zu dem von Ihnen genutzten Internetanschluss unmöglich ist.</p>
 <p>Falls Sie mit dieser Verarbeitung nicht einverstanden sind, haben Sie die Möglichkeit, die Speicherung des Cookies durch eine Einstellung in Ihrem Internet-Browsers zu verhindern. Nähere Informationen hierzu finden Sie vorstehend unter „Cookies“.</p>
 <p>Darüber hinaus haben Sie die Möglichkeit, die Analyse Ihres Nutzungsverhaltens im Wege des sog. Opt-outs zu beenden. Mit dem Bestätigen des Links</p>
-<p><span style="color: #ff0000;">[HIER BITTE IFRAME VON MATOMO MIT OPT-OUT-COOKIE EINFÜGEN]</span></p>
+<p><a href=https://illarion.org/piwik/index.php?module=UsersManager&action=setIgnoreCookie&idSite=1&period=day&date=yesterday&ignoreSalt=b359efccba6a9d9f6b1f1d0751d37f93#excludeCookie">https://illarion.org/piwik/index.php?module=UsersManager&action=setIgnoreCookie&idSite=1&period=day&date=yesterday&ignoreSalt=b359efccba6a9d9f6b1f1d0751d37f93#excludeCookie</a></p>
 <p>wird über Ihren Internet-Browser ein Cookie auf Ihrem Endgerät gespeichert, das die weitere Analyse verhindert. Bitte beachten Sie aber, dass Sie den obigen Link erneut betätigen müssen, sofern Sie die auf Ihrem Endgerät gespeicherten Cookies löschen.</p>
 
 <h4>„Facebook“-Social-Plug-in</h4>
@@ -148,7 +144,7 @@
 <p><a target="_blank" rel="noopener" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 <p>abrufbaren Datenschutzhinweisen bereit.</p>
 
-<h4>MailChimp - Newsletter</h4>
+<!--<h4>MailChimp - Newsletter</h4>
 <p>Wir bieten Ihnen die Möglichkeit an, sich bei uns über unseren Internetauftritt für unsere kostenlosen Newsletter anmelden zu können.</p>
 <p>Zum Newsletterversand setzen wir MailChimp, einen Dienst der The Rocket Science Group, LLC, 512 Means Street, Suite 404, Atlanta, GA 30318, USA, nachfolgend nur „The Rocket Science Group“ genannt, ein.</p>
 <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“)</p>
@@ -159,7 +155,7 @@
 <p>Falls Sie sich zu unserem Newsletter-Versand anmelden, werden die während des Anmeldevorgangs abgefragten Daten, wie Ihre E-Mail-Adresse sowie, optional, Ihr Name nebst Anschrift, durch The Rocket Science Group verarbeitet. Zudem werden Ihre IP-Adresse sowie das Datum Ihrer Anmeldung nebst Uhrzeit gespeichert. Im Rahmen des weiteren Anmeldevorgangs wird Ihre Einwilligung in die Übersendung des Newsletters eingeholt, der Inhalt konkret beschreiben und auf diese Datenschutzerklärung verwiesen.</p>
 <p>Der anschließend über The Rocket Science Group versandte Newsletter enthält zudem einen sog. Zählpixel, auch Web Beacon genannt“. Mit Hilfe dieses Zählpixels können wir auswerten, ob und wann Sie unseren Newsletter gelesen haben und ob Sie den in dem Newsletter etwaig enthaltenen weiterführenden Links gefolgt sind. Neben weiteren technischen Daten, wie bspw. die Daten Ihres EDV-Systems und Ihre IP-Adresse, werden die dabei verarbeiteten Daten gespeichert, damit wir unser Newsletter-Angebot optimieren und auf die Wünsche der Leser eingehen können. Die Daten werden also zur Steigerung der Qualität und Attraktivität unseres Newsletter-Angebots zu steigern.</p>
 <p>Rechtsgrundlage für den Versand des Newsletters und die Analyse ist Art. 6 Abs. 1 lit. a.) DSGVO.</p>
-<p>Die Einwilligung in den Newsletter-Versand können Sie gemäß Art. 7 Abs. 3 DSGVO jederzeit mit Wirkung für die Zukunft widerrufen. Hierzu müssen Sie uns lediglich über Ihren Widerruf in Kenntnis setzen oder den in jedem Newsletter enthaltenen Abmeldelink betätigen.</p>
+<p>Die Einwilligung in den Newsletter-Versand können Sie gemäß Art. 7 Abs. 3 DSGVO jederzeit mit Wirkung für die Zukunft widerrufen. Hierzu müssen Sie uns lediglich über Ihren Widerruf in Kenntnis setzen oder den in jedem Newsletter enthaltenen Abmeldelink betätigen.</p>-->
 
 <p>
 <a target="_blank" href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Muster-Datenschutzerklärung</a> der <a target="_blank" href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß &amp; Partner</a></p>

@@ -16,13 +16,8 @@
 <p>I. Information about us as controllers of your data<br>II. The rights of users and data subjects<br>III. Information about the data processing</p>
 <h3>I. Information about us as controllers of your data</h3>
 <p>The party responsible for this website (the "controller") for purposes of data protection law is:</p>
-<p><span style="color: #ff0000;">Sample company/entrepreneur</span><br><span style="color: #ff0000;">Any street 1</span><br><span style="color: #ff0000;">12345 Anytown</span><br><span style="color: #ff0000;">Germany</span></p>
-<p><span style="color: #ff0000;">Telephone: Telephone number</span><br><span style="color: #ff0000;">Fax: Fax number</span><br><span style="color: #ff0000;">Email: muster@mustermail.xy</span></p>
-<p>The controller's data protection officer is:</p>
-<p><span style="color: #ff0000;">Maxie Musterfrau&nbsp;</span></p>
-<p><span style="color: #ff0000;">[The following information must be added if an external data protection officer has been appointed].</span></p>
-<p><span style="color: #ff0000;">Any street 1</span><br><span style="color: #ff0000;">12345 Anytown</span><br><span style="color: #ff0000;">Germany</span></p>
-<p><span style="color: #ff0000;">Telephone: Telephone number</span><br><span style="color: #ff0000;">Fax: Fax number</span><br><span style="color: #ff0000;">Email: datenschutz@mustermail.xy</span></p>
+<p>Illarion e.V.<br>Register court: Amtsgericht Kempten<br>Register No: VR 30767<br>Germany</p>
+<p>E-Mail: committee@illarion.org</p>
 <h3>II. The rights of users and data subjects</h3>
 <p>With regard to the data processing to be described in more detail below, users and data subjects have the right</p>
 <ul type="disc">
@@ -103,7 +98,7 @@
 <p>We use Matomo with the "Automatically Anonymize Visitor IPs" function. This anonymization function truncates your IP address by two bytes so that it is impossible to assign it to you or to the internet connection you are using.</p>
 <p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
 <p>In addition, you have the option of terminating the analysis of your usage behavior by opting out. By confirming the link</p>
-<p><span style="color: #ff0000;">[HERE ADD INSERT IFRAME FROM MATOMO WITH OPT-OUT-COOKIE]</span></p>
+<p><a href=https://illarion.org/piwik/index.php?module=UsersManager&action=setIgnoreCookie&idSite=1&period=day&date=yesterday&ignoreSalt=b359efccba6a9d9f6b1f1d0751d37f93#excludeCookie">https://illarion.org/piwik/index.php?module=UsersManager&action=setIgnoreCookie&idSite=1&period=day&date=yesterday&ignoreSalt=b359efccba6a9d9f6b1f1d0751d37f93#excludeCookie</a></p>
 <p>a cookie is stored on your device via your browser to prevent any further analysis. Please note, however, that you must click the above link again if you delete the cookies stored on your end device. </p>
 
 <h4>Facebook plug-in</h4>
@@ -144,6 +139,7 @@
 <p>Further information about the collection and use of data as well as your rights and protection options in Google's privacy policy found at</p>
 <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
 
+<!--
 <h4>MailChimp - Newsletter</h4>
 <p>We offer you the opportunity to register for our free newsletter via our website.</p>
 <p>We use MailChimp, a service of The Rocket Science Group, LLC, 512 Means Street, Suite 404, Atlanta, GA 30318, USA, hereinafter referred to as "The Rocket Science Group".</p>
@@ -154,7 +150,7 @@
 <p>If you register for our free newsletter, the data requested from you for this purpose, i.e. your email address and, optionally, your name and address, will be processed by The Rocket Science Group. In addition, your IP address and the date and time of your registration will be saved. During the registration process, your consent to receive this newsletter will be obtained together with a concrete description of the type of content it will offer and reference made to this privacy policy.</p>
 <p>The newsletter then sent out by The Rocket Science Group will also contain a tracking pixel called a web beacon. This pixel helps us evaluate whether and when you have read our newsletter and whether you have clicked any links contained therein. In addition to further technical data, such as data about your computer hardware and your IP address, the data processed will be stored so that we can optimize our newsletter and respond to the wishes of our readers. The data will therefore increase the quality and attractiveness of our newsletter.</p>
 <p>The legal basis for sending the newsletter and the analysis is Art. 6 Para. 1 lit. a) GDPR.</p>
-<p>You may revoke your prior consent to receive this newsletter under Art. 7 Para. 3 GDPR with future effect. All you have to do is inform us that you are revoking your consent or click on the unsubscribe link contained in each newsletter.</p>
+<p>You may revoke your prior consent to receive this newsletter under Art. 7 Para. 3 GDPR with future effect. All you have to do is inform us that you are revoking your consent or click on the unsubscribe link contained in each newsletter.</p>-->
 
 <p><a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> for <a href="https://www.ratgeberrecht.eu/" target="_blank">Anwaltskanzlei Weiß &amp; Partner</a></p>
 
