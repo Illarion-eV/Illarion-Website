@@ -21,21 +21,6 @@
 
 <p class="hyphenate">Illarion - Welche Rolle wirst du spielen? <a href="/illarion/us_java_download.php">Lade das Spiel jetzt herunter und beginne dein Abenteuer!</a></p>
 
-<h3>Die Welt Illarion</h3>
-<p class="hyphenate">Illarion ist eine reife Fantasy-Welt, in der Orks, Elfen und viele andere Kreaturen anzutreffen sind. Es ist eine offene, lebendige Welt mit greifbarem Hintergrund. Sechzehn Götter werden von den Bewohnern von drei Reichen verehrt.</p>
-
-<h3>Dein Abenteuer</h3>
-<p class="hyphenate">Deine Entscheidungen und Taten formen und gestalten die Welt. Sie werden eines Tages die Seiten der Geschichtsbücher Illarions füllen. Werde Eins mit der Welt und lass deinen Charakter werden, was du möchtest.</p>
-
-<h3>Keine Grenzen</h3>
-<p class="hyphenate">Dein Charakter wird nicht auf eine feste Klasse eingegrenzt wie bei den meisten MMORPGs. Du kannst deinen eigenen Charakter formen und sein Schicksal ist nur von deinen Entscheidungen, Vorstellungen und den Spielregeln begrenzt. Das Spiel hat ein skillbasiertes Levelsystem, welches es dem Spieler erlaubt, seine eigene einzigartige Spielerfahrung zu machen.</p>
-
-<h3>Kostenlos und Open Source</h3>
-<p class="hyphenate">Illarion ist komplett kostenlos. Das Spiel wird von einem eingetragenen Verein geführt und von hochmotivierten Freiwilligen betrieben. Der Client-, Server- und Spielcode sind Open Source gemäß den Bedingungen der Lizenzen GPLv3 und APGPLv3.</p>
-
-<h3>Immersives Spielkonzept</h3>
-<p class="hyphenate">Die angewandten Spielmechaniken halten die Balance zwischen Komplexität, Innovation und Motivation der Spieler. Illarion ist ein klassisches Spiel im gemächlichen Tempo mit isometrischen Retrografiken und modernen Technologien zugleich.</p>
-
 <?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
 <div><a id="group<?php echo $currGroup->index; ?>"></a></div>
 <h2><?php echo $currGroup->gName; ?></h2>
