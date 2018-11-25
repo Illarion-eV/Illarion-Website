@@ -21,13 +21,13 @@
 
 <p class="hyphenate">Illarion - Welche Rolle wirst du spielen? <a href="/illarion/us_java_download.php">Lade das Spiel jetzt herunter und beginne dein Abenteuer!</a></p>
 
-<h2>Die Welt Illarion</h2>
+<h3>Die Welt Illarion</h3>
 <p class="hyphenate">Illarion ist eine reife Fantasy-Welt, in der Orks, Elfen und viele andere Kreaturen anzutreffen sind. Es ist eine offene, lebendige Welt mit greifbarem Hintergrund. Sechzehn Götter werden von den Bewohnern von drei Reichen verehrt. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>, das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
 <h3>Dein Abenteuer</h3>
 <p class="hyphenate">Deine Entscheidungen und Taten formen und gestalten die Welt. Sie werden eines Tages die Seiten der Geschichtsbücher Illarions füllen. Werde Eins mit der Welt und lass deinen Charakter werden, was du möchtest.</p>
 
-<h2>Keine Grenzen</h2>
+<h3>Keine Grenzen</h3>
 <p class="hyphenate">Dein Charakter wird nicht auf eine feste Klasse eingegrenzt wie bei den meisten MMORPGs. Du kannst deinen eigenen Charakter formen und sein Schicksal ist nur von deinen Entscheidungen, Vorstellungen und den Spielregeln begrenzt. Das Spiel hat ein skillbasiertes Levelsystem, welches es dem Spieler erlaubt, seine eigene einzigartige Spielerfahrung zu machen.</p>
 
 <h3>Kostenlos und Open Source</h3>
