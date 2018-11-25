@@ -17,12 +17,12 @@
 <h1>Illarion - Gestalte ein neues Leben</h1>
 
 <?php Page::cap('E'); ?>
-<p class="hyphenate">chtes Rollenspiel und die Interaktion mit anderen Spielern - das ist das Onlinespiel Illarion. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester der Götter.</p>
+<p class="hyphenate">chtes Rollenspiel und die Interaktion mit anderen Spielern - das ist das Onlinespiel Illarion. Alle Charaktere um dich herum werden sich wie lebendige, atmende Wesen dieser eigenständigen, geheimnisvollen Welt verhalten. Jeder Charakter hat eine eigene Vergangenheit, Ziele, Stärken und Schwächen. Erlebe als edler Ritter ruhmvolle Abenteuer oder führe ein Leben als fleißiger Handwerker, geschäftiger Händler oder charismatischer Priester der Götter. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>, das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
 
 <p class="hyphenate">Illarion - Welche Rolle wirst du spielen? <a href="/illarion/us_java_download.php">Lade das Spiel jetzt herunter und beginne dein Abenteuer!</a></p>
 
 <h3>Die Welt Illarion</h3>
-<p class="hyphenate">Illarion ist eine reife Fantasy-Welt, in der Orks, Elfen und viele andere Kreaturen anzutreffen sind. Es ist eine offene, lebendige Welt mit greifbarem Hintergrund. Sechzehn Götter werden von den Bewohnern von drei Reichen verehrt. Das edle <a href="/illarion/de_factions.php#1">Cadomyr</a>, das reiche <a href="/illarion/de_factions.php#2">Galmair</a> oder das weise <a href="/illarion/de_factions.php#3">Runewick</a> - welchen Weg wirst du einschlagen?</p>
+<p class="hyphenate">Illarion ist eine reife Fantasy-Welt, in der Orks, Elfen und viele andere Kreaturen anzutreffen sind. Es ist eine offene, lebendige Welt mit greifbarem Hintergrund. Sechzehn Götter werden von den Bewohnern von drei Reichen verehrt.</p>
 
 <h3>Dein Abenteuer</h3>
 <p class="hyphenate">Deine Entscheidungen und Taten formen und gestalten die Welt. Sie werden eines Tages die Seiten der Geschichtsbücher Illarions füllen. Werde Eins mit der Welt und lass deinen Charakter werden, was du möchtest.</p>
