@@ -160,6 +160,6 @@
 <p>
 <a target="_blank" href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Muster-Datenschutzerklärung</a> der <a target="_blank" href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß &amp; Partner</a></p>
 
-  <?php insert_go_to_top_link(); ?>
+<?php insert_go_to_top_link(); ?>
 
 <?php include_footer(); ?>

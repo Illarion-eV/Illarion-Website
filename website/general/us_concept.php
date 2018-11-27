@@ -15,7 +15,7 @@
 	
 ?>
 
-<h1>Illarion - Concept</h1>
+<h1>Concept</h1>
 
 <h3>The World Illarion</h3>
 <p class="hyphenate">A mature high fantasy setting where elves meet orcs is placed in a persistent, open world with tangible lore. Sixteen gods are worshipped by the citizens of three factions.</p>
@@ -31,3 +31,7 @@
 
 <h3>Immersive mechanics</h3>
 <p class="hyphenate">The game mechanics employed keep the balance between complexity, innovation and motivation of players. Illarion shows a classic, slow-paced gameplay with isometric retro graphics while still using modern technologies.</p>
+
+<?php insert_go_to_top_link(); ?>
+
+<?php include_footer(); ?>
