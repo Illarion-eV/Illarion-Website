@@ -81,7 +81,7 @@ points and selecting a starting package.</p>
   </li>
   <li>Graphics card: 128 MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
   <li>CPU: Dual core processor with 2.0 GHz</li>
-  <li>Java 7 newest version(64-bit Version if you have a 64-bit operating system installed)</li>
+  <li>Java latest version (64-bit Version if you have a 64-bit operating system installed)</li>
 </ul>
 
 <h4>Note</h4>

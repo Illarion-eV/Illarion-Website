@@ -49,7 +49,7 @@ und danach einen Charakter anlegen.</p>
 </ul>
 
 <p>Falls Dein neuer Charakter beim Einloggen nicht gefunden wird, prüfe ob
-du schon alle Punkte auf die Attribute verteilt hast und ein Startpacket
+du schon alle Punkte auf die Attribute verteilt hast und ein Startpaket
 ausgewählt hast.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -81,7 +81,7 @@ ausgewählt hast.</p>
   </li>
   <li>Grafikkarte: 128 MB dedizierten-Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
   <li>CPU: Zwei-Kern-Prozessor mit 2,0 GHz</li>
-  <li>Java 7 neuste Verion (64-bit Version auf 64-bit Betriebssystemen)</li>
+  <li>Java neuste Verion (64-bit Version auf 64-bit Betriebssystemen)</li>
 </ul>
 
 <h4>Hinweis</h4>
