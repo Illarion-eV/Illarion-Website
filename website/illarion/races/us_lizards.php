@@ -44,7 +44,7 @@ break through.</p>
 <?php cap(L); ?>
 <p>izardmen are the second race who developed writing. Their first "letters" were signs from their claws pressed in soft materials
 that hardened out with time, or simple scratch marks on rocks. Some time later, they started to use pergament–like materials from
-fish skin and plant parts, written with an acid, color–changing ink. Some of these materials have proven to be tough and reliable,
+fish skin and plant parts, written with an acid, colour–changing ink. Some of these materials have proven to be tough and reliable,
 even when the writing is a thousand years old. But since these scrolls have to be stored in salty water, and quickly rot away
 when exposed to air, their use outside the water only makes sense when stored in flasks or special boxes.</p>
 
@@ -69,7 +69,7 @@ lizard king will hunt them in their dreams. Noone ever saw this lizard king, but
 <p>izard Warriors are either hunters or "Temple Guards", a kind of lizard paladin. They guard the temple entrances and priests,
 uphold law and order, and destroy all evil and corrupt things with their righteous fist. These guards are horrendous fighters,
 with almost fanatic behaviour and an unstoppable demand for righteousness. They are trained in strange lizard combat techniques
-and powered by an incredible rage when in battle. Their war cry, "Glory for the goddess !" ( shouted in common languague, so that
+and powered by an incredible rage when in battle. Their war cry, "Glory for the goddess!" (shouted in common language, so that
 the disbelievers can understand for what they are ready to die for) has ended many battles because the enemy just dropped his weapons
 and ran away in fear.</p>
 
