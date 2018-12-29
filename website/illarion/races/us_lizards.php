@@ -62,8 +62,8 @@ poorly translated, "Lizard King". In a far away temple at the deepest place of t
 huge Lizardman. Being the one who once brought the religion to the lizards, he now leads the high priests from there, with
 inspiration, wisdom and power, and helps the goddess in keeping and renewing the purity of all water. Legends also tell, that
 if a lizard priest is unrighteous, selfish or evil, he will one day see the sign of the lizard king over his sleeping place, and
-if he does not change, one day, simply vanishes. Lizards tell their younglings, that when they don't obay, the
-lizard king will hunt them in their dreams. Noone ever saw this lizard king, but many young lizards go on travels to search his temple.</p>
+if he does not change, one day, simply vanishes. Lizards tell their younglings, that when they don't obey, the
+lizard king will hunt them in their dreams. No one ever saw this lizard king, but many young lizards go on travels to search his temple.</p>
 
 <?php cap(L); ?>
 <p>izard Warriors are either hunters or "Temple Guards", a kind of lizard paladin. They guard the temple entrances and priests,
