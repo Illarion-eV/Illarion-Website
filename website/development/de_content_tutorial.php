@@ -68,9 +68,25 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>git remote add upstream https://github.com/Illarion-eV/Illarion-Content</li>
 </ul>
 
+<h2>Lokaler Server</h2>
+
+<h4>Generelles</h4>
+<ul>
+<li>Die Verwendung eines lokalen Servers ist optional.</li>
+<li>Der lokale Server ermöglicht es dir, deine Änderungen im Spiel zu überprüfen, bevor du sie dem Team zur Verfügung stellst.</li>
+<li>Am lokalen Server, welcher in einer virtuellen Umgebung auf deinem Rechner läuft, hast du volle Entwicklerrechte. Sage mit dem Testcharakter "!?", um eine Liste der Kommandos zu erhalten.</li>
+<li>Spielserver und lokaler Server stehen nicht in Verbindung miteinander. Du kannst nicht mit anderen Spielern auf deinem lokalen Server spielen - du kannst aber auch nichts am Spielserver kaputt machen.</li>
+</ul>
+
+<h4>Download und Setup</h4>
+<ul>
+<li><a href="https://illarion.org/~estralis/illarion_local_server.zip">Lade dir deinen lokalen Illarion-Server hier runter.</a></li>
+<li><a href="https://illarion.org/~estralis/READMEv2.txt">Setup und alle weiteren Schritte sind in der Readme-Datei beschrieben.</a></li>
+</ul>
+
 <h2>Generelle Arbeitsschritte</h2>
 
-<h4>Fehler finden und korrigieren:</h4>
+<h4>Fehler finden und korrigieren</h4>
 <ul>
 <li>Schreibe dir den genauen Text des Fehlers auf. Fasse dich so kurz wie möglich, um vielleicht den selben Fehler auch noch anderswo zu finden.</li>
 <li>In Notepad++ wähle "Find in Files..." im "Search"-Menü.</li>
@@ -112,7 +128,6 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Schreibe Quests oder wirke an Kampf- und Magiesystem mit.</li>
 <li>Illarion benutzt Lua 5.2, ein <a href="https://www.lua.org/pil/contents.html">Buch, das Lua 5.0 behandelt</a> ist online verfügbar.</li>
 <li>Schau dir die <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion-Erweiterung zu Lua</a> an.</li>
-<li>Hol dir deinen eigenen <a href="https://illarion.org/~estralis/illarion_local_server.zip">lokalen Illarion-Server</a>, um damit zu experimentieren.</li>
 <li>Lerne mehr über <a href="https://git-scm.com/book">Git</a>, das schnelle verteilte Versionierungssystem.</li>
 <li>Sprich mit unseren Inhaltsentwicklern im <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">IRC-Chat</a> (#illarion im QuakeNet).</li>
 </ul>

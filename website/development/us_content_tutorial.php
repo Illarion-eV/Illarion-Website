@@ -71,6 +71,22 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <li>git remote add upstream https://github.com/Illarion-eV/Illarion-Content</li>
 </ul>
 
+<h2>Local server</h2>
+
+<h4>General information</h4>
+<ul>
+<li>Usage of the local server is optional.</li>
+<li>With the local server, you can check your changes in the game before submitting them to the development team.</li>
+<li>You have full developer rights on the local server that runs in a virtual environment on your computer. Say "!?" with the test character to get a list of possible commands.</li>
+<li>Game server and local server are not connected. You can't play with other players on your local server. But you also cannot break anything on the game server this way.</li>
+</ul>
+
+<h4>Download and setup</h4>
+<ul>
+<li><a href="https://illarion.org/~estralis/illarion_local_server.zip">Download your copy of the local Illarion server here.</a></li>
+<li><a href="https://illarion.org/~estralis/READMEv2.txt">Setup and further steps are explained in the readme file.</a></li>
+</ul>
+
 <h2>General workflow</h2>
 
 <h4>Find and correct the error</h4>
@@ -115,7 +131,6 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <li>Create quests or help developing the fighting and magic system.</li>
 <li>Illarion uses Lua 5.2, a <a href="https://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
 <li>See the <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion extension to Lua</a>.</li>
-<li>Get your own <a href="https://illarion.org/~estralis/illarion_local_server.zip">local Illarion server</a> to play around with.</li>
 <li>Learn more about <a href="https://git-scm.com/book">Git</a>, the fast and distributed version control system.</li>
 <li>Talk to our content developers in the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">IRC chat</a> (#illarion on QuakeNet).</li>
 </ul>
