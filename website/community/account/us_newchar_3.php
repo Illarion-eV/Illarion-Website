@@ -86,7 +86,7 @@ $templates = $db->loadAssocList();
 <h2>Step 3</h2>
 
 <p>You have to put in the attributes of your character here.</p>
-<p>The attribute packages should give your a general idea of what attributes go towards a certain role. Make changes to existing packages to adjust them to the role you'd like to play. Druids need a pool of 30 points shared between perception, essence, and intelligence.</p> 
+<p>The attribute packages should give your a general idea of what attributes go towards a certain role. Make changes to existing packages to adjust them to the role you'd like to play. Druids need a pool of 30 points shared between perception, essence, and intelligence. Mages need a pool of 30 points shared between intelligence, essence, and willpower.</p> 
 <p>Hover your mouse of an attribute to get a tool tip.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
@@ -126,7 +126,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The physical resilience of your character. It governs the regeneration. This attribute if of importance to all gatherers and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, and Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="The physical resilience of your character. It governs the regeneration of hitpoints. This attribute if of importance to all gatherers and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, and Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -166,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The affinity of your character to the mystical world. It  will control the regneration of mana and divine power. Essence affects the learning speed of the following skills: -">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="The affinity of your character to the mystical world. It will control the regeneration of mana and divine power. Essence affects the learning speed of the following skills: -">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>

@@ -87,7 +87,7 @@ $templates = $db->loadAssocList();
 <h2>Schritt 3</h2>
 
 <p>Hier kannst du die Attribute deines Charakters festlegen.</p>
-<p>Die Attributpakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Bitte ändere die bestehenden Pakete bei Bedarf um sie deiner gewünschten Charakterrolle anzupassen. Druiden benötigen 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz.</p>
+<p>Die Attributpakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Bitte ändere die bestehenden Pakete bei Bedarf um sie deiner gewünschten Charakterrolle anzupassen. Druiden benötigen derzeit 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Magier benötigen derzeit 30 Punkte aufgeteilt auf Intelligenz, Essenz und Willensstärke.</p>
 <p>Bewege deine Maus über ein Attribut, um einen Hilfetext anzuzeigen.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
@@ -127,7 +127,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Holzfällen, Graben, Gerben und Weben, Ackerbau und Landwirtschaft.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit der Trefferpunkte. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Holzfällen, Graben, Gerben und Weben, Ackerbau und Landwirtschaft.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
