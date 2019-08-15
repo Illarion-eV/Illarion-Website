@@ -238,7 +238,7 @@
                 echo "<tr>";
 				echo "<td>&nbsp;";
 
-                echo "settings=".$settings&2.";
+                echo "settings=".$settings&1.";
                 
 				if ($show_profil)
 				{
