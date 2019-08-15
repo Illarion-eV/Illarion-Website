@@ -237,10 +237,9 @@
 
                 echo "<tr>";
 				echo "<td>&nbsp;";
-
-                echo "settings=".$settings&1.";
-                
-				if ($show_profil)
+                               
+				// if ($show_profil)
+                if ($settings&1 > 0)
 				{
 					echo "<a href='".$url."/community/de_charprofile.php?id=".dechex( $chars[$i]['chr_playerid'] )."'>".$chars[$i]['chr_name']."</a></td>";
 				}
