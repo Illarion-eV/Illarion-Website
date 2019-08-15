@@ -235,10 +235,12 @@
     				$show_story = ( (int)($settings&4) > 0 );
     				$show_birthday = ( (int)($settings&8) > 0 );
 
-				echo "<tr>";
+                echo "<tr>";
 				echo "<td>&nbsp;";
-                echo $show_profil;
-				if ($show_profil == 't')
+
+                echo "settings=".$settings&2.";
+                
+				if ($show_profil)
 				{
 					echo "<a href='".$url."/community/de_charprofile.php?id=".dechex( $chars[$i]['chr_playerid'] )."'>".$chars[$i]['chr_name']."</a></td>";
 				}
