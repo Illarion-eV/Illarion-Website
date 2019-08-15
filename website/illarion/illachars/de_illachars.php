@@ -238,15 +238,14 @@
                 echo "<tr>";
 				echo "<td>&nbsp;";
                                
-				// if ($show_profil)
-                if ($settings&1 > 0)
-				{
+				//if ($show_profil)
+				//{
 					echo "<a href='".$url."/community/de_charprofile.php?id=".dechex( $chars[$i]['chr_playerid'] )."'>".$chars[$i]['chr_name']."</a></td>";
-				}
-				else
-				{
-					echo $chars[$i]['chr_name']."</td>";
-				}
+				//}
+				//else
+				//{
+				//	echo $chars[$i]['chr_name']."</td>";
+				//}
 				// Rassenbild einbinden
 				if ($race_pic = getRacePicture( $chars[$i]['chr_race'], $chars[$i]['chr_sex'] ))
 				{
