@@ -237,7 +237,7 @@
 
 				echo "<tr>";
 				echo "<td>&nbsp;";
-				if ($show_profil)
+				if ($show_profil == 't')
 				{
 					echo "<a href='".$url."/community/de_charprofile.php?id=".dechex( $chars[$i]['chr_playerid'] )."'>".$chars[$i]['chr_name']."</a></td>";
 				}
