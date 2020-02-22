@@ -84,7 +84,7 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <h4>Download and setup</h4>
 <ul>
 <li><a href="https://illarion.org/~estralis/illarion_local_server.zip">Download your copy of the local Illarion server here.</a></li>
-<li><a href="https://illarion.org/~estralis/READMEv2.txt">Setup and further steps are explained in the readme file.</a></li>
+<li><a href="https://illarion.org/~estralis/READMEv3.txt">Setup and further steps are explained in the readme file.</a></li>
 </ul>
 
 <h2>General workflow</h2>

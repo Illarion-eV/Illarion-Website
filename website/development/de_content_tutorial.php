@@ -81,7 +81,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <h4>Download und Setup</h4>
 <ul>
 <li><a href="https://illarion.org/~estralis/illarion_local_server.zip">Lade dir deinen lokalen Illarion-Server hier runter.</a></li>
-<li><a href="https://illarion.org/~estralis/READMEv2.txt">Setup und alle weiteren Schritte sind in der Readme-Datei beschrieben.</a></li>
+<li><a href="https://illarion.org/~estralis/READMEv3.txt">Setup und alle weiteren Schritte sind in der Readme-Datei beschrieben.</a></li>
 </ul>
 
 <h2>Generelle Arbeitsschritte</h2>
