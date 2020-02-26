@@ -11,7 +11,7 @@
 <h1>Ushara - Goddess of Earth</h1>
 
 <?php cap(U); ?>
-<p>shara is the godess of the element earth. Wise and calm, she is respected as mother of the world, quiet in speech yet with a kindly firmness. Her restrained personality rejects wealth or any other kind of transitory values. She favours those of simplicity and humility and is often close to nature. If Ushara ever appears on Illarion, she does so as elderly, black-haired, dark-skinned woman dressed in dark colours.</p>
+<p>shara is the goddess of the element earth. Wise and calm, she is respected as mother of the world, quiet in speech yet with a kindly firmness. Her restrained personality rejects wealth or any other kind of transitory values. She favours those of simplicity and humility and is often close to nature. If Ushara ever appears on Illarion, she does so as elderly, black-haired, dark-skinned woman dressed in dark colours.</p>
 
 <h2>Followers</h2>
 <p>Ushura's believers are very few, most are old female druids or elves who have met her personally. She is very well respected among dwarven kind, but true admiration is rarely found. As with all the Elder Gods, she is worshipped at the Temple of the Five, east of Galmair. There is also the Chapel of the Five, east of the Kantabi Desert, where the name of the Five is held in honour. Remote locations such as Ushura's Spire, set deep in Sentry Forest serve as rare marks of her true following. The people of Runewick are known to show more respect for the Five than the citizens of Cadomyr or Galmair, but any miner who finds a gem in the Malachite Mine might be quick to thank Ushara for her creation with prayer. To foster her creation, she encouraged her followers to worship Oldra in the new temples.</p>
