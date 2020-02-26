@@ -24,15 +24,15 @@
 
 <?php cap(A); ?>
 <p> very astonishing race are the lizardmen. They are a little smaller than the average human, walk on two legs, with a strong
-tail to add balance and agility when running, jumping or swimming. Their anatomy is astonishing : they seem to be reptiles, but
-instead of being cold–blooded, their body can somehow change between being cold–blood and warm–blood state. This flexibility,
+tail to add balance and agility when running, jumping or swimming. Their anatomy is astonishing: they seem to be reptiles, but
+instead of being cold–blooded, their body can somehow change between being cold–blooded and warm–blooded state. This flexibility,
 in addition with their tough, greenish or brownish lizard skin, their strong teeth and muscles, has allowed them to dwell in
 different places. Another astonishing thing is their ability to breath water. This may be a result of the lizard's main goddess
-influence, Tanora ( or "Zelphia" in lizard tongue ) over thousands of years.</p>
+influence, Tanora (or "Zelphia" in lizard tongue) over thousands of years.</p>
 
 <?php cap(M); ?>
 <p>ost Lizards are not interested in magic. Since their society is based on religion, the center of their
-cities is always a large temple dedicated to the water goddess. The building structures look very simple from afar : Big stone blocks.
+cities is always a large temple dedicated to the water goddess. The building structures look very simple from afar: Big stone blocks.
 But at close distance, one can see that every single one is carved with religious symbols and reliefs, pictures and stories.</p>
 
 <p>Very few humans have ever seen a lizard city from close distance: Most of them are located under water, most in regions around
@@ -43,14 +43,14 @@ break through.</p>
 
 <?php cap(L); ?>
 <p>izardmen are the second race who developed writing. Their first "letters" were signs from their claws pressed in soft materials
-that hardened out with time, or simple scratch marks on rocks. Some time later, they started to use pergament–like materials from
+that hardened out with time, or simple scratch marks on rocks. Some time later, they started to use parchment–like materials from
 fish skin and plant parts, written with an acid, colour–changing ink. Some of these materials have proven to be tough and reliable,
 even when the writing is a thousand years old. But since these scrolls have to be stored in salty water, and quickly rot away
 when exposed to air, their use outside the water only makes sense when stored in flasks or special boxes.</p>
 
 <?php cap(I); ?>
 <p>In the life of a Lizard, religion and honour are the most important things. The older a lizard gets, the wiser he becomes.
-At a age of about a hundred and fifty or seventy years, old lizard start to sleep much, and spend the rest of their life
+At the age of about a hundred and fifty or seventy years, old lizards start to sleep a lot, and spend the rest of their life
 dreaming, meditating and praying in a Lizard temple. Legends say that some Lizards live that way for hundreds of years before
 they die. Some of them suddenly awake with a holy shine in their eyes, and without saying a single word, walk away never to be
 seen again. The Priests call these ones "the enlightened ones". It is forbidden for other lizards to follow an "enlightened one".</p>

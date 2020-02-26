@@ -27,10 +27,10 @@
 others, and reach a little over the lips.</p>
 
 <p>Their society cannot be described as organized, in fact, it consists of different tribes. The majority of these tribes live as
-nomads, with a certain teritory in which they travel with their herds.. Pigs and sheep are their main source of nourishment.</p>
+nomads, with a certain territory in which they travel with their herds.. Pigs and sheep are their main source of nourishment.</p>
 
 <p>Orcs do not build houses, they prefer living in caves. An orc tribe's territory normally has several caves, some are natural,
-extended caves, others are digged out of the ground like mines. Some orcs have specialized in mining for ore and coal, and
+extended caves, others are dug out of the ground like mines. Some orcs have specialized in mining for ore and coal, and
 sometimes find rarer metals or even a few gems. The main tribe changes its cave with the seasons of the year, some individuals,
 shamans, old ones or the tribe leaders sometimes, live in the same cave or sometimes a hut over the whole year.</p>
 
@@ -40,7 +40,7 @@ strongest one, and one of the oldest. Usually the main shaman is the smartest on
 his wishes passed on by manipulating and impressing the chief. Or sometimes simply by brewing his favourite beer.</p>
 
 <p>Most orc tribes are quite poor. Over the centuries, they have developed a rudimentary
-writing, consisting of different signs and scratch marks. In times of war, an orc tribe leader developed an encrypted languague,
+writing, consisting of different signs and scratch marks. In times of war, an orc tribe leader developed an encrypted language,
 allowing allies to exchange messages without leaving the enemy the possibility to read them.</p>
 
 <?php cap(M); ?>
@@ -49,7 +49,7 @@ spring. She is also called the "spring– goddess" by them. In Summer, they hono
 "strong–in–summer". Since summertime often means wartime for an orc tribe, some tribes pray to Moshran, called "bone–crusher"
 or simply "blood lord". Either Moshran or Malachín is the war god of a tribe, sometimes both.</p>
 
-<p>In Fall, the most tribes pray to Malachín, "the hunter", for a good hunt and to prepare for the hard winters. The winter
+<p>In Fall, most tribes pray to Malachín, "the hunter", for a good hunt and to prepare for the hard winters. The winter
 caves must be filled with food for the tribe and its herds.</p>
 
 <?php cap(D); ?>
@@ -63,7 +63,7 @@ animals, and some battles or battlegames prove the strongest clan.</p>
 
 <?php cap(S); ?>
 <p>ince the tribes are quite poor, they tend to raid small villages or farms sometimes, if they don't have enough food for the
-next winter. Normally, orcs are not bloodthirsty, but when they fight with other races, their primary war tactics is to cause fear
+next winter. Normally, orcs are not bloodthirsty, but when they fight with other races, their primary war tactics are to cause fear
 in their enemies. Captives who are too badly wounded to survive, are sometimes brutally killed after the battle, with the
 surviving captives witnessing it. Then, some of these captives, who show strength and a brave heart, will be given the possibility
 to escape, to spread the news; and drive fear into the enemy's hearts. The others are sold as slaves or become personal
@@ -82,8 +82,8 @@ sound strange to him, like music from another culture always does.</p>
 sometimes have problems with elves, who always take their time, and
 prefer a more metaphoric speech. If a human insults an orc, the orc wouldn't immediatly strike him with a weapon, instead
 he would make a fierce, suiting answer, trying to make the other one look stupid. But since the orcish humour appears a little
-rough compared to a human's, it takes a lot for a human to insult an orc ( if he does not start to insult the orc's tribe or
-race ). In the most cases, it's the human who attacks first.</p>
+rough compared to a human's, it takes a lot for a human to insult an orc (if he does not start to insult the orc's tribe or
+race). In most cases, it's the human who attacks first.</p>
 
 <?php insert_go_to_top_link(); ?>
 

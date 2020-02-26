@@ -25,11 +25,11 @@
 <?php cap(T); ?>
 <p>o the ignorant, Halflings look like the children of humans and indeed their appearance is similar to them. The most
 significant difference besides their small height are their big and hairy feet, which they proudly present in public as they
-avoid wearing any kind of footwear. They also tend live longer than humans.</p>
+avoid wearing any kind of footwear. They also tend to live longer than humans.</p>
 
 <p>Halflings prefer to live in areas dominated by hills and thin forests, where they dig their homes into the earth. Over
 the generations these caverns can obtain quite a respectable size, filled with lots of furniture and other items as Halflings
-feel that everythign might have a use, and don't throw anything away. There are actually some who have houses
+feel that everything might have a use, and don't throw anything away. There are actually some who have houses
 similar to humans but most of the Halflings wouldn't call this comfortable. In these homes they live together in big family
 clans led by a clan chief. This is a honourary title rather than an actual position of power. The function of this position
 can be described as organising feasts and festivals and especially keeping a well stocked pantry as Halflings tend to show
@@ -67,7 +67,7 @@ as soon as determination has entered the stubborn head of a Halfling you would n
 the Orcs and the Humans have learned the hard way as the uprising of the Halflings had shaken their societies to the core.</p>
 
 <p>Magic isn't their prime talent. It might be the case that there are some Halflings tempting the arts of magic but it is highly
-recommended not to stand so close as a spell or two might have unwanted effets.</p>
+recommended not to stand so close as a spell or two might have unwanted effects.</p>
 
 <?php insert_go_to_top_link(); ?>
 
