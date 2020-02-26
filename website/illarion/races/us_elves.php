@@ -37,7 +37,7 @@ to the fact that they actually get much older than all other races.</p>
 <?php cap(E); ?>
 <p>lves are quite close to nature. It is apparent that they look upon nature as a sentient being in its own right and attend
 it with all due respect. They tend to avoid leaving damaging traces on earth. Thus depletion of nature is an alien concept to
-them. What they extract from nature they try to restore in an equal manner. In accordance to this ideal their cities and settlements
+them. What they extract from nature they try to restore in an equal manner. In accordance with this ideal their cities and settlements
 were erected around untouched nature, and still they remain to this day. Their houses are built in such a way that they fit perfectly
 in their surroundings. There are some reports of travelers, who got lost in the woods and passed by an Elvish settlement without
 noticing. The houses were only noted by outsiders, when the elves started pointing to their existence. These rumours led to the
@@ -53,20 +53,20 @@ folly, which has been disclosed to them in their long years of existence.</p>
 <p>he Elvish society has a clan structure that has a rather decentralized organization. An official government in the form of a
 kingdom or any other type of aristocratic leadership is nearly unknown to them. The determining factor for the position inside
 their society seems to be the age of a person. Consequently in every Elvish settlement there is some type of Council of Elders,
-which discuss the issues which effect the rest of the populace. In addition there exists an unsaid but common agreement upon the
+which discuss the issues which affect the rest of the populace. In addition there exists an unsaid but common agreement upon the
 aims of the entire race. At least a publicly debated dispute is unknown to the Elves.</p>
 
 <?php cap(I); ?>
 <p>n general the character of an Elf is quite mild–tempered and friendly, also towards people of other races; still they prefer
 the company of their own kind. But it appears that there is a distinct period in their life, in which they choose to wander around
 the world and leave their homeland. This often happens in their youth. In doing so it is quite common that they maintain contact
-to other races or even seek their company. The reason or meaning of this wandering, which is called Navro&rsquo;anai by the Elves, is
+with other races or even seek their company. The reason or meaning of this wandering, which is called Navro&rsquo;anai by the Elves, is
 as of yet unknown to us.</p>
 
 <p>The aforementioned balance and serenity of the Elves has the effect that, with the exception of very young Elves, disputes with
 them are seldom to be perceived. Their long lifespan may also aid the belief that problems are of a temporary appearance. Elves do
 have a lot of time, which they put to use by letting demanding times come to pass. The proverbial patience of an Elf may be a great
-challenge to representatives of other races. But this should not be lead to the assumption that Elves are defenseless, even though
+challenge to representatives of other races. But this should not lead to the assumption that Elves are defenseless, even though
 they would take up arms only in the face of greatest needs. They are traditionally very adept in handling bows or in the use of long,
 one–handed swords. Due to their choice of weapons and their way of warfare, in which they try to avoid open battles, they prefer only
 light types of armor. Their senses are very well developed and even in the darkest night can they perceive things, which are invisible

@@ -37,21 +37,21 @@ local dialects.</p>
 
 <?php cap(H); ?>
 <p>uman societies can take very different forms, dependent on the leadership and on neighbouring cultures. Some prefer
-to live amongst their own kind. To the most of them, the other races are strangers. This results from their short living
+to live amongst their own kind. To most of them, the other races are strangers. This results from their short living
 span, compared to lizardmen, halflings, dwarves and especially elves. Amongst the uneducated, poor people, rumours about
 these strangers spread easily: Dwarves can turn everything (or everyone) into gold, lizardmen eat people, orcs steal and eat
 children, Elves can curse all people they don't like with a single look – this are common examples for these rumours. Other
 human societies are more open–minded and well–educated.</p>
 
 <p>Humans seem to play an important role in trade. Many of their towns have been built along trade lines and roads, that way,
-they can offer rest and big trading places to all visitors. The most well know human societies are as follows:</p>
+they can offer rest and big trading places to all visitors. The most well known human societies are as follows:</p>
 
 <h3>"Barbaric" Cultures:</h3>
 
 <?php cap(S); ?>
 <p>eafolk (Norodaj) live in rougher, cold climates. They are dressed in furs, leather and rough, coloured cloth, wear long
 beards and prefer big swords, spears, axes and throwing axes as weapons. For writing, they use a rune alphabet similar to the
-dwarven one. They know the common language, but natively speak an own tongue, and some dwarven words. They inhabit rough, cold
+dwarven one. They know the common language, but natively speak their own tongue, and some dwarven words. They inhabit rough, cold
 climated, often rocky areas between the sea and mountains. They often trade with dwarves, their neighbours in the mountains, and
 sometimes with lizards. Their main food source is the sea, they live from fishing and from herding sheep – and sometimes from
 raiding other human or orcish settlements located somewhere near the sea. They travel in long, agile rudder boats with only a
@@ -62,8 +62,8 @@ Malachín (God of Battle and Hunting). They fear magic and some of them are afra
 vanish with the mist and with "unnatural" speed, without rudders. They are thought to be ghost ships.</p>
 
 <p>Norodaj live in big family clans. The clan leader is determined in a contest of knowledge and fight, that is held if a leader
-becomes old. The winner of this contest, called "champion", than fights the old leader. In some rare cases this may be a fight to
-death. If the old leader wants to retreat, it is only a symbolic fight. The leader (or ex–leader) has the right to have up to
+becomes old. The winner of this contest, called "champion", then fights the old leader. In some rare cases this may be a fight to
+the death. If the old leader wants to retreat, it is only a symbolic fight. The leader (or ex–leader) has the right to have up to
 three wives, all other men can only marry one time. Marriages last a whole life, "dishonoured" men who have been betrayed normally
 challenge the other man for a duel till death. If a man treats his wife or children badly, he will be exiled. Corpses of dead
 ones are burned in a ritual, on a pile of wood. The ashes are thrown into the sea and a small piece of the skull will be kept and
@@ -76,9 +76,9 @@ bows, long swords, knives, throwing stars and throwing knives, and often wear ha
 metal armours because of their weight and lack of flexibility. The Serinjah have developed a type of unarmed combat, where elbows,
 knees, hands and feet are used as effective weapons – some movements are a little similar to the acrobatics of elven war dancers.</p>
 
-<p>The common language is known to the Plainfolk, but natively they speak an own ancient human dialect, and often a little elven tongue.
+<p>The common language is known to the Plainfolk, but natively they speak their own ancient human dialect, and often a little elven tongue.
 They often trade with Elves, orcs and other humans. Their main God is Malachín, the God of Battle and Hunting, but they pray to all
-younger gods too. Serinjah Clans are always lead by three people: A young man and woman (often an amazon), and an old woman.
+younger gods too. Serinjah Clans are always led by three people: A young man and woman (often an amazon), and an old woman.
 The plainfolk believe in the power of the land, and some know druid magic well. Common magic is well known to them, some even prefer
 a life as sorcerer, witch or shaman.</p>
 
@@ -88,13 +88,13 @@ circle of life.</p>
 
 <?php cap(P); ?>
 <p>lainfolk (Ama–shoon) live in forest and plain areas near the Plainfolk. They are organized in tribes. These tribes are all
-female, expect of children aged below four. The male children older than four years are brought to a settlement of Serinjah,
+female, except for children aged below four. The male children older than four years are brought to a settlement of Serinjah,
 where they will be raised by their fathers.</p>
 
 <p>Amazons live like and sometimes with Serinjah, but have devoted their life to fight and to protect the land. They follow the
 goddess Findari, the goddess of air (and the four winds). They are often experts with bow and spear, sling, swords and daggers,
 and throwing stars. They prefer hard leather or wooden armour and ride their horses bareback (without saddle), some of them may
-prefer iron armour too. It is said that an Amazon can also fight with her bare hands, if necessary. Amazons are lead by one female
+prefer iron armour too. It is said that an Amazon can also fight with her bare hands, if necessary. Amazons are led by one female
 leader, who sometimes is a Findari Priest. Amazons tend to use aggressive as well as healing magic.</p>
 
 <h3>"Civilized" Cultures:</h3>
@@ -107,7 +107,7 @@ Salkamar. It is also the origin of the common language and writing system.</p>
 
 <p>The Salkamaerian way of life means respect, honour, and loyalty. It is a noble one. All children learn reading and writing.
 Slavery is forbidden by law and a military education is offered to all members of poorer families for free. The Salkamaerian
-kings and nobles are understand to be representatives of the people and are often wise and good regents. Cities are ruled by
+kings and nobles are understood to be representatives of the people and are often wise and good regents. Cities are ruled by
 male or female lords; males and females have equal rights. The Salkamaerian culture is open to strangers, and without prejudice.</p>
 
 <p>Salkamaerian poets, bards and philosophers are well known to the world, as well as Salkamaerian paladins, who fight for their
