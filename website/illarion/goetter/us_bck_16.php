@@ -26,7 +26,7 @@
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_14.gif" alt="The Sociable Raven"/>
 
-<p>Chaotic people born of the month of Naras have a love for gambling and often posess a very unconventional sense of humour. It is difficult to assess them, and almost impossible to predict them, other than to know they greatly enjoy putting themselves in the center of attention. Their humour is fair and they tend to enjoy the company of others but sociable Ravens are known to be badly organised and disruptive. Often fond of playing tricks and capable of humiliating those that offend with clever word play, others may not be so comfortable around them. They make for arrogant contestants in jousts who win by underhand means, but are sure to celebrate their victory generously with all spectators.</p>
+<p>Chaotic people born of the month of Naras have a love for gambling and often possess a very unconventional sense of humour. It is difficult to assess them, and almost impossible to predict them, other than to know they greatly enjoy putting themselves in the center of attention. Their humour is fair and they tend to enjoy the company of others but sociable Ravens are known to be badly organised and disruptive. Often fond of playing tricks and capable of humiliating those that offend with clever word play, others may not be so comfortable around them. They make for arrogant contestants in jousts who win by underhand means, but are sure to celebrate their victory generously with all spectators.</p>
 
 <?php navBarBottom( "us_bck_15.php", "us_bck_17.php" ); ?>
 

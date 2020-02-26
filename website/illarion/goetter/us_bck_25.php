@@ -26,7 +26,7 @@
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_6.png" alt="The Artful Fox"/>
 
-<p>Those who are born under the sign of the artful Fox tend to be quick-witted and have a well-developed sense of humour. They love freedom and will only releuctantly bow to laws or rules. They are often moody when they feel inhibited, and occasionally aggressive, so it is best to try to stay on their good side. Foxes will defend their ideals and strive to reach their goals, even though it may mean breaking laws or not complying with constraints of society. True libertines are commonly born during Ronas, but also avant-garde artists and jesters who test the boundaries of propriety. It is constantly speculated that Don Valerio Guiliani of Galmair was born in Ronas, but perhaps this rumour was spread with the intention to conceal that he is in fact a beautiful Butterfly.</p>
+<p>Those who are born under the sign of the artful Fox tend to be quick-witted and have a well-developed sense of humour. They love freedom and will only reluctantly bow to laws or rules. They are often moody when they feel inhibited, and occasionally aggressive, so it is best to try to stay on their good side. Foxes will defend their ideals and strive to reach their goals, even though it may mean breaking laws or not complying with constraints of society. True libertines are commonly born during Ronas, but also avant-garde artists and jesters who test the boundaries of propriety. It is constantly speculated that Don Valerio Guiliani of Galmair was born in Ronas, but perhaps this rumour was spread with the intention to conceal that he is in fact a beautiful Butterfly.</p>
 
 <?php navBarBottom( "us_bck_24.php", "us_bck_26.php" ); ?>
 

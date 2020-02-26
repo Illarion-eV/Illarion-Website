@@ -28,7 +28,7 @@
 
 <img align="right" vspace="0" hspace="5" src="<?php echo $url; ?>/illarion/calendar/images/image_15.png" alt="The Serious Bat"/>
 
-<p>Those born under the sign of the serious Bat seem calm and proud, perhaps even aloof at times with their cool exterior. They draw attention to themselves with their dignity, sophisticated appearance, and earnestness. Bats are often highly honourable and are strong upholders justice without any tendancy towards tenderhearted mercy. Should one enrage a Bat, one would be advised to seek protection with some urgency for their own safety. It is rare to see any Bat cracking a joke or barely breaking a smile as everything to them is deadly serious. Town guards and judges are typically born in Chos, but equally some less honourable but similarly resolute individuals are born of this month.</p>
+<p>Those born under the sign of the serious Bat seem calm and proud, perhaps even aloof at times with their cool exterior. They draw attention to themselves with their dignity, sophisticated appearance, and earnestness. Bats are often highly honourable and are strong upholders justice without any tendency towards tenderhearted mercy. Should one enrage a Bat, one would be advised to seek protection with some urgency for their own safety. It is rare to see any Bat cracking a joke or barely breaking a smile as everything to them is deadly serious. Town guards and judges are typically born in Chos, but equally some less honourable but similarly resolute individuals are born of this month.</p>
 
 <?php navBarBottom( "us_bck_19.php", "us_bck_21.php" ); ?>
 
