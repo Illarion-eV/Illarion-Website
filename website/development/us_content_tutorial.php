@@ -106,7 +106,7 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <li>View your changes by selecting each file, then add them to the commit by using the single arrow up or add all of them by using the double arrow up.</li>
 <li>Enter a meaningful commit message in imperative (like I did here). It should be something like, "Fix spelling error in NPC John Doe". If you need more than one line, use a short descriptive title and leave the second line blank.</li>
 <li>Finally hit the "Commit" button to store your changeset locally.</li>
-<li>Hit the "Push" button in the upper bar and confirm with "OK" to send your changeset(s) to your Github account. You will need to enter your GitHub login the first time at least.</li>
+<li>Hit the "Push" button in the upper bar and confirm with "OK" to send your changeset(s) to your GitHub account. You will need to enter your GitHub login the first time at least.</li>
 </ul>
 <h4>Share your work using Linux/Console</h4>
 <ul>

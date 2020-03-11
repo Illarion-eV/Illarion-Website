@@ -23,7 +23,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<li><a class="hidden" href="#3">Oganalp Canatan</a></li>
 	<li><a class="hidden" href="#4">NiftyGUI</a></li>
 	<li><a class="hidden" href="#5">Java</a></li>
-	<li><a class="hidden" href="#6">Github</a></li>
+	<li><a class="hidden" href="#6">GitHub</a></li>
 	<li><a class="hidden" href="#7">LWJGL</a></li>
 	<li><a class="hidden" href="#8">Apache Web Server</a></li>
 	<li><a class="hidden" href="#9">CAcert</a></li>
@@ -127,13 +127,13 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 
 <div><a id="6"></a></div>
 
-<h2>Github</h2>
+<h2>GitHub</h2>
 
 <p>
-	<a rel="external" href="https://github.com/">Link zur Github Homepage</a>
+	<a rel="external" href="https://github.com/">Link zur GitHub Homepage</a>
 	<br /><br />
-	Illarion verwendet Github um eine effiziente Zusammenarbeit der Entwickler zu ermöglichen. 
-	Github wird von über drei Millionen Menschen weltweit verwendet.
+	Illarion verwendet GitHub um eine effiziente Zusammenarbeit der Entwickler zu ermöglichen. 
+	GitHub wird von über drei Millionen Menschen weltweit verwendet.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
