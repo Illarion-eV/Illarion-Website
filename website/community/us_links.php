@@ -195,8 +195,8 @@ The following game sites have taken Illarion on to their listings. We would like
 	<a rel="external" href="https://www.lua.org/">Link to the Lua website</a>
 	<br /><br />
 	Lua is a powerful, fast, lightweight, embeddable scripting language.
-	It is used to create the scripts for the NPCs, Alchemy system and it will also 
-	power the Magic system
+	It is used to create the scripts for the NPCs, alchemy system and it will also 
+	power the magic system.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
