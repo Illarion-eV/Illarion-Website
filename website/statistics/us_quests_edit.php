@@ -22,7 +22,7 @@
 ?>
 
 <h1><?php if ($id): ?>Edit quest<?php else: ?>Create quest<?php endif; ?></h1>
-	<p>Please give all information in English and German. Avoid using automated translations. Thank you!<p>
+	<p>Please give all information in English and German. Avoid using automated translations. Thank you!</p>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php" method="post" id="quest_form">
 	<h2>Name of the quest</h2>
