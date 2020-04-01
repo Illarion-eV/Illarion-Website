@@ -23,6 +23,7 @@
 ?>
 
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
+	<p>Schreibe bitte alle Informationen in Deutsch und Englisch. Benutze bitte keine automatische Übersetzung. Vielen Dank!<p>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
 	<h2>Name der Quest</h2>
