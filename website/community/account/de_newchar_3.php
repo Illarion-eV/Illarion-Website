@@ -143,7 +143,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Stabmagie.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Stabmagie und Juwelenverzauberung.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
