@@ -64,7 +64,7 @@
 ?>
 <h1>Character Description</h1>
 
-<h2>Short description (not more then 255 characters)</h2>
+<h2>Short description (not more than 255 characters)</h2>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_description.php?charid=<?php echo $charid,($server == 'devserver' ? '&amp;server=1' : ''); ?>" id="mainForm">
 	<p>
