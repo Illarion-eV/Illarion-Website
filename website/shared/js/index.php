@@ -1,5 +1,5 @@
 <?php
-   if( ereg( 'de', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) )
+   if( preg_match( '/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) )
    {
    	header('Location: https://illarion.org/general/de_startpage.php');
    }
