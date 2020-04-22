@@ -2,7 +2,7 @@
 	$last_mod = array();
 	$last_mod[] = filemtime( $_SERVER['SCRIPT_FILENAME'] );
 
-	$filenames = split( ',', $_GET['file'] );
+	$filenames = preg_split( '/,/', $_GET['file'] );
 
 	foreach( $filenames as &$file )
 	{

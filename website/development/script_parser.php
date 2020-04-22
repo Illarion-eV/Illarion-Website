@@ -31,7 +31,7 @@
 
       public function parse()
       {
-         $script_lines = split( "\n\r|\r|\n", $this->content );
+         $script_lines = preg_split( "/\n\r|\r|\n/", $this->content );
          foreach( $script_lines as $line_nr=>$line )
          {
             $current_line = $this->parse_line( $line );
