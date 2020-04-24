@@ -23,7 +23,7 @@
 
 	// variablen setzen
 	$search = ( isset($_POST['search']) ? trim((string)$_POST['search']) : '' );
-	$search = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', $search);
+	$search = urldecode($search);
 	$acc_list = array();
 
 	if (is_numeric($_POST['state']))
