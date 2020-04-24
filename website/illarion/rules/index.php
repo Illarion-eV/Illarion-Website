@@ -6,7 +6,7 @@
    <title>Illarion</title>
    <?php require_once( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" ); ?>
    <link rel='stylesheet' type='text/css' href='<?php echo $url; ?>/shared/main.css' />
-   <meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>/illarion/<?php if( preg_match( "/de/", $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) ) { echo "de"; } else { echo "us"; } ?>_rules.php" />
+   <meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>/illarion/<?php if( preg_match( "/de/", $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '' ) ) { echo "de"; } else { echo "us"; } ?>_rules.php" />
 </head>
 
 <body>

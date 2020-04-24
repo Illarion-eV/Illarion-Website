@@ -7,7 +7,7 @@
 	$height = ( is_numeric($_GET['height']) ? (int)$_GET['height'] : 600 );
 	$width = ( is_numeric($_GET['width']) ? (int)$_GET['width'] : 800 );
 
-	if( preg_match( '/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ) )
+	if( preg_match( '/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '' ) )
 	{
 		$lang = 'de';
 		setlocale(LC_TIME, 'de_DE');

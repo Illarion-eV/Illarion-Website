@@ -15,7 +15,7 @@
 include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
 //get language
-if (preg_match('/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+if (preg_match('/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '')) {
 	$IsGerman = true;
 } else {
 	$IsGerman = false;

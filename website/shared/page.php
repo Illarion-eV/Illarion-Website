@@ -1144,7 +1144,7 @@ class Page {
 	*/
 	static private function CreateLanguageMessage() {
 		if (!IllaUser::loggedIn()) {
-			$german_browser = (preg_match('/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE']) ? true : false);
+			$german_browser = (preg_match('/de/', $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '') ? true : false);
 		}else {
 			$german_browser = IllaUser::german();
 		}
