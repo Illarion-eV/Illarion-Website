@@ -1,6 +1,6 @@
 <?php
 
-    function include_page_menu($active, $filter )
+    function include_page_menu($active)
     {
 
         $entries = array();

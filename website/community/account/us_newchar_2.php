@@ -80,8 +80,8 @@
 
 	$haircolors = char_create::getHairColors($race);
 	$skincolors = char_create::getSkinColors($race);
-	$hairvalues = char_create::getHairValues($race, $sex);
-	$beardvalues = char_create::getBeardValues($race, $sex);
+	$hairvalues = char_create::getHairValues($race, $sex, IllaUser::$lang);
+	$beardvalues = char_create::getBeardValues($race, $sex, IllaUser::$lang);
 	$start_hair_value  = "_hair_1";
 	$start_beard_value = "_beard_0";
 	$start_skin_color  = $skincolors[mt_rand(0,41)];

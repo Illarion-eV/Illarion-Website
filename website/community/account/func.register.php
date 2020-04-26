@@ -12,7 +12,7 @@
 	}
 
 	$db =& Database::getPostgreSQL( 'accounts' );
-	$value = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', (string)$_GET['value']);
+	$value = (string)$_GET['value'];
 	$value = trim($value);
 	if ($_GET['action'] == 'check_user')
 	{

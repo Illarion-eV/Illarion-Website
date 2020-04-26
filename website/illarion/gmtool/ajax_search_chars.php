@@ -9,7 +9,7 @@
 	create_XMLheader();
 
 	$search = ( isset($_POST['search']) ? trim((string)$_POST['search']) : '' );
-	$search = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', $search);
+	$search = urldecode($search);
 
 	$status = (array_key_exists ($_POST['state'], getCharStatusArray()) ? $_POST['state'] : false );
 	$race   = ( $_POST['race'] > -1  ? $_POST['race'] : false );
