@@ -77,7 +77,7 @@
 
 	$query = "SELECT character_details.char_id, character_details.settings"
     	. "\n FROM character_details"
-        . "\n WHERE char_id IN (".implode(',',$char_ids).")"
+        . "\n WHERE char_id IN ('".implode("','",$char_ids)."')"
     ;
 
 	$db_hp->setQuery( $query );
