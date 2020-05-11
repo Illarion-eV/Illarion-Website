@@ -131,7 +131,7 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 <h3>Illarion e.V.</h3>
  				
 <p>
-E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a><br />
+E-Mail: <a href="mailto:committee@illarion.org">committee@illarion.org</a><br />
 Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Registergericht: Amtsgericht Kempten<br />
 Registernummer: VR 30767<br /><br />

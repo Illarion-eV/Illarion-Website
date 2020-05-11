@@ -124,7 +124,7 @@ Contact them especially if you want to join the development team of Illarion.</p
 <h3>Illarion e.V.</h3> 
 
 <p>
-E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a><br />
+E-Mail: <a href="mailto:committee@illarion.org">committee@illarion.org</a><br />
 Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Register court: Amtsgericht Kempten<br /> 
 Register No.: VR 30767 <br /><br />
