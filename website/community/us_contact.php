@@ -112,9 +112,9 @@ Contact them especially if you want to join the development team of Illarion.</p
 <h2><a name="5"></a>Committee Illarion e.V.</h2>
 
 <ul>
-	<li><a href="?contact=25">Vilarion</a> - chairman</li>
-	<li><a href="?contact=23">Nitram</a> - treasurer</li>
-	<li><a href="?contact=21">Lennier</a> - secretary</li>
+	<li><a href="?contact=11">Estralis</a> - chairman</li>
+	<li><a href="?contact=46">Merung</a> - treasurer</li>
+	<li><a href="?contact=34">Slightly</a> - secretary</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -215,15 +215,7 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
          define(_CONTACT_NAME,"Vilarion",false);
          define(_CONTACT_MAIL,"vilarion@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead server developer of Illarion. ".
-         "He also is the server administrator, i.e. 'root'. Furthermore he is the chairman ".
-         "of the Illarion society.",false);
-      break;
-      case 28: //Aragon
-         define(_CONTACT_NAME,"Aragon",false);
-         define(_CONTACT_MAIL,"aragon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the treasurer of the ".
-         "Illarion e.V. and is able to answer questions about the society."
-         ,false);
+         "He also is the server administrator, i.e. 'root'.",false);
       break;
       case 30: //Achae
          define(_CONTACT_NAME,"Achae Eanstray",false);
@@ -264,6 +256,11 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+      break;
+      case 46: //Merung
+         define(_CONTACT_NAME,"Merung",false);
+         define(_CONTACT_MAIL,"merung@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is is the treasurer of the Illarion e.V..",false);
       break;
       default:
          MainForm();

@@ -119,9 +119,9 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 <h2><a name="5"></a>Vereinsvorstand Illarion e.V.</h2>
 
 <ul>
-<li><a href="?contact=25">Vilarion</a> - Vorsitzender</li>
-<li><a href="?contact=23">Nitram</a> - Kassenwart</li>
-<li><a href="?contact=21">Lennier</a> - Schriftführer</li>
+<li><a href="?contact=11">Estralis</a> - Vorsitzender</li>
+<li><a href="?contact=46">Merung</a> - Kassenwart</li>
+<li><a href="?contact=34">Slightly</a> - Schriftführer</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -223,17 +223,7 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 25: //Vilarion
          define(_CONTACT_NAME,"Vilarion",false);
          define(_CONTACT_MAIL,"vilarion@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Serverentwickler von Illarion und Serveradmin (d.h. 'root').<br />Er ist ".
-         "außerdem der 1. Vorsitzende des Illarion e.V. und kann Fragen ".
-         "zum Verein beantworten."
-         ,false);
-      break;
-      case 28: //Aragon
-         define(_CONTACT_NAME,"Aragon",false);
-         define(_CONTACT_MAIL,"aragon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der Kassenwart des ".
-         "Illarion e.V. und kann Fragen in Bezug auf den Verein beantworten."
-         ,false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Serverentwickler von Illarion und Serveradmin (d.h. 'root').",false);
       break;
       case 30: //Achae
          define(_CONTACT_NAME,"Achae Eanstray",false);
@@ -274,6 +264,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+      break;
+      case 46: //Merung
+         define(_CONTACT_NAME,"Merung",false);
+         define(_CONTACT_MAIL,"merung@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der Kassenwart des Illarion e.V..",false);
       break;
       default:
          MainForm();
