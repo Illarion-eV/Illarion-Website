@@ -6,6 +6,19 @@ Disallow: /
 User-agent: SemrushBot-SA
 Disallow: /
 
+User-agent: AspiegelBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: seoscanners.net
+Disallow: /
+User-agent: SEOkicks-Robot
+Disallow: /
+
 User-Agent: *
 Disallow: /ssl/
 Disallow: /_hp_admin_files_/
