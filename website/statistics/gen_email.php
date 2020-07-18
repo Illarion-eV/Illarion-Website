@@ -25,9 +25,9 @@ TXT;
 	$us_inactive = <<<TXT
 Dear player,
 
-some time ago, you have created an account for the online roleplaying game Illarion (https://illarion.org), but you did not log in recently or did not really start playing the game.
+Some time ago, you created an account for the online roleplaying game Illarion (https://illarion.org), but you have either not logged in recently or you did not really start playing the game.
 
-Since we are permanently developing the game and therefore are looking for suggestions and criticism, we would kindly ask you to shortly answer this e-mail, telling us the reasons why you ceased playing.
+Since we are actively developing the game and are looking for suggestions and criticism, we would kindly ask you to send a short replay to this e-mail, telling us the reasons why you ceased playing.
 
 Thank you very much in advance,
 The Illarion Staff
