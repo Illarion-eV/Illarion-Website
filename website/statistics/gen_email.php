@@ -27,7 +27,7 @@ Dear player,
 
 Some time ago, you created an account for the online roleplaying game Illarion (https://illarion.org), but you have either not logged in recently or you did not really start playing the game.
 
-Since we are actively developing the game and are looking for suggestions and criticism, we would kindly ask you to send a short replay to this e-mail, telling us the reasons why you ceased playing.
+Since we are actively developing the game and are looking for suggestions and criticism, we would kindly ask you to send a short reply to this e-mail, telling us the reasons why you ceased playing.
 
 Thank you very much in advance,
 The Illarion Staff
