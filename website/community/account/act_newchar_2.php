@@ -161,7 +161,8 @@
    					ply_hitpoints,
    					ply_mana,
    					ply_foodlevel,
-   					ply_lifestate)
+   					ply_lifestate,
+                    ply_faceto)
 					VALUES (
    					'.$pgSQL->Quote( $charid ).',
    					'.$pgSQL->Quote( $age ).',
@@ -180,7 +181,8 @@
 				    10000,
 				    0,
 				    50000,
-				    1)'
+				    1,
+                    2)'
 		;
 		$pgSQL->setQuery( $query );
 		$pgSQL->query();
