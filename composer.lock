@@ -2070,16 +2070,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.7.51",
+            "version": "v2.8.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "20f9c87a12a0749ad3a96da256b4d0f95aad4beb"
+                "reference": "88f3ef62d6ab870128352c8686c7889562698faf"            
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/20f9c87a12a0749ad3a96da256b4d0f95aad4beb",
-                "reference": "20f9c87a12a0749ad3a96da256b4d0f95aad4beb",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/88f3ef62d6ab870128352c8686c7889562698faf",
+                "reference": "88f3ef62d6ab870128352c8686c7889562698faf",
                 "shasum": ""
             },
             "require": {
