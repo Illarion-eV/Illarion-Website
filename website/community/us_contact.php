@@ -43,7 +43,7 @@ the appropriate people.</p>
 <ul>
 	<li><a href="?contact=1">Account requests</a> - Questions with regards to Account issues.</li>
 
-	<li><a href="?contact=2">Webmaster contact</a> - Questions with regards to Website issues.</li>
+	<li><a href="?contact=2">Website contact</a> - Questions with regards to Website issues.</li>
 
 	<li><a href="?contact=3">Reporting players</a> - To report a player breaking the rules.</li>
 
@@ -147,10 +147,10 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
          "You need to send this e-mail from the e-mail address you used to ".
          "register your account",false);
       break;
-      case 2: //Webmaster contact
-         define(_CONTACT_NAME,"Webmaster contact",false);
-         define(_CONTACT_MAIL,"webmaster@illarion.org",false);
-         define(_CONTACT_DETAILS,"All questions to the webmaster of ".
+      case 2: //Website contact
+         define(_CONTACT_NAME,"Website contact",false);
+         define(_CONTACT_MAIL,"website@illarion.org",false);
+         define(_CONTACT_DETAILS,"All questions concerning the website of ".
          "Illarion and questions concerning the homepage will be answered ".
          "here.",false);
       break;

@@ -43,7 +43,7 @@ E-Mail-Adresse, an die Du Dich wenden kannst.</p>
 <li><a href="?contact=1">Accountanfragen</a> - alle Fragen bezüglich
 deines Accounts, können hier gestellt werden</li>
 
-<li><a href="?contact=2">Kontakt zum Webmaster</a> - Fragen bezüglich
+<li><a href="?contact=2">Websiteanfragen</a> - Fragen bezüglich
 der Webseite, können hier gestellt werden</li>
 
 <li><a href="?contact=3">Spieler melden</a> - Spieler, die die Regeln
@@ -154,11 +154,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          "selben E-Mail-Adresse absendest, die in deinem Account steht um ".
          "nachzuweisen, dass es sich wirklich um deinen Account handelt.",false);
       break;
-      case 2: //Webmaster contact
-         define(_CONTACT_NAME,"Kontakt zum Webmaster",false);
-         define(_CONTACT_MAIL,"webmaster@illarion.org",false);
-         define(_CONTACT_DETAILS,"Alle Fragen an den Webmaster von Illarion".
-         " und Fragen bezüglich der Webseite können hier ".
+      case 2: //Website contact
+         define(_CONTACT_NAME,"Websiteanfragen",false);
+         define(_CONTACT_MAIL,"website@illarion.org",false);
+         define(_CONTACT_DETAILS,"Alle Fragen zur Website von Illarion".
+         " können hier ".
          "gestellt werden.",false);
       break;
       case 3: //Reporting players
