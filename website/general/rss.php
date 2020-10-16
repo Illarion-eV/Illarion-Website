@@ -19,8 +19,8 @@
 		<copyright>Illarion e.V.</copyright>
 		<lastBuildDate><?php echo date(DATE_RSS, $time); ?></lastBuildDate>
 		<pubDate><?php echo date(DATE_RSS, $time); ?></pubDate>
-		<managingEditor>webmaster@illarion.org</managingEditor>
-		<webMaster>webmaster@illarion.org</webMaster>
+		<managingEditor>website@illarion.org</managingEditor>
+		<webMaster>website@illarion.org</webMaster>
 		<?php echo $newsRenderer->renderList($news_list, 'un'); ?>
 	</channel>
 </rss>
