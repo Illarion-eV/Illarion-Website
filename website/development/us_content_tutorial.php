@@ -83,7 +83,7 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 
 <h4>Download and setup</h4>
 <ul>
-<li><a href="https://bit.ly/illarion">Download your copy of the local Illarion server here.</a></li>
+<li><a href="https://github.com/Illarion-eV/Illarion-Dev">Download your copy of the local Illarion server here.</a></li>
 <li>Setup and further steps are explained in the readme file.</li>
 </ul>
 

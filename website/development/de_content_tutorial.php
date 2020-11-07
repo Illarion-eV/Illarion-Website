@@ -80,7 +80,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 
 <h4>Download und Setup</h4>
 <ul>
-<li><a href="https://bit.ly/illarion">Lade dir deinen lokalen Illarion-Server hier runter.</a></li>
+<li><a href="https://github.com/Illarion-eV/Illarion-Dev">Lade dir deinen lokalen Illarion-Server hier runter.</a></li>
 <li>Setup und alle weiteren Schritte sind in der Readme-Datei beschrieben.</li>
 </ul>
 
