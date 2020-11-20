@@ -323,7 +323,7 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 	Install4J ist ein mächtiges Programm um native Installationsprogramme und Starter für Java zu erzeugen.
 	<br />
 	<br />
-	Bei Illarion wird install4j genutzt um die Setup-Dateien zu erzeugen.
+	Bei Illarion wird Install4J genutzt um die Setup-Dateien zu erzeugen.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
 

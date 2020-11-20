@@ -38,6 +38,8 @@
 <a href="<?php echo Page::getURL(); ?>/community/account/de_register.php">einen Account erstellen</a>
 und danach einen Charakter anlegen.</p>
 
+<p><a href="<?php echo Page::getURL(); ?>https://www.ej-technologies.com/products/install4j/overview.html">Illarion verwendet Install4J um die Setup-Dateien zu erzeugen.</a></p>
+
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2>Charaktere anlegen oder ansehen</h2>

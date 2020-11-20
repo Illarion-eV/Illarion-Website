@@ -38,6 +38,8 @@
 <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">create an account</a>
 and after that create a character.</p>
 
+<p><a href="<?php echo Page::getURL(); ?>https://www.ej-technologies.com/products/install4j/overview.html">Illarion uses the multi-platform installer builder Install4J to generate the setup files.</a></p>
+
 <?php Page::insert_go_to_top_link(); ?>
 
 <h2>Create or view a character</h2>
