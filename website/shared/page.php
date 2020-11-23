@@ -1008,8 +1008,8 @@ class Page {
 	* @access private
 	*/
 	static private function ServerState() {
-        $status = exec('illarionctl status');
-        if (strpos($status, 'ONLINE') === FALSE) {
+        $status = exec('systemctl status illarion');
+        if (strpos($status, 'active (running)') === FALSE) {
 			self::$serverstatus = 1;
 		} else {
 			self::$serverstatus = 0;
