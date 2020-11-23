@@ -47,8 +47,8 @@ maps in the Git repo are exactly in the way they are supposed to be on the serve
 <p>Causing the server to reload the maps:</p>
 
 <pre style="max-height: 130pt;overflow-y: scroll;"><?php
-    echo htmlentities(`sudo -u devserver /usr/bin/devctl loadmaps`);
-    echo PHP_EOL.'Sending Signal 10 to devserver';
+    echo htmlentities(`sudo systemctl reload illarion-dev`);
+    echo PHP_EOL.'Reloading maps!';
 ?></pre>
 
 <?php endif; ?>
