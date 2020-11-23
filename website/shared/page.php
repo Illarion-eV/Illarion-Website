@@ -1008,7 +1008,7 @@ class Page {
 	* @access private
 	*/
 	static private function ServerState() {
-        $status = exec('systemctl status illarion');
+        $status = exec('sudo systemctl status illarion');
         if (strpos($status, 'active (running)') === FALSE) {
 			self::$serverstatus = 1;
 		} else {
