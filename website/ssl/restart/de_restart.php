@@ -51,10 +51,10 @@ des Devservers das dieser sicher nicht mehr läuft.</p>
 <?php
     $output = `sudo systemctl status illarion-dev`;
     $running_server = false;
-    if (strpos($output, 'active (running)') === TRUE) {
-        $running_server = true;
-    } else {
+    if (strpos($output, 'active (running)') === FALSE) {
         $running_server = false;
+    } else {
+        $running_server = true;
     }
 ?>
 <?php if ($running_server): ?>
