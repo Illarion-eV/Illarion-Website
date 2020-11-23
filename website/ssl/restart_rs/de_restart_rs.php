@@ -27,15 +27,15 @@ Page::Init();
 
 if (isset($_POST['mode'])) {
     if ($_POST['mode'] == 'start') {
-        $process = popen('sudo -u illarionserver illarionctl start', 'r');
+        $process = popen('sudo systemctl start illarion', 'r');
         if (!is_bool($process)) {
             fread($process, 128);
             pclose($process);
         }
     } elseif ($_POST['mode'] == 'stop') {
-        `sudo -u illarionserver illarionctl stop`;
+        `sudo systemctl stop illarion`;
     } elseif ($_POST['mode'] == 'kill') {
-        `sudo -u illarionserver illarionctl kill`;
+        `sudo systemctl stop illarion`;
     }
 }
 ?>
@@ -49,12 +49,12 @@ if (isset($_POST['mode'])) {
 
     <p>Teste ob Spielserver läuft:</p>
 <?php
-$output = `illarionctl status`;
+$output = `sudo systemctl status illarion`;
 $running_server = false;
-if (strpos($output, 'OFFLINE') === FALSE) {
-    $running_server = true;
-} else {
+if (strpos($output, 'active (running)') === FALSE) {
     $running_server = false;
+} else {
+    $running_server = true;
 }
 ?>
 <?php if ($running_server): ?>
