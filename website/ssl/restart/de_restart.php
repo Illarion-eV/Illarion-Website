@@ -27,15 +27,15 @@
 	
 	if (isset($_POST['mode'])) {
 	    if ($_POST['mode'] == 'start') {
-	        $process = popen('sudo systemctl start illarion-dev', 'r');
+	        $process = popen('sudo illarion-dev start', 'r');
 	        if (!is_bool($process)) {
 				fread($process, 128);
 	            pclose($process);
 	        }
 	    } elseif ($_POST['mode'] == 'stop') {
-	        `sudo systemctl stop illarion-dev`;
+	        `sudo illarion-dev stop`;
 	    } elseif ($_POST['mode'] == 'kill') {
-	        `sudo systemctl stop illarion-dev`;
+	        `sudo illarion-dev stop`;
 	    }
 	}
 ?>
@@ -49,9 +49,9 @@ des Devservers das dieser sicher nicht mehr läuft.</p>
 
 <p>Teste ob Devserver läuft:</p>
 <?php
-    $output = `sudo systemctl status illarion-dev`;
+    $output = `sudo illarion-dev status`;
     $running_server = false;
-    if (strpos($output, 'active (running)') === FALSE) {
+    if (strpos($output, 'Online') === FALSE) {
         $running_server = false;
     } else {
         $running_server = true;
