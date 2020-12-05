@@ -47,7 +47,7 @@ maps in the git repo are exactly in the way they are supposed to be on the serve
 <p>Causing the server to reload the maps:</p>
 
 <pre style="max-height: 130pt;overflow-y: scroll;"><?php
-    echo htmlentities(`sudo systemctl reload illarion`);
+    echo htmlentities(`sudo illarion reload`);
     echo PHP_EOL.'Reloading maps!';
 ?></pre>
 
