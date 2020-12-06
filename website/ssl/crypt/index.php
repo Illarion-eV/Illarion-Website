@@ -67,7 +67,7 @@ If you're having trouble to remember all your passwords, than have a look at <a 
 </form>
 
 <h2>Crypted Password</h2>
-<p>Please copy/paste this (and only this) crypted password to the one who requested it (Alatar or Vilarion):</p>
+<p>Please copy/paste this (and only this) crypted password to the one who requested it (Estralis or Vilarion):</p>
 <p>
 	<?php
 		$salt = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz0123456789"), 0, 8);
