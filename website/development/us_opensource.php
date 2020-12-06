@@ -23,7 +23,7 @@ development repositories of Illarion.</p>
 
 <p>Game content are all quests, NPCs, monsters and e.g. the fighting system
 or the bevaviour of items. Most of our content is written in Lua&nbsp;5.2 (plus an
-<a href="https://raw.github.com/Illarion-eV/Illarion-Server/testserver/doc/luadoc.pdf">Illarion-specific extension</a>) with
+<a href="https://github.com/Illarion-eV/Illarion-Server/blob/develop/doc/luadoc.pdf">Illarion-specific extension</a>) with
 the exception of almost all NPCs, which were created with our own language easyNPC.
 The editor for easyNPC is available via the game's loader.</p>
 

@@ -27,34 +27,34 @@ Page::Init();
 
 if (isset($_POST['mode'])) {
     if ($_POST['mode'] == 'start') {
-        $process = popen('sudo -u illarionserver illarionctl start', 'r');
+        $process = popen('sudo illarion start', 'r');
         if (!is_bool($process)) {
             fread($process, 128);
             pclose($process);
         }
     } elseif ($_POST['mode'] == 'stop') {
-        `sudo -u illarionserver illarionctl stop`;
+        `sudo illarion stop`;
     } elseif ($_POST['mode'] == 'kill') {
-        `sudo -u illarionserver illarionctl kill`;
+        `sudo illarion stop`;
     }
 }
 ?>
 
     <h2>Informationen</h2>
 
-    <p>Diese Seite dient dazu den Devserver zu starten und zu stoppen. Bitte überprüfe vor dem Start
-        des Devservers das dieser sicher nicht mehr läuft.</p>
+    <p>Diese Seite dient dazu den Spielserver zu starten und zu stoppen. Bitte überprüfe vor dem Start
+        des Spielservers das dieser sicher nicht mehr läuft.</p>
 
     <h2>Zustand überprüfen</h2>
 
-    <p>Teste ob Devserver läuft:</p>
+    <p>Teste ob Spielserver läuft:</p>
 <?php
-$output = `illarionctl status`;
+$output = `sudo illarion status`;
 $running_server = false;
-if (strpos($output, 'OFFLINE') === FALSE) {
-    $running_server = true;
-} else {
+if (strpos($output, 'Online') === FALSE) {
     $running_server = false;
+} else {
+    $running_server = true;
 }
 ?>
 <?php if ($running_server): ?>
@@ -146,9 +146,9 @@ if (strpos($output, 'OFFLINE') === FALSE) {
 
     <h2>Spielserver abschalten</h2>
 
-    <p>In diesem Abschnitt kann der Spielserver abgeschalten werden. Das hat zur Folge das der Devserver beendet wird
+    <p>In diesem Abschnitt kann der Spielserver abgeschalten werden. Das hat zur Folge das der Spielserver beendet wird
         ohne das Spieler und
-        die Karte gespeichert werden. Diese Methode wird immer funktionieren um den Devserver abzuschalten. Wegen dem Datenverlust sollte sie
+        die Karte gespeichert werden. Diese Methode wird immer funktionieren um den Spielserver abzuschalten. Wegen dem Datenverlust sollte sie
         aber nur dann verwendet werden wenn das normale Herunterfahren fehlschlägt. In den meisten Fällen zeigt die Auswertung des Server
         Zustandes bereits ob der Server heruntergefahren oder abgeschalten werden muss.</p>
 
@@ -159,7 +159,7 @@ if (strpos($output, 'OFFLINE') === FALSE) {
 <?php else: ?>
 
     <form action="<?php echo Page::getSecureURL(); ?>/restart_rs/de_restart_rs.php" method="post">
-        <input type="submit" name="submit" value="Devserver abschalten"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
+        <input type="submit" name="submit" value="Spielserver abschalten"<?php echo ($running_server ? '' : ' disabled="disabled" class="disabled"'); ?> />
         <input type="hidden" name="mode" value="kill" />
     </form>
 

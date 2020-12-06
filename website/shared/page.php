@@ -1008,8 +1008,8 @@ class Page {
 	* @access private
 	*/
 	static private function ServerState() {
-        $status = exec('illarionctl status');
-        if (strpos($status, 'ONLINE') === FALSE) {
+        $status = `sudo illarion status`;
+        if (strpos($status, 'Online') === FALSE) {
 			self::$serverstatus = 1;
 		} else {
 			self::$serverstatus = 0;

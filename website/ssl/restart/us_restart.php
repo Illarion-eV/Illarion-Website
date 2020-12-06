@@ -26,15 +26,15 @@
 <?php
 	if (isset($_POST['mode'])) {
 	    if ($_POST['mode'] == 'start') {
-	        $process = popen('sudo -u devserver devctl start', 'r');
+	        $process = popen('sudo illarion-dev start', 'r');
 	        if (!is_bool($process)) {
 				fread($process, 128);
 	            pclose($process);
 	        }
 	    } elseif ($_POST['mode'] == 'stop') {
-	        `sudo -u devserver devctl stop`;
+	        `sudo illarion-dev stop`;
 	    } elseif ($_POST['mode'] == 'kill') {
-	        `sudo -u devserver devctl kill`;
+	        `sudo illarion-dev stop`;
 	    }
 	}
 ?>
@@ -48,12 +48,12 @@ devserver that it is not running anymore.</p>
 
 <p>Testing if the devserver is running:</p>
 <?php
-    $output = `devctl status`;
+    $output = `sudo illarion-dev status`;
     $running_server = false;
-    if (strpos($output, 'OFFLINE') === FALSE) {
-        $running_server = true;
-    } else {
+    if (strpos($output, 'Online') === FALSE) {
         $running_server = false;
+    } else {
+        $running_server = true;
     }
 ?>
 <?php if ($running_server): ?>
