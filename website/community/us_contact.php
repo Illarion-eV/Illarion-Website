@@ -24,7 +24,6 @@ function MainForm() {
 <h2>Content</h2>
 <ul>
 	<li><a class="hidden" href="#1">General Information</a></li>
-	<li><a class="hidden" href="#2">Community Managers</a></li>
 	<li><a class="hidden" href="#3">Gamemasters</a></li>
 	<li><a class="hidden" href="#4">Lead Developers</a></li>
 	<li><a class="hidden" href="#5">Committee Illarion e.V.</a>
@@ -60,20 +59,6 @@ the appropriate people.</p>
 
 	<li><a href="../mantis/">Bug reports</a> - Mistakes and errors you encounter
 	within the game, can be reported here.</li>
-</ul>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="2"></a>Community Managers</h2>
-
-<?php echo Page::cap('S'); ?>
-<p>ome players are known as "Community Managers" (CM).
-These players duties include assisting new players and also helping resolve issues and conflicts between players.
-They should be the first people to turn to for a non-technical issue that may arise. </p>
-
-<ul>
-<li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
-<li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>

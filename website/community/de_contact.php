@@ -24,7 +24,6 @@ function MainForm() {
 <h2>Inhalt</h2>
 <ul>
 <li><a class="hidden" href="#1">Allgemeine Informationen</a></li>
-<li><a class="hidden" href="#2">Community-Manager</a></li>
 <li><a class="hidden" href="#3">Gamemaster</a></li>
 <li><a class="hidden" href="#4">Leitende Entwickler</a></li>
 <li><a class="hidden" href="#5">Vereinsvorstand Illarion e.V.</a>
@@ -67,20 +66,6 @@ darum gebeten werden.</li>
 
 <li><a href="../mantis/">Fehlermeldungen</a> - Fehler im Spiel
 können hier gemeldet werden.</li>
-</ul>
-
-<?php Page::insert_go_to_top_link(); ?>
-
-<h2><a name="2"></a>Community-Manager</h2>
-
-<?php echo Page::cap('E'); ?>
-<p>inige Spieler sind "Community-Manager" (CM).
-Zu den Aufgaben dieser Spieler gehört es neuen Spielern zu helfen und Probleme oder Konflikte zwischen den Spielern zu lösen.
-Sie sollten die ersten sein, an die man sich bei nicht technischen Problemen wendet.</p>
-
-<ul>
-<li><a href="?contact=30">Achae Eanstray</a> - Englischsprachige Community-Managerin (US)</li>
-<li><a href="?contact=32">Djironnyma</a> - Deutschsprachiger Community-Manager (EU)</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
