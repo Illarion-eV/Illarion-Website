@@ -1,8 +1,5 @@
 <?php
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/database.php" );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/statistics/jpgraph/jpgraph.php");
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/statistics/jpgraph/jpgraph_log.php");
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/statistics/jpgraph/jpgraph_line.php");
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/autoload.php" );
 
 	$height = ( is_numeric($_GET['height']) ? (int)$_GET['height'] : 600 );
 	$width = ( is_numeric($_GET['width']) ? (int)$_GET['width'] : 800 );
@@ -21,7 +18,7 @@
 	$start = ( isset($_GET['start']) ? $_GET['start'] : false );
 	$end   = ( isset($_GET['end']) ? $_GET['end'] : date('Y-m-d') );
 
-	$pgSQL = =& Database::getPostgreSQL();
+	$pgSQL =& Database::getPostgreSQL();
 	$query = 'SELECT *'
 		.PHP_EOL.' FROM homepage.statistics'
 		.PHP_EOL.' WHERE stat_date <= '.$pgSQL->Quote($end)
