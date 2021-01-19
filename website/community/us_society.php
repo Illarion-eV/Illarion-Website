@@ -19,7 +19,7 @@ No one gets a cent for their work at Illarion, but still the hosting of the serv
 money. The money needed for this is paid by the members of the Illarion Society.</p>
 
 <p>The simplest way to cover our expenses in a predictable way is your Illarion Society support 
-membership for only ten Euro per year. To become a member, just fill out the form and send it to us: <a href="mailto:committee@illarion.org>committee@illarion.org</a>
+membership for only ten Euro per year. To become a member, just fill out the form and send it to us: <a href="mailto:committee@illarion.org">committee@illarion.org</a>
 Please find the Illarion Society statutes below.</p>
    <ul>
       <li><a href="Illarion_e.V._-_Request_for_Support_Membership.pdf">Support Membership Request for &quot;Illarion e.V.&quot; Society</a> (pdf)</li>
