@@ -1,6 +1,7 @@
 <?php
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/illarion_data.php" );
+  IllaUser::requireGmStatus();
     create_header( "Illarion - Charakterdatenbank",
     "Character Database",
     "characters, background",
@@ -13,7 +14,7 @@
 	//
     $db=& Database::getPostgreSQL( 'illarionserver' );
 
-	// Variablen für die DB Abfrage
+	// Variablen fï¿½r die DB Abfrage
 	if ($_GET['key']=="") { $key="A"; } else { $key=$_GET['key'];}
     $thiskey=$key."%";
     $aktiv_time=strtotime("-8 weeks");
@@ -273,7 +274,7 @@
 	echo "</tr>";
 	echo "</table>";
 
-	// WEITERBLÄTTERN
+	// WEITERBLï¿½TTERN
 	//
     $prev=$_GET['start']-22;
     $next=$_GET['start']+22;    

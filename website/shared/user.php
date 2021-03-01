@@ -252,6 +252,18 @@ class IllaUser {
 			exit();
 		}
 	}
+	
+	public static final function requireGmStatus() {
+		self::requireLogin();
+		if (!(self::auth('gmtool_chars') || self::auth('gmtool_accounts') || self::auth('gmtool_raceapplys') || self::auth('gmtool_namecheck') || self::auth('gmtool_gms') || self::auth('gmtool_pages')))
+		{	
+			print("FUCKEN");
+			ob_clean();
+			define('LOGIN_TARGET_URL', $_SERVER['REQUEST_URI']);
+			include Page::getRootPath() . '/general/' . Page::getLanguage() . '_startpage.php';
+			exit();
+		}
+	}
 
 	private static final function encrypt_pw() {
 		self::$clean_pw = trim(self::$clean_pw);
