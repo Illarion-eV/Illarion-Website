@@ -1,6 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
-
+	IllaUser::requireGmStatus();
 	Page::setTitle( 'Statistics' );
 	Page::setDescription( 'This page shows some statistics about the community of Illarion.' );
 	Page::setKeywords( array( 'online', 'player', 'statistics' ) );
