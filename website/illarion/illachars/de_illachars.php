@@ -1,6 +1,7 @@
 <?php
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/shared.php" );
   include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/illarion_data.php" );
+  IllaUser::requireGmStatus();
     create_header( "Illarion - Charakterdatenbank",
     "Charakterdatenbank",
     "Charaktere, Hintergrund",

@@ -145,9 +145,9 @@
 								</div>
 								<ul class="navigation">
 									<li class="seperator"><a href="{URL}/statistics/{LANGUAGE}_players.php">{ONLINE_PLAYERS}</a></li>
-									<li><a href="{URL}/statistics/{LANGUAGE}_highscores.php">{LANG|Bestenlisten|High Scores}</a></li>
-									<li><a href="{URL}/illarion/illachars/{LANGUAGE}_illachars.php">{LANG|Spieler|Players}</a></li>
-						    		<li><a href="{URL}/statistics/{LANGUAGE}_history_of_players.php">{LANG|Statistiken|Statistics}</a></li>
+									{AUTH|gmtool_view}<li><a href="{URL}/statistics/{LANGUAGE}_highscores.php">High Scores</a></li>{/AUTH}
+									{AUTH|gmtool_view}<li><a href="{URL}/illarion/illachars/{LANGUAGE}_illachars.php">Players</a></li>{/AUTH}
+						    		{AUTH|gmtool_view}<li><a href="{URL}/statistics/{LANGUAGE}_history_of_players.php">Statistics</a></li>{/AUTH}
 						    		<!--<li><a href="{URL}/development/mantis_testserver_bugs.php" target="_blank">{MANTIS_ISSUES}</a></li> -->
 					        	</ul>
 								<div class="menu_title">
