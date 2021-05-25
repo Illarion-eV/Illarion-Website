@@ -23,10 +23,7 @@ questions arise. The most important principle in Illarion though is:</p>
 <p>People who play Illarion and follow this principle can
 hardly do anything wrong. </p>
 
-<p>We are an open and tolerant community.
-Harassment, threats or insults, including racist or sexist statements against other players will
-not be tolerated. This hold for all platforms of Illarion: The game, the board
-and the chat, including private messages.</p>
+<p>We are an open and tolerant community. Harassment, threats or insults, including offensive statements regarding disability, ethnicity, religion or belief, sex, or sexual orientation will not be tolerated. This holds for all platforms of Illarion: The game, the forum and the Discord chat, including private messages.</p>
 
 <h2>Content</h2>
 <ul>
@@ -225,9 +222,9 @@ right after resurrection ("res-killing") is not allowed.</p>
 <div><a id="forum"></a></div>
 <h2>Forum and Chat</h2>
 
-<p>On the Forum and the Illarion Chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links are prohibited. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
+<p>On the forum and the Discord chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links are prohibited. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
 
-<p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum. Likewise, complaints about staff members shall be reported to the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
+<p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum or the Discord chat. Likewise, complaints about staff members shall be reported to the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 

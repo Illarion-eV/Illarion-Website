@@ -22,12 +22,7 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 
 <p>Wer Illarion nach diesem Grundsatz spielt, kann eigentlich nichts falsch machen.</p>
 
-<p>Wir wollen eine offene und tolerante Community sein.
-Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
-einschließlich rassistischer oder sexistischer Äußerungen, 
-die sich gegen andere Spieler richten, werden nicht toleriert. 
-Dies gilt für alle Plattformen von Illarion: 
-das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
+<p>Wir wollen eine offene und tolerante Community sein. Jegliche Belästigungen, Bedrohungen oder Beleidigungen, einschließlich beleidigende Aussagen in Bezug auf Behinderung, ethnische Zugehörigkeit, Religion oder Weltanschauung, Geschlecht oder sexuelle Orientierung werden nicht toleriert. Dies gilt für alle Plattformen von Illarion: das Spiel, das Forum und den Discord-Chat, einschließlich privater Nachrichten.</p>
 
 <h2>Inhalt</h2>
 <ul>
@@ -236,9 +231,9 @@ einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 <div><a id="forum"></a></div>
 <h2>Forum und Chat</h2>
 
-<p>Auf dem Forum und im Illarion-Chat sind übliche Netiquette zu wahren. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind verboten. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
+<p>Auf dem Forum und im Discord-Chat sind übliche Netiquette zu wahren. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind verboten. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
 
-<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
+<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum oder im Discord-Chat diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
