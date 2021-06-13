@@ -2,6 +2,7 @@
 
 namespace Illarion\AccountSystemBundle\Controller;
 
+use IllaDateTime;
 use Doctrine\Common\Collections\Criteria;
 use FOS\RestBundle\Controller\Annotations as RestAnnotations;
 use FOS\RestBundle\Controller\FOSRestController;
@@ -583,6 +584,27 @@ class CharacterController extends FOSRestController
             else
                 $newPlayer->setHairId($data['beardId']);
         }
+
+        if (self::isInRange($data['height'], $raceDef->getHeightMin(), $raceDef->getHeightMax()))
+        throw new AttributeOutOfRangeException('height', $data['height'],
+            $raceDef->getHeightMin(), $raceDef->getHeightMax());
+
+        if (self::isInRange($data['weight'], $raceDef->getWeightMin(), $raceDef->getWeightMax()))
+        throw new AttributeOutOfRangeException('weight', $data['weight'],
+            $raceDef->getWeightMin(), $raceDef->getWeightMax());
+
+        $newPlayer->setHeight($data['height']);
+        $newPlayer->setWeight($data['weight']);
+
+        if (self::isInRange($data['age'], $raceDef->getAgeMin(), $raceDef->getAgeMax()))
+            throw new AttributeOutOfRangeException('age', $data['age'],
+                $raceDef->getAgeMin(), $raceDef->getAgeMax());
+
+        $newPlayer->setAge($data['age']);
+
+        $currentYear = IllaDateTime::IllaTimestampToTime('y');
+        $dateOfBirth = IllaDateTime::mkIllaDatestamp($data['dateOfBirthMonth'], $data['dateOfBirthDay'], $currentYear - $data['age']);
+        $newPlayer->setDateOfBirth($dateOfBirth);
 
         $em->persist($newPlayer);
 

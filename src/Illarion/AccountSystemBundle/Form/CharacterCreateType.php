@@ -76,6 +76,13 @@ class CharacterCreateType extends AbstractType
                 new Range(array('min' => 0, 'max' => 255))
             )
         ));
+
+        $builder->add('weight', 'integer');
+        $builder->add('height', 'integer');
+
+        $builder->add('age', 'integer');
+        $builder->add('dateOfBirthDay', 'integer');
+        $builder->add('dateOfBirthMonth', 'integer');
     }
 
     public function configureOptions(OptionsResolver $resolver)
