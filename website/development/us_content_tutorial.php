@@ -12,7 +12,7 @@
 
 <p>
 Did you ever stumble over an obvious mistake in the game like a spelling error?
-Did you consider posting on Mantis but felt it was just not worth it?
+Did you consider reporting it to a developer but felt it was just not worth it?
 Would you just have corrected it if given the means?
 If so, keep reading, this tutorial is for <u>you</u>.
 </p>
@@ -35,7 +35,7 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <ul>
 <li>Link to the game content repository: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>A free account on <a href="https://github.com">github.com</a></li>
-<li>A modern, good editor like <a href="https://notepad-plus-plus.org">Notepad++</a></li>
+<li>A modern, good editor like <a href="https://notepad-plus-plus.org">Notepad++</a> or <a href="https://code.visualstudio.com">Visual Studio Code</a></li>
 <li>An easy to use Git client like <a href="https://sourcetreeapp.com">SourceTree</a> on Windows and Mac, or the console client on Linux</li>
 </ul>
 	
@@ -132,5 +132,5 @@ Using Git is quite challenging for beginners. Once you get used to it, it is rea
 <li>Illarion uses Lua 5.2, a <a href="https://www.lua.org/pil/contents.html">book covering Lua 5.0</a> (very similar) is available online.</li>
 <li>See the <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion extension to Lua</a>.</li>
 <li>Learn more about <a href="https://git-scm.com/book">Git</a>, the fast and distributed version control system.</li>
-<li>Talk to our content developers in the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">IRC chat</a> (#illarion on QuakeNet).</li>
+<li>Talk to our content developers on <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">Discord</a>.</li>
 </ul>

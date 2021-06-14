@@ -12,7 +12,7 @@
 
 <p>
 Bist du schon einmal über einen offensichtlichen Fehler im Spiel gestolpert wie z.B.
-einen Rechtschreibfehler? Hast du überlegt diesen im Mantis-Bugtracker zu melden aber es
+einen Rechtschreibfehler? Hast du überlegt diesen einem Entwickler zu melden aber es
 dann doch gelassen? Hättest du ihn selber behoben, wenn du die Mittel dazu gehabt
 hättest? Wenn ja lies weiter, dieses Tutorial ist für <u>dich</u>.</p>
 
@@ -33,7 +33,7 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <ul>
 <li>Link zum Repository für Spielinhalte: <a href="https://github.com/Illarion-eV/Illarion-Content">https://github.com/Illarion-eV/Illarion-Content</a></li>
 <li>Einen kostenlosen Account auf <a href="https://github.com">github.com</a></li>
-<li>Einen modernen, guten Texteditor wie <a href="https://notepad-plus-plus.org">Notepad++</a></li>
+<li>Einen modernen, guten Texteditor wie <a href="https://notepad-plus-plus.org">Notepad++</a> oder <a href="https://code.visualstudio.com">Visual Studio Code</a></li>
 <li>Einen einfach zu benutzenden Git-Client wie <a href="https://sourcetreeapp.com">SourceTree</a> unter Windows und Mac, oder den Konsolenclient unter Linux</li>
 </ul>
 	
@@ -129,5 +129,5 @@ Der Umgang mit Git ist für Einsteiger eine kleine Herausforderung. Wenn du dich
 <li>Illarion benutzt Lua 5.2, ein <a href="https://www.lua.org/pil/contents.html">Buch, das Lua 5.0 behandelt</a> ist online verfügbar.</li>
 <li>Schau dir die <a href="https://raw.github.com/Illarion-eV/Illarion-Server/master/doc/luadoc.pdf">Illarion-Erweiterung zu Lua</a> an.</li>
 <li>Lerne mehr über <a href="https://git-scm.com/book">Git</a>, das schnelle verteilte Versionierungssystem.</li>
-<li>Sprich mit unseren Inhaltsentwicklern im <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">IRC-Chat</a> (#illarion im QuakeNet).</li>
+<li>Sprich mit unseren Inhaltsentwicklern auf <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">Discord</a>.</li>
 </ul>
