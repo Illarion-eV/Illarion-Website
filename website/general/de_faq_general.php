@@ -103,7 +103,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="gs9"></a><strong>Ich habe ein technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
 		
-		<p>Es gibt ein genau dafür vorgesehenes <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="<?php echo Page::getURL(); ?>/community/sw_chat.php">Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
+		<p>Es gibt ein genau dafür vorgesehenes <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> für Illarion. Erstelle dir einen kostenlosen Account und poste deine Fragen oder einfach nur deine Grüße an die Spielerschaft. Außerdem kannst du dem <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">Discord-Chat</a> beitreten um mit Gamemastern, Entwicklern und anderen Spielern in Kontakt zu kommen.</p>
 		
 </ul>
 
@@ -111,12 +111,12 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 <br />
 
-	<h2>First Steps Into Illarion</h2>
+	<h2>Die ersten Schritte in Illarion</h2>
 
 <ul>
 	<li class="question"><a id="fs1"></a><strong>Ich habe gerade mit dem Spiel angefangen und weiß nicht, was ich tun soll!</strong></li>
 		
-		<p>Ein Tutorium wird dich in den ersten Minuten des Spiels begleiten, anschließend hast du die freie Wahl, was du tun möchtest - werde ein stolzer Ritter, ein frommer Priester, ein fleißiger Handwerker oder ein einfacher Bauer.</p>
+		<p>Ein Tutorial wird dich in den ersten Minuten des Spiels begleiten, anschließend hast du die freie Wahl, was du tun möchtest - werde ein stolzer Ritter, ein frommer Priester, ein fleißiger Handwerker oder ein einfacher Bauer.</p>
 
 	<li class="question"><a id="fs2"></a><strong>Wie kann ich jemanden angreifen und töten?</strong></li>
 	
@@ -187,7 +187,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc6"></a><strong>Wie kann ich anderen Spielern im Spiel eine Botschaft zukommen lassen?</strong></li>
 	
-		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sich der <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">globale Chat</a> auf der Homepage. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
+		 <p>Um vom eigentlichen Spiel nicht allzusehr abzulenken, befindet sich der <a href="<?php echo Page::getURL(); ?>/community/de_chat.php">globale Chat</a> auf Discord. Mächtige Magier können eines Tages die Kraft der Telepathie nutzen. Wenn du Neuigkeiten verbreiten willst, bezahle doch einen anderen Spieler als Boten oder benutze das <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> um einen Anschlag an der Stadtmauer zu verfassen.</p>
 		
 	<li class="question"><a id="gc7"></a><strong>Das Spiel hat Steuern von mir eingetrieben! Was soll das?</strong></li>
 	
@@ -221,7 +221,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="co2"></a><strong>Ich habe einen Fehler gefunden oder habe einen Vorschlag. Wie melde ich sowas?</strong></li>
 		
-		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen den <a href="<?php echo Page::getURL(); ?>/mantis/index.php">Mantis Bugtracker</a>. Dies ist das Fehlerverwaltungssystem der Entwickler. Du kannst ebenso Fehler und Vorschläge am <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> schreiben, allerdings besteht die Chance, dass sie dort von den Entwicklern nicht sofort gesehen werden.<p>
+		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen <a href="<?php echo Page::getURL(); ?>https://github.com/Illarion-eV/Illarion-Content/discussions">GitHub</a>. Du kannst ebenso Fehler und Vorschläge am <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> schreiben.<p>
 
 	<li class="question"><a id="co3"></a><strong>Können Spieler Bücher, NPCs oder sogar Quests selber schreiben?</strong></li>
 	

@@ -102,7 +102,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs9"></a><strong>I have a technical problem. Where can I get support?</strong></li>
 		
-		<p>There is a dedicated <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">chat</a> to get in contact with the gamemasters, developers and other players.</p>
+		<p>There is a dedicated <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">support forum</a> for Illarion. Create a free account and post your questions or just greetings to the other players. Also, you can join the Illarion <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">Discord chat</a> to get in contact with the gamemasters, developers and other players.</p>
 		
 </ul>
 
@@ -186,7 +186,7 @@ Page::Init();
 
 	<li class="question"><a id="gc6"></a><strong>How do I send global chat messages?</strong></li>
 	
-		 <p>In order not to distract players from the actual game, the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">global chat</a> can be found on the website. We might grant powerful mages a special ability to communicate by telepathy in the game. If you need to spread a message, you can always hire another player as a messenger or use the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> to leave messages on the town walls.</p>
+		 <p>In order not to distract players from the actual game, the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">global chat</a> can be found on Discord. We might grant powerful mages a special ability to communicate by telepathy in the game. If you need to spread a message, you can always hire another player as a messenger or use the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> to leave messages on the town walls.</p>
 		
 	<li class="question"><a id="gc7"></a><strong>The game took taxes from me! What is this all about?</strong></li>
 	
@@ -218,7 +218,7 @@ Page::Init();
 		
 	<li class="question"><a id="co2"></a><strong>I found a bug or have a feature request. How do I report it?</strong></li>
 		
-		<p>The best way to report a bug or request features for the game or website is to use the <a href="<?php echo Page::getURL(); ?>/mantis/index.php">Mantis Bugtracker</a> which is the Bug Reporting system used by the developers. You can also post bugs and feature requests in the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> but there is a chance they may not be seen by the developers.</p>
+		<p>The best way to report a bug or request features for the game or website is to use <a href="<?php echo Page::getURL(); ?>https://github.com/Illarion-eV/Illarion-Content/discussions">GitHub</a>. You can also post bugs and feature requests on the <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a>.</p>
 
 	<li class="question"><a id="co3"></a><strong>Can players write books, NPCs or even quests?</strong></li>
 	
