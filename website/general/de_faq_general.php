@@ -221,7 +221,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="co2"></a><strong>Ich habe einen Fehler gefunden oder habe einen Vorschlag. Wie melde ich sowas?</strong></li>
 		
-		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen <a href="<?php echo Page::getURL(); ?>https://github.com/Illarion-eV/Illarion-Content/discussions">GitHub</a>. Du kannst ebenso Fehler und Vorschläge am <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forums</a> schreiben.<p>
+		<p>Am besten benutzt du zum Melden von Fehlern oder Vorschlägen <a href="<?php echo Page::getURL(); ?>https://github.com/Illarion-eV/Illarion-Content/discussions">GitHub</a>. Du kannst ebenso Fehler und Vorschläge am <a href="<?php echo Page::getURL(); ?>/community/forums/index.php">Forum</a> schreiben.<p>
 
 	<li class="question"><a id="co3"></a><strong>Können Spieler Bücher, NPCs oder sogar Quests selber schreiben?</strong></li>
 	
