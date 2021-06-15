@@ -225,11 +225,11 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="co3"></a><strong>Können Spieler Bücher, NPCs oder sogar Quests selber schreiben?</strong></li>
 	
-		<p>Jawohl! Illarion schätzt alle Inhalte, die von Spielern erstellt wurden, und gibt ihnen die Möglichkeit, die Welt mitzugestalten. <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#4">Wende dich an einen Entwickler</a> und ließ das <a href="<?php echo Page::getURL(); ?>/development/de_content_tutorial.php">Entwicklungstutorial</a>, um erste Informationen zu erhalten.</p>
+		<p>Jawohl! Illarion schätzt alle Inhalte, die von Spielern erstellt wurden, und gibt ihnen die Möglichkeit, die Welt mitzugestalten. <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#4">Wende dich an einen Entwickler</a> und lies das <a href="https://lua.illarion.org">Entwicklungstutorial</a>, um erste Informationen zu erhalten.</p>
 		
 	<li class="question"><a id="co4"></a><strong>Wie kann ich Illarion helfen? Was muss ich können?</strong></li>
 	
-		<p>Illarion kann man auf vielerlei Arten unterstützen. Du könntest dem Verein <a href="<?php echo Page::getURL(); ?>/community/de_society.php">Illarion e.V.</a> beitreten, die <a href="<?php echo Page::getURL(); ?>/development/de_content_tutorial.php">Entwicklung des Spieles</a> unterstützen oder dabei helfen, das Spiel <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">bekannter zu machen</a>. Erzähl auch deinen Freunden von Illarion!</p>
+		<p>Illarion kann man auf vielerlei Arten unterstützen. Du könntest dem Verein <a href="<?php echo Page::getURL(); ?>/community/de_society.php">Illarion e.V.</a> beitreten, die <a href="https://lua.illarion.org">Entwicklung des Spieles</a> unterstützen oder dabei helfen, das Spiel <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">bekannter zu machen</a>. Erzähl auch deinen Freunden von Illarion!</p>
 		
 		<p>Wenn du fortgeschrittene Fähigkeiten in Java, C++, LUA, PHP oder mit 3D-Grafiken hast, wende dich doch an einen der <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#4">Entwickler</a>, um deinen Beitrag zur Entwicklung beizusteuern. Beachte hierbei, dass Illarion kein gewinnorientierte Projekt ist und somit auch keine Vergütung gezahlt werden kann.</p>
 		

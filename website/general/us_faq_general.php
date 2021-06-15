@@ -222,11 +222,11 @@ Page::Init();
 
 	<li class="question"><a id="co3"></a><strong>Can players write books, NPCs or even quests?</strong></li>
 	
-		<p>Yes. Illarion appreciated all player made content and gives the players the opportunity to shape the world. <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">Contact a developer</a> and read the <a href="<?php echo Page::getURL(); ?>/development/us_content_tutorial.php">development tutorial</a> for starters.</p>
+		<p>Yes. Illarion appreciates all player made content and gives the players the opportunity to shape the world. <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">Contact a developer</a> and read the <a href="https://lua.illarion.org">development tutorial</a> for starters.</p>
 		
 	<li class="question"><a id="co4"></a><strong>How can I contribute to Illarion? What skills are needed?</strong></li>
 	
-		<p>There are many ways in which you can contribute to Illarion. You could support the <a href="<?php echo Page::getURL(); ?>/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="<?php echo Page::getURL(); ?>/development/us_content_tutorial.php">development of the game</a> or help to <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
+		<p>There are many ways in which you can contribute to Illarion. You could support the <a href="<?php echo Page::getURL(); ?>/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="https://lua.illarion.org">development of the game</a> or help to <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
 		
 		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
 		
