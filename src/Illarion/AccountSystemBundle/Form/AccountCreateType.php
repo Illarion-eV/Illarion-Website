@@ -12,7 +12,7 @@ class AccountCreateType extends AbstractType
     {
         $builder->add('name', 'text');
         $builder->add('password', 'password');
-        $builder->add('email', 'email', array('required' => false));
+        $builder->add('email', 'email');
     }
 
     public function configureOptions(OptionsResolver $resolver)
