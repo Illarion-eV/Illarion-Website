@@ -1015,12 +1015,7 @@ class Page {
 			self::$serverstatus = 0;
 		}
 
-        $status = exec('testctl status');
-		if (strpos($status, 'ONLINE') === FALSE) {
-			self::$testserverstatus = 1;
-		} else {
-			self::$testserverstatus = 0;
-		}
+		self::$testserverstatus = 1;
 
 		self::$debugger = 0;
 	}
