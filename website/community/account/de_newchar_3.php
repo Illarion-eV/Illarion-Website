@@ -90,7 +90,7 @@ $templates = $db->loadAssocList();
 <p>Die Attributpakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Bitte ändere die bestehenden Pakete bei Bedarf um sie deiner gewünschten Charakterrolle anzupassen. Druiden benötigen derzeit 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Magier benötigen derzeit 30 Punkte aufgeteilt auf Intelligenz, Essenz und Willensstärke.</p>
 <p>Bewege deine Maus über ein Attribut, um einen Hilfetext anzuzeigen.</p>
 <div>
-	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attribute</h2>
 

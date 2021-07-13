@@ -59,8 +59,8 @@
 			$query = 'SELECT COUNT(*)'
 			.PHP_EOL.' FROM player'
 			.PHP_EOL.' WHERE ply_playerid = '.$pgSQL->Quote( $charid )
-			.PHP_EOL.' AND ply_dob > 0'
-			;
+			.PHP_EOL.' AND ply_dob > 0
+			AND ply_strength != 0';
 			$pgSQL->setQuery( $query );
 
 			if ($pgSQL->loadResult() > 0)
