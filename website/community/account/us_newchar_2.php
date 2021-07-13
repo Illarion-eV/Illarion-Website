@@ -95,7 +95,7 @@
 
 <p>At this point you can design your character</p>
 
-<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 	<div>
 		<h2>Information</h2>
 		<table style="width:100%;">

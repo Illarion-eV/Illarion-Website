@@ -1,6 +1,6 @@
 <?php
 	includeWrapper::includeOnce( Page::getRootPath().'/community/account/def_charcreate.php' );
-
+	includeWrapper::includeOnce( Page::getRootPath().'/community/account/inc_charcreate.php' );
 	checkAndUpdateChar();
 
 	function checkAndUpdateChar()
@@ -15,7 +15,8 @@
 		echo "Haarfarbe: ".$_POST['haircolor']."<br/>";
 		echo "Haare: ".$_POST['hairvalue']."<br/>";
 		echo "Bart: ".$_POST['beardvalue']."<br/>";
-*/
+*/		
+	
 		$server = ( isset( $_GET['server'] ) && (int)$_GET['server'] == 1 ? 'devserver' : 'illarionserver' );
 		$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
 		$pgSQL =& Database::getPostgreSQL( $server );
@@ -39,6 +40,21 @@
 		{
 			Messages::add((Page::isGerman()?'Charakter nicht gefunden':'The character was not found'),'error');
 			return;
+		}else {
+			$haircolors = char_create::getHairColors($race);
+			$skincolors = char_create::getSkinColors($race);
+			$hairvalues = char_create::getHairValues($race, $sex, IllaUser::$lang);
+			$beardvalues = char_create::getBeardValues($race, IllaUser::$lang);
+			
+			if((
+				!in_array($_POST['haircolor'], $haircolors)
+				|| !in_array($_POST['skincolor'], $skincolors)
+				|| !in_array($_POST['hairvalue'], array_keys($hairvalues))
+				|| !in_array($_POST['beardvalue'], array_keys($beardvalues))
+			)){
+				Messages::add((Page::isGerman()?'Diese Auswahl ist für den Charakter nicht verfügbar.':'That selection is not available for the character.'),'error');
+				return;
+			}
 		}
 
     	$query = 'SELECT *'
