@@ -9,7 +9,7 @@ $result = $pgSQL->loadAssocList();
 $servers = array();
 
 foreach ($result as $key => $value) {
-    $servers[] = array('port' => $value['port'], 'name' => $value['name']);
+    $servers[] = array('port' => (int)$value['port'], 'name' => $value['name']);
 }
 
 header('Content-Type:application/json');
