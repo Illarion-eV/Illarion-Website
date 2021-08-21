@@ -1,4 +1,6 @@
 <?php
+include_once ( $_SERVER['DOCUMENT_ROOT'] . "/shared/database.php" );
+
 $pgSQL =& Database::getPostgreSQL();
 $query = "SELECT port, name FROM servers.servers ORDER BY port";
 $pgSQL->setQuery($query);
