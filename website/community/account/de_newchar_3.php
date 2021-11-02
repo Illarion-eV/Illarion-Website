@@ -135,7 +135,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Brauen, Töpfern, Edelsteinschleifen, Glasblasen, Rüstschmied, Feinschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Die Koordinationsfähigkeit deines Charakters. Dieses Attribut ist für alle Handwerker wichtig, da es die Qualität der Endprodukte erhöht. Es hilft auch Kämpfern ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Brauen, Töpfern, Edelsteinschleifen, Glasblasen, Rüstschmied, Feinschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
