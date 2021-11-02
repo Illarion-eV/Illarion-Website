@@ -134,7 +134,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The coordination skills of your character. This attribute is vital for all crafters as it increases the quality of crafted goods. It also helps fighters to hit their target. Dexterity affects the learning speed of the following skills: Armourer, Blacksmithing, Carpentry, Baking/Cooking, Brewing, Gemcutting, Glass Blowing, Finesmithing, Pottery, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="The coordination skills of your character. This attribute is vital for all crafters as it increases the quality of crafted goods. It also helps fighters to hit their target harder. Dexterity affects the learning speed of the following skills: Armourer, Blacksmithing, Carpentry, Baking/Cooking, Brewing, Gemcutting, Glass Blowing, Finesmithing, Pottery, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
