@@ -57,8 +57,6 @@ the appropriate people.</p>
 	<li><a href="?contact=7">RPG requests Runewick</a> - If you need Gamemaster support
 	for a quest in Runewick you can ask for it here.</li>
 
-	<li><a href="../mantis/">Bug reports</a> - Mistakes and errors you encounter
-	within the game, can be reported here.</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -71,7 +69,6 @@ Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
 Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM</li>
     <li><a href="?contact=34">Slightly</a> - English speaking GM</li>
 </ul>
 

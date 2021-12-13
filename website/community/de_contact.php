@@ -64,8 +64,6 @@ darum gebeten werden.</li>
 eines Gamemasters für ein Quest in Runewick benötigt werden, kann hier
 darum gebeten werden.</li>
 
-<li><a href="../mantis/">Fehlermeldungen</a> - Fehler im Spiel
-können hier gemeldet werden.</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -79,7 +77,6 @@ Die Gamemaster organisieren auch die Fraktionen Cadomyr, Galmair und Runewick.
 Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <ul>
-   <li><a href="?contact=45">Silverwing</a> - Deutschsprachiger GM</li>
    <li><a href="?contact=34">Slightly</a> - Englischsprachiger GM</li>
 </ul>
 
