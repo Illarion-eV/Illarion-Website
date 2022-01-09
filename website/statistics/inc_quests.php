@@ -22,6 +22,9 @@
 		return $quest;
 	}
 
+	function prepText($text){
+		return htmlspecialchars($text);
+	}
 	function prepareQuestTexts( &$german, &$english )
 	{
 		$show_error = false;
