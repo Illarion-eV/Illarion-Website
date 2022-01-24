@@ -107,9 +107,10 @@ Contact them especially if you want to join the development team of Illarion.</p
 
 <p>
 E-Mail: <a href="mailto:committee@illarion.org">committee@illarion.org</a><br />
-Webmaster: <a href="mailto:website@illarion.org">Illarion e.V.</a><br />
+Represented by: <a href="https://illarion.org/community/us_contact.php#5">Society Committee</a><br />
 Register court: Amtsgericht Kempten<br /> 
-Register No.: VR 30767 <br /><br />
+Register No.: VR 30767<br />
+Address: Residenzplatz 4-6, 87435 Kempten, Germany<br /><br />
 The website and its content is licensed under AGPLv3.<br /><br />
 This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> and <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
