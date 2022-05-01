@@ -242,7 +242,7 @@ einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
 
 <p>Das bewusste Ausnutzen von Spielfehlern ist, egal mit welcher Absicht,
 verboten. Wenn ein Fehler im Spiel gefunden wird, soll dieser an das Team von
-Illarion gemeldet werden; vorzugsweise durch einen Eintrag im Bugtracker.
+Illarion gemeldet werden; vorzugsweise durch einen Eintrag auf GitHub.
 Sollten durch Bugs oder Serverabstürze Dinge oder Eigenschaften verloren gehen,
 so werden diese nicht ersetzt.</p>
 
