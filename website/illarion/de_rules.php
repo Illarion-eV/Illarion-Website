@@ -246,8 +246,7 @@ Illarion gemeldet werden; vorzugsweise durch einen Eintrag auf GitHub.
 Sollten durch Bugs oder Serverabstürze Dinge oder Eigenschaften verloren gehen,
 so werden diese nicht ersetzt.</p>
 
-<p>Die Verwendung von Programmen, die das Verhalten des Spiels beeinflussen und
-so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
+<p>Die Verwendung von externen Programmen, die einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 

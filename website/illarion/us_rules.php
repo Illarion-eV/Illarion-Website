@@ -200,8 +200,7 @@ an error is found in-game, it has to be reported to the Illarion staff;
 preferably by an entry on GitHub. If items or effects are lost due to a
 bug or server crash, there is no replacement or refund.</p>
 
-<p>The usage of programs which influence the behaviour of the game and thus
-offer an advantage to the player are not allowed.</p>
+<p>The use of any third party programs which offer an advantage to the player is not allowed</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
