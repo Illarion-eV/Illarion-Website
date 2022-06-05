@@ -166,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The affinity of your character to the mystical world. It controls the regeneration of mana, divine power and influences your ability to brew potions. Essence affects the learning speed of the following skills: Alchemy -">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="The affinity of your character to the mystical world. It controls the regeneration of mana, divine power and influences your ability to brew potions. Essence affects the learning speed of the following skills: Alchemy.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>

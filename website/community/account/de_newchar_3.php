@@ -167,7 +167,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie steuert die Regeneration von Mana sowie zukünftig der Macht der Götter und hilft Alchemisten, magische Tränke zu erzeugen. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie. -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie steuert die Regeneration von Mana sowie zukünftig der Macht der Götter und hilft Alchemisten, magische Tränke zu erzeugen. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
