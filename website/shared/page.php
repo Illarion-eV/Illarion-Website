@@ -1516,7 +1516,7 @@ class Page {
 				// $search_keywords[++$search_cnt] = '{SERVER_STATUS}'; $search_replace[$search_cnt] = ( self::$language === 'de' ? 'Server ist online' : 'Server is online' );
 				switch (self::$playercount) {
 					case 0: $search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
-						$search_replace[$search_cnt] = (self::isGerman() ? 'Niemand spielt' : 'Nobody plays');
+						$search_replace[$search_cnt] = (self::isGerman() ? 'Log dich ein!' : 'Come online!');
 						break;
 					case 1: $search_keywords[++$search_cnt] = '{ONLINE_PLAYERS}';
 						$search_replace[$search_cnt] = (self::isGerman() ? 'Ein Char online' : 'One char online');
