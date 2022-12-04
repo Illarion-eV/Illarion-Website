@@ -38,6 +38,7 @@ Unten finden sich Links zu diesen Projekten und eine kleine Beschreibung, wie si
 	<li><a class="hidden" href="#18">Mantis Bugtracker</a></li>
 	<li><a class="hidden" href="#19">YourKit</a></li>
 	<li><a class="hidden" href="#install4j">Install4J</a></li>
+	<li><a class="hidden" href="#jprofiler">JProfiler</a></li>
 </ul>
 <div class="clr"></div>
 <?php Page::insert_go_to_top_link(); ?>
@@ -324,6 +325,18 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 	<br />
 	<br />
 	Bei Illarion wird Install4J genutzt um die Setup-Dateien zu erzeugen.
+</p>
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="jprofiler"></a></div>
+<h2>Install4J</h2>
+<p>
+	<a rel="external" href="https://www.ej-technologies.com/products/jprofiler/overview.html">Link zur JProfiler Homepage</a>
+	<br /><br />
+	JProfiler ist ein Java-Profiler, der dabei hilft, Performanceprobleme zu beheben, Speicherlecks zu finden und Threading zu analysieren.
+	<br />
+	<br />
+	Bei Illarion wird JProfiler genutzt um den Client zu verbessern.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
 
