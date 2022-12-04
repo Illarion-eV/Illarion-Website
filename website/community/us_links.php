@@ -324,14 +324,14 @@ The following game sites have taken Illarion on to their listings. We would like
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="jprofiler"></a></div>
-<h2>Install4J</h2>
+<h2>JProfiler</h2>
 <p>
 	<a rel="external" href="https://www.ej-technologies.com/products/jprofiler/overview.html">Link to the JProfiler homepage</a>
 	<br /><br />
 	JProfiler is a Java profiler that helps you resolve performance bottlenecks, pin down memory leaks and understand threading issues.
 	<br />
 	<br />
-	Illarion uses Install4J to optimise the client.
+	Illarion uses JProfiler to optimise the client.
 </p>
 <?php Page::insert_go_to_top_link(); ?>
 

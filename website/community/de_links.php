@@ -329,7 +329,7 @@ Die folgenden Spieleseiten haben Illarion in ihre Listen aufgenommen. Wir möcht
 <?php Page::insert_go_to_top_link(); ?>
 
 <div><a id="jprofiler"></a></div>
-<h2>Install4J</h2>
+<h2>JProfiler</h2>
 <p>
 	<a rel="external" href="https://www.ej-technologies.com/products/jprofiler/overview.html">Link zur JProfiler Homepage</a>
 	<br /><br />
