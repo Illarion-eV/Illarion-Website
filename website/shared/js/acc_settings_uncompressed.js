@@ -2,29 +2,6 @@ $(document).ready(function() {
 	var lastEmailSend = 0;
 	var lastEmailReceived = 0;
 
-	var EMail = function(s) {
-		var a = false;
-		var res = false;
-		if(typeof(RegExp) == 'function') {
-			var b = new RegExp('abc');
-			if(b.test('abc')) {
-				a = true;
-			}
-		}
-
-		if(a) {
-			var reg = new RegExp('^([a-zA-Z0-9\\-\\.\\_]+)'+
-			'(\\@)([a-zA-Z0-9\\-\\.\\_]+)'+
-			'(\\.)([a-zA-Z]{2,4})$');
-			res = (reg.test(s));
-		} else {
-			res = (s.search('@') >= 1 &&
-			s.lastIndexOf('.') > s.search('@') &&
-			s.lastIndexOf('.') >= s.length-5);
-		}
-		return(res);
-	};
-
 	var addOrReplaceChild = function ( element, child ) {
 		if (element.firstChild) {
 			element.replaceChild( child, element.firstChild );
@@ -39,13 +16,6 @@ $(document).ready(function() {
 		var submitElement = $('#submit');
 
 		if (email.length === 0) {
-			return true;
-		}
-
-		if(!EMail(email)) {
-			addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail address is invalid')) );
-			submitElement.addClass('disabled');
-			submitElement[0].disabled = true;
 			return true;
 		}
 
@@ -65,7 +35,12 @@ $(document).ready(function() {
 					return false;
 				}
 				lastEmailReceived = answer[0];
-				if (answer[1] == 1) {
+				if (answer[1] == 2) {
+					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist ungültig' : 'E-Mail address is invalid')) );
+					submitElement.addClass('disabled');
+					submitElement[0].disabled = true;
+				}
+				else if (answer[1] == 1) {
 					addOrReplaceChild( text_area, document.createTextNode((cur_lang == 'de' ? 'E-Mail Adresse ist in Ordnung' : 'E-Mail address is okay')) );
 					submitElement.removeClass('disabled');
 					submitElement[0].disabled = false;
