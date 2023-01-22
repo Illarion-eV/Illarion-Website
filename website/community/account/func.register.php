@@ -29,7 +29,11 @@
 	elseif ($_GET['action'] == 'check_email')
 	{
 		$db->setQuery("SELECT COUNT(*) FROM account WHERE acc_email = ".$db->Quote( $value ));
-		if ($db->loadResult())
+		if (!filter_var( $value, FILTER_VALIDATE_EMAIL, FILTER_FLAG_EMAIL_UNICODE ))
+		{
+			echo 2;
+		}
+		elseif ($db->loadResult())
 		{
 			echo 0;
 		}

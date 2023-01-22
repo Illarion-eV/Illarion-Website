@@ -30,7 +30,7 @@
 			$new_mail = ( isset($_POST['email']) ? $_POST['email'] : '' );
 			if (strlen($new_mail)>0 && $new_mail != IllaUser::$email)
 			{
-				if (!preg_match( '/^([a-z0-9]+([-_\.]?[a-z0-9])+)@[a-z0-9äöü]+([-_\.]?[a-z0-9äöü])+\.[a-z]{2,4}$/i', $new_mail))
+				if (!filter_var( $new_mail, FILTER_VALIDATE_EMAIL, FILTER_FLAG_EMAIL_UNICODE ))
 				{
 					Messages::add( (Page::isGerman()?'Die E-Mail-Adresse ist ungültig.':'The email address is invalid.'), 'error' );
 				}

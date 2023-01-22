@@ -150,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat and helps alchemists to brew potions. This attribute is important for archers and also helps melee fighters to hit their target. Perception affects the learning speed of the following skills: Alchemy, Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat. This attribute is important for archers and also helps melee fighters to hit their target. Perception affects the learning speed of the following skills: Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -166,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The affinity of your character to the mystical world. It will control the regeneration of mana and divine power. Essence affects the learning speed of the following skills: -">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="The affinity of your character to the mystical world. It controls the regeneration of mana, divine power and influences your ability to brew potions. Essence affects the learning speed of the following skills: Alchemy.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>

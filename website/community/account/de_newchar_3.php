@@ -151,7 +151,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf und hilft Alchemisten, magische Tränke zu erzeugen. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie, Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -167,7 +167,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie steuert die Regeneration von Mana sowie zukünftig der Macht der Götter und hilft Alchemisten, magische Tränke zu erzeugen. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
