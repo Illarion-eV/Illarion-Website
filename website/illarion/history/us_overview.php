@@ -14,8 +14,8 @@
 rummage around in the great libraries, to poke your nose deep into big old books? Well, at least
 for me it is!</p>
 
-<p>Let's see. Scholars do divide the history into three parts: The history of the
-Gods, the history of the mortals and the history of Illarion.</p>
+<p>Let's see. Scholars divide history into three parts: The history of the
+Gods, the history of the mortals, and the history of Illarion.</p>
 
 <div class="clr"></div>
 <h2>The History of the Gods</h2>
