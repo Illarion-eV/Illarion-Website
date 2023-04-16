@@ -23,8 +23,8 @@
 </div>
 
 <?php cap(H); ?>
-<p>umans remember few of their own history. A reason may be the facts that humans even lead wars against other human cities
-(which resulted in the destruction of much knowledge), and only the richer or educated human societies or people teach their
+<p>umans remember little of their own history. One reason may be the fact that humans even lead wars against other human cities, 
+resulting in the destruction of much knowledge. Additionally, only the rich or educated human societies or people teach their
 children reading and writing.</p>
 
 <p>The first human writings have, at first, been a "simplified" version of elven characters and only few humans showed some
