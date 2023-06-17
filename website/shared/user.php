@@ -490,6 +490,7 @@ class IllaUser {
 				return;
 			}
 			$update_parts = implode("\n , ", $update_parts);
+			error_log($update_parts);
 			$query = 'UPDATE "accounts"."account"'
 			 . PHP_EOL . ' SET ' . $update_parts
 			 . PHP_EOL . ' WHERE "acc_id"  = ' . $db->Quote(self::$ID) ;
