@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he dwarves are an old race. According to history, they were the third race who developed their own writing. In the very
 beginning it was based on pictograms – a simple and easy way to show the true meaning of the word. It was mainly used to
 record the history of the dwarves and for religious purposes, thus being of a more sacrosanct nature and having no real
@@ -30,7 +30,7 @@ value for daily life. But over the centuries these pictograms developed and beca
 need of a script used for daily life. In the end the old dwarven writing developed into a rune like writing; only
 few are still able to read or write the old pictograms nowadays.</p>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p> dwarf is smaller than a human, but taller than a halfling. Dwarves have very broad shoulders and strong, stable
 bones. In their legends, Irmorom, the God of Craftsmanship, carved the first dwarves out of a rock that was
 given to him by Ushara, the Goddess of Earth.</p>
@@ -40,7 +40,7 @@ to burn when exposed to fire – coal. They started to dig for it, and traded th
 deeper into the earth dug the tunnels to get access to coal and in this process they found other resources : iron
 ore, jewels and even gold. Iron tools replaced the old copper ones after many years.</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>hen one day many orc tribes were forced to seek new hunting grounds. They travelled into dwarven territory. Several
 clashes and confrontations arose from this and the dwarven clans, one by one, decided to retreat into their mines and
 caves and to take their animals and resources with them. They easily fought off the orcs with their advanced weaponry
@@ -49,7 +49,7 @@ found abandoned cottages and villages without anything useful left. They thought
 strong enemies, must have suffered from a mighty curse and vanished. These rumours were aided as every orcish scout who
 approached the mines or found an entrance by accident or superior scouting skills, vanished and was never seen again.</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he orcish tribes left the "cursed valleys" and moved on to find new hunting grounds while the dwarves dug deeper and
 deeper into the mountains and discovered beautiful caves. They decided to stay in their caves and mines and built great
 halls and vast underground cities. Few dwarven houses were left on the surface, mainly for trading purposes or for farming
@@ -63,7 +63,7 @@ where they are needed. The dwarven counterpart to a mage is a "Rune Crafter" or 
 of speaking it. This is a "safer", but less spontaneous form of magic, since deleted failures do not hurt the
 crafter, but only the item it was carved on.</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he crafting of runes has different effects, triggered by actions, words, movements or thoughts. These items recharge with a
 certain, slow rate or can be "reloaded" by a rune crafter or mage. Some of the weaker effects work all the time without
 necessity to be "recharged", others draw their magical energies from the owner himself. These rune–magic has more practical
@@ -75,14 +75,14 @@ City has a Great hall, where the Clan Lord resides. The family buildings or cave
 the Great Hall. Only the king's family quarters are connected with the Great Hall. Most dwarven clan halls have a separate
 shrine for the clan god. In most cases this would be Irmorom but also Ushara is highly praised, sometimes even Cherga is worshipped.</p>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>very dwarven clan consists of several families. A typical dwarven family consists of a man, his wife, and the children. A
 common number of children is two to four. When getting married, a new family is founded and they choose a new family name. This
 is the reason why dwarves call their children "Son of... and ... Son of... etc.", female dwarves take their name from their
 mothers and grandmothers. The actual, self–chosen family name is not mentioned and never told to strangers. This is done to
 prevent curses against the family.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>warven cemeteries lie underground, too. Buried deep beneath the surface, they are located outside, far below the towns of the
 living. Every Dwarven family has a family tomb. Most dwarven tombs are double graves, for the man and the woman. Every child
 that dies before getting married is buried in the tomb of its parents. Dwarves do not enclose golden gifts into the graves.
