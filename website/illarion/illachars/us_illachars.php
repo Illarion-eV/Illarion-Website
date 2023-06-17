@@ -13,7 +13,7 @@
 	//
     $db=& Database::getPostgreSQL( 'illarionserver' );
 
-	// Variablen für die DB Abfrage
+	// Variablen fï¿½r die DB Abfrage
 	if ($_GET['key']=="") { $key="A"; } else { $key=$_GET['key'];}
     $thiskey=$key."%";
     $aktiv_time=strtotime("-8 weeks");
@@ -81,7 +81,7 @@
     ;
 
 	$db_hp->setQuery( $query );
-	$char_settings=$db_hp->loadAssocList(char_id);
+	$char_settings=$db_hp->loadAssocList('char_id');
 	
 	//  ENDE DB KRAM
 
@@ -273,7 +273,7 @@
 	echo "</tr>";
 	echo "</table>";
 
-	// WEITERBLÄTTERN
+	// WEITERBLï¿½TTERN
 	//
     $prev=$_GET['start']-22;
     $next=$_GET['start']+22;    
