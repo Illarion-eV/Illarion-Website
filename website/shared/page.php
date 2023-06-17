@@ -1798,9 +1798,8 @@ class Page {
 	* @param string $errstr error message
 	* @param string $errfile filename of the file the error happend in
 	* @param int $errline line in the file the error occured at
-	* @param string $errcontext context of the error
 	*/
-	public static function errorHandler($errno, $errstr, $errfile, $errline, $errcontext) {
+	public static function errorHandler($errno, $errstr, $errfile, $errline) {
 		if ((defined('NO_DEBUG') || !@IllaUser::auth('errors')) && !isset($_GET['FORCE_ERROR_OUTPUT'])) {
 			return true;
 		}
