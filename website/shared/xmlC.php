@@ -81,7 +81,6 @@ class XmlC {
 
 		xml_parser_set_option($this->xml_parser, XML_OPTION_CASE_FOLDING, 0);
 		xml_parser_set_option($this->xml_parser, XML_OPTION_SKIP_WHITE, 1);
-		xml_parser_set_option($this->xml_parser, XML_OPTION_TARGET_ENCODING, $this->charset) .
 		xml_set_object($this->xml_parser, $this);
 		xml_set_element_handler($this->xml_parser, '_startElement', '_endElement');
 		xml_set_character_data_handler($this->xml_parser, '_cData');
