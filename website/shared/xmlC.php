@@ -103,7 +103,7 @@ class XmlC {
 			$object->$name = $value;
 		}
 		if ($this->pointer[$this->index] === NULL) {
-			$this->pointer[$this->index] = stdClass();
+			$this->pointer[$this->index] = new stdClass();
 		}
 		$element = &$this->pointer[$this->index]->$tag;
 		$element[] = $object;
