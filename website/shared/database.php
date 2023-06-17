@@ -193,10 +193,6 @@ abstract class DatabaseMain {
 		if (is_bool($text)) {
 			return ($text ? '\'t\'' : '\'f\'');
 		}
-		// stripslashes, falls nötig
-		if (get_magic_quotes_gpc()) {
-			$text = stripslashes($text);
-		}
 		// quotieren, falls kein integer
 		if (!ctype_digit($text)) {
 			$text = '\'' . $this->getEscaped($text) . '\'';
