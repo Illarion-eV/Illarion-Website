@@ -102,6 +102,9 @@ class XmlC {
 			$value = $this->_cleanString($value);
 			$object->$name = $value;
 		}
+		if (&$this->pointer[$this->index] === NULL) {
+			&$this->pointer[$this->index] = new stdClass();
+		}
 		$element = &$this->pointer[$this->index]->$tag;
 		$element[] = $object;
 		$size = count($element);
