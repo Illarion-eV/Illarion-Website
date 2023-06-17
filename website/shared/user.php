@@ -253,7 +253,7 @@ class IllaUser {
 		}
 	}
 
-	private static final function encrypt_pw() {
+	private static function encrypt_pw() {
 		self::$clean_pw = trim(self::$clean_pw);
 		if (strlen(self::$clean_pw) > 0) {
 			self::$passwd = crypt(stripslashes(self::$clean_pw), '$1$illarion1');
@@ -380,7 +380,7 @@ class IllaUser {
 		return false;
 	}
 
-	private static final function start_session($remember_me) {
+	private static function start_session($remember_me) {
 		$sessiondata = array();
 		$pgSQL =& Database::getPostgreSQL();
         $pgSQL->setQuery('DELETE FROM homepage.session_keys WHERE ses_user_id = ' . $pgSQL->Quote(self::$ID));
@@ -407,7 +407,7 @@ class IllaUser {
 		$_COOKIE['illarion_hp'] = serialize($sessiondata);
 	}
 
-	private static final function writeOriginalValues() {
+	private static function writeOriginalValues() {
 		self::$original_values = array(
 			'ID' => self::$ID,
 			'username' => self::$username,
