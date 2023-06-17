@@ -103,7 +103,7 @@ class XmlC {
 			$object->$name = $value;
 		}
 		if ($this->pointer[$this->index] === NULL) {
-			$this->pointer[$this->index] = [];
+			$this->pointer[$this->index] = stdClass();
 		}
 		$element = &$this->pointer[$this->index]->$tag;
 		$element[] = $object;
@@ -122,7 +122,7 @@ class XmlC {
 	private function _endElement($parser, $tag) {
 		array_pop($this->pointer);
 		$this->index--;
-		if (!count($this->pointer[$this->index])) {
+		if (!count(get_object_vars($this->pointer[$this->index]))) {
 			$this->pointer[$this->index] == null;
 		}
 	}
