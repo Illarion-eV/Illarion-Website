@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Zwerge sind eine altes Volk. Gemäß den Geschichtsbüchern waren Sie das dritte Volk, welches ein eigenständiges
 Schriftbild entwarf. Zu Beginn basierte es noch auf Piktogrammen – eine einfache und leicht zu gravierende Darstellung
 der tatsächlichen Bedeutung des Wortes. Es wurde fast ausschließlich dazu genutzt, zum einen die offizielle Geschichte
@@ -37,13 +37,13 @@ noch wenige des Zwergenvolkes sind in der Lage die alten Piktogramme zu lesen od
 gebaut mit breiten Schultern und stämmigem Körperbau. Gemäß ihrer Legenden wurden die ersten Zwerge von Irmorom, dem
 Gott des Handwerks, aus einem Stück Felsen gehauen, welchen er von Ushara, der Göttin der Erde, erhalten hatte.</p>
 
-<?php cap(Z); ?>
+<?php cap("Z"); ?>
 <p>u Beginn bewohnten die verschiedenen Zwergenstämme zumeist Bergtäler, in denen sie ungewöhnliche Steine fanden.
 Es war Kohle, welche zu brennen begann, wenn man es dem Feuer aussetzte. Kohle wurde ein wichtiges Handelsgut
 im Umgang mit anderen Völkern und so begannen die Zwerge, gezielt nach diesem Gestein zu suchen. Immer tiefer gruben
 sie Tunnel und Stollen in die Erde, um an das begehrte Gut zu gelangen und fanden dabei auch andere Gesteinssorten, wie
 Erze, Edelsteine und sogar Gold. Im Laufe der Zeit ersetzte das härtere Eisen die frühen Kupferwerkzeuge und Waffen.</p>
-<?php cap(N); ?>
+<?php cap("N"); ?>
 <p>un begab es sich vor langer Zeit, dass Orkstämme gezwungen waren, neue Jagdgründe zu suchen und dabei in das Territorium
 der Zwerge eindrangen. Die Zwerge verteidigten ihre angestammten Gebiete gegen die Orks, doch war ihr Bestreben zum Scheitern
 verurteilt allein aufgrund der schieren Masse, die sich ihnen entgegenstellte. Sie zogen sich immer weiter in die tiefen und
@@ -57,7 +57,7 @@ mit Magie den Aufenthaltsort der Zwerge ergründen wollten, konnten sie auf dem 
 wurden noch weiter dadurch genährt, dass viele Kundschafter der Orks, die sich auf der Suche nach den Zwergen den Minen
 näherten, verschwanden und nie wieder an die Lagerfeuer der Stämme zurückkehrten, so als ob auch sie dem Fluch anheim fielen.</p>
 
-<?php cap(V); ?>
+<?php cap("V"); ?>
 <p>erunsichert durch die Geschehnisse verließen die Orks die “verfluchten Täler” und begaben sich auf die Suche nach neuen
 Jagdgründen. Die Zwerge hingegen gruben immer tiefer in den Fels und entdeckten dabei wunderschöne Kavernen und Höhlen,
 deren Glanz sich in den Augen der Zwerge widerspiegelte. Eine unbändige Liebe zu den schimmernden Gesteinen, aus denen sie
@@ -66,7 +66,7 @@ zurückzukehren. Über die Jahre entstanden große Hallen in den Tiefen der Berg
 ihren geschickten Händen aus dem kalten Stein. Nur wenige Zwerge verblieben an der Oberfläche, in den meisten Fällen um mit
 anderen Völkern Handel zu treiben und um Bauernhöfe zu unterhalten.</p>
 
-<?php cap(Z); ?>
+<?php cap("Z"); ?>
 <p>werge sind nicht sehr an Magie interessiert. Nur die seltene Runenmagie macht hier eine Ausnahme. Sie bevorzugen
 das solide Handwerk, in dem sie wahre Meister werden können. Sie lieben den Glanz des Goldes und den kalten Schimmer
 der Edelsteine. Und diese Begierde wird vielleicht nur noch übertroffen vom Anblick eines kühlen und starken
@@ -78,14 +78,14 @@ oder „Runenmeister“ – hierbei wird die Magie mittels geschriebener Runen g
 wirkt nicht spontan aber ist dafür nicht so unberechenbar und gefährlich, da mögliche Fehlschläge nicht den Wirkenden
 schädigen, sondern nur den Gegenstand betreffen, auf dem die Rune gewirkt wurde.</p>
 
-<?php cap(R); ?>
+<?php cap("R"); ?>
 <p>unenmagie hat unterschiedliche Auswirkungen, welche durch Handlungen, Wörter, Bewegungen oder Gedanken ausgelöst
 werden. Die Gegenstände, welche mit Runen belegt sind, laden sich sehr langsam von selbst auf. Sie können aber auch
 von einem Runenmeister oder Magier aufgeladen werden. Manche der minderen Effekte wirken zu jeder Zeit, ohne dass
 sie wieder aufgeladen werden müssen. Andere eher mächtige Runenmagie bezieht ihre notwendige Energie vom Besitzer selbst.
 Der Charakter der Runenmagie ist weniger aggressiv, sondern hat in der Regel eher praktischen Nutzen.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Gesellschaft der Zwerge hat eine Klanstruktur. Eine Zwergenstadt besteht aus ein oder zwei größeren Klans oder auch
 mehreren kleineren. Das Oberhaupt eines Klans wird „Klan Lord“ oder auch „Hochlord“ genannt, der Führer einer Stadt trägt
 den Titel eines Königs. Jeder Klan in einer Zwergenstadt verfügt über eine Haupthalle, in welcher der Klan Lord residiert.
@@ -93,14 +93,14 @@ Um diese Haupthalle gruppieren sich die Wohnhöhlen. Fast alle Zwergenfamilien h
 Klanhallen errichten, welcher ihrem Klangott geweiht ist. In der Regel ist dies Irmorom, aber auch Ushara wird von vielen
 Zwergen hoch verehrt und es gibt auch einige wenige, welche Anhänger Chergas sind.</p>
 
-<?php cap(J); ?>
+<?php cap("J"); ?>
 <p>eder Zwergenklan besteht aus mehreren Familien. Eine typische Zwergenfamilie umfasst neben den Eltern auch zwei bis vier
 Kindern. Mit der Heirat und der damit einhergehenden Gründung einer neuen Familie, wird auch ein neuer Familienname erwählt.
 Darin liegt auch der Grund verborgen, warum Zwerge ihre Zugehörigkeit durch die Anhängsel „Sohn des …“ vervollkommnen.
 Weibliche Zwerge nennen entsprechend den Namen ihrer Mutter. Der selbst gewählte Familienname hat für die Zwerge eine sehr
 hohe Bedeutung und wird niemals gegenüber Fremden genannt, um gegen sie gerichtete Flüche zu vermeiden.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Katakomben der Zwerge befinden sich ebenfalls unter Tage. Sie werden weit entfernt, häufig tief unter der Stadt der Lebenden
 errichtet. Jede Zwergenfamilie hat ein eigenes Familiengrabmal, welches darauf ausgelegt ist, nur das Ehepaar aufzunehmen.
 Aber jedes Kind, welches stirbt bevor es geheiratet hat, wird ebenfalls in dieser Gruft zur Ruhe gelegt. Zwerge geben den

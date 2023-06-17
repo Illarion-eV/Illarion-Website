@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>er normale Ork ist ein wenig kleiner als ein Mensch. Ihre Haut ist grünlich und zwei von ihren unteren Kieferzähnen
 sind länger als die anderen und reichen ein wenig über die Lippen.</p>
 
@@ -30,7 +30,7 @@ sind länger als die anderen und reichen ein wenig über die Lippen.</p>
 Die meisten dieser Stämme leben als Nomaden in einem bestimmten Gebiet, in welchem sie mit ihren Herden reisen. Schweine
 und Schafe sind ihre Hauptnahrung.</p>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>rks bauen keine Häuser, sie ziehen es vor, in Höhlen zu leben. Das Territorium eines Orkstammes umfasst normalerweise
 eine Anzahl von natürlichen Höhlen, welche noch zusätzlich erweitert wurden, und künstlichen Stollen, welche in den Boden
 gegraben wurden. Einige Orks haben sich auf das Graben nach Eisen und Kohle spezialisiert und finden manchmal seltenere
@@ -38,7 +38,7 @@ Metalle oder sogar ein paar Edelsteine. Der Großteil des Stammes wechselt die W
 einige Individuen, wie Schamanen, Ältere oder der Stammesführer leben das ganze Jahr über in der selben Höhle oder manchmal
 auch in einer Hütte.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie meisten größeren Orkstämme sind in Unterstämme aufgeteilt, die angeführt werden von einer Art Unteranführer.
 Der Stammesführer ist häufig der Stärkste und zählt zu den Älteren im Stamm, denn durch seine Kraft und die in langen
 Jahren gesammelte Erfahrung kann er sich gegen Widersacher auch aus den eigenen Reihen behaupten. Er herrscht uneingeschränkt
@@ -47,7 +47,7 @@ Durch seine Klugheit kann er den Anführer beeindrucken und manipulieren. Er spi
 bleibt selbst aber im Hintergrund, und kann durch diese indirekte Einflussnahme die Richtung des Stammes beeinflussen.
 Manchmal reicht aber auch einfach das Brauen von Bier, um den Anführer auf seine Seite zu bringen.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie meisten Orkstämme sind ziemlich arm, was sich wiederum in ihrem Lebensstil widerspiegelt. Über die Jahrhunderte
 haben sie eine rudimentäre Schrift entwickelt, bestehend aus verschiedenen Symbolen und geritzte Zeichen. In Kriegszeiten
 entwickelte ein orkischer Stammesanführer eine verschlüsselte Sprache, die es Verbündeten erlaubte, Nachrichten auszutauschen,
@@ -68,7 +68,7 @@ Zeit der Geister, Zeit der Ahnen. Einige Ahnenschädel werden in den Winterquart
 auch in den Räumen des Anführers und des Schamanen, um ihnen bei ihren Entscheidungen zu helfen. Sie sind auch Bestandteil
 der Traumrituale, in denen der Schamane direkt zu den Ahnen sprechen kann.</p>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>it Ausnahme der Sommerzeit versuchen die Orkstämme bewaffnete Auseinandersetzungen zu vermeiden. Kriege sind dabei
 oft territoriale Konflikte zwischen den verschiedenen Stämmen, da in den kargen Gebieten der Orks der Umfang an Landbesitz
 das Überleben sicherstellt. Diese Konflikte beinhalten Spionage, das Stehlen von Tieren und auch Schlachten. Trotzdem enden
@@ -77,7 +77,7 @@ entwickelt. So finden jedes Jahr im Monat Malas die großen Wettkämpfe statt, b
 Trotzdem ist die Teilnahme an diesen Wettkämpfen nicht ungefährlich, wie die zum Teil tödlichen Verletzungen und dauerhaften
 Verstümmelungen bezeugen.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>a die Stämme ziemlich arm sind, neigen sie dazu, manchmal kleine Dörfer oder Farmen zu überfallen, wenn sie nicht genügend
 Nahrung für den nächsten Winter haben. Normalerweise sind Orks nicht blutrünstig, aber wenn sie mit anderen Rassen kämpfen,
 ist ihre primäre Kampftaktik, Furcht unter ihren Feinden zu verbreiten. Gefangene, welche tödlich verwundet wurden und keine
@@ -89,7 +89,7 @@ Wenn der Sklave es wert ist und gute Arbeit oder Stärke zeigt, ist er von stark
 die Wahl gegeben, den Stamm zu verlassen. In sehr großen Ausnahmefällen kann es sogar dazu kommen, dass ein Sklave eine Orkin
 heiratet. Er wird damit gleichzeitig ein freies Mitglied des Stammes, wodurch man auch verschiedenen Halborks begegnen kann.</p>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>rks haben ein anderes Verständnis von "Kunst" als es Menschen oder Elfen haben. Orkische "Poesie" folgt keinen Reimen,
 sondern erzählt Geschichten und erzeugt disharmonische Geräusche, um die Situation zu untermalen oder zu beschreiben.
 Dasselbe gilt für orkische Musik. Die Melodien, die ein Ork mit Flöte oder Trompete erzeugt, kann man bestenfalls als "laut"
@@ -97,7 +97,7 @@ bezeichnen, denn sie nutzen die meisten Instrumente nur aus Spaß und um laute G
 den Klang der Trommeln. "Normale" Lieder, wenn sie von einem guten Barden gespielt werden, können einen Ork auch faszinieren,
 aber es kann ihm sonderbar erscheinen, wie es Musik aus einer anderen Kultur immer tut.</p>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>rks haben eine sehr direkt Art mit Dingen umzugehen. Ihrer Meinung nach ist es am besten, wenn ein Mann ohne Umschweife sagt,
 was er meint und nicht noch viele und unnütze Worte dabei macht. Gewisse Höflichkeitsformen, wie zum Beispiel die metaphorische
 Sprache der Elfen und die sehr ausgeklügelte Hofsprache der Menschen, sind ihnen daher ungewohnt. So kann es hier leicht zu

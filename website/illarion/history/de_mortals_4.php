@@ -10,7 +10,7 @@
 
 <h1>Der Abstieg der Zwerge</h1>
 
-<?php cap(W); ?>
+<?php cap("W"); ?>
 <p><i>as immer die Elfen, die im Schatten aus den Wäldern kamen, tauschten, die Händler waren zufrieden. Lieder wurden gesungen bis die Sonne aufging. Unsere Gesellschaft wurde ruhiger als die Straße rauer wurde. Wilde Furten und zerklüftete Täler forderten all unsere Kraft, wenn wir keinen Wagen auf unserer Reise verlieren wollten. Als die hoch aufragenden Aramon Berge endlich vor uns lagen, kehrte die Freude an unsere Lagerfeuer zurück. Einige Flaschen Met wurden hervorgeholt und die Geschichte über die kleinen glänzenden Krieger ging von Mund zu Mund.</i></p>
 
 <p>Späher des Waraxe-Clans trafen am Fuße des Aramon-Gebirges auf eine Siedlung von Zwergen, ein Volk, welche in großangelegten Minen jahrhundertelang Erze und Edelsteine zu Tage förderten. Die Öfen wurden niemals kalt und aus den Werkstätten drang Tag und Nacht der Klang der Hämmer. Die Schmieden verfügten über Werkzeuge, Plattenrüstungen und Waffen aus gehärtetem Stahl, wie sie die Orks noch nie zu Gesicht bekommen hatten.</p>

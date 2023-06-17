@@ -10,7 +10,7 @@
 
 <h1>Tanora - Goddess of Water</h1>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>anora is the goddess of the element water. In the native language of the lizardman she is called Zeshhel-pheey-arrr, which is almost unspeakable for the human tongue, hence the common name of Zelphia. Lizards have always known her by this name but other races have sometimes mistaken her for another goddess. Sadness has overcome her as the years have passed by. Patiently, she awaits things to come that only the gods may understand. Longing is  associated with Tanora. She is the Elder God who most often walks amongst the mortals of Illarion, perhaps in search of something long lost to her. She appears as a lizardwoman or as an ageless mermaid of unadorned beauty.</p>
 
 <h2>Followers</h2>

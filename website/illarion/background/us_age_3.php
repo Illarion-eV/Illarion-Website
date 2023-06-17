@@ -10,7 +10,7 @@
 
 <h1>The Age of Struggle </h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 
 <p>pening the portals between the two worlds, the enemy let loose his horrific army led by
 Madrook Na’han, the Prince of Terror. It was said that Madrook was his masters creature, part of
@@ -38,7 +38,7 @@ battlefield himself. He was approaching the portals, and just turned around to f
 they arrived. Ronagan started to fight his escort, and distracted them, while Moshran fought
 Madrook himself.</p>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 
 <p>t is said, that this battle took many hours. Both of them fought without mercy. No single
 being was able to come closer as pure flashes of energy were unleashed, and the force they

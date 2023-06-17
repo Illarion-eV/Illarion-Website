@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter des Kampfes</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>ls der Feind die Portale zwischen beiden Welten öffnete, entströmte ihnen seine entsetzliche
 Armee des Schreckens, geführt vom Prinzen des Terrors mit Namen Madrook Na'han. Es wurde
@@ -41,7 +41,7 @@ war gerade dabei sich dem Portal zu nähern und stellte sich Moshran entgegen, a
 gewahr wurde. Ronagan fing an Madrook Na'hans Begleitschutz anzugreifen und zu verwirren,
 während Moshran selbst gegen Madrook kämpfte.</p>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 
 <p>s wird erzählt, dass dieser Kampf viele Stunden dauerte. Beide kämpften erbarmungslos.
 Keinem Wesen war es möglich sich zu nähern, da Blitze aus reiner Energie freigesetzt wurden und
@@ -82,7 +82,7 @@ oder tief unter der Erde.</p>
 <p>Mit großer Freude feierten die Sterblichen und die Götter ihren Sieg, nur Moshran blieb
 alleine und verließ diesen Ort der ausgelassenen Heiterkeit. Er selbst verspürte keine Freude
 sondern nur Leere. Er ging aber nicht ohne die schwarze Rüstung und das Schwert Madrook
-Na'han�&rsquo;s mitzunehmen, welche er dem toten Körper als Trophäe abgenommen hatte. Es gehörte
+Na'han�&rsquo;s mitzunehmen, welche er dem toten Körper als Trophäe abgenommen hatte. Es gehörte
 ihm, dachte er bei sich, da er den höchsten Preis gezahlt hatte.</p>
 
 <p>Und so endet das Zeitalter des Kampfes und beginnt das Zeitalter der Eintracht.</p>

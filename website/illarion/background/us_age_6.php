@@ -39,7 +39,7 @@
 
 <h1>The Age of Isolation</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 
 <p>ven though Moshran was imprisoned deep inside the earth, his foul intentions prosper on the
 surface, as after the wars with him, the races preferred to stay amongst their own kind. Most of

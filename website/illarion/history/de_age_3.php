@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter des Kampfes</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p>ls der Feind die Portale zu beiden Welten öffnete, entströmte ihnen seine entsetzliche Armee des Schreckens, geführt vom Prinzen des Terrors Madrook Na'han. Es wurde gesagt, dass Madrook ein Vasall seines Meisters war, geformt aus seinem Fleisch und im Geiste verbunden. Er erfüllte den Willen seines Meisters ohne Widerspruch. Er kannte nur ein Ziel, Unterwerfen, koste es was es wolle. Sein Weg war gehüllt in Finsternis.</p>
  
 <p>Der Kampf gegen diesen Gegner war alles andere als erfolgreich. Jahrelang kämpften die Götter und ihre Schöpfungen gegen Madrook und seine Monsterhorden. Usharas Macht ließ die Erde beben, Findari hielt den Gegner mit Blitzen aus sturmumtosten Wolken nieder und Tanoras sintflutartiger Regen ließ viele ertrinken. Eldan pflanzte schreckliche Furcht in ihre Gedanken, sodass sie sich gegenseitig niedermetzelten, während Brágons gigantische Feuerbälle ihre Reihen abbrannten. Dem Vorbild der von den Göttern erwählten Elfen folgend, wankten die sterblichen Völker nicht und zahllose gaben ihr Leben für die Freiheit der neuen Welt. Aber es wurde immer offensichtlicher, dass eines Tages der Feind Erfolg haben würde, da er immer noch die Kontrolle über die Portale zu der alten Welt hatte. Selbst nach drei aufeinanderfolgenden Jahrzehnten des Kampfes konnte der Feind immer noch eine unzählige Masse an Kreaturen aufbieten, während die Armeen der Sterblichen trotz enormer Anstrengungen schwanden.</p>

@@ -10,7 +10,7 @@
 
 <h1>Sirani - Göttin der Liebe und der Freude</h1>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>irani ist die Göttin der Liebe und Schönheit. Sie ist bekannt dafür, herzlich und gastfreundlich zu sein, sogar mitfühlend mit denen, die ihren Trost brauchen. Deshalb wird Sirani generell sowohl als friedliebend, als auch als verführerisch angesehen. Jedoch ist sie auch dafür bekannt, impulsiv zu sein und schnell von ihren Begierden übermannt zu werden, die jeglichen Sinn für Vernunft überwältigen. Rauhe, grausame, oder sehr selbstsüchtige Leute lehnt sie ab und sie kann schnell in leidenschaftliche Wutausbrüche verfallen, wenn Frauen herablassend behandelt, oder gar beleidigt werden. Wenn sie über das Land streift, erscheint sie für gewöhnlich im Körper einer jungen und attraktiven Frau einer der Rassen. Da sie Feste und fröhliche Anlässe, sei es auch nur das Feiern des Leben selbst, liebt, schließt sie sich oft Festivitäten an. Auch an der Zurschaustellung von Liebe und Zuneigung findet sie gefallen, weshalb sie manchmal als Zeichen ihres Segens an den Hochzeiten von Sterblichen teilnimmt. Ebenso ist sie dafür bekannt, eine Schwäche für jene zu haben, die einsam sind und diesen zu helfen, indem sie dafür sorgt, dass sie Gesellschaft finden.</p>
 
 <h2>Anhänger</h2>

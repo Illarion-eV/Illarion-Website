@@ -10,7 +10,7 @@
 
 <h1>Zhambra - Gott der Freundschaft und Treue</h1>
 
-<?php cap(Z); ?>
+<?php cap("Z"); ?>
 <p>hambra ist der Gott der Freundschaft und Loyalität. Er ist dafür bekannt, freundlich, mitfühlend, rechtschaffend und ehrenhaft zu sein. Zhambra schätzt Kameradschaft und Diziplin, sowie Klugheit im Krieg als auch in der Diplomatie. Seine strikte Natur lehnt hinterhältiges Verhalten und Betrügerei ab und er wird jene niederschlagen, die untreu sind oder andere verraten. Meistens tritt er als ein junger und freundlicher Adeliger in glänzender Rüstung in Erscheinung. Es gibt Gerüchte, dass er auf dem Schlachtfeld erscheint, um treue Soldaten zu retten und sie vor gefährlichen Situationen zu beschützen. Zhambra animiert andere an seiner Stelle zu handeln, schafft so Freundschaften selbst in den düstersten Situationen und erwählt jene, die selbstlos und loyal sind und das Wohlergehen ihrer Freunde vor das eigene stellen.</p>
 
 <h2>Anhänger</h2>

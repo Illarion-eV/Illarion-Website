@@ -10,7 +10,7 @@
 
 <h1>The Age of Discord</h1>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>espite Brágon's hope, Moshran succumbed to his desire for revenge. Secretly, Moshran created three immortal beings, naming them Dragorog, Bjolmur, and Cherass. Bound to him, he gave these creatures immense, almost god-like powers and taught them much knowledge.</p>
 
 <p>Driven by an unbearable need for power, Moshran sought the remains of the once mighty army of Madrook Na'han. He found the demon-like creatures, eyeless beasts and other unspeakable horrors lurking deep underground. They answered his command, recognising within him the power and voice of their former master. As their numbers multiplied Moshran released them upon the mortals, even against the orcs, drawing protest from the other Gods.</p>

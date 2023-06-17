@@ -17,7 +17,7 @@ des Vergessens über uns stülpen und unser Volk wird zu Staub zerfallen. Doch e
 selbst wird fliehen können und in einer anderen Welt erneut erblühen, erblühen mit der Kraft,
 die wir diesem Keim verliehen haben."</p>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>ls ihre letzten Worte verklangen, zerbrach sie ihren Stab als Zeichen der Opferung. Ihr
 lebloser Körper fiel zu Boden und die Energie, die ihrem Körper inne war, suchte sich ein neues

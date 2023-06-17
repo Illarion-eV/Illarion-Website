@@ -10,7 +10,7 @@
 
 <h1>Cherga - Goddess of Spirits and the Underworld</h1>
 
-<?php cap(C); ?>
+<?php cap("C"); ?>
 <p>herga is the goddess of spirits and the underworld. She is the one who collects the dead and brings them to her realm. Neutral and dignified, she favours balance. She continues her neverending collection of the dead with much solemnity, rarely revealing any emotion. Although associated with death, she is generally peaceful and always serious. Many try to avoid displeasing her, as she is the guide to the underworld and when angered her rage is merciless.</p>
 
 <p>Though relatively uninvolved in the matters of the living, aside from the end, she does find favour in justice, be it dispensed by the other gods or left to her discretion. She cares little for the living and does not like to be disturbed by the frivolous reasons of mortals. On the rare occasion she interacts with the living, she appears as a dark or grey haired ageless woman with grey skin and dressed in black, as an old haggard witch, or a gypsy foretelling the future. Her appearances are often linked as a bringing of doom or unwelcome news.</p>

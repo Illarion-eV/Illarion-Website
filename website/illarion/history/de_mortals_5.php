@@ -10,7 +10,7 @@
 
 <h1>Der Fall des Hauses Narníl</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p><i>m Fuße der Berge kamen wir nicht mehr so schnell voran. Enge und schlechte Wege forderten ihren Tribut von Händlern und Tieren. Unser Anführer zeigte keinerlei Unsicherheit. Offensichtlich kannte er jeden Stock und Stein, auch wenn ich ihn nie mit einer Karte in der Hand sah. Am Abend schlugen wir unser Lager an einer wenig geschützten Stelle auf. Unser Anführer ließ uns die Unannehmlichkeiten dieses Lagers mit einer weiteren wundervollen Geschichte vergessen.</i></p>
 
 <p>Fast ein ganzes Jahrhundert grübelte der Ältestenrat der Elfen über die Orks. Einige gefangene Orks hatten sich jedoch über die Jahre hinweg den Respekt der Elfen verdient. Sie erwiesen sich sogar als ehrenhaft und gelehrig, wenn auch ihr aufbrausendes Temperament die Ältesten sehr beunruhigte. Jedoch war sich der Ältestenrat über die Situation der Orks klar geworden. Sie waren Vertriebene und es gab auch keine Anzeichen, die auf dämonische Magie hinwiesen.</p>

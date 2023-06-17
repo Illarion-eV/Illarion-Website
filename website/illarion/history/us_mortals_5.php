@@ -10,7 +10,7 @@
 
 <h1>The Curse of Narnil</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p><i>ur progress slowed journeying through the foothills. Narrow uneven paths took their toll on beast and merchant alike. Our leader did not falter though, seemingly knowing every step we were to take, yet never once did I see him consult a map. Come nightfall we were forced to camp with little shelter but he regaled us with another wondrous tale of these lands as we found what little comfort we could around a meagre fire.</p></i>
 
 <p>For almost a century elven elders pondered the fate of the orcs. In time some captured orcs and refugees had earnt the respect of the elves, proving themselves honourable and studious. Still there was unease over their fiery nature but no evidence of demonic magic was found amongst them. Council elders resolved to cease attacks on the remaining orc clans, already weakened by years of war and famine. The wanderers were allowed their freedom and the elves would no longer track them.</p>

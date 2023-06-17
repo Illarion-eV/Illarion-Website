@@ -27,7 +27,7 @@
 
 <h2><a name="1"></a>Die Hügel des Nordens und die Syritabucht</h2>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 
 <p>och über den gezackten Gipfeln der Namenlosen Berge verlässt ein Adler seinen Horst. Schneebedeckte Gipfel, die das Firmament durchbrechen, grenzen die Halbinsel ab und dominieren die tiefer liegenden Steppen, Wälder und Wüsten Illarions. Majestätisch kreist der Adler über dem Chaos unerklärlicher Wunder und undenkbaren Grauens, das sich unter ihm abspielt.</p>
 
@@ -39,7 +39,7 @@
 
 <h2><a name="2"></a>Der Elsbaumwald und die östlichen Gestade</h2>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 
 <p>ie Wellen schlagen gegen die Ostküste, welche die Nördlichen Wälder abgrenzt. Die felsigen Ausläufer, die als Fels des Bösen bekannt sind, steigen hoch aus dem Ozean auf und dominieren so die Landschaft am Horizont. Auf seinem Weg in Richtung Süden fliegt der Adler weiter über den isolierten Nordhafen und die Schulterplatteninsel mit ihren verstreuten Ruinen und unruhigen Friedhöfen. Aus dem Ozean erstreckt sich das Sumpfgebiet, in dem sich die Ruinen lange vergessener Tempel befinden und formt das nördliche Ufer des <u>Mächtigen Stroms</u>. Weiter landeinwärts, wo der <u>Mächtige Strom</u> und der Glühende Fluss im Spinnenmaul zusammenfließen, liegt auf einer Insel inmitten der sich hier überkreuzenden Routen zu allen drei Reichen der Gasthof zur Hanfschlinge.</p>
 
@@ -51,7 +51,7 @@
 
 <h2><a name="3"></a>Der Schlangenkopfberg und das glühende Zentrum</h2>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 
 <p>er Adler steigt scharf auf und macht einen weiten Bogen um den Drachenhort, wohl wissend um die Macht, die sich in dessen Inneren verbirgt. Lava fließt aus dem Vulkan und zerstört das Land entlang der nördlichen Flanke der Berge. Das faulige Sumpfland des Todesgestanks breitet sich bis zu den <u>Dreifingerspitzen</u> aus, die in die Schlangenkopfbucht hineinragen. Weiter entlang der Schlangenkopfküste, ragt der Schlangenkopfberg in die Höhe und überblickt die Bucht und die zahlreichen, verstreuten Inseln darin.</p>
 
@@ -63,7 +63,7 @@
 
 <h2><a name="4"></a>Die heiße Kantabiwüste und die Südküste</h2>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 
 <p>m Südwesten Illarions herrscht die Kantabiwüste vor, die sich von den Bergen bis zum Ozean erstreckt. Der Adler fliegt über den verlassenen Gebieten hinweg, die mit den Ruinen von Siedlungen und lange verlassenen Arbeitslagern übersäht sind, die auf bessere Zeiten hindeuten, ehe Kriminelle sich dort wie die Kakerlaken ausbreiteten. Irgendwo aus den Höhen der Namenlosen Berge quellend, schneidet der Kantabifluss durch die Wüste, auf seinem Weg in Richtung des Großen Ozeans, wo er auseinander fließt und das fruchtbare Kantabidelta bildet. Der ominöse Berg Letma erstreckt sich dort in die Höhe und überblickt das Delta und die Katainsel, während die Wellen des Großen Ozeans an seinen felsigen Ausläufern zerschellen.</p>
 

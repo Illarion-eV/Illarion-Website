@@ -10,7 +10,7 @@
 
 <h1>The Rise and Fall of Kharud</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p><i>s we made our way south the land was scarred deeply by the ravages of war. There are many stories of courage and mighty battles wherever you go in these lands. Less spoken of are those lost and the horrors beheld by those left behind. Barlak was one that survived the darkest of times but he spoke little of Gynka. This was once his home and as we gathered in a tavern close to the harbour that night, drinking more ale than usual, one had to wonder what loss he had suffered. As he recounted a sombre tale of destruction wrought and the mysterious part played by a distant land we came to understand how much our next journey would mean to him.</p></i>
 
 <p>In time the sorcerer Kharud had emerged as a growing power across the lands. From relative obscurity he rose quickly to prominence as a scholar in the Salkamaerian city of Nubis. Ambitious and with an expanding following, his influence soon spread throughout the region. Gaining control of the most powerful legions, he earned a reputation as a ruthless commander and rumours began to circulate that he had a powerful magical artefact in his possession. Within years Kharud had turned his attention to Albar. Already weakened by centuries of war the empire was soon crumbling before his might. Swift victories led to fear that he in fact held more than one of the magical gems, once bequeathed to mortals by the Gods themselves, and soon he was conquering much of the land.</p>

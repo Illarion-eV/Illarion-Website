@@ -27,7 +27,7 @@
 
 <h2><a name="1"></a>Northern Foothills and Syrita Bay</h2>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 
 <p>igh amongst the jagged peaks of the Nameless Mountains an eagle takes flight from its eyrie. Snow capped summits that pierce the firmament isolate the peninsula, dominating the plains, forests and deserts of Illarion below. Majestically the eagle soars above the mystery and turmoil of inexplicable wonders and unimaginable horrors that lie below.</p>
 
@@ -39,7 +39,7 @@
 
 <h2><a name="2"></a>Elstree Forest and the Eastern Shores</h2>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>s waves crash against the eastern shore bordering the Northern Woods, a craggy outcrop known as Evil Rock looms from the ocean to dominate the skyline. Continuing south the eagle banks over the isolated Northern Harbour and the Pauldron Isle with its scattered ruins and restless cemeteries. From the ocean, marshland harbouring the ruins of a long forgotten temple forms the northern bank of the Bounding Stream. Further inland, where the Bounding Stream and Glowing River converge at the Spider's Mouth, the Hemp Necktie Inn sits on the island intersection of routes to all three realms.</p>
 
@@ -51,7 +51,7 @@
 
 <h2><a name="3"></a>Mount Snakehead and the Fiery Centre</h2>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 
 <p>he eagle rises sharply to soar clear of the Dragon's Lair, mindful of the power that lies within. Lava courses from the volcano laying waste to the land along the northern flank of the mountain. The putrid swampland of Death's Stench stretches as far as the Three Fingertips which protrude into Snakehead Bay. Further along Snakehead Coast, Mount Snakehead rises to overlook the bay, with numerous islands scattered before it.</p>
 
@@ -63,7 +63,7 @@
 
 <h2><a name="4"></a>The hot Kantabi Desert and the Southern Coast</h2>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 
 <p>tretching from the mountains to the ocean, the Kantabi Desert dominates the southwest of Illarion. The eagle glides over desolate lands strewn with ruined settlements and long abandoned work camps indicative of more prosperous times before fortified outlaw encampments encroached. Cascading from high in the Nameless Mountains, the Kantabi River cleaves through the desert as it courses south towards the Great Ocean where it diverges to form the fertile Kantabi Delta. The ominous Mount Letma rises to overlook the delta and Kata Island as waves of the Great Ocean crash onto its rocky flanks.</p>
 

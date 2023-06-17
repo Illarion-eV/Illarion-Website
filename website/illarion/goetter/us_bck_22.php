@@ -10,7 +10,7 @@
 
 <h1>Irmorom - God of Trade and Craftsmanship</h1>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 <p>rmorom is the god of craft and trade. He is typically considered to be a fair and honourable god who remains neutral in most mortal matters, favouring the law to keep his work safe and allowing business and industry to thrive. Irmorom has a love for fine craftsmanship and gold. He is good natured, sociable, talkative, and unlikely to refuse a good beer. It is rare that a thief would find favour from Irmorom, as he believes in a fair trade rather than the stealing of riches from others. It is said that his appearance is that of a grey haired dwarf with grey skin of an almost stone-like nature, or occasionally a man, adorned with a smithing apron and a mighty hammer. </p>
 
 <h2>Followers</h2>

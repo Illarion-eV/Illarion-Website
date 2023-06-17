@@ -10,7 +10,7 @@
 
 <h1>Tanora - Göttin des Wassers</h1>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>anora ist die Göttin des Elements Wasser. In der Sprache der Echsenmenschen lautet ihr Name Zeshhel-pheey-arr, was für die menschliche Zunge fast unaussprechlich ist, wodurch sich der für gewöhnlich benutzte Name Zelphia erklärt. Echsenmenschen haben sie schon immer unter diesem Namen gekannt, aber andere Rassen haben sie manchmal mit einer anderen Göttin verwechselt. Als die Jahre vorüberzogen, überkam sie Trauer. Sie wartet geduldig darauf, dass Dinge geschehen, die nur die Götter verstehen können. Die Sehnsucht wird mit Tanora in Verbindung gebracht. Sie ist von den Alten Göttern am häufigsten unter den Sterblichen in Illarion anzutreffen, vielleicht auf der Suche nach etwas, das ihr vor langer Zeit verloren ging. Sie erscheint als Echsenmenschenfrau oder alterslose Meerjungfrau von schlichter Schönheit.</p>
 
 <h2>Anhänger</h2>

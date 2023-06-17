@@ -10,7 +10,7 @@
 
 <h1>The Age of Concord</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p>fter the great battle, the Elder Gods, exhausted by their efforts, retreated and largely withdrew from mortal affairs. Only Tanora remained, unable to part from her beloved, a man by the name of Manon Petranor. Their offspring formed a new race, that of lizardmen, who were able to inhabit both land and water.</p>
 
 <p>As the mortal civilisations rebuilt and in time spread throughout every land, memories of the battle faded. Lessons of the past battle were confined to history books. Devoid of the shared purpose to defend their very existence, the races splintered in their search for new goals and adoption of new leaders. Most were drawn to follow one God whose character and actions they could relate to as they sought guidance.</p>

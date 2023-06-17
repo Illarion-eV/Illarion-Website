@@ -10,7 +10,7 @@
 
 <h1>Zhambra - God of Friendship and Loyalty</h1>
 
-<?php cap(Z); ?>
+<?php cap("Z"); ?>
 <p>hambra is the god of friendship and loyalty. He is known to be amiable, sympathetic, righteous and honourable. Zhambra favours comradeship and discipline, showing much intelligence in both war and diplomacy. His strict nature abhors underhand behaviour and trickery, and he will strike down those who are disloyal or betray others. He will most likely be seen as a young and friendly noble, in shining armor. On the battlefields it is rumoured that he appears to save and protect loyal soldiers from dangerous situations. Equally Zhambra will incite others to act for him, creating friendships even in the most dire of situations and championing the selfless and loyal who put their friends before themselves.</p>
 
 <h2>Followers</h2>

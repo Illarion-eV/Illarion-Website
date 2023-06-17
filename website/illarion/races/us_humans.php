@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>umans remember little of their own history. One reason may be the fact that humans even lead wars against other human cities, 
 resulting in the destruction of much knowledge. Additionally, only the rich or educated human societies or people teach their
 children reading and writing.</p>
@@ -35,7 +35,7 @@ and because of its practical use became a common trading language. Old human dia
 words, and so, the now known common language has been formed. Humans speak the common language natively, sometimes influenced by
 local dialects.</p>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>uman societies can take very different forms, dependent on the leadership and on neighbouring cultures. Some prefer
 to live amongst their own kind. To most of them, the other races are strangers. This results from their short living
 span, compared to lizardmen, halflings, dwarves and especially elves. Amongst the uneducated, poor people, rumours about
@@ -48,7 +48,7 @@ they can offer rest and big trading places to all visitors. The most well known 
 
 <h3>"Barbaric" Cultures:</h3>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>eafolk (Norodaj) live in rougher, cold climates. They are dressed in furs, leather and rough, coloured cloth, wear long
 beards and prefer big swords, spears, axes and throwing axes as weapons. For writing, they use a rune alphabet similar to the
 dwarven one. They know the common language, but natively speak their own tongue, and some dwarven words. They inhabit rough, cold
@@ -69,7 +69,7 @@ challenge the other man for a duel till death. If a man treats his wife or child
 ones are burned in a ritual, on a pile of wood. The ashes are thrown into the sea and a small piece of the skull will be kept and
 mounted into the ram of a new boat. Every tribe has a spirit man, a kind of shaman or priest.</p>
 
-<?php cap(P); ?>
+<?php cap("P"); ?>
 <p>lainfolk (Serinjah) live on big plains. They raise horses and cows, and live in loose villages with wooden houses. They
 are organised in clans and are known to be excellent riders, tamers, hunters and fighters. Serinjah prefer fighting with spears,
 bows, long swords, knives, throwing stars and throwing knives, and often wear hard leather or wooden armours. They seldom choose
@@ -86,7 +86,7 @@ a life as sorcerer, witch or shaman.</p>
 stones marking them, a celebration is held when grass has overgrown the grave: Live defeats death, nature wins and closes the
 circle of life.</p>
 
-<?php cap(P); ?>
+<?php cap("P"); ?>
 <p>lainfolk (Ama–shoon) live in forest and plain areas near the Plainfolk. They are organized in tribes. These tribes are all
 female, except for children aged below four. The male children older than four years are brought to a settlement of Serinjah,
 where they will be raised by their fathers.</p>
@@ -101,7 +101,7 @@ leader, who sometimes is a Findari Priest. Amazons tend to use aggressive as wel
 <p>These cultures speak the common language natively. Common things: Marriages are meant for life, but can be released under
 certain circumstances.</p>
 
-<?php cap(L); ?>
+<?php cap("L"); ?>
 <p>ightfolk (Salkamaerian)They live in towns, villages and castles. The origin of the Salkamaerian way of life is the old city
 Salkamar. It is also the origin of the common language and writing system.</p>
 
@@ -113,7 +113,7 @@ male or female lords; males and females have equal rights. The Salkamaerian cult
 <p>Salkamaerian poets, bards and philosophers are well known to the world, as well as Salkamaerian paladins, who fight for their
 honourable virtues and humanity. Zhambra, Oldra, Sirani, Elara and Malachín are the most supported gods in Salkamaerian towns.</p>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>traightfolk (Albarian) They live in small towns, villages and castles. Their life is ruled by male nobles, these nobles own all
 land and the people on it. More than 90% of all people are bondsmen, the rest are nobles. A noble can call every bondsman he owns
 to arms or to personal service. Bondsmen who do not obey their commands, are often punished hard.</p>
@@ -125,7 +125,7 @@ night. Female goddesses are not prayed to in the Albaerian culture.</p>
 opposite direction. Since bondsmen sometimes tend to start rebellions, areas with Albarian lordship have become a little rarer
 over time. The main gods vary in the different villages, nobles follow their own choice.</p>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <p>reefolk (Gynkeesh) They live in independent towns, villages and castles. Slavery is forbidden by law, but sometimes very
 rich people tend to forget that without a second thought. Gynkeesh people are ruled by the free market, their towns are ruled
 by merchant guilds and town majors. Their armies and guards consist of paid mercenaries. Poor people live in slums, some become

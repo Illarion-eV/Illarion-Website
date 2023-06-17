@@ -10,7 +10,7 @@
 
 <h1>Human Wars and the Rise of Refugees</h1>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <p><i>or so many years it was the warring human empires that had shaped the lands we passed through, yet now so many of the once vibrant towns and glorious cities lay in ruins. Our route criss-crossed between Albarian and Salkamaerian villages scattered along the borders of the once dominating realms. Some of the older merchants reminisced of the wealth and prestige the great cities had held, whilst others whispered of more harrowing times. It was not until late that evening, settled around the campfire, that our Master told his own tale of the Light Folk, Straight Folk and Free Folk.</p></i>
 
 <p>Amongst humankind two divergent cultures emerged, the Light Folk in Salkamar and the Straight Folk in Albar. For centuries Albarians and Salkamaerians fought one another in what became known, after the first hundred years, as the Centennial Wars. Whilst the human cities vied for dominance, other races generally avoided the futile and seemingly never ending battles. The exception of course were the orcs who saw opportunity to loot settlements and destroy even vast cities as they succumbed to war.</p> 

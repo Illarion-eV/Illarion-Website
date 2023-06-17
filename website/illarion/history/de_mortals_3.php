@@ -10,7 +10,7 @@
 
 <h1>Feuer und die Rache der Elfen</h1>
 
-<?php cap(Z); ?>
+<?php cap("Z"); ?>
 <p><i>u meinem Glück pendelte meine Handelskarawane nicht auf den bekannten Routen zwischen den großen Städten. Unser Führer nutzte sein enormes Wissen über das Land und führte uns in Gegenden, in denen Händler sehnsüchtig erwartet wurden. Wir alle vertrauten seiner Entscheidung und folgten ihm blind. Eines Tages schlugen wir unser Lager am Saum eines Waldes auf, von dem die Leute sagten, er gehöre zum alten Elfenwald. Hier erfuhr ich die folgende Geschichte.</i></p>
 
 <p>In den Wäldern von Eldaril traf der Howling-Wolf-Clan auf Elfen. Diese Elfen unterhielten Handelsbeziehungen mit den Plainfolk-Menschen und hatten daher Gerüchte über Orks gehört, welche mit Dämonen im Bunde seien. Diese These sah man dadurch bestätigt, dass Jäger der Orks unwissentlich in geheiligte Stätten vorgedrungen waren und diese mit dem Blut erlegter Tiere besudelten. Der Howling-Wolf-Clan wurde schnell aus dem Wald vertrieben, dabei gingen die Elfen mit äußerster Präzision vor. Die Bogenschützen verwendeten magische Pfeile, um ihr Ziel beim ersten Schuss tödlich zu treffen und somit dem Gegner Leiden zu ersparen. Zudem verwendeten die Schützen Magie, um ungesehen zu bleiben.</p>

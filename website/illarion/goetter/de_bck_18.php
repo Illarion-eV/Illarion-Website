@@ -10,7 +10,7 @@
 
 <h1>Adron - Gott des Weines und der Feste</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p>dron ist der Gott der Festivitäten und des Weins, hoch angesehen in 
 Tavernen und Wirtshäusern in ganz Illarion. Obwohl er sich oft passiv 
 verhält, vor allem in Hinsicht auf die Zukunft, kann Adron auch impulsiv

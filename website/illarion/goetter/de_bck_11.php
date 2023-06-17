@@ -10,7 +10,7 @@
 
 <h1>Ushara - Göttin der Erde</h1>
 
-<?php cap(U); ?>
+<?php cap("U"); ?>
 <p>shara ist die Göttin des Elements Erde. Weise und still, wird sie als Mutter der Welt respektiert und ist von ruhigem Gebahren sowie sanfter Strenge. In ihrer zurückhaltenden Persönlichkeit lehnt sie Reichtum und andere Schätze von vergänglichem Wert ab. Sie bevorzugt jene, die schlicht und bescheiden sind und steht oft in enger Verbindung mit der Natur. Wenn Ushara auf Illarion erscheint, tut sie dies in der Gestalt einer betagten, schwarzhaarigen, dunkelhäutigen Frau in dunkler Kleidung.</p>
 
 <h2>Anhänger</h2>

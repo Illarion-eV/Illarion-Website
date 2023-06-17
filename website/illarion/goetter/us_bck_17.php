@@ -10,7 +10,7 @@
 
 <h1>Elara - Goddess of Wisdom and Knowledge</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>lara is the goddess of wisdom and knowledge. She is considered to be both wise and calm, yet her pensive attitude may sometimes distance her.  Just as Eldan did before her, she often seeks the solitude of a life as a hermit. When she has been seen, she has appeared as a tall and ageless woman, often surrounded by books and scrolls. Elara avoids big crowds where possible and dislikes spontaneous or crude actions.  Her restrained personality rejects wealth or any other kind of transitory merits, desiring the lasting value of learning and the preservation of knowledge in books. She favours those with dedication and may appear in disguise to offer insight to those in need and to help solve a difficult conundrum.</p>
 
 <h2>Followers</h2>

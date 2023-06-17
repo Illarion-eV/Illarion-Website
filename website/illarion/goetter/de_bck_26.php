@@ -10,7 +10,7 @@
 
 <h1>Moshran - Gott des Blutes und der Gebeine</h1>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>oshran ist der Gott des Blutes und der Knochen. Sein Name bleibt unter Vielen oft unausgesprochen, so groß ist die Angst vor ihm. Er wird oft als mächtiger und entschlossener Kriegsherr angesehen, mit großem taktischen Talent und Wissen über versteckte Geheimnisse. Von brennendem Wahnsinn geblendet, ist Moshran jedoch blutdürstig, kriegsliebend und schlechtgelaunt. Sein rauer Sinn für Humor und sein gnadenloser Charakter lassen denjenigen wenig Hoffnung, die ihn entäuschen oder jegliche Anzeichen von Schwäche zeigen. Es wird angenommen, dass er nur den Starken hilft und seine Führung zeichnet sich durch Gewalt und Schmerz aus, in der die Schwachen mit Abscheu behandelt werden. Wenn er auf der Welt wandelt, erscheint Moshran meistens als starker, orkischer Kriegsherr, dessen große Gestalt mit Blut bedeckt ist. Manchmal nimmt er auch die Gestalt eines mächtigen alten Lich an, um Totenbeschwörer in düstere, verborgene Weisheiten einzuführen. Er genießt einen guten Kampf und sieht das Verwenden von hinterlistigen Taktiken als etwas ehrenhaftes an. Die wenigen, die es wagen, sich auf diesen unberechenbaren Gott einzulassen, lernen schnell, dass er absolute Loyalität verlangt und den Korrupten beisteht, während er sicherstellt, dass die Schwachen auf ihrem Platz bleiben.</p>
 
 <h2>Anhänger</h2>

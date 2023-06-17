@@ -10,7 +10,7 @@
 
 <h1>Malachín - Gott der Jagd und der Schlachten</h1>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>alachín ist der Gott des Kampfes und der Jagd. Obwohl er allgemein die Zivilisation hinnimmt, wird von ihm oft angenommen, dass er sich außerhalb von Städten wohler fühlt und die wilde Schönheit der Natur vorzieht, sei es ein unberührter Wald oder abgeschiedene Berge. Malachín wird als würdevoll und ehrbar angesehen, aber auch als neutral und ernst. Er ist nicht für seinen Sinn für Humor bekannt, besitzt aber durchaus einen. Er schätzt Gesetz, Recht und angemessene Manieren. Er hegt eine große Abneigung gegenüber Betrügern. Wenn er durch die Länder zieht, tut er dies entweder in Gestalt eines starken, grauhaarigen Ritters in strahlender Rüstung, oder als braunhaariger Waldläufer in grüner Kleidung. Manchmal erscheint er, um einem guten Soldaten beizustehen, einen fairen Kampf zwischen Kriegern zu gewährleisten, oder einfach um die Kameradschaft in der Schlacht zu genießen. Seine Wertschätzung für die natürliche Ordnung der Welt symbolisierend, wird er oft als schwarzer Wolf dargestellt.</p>
 
 <h2>Anhänger</h2>

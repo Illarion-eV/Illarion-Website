@@ -8,7 +8,7 @@
 
    <h1>The Gods of Illarion</h1>
 
-   <?php cap(T); ?>
+   <?php cap("T"); ?>
    
    <p>here are many Gods, countless myths, and endless legends. The stories told by the Gods to a few chosen mortals may have changed through time, embellished by the tongues of priests and prophets that seek to glorify the actions of their chosen deity and ensure their place in history. The Gods do not care much about the details - as long as the story told is in their favour.</p>
 

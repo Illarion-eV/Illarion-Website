@@ -10,7 +10,7 @@
 
 <h1>The Age of Dawn</h1>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <p>leeing a mighty foe, the Elder Gods came to this world, formulating their protection as they moulded the land to their needs. Combining their powers they formed unstructured elements which through their will they weaved together to give structures and matter. Findari formed the vast sky and beneath it Tanora created the ocean. Ushara made soil, rock and the mountains to form the land. Brágon brought light into the world and Eldan made every being aware of itself. They animated the world with an energy we now recognise as the divine power that is mana. Still the world produces this energy, giving life to the land and explaining so many of its wonders.</p>
 
 <p>Next, the Elder Gods created four races: humans, elves, dwarves and halflings. The first city, Nabranoo, was founded as the seat of the Gods. Other cities followed as their creations prospered and populated the new lands. Centuries passed without hint of the danger to come but the Gods did not neglect their preparations.<p>

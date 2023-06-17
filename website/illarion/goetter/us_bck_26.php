@@ -10,7 +10,7 @@
 
 <h1>Moshran - God of Blood and Bones</h1>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>oshran is the god of blood and bones and his name remains unspoken by many, such is the fear he brings. He is often considered a powerful and determined warlord with tactical prowess and knowledge of hidden secrets. Blighted by raging madness, however, Moshran is bloodthirsty, war-loving and ill-tempered. His rough sense of humour and unforgiving nature offers little hope to those who fail him or show any sign of weakness. He is believed only to help the strong, and his regime is one of violence and pain, treating the feeble with contempt. When witnessed in the world, Moshran most often appears as a strong orcish warlord, his tall frame covered in blood. Sometimes he takes the form of a powerful old Lich to instruct necromancers in hidden dark wisdom. He enjoys a good battle and considers the use of underhand tactics something to be honoured. The few who dare to deal with this unpredictable god soon learn that he demands unquestioning loyalty as he lends aid to the corrupt and ensures the weak remain in their place.</p>
 
 <h2>Followers</h2>

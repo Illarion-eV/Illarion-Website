@@ -10,7 +10,7 @@
 
 <h1>New Beginnings</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p>s the influence of Kharud spread across the lands many fled the turmoil and persecution, whilst for others war became a time of opportunity. As the old cities bowed under the power of the sorcerer, a new land began its rise to prominence.</p>
 
 <p>High in the citadels of Lor-Angur, the High Lord Protector resolved to remain neutral and refused to challenge the growing threat of Kharud. Angered by the inaction of the ruling council, a group of renegade mages voyaged to the secluded peninsula of Illarion. Here they founded their own academy in the south east, naming the establishment Runewick. Amongst them was the elf Elvaine Morgan, intent on protecting the magical emerald he had now been custodian of for thousands of years, from Kharud. The mages created an immense arcane structure with four elemental towers rising above the forested isles and instated Elvaine Morgan as Archmage.</p>

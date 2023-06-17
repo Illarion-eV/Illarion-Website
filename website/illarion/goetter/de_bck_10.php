@@ -9,7 +9,7 @@
 
    <h1>Die G&ouml;tter Illarions</h1>
 
-   <?php cap(E); ?>
+   <?php cap("E"); ?>
    
    <p>s gibt viele G&ouml;tter, viele Mythen und zahlreiche Geschichten. Die Geschichten wurden einst
    von den G&ouml;ttern selbst an einige auserw&auml;hlte Sterbliche weitergegeben, welche nun als Priester

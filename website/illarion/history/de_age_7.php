@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Verantwortung</h1>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie noch nicht verheilten Wunden und Verwüstungen aus den Zeiten der Zwietracht vor Augen und getrieben durch die Gefahr, die von Moshran ausging, erkannten die Götter, dass der Schwur niemals die Hand gegeneinander zu erheben nicht ausreichen würde, Frieden unter den Sterblichen zu schaffen. Um ihre Schöpfungen vor der Auslöschung durch ihre eigenen Hände zu bewahren, schufen sie sieben Edelsteine von unvorstellbarer magischer Kraft. Mit Ausnahme des Diamanten, den die Götter in ihre eigene Obhut nahmen, gaben sie im Geheimen jeweils einen Stein an einen vertrauenswürdigen Vertreter jeder Rasse.</p>
 
 <p>Man weiß nicht wer die Ersten waren, die von den Göttern erwählt wurden, doch es dauerte nicht lange und Gerüchte über den Verbleib der Steine kamen auf. Einige der Wächter von ihnen sollen verrückt geworden sein ob der Geißel der Macht. Andere wurden von ihren nächsten Vertrauten hintergangen. Missgunst, Neid und Verrat waren alltägliche Begleiter des Kampfes um die Macht. Manche Steine wurden vererbt, andere lagen in vergessenen Verstecken als ihre Hüter verstarben oder fielen in die Hände von Glücksrittern und Eroberern. Bis heute ist unser Schicksal eng mit den mächtigen Steinen und ihren Wächtern verbunden.</p>

@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Eintracht</h1>
 
-<?php cap(N); ?>
+<?php cap("N"); ?>
 
 <p>ach dem gewaltigen Krieg, der beinahe das Ende von dieser Welt bedeutet hätte, begannen die
 Völker einen Wiederaufbau auf den Ruinen der alten Zivilisation. Nach und nach verteilten sie
@@ -33,7 +33,7 @@ Führung und einen Sinn für Ihr Leben, wo sonst nur Leere und Einsamkeit herrsc
 wählten die meisten einen der Götter aus, dessen Persönlichkeit und Lebensart Ihrer eigenen am
 nächsten kam. Diesen verehrten sie und dienten Ihm so gut sie konnten.</p>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>ber obwohl Moshran am meisten zu ihrer Freiheit beigetragen hat, erwählten nur wenige ihn zu
 ihrem Gott. Seine Laune wurde im Laufe der Jahre immer düsterer und undurchdringlicher. Es

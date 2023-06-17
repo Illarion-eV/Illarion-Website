@@ -10,7 +10,7 @@
 
 <h1>Die Norodaj und die Seedrachen</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p><i>m folgenden Tage trieb kalter Wind einen nicht enden wollenden Regen vor sich her. Der Kampf gegen die Widrigkeiten des Wetters ließ uns alles andere vergessen. Man kann nur staunen welch edle Gewürze, wertvolle Stoffe oder kostbare Juwelen die Händler meiner Karawane so weit im Norden suchten. Zweifellos wussten sie genau wo sie einen Gewinn herausschlagen konnten. Am Abend drängten wir uns um unser Lagerfeuer, das uns Wärme spendete, und lauschten einer Geschichte über dieses scheinbar verlassene Land.</i></p>
  
 <p>In der eisigen Tundra des Nordens, die sich hinter dem Aramon-Gebirge erstreckte, trafen die Orks der Waraxe und Howling Wolf Clans auf die Norodaj. Nach den geheimnisvollen Elfen und verschwunden Zwergen schien dieses raue Seefahrervolk, das, wie die Orks, in Fell und Leder gekleidet mit Speeren und Äxten jagte, ihnen ähnlich erschien. Sie kämpften, schrien und starben wie man erwarten konnte. Die Orks zogen die Küste entlang und brandschatzten mit wachsender Zuversicht ein Dorf nach dem Anderen.</p>

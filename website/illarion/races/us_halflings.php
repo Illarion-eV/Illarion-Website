@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>o the ignorant, Halflings look like the children of humans and indeed their appearance is similar to them. The most
 significant difference besides their small height are their big and hairy feet, which they proudly present in public as they
 avoid wearing any kind of footwear. They also tend to live longer than humans.</p>
@@ -40,7 +40,7 @@ explain at great length, the best way to cook a piece of beef, while in the midd
 No wonder many taverns boast
 themselves on having a Halfling as their cook and especially young Halflings favour Adron over the rest of the pantheon.</p>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>alflings prefer to earn a living from the earth. There are actually some who got well known for their mastery
 in a handicraft but in general they are gifted farmers, hunters and herbalists. Quite often small shrines dedicated
 to Oldra can be found in areas inhabited by Halflings to protect the crop. And the harvest festival solemnised in
@@ -49,7 +49,7 @@ talent to move unheard and be quite nimble and even though not many Halflings wo
 talents to good use as a thief and cutpurse. Therefore it is well advised to keep an eye on your
 belongings when there is a Halfling around with the emblem of Ronagan around the neck.</p>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>alflings have in general a very easy approach to life. Unlike the elves, dwarves and humans they seldom worry
 about the future and it’s outcome. They are very restful to be with, preferring a chat about relatives and friends
 over high politics. They also do not have a sense for ranks but value highly the importance
@@ -57,7 +57,7 @@ of family and friends and loving care for their children. This is reflected by t
 They lack an overall political structure and a sense of unity. Nevertheless they prefer to live in loose communities
 dominated by their race even though mixed settlements with humans are sometimes heard of.</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>his denial of a unified race has in the past led to foreign rule, once by the Orcs and Humans respectively.
 Even though the rule of the Humans was by far less harsh than that of the Orcs still both times the hardship brought
 upon the Halflings was great and only under these two circumstances were they willing to lay down their reluctance to

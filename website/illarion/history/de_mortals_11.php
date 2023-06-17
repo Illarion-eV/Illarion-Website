@@ -10,7 +10,7 @@
 
 <h1>Eine Insel</h1>
 
-<?php cap(U); ?>
+<?php cap("U"); ?>
 <p><i>nsere gesamte Truppe ging am folgenden Morgen an Bord. Wir hatten Vertrauen in unseren Anführer. An Deck, fern der traurigen Erinnerungen erzählte er uns eine Geschichte über das Finden und Verlieren.</i></p>
 
 <p>Eine winzige Insel im Großen Ozean, die man später Gobaith nannte, wurde zum Symbol für die Hoffnung einiger Vertriebener, die vor der, nach dem Zusammenbruch der alten Reiche folgende, landauf und landab wütenden Gesetzeslosigkeit geflohen waren. Das Land war fruchtbar, die Wälder dicht und in den Bergen fanden sich abbauwürdige Erzvorkommen. Lediglich einige Echsen bewohnten die Küste. Ein verlassener Leuchtturm und Ruinen eines verlassenen Tempels zeugten von längst vergangener Besiedelung. Die Schrecken des Krieges hatten diesen Flecken Land verschont.</p>

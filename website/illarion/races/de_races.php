@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 
 <i><p>eid gegrüßt, werter Neffe.</p>
 <p>Da Ihr nun diese Zeilen lest, ist es wahrscheinlich, dass mein Leben sein Ende fand. Ich war ein wenig krank in den letzten Tagen, und jene, die ein solches Alter erreichten wie ich es tat, pflegen zu verspüren, wenn ihre Zeit gekommen ist. Drum sei es, dass ich diesen Brief nun verfasse. Ich sammelte nicht viele Reichtümer, welche ich Euch hinterlassen könnte, nur ein paar Dinge und Kupfermünzen mögen bleiben, sobald der Totengräber bezahlt ist. Doch möchte ich Euch berichten von jenem Orte, welchen ich zu schätzen lernte, und an welchem ich die letzten siebzehn Jahre zu leben pflegte.</p>

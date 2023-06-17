@@ -10,7 +10,7 @@
 
 <h1>Findari - Goddess of Air</h1>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <p>indari is the goddess of the element air. It is not in Findari's nature to be compulsive but as with any wind she gave change to the world - for better or for worse, that is always a matter of perspective. Kind in person, she is known as a friendly goddess without bad intentions. Those who do not understand her ways, however, won't regard the devastation by storms she brings as a chance to start anew, but as sheer destruction. If Findari ever takes on a mortal form, she is dressed mostly in light blue and appears as an ageless blond-haired woman, dancing even where others might be lost in despair. Music and fine arts are her preference, as long as they are not enforced by rules but rather are used to express personal thoughts and feelings.</p>
 
 <h2>Followers</h2>

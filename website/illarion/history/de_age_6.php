@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Isolation</h1>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <i><p>euer,<br>
 Feuer,<br>
 Die Welt steht in Flammen!</p>

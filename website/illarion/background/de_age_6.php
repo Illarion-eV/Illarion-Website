@@ -39,7 +39,7 @@
 
 <h1>Das Zeitalter der Isolation</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 
 <p>bgleich Moshran tief im Inneren der Erde gefangen war, hatten seine niederträchtigen
 Absichten Erfolg auf der Oberfläche. Genau wie in den Zeiten des Krieges gegen ihn, bevorzugten

@@ -8,7 +8,7 @@
 
 <h1>Die Geschichte Illarions</h1>
 
-<?php cap(G); ?>
+<?php cap("G"); ?>
 
 <p>eschichte! Allein das Wort an sich hat einen geheimnisvollen Klang und lässt heroische Taten
 erwarten. Der Gedanke, große Bibliotheken zu erforschen und die Nase tief in alte Folianten zu

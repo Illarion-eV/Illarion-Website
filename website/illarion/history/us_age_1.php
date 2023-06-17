@@ -10,7 +10,7 @@
 
 <h1>The Age of Legends</h1>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>inora Maldrán, Mother of Wisdom, proclaimed in the prime age of Shilawén: "The day will come when darkness covers the land. Darkness, arisen from within us, strengthened and nurtured by us, but which eventually will dominate us. Then the black abyss of oblivion will engulf us and our folk will return to dust. But a small seed of ourselves will escape to flourish again in another world, prospering with the strength we have provided."</p>
 
 <p>As her last words faded away she broke her crook as a sign of sacrifice. Her lifeless body fell to the ground and the force within her found a new vessel. Only a sealed scroll fell with her body as a reminder of a past world.</p> 

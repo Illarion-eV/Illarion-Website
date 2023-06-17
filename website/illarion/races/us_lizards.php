@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p> very astonishing race are the lizardmen. They are a little smaller than the average human, walk on two legs, with a strong
 tail to add balance and agility when running, jumping or swimming. Their anatomy is astonishing: they seem to be reptiles, but
 instead of being cold–blooded, their body can somehow change between being cold–blooded and warm–blooded state. This flexibility,
@@ -30,7 +30,7 @@ in addition with their tough, greenish or brownish lizard skin, their strong tee
 different places. Another astonishing thing is their ability to breath water. This may be a result of the lizard's main goddess
 influence, Tanora (or "Zelphia" in lizard tongue) over thousands of years.</p>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>ost Lizards are not interested in magic. Since their society is based on religion, the center of their
 cities is always a large temple dedicated to the water goddess. The building structures look very simple from afar: Big stone blocks.
 But at close distance, one can see that every single one is carved with religious symbols and reliefs, pictures and stories.</p>
@@ -41,21 +41,21 @@ uninhabited by the other races, or in wet jungles and swamp areas no one else wa
 great adaptability concerning inhabitable climates. The other reason may be the thick lizard skin, which most mosquitos can't
 break through.</p>
 
-<?php cap(L); ?>
+<?php cap("L"); ?>
 <p>izardmen are the second race who developed writing. Their first "letters" were signs from their claws pressed in soft materials
 that hardened out with time, or simple scratch marks on rocks. Some time later, they started to use parchment–like materials from
 fish skin and plant parts, written with an acid, colour–changing ink. Some of these materials have proven to be tough and reliable,
 even when the writing is a thousand years old. But since these scrolls have to be stored in salty water, and quickly rot away
 when exposed to air, their use outside the water only makes sense when stored in flasks or special boxes.</p>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 <p>In the life of a Lizard, religion and honour are the most important things. The older a lizard gets, the wiser he becomes.
 At the age of about a hundred and fifty or seventy years, old lizards start to sleep a lot, and spend the rest of their life
 dreaming, meditating and praying in a Lizard temple. Legends say that some Lizards live that way for hundreds of years before
 they die. Some of them suddenly awake with a holy shine in their eyes, and without saying a single word, walk away never to be
 seen again. The Priests call these ones "the enlightened ones". It is forbidden for other lizards to follow an "enlightened one".</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he Lizards do not know nobles or kings. They live in family clans, or in the temple, their high priests and family chiefs are
 their rulers. Of course, all family chiefs have higher religious positions. Legends tell of one being, the "Ushak– Sskhath",
 poorly translated, "Lizard King". In a far away temple at the deepest place of the oceans, rules the Lizard King, an immortal,
@@ -65,7 +65,7 @@ if a lizard priest is unrighteous, selfish or evil, he will one day see the sign
 if he does not change, one day, simply vanishes. Lizards tell their younglings, that when they don't obey, the
 lizard king will hunt them in their dreams. No one ever saw this lizard king, but many young lizards go on travels to search his temple.</p>
 
-<?php cap(L); ?>
+<?php cap("L"); ?>
 <p>izard Warriors are either hunters or "Temple Guards", a kind of lizard paladin. They guard the temple entrances and priests,
 uphold law and order, and destroy all evil and corrupt things with their righteous fist. These guards are horrendous fighters,
 with almost fanatic behaviour and an unstoppable demand for righteousness. They are trained in strange lizard combat techniques

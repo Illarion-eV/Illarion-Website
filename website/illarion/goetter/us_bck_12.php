@@ -10,7 +10,7 @@
 
 <h1>Brágon - God of Fire  </h1>
 
-<?php cap(B); ?>
+<?php cap("B"); ?>
 <p>rágon is the god of the element fire who gave the sun and fire to the world. Those who met him speak of his imperious personality that does not tolerate a second opinion. Brágon is strong, noble and just, yet those who oppose his justice will face the most fearsome wrath of all the Elder Gods. He is said to have sparked all desires, not only those that are good but also the selfish yearnings in the souls of mortals. Brágon is associated with a certain preference for gold and he has exquisite taste. If Brágon ever decides to intervene amongst mortals, he may appear as a giant with a fiery red beard or as a dark-haired knight with his armour ablaze, although typically he prefers to walk through Illarion in disguise.</p>
 
 <h2>Followers</h2>

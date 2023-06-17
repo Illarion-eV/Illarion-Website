@@ -10,7 +10,7 @@
 
 <h1>Adron - God of Festivities and Wine </h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p>dron is the god of festivities and wine, much revered in taverns and inns across Illarion. Although often passive, particularly about the future, Adron can also be impulsive and on occasions aggressive or melancholic. He will not hold from speaking his mind, sometimes causing offence, but those who listen will find a depth of hidden knowledge. Usually he will appear as an attractive and charismatic young man, dressed in green or brown who loves to socialise. He may also take on the appearance of a ragged, drunken, old beggar with a clay bottle of wine that seemingly never runs dry. With a love of celebrations, anybody who dares to quash festivities or cut the supply of wine can expect to feel his wrath.</p>
 
 <h2>Followers</h2>

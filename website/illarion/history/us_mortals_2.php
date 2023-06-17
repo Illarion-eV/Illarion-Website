@@ -10,7 +10,7 @@
 
 <h1>The Rise of Moshran's Children</h1>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p><i>he company of merchants were a merry bunch. As the wagon trundled across the plains there was much joviality with tales of past deals and hearty songs. As light began to fade, we camped for the night overlooking the river. Around the campfire the caravan leader, an old, bearded Gynkese fellow whose weathered skin told a story itself, began a tale of orcs that had once plundered these plains.</i></p>
 
 <p>From their birth orcs had banded together as clans, wandering the plains in search of a homeland. Centuries later, following the Andrilai River, they gathered at Lake Talith, where three rivers converge to form the Vorthain Current. Grubuk Thunderhand, eldest seer of the Bloody Skull Clan, spoke on the shores of the lake. He had dreamt of a falcon that guided him along a black river that flowed into this lake, to a new land for orcs.</p>

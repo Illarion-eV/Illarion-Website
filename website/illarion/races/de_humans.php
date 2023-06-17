@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>er Menschen Gedächtnis ist kurz. So, wie auch ihre Lebensspanne im Vergleich zu den anderen Völkern nicht
 lange währt, so reicht das Wissen über ihre eigene Geschichte und ihre Wurzeln nicht tief. In den vielen Kriegen,
 welche die Menschen ausgetragen und in denen sie noch nicht einmal vor ihrem eigenen Volk halt gemacht haben,
@@ -30,7 +30,7 @@ wurde viel Wissen zerstört, welches unwiederbringlich erscheint. Denn unter den
 des Schreibens mächtig sind und diese Tradition wird nur unter den Wohlhabenden und Gebildeten zur nächsten Generation
 weitergereicht.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie ersten Formen menschlicher Schrift waren zu Beginn vereinfachte Versionen des elfischen Alphabets und nur einige
 wenige zeigten tatsächlich Interesse daran. Es waren zumeist Könige und andere Fürsten, Priester und Händler, welche aus
 verschiedensten Gründen die Vorzüge der Schrift erkannten. Für die einen war es notwendig, sich auf einen
@@ -43,7 +43,7 @@ entwickelte sich die Sprache der Menschen zu einer beliebten Handelssprache, wod
 Zwerge und Orks in den Wortschatz Aufnahme fanden. So entstand im Laufe der Zeit die so genannte Einheitssprache, welche auch
 heute noch, mit Einflüssen von lokalen Dialekten durchsetzt, die Muttersprache der Menschen ist.</p>
 
-<?php cap(B); ?>
+<?php cap("B"); ?>
 <p>eeinflusst durch die Führungspersönlichkeiten und auch benachbarten Kulturen, können menschliche Gesellschaftsformen
 mitunter sehr unterschiedlich gestaltet sein. Auch hier gibt es einige unter ihnen, die es bevorzugen, unter Ihresgleichen
 zu bleiben. Für diese sind die anderen Völker fremdartig und der Aberglaube verstärkt die aufkeimende Abneigung. Gerade unter
@@ -53,7 +53,7 @@ gütlich tun; Elfen könnten nur mit einem einzigen Blick andere Leute verfluche
 Gerüchten, die unter den Menschen kursieren. Im Vergleich zu allen anderen Rassen sind menschliche Gesellschaften aber weitaus
 offener und sie treten fremden Völkern gegenüber eher unvoreingenommen auf.</p>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>enschen spielen eine wichtige Rolle in vielen Handelsaktivitäten, nicht nur unter den Menschen selbst, sondern auch zwischen
 den verschiedenen Völkern auf Illarion. Viele ihrer zentralen Orte sind entlang wichtiger Handelsstrassen gebaut worden. Dem
 Reisenden werden hier neben Unterkunft und Verpflegung alle erdenklichen Vergnügungen geboten und auf den zentralen Marktplätzen
@@ -64,7 +64,7 @@ um historische Kulturen handelt, die in dieser Form nicht mehr zur Gänze anzutr
 
 <h3>Barbarenvölker:</h3>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Norodaj (Seevolk) bewohnen raue und kalte Klimazonen. Sie sind für gewöhnlich in Fell, Leder oder auch gefärbte raue Stoffe
 gekleidet. Die Männer tragen meist lange Bärte und bevorzugen im Kampf lange Schwerter, Speere, Äxte und auch Wurfäxte.
 Ihr Schriftbild ist in Anlehnung an die Kultur der Zwerge ein Runenalphabet. Sie nutzen zwar auch die Einheitssprache aber ihre eigene
@@ -98,7 +98,7 @@ wird. Die Asche der Verstorbenen wird in das Meer gestreut und kleine Teile des 
 Geistern bei einem neuen Schiff an dem hölzernen Wolfskopf befestigt. Jeder Klan hat auch einen Geisterführer in ihren Reihen,
 welcher eine Art Schamane oder Priester ist.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Serinjah (Steppenvolk) leben in den großen Ebenen. Sie züchten Pferde und Rinder und leben in verstreuten Ansiedlungen in Hütten
 aus Holz. Auch ihre Gesellschaft besitzt eine Klanstruktur und sie sind bekannt als außergewöhnlich gute Reiter, Tierbändiger, Jäger
 und Krieger. Serinjah bevorzugen im Kampf Speere und Bögen, welche sie meisterlich im Kampf zu Pferd einsetzen. Doch sind sie auch im
@@ -119,7 +119,7 @@ wird ein Stein auf den Gräbern aufgestellt. Nachdem das frische Grab vollständ
 und Freunden eine Zeremonie abgehalten, in dessen Bedeutung der Sieg des Lebens über den Tod gefeiert wird. Die Natur hat sich
 durchgesetzt und beschließt damit den Kreislauf des Lebens.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Ama–shoon (Steppenvolk) sind im engeren Sinne kein eigenes Volk, sondern man kann sie eher als eine unabhängige Kriegerkaste
 des Steppenvolks bezeichnen. Die Mitglieder dieses Stammes bestehen ausschließlich aus Frauen. Männliche Kinder werden im Alter von
 vier Jahren zu den Ansiedlungen der Serinjah gebracht, wo sie fortan von ihren Vätern aufgezogen werden.<br />
@@ -134,7 +134,7 @@ eines Ama–shoon Stammes ist mitunter eine Findari–Priesterin.</p>
 <h3>Kulturvölker:</h3>
 <p>Diese Völker sprechen die Einheitssprache. Allen ist gemeinsam, dass die Ehe als ein Bündnis fürs Leben geehrt wird und nur unter bestimmten Voraussetzungen wieder gelöst werden kann.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Salkamaerianer (Volk des Lichts) leben in Städten, Dörfern und Burgsiedlungen. Die Wurzeln dieses Volkes und ihre Lebensweise
 reichen zurück in die alte Stadt Salkamar, welche auch der Ursprung der Einheitssprache und des Schriftsystems ist.<br />
 Das Leben der Salkamaerianer wird von Einstellungen bestimmt wie Respekt, Ehre und Loyalität. Sie führen ein nobles Leben. Allen
@@ -147,7 +147,7 @@ Ihre Poeten, Barden und Philosophen sind in der ganzen Welt berühmt, wie auch d
 gehen und für Rechtschaffenheit und Menschlichkeit kämpfen. Zhambra, Oldra, Sirani, Elara and Malachín sind die am häufigsten
 angebeteten Götter in den Ansiedlungen der Salkamaerianer.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Albarianer (Volk der Ordnung) leben in kleinen Städten, Dörfern und Burgsiedlungen. Ihre Gesellschaftsform ist die einer
 Leibeigenschaft. Das Land wird von Adelsgeschlechtern regiert und alle Personen, die sich darauf befinden, sind Besitztum des
 Fürsten. Der überwiegende Teil der Bevölkerung sind Leibeigene ohne festgeschriebene Rechte und damit der Willkür des Adels
@@ -161,7 +161,7 @@ Salkamaerianer und hat sich in die entgegengesetzte Richtung entwickelt. Da die 
 Gebiet der Albarianer Rebellion und Anarchie keine Seltenheit ist, sind die Regionen unter der Führung der Albarianer am Schwinden.
 Die zentralen Gottheiten variieren, meist in Abhängigkeit der regierenden Fürstenfamilie.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Gynkeesh (Freies Volk) leben in unabhängigen Städten und Gemeinden. Sklaverei ist zwar per Gesetz verboten, doch die
 einflussreichen und vermögenden Handelsfamilien scheinen dies ohne große Bedenken zu vergessen. Der größte Einflussfaktor
 in der Gesellschaft der Gynkeesh ist Gold und Silber. Die Stadträte werden von den reichen Familien und Handelsorganisationen

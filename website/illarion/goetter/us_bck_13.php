@@ -10,7 +10,7 @@
 
 <h1>Eldan - God of Spirit </h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>ldan is the god of the element spirit and is considered wisest of all. With his pensive attitude, one might consider him aloof and conclude that his mind left the world and he sought refuge in the ivory tower of his own thoughts. Wisdom is his mark, yet he prefers to remain quiet when others shout out their foolishnes. Eldan may appear as a wise mage, scholar, beggar or even a drunken philosopher but he will always carry a wooden staff. He avoids the big cities or large crowds and prefers peaceful solitude, be it a place of learning or a remote tavern.</p>
 
 <h2>Followers</h2>

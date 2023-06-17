@@ -10,7 +10,7 @@
 
 <h1>Malachín - God of Battle and Hunting</h1>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>alachín is the god of battle and hunting. While accepting of civilisation in general, he is often considered to be more at home away from the towns, favouring the wild beauty of nature, be it an untouched forest or lonely mountains. Malachín is considered to be dignified and honourable, but also neutral and serious. He is not known for a sense of humour, but does have one. He favours law, justice and proper manners. He harbours a deep disdain for those that would cheat. When wandering the lands, he is seen as either a strong, grey haired knight in shining armour, or a brown haired ranger in green clothing. Sometimes he appears to assist a good soldier, to ensure a fair fight between warriors, or simply to enjoy the comradeship of battle. Conveying his appreciation for the natural order of the world he is often portrayed as a black wolf.</p>
 
 <h2>Followers</h2>

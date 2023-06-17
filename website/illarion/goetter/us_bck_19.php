@@ -10,7 +10,7 @@
 
 <h1>Oldra - Goddess of Life and Fertility</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>ldra is the goddess of life and fertility. As such, the prayers to Oldra are focused upon growth of crops and good food, birth and raising of children, as well as healing and motherly advice. Oldra is considered by many to be a motherly, or even grandmotherly god, offering advice and protection. Known to be wise and gentle, she is good natured and helpful, often listening to the needs of women. When she does walk the lands, she is seen as a stout and elderly woman, often wearing a blue dress. She is symbolised by some as a Bradamen tree, known for longevity with a trunk of immense girth supporting many boughs and a multitude of branches and leaves. She favours simplicity and humility, drawn to life in the fields and peasantry in general, where she can appreciate well fed animals, growing vegetables and sharing a good meal. Those who are greedy, selfish and seek only to fulfil their own ambitions displease her.</p>
 
 <h2>Followers</h2>

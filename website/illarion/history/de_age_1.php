@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Legenden</h1>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>inora Maldrán, Mutter der Weisheit, verkündete in der Blütezeit von Shilawén: "Es wird der Tag kommen, da wird Dunkelheit das Land bedecken. Dunkelheit, die aus uns selbst erwächst, die in uns selbst erstarkt, die uns beherrscht. Dann wird sich der schwarze Schlund des Vergessens über uns stülpen und unser Volk wird zu Staub zerfallen. Doch ein Keim unserer selbst wird fliehen können und in einer anderen Welt erneut erblühen, gedeihen mit der Kraft, die wir diesem Keim verliehen haben."</p>
  
 <p>Als ihre letzten Worte verklungen waren, zerbrach sie ihren Stab als Zeichen ihres Opfers. Ihr Körper fiel leblos zu Boden und die Energie, die in ihrem Körper inne wohnte, suchte sich ein neues Behältnis. Das Einzige was man bei ihr fand, war eine Schriftrolle, welche mit einem Siegel verschlossen war.</p>

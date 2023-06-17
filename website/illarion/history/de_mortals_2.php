@@ -10,7 +10,7 @@
 
 <h1>Der Aufstieg der Kinder Moshrans</h1>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p><i>ie Kaufleute waren eine fröhliche Gesellschaft. Während die Wagen über die Ebenen rumpelten, vertrieben sie sich die Zeit mit Geschichten und deftigen Liedern. In der Dämmerung schlugen wir unser Lager an einem Fluss auf. Der Anführer der Karawane, ein alter, bärtiger Gynkese, dessen wettergegerbtes Gesicht ein ereignisreiches Leben verriet, erzählte eine Geschichte von Orks, die einstmals diese Ebenen plünderten.</i></p>
 
 <p>Auf der Suche nach einer Heimat zogen die Orks seit ihrer Erschaffung in Clans durch die Welt. Nach einigen hundert Jahren Suche folgten sie dem Andrilaifluss, um sich am Talithsee, in den sich drei Flüsse ergossen und den Vorthainstrom begründeten, zu versammeln. Grubuk Donnerhand, ältester Seher des Bloody-Skull-Clans, rief alle Clans am Ufer des Sees zusammen, und erklärte, ein Falke habe ihm im Traum den Weg in eine neue Heimat gewiesen. Ein schwarzer Fluss, der in den See mündet, würde sie in ihre neue Heimat führen.</p>

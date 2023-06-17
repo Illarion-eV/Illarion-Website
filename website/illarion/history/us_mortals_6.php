@@ -10,7 +10,7 @@
 
 <h1>Norodaj and the Sea Dragons</h1>
 
-<?php cap(C); ?>
+<?php cap("C"); ?>
 <p><i>old winds and endless rain muted the joyful voices of my company as we battled against the elements. One had to wonder what delicious spices, valuable draperies or precious jewellery drove the merchantmen of my company so far north but without doubt they knew exactly how to make a profit. As we huddled around the campfire that night in the bitter cold only another tale of these forlorn lands from the Master lifted our spirits.</p></i>
 
 <p>Crossing the mountains to the icy north, the Waraxe and Howling Wolf clans encountered the Norodaj. After unfathomable elves and vanishing dwarves, these rough sea folk dressed in furs and leathers, wielding axes and spears seemed more familiar to the orcen kind. They fought and screamed and died like they should and the orcs moved along the coast plundering and burning villages with growing confidence.</p>

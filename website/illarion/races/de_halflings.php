@@ -22,13 +22,13 @@
 	</ul>
 </div>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <p>ür die Unwissenden sehen die Halblinge wie die Kinder der Menschen aus und tatsächlich haben sie einige Ähnlichkeiten
 mit der Statur der Menschen. Doch der augenfälligste Unterschied, neben ihrer geringen Körpergröße, sind ihre großen und
 behaarten Füße, welche sie mit großem Stolz zur Schau tragen, da sie es vermeiden jedwede Art von Fußbedeckung zu tragen.
 Sie neigen auch dazu, älter zu werden als die Menschen.</p>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>alblinge bevorzugen es in hügeligen und dünn bewaldeten Gebieten zu leben, in denen sie ihre Behausungen in die Erde
 graben. Über mehrere Generationen hinweg können diese Wohnhöhlen beachtliche Ausmaße annehmen, welche angefüllt
 sind mit allerlei Möbeln und anderen Gegenständen, denn Halblinge bringen es nicht leicht übers Herz, Sachen wegzuwerfen,
@@ -45,7 +45,7 @@ vorkommen, dass ein Halbling mitten in einem hitzigen Gefecht, sich in aller Aus
 Zubereitungsweise von Fleisch auslässt. Es verwundert daher nicht, dass sich viel Tavernenbesitzer damit brüsten, einen
 Halbling als Koch angestellt zu haben. Auch bevorzugen gerade jüngere Halblinge Adron vor allen anderen Göttern.</p>
 
-<?php cap(V); ?>
+<?php cap("V"); ?>
 <p>iele Halblinge ringen die Mittel zu ihrem Lebensunterhalt der Erde ab. Natürlich gibt es auch einige, die durch ihre
 Meisterschaft in einem Handwerk bekannt wurden, aber im Allgemeinen sind sie begabte Bauern, Jäger und Kräuterkundige.
 Der Anblick eines kleinen Schreins zu Ehren Oldras, gebaut um die Saat und Ernte zu begünstigen, ist kein seltener Anblick
@@ -56,7 +56,7 @@ zugeben, aber bei einigen fanden diese Talente Anwendung in der Profession als D
 man gut beraten ein Auge auf seine Habseligkeiten zu haben, wenn ein Halbling in der Nähe ist, der ein Medaillon mit dem
 Emblem von Ronagan um den Hals trägt.</p>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 <p>alblinge haben in der Regel eine eher unbekümmerte Einstellung zum Leben. Im Gegensatz zu den Elfen, Zwergen und Menschen
 sorgen sie sich selten um die Zukunft und dessen Folgen. Sie sind sehr angenehme und heitere Zeitgenossen, die es bevorzugen
 ein Schwätzchen über Familienangehörige oder Freunde zu führen als über politischen Themen zu sprechen. Sie haben auch weder
@@ -66,7 +66,7 @@ ihre Gesellschaft dominiert. Es mangelt ihnen an einer allgemeingültigen politi
 Sie leben eher in sehr losen Gemeinschaften, welche aber von ihrem eigenen Volk dominiert sind, obwohl auch gemischte
 Siedlungen mit dem Volk der Menschen bekannt sind.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>iese Ablehnung einer zentralen Führung hat in der Vergangenheit zu Fremdherrschaften geführt, jeweils einmal durch die
 Menschen und durch die Orks. Obwohl die Zeit unter der Oberhoheit der Menschen weit weniger hart war als zur Zeit der
 Orks, führte es in beiden Fällen unter den Halblingen zu großer Not. Und nur unter diesen beiden Umständen ist es

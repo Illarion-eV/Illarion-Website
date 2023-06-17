@@ -10,7 +10,7 @@
 
 <h1>Ronagan - God of Thieves and Shadows</h1>
 
-<?php cap(R); ?>
+<?php cap("R"); ?>
 <p>Ronagan is the god of stealth, shadows, thieves, and assassins. He is often friendly and good humoured, especially to those in the shadowy aspects of life. With dark moods, however, Ronagan can turn aggressive. He lives life according to his own rules and dislikes authority and law of any kind. Ronagan's favourite pastime is pulling daring pranks to humiliate those who represent the authorities, as well as seeing one of his followers succeed in their 'job'. As much as he rebels against authority, Ronagan abhors betrayal. Claims of Ronagan’s appearance describe a handsome and charming, dark haired man in his thirties, usually dressed in dark clothing. Rumours have it that Ronagan has appeared to thieves in their times of need, often as a fellow thief, to guide them to safety, offer tips, grant the rare gift of invisibility, or otherwise lead their pursuers astray.</p>
 
 <h2>Followers</h2>

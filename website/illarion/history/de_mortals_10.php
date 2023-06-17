@@ -10,7 +10,7 @@
 
 <h1>Aufstieg und Fall von Kharud</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 <p><i>uf unserem Weg nach Süden waren die Wunden des Krieges noch unübersehbar. Unzählige Geschichten erzählen von Mut und mächtigen Schlachten in diesem Landstrich. Wenig hört man von denen die elendig verreckten und den Gräueln gegenüber denen, die überlebten. Barlak selber war einer, der die dunkle Zeit überlebte. Auch er erwähnte Gynk selten. Als wir eines Abends in einer Taverne am Hafen einen über den Durst getrunken haben, lernten wir mehr über das, was er einst verloren hat. Seine düstere Geschichte voll von Zerstörung und Leid handelte von einem mysteriösen fernen Land. Wir begannen zu ahnen, wie sehr unsere nächste Reise ihn bewegen würde.</i></p>
  
 <p>Einstmals erschien der Hexer Kharud auf der Bühne der Geschichte. Innerhalb kurzer Zeit schwang er sich in der salkamerianischen Stadt Nubis aus dem Nebel der Namenlosen zu wahrer Bedeutung auf. Ambitioniert und mit wachsender Anhängerschaft erstreckte sich sein Einfluss bald weit über die Region. Er erlangte die Befehlsgewalt über einige starke Legionen, wo er als skrupelloser Kommandeur seine Karriere machte. Gerüchte machten die Runde, wonach ein mächtiges magisches Artefakt sich in seinem Besitz befinden sollte. Über die Jahre richtete Kharud seine Aufmerksamkeit gegen Albar. Geschwächt durch Jahrhunderte des Krieges beugte sich das Imperium bald seiner Macht. Schnelle Siege schürten die Vermutung, er könne mehr als einen der magischen Steine besitzen, die die Götter einst den Sterblichen gaben.</p>

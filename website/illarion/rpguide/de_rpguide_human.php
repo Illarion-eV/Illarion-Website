@@ -28,13 +28,13 @@
    </ul>
    <br />
    <h2>Das Volk der Menschen</h2>
-   <?php cap(M); ?>
-   <p>enschen sind von allen V&ouml;lkern am einfachsten zu spielen. Das ist kein Wunder, sind wir doch selbst welche – du brauchst 
+   <?php cap("M"); ?>
+   <p>enschen sind von allen V&ouml;lkern am einfachsten zu spielen. Das ist kein Wunder, sind wir doch selbst welche ï¿½ du brauchst 
    dich also nicht so kompliziert in die Denkweise eines anderen Volkes hineinzuversetzen wie zum Beispiel in die Denkweise 
    eines Echsenmenschen der gar die Jahrhunderte &uuml;berspannende Denkweise eines Elfen.</p>
    <p>Dennoch gibt es unter den Menschenv&ouml;lkern Unterschiede. Die folgenden Links enthalten kurze Beschreibungen der Menschenv&ouml;lker
    und ihrer Ansichten &uuml;ber andere V&ouml;lker. Du solltest dich das Volk entscheiden, dessen Ansichten dir am meisten Spa&szlig; machen.</p>
-   <p>Die Attributswerte sowie St&auml;rken und Schw&auml;chen dieser V&ouml;lker sind v&ouml;llig identisch – diese Entscheidung ist also rein RP-technisch. 
+   <p>Die Attributswerte sowie St&auml;rken und Schw&auml;chen dieser V&ouml;lker sind v&ouml;llig identisch ï¿½ diese Entscheidung ist also rein RP-technisch. 
    In den V&ouml;lkerbeschreibungen und den Religionsbeschreibungen der V&ouml;lker findest du noch mehr Details und Anregungen.</p>
    <p class="center"><a href="de_rpguide_human1.php">Norodaji</a> - <a href="de_rpguide_human2.php">Serinjah</a> - <a href="de_rpguide_human3.php">Ama-Shoon</a>
    - <a href="de_rpguide_human4.php">Salkamaerier</a> - <a href="de_rpguide_human5.php">Albarier</a> - <a href="de_rpguide_human6.php">Gynkesen</a></p>

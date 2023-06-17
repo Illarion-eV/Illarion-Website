@@ -10,7 +10,7 @@
 
 <h1>Fire and the Vengeance of Elves</h1>
 
-<?php cap(P); ?>
+<?php cap("P"); ?>
 <p><i>erhaps it was my good fortune but this merchant caravan did not ply the usual trade routes between the largest towns, instead the Master put his vast knowledge of the lands to good use, seeking smaller communities where he knew his trade would be welcome. His company clearly had no doubt in his wisdom and followed him unquestioningly. The day's journey brought us to the edge of a forest and folk whispered of ancient elven lands before we settled around the campfire to hear the Master's story.</i></p>
 
 <p>In the forests of Eldaril, the Howling Wolf Clan first encountered elvenkind. The elves having traded for centuries with the Plain Folk were well aware of the orcs and their supposed alliance with demons. Unwittingly the orcs trespassed on sacred grounds and tarnishing the forest with blood of slain animals, incurred the wrath of elves. Unseen, the elves drove the orcs from the forest with hail of magic arrows.</p>

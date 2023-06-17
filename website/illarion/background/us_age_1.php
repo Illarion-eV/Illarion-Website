@@ -16,7 +16,7 @@ strengthened and nurtured by us, but which eventually will rule us. Than the bla
 oblivion will engulf us and our folk will return to dust. But a small seed will be able to
 escape and will prosper again in another world, prosper with a strength, we could provide."</p>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>fter her last words faded away she broke her crook as a sign of sacrifice. Her lifeless
 body fell to the ground and the force within her found a new vessel. The only thing that was

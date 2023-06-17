@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>ine sehr erstaunliche Rasse sind die Echsenmenschen. Sie sind ein wenig kleiner als ein durchschnittlicher Mensch,
 laufen auf zwei Beinen und haben einen starken Schwanz, um Gleichgewicht und Beweglichkeit zu gewährleisten, wenn sie
 rennen, springen oder schwimmen. Ihre Wesen ist sehr außergewöhnlich: Sie scheinen eine reptilienartige Natur zu haben,
@@ -32,13 +32,13 @@ fertig gebracht, an unterschiedlichsten Orten zu leben. Eine andere wunderliche 
 zu können. Man nimmt an, dass dies ein Ergebnis des über tausendjährigen Einflusses der Hauptgöttin Tanora (oder "Zelphia" in
 ihrer eigenen Sprache") der Echsenmenschen ist. Manche sagen aber auch, dass Tanora’s Kinder von Anfang an so erschaffen wurden.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie meisten Echsenmenschen sind nicht an Magie interessiert. Da ihre Gesellschaft auf religiösen Strukturen aufbaut,
 ist der Mittelpunkt ihrer Städte immer der große Tempel der Wassergöttin. Die Gebäudestruktur scheint, von fern betrachtet,
 sehr einfach: Große, aufeinander geschichtete Steinblöcke. Doch aus der Nähe kann man erkennen, dass in jeden einzelnen Stein
 sehr kunstvolle religiöse Symbole und Reliefs, Bilder und Geschichten eingemeißelt wurden.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>och nur wenige Menschen haben je eine Stadt der Echsenmenschen betreten. Der größte Teil ihrer Ansiedlungen liegt unter
 Wasser, meist in Regionen um kleine Inseln oder Inselgruppen im Meer, andere in größeren Seen auf den Kontinenten. Man kann
 kleinere Orte auch in unzugänglichen Dschungelregionen und Sümpfen finden. Echsenmenschen ziehen es eher vor unter sich zu
@@ -46,7 +46,7 @@ bleiben. Doch liegt dies nur zum Teil an ihrer scheuen Lebensweise, sondern auch
 eher meiden oder gar nicht darin leben können. Ihre dicke, ledrige Haut scheint sie auch vor den Krankheitsübertragenden
 Moskitos zu schützen.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Echsenmenschen sind die zweite Rasse auf Illarion, die das Schreiben erfand. Ihre ersten "Buchstaben" waren Zeichen,
 die mit ihren Klauen in weiches Material gedrückt wurden, welches dann mit der Zeit aushärtete. Auch sehr frühe und einfache
 Zeichen, die in Felsen geritzt wurden, sind belegt. Einige Zeit später begannen sie Pergament und andere Materialien wie Fischhaut
@@ -55,7 +55,7 @@ haben sich als sehr dauerhaft erwiesen, selbst wenn das Schriftstück ein paar t
 in salzigem Wasser aufbewahrt werden müssen und schnell verrotten, wenn sie der Luft ausgesetzt werden, macht ihr Gebrauch
 außerhalb des Wassers nur Sinn, wenn sie in Flaschen oder speziellen Kästen aufbewahrt werden.</p>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 <p>m Leben eines Echsenmenschen sind Religion und Ehre die wichtigsten Anhaltspunkte. Umso älter ein Echsenmensch wird, desto
 religiöser wird er. Ab einem gewissen Alter von etwa 150 oder 170 Jahren fangen Echsenmenschen an, viel zu schlafen und verbringen
 den Rest ihres Lebens träumend, meditierend und betend im Tempel. Legenden sagen, dass Echsenmenschen auf diese Weise mehrere
@@ -63,7 +63,7 @@ hundert Jahre leben, bevor sie sterben. Einige von ihnen wachen plötzlich mit e
 ein Wort zu sagen, gehen sie fort und werden nie wieder gesehen. Die Priester nennen diese Personen "Die Erleuchteten". Es ist
 anderen Echsenmenschen verboten, einem "Erleuchteten" zu folgen.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Echsenmenschen kennen keinen Adel oder Könige. Sie leben in Familienclans oder im Tempel. Ihre Hohepriester und
 Familienoberhäupter sind ihre Herrscher. Natürlich haben alle Familienoberhäupter höhere religiöse Posten. Legenden erzählen
 von einem Wesen, dem "Ushak– Sskhath", schlecht übersetzt "Echsenmenschen–König". In einem weit entfernten Tempel am tiefsten
@@ -75,7 +75,7 @@ seinem Schlafplatz sehen wird und so er nicht zur Einsicht findet, einfach von e
 Echsenmenschen erzählen ihren Jungen, dass wenn sie nicht folgen, der Echsenmenschen–König sie in ihren Träumen fangen wird.
 Niemand sah jemals diesen König, doch viele junge Echsenmenschen begeben sich auf die Suche nach seinem Tempel.</p>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>chsenmenschen–Krieger sind entweder Jäger oder "Tempel–Wachen", eine Art Echsenmenschen–Paladin. Sie bewachen die Tempeleingänge
 und Priester, halten Gesetz und Ordnung aufrecht und zerstören alle bösen und korrupten Dinge mit ihrer gerechten Faust. Diese
 Wachen sind entsetzliche Kämpfer mit einem fast fanatischen Verhalten und einem unbändigen Verlangen nach Gerechtigkeit. Sie sind

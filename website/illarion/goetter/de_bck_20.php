@@ -10,7 +10,7 @@
 
 <h1>Cherga - Göttin der Geister und der Unterwelt.</h1>
 
-<?php cap(C); ?>
+<?php cap("C"); ?>
 <p>herga ist die Göttin der Geister und der Unterwelt. Sie ist diejenige, die die Toten sammelt und in ihr Reich bringt. Sie ist neutral, würdevoll und schätzt das Gleichgewicht. Sie sammelt in feierlichem Ernst unermüdlich die Seelen der Verstorbenen ein und zeigt dabei nur äußerst selten Gefühle. Obwohl sie mit dem Tod in Verbindung gebracht wird, ist sie für gewöhnlich friedvoll und immer ernst. Viele versuchen es zu vermeiden, ihr Misfallen zu erregen, da sie der Wächter der Unterwelt ist und wenn ihr Zorn einmal entfacht ist, brennt er gnadenlos.</p>
 
 <p>Obwohl sie abgesehen von dessen Ende wenig vom Leben der Sterblichen versteht, findet sie Gefallen an Gerechtigkeit, sei es durch die Gewalt anderer Götter, oder ihre eigene. Sie kümmert sich wenig um die Belange der Sterblichen und schätzt es nicht, wenn sie von ihnen und ihren irrelevanten Beweggründen behelligt wird. Bei den seltenen Gelegenheiten, da sie unter den Sterblichen wandelt, tut sie dies meist in der Gestalt einer dunkel- oder grauhaarigen, alterslosen Frau mit fahler Haut und schwarzer Kleidung, als alte, heruntergekommene Hexe, oder als Zigeunerin, die die Zukunft vorher sagt. Ihr Erscheinen wird oft als schlechtes Omen kommenden Unheils oder unangenehmer Nachrichten angesehen.</p>

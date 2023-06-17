@@ -10,7 +10,7 @@
 
 <h1>The Looting of Firnismill</h1>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p><i>here were rumours of bandits roaming the route ahead and we soon began to suspect peril behind every bush with hushed whispers. Our leader knew these paths well and had obviously seen the truth in such tales before. He urged the beasts onwards, only allowing the briefest of respite at a babbling brook. All were glad when we reached safer lands to camp for the night, our fears quickly forgotten when immersed in another tale of bygone days.</p></i>
 
 <p>Spreading south from the Aramon Mountains, the orcs reached the tranquil rolling hills that were home to the halflings. The peace was shattered as the war cries of the orc clans echoed across the meadows and through copses as they robbed and pillaged. After years of wandering, sometimes close to starvation, the orcs sought to gather provisions before instigating revenge and war against Albar. No orc can be satisfied without wreaking havoc though and before long field and burrow alike had been set alight. Firnismill was first to burn, with Pennymill and Old Willow falling soon after, and before long plumes of smoke rose across the land.</p>

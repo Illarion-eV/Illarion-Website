@@ -10,7 +10,7 @@
 
 <h1>Sirani - Goddess of Love and Pleasure</h1>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>irani is the goddess of love and beauty. She is known to be friendly and hospitable, even sympathetic to those that need her comfort. Due to this, Sirani is considered both generally peaceful and alluring. However, she is also known to be impulsive and easily overcome by her desires, overpowering all sense of reason. She dislikes rough, cruel or very selfish people and can fly into an intense rage at the demeaning treatment of women and use of derogatory terms. When she walks the land, she takes the form of a young and attractive woman of any race. Loving celebrations and joyful occasions, of even just life itself, she often joins parties and festivals. Pleased by displays of love and affection, she will sometimes attend the weddings of mortals as a sign of blessing to their marriage. Sirani is also known to have a soft spot for those who are lonely and will act to bring them companionship.</p>
 
 <h2>Followers</h2>

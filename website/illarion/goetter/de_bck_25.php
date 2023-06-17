@@ -10,7 +10,7 @@
 
 <h1>Ronagan - Gott der Diebe und der Schatten</h1>
 
-<?php cap(R); ?>
+<?php cap("R"); ?>
 <p>onagan ist der Gott der List, Schatten, Diebe und Assassinen. Er ist oft freundlich und besitzt einen guten Humor, besonders im Umgang mit jenen, die auf den dunkleren Pfaden des Lebens wandern. In düsterer Stimmung kann Ronagan jedoch aggressiv werden. Er lebt nach seinen eigenen Regeln und Autorität sowie Gesetze jeglicher Art misfallen ihm. Ronagans liebste Freizeitbeschäftigung ist es, wagemutige Streiche zu spielen um diejenigen bloszustellen, die Autorität repräsentieren. Ronagan verabscheut Verrat. Diejenigen, die behaupten Ronagan gesehen zu haben, beschreiben seine Erscheinung als gut aussehenden, charmanten, schwarzhaarigen Mann in den Dreißigern, der dunkle Kleidung trägt. Gerüchten zufolge ist Ronagan Dieben in ihrer Zeit der Not erschienen, oft selbst in der Gestalt eines Diebes, um sie in Sicherheit zu bringen, ihnen Rat zu geben, ihnen das seltene Geschenk der Unsichtbarkeit zu schenken, oder ihre Verfolger auf andere Art auf eine falsche Fährte zu locken.</p>
 
 <h2>Anhänger</h2>

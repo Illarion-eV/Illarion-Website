@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he average orc is a little shorter than a human. Their skin is greenish, and two of the lower jaw teeth are longer than the
 others, and reach a little over the lips.</p>
 
@@ -34,7 +34,7 @@ extended caves, others are dug out of the ground like mines. Some orcs have spec
 sometimes find rarer metals or even a few gems. The main tribe changes its cave with the seasons of the year, some individuals,
 shamans, old ones or the tribe leaders sometimes, live in the same cave or sometimes a hut over the whole year.</p>
 
-<?php cap(T); ?>
+<?php cap("T"); ?>
 <p>he larger orc tribes are split into sub–tribes with a kind of sub–chiefs. The tribe leader, most of the time, is the
 strongest one, and one of the oldest. Usually the main shaman is the smartest one, and often, he is their active leader,
 his wishes passed on by manipulating and impressing the chief. Or sometimes simply by brewing his favourite beer.</p>
@@ -43,7 +43,7 @@ his wishes passed on by manipulating and impressing the chief. Or sometimes simp
 writing, consisting of different signs and scratch marks. In times of war, an orc tribe leader developed an encrypted language,
 allowing allies to exchange messages without leaving the enemy the possibility to read them.</p>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>ost orc tribes honour different gods. Oldra, for most tribes, is the goddess of fertility and growth, and is prayed to in
 spring. She is also called the "spring– goddess" by them. In Summer, they honour Brágon, the "daily–sun–maker" or
 "strong–in–summer". Since summertime often means wartime for an orc tribe, some tribes pray to Moshran, called "bone–crusher"
@@ -52,7 +52,7 @@ or simply "blood lord". Either Moshran or Malachín is the war god of a tribe, s
 <p>In Fall, most tribes pray to Malachín, "the hunter", for a good hunt and to prepare for the hard winters. The winter
 caves must be filled with food for the tribe and its herds.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>uring Winter, the tribes live in the winter caves, and Cherga is the honoured goddess. Winter is the time of death, time of
 spirits, time of the ancestors. Some of the ancestors' skulls, are placed in holy places in the winter quarters, and
 some in the chief's and shaman's quarters, to help them in their decisions and to speak to them in dreams.</p>
@@ -61,7 +61,7 @@ some in the chief's and shaman's quarters, to help them in their decisions and t
 not resulting in many deaths, often more a sport and training to the warriors. These conflicts include espionage, stealing of
 animals, and some battles or battlegames prove the strongest clan.</p>
 
-<?php cap(S); ?>
+<?php cap("S"); ?>
 <p>ince the tribes are quite poor, they tend to raid small villages or farms sometimes, if they don't have enough food for the
 next winter. Normally, orcs are not bloodthirsty, but when they fight with other races, their primary war tactics are to cause fear
 in their enemies. Captives who are too badly wounded to survive, are sometimes brutally killed after the battle, with the
@@ -71,7 +71,7 @@ servants, mostly peasants, cooks, or forced to help the women with their work. I
 is of strong blood, he may be given the choice to leave some day. Sometimes a slave marries a female orc, and becomes a member
 of the orc tribe that way, resulting in several half orcs.</p>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>rcs have a different idea of "Art", compared to a human or elf. Orcish "poetry" doesn't rhyme, but tells stories
 and produces disharmonic sounds to underline or describe situations. Same with orcish music. The melodies an orc produces with
 a flute or trumpet, can best be described as "loud", because they use most instruments just for the fun and for loudness.

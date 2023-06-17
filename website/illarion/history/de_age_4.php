@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Eintracht</h1>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie alten Götter, die durch den gewaltigen Krieg und durch die erfolgreiche Versiegelung der Portale aufs äußerste erschöpft waren, zogen sich aus der Welt zurück. Nur Tanora, die sich in einen Menschen namens Manon Petranor verliebte, verweilte weiterhin unter den Sterblichen. Ihre Nachkommen entwickelten sich zu den Echsenmenschen, fähig sowohl Land als auch Wasser zu besiedeln.</p>
 
 <p>Nach dem gewaltigen Krieg, der beinahe das Ende dieser Welt bedeutet hätte, begannen die Völker einen Wiederaufbau auf den Ruinen der alten Zivilisation. Nach und nach besiedelten sie alle Kontinente.

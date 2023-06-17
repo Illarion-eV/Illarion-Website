@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Zwietracht</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 
 <p>ntgegen Brágons Hoffnung gab Moshran nie das Gelöbnis auf, die ihm gegenüber gezeigte
 Feindseligkeit zurück zu zahlen. In aller Verschwiegenheit erschuf Moshran drei unsterbliche

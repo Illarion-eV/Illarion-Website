@@ -8,7 +8,7 @@
 
 <h1>The History of Illarion</h1>
 
-<?php cap(H); ?>
+<?php cap("H"); ?>
 
 <p>istory! Even the word itself tells of mysteries and heroic deeds. Isn't it great to
 rummage around in the great libraries, to poke your nose deep into big old books? Well, at least

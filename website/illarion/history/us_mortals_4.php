@@ -10,7 +10,7 @@
 
 <h1>The Descent of Dwarvenkind</h1>
 
-<?php cap(W); ?>
+<?php cap("W"); ?>
 <p><i>Whatever hushed trade had occurred with the few elves that emerged from the forest clearly left the merchants delighted and songs were sung with gusto come the morning. The company only quietened again when the terrain became more difficult and all efforts were focussed on fording purling rivers and traversing valleys without loss of wagon or beast. Under the towering Aramon Mountains, the good humour quickly returned around the campfire, helped along by some generous flagons of mead. As the merrymaking settled for the night, a tale of little shiny warriors began.</i></p>
 
 <p>In the foothills of the Aramon Mountains scouts from the Waraxe Clan came across a settlement of dwarves. For centuries the dwarves had inhabited the vale, toiling in extensive mines and conveying ore and gems to the surface. Their furnaces always ablaze and workshops never silent, smiths mastered metals never before encountered by the orcs, producing robust tools, powerful weapons and impregnable platemail.</p>

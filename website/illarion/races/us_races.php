@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 
 <i><p>y dear nephew,</p>
 

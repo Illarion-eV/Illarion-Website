@@ -28,7 +28,7 @@
    </ul>
    <br />
    <h2>Das Barbarenvolk der Norodaji</h2>
-   <?php cap(N); ?>
+   <?php cap("N"); ?>
    <p>orodaji leben in n&ouml;rdlichen, kalten Regionen des bekannten Kontinents. Das oftmals sehr harte, eisige Klima sorgt daf&uuml;r, 
    dass sie normalerweise warme Kleidung aus rauer Wolle, Leder oder Pelzen tragen. Die M&auml;nner tragen B&auml;rte. Im Kampf 
    beforzugen sie &Auml;xte und schwere Waffen. Norodaji haben f&uuml;r gew&ouml;hnlich keine dunklen Haare und sind ein wenig st&auml;rker als 

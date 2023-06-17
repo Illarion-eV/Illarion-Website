@@ -10,7 +10,7 @@
 
 <h1>Glory, Wisdom and Prosperity</h1>
 
-<?php cap(C); ?>
+<?php cap("C"); ?>
 <p>adomyr established an ambitious territory stretching from Sentry forest where Prince Edward had first settled, across much of the Kantabi Desert. King Reginald had begun construction of a great citadel in the far south west of the region some years before the demise of Kharud to ward off privateers that terrorised the coastline. The citadel was the first of many ostentatious building projects that dominated the desert. Originally it was intended solely as a military outpost but as it proved impregnable to raids by the pirates it was later adopted as a second city when the need arose. Other imposing fortifications and monuments followed, built by countless slaves, to remind all of Cadomyr's might. One of the most illustrious was the Blood Circle Arena, only completed six years after defeat of Kharud, a glorification of the courage and sacrifice of Cadomyrians.</p>
 
 <p>Three years after the demise of the Sorcerer, King Reginald's daughter, Rosaline Edwards was born in Firnismill. Her mother was journeying back to her family in Kang-Arr for the birth when true to her impatient nature the Princess arrived unexpectedly early. Although traditional Albarian society would have shunned a female ruler, King Reginald produced no other heir and the royal bloodline would come to be secured by Cadomyr's valiant Princess who ordered by her father would be obligated to rule the desert kingdom. Thirty years later, just a year after the sick King passed in the Year 32, the headstrong Queen of Cadomyr would be making sweeping changes, moving away from many Albarian traditions and disbanding her father's Royal Council of advisors to make her own mark on the desert kingdom.</p>

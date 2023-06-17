@@ -10,7 +10,7 @@
 
 <h1>Ein neuer Anfang</h1>
 
-<?php cap(V); ?>
+<?php cap("V"); ?>
 <p>iele flohen vor dem Krieg als Kharud seinen Einflussbereich erweiterte. Andere sahen in dieser Zeit neue Möglichkeiten. Während die alten Städte unter der Knute des Hexers stöhnten, trat ein neues Land aus dem Schatten ins Licht der Bedeutung.</p>
  
 <p>In der Festung Lor-Angurs entschied sich der Hohe Lord Protector neutral zu bleiben und stellte sich nicht dem Kampf gegen die drohende Gefahr Kharuds. Verärgert über die Untätigkeit des Rates reiste eine Gruppe Abtrünniger zur abgelegenen Halbinsel Illarion. Am äußersten südwestlichen Zipfel  gründeten sie ihre eigene Akademie und nannten die Siedlung Runewick. Unter ihnen war auch der Elf Elvaine Morgan, der seit tausenden von Jahren den magischen Smaragd der Macht behütete. Die Magier schufen eine gigantische arkane Struktur, basierend auf vier den Elementen gewidmeten Türmen, die aus den bewaldeten Inseln aufragten. Elvaine Morgan ließ sich zum Erzmagier der Akademie ausrufen.</p>

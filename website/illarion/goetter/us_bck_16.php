@@ -10,7 +10,7 @@
 
 <h1>Nargùn - God of Chaos </h1>
 
-<?php cap(N); ?>
+<?php cap("N"); ?>
 <p>argùn is the god of chaos and fortune. Extremely intelligent and quick-witted, Nargùn enjoys play and has a love for clever riddles and funny tricks. Often friendly and of good humour he enjoys the attention his games bring but his favour is fickle and his tricks can turn mean. His dark moods make him quick to put people in their place and show them how small they really are with clever revenge, public humiliation, or even destruction. Blessed by his hand everything becomes possible as chance can tilt in odd ways, with good or bad outcomes. Those who claim to have seen Nargùn will only ever have seen him in disguise and his true manifestation remains unknown to mortals. Often he presents as a dark rogue or thief, nobly dressed in tasteful, black clothing and sometimes adorned with earrings. Many fear the sight of ravens, believing them to be spies of Nargùn, or even that he appears himself as a huge black raven. A black feather in the path of some will bring on dread of impending bad fortune wrought by the hand of a madman.</p>
 
 <h2>Followers</h2>

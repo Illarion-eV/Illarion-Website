@@ -10,7 +10,7 @@
 
 <h1>Ushara - Goddess of Earth</h1>
 
-<?php cap(U); ?>
+<?php cap("U"); ?>
 <p>shara is the goddess of the element earth. Wise and calm, she is respected as mother of the world, quiet in speech yet with a kindly firmness. Her restrained personality rejects wealth or any other kind of transitory values. She favours those of simplicity and humility and is often close to nature. If Ushara ever appears on Illarion, she does so as elderly, black-haired, dark-skinned woman dressed in dark colours.</p>
 
 <h2>Followers</h2>

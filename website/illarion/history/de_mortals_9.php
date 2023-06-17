@@ -10,7 +10,7 @@
 
 <h1>Lor-Angur, die Stadt der Magie</h1>
 
-<?php cap(W); ?>
+<?php cap("W"); ?>
 <p><i>er länger mit jemandem zusammen reist, macht irgendwann auch die Ansichten seiner Mitreisenden zu seinen eigenen. Die Verbundenheit der Mitstreiter wird umso enger, umso fremder die Gegend und umso größer die gemeinsamen Herausforderungen sind. Barlak Therdenbrook, unser Führer und Ältester wurde im Laufe der Zeit so etwas wie ein Vater für mich. Jeden Abend lauschte ich seinen Erzählungen und war gespannt darauf, was er erlebte und was ich von seinen Erfahrungen lernen könnte.</i></p>
  
 <p>In ihrer Verzweiflung durch die Unterdrückung in Albar begannen Gelehrte magisch begabte Bürger und Leibeigene zu suchen und zu unterweisen. Was am Anfang noch im Geheimen und verborgen vor den Augen der albarischen Krone geschah, brachte sie schon bald gegen die herrschende Elite auf.</p>

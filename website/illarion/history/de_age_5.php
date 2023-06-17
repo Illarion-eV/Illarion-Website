@@ -10,7 +10,7 @@
 
 <h1>Das Zeitalter der Zwietracht</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>ntgegen Brágons Hoffnung gab Moshran nie das Gelöbnis auf, sich an die ihm gegenüber gezeigte Feindseligkeit zu rächen. In aller Verschwiegenheit erschuf Moshran drei unsterbliche Wesen. Er gab diesen Geschöpfen ungeheure Kräfte und lehrte sie vieles. Er nannte sie Dragorog, Bjolmur und Cherass, hauchte ihnen beinahe gottgleiche Kräfte ein und brachte ihnen viel Wissen bei. Er band sie an sich, um sich für alle Ewigkeit ihrer Loyalität zu vergewissern.</p>
  
 <p>Getrieben von dem unerträglichen Verlangen nach mehr Macht, suchte Moshran nach den Überresten der einst so mächtigen Armee von Madrook Na'han. Er fand dämonengleiche Geschöpfe, augenlose Bestien und weitere unaussprechlich schreckliche Kreaturen, versteckt in den tiefsten Höhlen, und wurde von ihnen als ihr Führer anerkannt. Sie erkannten in ihm die Macht und die Stimme ihres früheren Herrn. Als die Zahl seiner Kreaturen stieg, ließ Moshran sie auf die Sterblichen los, sogar auf die Orks, seine eigenen Geschöpfe. Damit forderte er den Widerstand der anderen Götter heraus.</p>

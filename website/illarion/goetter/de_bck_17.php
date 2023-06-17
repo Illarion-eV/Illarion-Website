@@ -10,7 +10,7 @@
 
 <h1>Elara - Göttin des Wissens und der Weisheit</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>lara ist die Göttin der Wissens und der Weisheit. Sie wird als weise und ruhig angesehen, obwohl ihre nachdenkliche Einstellung sie manchmal distanziert erscheinen lassen mag. Genau wie Eldan vor ihr, zieht auch sie oft die Abgeschiedenheit eines Einsiedlerlebens vor. Wenn sie gesehen wurde, so erschien sie bisher als große, alterslose Frau, oft von Büchern oder Schriftrollen umgeben. Elara vermeidet wenn möglich große Gruppen und mag keine spontanen und unüberlegten Handlungen. In ihrer zurückhaltenden Art lehnt Elara persönliche Reichtümer und jede andere Art von vergänglichen Schätzen ab. Stattdessen bevorzugt sie den bleibenden Wert des Lernens und die Erhaltung des Wissens in Büchern. Sie schätzt engagierte Personen und erscheint manchmal im Verborgenen um Leuten in Notsituationen ihren Rat zu geben und ihnen dabei zu helfen, ein kompliziertes Problem zu lösen.</p>
 
 <h2>Anhänger</h2>

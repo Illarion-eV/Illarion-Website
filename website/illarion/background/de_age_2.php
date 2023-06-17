@@ -13,7 +13,7 @@
 <p>Letzten Endes, um vor einem mächtigem Feind zu flüchten, kamen die alten Götter in diese Welt
 und gaben Ihr den Namen "Illarion".</p>
 
-<?php cap(I); ?>
+<?php cap("I"); ?>
 
 <p>n dem Bedürfnis sich vor dieser anderen weit entfernten Macht zu schützen, begannen Sie die
 Welt nach ihren Vorstellungen zu formen. Sie vereinten ihre Kräfte und schufen allein mit ihrem

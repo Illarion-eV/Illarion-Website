@@ -10,7 +10,7 @@
 
 <h1>Eldan - Gott des Geistes</h1>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>ldan ist der Gott des Elements Geist und wird als weisester von ihnen angesehen. Wegen seines nachdenklichen Gebahrens könnte man denken, dass er abgehoben ist und daraus schließen, dass sein Geist die Welt verlassen und er Zuflucht in der weltfremden Festung seiner eigenen Gedanken gesucht hat. Weisheit ist sein Erkennungszeichen und doch zieht er es vor still zu bleiben, wenn andere ihre Torheiten hinausschreien. Eldan mag als weiser Magier, Gelehrter, Bettler oder sogar betrunkener Philosoph erscheinen, doch er wird immer einen hölzernen Stab tragen. Er vermeidet größere Städte und Ansammlungen von Leuten und zieht friedvolle Abgeschiedenheit vor, sei es ein Ort des Lernens, oder eine entlegene Taverne.</p>
 
 <h2>Anhänger</h2>

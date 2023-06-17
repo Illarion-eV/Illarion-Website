@@ -10,7 +10,7 @@
 
 <h1>Die Zeit der Kriege und Vertreibungen</h1>
 
-<?php cap(U); ?>
+<?php cap("U"); ?>
 <p><i>ber Jahrhunderte sind in den Ländern, durch die wir nun kamen menschliche Reiche aufgestiegen und gefallen. Ruinen einst wundervoller Städte voller Leben erinnern an die, die dieses Land geformt hatten. Im Zickzack führte unser Weg immer wieder über die Grenze zwischen Albar und Salkamar, die beiden einst mächtigsten Reiche. Ältere Händler können sich gar noch an die reichen und prächtigen Städte und Dörfer erinnern. Aber auch erschütternde Geschichten über grauenhafte Zeiten werden hinter vorgehaltener Hand berichtet. Eines Abends schlugen wir unser Lager früh auf, denn unser Karawanenführer wollte uns die Geschichte des Lichtvolkes, des Reinen Volkes und des Freien Volkes erzählen.</i></p>
  
 <p>Unter den Menschen bildeten sich zwei Kulturen heraus, das Lichtvolk in Salkamar und das Reine Volk in Albar. Über hunderte Jahre lang bekämpften sich Albarianer und Salkamerianer in einer Reihe endloser Kriege, die nach den ersten hundert Jahren als die Jahrhundertskriege in die Geschichte eingingen. Während die Städte der Menschen um Macht kämpften, hielten sich andere Völker aus dem Krieg heraus. Eine Ausnahme bildeten natürlich die Orks. Sie waren wild darauf Siedlungen zu plündern und niederzubrennen. Selbst Städte, die bereits in Ruinen lagen wurden Opfer ihrer Zerstörungslust.</p>

@@ -10,7 +10,7 @@
 
 <h1>Nargùn - Gott des Chaos</h1>
 
-<?php cap(N); ?>
+<?php cap("N"); ?>
 <p>argùn ist der Gott des Chaos und Glücks. Sehr intelligent und von schnellem Verstand, genießt Nargùn Spiele und liebt klevere Rätsel und lustige Spiele. Er ist oft freundlich und humorvoll und genießt die Aufmerksamkeit, die ihm seine Spielereien einbringen, doch seine Gunst ist flatterhaft und seine Späße können schnell gemein werden. Seine fiesen Launen lassen ihn Leute rasch auf ihren Platz verweisen und er zeigt ihnen, wie klein und unbedeutend sie wirklich sind, mit Hilfe von kleverer Revange, öffentlicher Bloßstellung oder sogar Zerstörung. Von seiner Hand gesegnet kann fast alles möglich werden, denn die Chancen verändern sich auf seltsame Weise, mit gutem oder schlechtem Ergebnis. Diejenigen, die behaupten, Nargùn schon einmal gesehen zu haben, kennen ihn nur in einer Verkleidung, denn seine wahre Verkörperung ist den Sterblichen weiterhin unbekannt. Oft nimmt er die Gestalt eines düsteren Schurken oder Diebes an, gekleidet in edler, geschmackvoller, schwarzer Kleidung und manchmal trägt er auch Ohrringe. Viele fürchten sich vor Raben, da sie glauben, dass diese Spione Nargùns sind, oder dass er gar selbst als rießiger schwarzer Rabe umherfliegt. Eine schwarze Feder auf den Pfaden einiger ist ein böses Omen, das ein schlimmes Unglück, erbracht durch die Hand eines Verrückten vorhersagt.</p>
 
 <h2>Anhänger</h2>

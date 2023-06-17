@@ -10,7 +10,7 @@
 
 <h1>An Island</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p><i>ur whole company boarded the ship the following morning, such was the faith in our Master. As we sat out on deck drawing away from his sombre memories he shared with us a tale of hope found but then lost.</p></i>
 
 <p>The tiny island of Hope in the Great Ocean, that would later become known as Gobaith, had became a symbol of hope for some refugees fleeing the anarchy that swept across the lands as the old empires collapsed. The land was fertile with vast forests and the mountains were rich with minerals, yet only lizards inhabited the coastal waters. An old lighthouse and haunted temple ruins were all that indicated past settlement of the island but this tiny enclave seemed untouched by the destruction that had swept the mainland.</p>

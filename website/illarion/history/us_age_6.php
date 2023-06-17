@@ -10,7 +10,7 @@
 
 <h1>The Age of Isolation</h1>
 
-<?php cap(F); ?>
+<?php cap("F"); ?>
 <i><p>ire, the world is on fire!</p>
 
 <p>It's burning in his heart, and filling him with pain.<br>

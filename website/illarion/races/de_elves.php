@@ -22,13 +22,13 @@
 	</ul>
 </div>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Elfen sind ein geheimnisvolles Volk, über die man nur sehr wenig in Erfahrung bringen kann. Sie vermeiden es,
 jedwede Art von Information nach außen dringen zu lassen und nur wenige hatten die Möglichkeit, einen tieferen Einblick
 in die Gesellschaft und den Lebenswandel der Elfen zu erlangen. Deswegen besteht das Meiste, was wir über die Elfen wissen
 aus Gerüchten und Berichten dritter Personen und die Zuverlässigkeit mancher dieser Berichte mag angezweifelt werden.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie Elfen gehören zu den ersten Völkern, welche auf Illarion erschienen sind. Sie sind größer als die Menschen und haben
 schlanke, fast grazile Glieder. Ihre Ohren laufen spitz zu und ihre Gesichtszüge erscheinen den meisten als edel und schön.
 Eine weitere Besonderheit der Elfen ist es, dass sie scheinbar sehr alt werden können. Tatsächlich hat man bisher keinen
@@ -37,7 +37,7 @@ als sie ohnehin schon sind. Es gibt aber Gerüchte von Elfen, die angeblich sech
 dem auch immer sein mag, so erlangen Elfen erst im Alter von 180 Jahren ihre Volljährigkeit, was durchaus darauf schließen
 lässt, dass sie bei weitem älter werden, als alle anderen Völker.</p>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>lfen sind sehr naturverbundene Wesen. Es erscheint manchmal, dass sie die Natur selbst als ein eigenständiges Lebewesen
 betrachten und auch so behandeln. Ihr Bestreben ist es eher, keine Spuren zu hinterlassen. Deswegen ist ihnen Raubbau an der
 Natur fremd. Was sie der Natur entnehmen, geben sie in gleicher Weise wieder zurück. Diesem Ideal entsprechend wurden ihre
@@ -54,21 +54,21 @@ ja fast verletzlich erscheint, so als ob sie nur Gast in ihren eigenen Behausung
 Ortes an den Besitzer wieder zurückzugeben. Dies ruht vielleicht auch in ihrer Erkenntnis, dass alles vergänglich ist und dass
 das Streben nach Besitztümern eine Torheit ist, welches ihnen in den langen Jahren ihrer Existenz vor Augen geführt wird.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie elfische Gesellschaft hat eine Klanstruktur, welche eher dezentral organisiert ist. Eine offizielle Regierung in Form
 eines Königtums oder einer anderen Art der adeligen Führung ist ihnen nahezu unbekannt. Der bestimmende Faktor der Position
 innerhalb der Gesellschaft scheint das Alter einer Person zu sein. So gibt es eine Form des Ältestenrates in jeder Ansiedlung
 der Elfen, welcher über wichtige Entscheidungen berät, die das gesamte Volk betreffen. Darüber hinaus besteht eine unausgesprochene
 aber allseits bestehende Übereinstimmung in den Zielen des gesamten Volkes. Zumindest ist ein öffentlicher Streit zwischen Elfen unbekannt.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>er Charakter eines Elfen ist in der Regel sehr ausgeglichen und freundlich, auch gegenüber Personen anderer Völker.
 Jedoch bevorzugen sie die Gesellschaft des eigenen Volkes. Es scheint aber eine Phase im Leben eines Elfen zu geben, in
 der er auf Wanderschaft geht und seine Heimat verlässt. Dies geschieht häufig in noch recht jungen Jahren. Dabei kann es
 durchaus vorkommen, dass sie auch die Gesellschaft mit anderen Rassen pflegen und sogar suchen. Der Sinn und die Bedeutung dieser
 Wanderschaft, welche bei den Elfen Navro’anai genannt wird, ist uns aber unbekannt.</p>
 
-<?php cap(D); ?>
+<?php cap("D"); ?>
 <p>ie besagte Ausgeglichenheit und Gelassenheit der Elfen bewirkt, mit Ausnahme von sehr jungen Elfen, dass Streitigkeiten mit
 ihnen nur selten zu beobachten sind. Die lange Lebensspanne der Elfen mag somit auch die Erkenntnis begünstigen, dass Probleme
 eine vorübergehende Erscheinung sind. Elfen haben Zeit, die sie häufig dazu nutzen, schwierige Zeiten verstreichen zu lassen.
@@ -79,7 +79,7 @@ Wahl ihrer Waffen und der Besonderheit ihrer Kriegsführung, in welcher sie offe
 Formen der Rüstung. Ihre Sinne sind sehr gut entwickelt und selbst in der schwärzesten Nacht können sie Dinge wahrnehmen, die
 für die Augen anderer verborgen bleiben.</p>
 
-<?php cap(E); ?>
+<?php cap("E"); ?>
 <p>lfen sind in fast allen magischen Schulen außerordentlich talentiert und aufgrund ihrer Nähe zur Natur haben sie eine
 ausgeprägte Neigung zur Kräuterkunde und den damit verbundenen Künsten entwickelt. Aber ihnen ist auch die Handwerkskunst
 nicht fremd, in welcher sie ein sehr hohes Niveau erreichen können und welche sich insbesondere durch die Schönheit der

@@ -10,7 +10,7 @@
 
 <h1>Brágon - Gott des Feuers</h1>
 
-<?php cap(B); ?>
+<?php cap("B"); ?>
 <p>rágon ist der Gott des Elements Feuer, der die Sonne erschuf und der Welt das Feuer schenkte. Die, die ihn getroffen haben, sprechen von seiner einnehmenden Persönlichkeit, die keine zweite Meinung neben seiner toleriert. Brágon ist stark, edel und gerecht, doch die, die sich seinem Urteil widersetzen, werden auf den furchterregendsten Zorn unter all den Alten Göttern treffen. Ihm wird nachgesagt, alle Triebe in den Seelen der Sterblichen ausgelöst zu haben, nicht nur die guten, sondern auch die selbstsüchtigen. Brágon wird mit einer gewissen Vorliebe für Gold in Verbindung gebracht und hat einen auserlesenen Geschmack. Wenn Brágon entscheidet, sich in die Belange der Sterblichen einzumischen, mag er als Riese mit brennendem Bart, oder als dunkelhaariger Ritter, dessen Rüstung in Flammen steht erscheinen, obwohl er es für gewöhnlich vorzieht, unerkannt durch Illarion zu ziehen.</p>
 
 <h2>Anhänger</h2>

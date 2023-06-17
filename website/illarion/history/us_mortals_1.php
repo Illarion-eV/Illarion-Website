@@ -10,7 +10,7 @@
 
 <h1>The First Mortals</h1>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p>any thousands of years ago in the shade of Nabranoo, new life was born. Humans, elves, dwarves and halflings sprung forth to populate the lands, only later to be joined by orcs and lizardmen. Each race took their own path as sons and daughters forged their way in life.</p>
 
 <p>Scribes make official records of events, books may even be written of some deeds, and monuments are built to mark great feats. All too often though history is told through the memories of those that lived it and their children after them, as songs are sung, poems recited, and stories told around the campfire.</p>
@@ -24,7 +24,7 @@ To avoid the darkness is good council.<br>
 Many a wanderer's heart seduced in the dark.<br>
 By the shadows of Nabranoo.</i></p>
 
-<?php cap(M); ?>
+<?php cap("M"); ?>
 <p><i>y own journey began when a caravan of Gynkese merchants passed through our little village on the Salkamaerian border. Willing to accept my company for a small fee as cliché demands, I thrust the couple of old maps grabbed from my Master's study into greedy hands. Whether it was curiosity or pure foolishness that drove me to take this journey, I seized the opportunity. For years I had crept into my Master's library, leafing through dusty books and parchments. I could have little idea where my journey might take me but I didn't care. To witness with my own eyes, something of these lands I had read so fervently about, would surpass any words or paintings of these wonders.</i></p>
 
 <?php navBarBottom("us_overview.php", "us_mortals_2.php"); ?>

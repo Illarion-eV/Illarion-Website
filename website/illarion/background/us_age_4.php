@@ -10,7 +10,7 @@
 
 <h1>The Age of Concord</h1>
 
-<?php cap(A); ?>
+<?php cap("A"); ?>
 
 <p>fter the great battle the races started to rebuild what was left of the old world, they
 spread over all the continents of Illarion.</p>
@@ -26,7 +26,7 @@ they searched for new goals, for a new purpose. Therefore people started to choo
 God to follow, who’s character and way of living suited them most. They were seeking leadership
 and a goal in live, where else would be emptiness.</p>
 
-<?php cap(B); ?>
+<?php cap("B"); ?>
 
 <p>ut even though Moshran had contributed the most to their freedom, only very few people had
 chosen him as their god. His mood was getting darker and darker by the year. It seemed that

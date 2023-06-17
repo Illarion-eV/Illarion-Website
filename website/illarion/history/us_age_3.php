@@ -10,7 +10,7 @@
 
 <h1>The Age of Struggle</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>pening portals between the two worlds, the enemy let loose his horrific army led by the Prince of Terror, Madrook Na'han. As his master's creation, Madrook was formed from part of his flesh and was of shared mind. He followed his master's will without question and with only one aim, to conquer at all cost. His path was only darkness.</p>
 
 <p>Far from successful, the battle against this foe proved disastrous. For years the Elder Gods, alongside their creations, fought against Madrook and his horde of monsters. As the earth shook under the might of Ushara, Findari drew in stormy skies with lightning striking the foe below and Tanora's devastating rains drowning many. Eldan spread terror in their minds, turning them back on their own legions, and the immense fireballs of Brágon seared through their lines. Championed by the chosen eleven, the resolve of mortals did not waver but countless lives were lost fighting for the freedom of the new world. Still it became apparent that before long the enemy would succeed as he still controlled the portals to the old world. After three decades of battle the enemy continued to summon endless minions which laid waste to Nabranoo, whilst despite every effort of their commanders the mortal armies dwindled.</p>

@@ -10,7 +10,7 @@
 
 <h1>Oldra - Göttin der Fruchtbarkeit und des Lebens</h1>
 
-<?php cap(O); ?>
+<?php cap("O"); ?>
 <p>ldra ist die Göttin des Lebens und der Fruchtbarkeit. Als solche drehen sich die an Oldra gerichteten Gebete oft um das Wachstum der Saat und gutes Essen, Geburten und die Erziehung der Kinder und die Heilung und mütterlichen Rat. Oldra wird von vielen als mütterliche, oder sogar großmütterliche Göttin angesehen, die Rat und Schutz bietet. Sie ist bekannt für ihre Zärtlichkeit und Weisheit, ist von herzlicher und hilfsbereiter Natur und lauscht oft den Nöten von Frauen. Wenn sie auf Illarion wandelt, tut sie dies oft als robuste, ältere Frau, die ein blaues Kleid trägt. Ihr Symbol ist der Bradamenbaum, bekannt für seine lange Lebenszeit und mit einem mächtigen Stamm, der viele Äste, Zweige und Blätter trägt. Sie bevorzugt ein einfaches Leben und Bescheidenheit und ist zum ländlichen, bäuerlichen Leben hingezogen, wo sie gut gefütterte Tiere, geideiendes Gemüse und das Teilen eines guten Mahls schätzen kann. Diejenigen, die geizig oder selbstsüchtig sind, oder nur ihre eigenen Ziele verfolgen, verärgern sie.</p>
 
 <h2>Anhänger</h2>

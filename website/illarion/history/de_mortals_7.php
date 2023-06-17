@@ -10,7 +10,7 @@
 
 <h1>Die Plünderung von Firnismill</h1>
 
-<?php cap(G); ?>
+<?php cap("G"); ?>
 <p><i>erüchten nach lauerten in der Gegend, durch die wir dann kamen, Banditen. Mehr als üblich beobachteten wir die Umgebung und fürchteten hinter jedem Busch einen Überfall. Unser Anführer kannte den Weg und den Wahrheitsgehalt der Geschichten. Er trieb die Tiere pausenlos an, erlaubte nur eine äußerst kurze Pause an einem plätschernden Bach. Wir waren erleichtert, als wir sicherere Gegenden erreichten. Als endlich das Lager für die Nacht errichtet war, vergaßen wir die Sorgen des Tages denn wir erfuhren eine weitere Geschichte aus längst vergangenen Tagen.</i></p>
  
 <p>Südlich des Aramon-Gebirges erreichten die Orks die sanften Hügel, in denen die Halblinge ihre Heimstätten hatten. Das Echo der orkischen Kriegsschreie hallte über die ehemals friedlichen Wiesen und Haine. Rauch stieg aus geplünderten und gebrandschatzten Orten auf. Nach Jahren der Wanderung, ständig am Hungertuch nagend, breiteten sich die orkischen Clans nun hier aus um sich zu stärken und später Vergeltung gegen Albar zu suchen. Kein Ork ist glücklich, wenn er keine Verwüstungen anrichten kann und so kam es, dass über kurz oder lang Felder und Höhlen in Flammen standen. Firnismill war nur der erste Ort der niedergebrannt wurde. Es folgten bald darauf Pennymill und Old Willow und über nahezu jedem Ort stieg der Rauch brennender Häuser.</p>
