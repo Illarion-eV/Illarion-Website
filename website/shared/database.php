@@ -194,7 +194,7 @@ abstract class DatabaseMain {
 			return ($text ? '\'t\'' : '\'f\'');
 		}
 		// quotieren, falls kein integer
-		if (!ctype_digit($text)) {
+		if (!ctype_digit((string) $text)) {
 			$text = '\'' . $this->getEscaped($text) . '\'';
 		}
 
