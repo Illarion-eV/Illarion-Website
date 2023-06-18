@@ -91,6 +91,13 @@ class StringParser {
 	 * @var string
 	 */
 	var $_text = '';
+
+	/**
+	 * output
+	 * @access protected
+	 * @var string
+	 */
+	var $_output = '';
 	
 	/**
 	 * Parse stack
