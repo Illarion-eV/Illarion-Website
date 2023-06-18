@@ -25,6 +25,14 @@ class XmlC {
 	* @var string
 	*/
 	private $xml_data;
+
+	/**
+	* The xmp parser.
+	*
+	* @access private
+	* @var XMLParser
+	*/
+	private $xml_parser;
 	
 	/**
 	* The data that is generated from parsing the XML files.
@@ -33,6 +41,14 @@ class XmlC {
 	* @var object
 	*/
 	public $obj_data;
+
+	/**
+	* The index.
+	*
+	* @access private
+	* @var integer
+	*/
+	private $index;
 	
 	/**
 	* The currently used internal pointer of the parser.
