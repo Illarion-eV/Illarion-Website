@@ -92,7 +92,7 @@ class NewsEntryListIterator implements \Iterator {
      * @link http://php.net/manual/en/iterator.current.php
      * @return mixed Can return any type.
      */
-    public function current(): mixed {
+    public function current(): NewsEntry {
         return $this->targetList->getEntry($this->currentIndex);
     }
 
