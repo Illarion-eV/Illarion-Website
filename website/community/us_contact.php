@@ -95,7 +95,7 @@ Contact them especially if you want to join the development team of Illarion.</p
 
 <ul>
 	<li><a href="?contact=11">Estralis</a> - chairman</li>
-	<li><a href="?contact=46">Merung</a> - treasurer</li>
+	<li><a href="?contact=47">Capswick</a> - treasurer</li>
 	<li><a href="?contact=34">Slightly</a> - secretary</li>
 </ul>
 
@@ -177,7 +177,7 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
       case 11: //Estralis Seborian
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion and the chairman of the Illarion e.V..",false);
       break;
       case 15: //Zephyrius
          define(_CONTACT_NAME,"Zephyrius",false);
@@ -218,7 +218,7 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster and the secretary of the Illarion e.V..",false);
       break;
       case 40: //Zot
          define(_CONTACT_NAME,"Evie",false);
@@ -243,7 +243,12 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
       case 46: //Merung
          define(_CONTACT_NAME,"Merung",false);
          define(_CONTACT_MAIL,"merung@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is is the treasurer of the Illarion e.V..",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a content developer.",false);
+      break;
+	  case 47: //Capswick
+         define(_CONTACT_NAME,"Capswick",false);
+         define(_CONTACT_MAIL,"capswick@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is the treasurer of the Illarion e.V..",false);
       break;
       default:
          MainForm();

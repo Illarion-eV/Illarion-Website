@@ -102,7 +102,7 @@ Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illario
 
 <ul>
 <li><a href="?contact=11">Estralis</a> - Vorsitzender</li>
-<li><a href="?contact=46">Merung</a> - Kassenwart</li>
+<li><a href="?contact=47">Capswick</a> - Kassenwart</li>
 <li><a href="?contact=34">Slightly</a> - Schriftführer</li>
 </ul>
 
@@ -186,7 +186,7 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 11: //Estralis Seborian
          define(_CONTACT_NAME,"Estralis Seborian",false);
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion und Vorsitzender des Illarion e.V..",false);
       break;
       case 15: //Zephyrius
          define(_CONTACT_NAME,"Zephyrius",false);
@@ -226,7 +226,7 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
        case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster und Schriftführer des Illarion e.V..",false);
       break;
       case 40: //Evie
          define(_CONTACT_NAME,"Evie",false);
@@ -251,6 +251,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
       case 46: //Merung
          define(_CONTACT_NAME,"Merung",false);
          define(_CONTACT_MAIL,"merung@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Entwickler von Spielinhalten.",false);
+      break;
+	  case 47: //Capswick
+         define(_CONTACT_NAME,"Capswick",false);
+         define(_CONTACT_MAIL,"capswick@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." ist der Kassenwart des Illarion e.V..",false);
       break;
       default:
