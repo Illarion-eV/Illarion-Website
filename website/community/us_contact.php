@@ -21,6 +21,23 @@ function MainForm() {
 
 <h1>Contact to Illarion</h1>
 
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xqkvkyle"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
 <h2>Content</h2>
 <ul>
 	<li><a class="hidden" href="#1">General Information</a></li>
@@ -266,20 +283,3 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
    define(_MAIL_TRANSMITTED_FAILED,"Failed sending the email.<br />",false);
    ShowAndTransmitMail();
 ?>
-
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xqkvkyle"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
