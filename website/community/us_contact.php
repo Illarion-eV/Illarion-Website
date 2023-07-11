@@ -115,6 +115,23 @@ The website and its content is licensed under AGPLv3.<br /><br />
 This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> and <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
 
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xqkvkyle"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
 <?php Page::insert_go_to_top_link(); ?>
 <?php
    }
