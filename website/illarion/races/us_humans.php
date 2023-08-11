@@ -78,7 +78,7 @@ knees, hands and feet are used as effective weapons – some movements are a lit
 
 <p>The common language is known to the Plainfolk, but natively they speak their own ancient human dialect, and often a little elven tongue.
 They often trade with Elves, orcs and other humans. Their main God is Malachín, the God of Battle and Hunting, but they pray to all
-younger gods too. Serinjah Clans are always led by three people: A young man and woman (often an amazon), and an old woman.
+younger gods too. Serinjah Clans are always led by three people: A young man and woman (often an Ama–shoon), and an old woman.
 The plainfolk believe in the power of the land, and some know druid magic well. Common magic is well known to them, some even prefer
 a life as sorcerer, witch or shaman.</p>
 
@@ -86,16 +86,16 @@ a life as sorcerer, witch or shaman.</p>
 stones marking them, a celebration is held when grass has overgrown the grave: Live defeats death, nature wins and closes the
 circle of life.</p>
 
-<?php cap("P"); ?>
-<p>lainfolk (Ama–shoon) live in forest and plain areas near the Plainfolk. They are organized in tribes. These tribes are all
+<?php cap("A"); ?>
+<p>Ama–shoon live in forest and plain areas near the Plainfolk. They are organized in tribes. These tribes are all
 female, except for children aged below four. The male children older than four years are brought to a settlement of Serinjah,
 where they will be raised by their fathers.</p>
 
-<p>Amazons live like and sometimes with Serinjah, but have devoted their life to fight and to protect the land. They follow the
+<p>Ama–shoon live like and sometimes with Serinjah, but have devoted their life to fight and to protect the land. They follow the
 goddess Findari, the goddess of air (and the four winds). They are often experts with bow and spear, sling, swords and daggers,
 and throwing stars. They prefer hard leather or wooden armour and ride their horses bareback (without saddle), some of them may
-prefer iron armour too. It is said that an Amazon can also fight with her bare hands, if necessary. Amazons are led by one female
-leader, who sometimes is a Findari Priest. Amazons tend to use aggressive as well as healing magic.</p>
+prefer iron armour too. It is said that an Ama–shoon can also fight with her bare hands, if necessary. Ama–shoon are led by one female
+leader, who sometimes is a Findari Priest. Ama–shoon tend to use aggressive as well as healing magic.</p>
 
 <h3>"Civilized" Cultures:</h3>
 <p>These cultures speak the common language natively. Common things: Marriages are meant for life, but can be released under
