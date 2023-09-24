@@ -128,9 +128,9 @@ Diese Seite ist gültiges <a href="https://validator.w3.org/check?uri=referer" r
 $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GET['contact'] : 0);
    switch($contact) {
       case 1: // Accountanfragen
-         define(_CONTACT_NAME,"Accountanfragen",false);
-         define(_CONTACT_MAIL,"accounts@illarion.org",false);
-         define(_CONTACT_DETAILS,"Alle Fragen bezüglich deines Accounts ".
+         define("_CONTACT_NAME","Accountanfragen",false);
+         define("_CONTACT_MAIL","accounts@illarion.org",false);
+         define("_CONTACT_DETAILS","Alle Fragen bezüglich deines Accounts ".
          "werden hier beantwortet. Vergiss nicht deinen Accountnamen in ".
          "die E-Mail zu schreiben, sonst können wir nicht helfen.".
          "<br />Außerdem ist es wichtig, dass du diese E-Mail mit der ".
@@ -138,125 +138,125 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          "nachzuweisen, dass es sich wirklich um deinen Account handelt.",false);
       break;
       case 2: //Website contact
-         define(_CONTACT_NAME,"Websiteanfragen",false);
-         define(_CONTACT_MAIL,"website@illarion.org",false);
-         define(_CONTACT_DETAILS,"Alle Fragen zur Website von Illarion".
+         define("_CONTACT_NAME","Websiteanfragen",false);
+         define("_CONTACT_MAIL","website@illarion.org",false);
+         define("_CONTACT_DETAILS","Alle Fragen zur Website von Illarion".
          " können hier ".
          "gestellt werden.",false);
       break;
       case 3: //Reporting players
-         define(_CONTACT_NAME,"Spieler melden",false);
-         define(_CONTACT_MAIL,"violations@illarion.org",false);
-         define(_CONTACT_DETAILS,"Hier kannst du Spieler die sich in deinen".
+         define("_CONTACT_NAME","Spieler melden",false);
+         define("_CONTACT_MAIL","violations@illarion.org",false);
+         define("_CONTACT_DETAILS","Hier kannst du Spieler die sich in deinen".
          " Augen schlecht verhalten haben und die Regeln gebrochen haben ".
          "melden.<br />Bitte notiere auch Zeit und Datum des Vorfalls damit".
          " wir den Vorfall mit Hilfe der Server-Logs nachvollziehen ".
          "können.",false);
       break;
       case 4: //Reporting players
-         define(_CONTACT_NAME,"Teammitglied melden",false);
-         define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"Sollte ein Gamemaster oder Entwickler seine ".
+         define("_CONTACT_NAME","Teammitglied melden",false);
+         define("_CONTACT_MAIL","gm_complaint@illarion.org",false);
+         define("_CONTACT_DETAILS","Sollte ein Gamemaster oder Entwickler seine ".
          "Möglichkeiten dazu missbrauchen, Spieler in einem ".
          "unangemessenen Maß zu bestrafen oder zu unterstützen, ".
          "kann das hier gemeldet werden.<br />Die Meldungen werden von ".
          "einer neutralen Person bearbeitet.",false);
       break;
       case 5: //Cadomyr requests
-         define(_CONTACT_NAME,"Rollenspielanfragen für Cadomyr",false);
-         define(_CONTACT_MAIL,"cadomyr@illarion.org",false);
-         define(_CONTACT_DETAILS,"Hier kannst du mit einem Gamemaster der Fraktion Cadomyr ".
+         define("_CONTACT_NAME","Rollenspielanfragen für Cadomyr",false);
+         define("_CONTACT_MAIL","cadomyr@illarion.org",false);
+         define("_CONTACT_DETAILS","Hier kannst du mit einem Gamemaster der Fraktion Cadomyr ".
          "in Kontakt treten, wenn du Unterstützung bei einem Quest brauchst."
          ,false);
       break;
       case 6: //Galmair requests
-         define(_CONTACT_NAME,"Rollenspielanfragen für Galmair",false);
-         define(_CONTACT_MAIL,"galmair@illarion.org",false);
-         define(_CONTACT_DETAILS,"Hier kannst du mit einem Gamemaster der Fraktion Galmair ".
+         define("_CONTACT_NAME","Rollenspielanfragen für Galmair",false);
+         define("_CONTACT_MAIL","galmair@illarion.org",false);
+         define("_CONTACT_DETAILS","Hier kannst du mit einem Gamemaster der Fraktion Galmair ".
          "in Kontakt treten, wenn du Unterstützung bei einem Quest brauchst."
          ,false);
       break;
       case 7: //Runewick requests
-         define(_CONTACT_NAME,"Rollenspielanfragen für Runewick",false);
-         define(_CONTACT_MAIL,"runewick@illarion.org",false);
-         define(_CONTACT_DETAILS,"Hier kannst du mit einem Gamemaster der Fraktion Runewick ".
+         define("_CONTACT_NAME","Rollenspielanfragen für Runewick",false);
+         define("_CONTACT_MAIL","runewick@illarion.org",false);
+         define("_CONTACT_DETAILS","Hier kannst du mit einem Gamemaster der Fraktion Runewick ".
          "in Kontakt treten, wenn du Unterstützung bei einem Quest brauchst."
          ,false);
       break;
       case 11: //Estralis Seborian
-         define(_CONTACT_NAME,"Estralis Seborian",false);
-         define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion und Vorsitzender des Illarion e.V..",false);
+         define("_CONTACT_NAME","Estralis Seborian",false);
+         define("_CONTACT_MAIL","estralis@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist der leitende Inhaltsentwickler von Illarion und Vorsitzender des Illarion e.V..",false);
       break;
       case 15: //Zephyrius
-         define(_CONTACT_NAME,"Zephyrius",false);
-		     define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
-		     define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
+         define("_CONTACT_NAME","Zephyrius",false);
+		     define("_CONTACT_MAIL","zephyrius@illarion.org",false);
+		     define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
       break;
       case 22: //Martin
-         define(_CONTACT_NAME,"Martin",false);
-         define(_CONTACT_MAIL,"martin@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Grafiker von Illarion.",false);
+         define("_CONTACT_NAME","Martin",false);
+         define("_CONTACT_MAIL","martin@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist der leitende Grafiker von Illarion.",false);
       break;
       case 23: //Nitram
-         define(_CONTACT_NAME,"Nitram",false);
-         define(_CONTACT_MAIL,"nitram@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Client-Entwickler von Illarion.",false);
+         define("_CONTACT_NAME","Nitram",false);
+         define("_CONTACT_MAIL","nitram@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist der leitende Client-Entwickler von Illarion.",false);
       break;
       case 25: //Vilarion
-         define(_CONTACT_NAME,"Vilarion",false);
-         define(_CONTACT_MAIL,"vilarion@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der leitende Serverentwickler von Illarion und Serveradmin (d.h. 'root').",false);
+         define("_CONTACT_NAME","Vilarion",false);
+         define("_CONTACT_MAIL","vilarion@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist der leitende Serverentwickler von Illarion und Serveradmin (d.h. 'root').",false);
       break;
       case 30: //Achae
-         define(_CONTACT_NAME,"Achae Eanstray",false);
-         define(_CONTACT_MAIL,"achae@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
+         define("_CONTACT_NAME","Achae Eanstray",false);
+         define("_CONTACT_MAIL","achae@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein englischsprachiger Community-Manger.",false);
       break;
       case 31: //Obsydien
-         define(_CONTACT_NAME,"Obsydien",false);
-         define(_CONTACT_MAIL,"obsydien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+         define("_CONTACT_NAME","Obsydien",false);
+         define("_CONTACT_MAIL","obsydien@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
       break;
       case 32: //Djironnyma
-         define(_CONTACT_NAME,"Djironnyma",false);
-         define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
+         define("_CONTACT_NAME","Djironnyma",false);
+         define("_CONTACT_MAIL","djironnyma@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein deutschsprachiger Community-Manger.",false);
       break;
        case 34: //Slightly
-         define(_CONTACT_NAME,"Slightly",false);
-         define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster und Schriftführer des Illarion e.V..",false);
+         define("_CONTACT_NAME","Slightly",false);
+         define("_CONTACT_MAIL","slightly@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster und Schriftführer des Illarion e.V..",false);
       break;
       case 40: //Evie
-         define(_CONTACT_NAME,"Evie",false);
-         define(_CONTACT_MAIL,"evie@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist die leitende Entwicklerin der Spiel-Karte.",false);
+         define("_CONTACT_NAME","Evie",false);
+         define("_CONTACT_MAIL","evie@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist die leitende Entwicklerin der Spiel-Karte.",false);
       break;
       case 41: //Bloodraven
-         define(_CONTACT_NAME,"Bloodraven",false);
-         define(_CONTACT_MAIL,"bloodraven@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
+         define("_CONTACT_NAME","Bloodraven",false);
+         define("_CONTACT_MAIL","bloodraven@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster der die Fraktion Runewick betreut.",false);
       break;
       case 42: //Teflon
-         define(_CONTACT_NAME,"Teflon",false);
-         define(_CONTACT_MAIL,"teflon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
+         define("_CONTACT_NAME","Teflon",false);
+         define("_CONTACT_MAIL","teflon@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster der die Fraktion Galmair betreut.",false);
       break;
         case 45: //Silverwing
-         define(_CONTACT_NAME,"Silverwing",false);
-         define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
+         define("_CONTACT_NAME","Silverwing",false);
+         define("_CONTACT_MAIL","silverwing@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Gamemaster der die Fraktion Cadomyr betreut.",false);
       break;
       case 46: //Merung
-         define(_CONTACT_NAME,"Merung",false);
-         define(_CONTACT_MAIL,"merung@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist ein Entwickler von Spielinhalten.",false);
+         define("_CONTACT_NAME","Merung",false);
+         define("_CONTACT_MAIL","merung@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Entwickler von Spielinhalten.",false);
       break;
 	  case 47: //Capswick
-         define(_CONTACT_NAME,"Capswick",false);
-         define(_CONTACT_MAIL,"capswick@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." ist der Kassenwart des Illarion e.V..",false);
+         define("_CONTACT_NAME","Capswick",false);
+         define("_CONTACT_MAIL","capswick@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist der Kassenwart des Illarion e.V..",false);
       break;
       default:
          MainForm();
