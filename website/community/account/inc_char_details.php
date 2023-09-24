@@ -29,7 +29,7 @@
 			;
             $pgSQL->setQuery( $query );
 			$char_details = $pgSQL->loadAssocRow();
-			if (!count($char_details))
+			if (empty($char_details))
 			{
 				$query = 'INSERT INTO homepage.character_details ( char_id )'
 				.PHP_EOL.' VALUES ( '.$pgSQL->Quote( $charid ).' )'
