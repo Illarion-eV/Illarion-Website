@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 include 'inc.contact.php';
 
 Page::setTitle( 'Kontakt' );
-Page::setDescription( 'Hier stehen alle Möglichkeiten mit dem Illarion Teamin Verbindung zu treten.' );
+Page::setDescription( 'Hier stehen alle Möglichkeiten mit dem Illarion-Team in Verbindung zu treten.' );
 Page::setKeywords( array( 'Kontakt', 'E-Mail', 'email', 'Email' ) );
 Page::setXHTML();
 Page::Init();
