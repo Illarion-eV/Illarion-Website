@@ -122,147 +122,147 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
 	$contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GET['contact'] : 0);
    switch($contact) {
       case 1: // Account requests
-         define(_CONTACT_NAME,"Account requests",false);
-         define(_CONTACT_MAIL,"accounts@illarion.org",false);
-         define(_CONTACT_DETAILS,"All questions concerning your account ".
+         define("_CONTACT_NAME","Account requests",false);
+         define("_CONTACT_MAIL","accounts@illarion.org",false);
+         define("_CONTACT_DETAILS","All questions concerning your account ".
          "will be answered here. Don't forget to mention your account ".
          "name in the e-mail or we might not be able to help you.<br />".
          "You need to send this e-mail from the e-mail address you used to ".
          "register your account",false);
       break;
       case 2: //Website contact
-         define(_CONTACT_NAME,"Website contact",false);
-         define(_CONTACT_MAIL,"website@illarion.org",false);
-         define(_CONTACT_DETAILS,"All questions concerning the website of ".
+         define("_CONTACT_NAME","Website contact",false);
+         define("_CONTACT_MAIL","website@illarion.org",false);
+         define("_CONTACT_DETAILS","All questions concerning the website of ".
          "Illarion and questions concerning the homepage will be answered ".
          "here.",false);
       break;
       case 3: //Reporting players
-         define(_CONTACT_NAME,"Reporting players",false);
-         define(_CONTACT_MAIL,"violations@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can report players, who have offended you".
+         define("_CONTACT_NAME","Reporting players",false);
+         define("_CONTACT_MAIL","violations@illarion.org",false);
+         define("_CONTACT_DETAILS","Here you can report players, who have offended you".
          " and broke the rules.<br />Please add ".
          "the time and the date of the event, so we can ".
          "reconstruct your report with the server logs.",false);
       break;
       case 4: //Reporting GMs
-         define(_CONTACT_NAME,"Reporting Staff Members",false);
-         define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"In the situation that a Gamemaster or Developer abused".
+         define("_CONTACT_NAME","Reporting Staff Members",false);
+         define("_CONTACT_MAIL","gm_complaint@illarion.org",false);
+         define("_CONTACT_DETAILS","In the situation that a Gamemaster or Developer abused".
          " his or her powers to support or punish a player in an improper".
          " way you can report them here. Those reports are handled by an".
          " impartial party.",false);
       break;
       case 5: //Cadomyr requests
-         define(_CONTACT_NAME,"RPG requests for Cadomyr",false);
-         define(_CONTACT_MAIL,"cadomyr@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr Gamemaster ".
+         define("_CONTACT_NAME","RPG requests for Cadomyr",false);
+         define("_CONTACT_MAIL","cadomyr@illarion.org",false);
+         define("_CONTACT_DETAILS","Here you can contact a Cadomyr Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 6: //Galmair requests
-         define(_CONTACT_NAME,"RPG requests for Galmair",false);
-         define(_CONTACT_MAIL,"galmair@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Galmair Gamemaster ".
+         define("_CONTACT_NAME","RPG requests for Galmair",false);
+         define("_CONTACT_MAIL","galmair@illarion.org",false);
+         define("_CONTACT_DETAILS","Here you can contact a Galmair Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 7: //Runewick requests
-         define(_CONTACT_NAME,"RPG requests for Runewick",false);
-         define(_CONTACT_MAIL,"runewick@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Runewick Gamemaster ".
+         define("_CONTACT_NAME","RPG requests for Runewick",false);
+         define("_CONTACT_MAIL","runewick@illarion.org",false);
+         define("_CONTACT_DETAILS","Here you can contact a Runewick Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 11: //Estralis Seborian
-         define(_CONTACT_NAME,"Estralis Seborian",false);
-         define(_CONTACT_MAIL,"estralis@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion and the chairman of the Illarion e.V..",false);
+         define("_CONTACT_NAME","Estralis Seborian",false);
+         define("_CONTACT_MAIL","estralis@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the lead content developer of Illarion and the chairman of the Illarion e.V..",false);
       break;
       case 15: //Zephyrius
-         define(_CONTACT_NAME,"Zephyrius",false);
-         define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
+         define("_CONTACT_NAME","Zephyrius",false);
+         define("_CONTACT_MAIL","zephyrius@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 22: //Martin
-         define(_CONTACT_NAME,"Martin",false);
-         define(_CONTACT_MAIL,"martin@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead graphics developer of Illarion.",false);
+         define("_CONTACT_NAME","Martin",false);
+         define("_CONTACT_MAIL","martin@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the lead graphics developer of Illarion.",false);
       break;
       case 23: //Nitram
-         define(_CONTACT_NAME,"Nitram",false);
-         define(_CONTACT_MAIL,"nitram@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead client developer of Illarion.",false);
+         define("_CONTACT_NAME","Nitram",false);
+         define("_CONTACT_MAIL","nitram@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the lead client developer of Illarion.",false);
       break;
       case 25: //Vilarion
-         define(_CONTACT_NAME,"Vilarion",false);
-         define(_CONTACT_MAIL,"vilarion@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead server developer of Illarion. ".
+         define("_CONTACT_NAME","Vilarion",false);
+         define("_CONTACT_MAIL","vilarion@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the lead server developer of Illarion. ".
          "He also is the server administrator, i.e. 'root'.",false);
       break;
       case 30: //Achae
-         define(_CONTACT_NAME,"Achae Eanstray",false);
-         define(_CONTACT_MAIL,"achae@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+         define("_CONTACT_NAME","Achae Eanstray",false);
+         define("_CONTACT_MAIL","achae@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
       case 31: //Obsydien
-         define(_CONTACT_NAME,"Obsydien",false);
-         define(_CONTACT_MAIL,"obdydien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+         define("_CONTACT_NAME","Obsydien",false);
+         define("_CONTACT_MAIL","obdydien@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 32: //Djironnyma
-         define(_CONTACT_NAME,"Djironnyma",false);
-         define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
+         define("_CONTACT_NAME","Djironnyma",false);
+         define("_CONTACT_MAIL","djironnyma@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a German speaking Community Manger.",false);
       break;
       case 34: //Slightly
-         define(_CONTACT_NAME,"Slightly",false);
-         define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster and the secretary of the Illarion e.V..",false);
+         define("_CONTACT_NAME","Slightly",false);
+         define("_CONTACT_MAIL","slightly@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster and the secretary of the Illarion e.V..",false);
       break;
       case 40: //Zot
-         define(_CONTACT_NAME,"Evie",false);
-         define(_CONTACT_MAIL,"evie@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead map developer of Illarion.",false);
+         define("_CONTACT_NAME","Evie",false);
+         define("_CONTACT_MAIL","evie@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the lead map developer of Illarion.",false);
       break;
       case 41: //Bloodraven
-         define(_CONTACT_NAME,"Bloodraven",false);
-         define(_CONTACT_MAIL,"bloodraven@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
+         define("_CONTACT_NAME","Bloodraven",false);
+         define("_CONTACT_MAIL","bloodraven@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 42: //Teflon
-         define(_CONTACT_NAME,"Teflon",false);
-         define(_CONTACT_MAIL,"teflon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
+         define("_CONTACT_NAME","Teflon",false);
+         define("_CONTACT_MAIL","teflon@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
       break;
       case 45: //Silverwing
-         define(_CONTACT_NAME,"Silverwing",false);
-         define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+         define("_CONTACT_NAME","Silverwing",false);
+         define("_CONTACT_MAIL","silverwing@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 46: //Merung
-         define(_CONTACT_NAME,"Merung",false);
-         define(_CONTACT_MAIL,"merung@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a content developer.",false);
+         define("_CONTACT_NAME","Merung",false);
+         define("_CONTACT_MAIL","merung@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is a content developer.",false);
       break;
 	  case 47: //Capswick
-         define(_CONTACT_NAME,"Capswick",false);
-         define(_CONTACT_MAIL,"capswick@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the treasurer of the Illarion e.V..",false);
+         define("_CONTACT_NAME","Capswick",false);
+         define("_CONTACT_MAIL","capswick@illarion.org",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." is the treasurer of the Illarion e.V..",false);
       break;
       default:
          MainForm();
          exit();
       break;
    }
-   define(_MAIL,"Your email address:",false);
-   define(_SEND_MAIL,"Send email",false);
-   define(_BAD_MAIL,"Invalid email address",false);
-   define(_BAD_CONTENT,"email content too short",false);
-   define(_SUBJECT,"Subject:",false);
-   define(_CONTENT,"Email content:",false);
-   define(_MAIL_TRANSMITTED,"Email was successfully transmitted<br />".
+   define("_MAIL","Your email address:",false);
+   define("_SEND_MAIL","Send email",false);
+   define("_BAD_MAIL","Invalid email address",false);
+   define("_BAD_CONTENT","email content too short",false);
+   define("_SUBJECT","Subject:",false);
+   define("_CONTENT","Email content:",false);
+   define("_MAIL_TRANSMITTED","Email was successfully transmitted<br />".
    "Forwarding in 3 seconds to the contact overview.",false);
-   define(_MAIL_TRANSMITTED_FAILED,"Failed sending the email.<br />",false);
+   define("_MAIL_TRANSMITTED_FAILED","Failed sending the email.<br />",false);
    ShowAndTransmitMail();
 ?>
