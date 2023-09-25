@@ -21,21 +21,22 @@ function MainForm() {
 
 <h1>Kontakt zu Illarion</h1>
 
-<?php
-echo "<!-- modify this form HTML and place wherever you want your form -->";
-echo "<form action="https://formspree.io/f/xqkvkyle" method="POST">";
-  echo "<label>";
-    echo "Your email:";
-    echo "<input type="email" name="email">";
-  echo "</label>";
-  echo "<label>";
-    echo "Your message:";
-    echo "<textarea name="message"></textarea>";
-  echo "</label>";
-  echo "<!-- your other form fields go here -->";
-  echo "<button type="submit">Send</button>";
-echo "</form>";
-?>
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xqkvkyle"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
 <h2>Inhalt</h2>
 <ul>
