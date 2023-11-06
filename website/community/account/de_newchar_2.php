@@ -95,7 +95,7 @@
 
 <p>In diesem Teil der Charaktererstellung kannst Du das Aussehen Deines Charakters festlegen.</p>
 
-<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_3.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 	<div>
 		<h2>Informationen</h2>
 		<table style="width:100%;">
