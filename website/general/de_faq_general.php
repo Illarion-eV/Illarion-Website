@@ -76,7 +76,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs3"></a><strong>Was sind die Systemanforderungen von Illarion?</strong></li>
 
-	    <p>Illarion ist ein plattformübergreifendes Spiel, welches auf Windows, Linux und MacOS läuft. Du kannst die Systemanforderungen auf der <a href="<?php echo Page::getURL(); ?>/illarion/de_java_download.php">Downloadseite der Homepage</a> einsehen. Du brauchst vor allem einen Computer mit einer Grafikkarte, die Shaders 2.0 und OpenGL unterstützt. Einige Betriebssysteme wie Windows Vista unterstützen den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller der Grafikkarte.</p>
+	    <p>Illarion ist ein plattformübergreifendes Spiel, welches auf Windows, Linux und MacOS läuft. Du kannst die Systemanforderungen auf der <a href="<?php echo Page::getURL(); ?>/illarion/de_java_download.php">Downloadseite der Homepage</a> einsehen. Du brauchst vor allem einen Computer mit einer Grafikkarte, die Shaders 2.0 und OpenGL unterstützt. Einige veraltete Betriebssysteme wie Windows Vista unterstützen den freien Grafikstandard OpenGL nicht ohne zusätzliche Treiber. Installiere stets den aktuellen Grafikkartentreiber vom Hersteller deiner Grafikkarte.</p>
 
 	<li class="question"><a id="gs4"></a><strong>Was brauche ich, um spielen zu können?</strong></li>
 		
@@ -136,7 +136,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 		<p>Die Ausübung eines Handwerks besteht generell aus drei Schritten: Dem Sammeln von Rohmaterialien, wie zum Beispiel Erze, dem Produzieren von Zwischenprodukten wie Barren und dem Herstellen der eigentlichen Gegenstände, die dann auch benutzt werden kann, z.B. ein Schwert. Für jeden Schritt brauchst du geeignete Werkzeuge und Orte. Um ein Schwert zu schmieden, musst du zum Beispiel zuerst mit einer Spitzhacke in eine Mine gehen und dort Eisenerze abbauen oder einen Hammer an einem Amboss um ein Schwert aus Eisenbarren herzustellen. Beinahe jeder Gegenstand in diesem Spiel kann von Spielern hergestellt werden und ein Handwerk auszuüben  kann sehr viel Spaß machen, wenn man die enorme Vielfalt an Handwerken, Rohstoffen und Produkten bedenkt.</p>
 
-		<p>Für die Reparatur eines Gegenstands sind dagegen spezielle NPCs zuständig. Davon gibt es einen in jeder größeren Stadt. Sie verlangen einen Entgelt für die Reparatur, doch einen Gegenstand zu reparieren ist im Normalfall billiger als einen neuen von einem NPC zu kaufen.</p>
+		<p>Für die Reparatur eines Gegenstands benötigst du Reparatursätze. Diese können wie Gegenstände hergestellt werden. Es gibt auch einen NPC, der ein Entgelt für die Reparatur verlangt. Gegenstände zu reparieren ist im Normalfall billiger als einen neuen von einem NPC zu kaufen.</p>
 
 	<li class="question"><a id="fs6"></a><strong>Und was ist mit Magie? Wie zaubere ich?</strong></li>
 		
@@ -148,7 +148,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="fs8"></a><strong>Gibt es im Spiel Lagerplätze?</strong></li>
 		
-		<p>Ja. Das Spiel hat ein "Depotsystem". Diese gelben Lagerkisten stehen an wichtigen Plätzen der Städte. Um sie zu verwenden, stelle dich neben sie und "öffne" sie mit einem Doppelklick. Per "Drag and Drop" kannst du Gegenstände im Depot ablegen. Beachte, dass das Depotsystem einer Stadt nur in dieser Stadt verfügbar ist.</p>
+		<p>Ja. Das Spiel hat ein "Depotsystem". Diese Lagerkisten stehen an wichtigen Plätzen der Städte. Um sie zu verwenden, stelle dich neben sie und "öffne" sie mit einem Doppelklick. Per "Drag and Drop" kannst du Gegenstände im Depot ablegen. Beachte, dass das Depotsystem einer Stadt nur in dieser Stadt verfügbar ist.</p>
 		
 	<li class="question"><a id="fs9"></a><strong>Ich bin gestorben! Wie kann ich mich wiederbeleben? Gibt es eine Bestrafung für den Tod?</strong></li>
 		
@@ -169,7 +169,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="gc2"></a><strong>Was sind CMs und GMs?</strong></li>
 	
-		<p>Ein CM ist ein <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#2">Community-Manager</a>. Ihr Aufgabe ist es, neuen Spielern zu helfen und mögliche Konflikte zwischen Spielern zu schlichten. Sind die ersten, an die du dich wenden solltest, wenn es sich nicht um ein technisches Problem handelt. GM steht für <a href="<?php echo Page::getURL(); ?>/community/de_contact.php#3">Gamemaster</a>. Die GMs tragen dynamische Inhalte (Quests, Events usw.) zum Spiel bei und wachen auch über die Einhaltung der Regeln.</p>
+		<p>GM steht für Gamemaster. Die GMs tragen dynamische Inhalte (Quests, Events usw.) zum Spiel bei und wachen auch über die Einhaltung der Regeln. Ihr Aufgabe ist es auch, neuen Spielern zu helfen und mögliche Konflikte zwischen Spielern zu schlichten. Sie sind die ersten, an die du dich wenden solltest, wenn es sich nicht um ein technisches Problem handelt.</p>
 		
 
 	<li class="question"><a id="gc3"></a><strong>Warum sprechen die alle so komisch?</strong></li>

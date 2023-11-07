@@ -76,7 +76,7 @@ Page::Init();
 		
 	<li class="question"><a id="gs3"></a><strong>What are the system requirements for Illarion?</strong></li>
 
-	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
+	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some old operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
 
 	<li class="question"><a id="gs4"></a><strong>What do I need to play?</strong></li>
 		
@@ -135,7 +135,7 @@ Page::Init();
 		
 		<p>Crafting generally consists of three steps: Gathering of raw materials such as ores, producing intermediate items such as ingots and crafting final items that can be used such as swords. For each step, you need dedicated tools and locations, e.g. you will need to use a pick axe in a mine to mine ores and a hammer and anvil to forge a sword out of iron ingots. Almost every item in this game can be crafted by players and crafting can be a lot of fun, taking into account the vast variety of crafts, resources and products.</p>
 		
-		<p>Repairing items is done by dedicated NPCs, though. You can find one in each major city. They charge a fee for their services, but repairing is usually more cheap than buying a new item from an NPC.</p>
+		<p>Repairing items is done with repair kits. They can be crafted in the same way as items. There is also a repair NPC who charges a fee for their services, but repairing is usually more cheap than buying a new item from an NPC.</p>
 
 	<li class="question"><a id="fs6"></a><strong>What about magic? How can I cast spells?</strong></li>
 		
@@ -147,7 +147,7 @@ Page::Init();
 		
 	<li class="question"><a id="fs8"></a><strong>Does the game have storage facilities?</strong></li>
 		
-		<p>Yes. The game uses a "depot" system. These are yellow storage boxes scattered around key areas of towns. To use them, move next to them and "open" them with a double click. You can then drag and drop any items you wish to store into the depot. Note that you can access the depot system of one town only in that town.</p>
+		<p>Yes. The game uses a "depot" system. These are storage boxes scattered around key areas of towns. To use them, move next to them and "open" them with a double click. You can then drag and drop any items you wish to store into the depot. Note that you can access the depot system of one town only in that town.</p>
 		
 	<li class="question"><a id="fs9"></a><strong>I died! How do I resurrect? Is there a death penalty?</strong></li>
 		
@@ -166,10 +166,9 @@ Page::Init();
 		<p>Role playing games (RPG) are a popular game genre. Players take on the role of a fantasy character and are able to do many things that may be impossible in Real Life. Illarion takes the concept of Role playing further than other games. Players are expected to immerse themselves completely into the life of their character. Whilst playing Illarion you cease to be John/Jane Smith from New York and instead take on the role of a fictional character by feeling, saying, and thinking what he or she would. Illarion is set in a mediaeval world with no electricity, cars, televisions or power tools. Whilst playing you are expected to stay in your chosen role and keep Out Of Character (OOC) talk to a bare minimum.</p>
 		
 
-	<li class="question"><a id="gc2"></a><strong>What are CMs and GMs?</strong></li>
+	<li class="question"><a id="gc2"></a><strong>What GMs?</strong></li>
 	
-		<p>A CM is a <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#2">Community Manager</a>. Their role is to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue. A GM is a <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#3">Gamemaster</a>. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion.</p>
-		
+		<p>A GM is a Gamemaster. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion. Their role is also to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue.</p>		
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
 		
