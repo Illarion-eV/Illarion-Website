@@ -40,7 +40,7 @@ Zugriffsberechtigung auf diese Quest.</p>
 		Page::redirect( Page::getURL().'/statistics/de_quests.php' );
 	}
 
-	$title = ( is_null($quest['q_title_de']) ? $quest['q_title_us'] : $quest['q_title_de'] );
+	$title = ( is_null($quest['q_title_de']) ? prepText($quest['q_title_us']) : prepText($quest['q_title_de']) );
 
 	Page::setTitle( array( 'Quest-Details', $title ) );
 	Page::setDescription( 'Auf dieser Seite findest du Informationen zur Quest "'.$title.'", wie Startzeit, Art und Autor der Quest.' );

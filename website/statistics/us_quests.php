@@ -39,7 +39,7 @@ was already deleted or you lack of the access rights to view the quest.</p>
 			Page::redirect( Page::getURL().'/statistics/us_quests.php' );
 	}
 
-	$title = ( is_null($quest['q_title_us']) ? $quest['q_title_de'] : $quest['q_title_us'] );
+	$title = ( is_null($quest['q_title_us']) ? prepText($quest['q_title_de']) : prepText($quest['q_title_us']) );
 
 	Page::setTitle( array( 'Quest Details', $title ) );
 	Page::setDescription( 'On this page you find informations about the quest "'.$title.'", such as start time, kind and creator of the quest.' );

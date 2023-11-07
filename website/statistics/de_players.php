@@ -1,5 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
+	includeWrapper::includeOnce( Page::getRootPath().'/statistics/inc_quests.php' );
 
 	Page::setTitle( 'Online-Spieler' );
 	Page::setDescription( 'Diese Seite zeigt an, welche Spieler gerade online sind.' );
@@ -182,7 +183,7 @@ abhalten einzuloggen. Oft folgen mehr Spieler nach wenn erstmal jemand eingelogg
 	<tr>
 		<td class="title">
 			<a style="font-weight:bold;" href="<?php echo Page::getURL(); ?>/statistics/de_quests.php?id=<?php echo $quest['q_id']; ?>">
-				<?php echo ( is_null($quest['q_title_de']) ? $quest['q_title_us'] : $quest['q_title_de'] ); ?>
+				<?php echo ( is_null($quest['q_title_de']) ? prepText($quest['q_title_us']) : prepText($quest['q_title_de']) ); ?>
 			</a>
 		</td>
 		<td class="type"><?php echo ( $quest['q_type'] == 1 ? 'Offizielle Quest' : 'Spieler-Quest'); ?></td>
