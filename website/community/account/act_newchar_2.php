@@ -47,10 +47,10 @@
 			$beardvalues = char_create::getBeardValues($race, IllaUser::$lang);
 
 			if((
-				!in_array($_POST['haircolor'], $haircolors)
-				|| !in_array($_POST['skincolor'], $skincolors)
-				|| !in_array($_POST['hairvalue'], array_keys($hairvalues))
-				|| !in_array($_POST['beardvalue'], array_keys($beardvalues))
+				(!in_array($_POST['haircolor'], $haircolors) && !empty($haircolors))
+				|| (!in_array($_POST['skincolor'], $skincolors) && !empty($skincolors))
+				|| (!in_array($_POST['hairvalue'], array_keys($hairvalues)) && !empty($hairvalues))
+				|| (!in_array($_POST['beardvalue'], array_keys($beardvalues)) && !empty($beardvalues))
 			)){
 				Messages::add((Page::isGerman()?'Diese Auswahl ist für den Charakter nicht verfügbar.':'That selection is not available for the character.'),'error');
 				return;
