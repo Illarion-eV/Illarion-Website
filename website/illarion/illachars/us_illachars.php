@@ -36,7 +36,7 @@
             FROM chars
             WHERE chars.chr_name LIKE ".$db->Quote( $thiskey )."
             AND chr_lastsavetime > ".$db->Quote( $aktiv_time )."
-			AND chr_race".$sign."
+			AND chr_race=".$db->Quote($_GET['RASSE'])."
 			AND chr_sex=".$db->Quote($_GET['SEX'])."
             AND chr_status=0
             AND (( SELECT COUNT(gms.gm_charid) AS count
