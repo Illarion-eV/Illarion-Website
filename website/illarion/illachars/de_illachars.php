@@ -26,9 +26,9 @@
 	if  ($SUCHBEGRIFF=="") {$SUCHBEGRIFF="%"; }
 	$SUCHBEGRIFF = str_replace( '*', '%', $SUCHBEGRIFF );
 
-	if ($_GET['RASSE']==9) { $sign=">8";  } 
-	elseif ($_GET['RASSE']=="") { $sign=">-1"; }
-	else { $sign="=".$db->Quote( $_GET[RASSE] ); }
+	if ($_GET['RACE']==9) { $sign=">8";  } 
+	elseif ($_GET['RACE']=="") { $sign=">-1"; }
+	else { $sign="=".$db->Quote( $_GET[RACE] ); }
 
 	if ($_GET['aktion']=="suchen") { $thiskey=$SUCHBEGRIFF; }	
 
@@ -101,39 +101,39 @@
         echo "<tr><td>&nbsp;</td></tr>";
         echo "<tr><td>";
 		echo "Nach einem Charakternamen suchen :&nbsp;<input name='SUCHBEGRIFF' type='text' size='30' value='".htmlspecialchars ($_GET['SUCHBEGRIFF'],ENT_QUOTES)."'/>";
-		echo "&nbsp;&nbsp;Rasse&nbsp;<select name='RASSE' $readonly>";
+		echo "&nbsp;&nbsp;Rasse&nbsp;<select name='RACE' $readonly>";
         echo "<option value=''";
-			if ($_GET['RASSE']=="") { echo " selected='selected'"; }
+			if ($_GET['RACE']=="") { echo " selected='selected'"; }
 		echo ">Alle Rassen</option>";
         echo "<option value='0'";
-			if ( ($_GET['RASSE']==0)and ($_GET['RASSE']!="") ) { echo " selected='selected'"; }
+			if ( ($_GET['RACE']==0)and ($_GET['RACE']!="") ) { echo " selected='selected'"; }
 		echo ">Mensch</option>";
         echo "<option value='1'";
-			if ($_GET['RASSE']==1) { echo " selected='selected'"; }
+			if ($_GET['RACE']==1) { echo " selected='selected'"; }
 		echo ">Zwerg</option>";
 		echo "<option value='2'";
-			if ($_GET['RASSE']==2) { echo " selected='selected'"; }
+			if ($_GET['RACE']==2) { echo " selected='selected'"; }
 		echo ">Halbling</option>";
         echo "<option value='3'";
-			if ($_GET['RASSE']==3) { echo " selected='selected'"; }
+			if ($_GET['RACE']==3) { echo " selected='selected'"; }
 		echo ">Elf</option>";
         echo "<option value='4'";
-			if ($_GET['RASSE']==4) { echo " selected='selected'"; }
+			if ($_GET['RACE']==4) { echo " selected='selected'"; }
 		echo ">Ork</option>";
         echo "<option value='5'";
-			if ($_GET['RASSE']==5) { echo " selected='selected'"; }
+			if ($_GET['RACE']==5) { echo " selected='selected'"; }
 		echo ">Echsenmensch</option>";
         echo "<option value='6'";
-			if ($_GET['RASSE']==6) { echo " selected='selected'"; }
+			if ($_GET['RACE']==6) { echo " selected='selected'"; }
 //		echo ">Gnom</option>";
 //        echo "<option value='7'";
-//			if ($_GET['RASSE']==7) { echo " selected='selected'"; }
+//			if ($_GET['RACE']==7) { echo " selected='selected'"; }
 //		echo ">Fee</option>";
 //        echo "<option value='8'";
-//			if ($_GET['RASSE']==8) { echo " selected='selected'"; }
+//			if ($_GET['RACE']==8) { echo " selected='selected'"; }
 //		echo ">Goblin</option>";
 //        echo "<option value='9'";
-//			if ($_GET['RASSE']==9) { echo " selected='selected'"; }
+//			if ($_GET['RACE']==9) { echo " selected='selected'"; }
 		echo ">Andere</option>";
         echo "</select>";
 		echo "&nbsp;&nbsp;<select name='SEX' $readonly>";
@@ -284,7 +284,7 @@
     $next=$_GET['start']+22;    
 	
 	if ($_GET['key']!="") { $keystring="&amp;key=".$_GET['key']; } else { $keystring=""; } 
-	if ($_GET['RASSE']!="") { $racestring="&amp;RASSE=".$_GET['RASSE']; } else { $racestring=""; }
+	if ($_GET['RACE']!="") { $racestring="&amp;RACE=".$_GET['RACE']; } else { $racestring=""; }
 	if ($_GET['SUCHBEGRIFF']!="") { $searchstring="&amp;SUCHBEGRIFF=".$_GET['SUCHBEGRIFF'];} else { $searchstring=""; }
 	if ($_GET['SEX']!="") { $sexstring="&amp;SEX=".$_GET['SEX']; } else { $sexstring=""; }
 	if ($_GET['aktion']!="") { $actionstring="&amp;aktion=".$_GET['aktion'];} else { $actionstring=""; }
