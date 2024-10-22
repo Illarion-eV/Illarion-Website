@@ -28,7 +28,7 @@
 
 	if ($_GET['RASSE']==9) { $sign=">8";  } 
 	elseif ($_GET['RASSE']=="") { $sign=">-1"; }
-	else { $sign="=".$db->Quote( $_GET[RASSE] ); }
+	else { $sign="=".$db->Quote( $_GET['RASSE'] ); }
 
 	if ($_GET['aktion']=="suchen") { $thiskey=$SUCHBEGRIFF; }	
 
