@@ -50,7 +50,7 @@ e.V</a> and help the Illarion Society with ten Euro yearly membership fee.</p>
 <p>The Illarion Society has a Paypal account with the e-mail address
 donation@illarion.org</p>
 
-<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/us_paypal_donate.png" alt="Paypal"/></a></p>
+<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/shared/pics/us_paypal_donate.png" alt="Paypal"/></a></p>
 
 <h3>Remittance</h3>
 

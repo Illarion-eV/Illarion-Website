@@ -46,7 +46,7 @@ Illarion e. V.</a> zu werden.</p>
 <p>Der Illarion e.V hat einen Paypal-Account unter der E-Mail Adresse
 donation@illarion.org</p>
 
-<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/de_paypal_donate.png" alt="Paypal"/></a></p>
+<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/shared/pics/de_paypal_donate.png" alt="Paypal"/></a></p>
 
 <h3>Banküberweisung</h3>
 
