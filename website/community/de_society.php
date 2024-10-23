@@ -43,18 +43,10 @@ Illarion e. V.</a> zu werden.</p>
 
 <h3>Paypal</h3>
 
-<p>Der Illarion e.V hat einen Paypal-Basis-Account unter der E-Mail Adresse
+<p>Der Illarion e.V hat einen Paypal-Account unter der E-Mail Adresse
 donation@illarion.org</p>
 
-<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
-	<p>
-		<input type="hidden" name="cmd" value="_xclick" />
-		<input type="hidden" name="business" value="donation@illarion.org" />
-		<input type="hidden" name="currency_code" value="EUR" />
-		<input type="hidden" name="item_name" value="Spende an den Illarion e.V." />
-		<input class="no_style" type="image" name="add" src="<?php echo Page::getImageURL(); ?>/de_paypal_donate.png" />
-	</p>
-</form>
+<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/de_paypal_donate.png" alt="Paypal"/></a></p>
 
 <h3>Banküberweisung</h3>
 

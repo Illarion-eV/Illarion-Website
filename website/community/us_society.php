@@ -47,18 +47,10 @@ As alternative to a donation there is also the possibility to
 e.V</a> and help the Illarion Society with ten Euro yearly membership fee.</p>
 <h3>Paypal</h3>
 
-<p>The Illarion Society has a paypal-basic account with the e-mail address
+<p>The Illarion Society has a Paypal account with the e-mail address
 donation@illarion.org</p>
 
-<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
-	<p>
-		<input type="hidden" name="cmd" value="_xclick" />
-		<input type="hidden" name="business" value="donation@illarion.org" />
-		<input type="hidden" name="currency_code" value="EUR" />
-		<input type="hidden" name="item_name" value="Donation for the Illarion e.V." />
-		<input class="no_style" type="image" name="add" src="<?php echo Page::getImageURL(); ?>/us_paypal_donate.png" />
-	</p>
-</form>
+<p><a href="https://www.paypal.com/paypalme/IllarioneV"><img src="<?php echo $url; ?>/us_paypal_donate.png" alt="Paypal"/></a></p>
 
 <h3>Remittance</h3>
 
