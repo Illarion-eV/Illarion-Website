@@ -142,7 +142,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Stabmagie und Juwelenverzauberung.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Die kognitive Einsicht deines Charakters. Dieses Attribut erhöht die Stärke der Zauber eines Magiers und gewährt einen kleinen Bonus auf das Erlernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit der folgenden Fertigkeiten: Feuermagie, Wassermagie, Erdmagie, Geistesmagie, Windmagie, Verzauberung, RaumMagie.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +150,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, die sechs Sinne zu nutzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist wichtig für Bogenschützen, hilft Nahkämpfern, ihr Ziel zu treffen, und unterstützt auch die Zielgenauigkeit eines Magiers. Zudem ermöglicht es dir, das Ziel von Schatzkarten leichter zu finden, und wird in Zukunft für Druiden von Bedeutung sein. Wahrnehmung beeinflusst die Lerngeschwindigkeit der folgenden Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -158,7 +158,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die geistige Widerstandsfähigkeit deines Charakters. Dieses Attribut wird zukünftig für Priester wichtig sein und die Auswirkungen magischer Angriffe abschwächen. Willenskraft beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Die mentale Widerstandskraft deines Charakters. Dieses Attribut erhöht sowohl deine Fähigkeit, Magie zu widerstehen, als auch die Durchschlagskraft der Zauber eines Magiers – in einem Kampf darum, wer den stärkeren Willen hat. In Zukunft wird es auch für Priester von Bedeutung sein. Willenskraft beeinflusst die Lerngeschwindigkeit der folgenden Fertigkeiten: Magieresistenz.">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>

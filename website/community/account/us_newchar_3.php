@@ -142,7 +142,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The cognitive insight of your character. This attribute will be of importance for magicians in future and grants a small bonus on learning all skills. Intelligence affects the learning speed of the following skills: Wand magic and Enchanting of Jewels.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="The cognitive insight of your character. This attribute increases the power of a mage's spells and grants a small bonus on learning all skills. Intelligence affects the learning speed of the following skills: Fire magic, Water magic, Earth magic, Spirit Magic, Wind Magic, Enchanting, Spatial magic.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat. This attribute is important for archers and also helps melee fighters to hit their target. Perception affects the learning speed of the following skills: Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat. This attribute is important for archers, helps melee fighters to hit their target and also aids a mage's aim. It also allows you to locate the destination of treasure maps more easily, and will be important for druids in the future. Perception affects the learning speed of the following skills: Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -158,7 +158,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The mental resistance of your character. This attribute will be of importance to priests in future and will also reduce the effect of magical attacks. Willpower affects the learning speed of the following skills: -">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="The mental resilience of your character. This attribute both increases your ability to resist magic and the ability of a mage's spells to penetrate that resistance, in a battle of who has the stronger willpower. It will also be of importance to priests in the future. Willpower affects the learning speed of the following skills: Magic Resistance.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
