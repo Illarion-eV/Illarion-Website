@@ -110,7 +110,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The physical force of your character. It directly influences the damage you deal in combat and the weight you can carry. This attribute is important for all kinds of fighters but also gatherers. Strength affects the learning speed of the following skills: Blunt weapons, stabbing weapons, slashing weapons, and wrestling.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="The physical force of your character. It directly influences the damage you deal in combat and the weight you can carry. This attribute is important for armourers as well as for all kinds of fighters and also gatherers, especially digging and mining. Strength affects the learning speed of the following skills: Blunt weapons, stabbing weapons, slashing weapons, wrestling, armourer, mining and digging.">Strength</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -118,7 +118,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Your character's speed of actions. It determines running pace and attack speed. This attribute matters for fighters that want to avoid damage. Agility affects the learning speed of the following skills: Parry, Light Armour, Medium Armour, and Heavy Armour.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Your character's speed of actions. It determines running pace and attack speed. This attribute matters for fighters that want to avoid damage, but it also helps with wielding a hatchet to fell trees and provides the agile movements needed to keep up with the rotating clay as a potter. Agility affects the learning speed of the following skills: Parry, Light Armour, Medium Armour, Heavy Armour, woodcutting and pottery.">Agility</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -126,7 +126,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The physical resilience of your character. It governs the regeneration of hitpoints. This attribute is of importance to all gatherers and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, and Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="The physical resilience of your character. It governs the regeneration of hitpoints. This attribute is of importance to all gatherers, helps you endure the endless hammering as a blacksmith and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, Woodcutting and Blacksmithing.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -134,7 +134,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The coordination skills of your character. This attribute is vital for all crafters as it increases the quality of crafted goods. It also helps fighters to hit their target harder. Dexterity affects the learning speed of the following skills: Armourer, Blacksmithing, Carpentry, Baking/Cooking, Brewing, Gemcutting, Glass Blowing, Finesmithing, Pottery, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="The coordination skills of your character. This attribute is vital for all crafters as it increases the quality of crafted goods. It also helps fighters to hit their target harder, and helps farmers use their sickles and scythes more efficiently. Dexterity affects the learning speed of the following skills: Armourer, Blacksmithing, Carpentry, Baking/Cooking, Brewing, Gemcutting, Glass Blowing, Finesmithing, Pottery, Tailoring and Farming.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -142,7 +142,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The cognitive insight of your character. This attribute increases the power of a mage's spells and grants a small bonus on learning all skills. Intelligence affects the learning speed of the following skills: Fire magic, Water magic, Earth magic, Spirit Magic, Wind Magic, Enchanting, Spatial magic.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="The cognitive insight of your character. This attribute increases the power of a mage's spells and grants a small bonus on learning all skills. It also provides the creativity needed to be a good tailor and the patience and wit needed to outsmart fish as a fisherman. Intelligence affects the learning speed of the following skills: Fire magic, Water magic, Earth magic, Spirit Magic, Wind Magic, Enchanting, Spatial magic, Tailoring and Fishing.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat. This attribute is important for archers, helps melee fighters to hit their target and also aids a mage's aim. It also allows you to locate the destination of treasure maps more easily, and will be important for druids in the future. Perception affects the learning speed of the following skills: Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat. This attribute is important for archers, helps melee fighters to hit their target and also aids a mage's aim. Additionally it grants the taste buds needed to be a good cook, baker and brewer, as well as the accute eyesight to better see which herbs are ready for harvest. It also allows you to locate the destination of treasure maps more easily, and will be important for druids in the future. Perception affects the learning speed of the following skills: Distance Weapons, cooking and baking, brewing, herblore.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -158,7 +158,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The mental resilience of your character. This attribute both increases your ability to resist magic and the ability of a mage's spells to penetrate that resistance, in a battle of who has the stronger willpower. It will also be of importance to priests in the future. Willpower affects the learning speed of the following skills: Magic Resistance.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="The mental resilience of your character. This attribute both increases your ability to resist magic and the ability of a mage's spells to penetrate that resistance, in a battle of who has the stronger willpower. It also gives you the will to withstand the heat of a glassblowing furnace and the constant sawdust, splinters and repeated sanding down of carpentry. It also gives you the power of will to be more stubborn than a sheep, helping you shear them better. It will also be of importance to priests in the future. Willpower affects the learning speed of the following skills: Magic Resistance, Glassblowing, Carpentry, tanning and weaving.">Willpower</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -166,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The affinity of your character to the mystical world. It controls the regeneration of mana, divine power and influences your ability to brew potions. Essence affects the learning speed of the following skills: Alchemy.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="The affinity of your character to the mystical world. It controls the regeneration of mana, divine power and influences your ability to brew potions. It also makes it easier to get along with animals which can be important for husbandry, and provides the spirit of art and passion needed to make cut masterful gems and artful jewellery. Essence affects the learning speed of the following skills: Alchemy, husbandry, gemcutting, finesmithing.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
