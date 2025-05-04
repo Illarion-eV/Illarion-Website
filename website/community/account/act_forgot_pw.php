@@ -1,4 +1,6 @@
 <?php
+	require_once __DIR__ . '/../../../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
+
 	if (isset($_POST['email']))
 	{
 		$db =& Database::getPostgreSQL( 'homepage' );
@@ -33,47 +35,42 @@
     			$db->setQuery( 'INSERT INTO mail_cert VALUES ('.$db->Quote($id).','.$db->Quote($valid_key).',1)');
     			$db->query();
 
-    			$mail = new PHPMailer();
-    			$mail->IsMail();
-    			$mail->IsHTML(true);
-    			$mail->WordWrap = 80;
-    			$mail->CharSet = 'utf-8';
-    			$mail->SetLanguage( Page::getLanguage(), '' );
-    			$mail->AddAddress( $email, $name );
-				$mail->Sender = 'accounts@illarion.org';
-    			$mail->From = 'accounts@illarion.org';
-    			$mail->FromName = 'Illarion';
-    			$mail->AddReplyTo( 'accounts@illarion.org', 'Illarion' );
+    			$mail = new Swift_Message();
+				$mail->setFrom('accounts@illarion.org', 'Illarion')->setTo($email, $name);
 
     			if (Page::isGerman())
     			{
-    				$mail->Subject = 'Neues Passwort';
-    				$mail->Body = "<html><body><h3>Grüße ".$name.",</h3><p>auf der Illarion-Homepage wurde ein neues Passwort für Dich angefordert. Du kannst "
+    				$mail->setSubject('Neues Passwort');
+					$mail->setBody("<html><body><h3>Grüße ".$name.",</h3><p>auf der Illarion-Homepage wurde ein neues Passwort für Dich angefordert. Du kannst "
     				. "jetzt ein neues Passwort eingeben, indem <a href='". Page::getURL()."/community/account/de_forgot_pw.php?id=".$valid_key."'>Du hier klickst</a>.</p>"
     				. "<p>Wenn Du kein neues Passwort eingeben willst, dann ignoriere diese E-Mail einfach. Dein altes Passwort bleibt dann "
-    				. "weiterhin gültig.</p><p>Das Team von <a href='https://illarion.org'>Illarion</a></p>";
-					$mail->AltBody = "Grüße ".$name.",\n\nauf der Illarion-Homepage wurde ein neues Passwort für Dich angefordert. Du kannst "
+    				. "weiterhin gültig.</p><p>Das Team von <a href='https://illarion.org'>Illarion</a></p>",'text/html');
+					$mail->addPart("Grüße ".$name.",\n\nauf der Illarion-Homepage wurde ein neues Passwort für Dich angefordert. Du kannst "
 						. "jetzt ein neues Passwort eingeben, indem Du auf den folgenden Link klickst:\n\n"
 						. Page::getURL()."/community/account/de_forgot_pw.php?id=".$valid_key."\n\n"
 						. "Wenn Du kein neues Passwort eingeben willst, dann ignoriere diese E-Mail einfach. Dein altes Passwort bleibt dann "
-						. "weiterhin gültig.\n\nDas Team von Illarion\nhttps://illarion.org";
+						. "weiterhin gültig.\n\nDas Team von Illarion\nhttps://illarion.org",'text/plain');
     			}
     			else
     			{
-    				$mail->Subject = 'New password';
-					$mail->Body = "<html><body><h3>Greetings ".$name.",</h3><p>there was a request for a new password for your account on the Illarion homepage."
+    				$mail->setSubject('New password');
+					$mail->setBody("<html><body><h3>Greetings ".$name.",</h3><p>there was a request for a new password for your account on the Illarion homepage."
 						. " You are now able to enter a new password by <a href='". Page::getURL()."/community/account/de_forgot_pw.php?id=".$valid_key."'>following this link</a>.</p>"
 						. "<p>In case you don't want to enter a new password please just ignore this email. Your old password remains valid.</p>"
-						. "<p>The team of <a href='https://illarion.org'>Illarion</a></p>";
-					$mail->AltBody = "Greetings ".$name.",\n\nthere was a request for a new password for your account on the Illarion homepage."
+						. "<p>The team of <a href='https://illarion.org'>Illarion</a></p>",'text/html');
+					$mail->addPart("Greetings ".$name.",\n\nthere was a request for a new password for your account on the Illarion homepage."
 						. " You are now able to enter a new password after following this link:\n\n"
 						. Page::getURL()."/community/account/us_forgot_pw.php?id=".$valid_key."\n\n"
 						. "In case you don't want to enter a new password please just ignore this email. Your old password remains valid."
-						. "\n\nThe team of Illarion\nhttps://illarion.org";
+						. "\n\nThe team of Illarion\nhttps://illarion.org",'text/plain');
     			}
-    			if(!$mail->Send())
+
+				$transport = new Swift_SmtpTransport('localhost', 25);
+				$mailer = new Swift_Mailer($transport);
+
+    			if(!$mailer->send($mail))
     			{
-    				Messages::add( $mail->ErrorInfo, 'error' );
+    				Messages::add( (Page::isGerman() ? 'Fehler beim Versenden der E-Mail' : 'The email could not be sent.'), 'error' );
     			}
     			else
     			{

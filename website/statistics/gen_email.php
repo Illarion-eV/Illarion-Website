@@ -1,4 +1,5 @@
 <?php
+	require_once __DIR__ . '/../../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/database.php';
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/shared/email/class.phpmailer.php';
 
@@ -251,17 +252,11 @@ TXT;
 	$targets_activation = '';
 	$error = '';
 
-	$mail = new PHPMailer();
-	$mail->IsMail();
-	$mail->IsHTML(true);
-	$mail->WordWrap = 80;
-	$mail->CharSet = 'utf-8';
-	$mail->Sender = 'accounts@illarion.org';
-	$mail->From = 'accounts@illarion.org';
-	$mail->FromName = 'Illarion';
-	$mail->AddReplyTo( 'accounts@illarion.org', 'Illarion' );
-	$mail->SetLanguage( 'de', '' );
-	$mail->SingleTo = false;
+	$mail = new Swift_Message();
+	$mail->setFrom('accounts@illarion.org', 'Illarion');
+
+	$transport = new Swift_SmtpTransport('localhost', 25);
+	$mailer = new Swift_Mailer($transport);
 
 	$send = false;
 
@@ -274,29 +269,27 @@ TXT;
 		} else {
 			$send_mail_cnt++;
 		}
-		
-	    $mail->ClearAddresses();
-	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+
+	    $mail->setTo( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
-		    $mail->Subject = '[Illarion] Inaktiver Account';
-		    $mail->Body = $de_inactive_html;
-			$mail->AltBody = $de_inactive;
+		    $mail->setSubject('[Illarion] Inaktiver Account');
+		    $mail->setBody($de_inactive_html, 'text/html');
+			$mail->addPart($de_inactive, 'text/plain');
 			$targets_inactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
-		    $mail->Subject = '[Illarion] Inactive account';
-	        $mail->Body = $us_inactive_html;
-			$mail->AltBody = $us_inactive;
+		    $mail->setSubject('[Illarion] Inactive account');
+	        $mail->setBody($us_inactive_html, 'text/html');
+			$mail->addPart($us_inactive, 'text/plain');
 			$targets_inactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{
-		    $mail->Send();
-		    if ($mail->isError())
+		    if (!$mailer->send($mail))
     		{
-    			$targets_inactive.= ' - Error: '.$mail->ErrorInfo;
+    			$targets_inactive.= ' - Error ';
     		}
 	    }
 	    $targets_inactive.= '</li>';
@@ -311,29 +304,27 @@ TXT;
 		} else {
 			$send_mail_cnt++;
 		}
-		
-	    $mail->ClearAddresses();
-	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+
+	    $mail->setTo( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
-		    $mail->Subject = '[Illarion] Illarion vermisst dich!';
-		    $mail->Body = $de_veryinactive_html;
-			$mail->AltBody = $de_veryinactive;
+		    $mail->setSubject('[Illarion] Illarion vermisst dich!');
+		    $mail->setBody($de_veryinactive_html, 'text/html');
+			$mail->addPart($de_veryinactive, 'text/plain');
 			$targets_veryinactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
-		    $mail->Subject = '[Illarion] Illarion misses you!';
-	        $mail->Body = $us_veryinactive_html;
-			$mail->AltBody = $us_veryinactive;
+		    $mail->setSubject('[Illarion] Illarion misses you!');
+	        $mail->setBody($us_veryinactive_html, 'text/html');
+			$mail->addPart($us_veryinactive, 'text/plain');
 			$targets_veryinactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{
-		    $mail->Send();
-		    if ($mail->isError())
-    		{
-    			$targets_veryinactive.= ' - Error: '.$mail->ErrorInfo;
+			if (!$mailer->send($mail))
+			{
+    			$targets_veryinactive.= ' - Error ';
     		}
 	    }
 	    $targets_veryinactive.= '</li>';
@@ -347,29 +338,27 @@ TXT;
 		} else {
 			$send_mail_cnt++;
 		}
-		
-        $mail->ClearAddresses();
-	    $mail->AddAddress( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
+
+	    $mail->setTo( $target['acc_email'], ($target['acc_name'] ? $target['acc_name'] : $target['acc_login']) );
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
-		    $mail->Subject = '[Illarion] Nicht aktivierter Account';
-	        $mail->Body = sprintf( $de_notactivated_html, $target['key'] );
-			$mail->AltBody = sprintf( $de_notactivated, $target['key'] );
+		    $mail->setSubject('[Illarion] Nicht aktivierter Account');
+	        $mail->setBody(sprintf( $de_notactivated_html, $target['key'] ), 'text/html');
+			$mail->addPart(sprintf( $de_notactivated, $target['key'] ), 'text/plain');
 			$targets_activation.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
-		    $mail->Subject = '[Illarion] Unactivated account';
-		    $mail->Body = sprintf( $us_notactivated_html, $target['key'] );
-			$mail->AltBody = sprintf( $us_notactivated, $target['key'] );
+		    $mail->setSubject('[Illarion] Unactivated account');
+		    $mail->setBody(sprintf( $us_notactivated_html, $target['key'] ), 'text/html');
+			$mail->addPart(sprintf( $us_notactivated, $target['key'] ), 'text/plain');
 			$targets_activation.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
 		{
-		    $mail->Send();
-		    if ($mail->isError())
-    		{
-    			$targets_activation.= ' - Error: '.$mail->ErrorInfo;
+			if (!$mailer->send($mail))
+			{
+    			$targets_activation.= ' - Error ';
     		}
 	    }
 	    $targets_activation.= '</li>';

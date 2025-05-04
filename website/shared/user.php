@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
+
 /*
  * User handler for Illarion
  *
@@ -328,50 +330,40 @@ class IllaUser {
 		$pgSQL->setQuery('INSERT INTO mail_cert VALUES (' . $pgSQL->Quote(self::$ID) . ',' . $pgSQL->Quote($valid_key) . ',0)');
 		$pgSQL->query();
 
-		$mail = new PHPMailer();
-		$mail->IsMail();
-		$mail->IsHTML(true);
-		$mail->WordWrap = 80;
-		$mail->CharSet = 'utf-8';
-		$mail->SetLanguage(Page::getLanguage());
-
-		$mail->Boundary = md5(uniqid(time()));
-		$mail->ContentType = "multipart/alternative; boundary=\"{$mail->Boundary}\"";
-
-		$mail->AddAddress(self::$email, self::$name);
-		$mail->Sender = 'accounts@illarion.org';
-		$mail->From = 'accounts@illarion.org';
-		$mail->FromName = 'Illarion';
-		$mail->AddReplyTo('accounts@illarion.org', 'Illarion');
+		$message = new Swift_Message();
+		$message->setFrom('accounts@illarion.org', 'Illarion')->setTo(self::$email, self::$name);
 
 		if (self::german()) {
-			$mail->Subject = 'Registrierung bei Illarion';
-			$mail->Body = "<html><body><h3>Willkommen bei Illarion</h3><p>Grüße " . self::$name . ",</p><p>mit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel Illarion "
+			$message->setSubject('Registrierung bei Illarion');
+			$message->setBody("<html><body><h3>Willkommen bei Illarion</h3><p>Grüße " . self::$name . ",</p><p>mit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel Illarion "
 				. "(" . Page::getURL() . ") vorgenommen.</p><p><a href='"
 				. Page::getURL() . "/community/account/us_register.php?activate={$valid_key}'>Klicke hier, um deine Registrierung abzuschließen.</a></p><p>Solltest Du Dich nicht bei Illarion "
 				. "registriert haben, ignoriere diese Mail bitte einfach.</p><p>Das Team von <a href='" . Page::getURL()
-				. "'>Illarion</a></p><p>P.S.: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!</p></body></html>";
-			$mail->AltBody = "Grüße " . self::$name . ",\n\nmit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel "
+				. "'>Illarion</a></p><p>P.S.: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!</p></body></html>",'text/html');
+			$message->addPart("Grüße " . self::$name . ",\n\nmit dieser E-Mail Adresse wurde eine Registrierung beim Online Rollenspiel "
 			. "Illarion (" . Page::getURL() . ") vorgenommen, die mit folgendem Link nun vervollständigt werden kann:\n\n"
 			. Page::getURL() . "/community/account/de_register.php?activate={$valid_key}\n\nSolltest Du Dich nicht bei Illarion "
 			. "registriert haben, ignoriere diese Mail bitte einfach.\n\nDas Team von Illarion\n" . Page::getURL()
-			. "\n\n\nP.S.: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!";
+			. "\n\n\nP.S.: Wir freuen uns über jedes Feedback über Deine ersten Eindrücke im Spiel!",'text/plan');
 		}else {
-			$mail->Subject = 'Registration at Illarion';
-			$mail->Body = "<html><body><h3>Welcome to Illarion</h3><p>Greetings " . self::$name . ",</p><p>with this email address a registration at the online RPG Illarion "
+			$message->setSubject('Registration at Illarion');
+			$message->setBody("<html><body><h3>Welcome to Illarion</h3><p>Greetings " . self::$name . ",</p><p>with this email address a registration at the online RPG Illarion "
 			 . "(" . Page::getURL() . ") was done.</p><p><a href='"
 			 . Page::getURL() . "/community/account/us_register.php?activate={$valid_key}'>Complete your registration by clicking here.</a></p><p>In case you are not the one who "
 			 . "registered at Illarion, please ignore this email.</p><p>The team of <a href='" . Page::getURL()
-			 . "'>Illarion</a></p><p>P.S.: We appreciate any feedback concerning your first impressions about the game!</p></body></html>";
-			$mail->AltBody = "Greetings " . self::$name . ",\n\nwith this email adress a registration at the online RPG Illarion "
+			 . "'>Illarion</a></p><p>P.S.: We appreciate any feedback concerning your first impressions about the game!</p></body></html>",'text/html');
+			$message->addPart("Greetings " . self::$name . ",\n\nwith this email adress a registration at the online RPG Illarion "
 				. "(" . Page::getURL() . ") was done. The registration process can be completed by clicking the following link:\n\n"
 				. Page::getURL() . "/community/account/us_register.php?activate={$valid_key}\n\nIn case you are not the one who "
 				. "registered at Illarion, please ignore this email.\n\nThe team of Illarion\n" . Page::getURL()
-				. "\n\n\nP.S.: We appreciate any feedback concerning your first impressions about the game!";
+				. "\n\n\nP.S.: We appreciate any feedback concerning your first impressions about the game!",'text/plan');
 		}
 
-		if (!$mail->Send()) {
-			Messages::add($mail->ErrorInfo, 'error');
+		$transport = new Swift_SmtpTransport('localhost', 25);
+		$mailer = new Swift_Mailer($transport);
+
+		if(!$mailer->send($message)) {
+			Messages::add( (Page::isGerman() ? 'Fehler beim Versenden der E-Mail.' : 'The email could not be sent.'), 'error' );
 		}
 
 		return true;
