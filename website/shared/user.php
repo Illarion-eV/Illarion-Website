@@ -335,9 +335,9 @@ class IllaUser {
 		$mail->CharSet = 'utf-8';
 		$mail->SetLanguage(Page::getLanguage());
 		$mail->AddAddress(self::$email, self::$name);
+		$mail->Sender = 'accounts@illarion.org';
 		$mail->From = 'accounts@illarion.org';
 		$mail->FromName = 'Illarion';
-		$mail->Sender = 'accounts@illarion.org';
 		$mail->AddReplyTo('accounts@illarion.org', 'Illarion');
 
 		if (self::german()) {

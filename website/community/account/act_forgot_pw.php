@@ -40,9 +40,9 @@
     			$mail->CharSet = 'utf-8';
     			$mail->SetLanguage( Page::getLanguage(), '' );
     			$mail->AddAddress( $email, $name );
+				$mail->Sender = 'accounts@illarion.org';
     			$mail->From = 'accounts@illarion.org';
     			$mail->FromName = 'Illarion';
-				$mail->Sender = 'accounts@illarion.org';
     			$mail->AddReplyTo( 'accounts@illarion.org', 'Illarion' );
 
     			if (Page::isGerman())
