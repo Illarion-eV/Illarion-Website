@@ -334,6 +334,10 @@ class IllaUser {
 		$mail->WordWrap = 80;
 		$mail->CharSet = 'utf-8';
 		$mail->SetLanguage(Page::getLanguage());
+
+		$mail->Boundary = md5(uniqid(time()));
+		$mail->ContentType = "multipart/alternative; boundary=\"{$mail->Boundary}\"";
+
 		$mail->AddAddress(self::$email, self::$name);
 		$mail->Sender = 'accounts@illarion.org';
 		$mail->From = 'accounts@illarion.org';
