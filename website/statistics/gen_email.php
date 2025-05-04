@@ -22,6 +22,13 @@ Das Team von Illarion
 https://illarion.org
 TXT;
 
+	$de_inactive_html = <<<TXT
+<html><body><p>Lieber Spieler,</p>
+<p>du hast dich vor einer Weile beim Online-Rollenspiel <a href='https://illarion.org'>Illarion</a> angemeldet, jedoch schon länger nicht mehr eingeloggt bzw. mit deinem Charakter nicht weiter gespielt.</p>
+<p>Da wir Illarion ständig weiterentwickeln und daher immer an Verbesserungsvorschlägen und Kritik interessiert sind, würden wir dich bitten, auf diese E-Mail kurz zu antworten und uns die Gründe dafür zu nennen, warum du nicht weiter gespielt hast.</p>
+<p>Herzlichen Dank schon im Voraus,</br>Das Team von <a href='https://illarion.org'>Illarion</a></p></body></html>
+TXT;
+
 	$us_inactive = <<<TXT
 Dear player,
 
@@ -33,6 +40,13 @@ Thank you very much in advance,
 The Illarion Staff
 
 https://illarion.org
+TXT;
+
+$us_inactive_html = <<<TXT
+<html><body><p>Dear player,</p>
+<p>Some time ago, you created an account for the online roleplaying game <a href='https://illarion.org'>Illarion</a>, but you have either not logged in recently or you did not really start playing the game.</p>
+<p>Since we are actively developing the game and are looking for suggestions and criticism, we would kindly ask you to send a short reply to this e-mail, telling us the reasons why you ceased playing.</p>
+<p>Thank you very much in advance,</br>The <a href='https://illarion.org'>Illarion</a> Staff</p></body></html>
 TXT;
 
 	$de_notactivated = <<<TXT
@@ -53,6 +67,15 @@ Das Team von Illarion
 https://illarion.org
 TXT;
 
+$de_notactivated_html = <<<TXT
+<html><body><p>Lieber Spieler,</p>
+<p>vor einigen Tagen hast du dich beim Online-Rollenspiel <a href='https://illarion.org'>Illarion</a> angemeldet. Allerdings hast du deinen neuen Account niemals aktiviert.</p>
+<p>Sollte es ein Problem bei der Aktivierung deines Accounts gegeben haben, wende dich bitte an den Support von Illarion. Dazu kannst du auf diese E-Mail einfach antworten oder im Forum von Illarion nach Hilfe fragen.</p>
+<p><a href="https://illarion.org/community/account/us_register.php?activate=%s">Klicke hier, um deinen Account zu aktivieren.</a></p>
+<p>Wenn du nicht daran interessiert bist, deinen Illarion-Account zu aktivieren, ignoriere diese E-Mail bitte. Es werden dann keine weiteren E-Mails von Illarion an dich geschickt.</p>
+<p>Mit freundlichen Grüßen,</br>Das Team von  <a href='https://illarion.org'>Illarion</a></p></body></html>
+TXT;
+
 	$us_notactivated = <<<TXT
 Dear player,
 
@@ -71,6 +94,15 @@ The Illarion Staff
 https://illarion.org
 TXT;
 
+$us_notactivated_html = <<<TXT
+<html><body><p>Dear player,</p>
+<p>some days ago you registered at the online roleplaying game <a href='https://illarion.org'>Illarion</a>, but you never activated your account.</p>
+<p>In case there was a problem with the activation of your account, please contact the technical support of Illarion. To do this, you can just answer to this e-mail or write a help request at the board of Illarion.</p>
+<p><a href="https://illarion.org/community/account/us_register.php?activate=%s">Click here for your activation.</a></p>
+<p>If you are not interested in activating your Illarion account, please just ignore this e-mail. There wont be further e-mails sent to you.</p>
+<p>Yours sincerely,</br>The <a href='https://illarion.org'>Illarion</a> Staff</p></body></html>
+TXT;
+
 	$de_veryinactive = <<<TXT
 Lieber Spieler,
 
@@ -84,7 +116,15 @@ Das Team von Illarion
 https://illarion.org
 TXT;
 
-	$us_veryinactive = <<<TXT
+$de_veryinactive_html = <<<TXT
+<html><body><p>Lieber Spieler,</p>
+<p>das Online-Rollenspiel <a href='https://illarion.org'>Illarion</a> vermisst dich! Es ist einige Zeit vergangen, seitdem du mit deinen Charakteren das Land Illarion besucht hast und seitdem ist sicherlich eine Menge passiert. Dein Account ist weiterhin spielbar und wir würden uns freuen, dich wieder als Spieler begrüßen zu können.</p>
+<p>Solltest du allerdings entschieden haben, nie wieder Illarion spielen zu wollen, so sind wir sehr an den Gründen dafür interessiert. Jeder Spieler, der Illarion verlässt, ist ein Verlust für die Community und zeigt uns, dass wir das Spiel verbessern können. Bitte teile uns als Antwort auf diese E-Mail mit, warum du dich dazu entschlossen hast, Illarion zu verlassen.</p>
+<p>Herzlichen Dank und hoffentlich bis bald,</br>Das Team von  <a href='https://illarion.org'>Illarion</a></p></body></html>
+TXT;
+
+
+$us_veryinactive = <<<TXT
 Dear player,
 
 the online roleplaying game Illarion (https://illarion.org) misses you! It has been a while since you visited the world Illarion with your characters. In the meantime, many events have taken place in the game. Your account remains active and we are looking forward to welcoming you once again as a player.
@@ -95,6 +135,13 @@ Thank you very much and see you soon,
 The Illarion Staff 
 
 https://illarion.org
+TXT;
+
+$us_veryinactive_html = <<<TXT
+<html><body><p>Dear player,</p>
+<p>the online roleplaying game <a href='https://illarion.org'>Illarion</a> misses you! It has been a while since you visited the world Illarion with your characters. In the meantime, many events have taken place in the game. Your account remains active and we are looking forward to welcoming you once again as a player.</p>
+<p>If you decided not to play Illarion anymore, we would kindly ask you to tell us the reasons for this decision. Every player who leaves Illarion is a loss for the community and encourages us to improve the game. Please give us the reasons for your decision to abandon Illarion as answer to this e-mail.</p>
+<p>Thank you very much and see you soon,</br>The <a href='https://illarion.org'>Illarion</a> Staff</p></body></html>
 TXT;
 
 	$pgsql =& Database::getPostgreSQL();
@@ -206,12 +253,13 @@ TXT;
 
 	$mail = new PHPMailer();
 	$mail->IsMail();
-	$mail->IsHTML(false);
+	$mail->IsHTML(true);
 	$mail->WordWrap = 80;
 	$mail->CharSet = 'utf-8';
-	$mail->From = 'nitram@illarion.org';
+	$mail->From = 'accounts@illarion.org';
 	$mail->FromName = 'Illarion';
-	$mail->AddReplyTo( 'nitram@illarion.org', 'Illarion' );
+	$mail->Sender = 'accounts@illarion.org';
+	$mail->AddReplyTo( 'accounts@illarion.org', 'Illarion' );
 	$mail->SetLanguage( 'de', '' );
 	$mail->SingleTo = false;
 
@@ -232,13 +280,15 @@ TXT;
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Inaktiver Account';
-		    $mail->Body = $de_inactive;
+		    $mail->Body = $de_inactive_html;
+			$mail->AltBody = $de_inactive;
 			$targets_inactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Inactive account';
-	        $mail->Body = $us_inactive;
+	        $mail->Body = $us_inactive_html;
+			$mail->AltBody = $us_inactive;
 			$targets_inactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
@@ -267,13 +317,15 @@ TXT;
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Illarion vermisst dich!';
-		    $mail->Body = $de_veryinactive;
+		    $mail->Body = $de_veryinactive_html;
+			$mail->AltBody = $de_veryinactive;
 			$targets_veryinactive.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Illarion misses you!';
-	        $mail->Body = $us_veryinactive;
+	        $mail->Body = $us_veryinactive_html;
+			$mail->AltBody = $us_veryinactive;
 			$targets_veryinactive.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
@@ -301,13 +353,15 @@ TXT;
 		if ($languages[$target['acc_id']]['acc_lang'] == 0)
 		{
 		    $mail->Subject = '[Illarion] Nicht aktivierter Account';
-	        $mail->Body = sprintf( $de_notactivated, $target['key'] );
+	        $mail->Body = sprintf( $de_notactivated_html, $target['key'] );
+			$mail->AltBody = sprintf( $de_notactivated, $target['key'] );
 			$targets_activation.= '<li>'.$target['acc_email'].'(g)';
 		}
 		else
 		{
 		    $mail->Subject = '[Illarion] Unactivated account';
-		    $mail->Body = sprintf( $us_notactivated, $target['key'] );
+		    $mail->Body = sprintf( $us_notactivated_html, $target['key'] );
+			$mail->AltBody = sprintf( $us_notactivated, $target['key'] );
 			$targets_activation.= '<li>'.$target['acc_email'].'(e)';
 		}
 		if (defined( 'SEND_MAILS' ))
