@@ -1537,7 +1537,7 @@ class Page {
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Testserver&#8239;offline' : 'Testserver&#8239;offline');
 			}
 			
-			$mantisIssues = self::getOpenTestserverIssues();
+			$mantisIssues = 0; //self::getOpenTestserverIssues();
 			$search_keywords[++$search_cnt] = '{MANTIS_ISSUES}';
 			if ($mantisIssues == 0) {
 				$search_replace[$search_cnt] = (self::isGerman() ? 'Keine Tests' : 'No tests');

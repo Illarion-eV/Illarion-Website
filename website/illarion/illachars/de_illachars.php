@@ -230,7 +230,10 @@
 				    //VARIABLEN BESTIMMEN
 				    //
 					$settings=$char_settings[$chars[$i]['chr_playerid']]['settings'];
-    				$show_profil = ( (int)($settings&1) > 0 );
+
+                    echo $char_settings;
+
+                    $show_profil = ( (int)($settings&1) > 0 );
     				$show_online = ( (int)($settings&2) == 0 );
     				$show_story = ( (int)($settings&4) > 0 );
     				$show_birthday = ( (int)($settings&8) > 0 );
