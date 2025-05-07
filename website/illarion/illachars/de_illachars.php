@@ -84,9 +84,6 @@
         . "\n WHERE char_id IN ('0".implode("','",$char_ids)."')"
     ;
 
-    error_log($query);
-    error_log(json_encode($char_ids));
-
 	$db_hp->setQuery( $query );
 	$char_settings=$db_hp->loadAssocList('char_id');
 	
@@ -233,10 +230,6 @@
 				    //VARIABLEN BESTIMMEN
 				    //
 					$settings=$char_settings[$chars[$i]['chr_playerid']]['settings'];
-
-                    error_log(json_encode($char_settings));
-                    error_log(json_encode($chars));
-
                     $show_profil = ( (int)($settings&1) > 0 );
     				$show_online = ( (int)($settings&2) == 0 );
     				$show_story = ( (int)($settings&4) > 0 );

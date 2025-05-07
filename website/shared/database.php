@@ -913,9 +913,7 @@ class DatabasePostgreSQL extends DatabaseMain {
 		if (!defined('NO_DEBUG')) $start_time = microtime(true);
 
 		$array = array();
-        error_log("BEGIN ROW FETCHING");
 		while ($row = pg_fetch_row($this->_cursor)) {
-            error_log(json_encode($row));
 			$array[] = $row[$numinarray];
 		}
 		$this->utf8encode($array);
