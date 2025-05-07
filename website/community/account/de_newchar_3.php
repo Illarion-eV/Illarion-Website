@@ -110,7 +110,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die physische Kraft deines Charakters. Sie beeinflusst direkt den Schaden, den du im Kampf verursachst, sowie das Gewicht, das du tragen kannst. Dieses Attribut ist wichtig für Rüstungsmacher sowie für alle Arten von Kämpfern und Sammlern, insbesondere beim Graben und Bergbau. Stärke beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Schlagwaffen, Stichwaffen, Hiebwaffen, Ringen, Rüstungsmacher, Bergbau und Graben.">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
+							<a title="Die physische Kraft deines Charakters. Sie bestimmt den Schaden, den du im Kampf verursachst sowie das Gewicht, das du tragen kannst. Dieses Attribut ist wichtig für Rüstschmiede und für jede Art von Kämpfer oder Sammler, insbesondere für Bergarbeiter und Erdarbeiter. Stärke beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Schlagwaffen, Stichwaffen, Hiebwaffen, Ringen, Rüstschmied, Bergbau und Graben.">Stärke</a> (<?php echo $limits['minstrength'],' - ',$limits['maxstrength']; ?>)
 						</td>
 						<td style="width:423px;">
 							<?php include_slider( $limits, 'strength' ); ?>
@@ -118,7 +118,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Geschwindigkeit der Aktionen deines Charakters. Sie bestimmt das Lauftempo und die Angriffsgeschwindigkeit. Dieses Attribut ist wichtig für Kämpfer, die Schaden vermeiden wollen, aber es hilft auch beim Schwingen einer Axt zum Bäumefällen und ermöglicht die geschickten Bewegungen, die nötig sind, um mit dem rotierenden Ton als Töpfer Schritt zu halten. Beweglichkeit beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Parieren, Leichte Rüstung, Mittlere Rüstung, Schwere Rüstung, Holzfällerei und Töpferei.">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
+							<a title="Die Handlungsgeschwindigkeit deines Charakters. Sie bestimmt das Lauftempo und die Angriffsgeschwindigkeit. Dieses Attribut ist für Kämpfer wichtig, die Schaden vermeiden wollen, aber es hilft auch Holzfällern beim Schwingen einer Axt und ermöglicht die geschickten Bewegungen, die nötig sind, um als Töpfer mit dem rotierenden Ton Schritt zu halten. Schnelligkeit beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Parieren, Leichte Rüstung, Mittlere Rüstung, Schwere Rüstung, Holzfällen und Töpfern.">Schnelligkeit</a> (<?php echo $limits['minagility'],' - ',$limits['maxagility']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'agility' ); ?>
@@ -126,7 +126,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die physische Widerstandskraft deines Charakters. Sie bestimmt die Regeneration der Lebenspunkte. Dieses Attribut ist für alle Sammler wichtig, hilft dir, das endlose Hämmern als Schmied zu ertragen, und unterstützt Kämpfer dabei, Schaden standzuhalten. Konstitution beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Graben, Landwirtschaft, Fischerei, Kräuterkunde, Viehzucht, Bergbau, Gerberei, Weberei, Holzfällerei und Schmiedekunst.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die physische Widerstandskraft deines Charakters. Sie bestimmt die Lebenspunktregeneration. Dieses Attribut ist für alle Sammler wichtig. Es hilft dir, das endlose Hämmern als Schmied zu ertragen und unterstützt Kämpfer dabei, Schaden auszuhalten. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Graben, Landwirtschaft, Angeln, Kräuterkunde, Ackerbau, Bergbau, Gerben, Weben, Holzfällen und Schmieden.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -134,7 +134,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Koordinationsfähigkeiten deines Charakters. Dieses Attribut ist für alle Handwerker essenziell, da es die Qualität hergestellter Waren erhöht. Es hilft auch Kämpfern, ihr Ziel härter zu treffen, und unterstützt Bauern dabei, Sicheln und Sensen effizienter zu nutzen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Rüstungsmacher, Schmiedekunst, Tischlerei, Backen/Kochen, Brauen, Edelsteinschleifen, Glasbläserei, Feinmechanik, Töpferei, Schneiderei und Landwirtschaft.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Die Koordinationsfähigkeit deines Charakters. Dieses Attribut ist für alle Handwerker essenziell, da es die Qualität hergestellter Waren erhöht. Es hilft auch Kämpfern, ihr Ziel härter zu treffen und unterstützt Bauern dabei, Sicheln und Sensen effizienter zu nutzen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Rüstschmied, Schmieden, Schreinern, Backen und Kochen, Brauen, Edelsteinschleifen, Glasblasen, Feinschmieden, Töpfern, Schneiderei und Landwirtschaft.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -142,7 +142,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die kognitive Einsicht deines Charakters. Dieses Attribut erhöht die Kraft der Zauber eines Magiers und gewährt einen kleinen Bonus auf das Lernen aller Fähigkeiten. Es verleiht außerdem die Kreativität, die ein guter Schneider benötigt, sowie die Geduld und den Scharfsinn, um Fische als Fischer auszutricksen. Intelligenz beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Feuermagie, Wassermagie, Erdmagie, Geistesmagie, Windmagie, Verzauberung,Raum-Magie, Schneiderei und Fischerei.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Die kognitive Verständnis deines Charakters. Dieses Attribut erhöht die Kraft der Zauber eines Magiers und gewährt einen kleinen Bonus auf das Lernen aller Fähigkeiten. Es verleiht außerdem die Kreativität, die ein guter Schneider benötigt sowie die Geduld und den Scharfsinn, um Fische als Angler auszutricksen. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Feuermagie, Wassermagie, Erdmagie, Geistesmagie, Windmagie, Verzaubern, Teleportmagie, Schneidern und Angeln.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +150,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Fähigkeit deines Charakters, die sechs Sinne zu nutzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist wichtig für Bogenschützen, hilft Nahkämpfern, ihr Ziel zu treffen, und unterstützt Magier beim Zielen. Außerdem verleiht es den Geschmackssinn, der für einen guten Koch, Bäcker und Brauer nötig ist, sowie die scharfe Sicht, um besser zu erkennen, welche Kräuter reif für die Ernte sind. Zudem erleichtert es das Auffinden von Zielen auf Schatzkarten und wird in Zukunft für Druiden wichtig sein. Wahrnehmung beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Distanzwaffen, Kochen und Backen, Brauen, Kräuterkunde.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, seine Sinne zu nutzen. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist wichtig für Bogenschützen, hilft Nahkämpfern, ihr Ziel zu treffen und unterstützt Magier beim Zielen. Außerdem verleiht es den Geschmackssinn, der für einen guten Koch, Bäcker und Brauer nötig ist sowie die scharfe Sicht, um besser zu erkennen, welche Kräuter reif für die Ernte sind. Zudem erleichtert es das Finden von Schatzkartenzielen und wird in Zukunft für Druiden wichtig sein. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Distanzwaffen, Kochen und Backen, Brauen, Kräuterkunde.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -158,7 +158,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die mentale Widerstandskraft deines Charakters. Dieses Attribut erhöht sowohl deine Fähigkeit, Magie zu widerstehen, als auch die Durchschlagskraft der Zauber eines Magiers – ein Wettkampf des stärkeren Willens. Es verleiht dir außerdem die Ausdauer, der Hitze eines Glasbläserofens zu trotzen, sowie dem ständigen Sägestaub, Splittern und Schleifen in der Tischlerei standzuhalten. Zudem hilft es dir, sturer als ein Schaf zu sein, was das Scheren erleichtert. In Zukunft wird es auch für Priester von Bedeutung sein. Willenskraft beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Magieresistenz, Glasbläserei, Tischlerei, Gerberei und Weberei.">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
+							<a title="Die mentale Widerstandskraft deines Charakters. Dieses Attribut erhöht sowohl deine Fähigkeit, Magie zu widerstehen, als auch die Durchschlagskraft der Zauber eines Magiers - ein Wettkampf des stärkeren Willens. Es verleiht dir außerdem die Ausdauer, der Hitze eines Glasbläserofens zu trotzen sowie dem ständigen Splittern und Sägestaub als Schreiner standzuhalten. Zudem hilft es dir, sturer als ein Schaf zu sein, was das Scheren erleichtert. In Zukunft wird es auch für Priester von Bedeutung sein. Willenskraft beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Magieresistenz, Glasblasen, Schreinern, Gerben und Weben.">Willenskraft</a> (<?php echo $limits['minwillpower'],' - ',$limits['maxwillpower']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'willpower' ); ?>
@@ -166,7 +166,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Affinität deines Charakters zur mystischen Welt. Sie beeinflusst die Regeneration von Mana und göttlicher Kraft sowie deine Fähigkeit, Tränke zu brauen. Zudem erleichtert sie den Umgang mit Tieren, was für die Viehzucht wichtig sein kann, und verleiht den künstlerischen Geist und die Leidenschaft, die nötig sind, um meisterhafte Edelsteine zu schleifen und kunstvollen Schmuck herzustellen. Essenz beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Alchemie, Viehzucht, Edelsteinschleifen, Feinmechanik.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters zur mystischen Welt. Sie beeinflusst die Regeneration von Mana und göttlicher Kraft sowie deine Fähigkeit, Tränke zu brauen. Zudem erleichtert sie den Umgang mit Tieren, was für die Viehzucht wichtig sein kann und verleiht dem künstlerischen Geist die Leidenschaft, die nötig ist, um meisterhafte Edelsteine zu schleifen und kunstvollen Schmuck herzustellen. Essenz beeinflusst die Lerngeschwindigkeit der folgenden Fähigkeiten: Alchemie, Viehzucht, Edelsteinschleifen, Feinschmieden.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
