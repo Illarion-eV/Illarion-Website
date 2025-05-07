@@ -84,6 +84,9 @@
         . "\n WHERE char_id IN ('0".implode("','",$char_ids)."')"
     ;
 
+    error_log($query);
+    error_log(json_encode($char_ids));
+
 	$db_hp->setQuery( $query );
 	$char_settings=$db_hp->loadAssocList('char_id');
 	
