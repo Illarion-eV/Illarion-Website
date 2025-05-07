@@ -240,7 +240,8 @@ abstract class DatabaseMain {
 		} elseif (!is_object($this->_cursor)) {
 			return false;
 		}
-		return true;
+        pg_result_seek($this->_cursor, 0);
+        return true;
 	}
 
 	public abstract function Begin();
