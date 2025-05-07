@@ -73,13 +73,12 @@ $limits['maxremaining'] = $limits['maxattribs'];
 calculateLimits( $limits );
 $limit_text = generateLimitTexts( $limits );
 
-$db =& Database::getPostgreSQL( 'accounts' );
 $query = 'SELECT attr_name_de AS name, attr_str AS str, attr_agi AS agi, attr_dex AS dex, attr_con AS con, attr_int AS int, attr_per AS per, attr_wil AS wil, attr_ess AS ess'
-.PHP_EOL.' FROM attribtemp'
+.PHP_EOL.' FROM attribute_packages'
 .PHP_EOL.' ORDER BY attr_id'
 ;
-$db->setQuery( $query );
-$templates = $db->loadAssocList();
+$pgSQL->setQuery( $query );
+$templates = $pgSQL->loadAssocList();
 
 ?>
 <h1>Neuen Charakter erstellen</h1>
