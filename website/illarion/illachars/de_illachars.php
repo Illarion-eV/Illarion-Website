@@ -231,7 +231,7 @@
 				    //
 					$settings=$char_settings[$chars[$i]['chr_playerid']]['settings'];
 
-                    error_log(print_r($char_settings, true));
+                    error_log(json_encode($char_settings));
 
                     $show_profil = ( (int)($settings&1) > 0 );
     				$show_online = ( (int)($settings&2) == 0 );
