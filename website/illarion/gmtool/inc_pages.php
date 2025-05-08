@@ -6,7 +6,7 @@
 
 // . "\n LEFT JOIN chars AS chars_player ON gmpager.pager_user = chars_player.chr_playerid"
 
-		$query = "SELECT gmpager.oid,"
+		$query = "SELECT gmpager.pager_id,"
 						.PHP_EOL." gmpager.pager_user,"
 						.PHP_EOL." gmpager.pager_text,"
 						.PHP_EOL." gmpager.pager_time,"
