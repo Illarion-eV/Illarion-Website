@@ -13,11 +13,11 @@
 						.PHP_EOL." gmpager.pager_note,"
 						.PHP_EOL." chars.chr_name,"
 						.PHP_EOL." account.acc_name,"
-						.PHP_EOL." gm.chr_name AS gm_name"
+						.PHP_EOL." gm.acc_name AS gm_name"
 						.PHP_EOL." FROM illarionserver.gmpager"
 						.PHP_EOL." LEFT JOIN illarionserver.chars ON gmpager.pager_user = chars.chr_playerid"
 						.PHP_EOL." LEFT JOIN accounts.account ON chars.chr_accid = account.acc_id"
-						.PHP_EOL." LEFT JOIN illarionserver.chars AS gm ON gmpager.pager_gm = gm.chr_playerid"
+						.PHP_EOL." LEFT JOIN accounts.account AS gm ON gmpager.pager_gm = gm.acc_id"
 						.PHP_EOL." WHERE gmpager.pager_status = ".$pgSQL->Quote($filter)
 						.PHP_EOL." ORDER BY illarionserver.gmpager.pager_time DESC"
 						.PHP_EOL." LIMIT 100;";
