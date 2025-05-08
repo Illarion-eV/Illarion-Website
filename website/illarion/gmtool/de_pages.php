@@ -50,7 +50,7 @@
 
 <div class="spacer"></div>
 
-<?php include_page_menu(isset($_GET['filter']) ? $_GET['filter'] : 1); ?>
+<?php include_page_menu(isset($_GET['filter']) ? $_GET['filter'] : 0); ?>
 
 <div class="spacer"></div>
 
@@ -65,7 +65,7 @@
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['pager_id']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&amp;page=".$page['pager_id']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
             echo htmlspecialchars($page['pager_text'] ?? "");
             echo "</td></tr>";
@@ -78,16 +78,16 @@
                 echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&amp;page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notiz</b></td></tr>";
-                echo "<tr><td><textarea rows='3' cols='80' readonly='true'>";
+                echo "<tr><td><textarea rows='3' cols='45' readonly='true'>";
                 echo htmlspecialchars($page['pager_text'] ?? "");
                 echo "</textarea></td>";
-                echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
+                echo "<td valign='top'><textarea name='note' rows='3' cols='35'>";
                 echo htmlspecialchars($page['pager_note'] ?? "");
                 echo "</textarea></td></tr>";
-                echo "<tr><td>&nbsp;<button type='submit' name='action' value='0'>Nur Speichern</button>";
+                echo "<tr><td>&nbsp;<button type='submit' name='action' value='0'>Speichern</button>";
                 echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='1'>Speichern und</button>";
                 echo "&nbsp;verschieben&nbsp;<select name='move_to'>";
-                echo "<option value='1'>nach \"in Arbeit\"</option>";
+                echo "<option value='1'>nach \"In Arbeit\"</option>";
                 echo "<option value='2'>nach \"Erledigt\"</option>";
                 echo "<option value='3'>ins Archiv</option></select>";
                 echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2'>Löschen</button></td>";

@@ -50,7 +50,7 @@
 
 <div class="spacer"></div>
 
-<?php include_page_menu(isset($_GET['filter']) ? $_GET['filter'] : 1); ?>
+<?php include_page_menu(isset($_GET['filter']) ? $_GET['filter'] : 0); ?>
 
 <div class="spacer"></div>
 
@@ -65,7 +65,7 @@
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=\"".$url."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&amp;page=".$page['oid']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo "<a href=\"".$url."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&amp;page=".$page['pager_id']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
             echo htmlspecialchars($page['pager_text'] ?? "");
             echo "</td></tr>";
@@ -73,7 +73,7 @@
             // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
             //
             if ($_GET['page']==""){ $_GET['page']=0; }
-            if ($page['oid']==$_GET['page'])
+            if ($page['pager_id']==$_GET['page'])
             {
                 echo "<form action='".Page::getURL()."/illarion/gmtool/us_pages.php?filter=".$_GET['filter']."&amp;page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
@@ -87,7 +87,7 @@
                 echo "<tr><td>&nbsp;<button type='submit' name='action' value='0'>Save</button>";
                 echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='1'>Save and</button>";
                 echo "&nbsp;move to&nbsp;<select name='move_to'>";
-               echo "<option value='1'>In Work</option>";
+                echo "<option value='1'>In Work</option>";
                 echo "<option value='2'>Completed</option>";
                 echo "<option value='3'>Archive</option></select>";
                 echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2' />Delete</button></td>";
