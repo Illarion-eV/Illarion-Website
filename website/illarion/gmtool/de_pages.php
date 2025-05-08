@@ -46,7 +46,7 @@
             echo "<table width='100%' border='0'>";
             echo "<tr><td colspan='3'>";
             echo "<h2>";
-            echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['oid']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
+            echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['pager_id']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
             echo htmlspecialchars($page['pager_text']);
             echo "</td></tr>";
@@ -54,7 +54,7 @@
             // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
             //
             if ($_GET['page']==""){ $_GET['page']=0; }
-            if ($page['oid']==$_GET['page'])
+            if ($page['pager_id']==$_GET['page'])
             {
                 echo "<form action='".Page::getURL()."/illarion/gmtool/de_pages.php?filter=".$_GET['filter']."&amp;page=".$_GET['page']."' method='post'>";
                 echo "<tr><td width='35%'><b>Message</b></td>";
