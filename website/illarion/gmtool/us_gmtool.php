@@ -2,8 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
 	includeWrapper::includeOnce( Page::getRootPath().'/illarion/gmtool/inc_pages.php' );
 	includeWrapper::includeOnce( Page::getRootPath().'/shared/def_gmtool.php' );
-	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
-	
+
 	if (!IllaUser::loggedIn())
 	{
 		IllaUser::requireLogin();
@@ -51,21 +50,21 @@
     <legend>GM Pages</legend>
     <ul style="list-style-type:none;padding-left:50px;">
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">New GM Pages</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">New</a>
             <?php if ( $pagecount['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
                 (<?php echo $pagecount['pages_new']; ?>)
             </span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_IN_WORK; ?>">GM Pages In Progress</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_IN_WORK; ?>">In Progress</a>
             <span>(<?php echo $pagecount['pages_in_work']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_DONE; ?>">Completed GM Pages</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_DONE; ?>">Completed</a>
             <span>(<?php echo $pagecount['pages_done']; ?>)</span>
         </li>
         <li>
-            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_ARCHIVE; ?>">Archived GM Pages</a>
+            <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_ARCHIVE; ?>">Archived</a>
             <span>(<?php echo $pagecount['pages_archiv']; ?>)</span>
         </li>
 		<li>

@@ -90,7 +90,7 @@
                 echo "<option value='1'>In Work</option>";
                 echo "<option value='2'>Completed</option>";
                 echo "<option value='3'>Archive</option></select>";
-                echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2' />Delete</button></td>";
+                echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2'>Delete</button></td>";
                 echo "&nbsp;<td><b>Last Modified By:</b>&nbsp;";
                 if (!isset($page['gm_name'])) { $page['gm_name']="Nobody"; }
                 echo $page['gm_name']."</td></tr>";
