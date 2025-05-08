@@ -92,8 +92,8 @@
                 echo "<option value='3'>ins Archiv</option></select>";
                 echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2'>Löschen</button></td>";
                 echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
-                if (!isset($page['gm_accid'])) { $page['gm_accid']="Niemand"; }
-                echo $page['gm_accid']."</td></tr>";
+                if (!isset($page['gm_name'])) { $page['gm_name']="Niemand"; }
+                echo $page['gm_name']."</td></tr>";
                 echo "<input type='hidden' name='time' value='".$page['pager_time']."' />";
                 echo "</form>";
             }
