@@ -71,7 +71,7 @@
 				$return['pages_new'] = 0;
 			}
 
-			if (!isset( $return['pages_inwork'] ))
+			if (!isset( $return['pages_in_work'] ))
 			{
 				$return['pages_in_work'] = 0;
 			}

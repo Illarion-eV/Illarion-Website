@@ -51,7 +51,7 @@
     <ul style="list-style-type:none;padding-left:50px;">
         <li>
             <a href="<?php echo $url; ?>/illarion/gmtool/us_pages.php?filter=<?php echo PAGE_STATUS_NEW; ?>">New</a>
-            <?php if ( $pagecount['pages_new'] > 0 ): ?><span style="color:red;font-weight:bold;"><?php else: ?><span><?php endif; ?>
+            <?php if ( $pagecount['pages_new'] > 0 ): ?><span style="color:lime;font-weight:bold;"><?php else: ?><span><?php endif; ?>
                 (<?php echo $pagecount['pages_new']; ?>)
             </span>
         </li>
