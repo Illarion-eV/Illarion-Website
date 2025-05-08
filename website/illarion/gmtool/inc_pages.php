@@ -89,4 +89,30 @@
 
 		return $return;
 	}
+
+	function saveGmPage($pageId, $note, $status)
+	{
+		if (!IllaUser::auth('gmtool_pages')) {
+			Messages::add((Page::isGerman() ? 'Zugriff verweigert' : 'Access denied'), 'error');
+			return false;
+		}
+
+		$pgSQL =& Database::getPostgreSQL();
+		$query = 'UPDATE illarionserver.gmpager'
+			.PHP_EOL.'SET pager_note = '.$pgSQL->Quote($note).","
+			.PHP_EOL.'pager_gm = '.IllaUser::$ID
+			.(!isnull($status) ? ",".PHP_EOL.'pager_status = '.$pgSQL->Quote($status) : '')
+			.PHP_EOL.'WHERE pager_id = '.$pgSQL->Quote($pageId).";";
+
+		$pgSQL->setQuery($query);
+
+		try {
+			$pgSQL->query();
+			Messages::add((Page::isGerman() ? 'Notiz wurde gespeichert' : 'Note has been saved'), 'info');
+			return true;
+		} catch (Exception $e) {
+			Messages::add((Page::isGerman() ? 'Fehler beim Speichern der Notiz' : 'Error saving the note'), 'error');
+			return false;
+		}
+	}
 ?>

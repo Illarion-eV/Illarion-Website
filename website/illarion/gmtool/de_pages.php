@@ -12,7 +12,26 @@
 		exit();
 	}
 
-	Page::setTitle( array( 'GM-Tool', 'Pages' ) );
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
+        if (!isset($_GET['page'])) {
+            return;
+        }
+
+        $action = $_POST['action'];
+        $pageId = $_GET['page'];
+        $note = isset($_POST['note']) ? $_POST['note'] : '';
+        $status = isset($_POST['move_to']) ? $_POST['move_to'] : null;
+
+        if ($action == 0) {
+            saveGmPage($pageId, $note, null);
+        } else if ($action == 1) {
+            saveGmPage($pageId, $note, $status);
+        } else if ($action == 2) {
+            saveGmPage($pageId, $note, 4);
+        }
+    }
+
+    Page::setTitle( array( 'GM-Tool', 'Pages' ) );
     Page::setDescription( 'Auf dieser Seite kannst du gm-pages bearbeiten' );
     Page::setKeywords( array( 'GM-Tool', 'Pages', 'Übersicht' ) );
 
@@ -65,13 +84,13 @@
                 echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
                 echo htmlspecialchars($page['pager_note'] ?? "");
                 echo "</textarea></td></tr>";
-                echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern' />";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...' />";
+                echo "<tr><td>&nbsp;<button type='submit' name='action' value='0'>Nur Speichern</button>";
+                echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='1'>Speichern und</button>";
                 echo "&nbsp;verschieben&nbsp;<select name='move_to'>";
                 echo "<option value='1'>nach \"in Arbeit\"</option>";
                 echo "<option value='2'>nach \"Erledigt\"</option>";
                 echo "<option value='3'>ins Archiv</option></select>";
-                echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Löschen' /></td>";
+                echo "&nbsp;&nbsp;&nbsp;<button type='submit' name='action' value='2'>Löschen</button></td>";
                 echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
                 if (!isset($page['gm_accid'])) { $page['gm_accid']="Niemand"; }
                 echo $page['gm_accid']."</td></tr>";
