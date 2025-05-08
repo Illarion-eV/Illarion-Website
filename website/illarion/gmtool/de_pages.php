@@ -48,7 +48,7 @@
             echo "<h2>";
             echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['oid']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
-            echo $page['pager_text'];
+            echo htmlspecialchars($page['pager_text']);
             echo "</td></tr>";
 
             // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
@@ -60,10 +60,10 @@
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notiz</b></td></tr>";
                 echo "<tr><td><textarea rows='3' cols='80' readonly='true'>";
-                echo $page['pager_text'];
+                echo htmlspecialchars($page['pager_text']);
                 echo "</textarea></td>";
                 echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
-                echo $page['pager_note'];
+                echo htmlspecialchars($page['pager_note']);
                 echo "</textarea></td></tr>";
                 echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern' />";
                 echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...' />";
