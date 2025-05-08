@@ -4,11 +4,11 @@
     {
 
         $entries = array();
-        $entries[1] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_NEW, 'name'=>( Page::isGerman() ? 'Neu' : 'New' ) );
-        $entries[2] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_IN_WORK, 'name'=>( Page::isGerman() ? 'In Arbeit' : 'In Work' ) );
-        $entries[3] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_DONE, 'name'=>( Page::isGerman() ? 'Erledigt' : 'Done' ) );
-        $entries[4] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_ARCHIVE, 'name'=>( Page::isGerman() ? 'Archiv' : 'Archive' ) );
-        $entries[5] = array( 'link'=>getUrlString('pages_log.php'), 'name'=>( Page::isGerman() ? 'Log' : 'Log' ) );
+        $entries[0] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_NEW, 'name'=>( Page::isGerman() ? 'Neu' : 'New' ) );
+        $entries[1] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_IN_WORK, 'name'=>( Page::isGerman() ? 'In Arbeit' : 'In Work' ) );
+        $entries[2] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_DONE, 'name'=>( Page::isGerman() ? 'Erledigt' : 'Done' ) );
+        $entries[3] = array( 'link'=>getUrlString('pages.php')."?filter=".PAGE_STATUS_ARCHIVE, 'name'=>( Page::isGerman() ? 'Archiv' : 'Archive' ) );
+        $entries[4] = array( 'link'=>getUrlString('pages_log.php'), 'name'=>( Page::isGerman() ? 'Log' : 'Log' ) );
 
 		echo "<div class='menu'>";
 			echo "<ul class='menu_top'>";
