@@ -101,7 +101,7 @@
 		$query = 'UPDATE illarionserver.gmpager'
 			.PHP_EOL.'SET pager_note = '.$pgSQL->Quote($note).","
 			.PHP_EOL.'pager_gm = '.IllaUser::$ID
-			.(!isnull($status) ? ",".PHP_EOL.'pager_status = '.$pgSQL->Quote($status) : '')
+			.(!is_null($status) ? ",".PHP_EOL.'pager_status = '.$pgSQL->Quote($status) : '')
 			.PHP_EOL.'WHERE pager_id = '.$pgSQL->Quote($pageId).";";
 
 		$pgSQL->setQuery($query);

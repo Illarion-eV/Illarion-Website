@@ -32,7 +32,7 @@
     }
 
     Page::setTitle( array( 'GM-Tool', 'Pages' ) );
-    Page::setDescription( 'Auf dieser Seite kannst du gm-pages bearbeiten' );
+    Page::setDescription( 'Auf dieser Seite kannst du GM-Pages bearbeiten' );
     Page::setKeywords( array( 'GM-Tool', 'Pages', 'Übersicht' ) );
 
     Page::addCSS( array( 'menu', 'gmtool' ) );
@@ -44,7 +44,7 @@
 
 ?>
 
-<h1>Gm-Pages - Übersicht</h1>
+<h1>GM-Pages - Übersicht</h1>
 
 <?php include_menu(); ?>
 
