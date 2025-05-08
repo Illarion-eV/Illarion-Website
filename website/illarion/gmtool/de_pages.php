@@ -31,7 +31,7 @@
 
 <div class="spacer"></div>
 
-<?php include_page_menu(1); ?>
+<?php include_page_menu(isset($_GET['filter']) ? $_GET['filter'] : 1); ?>
 
 <div class="spacer"></div>
 
@@ -48,7 +48,7 @@
             echo "<h2>";
             echo "<a href=\"".$url."/illarion/gmtool/de_pages.php?filter=0&amp;page=".$page['pager_id']."\">".$page['pager_time']." - ".$char_name." (".$page['pager_user'].")</a>";
             echo "</h2>";
-            echo htmlspecialchars($page['pager_text']);
+            echo htmlspecialchars($page['pager_text'] ?? "");
             echo "</td></tr>";
 
             // Mittelteil der nur bei dem aktuellen Eintrag angezeigt wird
@@ -60,10 +60,10 @@
                 echo "<tr><td width='35%'><b>Message</b></td>";
                 echo "<td><b>Notiz</b></td></tr>";
                 echo "<tr><td><textarea rows='3' cols='80' readonly='true'>";
-                echo htmlspecialchars($page['pager_text']);
+                echo htmlspecialchars($page['pager_text'] ?? "");
                 echo "</textarea></td>";
                 echo "<td valign='top'><textarea name='note' rows='3' cols='80'>";
-                echo htmlspecialchars($page['pager_note']);
+                echo htmlspecialchars($page['pager_note'] ?? "");
                 echo "</textarea></td></tr>";
                 echo "<tr><td>&nbsp;<input type='submit' name='justSave' value='Nur Speichern' />";
                 echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='SaveAnd' value='Speichern und...' />";
@@ -73,7 +73,7 @@
                 echo "<option value='3'>ins Archiv</option></select>";
                 echo "&nbsp;&nbsp;&nbsp;<input type='submit' name='delete' value='Löschen' /></td>";
                 echo "&nbsp;<td><b>Zuletzt geändert durch:</b>&nbsp;";
-                if ($page['gm_accid']=="") { $page['gm_accid']="Niemand"; }
+                if (!isset($page['gm_accid'])) { $page['gm_accid']="Niemand"; }
                 echo $page['gm_accid']."</td></tr>";
                 echo "<input type='hidden' name='time' value='".$page['pager_time']."' />";
                 echo "</form>";
