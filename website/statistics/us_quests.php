@@ -84,7 +84,16 @@ was already deleted or you lack of the access rights to view the quest.</p>
 	<dt>Kind of the quest:</dt>
 	<dd><?php echo ( $quest['q_type']==1 ? 'Official quest' : 'Player quest'); ?></dd>
 	<dt>Quest is planned by:</dt>
-	<dd><?php echo ( strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name'] ); ?></dd>
+    <dd><?php
+        if (is_null($quest['chr_name'])) {
+            echo ( strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name'] );
+        } else {
+            echo $quest['chr_name'];
+            if(IllaUser::auth('quests')) {
+                echo ' ('.(strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name']).')';
+            }
+        }
+        ?></dd>
 </dl>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/statistics/us_players.php" id="action_Form">
