@@ -23,7 +23,7 @@
 
 			if( $quest_author != IllaUser::$ID && !IllaUser::auth('quests') )
 			{
-				Messages::add( ( Page::isGerman() ? 'Die fehlt die Berechtigung um die Quest zu bearbeiten.' : 'You lack authorization to edit the quest.' ), 'error' );
+				Messages::add( ( Page::isGerman() ? 'Dir fehlt die Berechtigung, um die Quest zu bearbeiten.' : 'You lack authorization to edit the quest.' ), 'error' );
 				includeWrapper::includeOnce( Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests.php' );
 				exit();
 			}
@@ -88,6 +88,7 @@
 
 		$status = ( isset( $_POST['status'] ) && is_numeric( $_POST['status'] ) ? (int)$_POST['status'] : 0 );
 		$type   = ( isset( $_POST['type'] ) && is_numeric( $_POST['type'] ) ? (int)$_POST['type'] : 0 );
+		$author   = ( isset( $_POST['author'] ) && is_numeric( $_POST['author'] ) ? (int)$_POST['author'] : null );
 
 		if ( (!$id && !IllaUser::auth('quests') ) || $old_type == 2)
 		{
@@ -112,7 +113,7 @@
 
 		if ( $status == 1 && is_null( $starttime ) )
 		{
-			Messages::add( ( Page::isGerman() ? 'Der Queststatus "Startet in Kürze" ist nur gültig wenn eine Startzeit angegeben wurde.' : 'The status "starts soon" is only valid if a starting time was set.' ), 'error' );
+			Messages::add( ( Page::isGerman() ? 'Der Queststatus "Startet in Kürze" ist nur gültig, wenn eine Startzeit angegeben wurde.' : 'The status "starts soon" is only valid if a starting time was set.' ), 'error' );
 			include Page::getRootPath().'/statistics/'.Page::getLanguage().'_quests_edit.php';
 			exit();
 		}
@@ -127,13 +128,14 @@
 			. ', q_status = '.$pgSQL->Quote( $status )
 			. ', q_type = '.$pgSQL->Quote( $type )
 			. ', q_starttime = '.$pgSQL->Quote( $starttime )
+			. ', q_char_id = '.$pgSQL->Quote( $author )
 			.PHP_EOL.' WHERE q_id = '.$pgSQL->Quote( $id )
 			;
 		}
 		else
 		{
-			$query = 'INSERT INTO homepage.quests (q_title_de, q_title_us, q_content_de, q_content_us, q_user_id, q_status, q_type, q_starttime)'
-			.PHP_EOL.' VALUES ('.$pgSQL->Quote( $title_de ).','.$pgSQL->Quote( $title_us ).','.$pgSQL->Quote( $content_de ).','.$pgSQL->Quote( $content_us ).','.$pgSQL->Quote( IllaUser::$ID ).','.$pgSQL->Quote( $status ).','.$pgSQL->Quote( $type ).','.$pgSQL->Quote( $starttime ).')'
+			$query = 'INSERT INTO homepage.quests (q_title_de, q_title_us, q_content_de, q_content_us, q_user_id, q_status, q_type, q_starttime, q_char_id)'
+			.PHP_EOL.' VALUES ('.$pgSQL->Quote( $title_de ).','.$pgSQL->Quote( $title_us ).','.$pgSQL->Quote( $content_de ).','.$pgSQL->Quote( $content_us ).','.$pgSQL->Quote( IllaUser::$ID ).','.$pgSQL->Quote( $status ).','.$pgSQL->Quote( $type ).','.$pgSQL->Quote( $starttime ).','.$pgSQL->Quote( $author ).')'
 			;
 		}
 		$pgSQL->setQuery( $query );

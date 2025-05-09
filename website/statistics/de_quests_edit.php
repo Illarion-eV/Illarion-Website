@@ -15,11 +15,12 @@
 
 	$id = ( isset( $_POST['id'] ) && is_numeric( $_POST['id'] ) ? (int)$_POST['id'] : ( isset( $_GET['id'] ) && is_numeric( $_GET['id'] ) ? (int)$_GET['id'] : false ) );
 
-	list( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year ) = loadQuestEditData( $id );
+	list( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year, $author ) = loadQuestEditData( $id );
 
 	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 1, $year));
 	$current_year  = (int)date('Y');
 
+    $char_list = getCharacterList($author);
 ?>
 
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
@@ -84,6 +85,15 @@
 		<input type="checkbox" name="tba" id="tba" value="tba" onclick="disableDatepicker()"<?php echo ( $tba ? ' checked="checked"' : '' ); ?> />
 		<label for="tba">Startzeit wird noch angekündigt</label>
 	</p>
+    <p>
+        <b>Ersteller der Quest</b><br/>
+        <select name='author' id='author'>
+            <option value='0' <?php echo ($author==0 ? ' selected="selected"' : ''); ?>>Account-Name verwenden</option>
+            <?php foreach($char_list as $character):
+                echo '<option value="'.$character['chr_playerid'].'"'.($author == $character['chr_playerid'] ? ' selected="selected"' : '').'>'.$character['chr_name'].'</option>';
+            endforeach; ?>
+        </select>
+    </p>
 	<p>
 		<b>Art der Quest:</b><br />
 		<?php if (IllaUser::auth('quests')): ?>

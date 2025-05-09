@@ -76,6 +76,12 @@
 			$year   = date('Y', $time);
 		}
 
+        if ( isset( $_POST['author'] ) )
+        {
+            $author = ( is_null( $_POST['author'] ) ? '' : $_POST['author'] );
+            $data_from_db = false;
+        }
+
 		if (isset( $_POST['tba'] ) && $_POST['tba'] == true)
 		{
 			$tba = true;
@@ -103,7 +109,7 @@
 		if ($data_from_db)
 		{
 			$pgSQL =& Database::getPostgreSQL();
-			$query = 'SELECT q_title_de, q_title_us, q_content_de, q_content_us, q_type, q_status, q_starttime'
+			$query = 'SELECT q_title_de, q_title_us, q_content_de, q_content_us, q_type, q_status, q_starttime, q_char_id'
 			.PHP_EOL.' FROM homepage.quests'
 			.PHP_EOL.' WHERE q_id = '.$pgSQL->Quote( $id )
 			;
@@ -118,6 +124,11 @@
 
 			$type = $quest_data['q_type'];
 			$status = $quest_data['q_status'];
+
+            $author = $quest_data['q_char_ud'];
+            if (is_null($author)) {
+                $author = 0;
+            }
 
 			if (is_null( $quest_data['q_starttime'] ))
 			{
@@ -142,5 +153,17 @@
 		$content_de = htmlentities( $content_de );
 		$content_us = htmlentities( $content_us );
 
-		return array( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year );
+		return array( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year, $author );
 	}
+
+    function getCharacterList($account_id) {
+        $db =& Database::getPostgreSQL('illarionserver');
+        $query = 'SELECT chr_playerid, chr_name'
+            .PHP_EOL.' FROM chars'
+            .PHP_EOL.' LEFT JOIN player ON ply_playerid = chr_playerid'
+            .PHP_EOL.' WHERE chr_accid = '.$db->Quote($account_id)
+            .PHP_EOL.' ORDER BY chr_name ASC'
+        ;
+        $db->setQuery( $query );
+        return $db->loadAssocList();
+    }

@@ -87,7 +87,16 @@ Zugriffsberechtigung auf diese Quest.</p>
 	<dt>Art der Quest:</dt>
 	<dd><?php echo ( $quest['q_type']==1 ? 'Offizielle Quest' : 'Spieler-Quest'); ?></dd>
 	<dt>Quest geplant von:</dt>
-	<dd><?php echo ( strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name'] ); ?></dd>
+	<dd><?php
+        if (is_null($quest['chr_name'])) {
+            echo ( strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name'] );
+        } else {
+            echo $quest['chr_name'];
+            if(IllaUser::auth('quests')) {
+                echo ' ('.(strlen($quest['acc_name']) < 1 ? $quest['acc_login'] : $quest['acc_name']).')';
+            }
+        }
+     ?></dd>
 </dl>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/statistics/de_players.php" id="action_Form">

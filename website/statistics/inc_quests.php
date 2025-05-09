@@ -2,9 +2,10 @@
 	function loadQuest( $id )
 	{
 		$pgSQL =& Database::getPostgreSQL();
-		$query = 'SELECT q_title_de, q_title_us, q_content_de, q_content_us, q_status, q_type, q_starttime, acc_id AS userid, acc_name, acc_login'
+		$query = 'SELECT q_title_de, q_title_us, q_content_de, q_content_us, q_status, q_type, q_starttime, acc_id AS userid, acc_name, acc_login, chr_name'
 			.PHP_EOL.' FROM homepage.quests'
 			.PHP_EOL.' INNER JOIN accounts.account ON q_user_id = acc_id'
+			.PHP_EOL.' LEFT JOIN illarionserver.chars ON q_char_id = chr_playerid'
 			.PHP_EOL.' WHERE q_id='.$pgSQL->Quote($id)
 			.( !IllaUser::auth( 'quests' ) ? PHP_EOL.' AND ( q_type != 2 OR q_user_id = '.$pgSQL->Quote( IllaUser::$ID ).')' : '' )
 		;
@@ -79,7 +80,7 @@
 
 		if ($show_error)
 		{
-			$error = '<p style="font-style:italic;">'.( Page::isGerman() ? 'Keine deutsche Fassung vorhanden' : 'No english version avaiable' ).'</p>';
+			$error = '<p style="font-style:italic;">'.( Page::isGerman() ? 'Keine deutsche Fassung vorhanden' : 'No english version available' ).'</p>';
 		}
 		else
 		{
