@@ -157,12 +157,24 @@
 		return array( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year, $author );
 	}
 
-    function getCharacterList($account_id) {
+    function getCharacterList($quest_id) {
+        $character_owner = IllaUser::$ID;
+        if ($quest_id)
+        {
+            $homepageDb =& Database::getPostgreSQL('homepage');
+            $acc_query = 'SELECT q_user_id'
+                .PHP_EOL.' FROM homepage.quests'
+                .PHP_EOL.' WHERE q_id = '.$homepageDb->Quote($quest_id);
+
+            $homepageDb->setQuery($acc_query, 0, 1);
+            $character_owner = $homepageDb->loadResult();
+        }
+
         $db =& Database::getPostgreSQL('illarionserver');
         $query = 'SELECT chr_playerid, chr_name'
             .PHP_EOL.' FROM chars'
             .PHP_EOL.' LEFT JOIN player ON ply_playerid = chr_playerid'
-            .PHP_EOL.' WHERE chr_accid = '.$db->Quote($account_id)
+            .PHP_EOL.' WHERE chr_accid = '.$db->Quote($character_owner)
             .PHP_EOL.' ORDER BY chr_name ASC'
         ;
         $db->setQuery( $query );

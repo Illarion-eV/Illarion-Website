@@ -20,7 +20,7 @@
 	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 1, $year));
 	$current_year  = (int)date('Y');
 
-    $char_list = getCharacterList($author);
+    $char_list = getCharacterList($id);
 ?>
 
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
