@@ -76,9 +76,10 @@
 			$year   = date('Y', $time);
 		}
 
+        $author = 0;
         if ( isset( $_POST['author'] ) )
         {
-            $author = ( is_null( $_POST['author'] ) ? '' : $_POST['author'] );
+            $author = ( is_null( $_POST['author'] ) ? 0 : $_POST['author'] );
             $data_from_db = false;
         }
 
@@ -125,7 +126,7 @@
 			$type = $quest_data['q_type'];
 			$status = $quest_data['q_status'];
 
-            $author = $quest_data['q_char_ud'];
+            $author = $quest_data['q_char_id'];
             if (is_null($author)) {
                 $author = 0;
             }
