@@ -13,7 +13,7 @@ if (!defined('SHARED_INCLUDED')):
 	require $_SERVER['DOCUMENT_ROOT'] . '/shared/autoload.php';
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/shared/def_common.php';
 
-	date_default_timezone_set('UTC');
+	date_default_timezone_set('Europe/Berlin');
 
 	Page::Boot();
 
