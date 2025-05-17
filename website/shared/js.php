@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Europe/Berlin');
+date_default_timezone_set('UTC');
 
 $last_mod = array();
 $last_mod[] = filemtime(__FILE__);
