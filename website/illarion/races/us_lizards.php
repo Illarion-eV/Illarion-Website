@@ -27,7 +27,7 @@
 tail to add balance and agility when running, jumping or swimming. Their anatomy is astonishing: they seem to be reptiles, but
 instead of being cold–blooded, their body can somehow change between being cold–blooded and warm–blooded state. This flexibility,
 in addition with their tough, greenish or brownish lizard skin, their strong teeth and muscles, has allowed them to dwell in
-different places. Another astonishing thing is their ability to breath water. This may be a result of the lizard's main goddess
+different places. Another astonishing thing is their ability to breathe water. This may be a result of the lizard's main goddess
 influence, Tanora (or "Zelphia" in lizard tongue) over thousands of years.</p>
 
 <?php cap("M"); ?>
