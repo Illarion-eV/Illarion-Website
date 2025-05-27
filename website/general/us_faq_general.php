@@ -139,9 +139,9 @@ Page::Init();
 
 	<li class="question"><a id="fs6"></a><strong>What about magic? How can I cast spells?</strong></li>
 		
-		<p>As of now, alchemy is available to players. By brewing powerful potions, you can strengthen yourself and your comrades. To become an alchemist, you need to find a magical place in the wilderness. Later, we will add arcane magic and divine magic to the game.</p>
+		<p>Magic is an ongoing project for Illarion, constantly being added to. Currently you can be an alchemist; brewing potions, or a mage that makes use of enchanting, rune and spatial magic. Alchemist and mages are mutually exclusive, you can only be one or the other. There is work each update being done to add more magic to both alchemists and mages, as well as plans for divine magic for priests in the future.</p>
 		
-	<li class="question"><a id="fs7"></a><strong>What faction should I chose?</strong></li>
+	<li class="question"><a id="fs7"></a><strong>What faction should I choose?</strong></li>
 		
 		<p>The land Illarion is divided between three factions: <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#2">Wealthy Galmair</a>, <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#1">noble Cadomyr</a> and <a href="<?php echo Page::getURL(); ?>/illarion/us_factions.php#3">wise Runewick</a>. Just pick the faction that fits the motives of your character best. You can revise your decisions later in the game or even become an outlaw.</p>
 		

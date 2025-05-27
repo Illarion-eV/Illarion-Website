@@ -140,7 +140,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 
 	<li class="question"><a id="fs6"></a><strong>Und was ist mit Magie? Wie zaubere ich?</strong></li>
 		
-		<p>Im Moment steht den Spielern die Alchemie offen. Durch das Brauen starker Tränke kannst du dich und deine Freunde stärken. Um ein Alchemist zu werden musst du einen magischen Ort in der Wildnis finden. Später werden wir arkane und göttliche Magie zum Spiel hinzufügen.</p>
+		<p>Magie ist ein ständig weiterentwickeltes Projekt in Illarion. Derzeit kannst du Alchemist werden, der Tränke braut, oder aber ein Magier, der Verzauberungen, Runen und räumliche Zauber lernen kann. Alchemisten und Magier sind jeweils exklusiv, du kannst also nur das eine oder das andere auswählen. Mit jedem Update kommt ein bisschen mehr Magie und Alchemie ins Spiel und für die Zukunft ist auch ein Magiesystem für Priester geplant.</p>
 		
 	<li class="question"><a id="fs7"></a><strong>Welches Reich sollte ich wählen?</strong></li>
 		
