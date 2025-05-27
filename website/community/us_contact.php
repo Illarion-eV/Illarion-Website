@@ -75,18 +75,16 @@ Thus, all requests that affect the game world should be directed to them.</p>
 <?php Page::insert_go_to_top_link(); ?>
 
 
-<h2><a name="4"></a>Lead Developers</h2>
+<h2><a name="4"></a>Developers</h2>
 
 <?php echo Page::cap('T'); ?>
-<p>hese are the lead developers of Illarion and their responsibilities. 
+<p>hese are the developers of Illarion. 
 The developers implement new features, run the game server and care for the homepage. 
 Contact them especially if you want to join the development team of Illarion.</p>
 
 <ul>
-    <li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
-	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
-	<li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
-	<li><a href="?contact=40">Evie</a> - Maps</li>
+	<li><a href="?contact=11">Estralis</a></li>
+	<li><a href="?contact=48">Brightrim</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -249,6 +247,11 @@ This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="ext
          define("_CONTACT_NAME","Capswick",false);
          define("_CONTACT_MAIL","capswick@illarion.org",false);
          define("_CONTACT_DETAILS",_CONTACT_NAME." is the treasurer of the Illarion e.V..",false);
+      break;
+      case 48: //Brightrim
+         define("_CONTACT_NAME","Brightrim",false);
+         define("_CONTACT_MAIL","awildbrightrim@gmail.com",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME."  is a content developer.",false);
       break;
       default:
          MainForm();

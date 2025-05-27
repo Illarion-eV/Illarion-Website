@@ -17,7 +17,7 @@ Page::Init();
 	<li><a class="hidden" href="#gs4">What do I need to play?</a></li>
 	<li><a class="hidden" href="#gs5">Where can I download the game?</a></li>
 	<li><a class="hidden" href="#gs6">How do I log into the game?</a></li>
-    <li><a class="hidden" href="#gs7">From what races and classes can I chose?</a></li>
+    <li><a class="hidden" href="#gs7">From what races and classes can I choose?</a></li>
 	<li><a class="hidden" href="#gs8">What attributes should I pick?</a></li>
 	<li><a class="hidden" href="#gs9">I have a technical problem. Where can I get support?</a></li>
 </ul>
@@ -31,7 +31,7 @@ Page::Init();
 	<li><a class="hidden" href="#fs4">How do I use or equip items?</a></li>
 	<li><a class="hidden" href="#fs5">How does crafting work in this game? How do I repair items?</a></li>
 	<li><a class="hidden" href="#fs6">What about magic? How can I cast spells?</a></li>
-	<li><a class="hidden" href="#fs7">What faction should I chose?</a></li>
+	<li><a class="hidden" href="#fs7">What faction should I choose?</a></li>
 	<li><a class="hidden" href="#fs8">Does the game have storage facilities?</a></li>
 	<li><a class="hidden" href="#fs9">I died! How do I resurrect? Is there a death penalty?</a></li>
 </ul>
@@ -40,7 +40,7 @@ Page::Init();
 
 <ul>
 	<li><a class="hidden" href="#gc1">What is an RPG and what makes Illarion special?</a></li>
-	<li><a class="hidden" href="#gc2">What are CMs and GMs?</a></li>
+	<li><a class="hidden" href="#gc2">What are GMs?</a></li>
 	<li><a class="hidden" href="#gc3">Why do some of the players talk funny?</a></li>
 	<li><a class="hidden" href="#gc4">How do I find out an item's stats?</a></li>
 	<li><a class="hidden" href="#gc5">Where can I see my skill levels?</a></li>
@@ -76,29 +76,29 @@ Page::Init();
 		
 	<li class="question"><a id="gs3"></a><strong>What are the system requirements for Illarion?</strong></li>
 
-	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some old operation systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
+	    <p>Illarion is a cross platform game that runs on Windows, Linux and MacOS. You can review the system requirements on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page of the website</a>. You will need a computer with a graphics adapter that supports Shaders 2.0 and OpenGL. Some old operating systems like Windows Vista do not support the free graphics standard OpenGL by default. Make sure that you have the latest drivers installed for your graphics adapter.</p>
 
-	<li class="question"><a id="gs4"></a><strong>What do I need to play?</strong></li>
+	<li class="question"><a id="gs4"></a><strong>What do I need in order to play?</strong></li>
 		
 		<p>To play Illarion, you must first <a href="<?php echo Page::getURL(); ?>/community/account/us_register.php">register an account</a> and create a character. Once these are complete, <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download</a> the game client. You are then ready to immerse yourself in the world of Illarion!</p>
 					
 	<li class="question"><a id="gs5"></a><strong>Where can I download the game?</strong></li>
 		
-		<p>Illarion can be downloaded for many operation systems on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page</a>. During the setup, you will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.</p>
+		<p>Illarion can be downloaded for many operating systems on the <a href="<?php echo Page::getURL(); ?>/illarion/us_java_download.php">download page</a>. During the setup, you will be prompted to choose a directory to store your character relevant data. It would be advised to store them in a folder you can easily find afterwards.</p>
 		
 	<li class="question"><a id="gs6"></a><strong>How do I log into the game?</strong></li>
 	
-		<p>The setup installs the Illarion launcher that shows the latest news and ingame events. Click on "Play!" to start the game. You have to enter your account name (NOT your character's name) along with your password. Chose one of your characters, you may create up to five characters.</p>
+		<p>The setup installs the Illarion launcher that shows the latest news and ingame events. Click on "Play!" to start the game. You have to enter your account name (NOT your character's name) along with your password. Choose one of your characters, you may create up to five characters.</p>
 		
-	<li class="question"><a id="gs7"></a><strong>From what races and classes can I chose?</strong></li>
+	<li class="question"><a id="gs7"></a><strong>From what races and classes can I choose?</strong></li>
 	
 		<p>Illarion features six playable <a href="<?php echo Page::getURL(); ?>/illarion/races/us_races.php">races</a>: Humans, halflings, dwarves, elves, orcs and lizardmen. You may pick any of them, all come with their traits.</p>
 		
-		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. Except for magic, you can combine as many skills as you like, only your imagination limits what your characters may become.
+		<p>There are no classes in Illarion. You may perform any profession you like and are not limited to one; you can become a true master of a single craft or jack of all trades. With the exception of magic, you can combine as many skills as you like, only your imagination limits what your characters may become. What attributes you choose for your character will however impact how well you perform at each skill, there's no such thing as someone being perfect at everything they set their mind to.
 		
 	<li class="question"><a id="gs8"></a><strong>What attributes should I pick?</strong></li>
 	
-		<p>We have prepared typical attribute sets for common playing styles in the account system. As there are no strict classes, you are not bond to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a few gold coins.</p>
+		<p>We have prepared attribute packages you may choose from in the character creator, that will accomodate most common playstyles. As there are no strict classes, you are not bound to them. Each attribute has its use, just hover over the attribute names to get a description. In the end, just pick the attributes that represent your character best. You have the option to change your attributes in the game for a few gold coins.</p>
 		
 	<li class="question"><a id="gs9"></a><strong>I have a technical problem. Where can I get support?</strong></li>
 		
@@ -151,7 +151,7 @@ Page::Init();
 		
 	<li class="question"><a id="fs9"></a><strong>I died! How do I resurrect? Is there a death penalty?</strong></li>
 		
-		<p>A dead character is automatically revived at the city of their chosen faction after one minute. No skills or items are lost but the equipment takes damage. However, a recently revived character suffers from 'resurrection sickness'. This severely weakens them, making it difficult to immediately return to combat. Resurrection sickness is temporary, and will be cured by refraining from combat until a character is healthy again.</p>
+		<p>"A dead character is automatically revived at the city of their chosen faction after a short duration. No skills are lost, but some items from your bag may drop to the ground and your worn equipment takes damage. A recently revived character also suffers from 'resurrection sickness'. This severely weakens them, making it difficult to immediately return to combat. Resurrection sickness is temporary, and will be cured by refraining from combat until a character is healthy again. It is recommended to roleplay your character being wounded after being resurrected, at least for the duration of the recovery, though the extent of which is up to you and the roleplayed injuries can go beyond the recovery time too.</p>
 		
 </ul>
 
@@ -163,21 +163,21 @@ Page::Init();
 <ul>
 	<li class="question"><a id="gc1"></a><strong>What is an RPG and what makes Illarion special?</strong></li>
 	
-		<p>Role playing games (RPG) are a popular game genre. Players take on the role of a fantasy character and are able to do many things that may be impossible in Real Life. Illarion takes the concept of Role playing further than other games. Players are expected to immerse themselves completely into the life of their character. Whilst playing Illarion you cease to be John/Jane Smith from New York and instead take on the role of a fictional character by feeling, saying, and thinking what he or she would. Illarion is set in a mediaeval world with no electricity, cars, televisions or power tools. Whilst playing you are expected to stay in your chosen role and keep Out Of Character (OOC) talk to a bare minimum.</p>
+		<p>Role playing games (RPG) are a popular game genre. Players take on the role of a fantasy character and are able to do many things that may be impossible in Real Life. Illarion takes the concept of Role playing further than other games. Players are expected to immerse themselves completely into the life of their character. Whilst playing Illarion you cease to be John/Jane Smith from New York and instead take on the role of a fictional character by feeling, saying, and thinking what he or she would. Illarion is set in a medieval world with no electricity, cars, televisions or power tools. Whilst playing you are expected to stay in your chosen role and keep Out Of Character (OOC) talk to a bare minimum.</p>
 		
 
-	<li class="question"><a id="gc2"></a><strong>What GMs?</strong></li>
+	<li class="question"><a id="gc2"></a><strong>What are GMs?</strong></li>
 	
-		<p>A GM is a Gamemaster. The GMs provide dynamic content (quests, events, etc) as well as upholding the rules of Illarion. Their role is also to assist new players and help resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue.</p>		
+		<p>A GM is a Gamemaster. The GMs provide dynamic content (quests, events, etc). They also uphold the rules of Illarion. Their role includes assisting new players and helping to resolve issues or conflicts between players. They should be the first people to turn to in the event of a non-technical issue.</p>		
 
 	<li class="question"><a id="gc3"></a><strong>Why do some of the players talk funny?</strong></li>
 		
-		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound mediaeval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too. Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
+		<p>Illarion is played by players from all around the world. So it's no wonder that they don't speak the same language. English and German are the most common languages and it is a matter of courtesy to switch language to a language commonly understood when encountering other players. Special dialects could be applied as well. Most players try to make their characters sound medieval without using Old English as many people would struggle to understand. Abbreviations and chat slang are frowned upon. Take your time using capital letters and punctuation marks too. Good Example: "Greetings, noble sir. May I draw your attention on this well crafted blade, a blade I'd like to offer to you for a reasonable price?"</p>
 		
 
 	<li class="question"><a id="gc4"></a><strong>How do I find out an item's stats?</strong></li>
 
-		<p>Hovering your mouse over the item will provide details on an item name, its level and skill requirement, value, weight, quality and durability. As Illarion is not a game about numbers but about immersion and stories told, detailled technical stats are not shown. For weapons and armours, you can derive the use directly from the shown level.</p>	
+		<p>Hovering your mouse over the item will provide details on an item name, its level and skill requirement, value, weight, quality and durability. As Illarion is not a game about numbers but about immersion and stories told, detailed technical stats are not shown. For weapons and armours, you can derive the use directly from the shown level.</p>	
 
 	<li class="question"><a id="gc5"></a><strong>Where can I see my skill levels?</strong></li>
 
@@ -193,13 +193,13 @@ Page::Init();
 		
 	<li class="question"><a id="gc8"></a><strong>How can I find out my rank with my faction?</strong></li>
 	
-		<p>In each city, there is a notary NPC who can tell you your rank. The higher your rank, the more well known you are to your faction leader and also, the more advanced your are in his or her favour.</p>	
+		<p>In each city, there is a notary NPC who can tell you your rank. You can also view it in the citizen ledger of said notary's office. The higher your rank, the more well known you are in your realm and also more respected.</p>	
 		
 	<li class="question"><a id="gc9"></a><strong>I've been reading about the special skill system of Illarion and Mental Capacity. What's that?</strong></li>
 	
-		<p>Illarion's skill system is based on "learning by doing". There are no skills points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items. A character may also develop combat skills, improving their ability to weild more advanced weapons or wear exotic armour.</p>	
+		<p>Illarion's skill system is based on "learning by doing". There are no skill points you have to allocate. As your character practices certain actions, they begin to improve. For example, over time your character may develop from an apprentice smith to a master, allowing them to create a larger variety of items. A character may also develop combat skills, improving their ability to wield more advanced weapons or wear exotic armour.</p>	
 		
-		<p>The Mental Capacity refers to a character's ability to focus while improving. The more actions you do over time, the less you learn from each action, regardless of the kind of action. Still, your character newer stops learning. This way, it is on you how much time you want to invest on training your skills, the result after a given time will be the same. A character can reverse a 'high' degree of mental fatigue by performing no tasks which could raise a skill such as talking to other characters and exploring the game world with them. We have designed the skill system in this way to give players the opportunity to roleplay or train as much as they want without one style of playing being favoured by the game.</p>
+		<p>The Mental Capacity refers to a character's ability to focus while improving. The more actions you do over time, the less you learn from each action, regardless of the kind of action so long as it is a kind of action you learn something new from. Still, your character never stops learning. This way, it is on you how much time you want to invest into training your skills, as the result after a given time will be the same whether you spend it all skilling or the majority of it roleplaying. This because a character can reverse a 'high' degree of mental fatigue by performing no tasks which could raise a skill, such as talking to other characters and exploring the game world with them. We have designed the skill system in this way to give players the opportunity to roleplay or train as much as they want without one style of playing being favoured by the game.</p>
 		
 </ul>
 <?php insert_go_to_top_link(); ?>
@@ -227,7 +227,7 @@ Page::Init();
 	
 		<p>There are many ways in which you can contribute to Illarion. You could support the <a href="<?php echo Page::getURL(); ?>/community/us_society.php">Illarion e.V. society</a>, assist with the <a href="https://lua.illarion.org">development of the game</a> or help to <a href="<?php echo Page::getURL(); ?>/community/forums/viewforum.php?f=77">promote the game</a> on external sites. Also tell your friends about Illarion!</p>
 		
-		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">lead developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
+		<p>If you have advanced skills in Java, C++, LUA, PHP or creating 3D graphics, you might want to contact one of the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4"> developers</a> to get involved in the development of Illarion. Please note that Illarion is a non profit project and hence, no compensation can be paid for your work.
 		
 	<li class="question"><a id="co5"></a><strong>What features are planned for the future?</strong></li>
 	

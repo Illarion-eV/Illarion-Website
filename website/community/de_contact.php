@@ -82,18 +82,16 @@ Somit sind alle Anfragen, die die Spielwelt betreffen, an sie zu richten.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
-<h2><a name="4"></a>Leitende Entwickler</h2>
+<h2><a name="4"></a>Entwickler</h2>
 
 <?php echo Page::cap('D'); ?>
-<p>ies sind die leitenden Entwickler von Illarion und ihre Aufgaben.
+<p>ies sind die Entwickler von Illarion.
 Sie programmieren neue Features, betreuen den Spielserver und pflegen die Homepage. 
 Wende dich bevorzugt an die Entwickler, wenn du dem Entwicklungsteam von Illarion beitreten willst.</p>
 
 <ul>
-<li><a href="?contact=25">Vilarion</a> - Server, Serveradministration</li>
-<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
-<li><a href="?contact=11">Estralis Seborian</a> - Spielinhalte</li>
-<li><a href="?contact=40">Evie</a> - Karte</li>
+	<li><a href="?contact=11">Estralis</a></li>
+	<li><a href="?contact=48">Brightrim</a></li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -257,6 +255,11 @@ $contact = (isset($_GET['contact']) && is_numeric($_GET['contact']) ? (int) $_GE
          define("_CONTACT_NAME","Capswick",false);
          define("_CONTACT_MAIL","capswick@illarion.org",false);
          define("_CONTACT_DETAILS",_CONTACT_NAME." ist der Kassenwart des Illarion e.V..",false);
+      break;
+      case 48: //Brightrim
+         define("_CONTACT_NAME","Brightrim",false);
+         define("_CONTACT_MAIL","awildbrightrim@gmail.com",false);
+         define("_CONTACT_DETAILS",_CONTACT_NAME." ist ein Entwickler von Spielinhalten.",false);
       break;
       default:
          MainForm();

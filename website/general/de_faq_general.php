@@ -40,7 +40,7 @@ Page::Init();
 
 <ul>
 	<li><a class="hidden" href="#gc1">Was ist ein Rollenspiel und was ist das Besondere an Illarion?</a></li>
-	<li><a class="hidden" href="#gc2">Was sind CMs und GMs?</a></li>
+	<li><a class="hidden" href="#gc2">Was sind GMs?</a></li>
 	<li><a class="hidden" href="#gc3">Warum sprechen die alle so komisch?</a></li>
 	<li><a class="hidden" href="#gc4">Wo sehe ich die Werte eines Gegenstandes?</a></li>
 	<li><a class="hidden" href="#gc5">Woher weiß ich meine genauen Fertigkeitswerte?</a></li>
@@ -94,12 +94,11 @@ Page::Init();
 	
 		<p>In Illarion gibt es sechs spielbare <a href="<?php echo Page::getURL(); ?>/illarion/races/de_races.php">Völker</a>: Menschen, Halblinge, Zwerge, Elfen, Orks und Echsenmenschen. Du kannst jede davon auswählen, alle Völker haben ihre Vorzüge.</p>
 		
-		<p>Es gibt keine Klassen auf Illarion. Du kannst jeden Beruf ausüben, den du möchtest und bist auch nicht auf einen beschränkt. Du kannst ein echter Meister in einem einzelnen Handwerk werden oder ein Alleskönner.
-Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nur deine Vorstellungskraft beschränkt was deine Charaktere werden können.</p>
+		<p>In Illarion gibt es keine Klassen. Du kannst jeden Beruf ausüben, den du möchtest und bist nicht auf einen beschränkt; du kannst ein wahrer Meister eines einzigen Handwerks oder ein bisschen von allem lernen. Mit Ausnahme der Magie kannst du so viele Fertigkeiten kombinieren, wie du willst, nur deine Vorstellungskraft setzt deinen Charakteren Grenzen. Die Attribute, die du für deinen Charakter auswählst, wirken sich jedoch darauf aus, wie gut du die einzelnen Fertigkeiten beherrschst - es gibt niemanden, der alles perfekt kann, was er sich vornimmt.</p>
 		
 	<li class="question"><a id="gs8"></a><strong>Welche Attribute sollte ich wählen?</strong></li>
 	
-		<p>Wir haben ein paar Sets von Attributen vorbereitet, die typisch sind für die am häufigsten gespielten Arten von Charaktern. Da es keine strikten Klassen gibt bist du allerdings nicht an eines davon gebunden. Jedes Attribut hat seinen Nutzen, fahre einfach mit dem Mauszeiger darüber, um eine Beschreibung zu bekommen. Wähle einfach die Attribute aus, die deinen Charakter am besten beschreiben. Ingame gibt es die Option die Attribute gegen einige Goldstücke zu verändern.</p>
+		<p>Wir haben Attributspakete vorbereitet, aus denen du im Charakterersteller wählen kannst, die den meisten gängigen Spielstilen gerecht werden. Da es keine strengen Klassen gibt, bist du nicht an sie gebunden. Jedes Attribut hat seinen Nutzen, fahre einfach mit der Maus über die Attributnamen, um eine Beschreibung zu erhalten. Wähle am Ende einfach die Attribute, die deinen Charakter am besten repräsentieren. Du hast außerdem die Möglichkeit, deine Attribute im Spiel für ein paar Goldmünzen zu ändern.</p>
 		
 	<li class="question"><a id="gs9"></a><strong>Ich habe ein technisches Problem. Wo kann ich Hilfe bekommen?</strong></li>
 		
@@ -152,7 +151,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="fs9"></a><strong>Ich bin gestorben! Wie kann ich mich wiederbeleben? Gibt es eine Bestrafung für den Tod?</strong></li>
 		
-		<p>Ein toter Charakter wird automatisch nach einer Minute in der Stadt seines Reich wiederbelebt. Der Charakter verliert beim Tod keine Gegenstände oder Fähigkeiten, nur die Ausüstung nimmt Schaden. Allerdings leidet der Charakter unter der "Wiederbelebungskrankheit". Sie schwächt sehr und macht es schwierig, sich sofort wieder in den Kampf zu stürzen. Dies ist nur ein temporärer Effekt und kann geheilt werden, indem man solange von Kampf fernbleibt, bis sich der Charakter wieder erholt hat.</p>
+		<p>Ein toter Charakter wird nach einer kurzen Zeitspanne automatisch in der Stadt der gewählten Fraktion wiederbelebt. Dabei gehen keine Fertigkeiten verloren, aber einige Gegenstände aus der Tasche können zu Boden fallen und die getragene Ausrüstung nimmt Schaden. Ein kürzlich wiederbelebter Charakter leidet außerdem unter der „Auferstehungskrankheit“. Dies schwächt sie stark und macht es schwierig, sofort wieder in den Kampf zu ziehen. Die Wiederbelebungskrankheit ist vorübergehend und wird geheilt, indem man sich aus dem Kampf zurückzieht, bis der Charakter wieder gesund ist. Es wird empfohlen, die Verwundung des Charakters nach der Wiederbelebung im Rollenspiel darzustellen, zumindest für die Dauer der Genesung, wobei das Ausmaß der Verwundung dem Spieler überlassen bleibt und die gespielten Verletzungen auch über die Genesungszeit hinausgehen können.</p>
 		
 </ul>
 
@@ -167,7 +166,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		<p>Rollenspiele (RPG) sind recht beliebte Spiele, bei denen Spieler die Rolle eines erdachten Charakters übernehmen und Taten vollbringen, die ihnen im wahren Leben vielleicht gar nicht möglich wären. Illarion treibt das Konzept Rollenspiel, verglichen mit anderen Spielen, auf die Spitze. Die Spieler sind angehalten, sich in das Leben ihrer Charaktere hineinzuversetzen. Im Spiel bist du nicht Max Mustermann aus Dingenskirchen sondern übernimmst die Rolle eines erdachten Charakters, inklusive seiner Gefühle, Sprache und Gedanken. Illarion ist eine mittelalterliche Fantasy-Welt ohne Strom, Autos, Fernseher oder Akkuschrauber. Im Spiel solltest du davon absehen, außerhalb deiner Rolle (Out of Character, OOC) zu spielen.</p>
 		
 
-	<li class="question"><a id="gc2"></a><strong>Was sind CMs und GMs?</strong></li>
+	<li class="question"><a id="gc2"></a><strong>Was sind GMs?</strong></li>
 	
 		<p>GM steht für Gamemaster. Die GMs tragen dynamische Inhalte (Quests, Events usw.) zum Spiel bei und wachen auch über die Einhaltung der Regeln. Ihr Aufgabe ist es auch, neuen Spielern zu helfen und mögliche Konflikte zwischen Spielern zu schlichten. Sie sind die ersten, an die du dich wenden solltest, wenn es sich nicht um ein technisches Problem handelt.</p>
 		
@@ -195,8 +194,7 @@ Abgesehen von Magie kannst du alle Fähigkeiten kombinieren wie du möchtest, nu
 		
 	<li class="question"><a id="gc8"></a><strong>Wie finde ich meinen Rang in meiner Fraktion heraus?</strong></li>
 	
-		<p>In jeder Stadt gibt es einen NPC, der dir deinen Rang sagen kann. Je höher dein Rang ist, desto bekannter bist du dem Anführer deiner Fraktion und desto
-		höher in seiner oder ihrer Gunst.</p>	
+		<p>In jeder Stadt gibt es einen Notar-NPC, der dir deinen Rang mitteilen kann. Du kannst ihn auch im Bürgerbuch des Notariats einsehen. Je höher dein Rang ist, desto bekannter bist du bei deinem Reich und desto höher ist auch dein Ansehen.</p>	
 		
 	<li class="question"><a id="gc9"></a><strong>Ich habe davon gelesen, dass Illarion ein besonderes Fertigkeitensystem mit 'mentaler Kapazität' hat. Was ist das alles?</strong></li>
 	
