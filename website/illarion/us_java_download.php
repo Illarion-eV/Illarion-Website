@@ -25,7 +25,8 @@
 <ul>
   <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit) - All versions</a></li>
   <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit) - All versions</a></li>
-  <li><a href="<?php echo $pathList[590]; ?>">MacOS X - All versions</a></li>
+  <li><a href="<?php echo $pathList[1010]; ?>">MacOS X (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[1012]; ?>">MacOS X (64-Bit) - M1/ARM</a></li>
   <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit) - Debian, Ubuntu, Mint etc.</a></li>
   <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit) - Debian, Ubuntu, Mint etc.</a></li>
   <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit) - Fedora, Mandriva, openSUSE, Red Hat etc.</a></li>
@@ -51,7 +52,7 @@ and after that create a character.</p>
 </ul>
 
 <p>In case your character can't be found when trying to log in, make sure you
-have completed the character creation process, including spending all of the attributes 
+have completed the character creation process, including spending all the attribute
 points and selecting a starting package.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -62,28 +63,28 @@ points and selecting a starting package.</p>
 <ul>
   <li>Operating System:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1, 10</li>
+      <li>Windows XP ore more recent</li>
       <li>Linux</li>
       <li>MacOS X 10.6 or more recent</li>
     </ul>
   </li>
-  <li>Graphics card: 64 MB memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>Graphics card: 64 MB memory, driver supporting OpenGL (3.2), Shader 2.0 support</li>
   <li>CPU: Dual core processor with 1.4 GHz</li>
-  <li>Java 7 update 6</li>
+  <li>Support for Java 1.8</li>
 </ul>
 
 <h4>Recommended</h4>
 <ul>
   <li>Operating system:
     <ul>
-      <li>Windows Vista, 7, 8, 8.1, 10</li>
+      <li>Windows 11</li>
       <li>Linux</li>
       <li>MacOS X 10.65 or more recent</li>
     </ul>
   </li>
-  <li>Graphics card: 128 MB dedicated memory, driver supporting OpenGL, Shader 2.0 support</li>
+  <li>Graphics card: 128 MB dedicated memory, driver supporting OpenGL (3.2), Shader 2.0 support</li>
   <li>CPU: Dual core processor with 2.0 GHz</li>
-  <li>Java latest version (64-bit Version if you have a 64-bit operating system installed)</li>
+  <li>Support for Java 1.8</li>
 </ul>
 
 <h4>Note</h4>
@@ -101,13 +102,13 @@ installation of Illarion, the old settings will be used.</p>
 
 <p>The main menu of the Illarion Launcher offers the possibility to launch
 the client using the "play" button. The other applications are launched with
-the buttons as labeled. Once a application is chosen the launcher will look
+the buttons as labeled. Once an application is chosen, the launcher will look
 for the latest version, resolve its dependencies and download everything.
-Especially during the first time a application is launched this can take some
+Especially during the first time an application is launched, this can take some
 time. Once the download is done the application is launched automatically.</p>
 
 <p>If there should be problems during the installation or start of the client,
-please ask for help on the IRC chat or the forum. There's almost no problem,
+please ask for help on the Discord or the forum. There's almost no problem,
 we can't find a solution for.</p>
 
 <?php Page::insert_go_to_top_link(); ?>

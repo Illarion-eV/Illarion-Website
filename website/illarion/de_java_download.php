@@ -25,7 +25,8 @@
 <ul>
   <li><a href="<?php echo $pathList[60]; ?>">Windows (32-Bit) - Alle Versionen</a></li>
   <li><a href="<?php echo $pathList[226]; ?>">Windows (64-Bit) - Alle Versionen</a></li>
-  <li><a href="<?php echo $pathList[590]; ?>">MacOS X - Alle Versionen</a></li>
+  <li><a href="<?php echo $pathList[1010]; ?>">MacOS X (64-Bit)</a></li>
+  <li><a href="<?php echo $pathList[1012]; ?>">MacOS X (64-Bit) - M1/ARM</a></li>
   <li><a href="<?php echo $pathList[66]; ?>">Linux DEB (32-Bit) - Debian, Ubuntu, Mint usw.</a></li>
   <li><a href="<?php echo $pathList[411]; ?>">Linux DEB (64-Bit) - Debian, Ubuntu, Mint usw.</a></li>
   <li><a href="<?php echo $pathList[65]; ?>">Linux RPM (32-Bit) - Fedora, Mandriva, openSUSE, Red Hat usw.</a></li>
@@ -38,7 +39,7 @@
 <a href="<?php echo Page::getURL(); ?>/community/account/de_register.php">einen Account erstellen</a>
 und danach einen Charakter anlegen.</p>
 
-<p><a rel="external" href="https://www.ej-technologies.com/products/install4j/overview.html">Illarion verwendet Install4J um die Setup-Dateien zu erzeugen.</a></p>
+<p><a rel="external" href="https://www.ej-technologies.com/products/install4j/overview.html">Illarion verwendet Install4J, um die Setup-Dateien zu erzeugen.</a></p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -62,33 +63,33 @@ ausgewählt hast.</p>
 <ul>
   <li>Betriebssystem:
     <ul>
-      <li>Windows XP, Vista, 7, 8, 8.1, 10</li>
+      <li>Windows XP oder neuer</li>
       <li>Linux</li>
       <li>MacOS X 10.6 oder neuer</li>
     </ul>
   </li>
-  <li>Grafikkarte: 64 MB Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
+  <li>Grafikkarte: 64 MB Speicher, Treiber mit openGL (3.2) Unterstützung, Shader 2.0 Unterstützung</li>
   <li>CPU: Zwei-Kern-Prozessor mit 1,4 GHz</li>
-  <li>Java 7 Update 6</li>
+  <li>Unterstützt Java 1.8</li>
 </ul>
 
 <h4>Empfohlen</h4>
 <ul>
   <li>Betriebssystem:
     <ul>
-      <li>Windows Vista, 7, 8, 8.1, 10</li>
+      <li>Windows 11</li>
       <li>Linux</li>
       <li>MacOS X 10.65 oder neuer</li>
     </ul>
   </li>
-  <li>Grafikkarte: 128 MB dedizierten-Speicher, Treiber mit openGL Unterstützung, Shader 2.0 Unterstützung</li>
+  <li>Grafikkarte: 128 MB dedizierter Speicher, Treiber mit openGL (3.2) Unterstützung, Shader 2.0 Unterstützung</li>
   <li>CPU: Zwei-Kern-Prozessor mit 2,0 GHz</li>
-  <li>Java neuste Verion (64-bit Version auf 64-bit Betriebssystemen)</li>
+  <li>Unterstützt Java 1.8</li>
 </ul>
 
 <h4>Hinweis</h4>
 
-<p>Windows Vista, Windows 7 und die meisten Linux Versionen haben von Haus aus
+<p>Windows Vista, Windows 7 und die meisten Linux-Versionen haben von Haus aus
 keinen Treiber mit OpenGL Hardwarebeschleunigung installiert. Ein solcher
 Treiber kann auf der Homepage der Hersteller deiner Grafikkarte gefunden
 werden.</p>
@@ -97,19 +98,19 @@ werden.</p>
 
 <p>Beim ersten Start des Illarion-Starters fragt ein kurzer
 Installationsassistent die noch fehlenden Einstellungen ab. Wenn es schon 
-eine alte Installation von Illarion auf dem Rechner gab, dann werden die bestehenden Einstellungen werden weiterhin
+eine alte Installation von Illarion auf dem Rechner gab, dann werden die bestehenden Einstellungen weiterhin
 benutzt.</p>
 
 <p>Das Hauptmenu des Illarion-Launchers bietet die Möglichkeit, den Client
 zu starten, indem man auf "Spielen" drückt. Alle anderen Anwendungen werden
 durch die jeweiligen beschrifteten Knöpfe gestartet. Sobald eine Anwendung
-ausgewählt wird beginnt der Launcher die aktuelle Version der Anwendung
+ausgewählt wird, beginnt der Launcher die aktuelle Version der Anwendung
 zu suchen, eine Downloadliste zu erzeugen und die Anwendung herunterzuladen.
-Beim ersten Start kann einige Zeit vergehen bis der Download beginnt.
+Beim ersten Start kann einige Zeit vergehen, bis der Download beginnt.
 Nach dem Download startet die Anwendung automatisch.</p>
 
-<p>Sollte es Probleme bei der Installation oder beim Start des Clienten geben,
-frage bitte im IRC-Chat oder im Forum nach Hilfe. Es gibt fast kein Problem,
+<p>Sollte es Probleme bei der Installation oder beim Start des Clients geben,
+frage bitte im Discord oder im Forum nach Hilfe. Es gibt fast kein Problem,
 das nicht gelöst werden kann.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
