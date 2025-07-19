@@ -126,7 +126,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die physische Widerstandskraft deines Charakters. Sie bestimmt die Lebenspunktregeneration. Dieses Attribut ist für alle Sammler wichtig. Es hilft dir, das endlose Hämmern als Schmied zu ertragen und unterstützt Kämpfer dabei, Schaden auszuhalten. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Graben, Landwirtschaft, Angeln, Kräuterkunde, Ackerbau, Bergbau, Gerben, Weben, Holzfällen und Schmieden.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die physische Widerstandskraft deines Charakters. Dieses Attribut ist für alle Sammler wichtig. Es hilft dir, das endlose Hämmern als Schmied zu ertragen und unterstützt Kämpfer dabei, Schaden auszuhalten. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fähigkeiten: Graben, Landwirtschaft, Angeln, Kräuterkunde, Ackerbau, Bergbau, Gerben, Weben, Holzfällen und Schmieden.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>

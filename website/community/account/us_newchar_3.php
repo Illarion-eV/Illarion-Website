@@ -125,7 +125,7 @@ $templates = $pgSQL->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The physical resilience of your character. It governs the regeneration of hitpoints. This attribute is of importance to all gatherers, helps you endure the endless hammering as a blacksmith and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, Woodcutting and Blacksmithing.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="The physical resilience of your character. This attribute is of importance to all gatherers, helps you endure the endless hammering as a blacksmith and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, Woodcutting and Blacksmithing.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
