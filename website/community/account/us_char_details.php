@@ -241,7 +241,7 @@
 				case 1: echo 'You have huge problems when it comes to using your brain. You cannot form complex sentences and even have trouble using more than one word at a time. <br />Reading and writing is something you will never learn.'; break;
 				case 2: echo 'You are proud being able to phrase entire sentences, even if they are not really complex.<br />You can learn to read and write with a good amount of effort.'; break;
 				case 3: echo 'You know everything you need to know in your everyday life. However you are still unable to understand huge and complex topics.<br />You could learn to read, if you were ever taught to.'; break;
-				case 4: echo 'You are not dumb, rather cleverer than the average, even if not called a genius. You can achieve a lot with arguments.<br />You learned how to read and write quite easily and you have no problems to use those skills.'; break;
+				case 4: echo 'You are far from dumb, sharper than most, even if not quite a genius. With the right arguments, you are capable of achieving a great deal.<br />Reading and writing came easily to you, and you have no trouble putting those skills to good use.'; break;
 				case 5: echo 'You are clever, your brain is your power.<br />No matter what the task is, mathematics, poetry, literature, you can understand it within short time.<br />If you cannot read or write, it should not be that hard for you to learn it.'; break;
 				case 6: echo 'Your intelligence is supernatural.'; break;
 				default: echo 'Your intelligence is unknown.'; break;
