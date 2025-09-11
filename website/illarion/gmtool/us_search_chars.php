@@ -1,24 +1,19 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php';
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/illarion_data.php' );
-	includeWrapper::includeOnce( Page::getRootPath(). '/illarion/gmtool/inc_topmenu.php' );
+	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/inc_topmenu.php' );
 
 	if (!IllaUser::auth('gmtool_chars'))
 	{
 		Messages::add('Access denied', 'error');
-		includeWrapper::includeOnce( Page::getRootPath(). '/illarion/gmtool/us_gmtool.php' );
+		include_once( $_SERVER['DOCUMENT_ROOT'] . '/illarion/gmtool/us_gmtool.php' );
 		exit();
 	}
 
-	Page::setTitle( array( 'GM Tool', 'Character Search' ) );
-	Page::setDescription( 'Character Search Tool' );
-	Page::setKeywords( array( 'GM Tool', 'Character', 'Search' ) );
-	
-	Page::addCSS( 'menu' );
-	Page::addJavaScript( array( 'prototype', 'gmtool_search_chars' ) );
-	
-	Page::setXHTML();
-	Page::Init();	
+    create_header( 'GM Tool', 'Character Search',
+	'Character Search Tool',
+	'GM Tool, Character, Search', '', 'menu', 'prototype,gmtool_search_chars', true );
+	include_header();
 ?>
 
 <h1>Search for characters</h1>
