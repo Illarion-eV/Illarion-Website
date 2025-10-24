@@ -4,7 +4,7 @@
 	"A graphical calendar of the current year",
 	"calendar, date, month, zodiac",
 	"",
-	"lightwindow,lightwindow_us,calendar_2","prototype,effects,lightwindow");
+	"lightwindow,lightwindow_us,calendar","prototype,effects,lightwindow");
 	include_header();
 ?>
 
