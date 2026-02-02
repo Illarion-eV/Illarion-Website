@@ -1,8 +1,9 @@
 <?php
-	function getGmPages($filter)
+	function getGmPages($filter, $pageNum, $perPage)
 	{
-		$pages = array();
 		$pgSQL =& Database::getPostgreSQL( );
+
+        $offset = $pageNum * $perPage;
 
 // . "\n LEFT JOIN chars AS chars_player ON gmpager.pager_user = chars_player.chr_playerid"
 
@@ -20,13 +21,12 @@
 						.PHP_EOL." LEFT JOIN accounts.account AS gm ON gmpager.pager_gm = gm.acc_id"
 						.PHP_EOL." WHERE gmpager.pager_status = ".$pgSQL->Quote($filter)
 						.PHP_EOL." ORDER BY illarionserver.gmpager.pager_time DESC"
-						.PHP_EOL." LIMIT 100;";
+						.PHP_EOL." LIMIT " . (int)$perPage
+                        .PHP_EOL." OFFSET " . (int)$offset . ";";
 //		echo $query;
       	$pgSQL->setQuery( $query );
 		
-      	$pages = $pgSQL->loadAssocList();
-	
-		return $pages;
+		return $pgSQL->loadAssocList();
 	}
 
 	function countGmPages()
