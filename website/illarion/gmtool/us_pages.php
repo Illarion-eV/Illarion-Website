@@ -113,13 +113,13 @@
     echo '<div class="pagination">';
 
     if ($pageNum > 0) {
-        echo '<a href="?filter='.$filter.'&p='.($pageNum - 1).'">&laquo; Previous</a> ';
+        echo '<a href="?filter='.$filter.'&amp;p='.($pageNum - 1).'">&laquo; Previous</a> ';
     }
 
     echo ' Page '.($pageNum + 1).' ';
 
     if ($hasNext) {
-        echo '<a href="?filter='.$filter.'&p='.($pageNum + 1).'">Next &raquo;</a>';
+        echo '<a href="?filter='.$filter.'&amp;p='.($pageNum + 1).'">Next &raquo;</a>';
     }
 
     echo '</div>';
