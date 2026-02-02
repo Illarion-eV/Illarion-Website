@@ -40,7 +40,15 @@
     Page::setXHTML();
     Page::Init();
 
-	$pages = getGmPages($_GET['filter']);
+	$filter = isset($_GET['filter']) ? (int)$_GET['filter'] : 0;
+    $perPage = 50;
+    $pageNum = isset($_GET['p']) ? max(0, (int)$_GET['p']) : 0;
+    $pages = getGmPages($filter, $pageNum, $perPage + 1);
+
+    $hasNext = count($pages) > $perPage;
+    if ($hasNext) {
+        array_pop($pages);
+    }
 
 ?>
 
@@ -101,6 +109,17 @@
 
         }
 
+    echo '<div class="pagination">';
 
+    if ($pageNum > 0) {
+        echo '<a href="?filter='.$filter.'&amp;p='.($pageNum - 1).'">&laquo; Vorherige</a> ';
+    }
 
+    echo ' Page '.($pageNum + 1).' ';
+
+    if ($hasNext) {
+        echo '<a href="?filter='.$filter.'&amp;p='.($pageNum + 1).'">Nächste &raquo;</a>';
+    }
+
+    echo '</div>';
 ?>
