@@ -78,7 +78,7 @@
 	</p>
 
 	<?php if ($server == 'illarionserver'): ?>
-	<h2>Detailed description for the web profil</h2>
+	<h2>Detailed description for the web profile</h2>
 
 	<p>
 		English<br />
