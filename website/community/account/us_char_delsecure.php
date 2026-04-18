@@ -48,14 +48,41 @@
 	Page::Init();
 ?>
 <div>
-	<p>Are you sure that you want to delete your character <b><?php echo $char; ?></b> (<?php echo $server; ?>)?
+	<p>Are you sure that you want to delete your character <b><?php echo htmlspecialchars($char, ENT_QUOTES, 'UTF-8'); ?></b> (<?php echo $server; ?>)?
 	There is no way to undo this action.</p>
 
-	<form id="delete_form" name="delete_form" method="post" action="us_charlist.php" style="width:100%;text-align:center;">
-		<button onclick="document.forms.delete_form.submit();" style="margin-right:10px;">Yes, delete the<br />character</button>
-		<?php if($enable_lightwindow): ?><button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">No, don't delete<br />the character</button><?php endif; ?>
-		<input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+	<form id="delete_form" name="delete_form" method="post" action="us_charlist.php" style="width:100%;text-align:center;" onsubmit="return confirmDeletion();">
+		
+        <p>Type the character name to confirm deletion:</p>
+        <input type="text" id="confirm_name" name="confirm_name" />
+        <br /><br />
+
+        <button type="submit" style="margin-right:10px;">
+            Yes, delete the<br />character
+        </button>
+        
+        <?php if($enable_lightwindow): ?>
+            <button onclick="myLightWindow.deactivate();return false;" style="margin-left:10px;">
+                No, don't delete<br />the character
+            </button>
+        <?php endif; ?>
+
+        <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
 		<input type="hidden" name="charid" value="<?php echo $charid; ?>" />
 		<input type="hidden" name="action" value="char_delete" />
 	</form>
+
+    <script>
+        function confirmDeletion() {
+            var entered = document.getElementById('confirm_name').value;
+            var actual = <?php echo json_encode($char); ?>;
+
+            if (entered !== actual) {
+            alert("Character name does not match. Deletion cancelled.");
+            return false;
+            }
+
+            return true;
+        }
+    </script>
 </div>
