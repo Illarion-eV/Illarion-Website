@@ -1,2 +1,1 @@
-Require all denied
 AddType application/x-httpd-php-source .php .php3 .php4 .php5 .php6 .phpx
