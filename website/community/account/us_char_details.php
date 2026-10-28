@@ -226,8 +226,8 @@
 				case 1: echo 'You are slow. Even snails appear as fast as a lightening next to you.<br />In a crowd you keep running into people.<br />You have problems to keep your balance.'; break;
 				case 2: echo 'You are really not a sprinter, but with enough training you could at least gain some stamina.<br />Always keep your eyes open and directed straight forwards, because there is only little chance that you can dodge before running into something.'; break;
 				case 3: echo 'You are not slow, but you aren\'t fast either. You are as fast as any other person as well.<br />If someone is throwing stones at you, you have a good chance to dodge them, if you notice them in time.'; break;
-				case 4: echo 'You are pretty fast. Fast enough that you have good chances to outrun anyone.<br />An attack by suprirse will in most cases fail on you, since you can dodge very swiftly.'; break;
-				case 5: echo 'You are the fastest runnter and you are even able to outdistance animals during the hunt.<br />Even if the sky would drop on your head you would have a pretty good chance to dodge.'; break;
+				case 4: echo 'You are pretty fast. Fast enough that you have good chances to outrun anyone.<br />An attack by surprise will in most cases fail on you, since you can dodge very swiftly.'; break;
+				case 5: echo 'You are the fastest runner and you are even able to outdistance animals during the hunt.<br />Even if the sky would drop on your head you would have a pretty good chance to dodge.'; break;
 				case 6: echo 'Your agility is supernatural.'; break;
 				default: echo 'Your agility is unknown.'; break;
 			}

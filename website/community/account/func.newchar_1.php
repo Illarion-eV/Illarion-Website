@@ -39,7 +39,7 @@
 	$pgSQL->setQuery( $query );
 	if ($pgSQL->loadResult())
 	{
-		echo ($lang == 'de' ? 'Charaktername wurde bereits vergeben' : 'Charactername already taken' );
+		echo ($lang == 'de' ? 'Charaktername wurde bereits vergeben' : 'Character name already taken' );
 		exit();
 	}
 

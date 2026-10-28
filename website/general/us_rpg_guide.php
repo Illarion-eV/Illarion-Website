@@ -90,7 +90,7 @@ must be fulfilled can be found on the website.</p>
 
 <p>There is no script, so there are no fixed roles. Therefore choose a role that you always
 wanted to play. The only important thing is, that it fits to the setting of Illarion. An
-engineer of the arms industry would not fit in, while a mediaeval blacksmith would.<br />
+engineer of the arms industry would not fit in, while a medieval blacksmith would.<br />
 Once you have chosen a person, you should think about his personal background. The motivation
 of your character should be derived from your background: What are your goals? What do you like
 or hate?<br />
@@ -190,10 +190,10 @@ to describe its actions. In Illarion you use "#me" to do so. If the player of Ud
 types for instance "<strong>#me</strong> bows down to the river und washes his hands in the
 water" the text on the screen says: "<strong>Udolpho</strong> bows down to the river
 and washes his hands in the water<strong>.</strong>".<br />
-You should use this only to describe what others should realy be able to see. The sentence
+You should use this only to describe what others should really be able to see. The sentence
 "Udolpho thinks Melmoth is an idiot." is nonsense, because the thoughts of Udolpho
 can't be seen. More appropriate would be a sentence like this: "Udolpho looks at
-Melmoth and shows a superior smile around his lips.".<br />
+Melmoth and shows a superior smile around his lips."<br />
 #me-commands are important under many circumstances, to overcome technical drawbacks. On the
 screen you can't see or hear when a weapon is drawn. Therefore the opponent has no
 preparation time. The sentence "Udolpho draws his weapon and points at Melmoth." would
@@ -224,7 +224,7 @@ characters actions, do the same for them. If everyone is only playing his own ga
 play a single player computer game. So if a group of three people catches you from behind and
 describes with #me commands, how they overpower and tie you, take part in their game (even if it
 would be technical possible to simply walk away!). If you are extremely strong, you can describe
-an escape attempt also using #me commands, but don't ignore them completely even it has bad
+an escape attempt also using #me commands, but don't ignore them completely even if it has bad
 consequences for you.<br />
 If you are planning a bigger action, it is a good idea to announce it on the boards before in an
 appropriate form, to get other players to take part. If you are playing in a gang of robbers for
@@ -233,7 +233,7 @@ notes on the board, about some dubious persons lurking around the village, spyin
 and camping in the nearby woods. This would give other players the possibility to participate so
 that perhaps 20 instead of 5 person will have fun with this situation. Fun may, in this case,
 not only mean "win", because the goal is to have fun roleplaying. You may also have
-fun if your side "looses".</p>
+fun if your side "loses".</p>
 
 <?php insert_go_to_top_link(); ?>
 
@@ -302,7 +302,7 @@ beginning that you will exclude yourself from the "normal", peace loving society
 
 <p>Keep in mind that the goal of Illarion is to have fun roleplaying. If you have other goals or
 your playing style even violates the rules, you should think about choosing another game that
-fits your needs better. Especially it is not the goal of Illarion to collect as many points of
+fits your needs better. Especially as it is not the goal of Illarion to collect as many points of
 any kind as you can get. If it is your goal to rise your smithing skill to the maximum in the
 shortest possible time (even if you are a barkeeper), or if you are a magician, but you intend
 to perfect your use of great axes, better leave the game. There are enough other games out there
@@ -314,7 +314,7 @@ contrary to his nature (moving does hurt him, he would be rather searching for b
 library and he has to sleep a few hours a day and take breaks). On the other hand, the only goal
 in this is to achieve technical advantages (he will be able to kill the strongest beasts without
 using magic after a few days with this training). The described behaviour might fit for a young
-warrior a few days before his final exams on the warriors school (if he takes a few food breaks
+warrior a few days before his final exams for the warriors school (if he takes a few food breaks
 and sleeps a few hours). Therefore you can't definitely say if an action is powergaming or
 not, without looking at the person that carries out this action.</p>
 
@@ -338,8 +338,8 @@ short time.</p>
 
 <h2>Revenge without end</h2>
 
-<p>You will love your character after some time. If he dies, a world will break for some
-players. Therefore we have made the death in Illarion less serious but still hurting. You will
+<p>You will love your character after some time. If he dies, the world will break for some
+players. Therefore we have made the death in Illarion less serious but still hurt. You will
 be able to keep on playing with some losses. The only permanent death is sentenced by
 gamemasters, if they find you with a massive rule violation. Therefore players shouldn't
 make themselves the law and enforce it on their own. So if you are taking revenge on someone and
@@ -355,7 +355,7 @@ catches you.</p>
 
 <h2>Stay in exercise</h2>
 
-<p>To avoid loosing the feeling for roleplaying now and then, keep on roleplaying even if no
+<p>To avoid losing the feeling for roleplaying now and then, keep on roleplaying even if no
 other character is present. You can moan and wipe the sweat from your head when you are chucking
 wood, even if no-one is there, that can see this good show. If you don't do it, you will only
 be working mechanically and will get bored. You will not be able to start roleplaying fast enough
@@ -378,11 +378,11 @@ story, how he got mad and perhaps there are some situations that provoke an outb
 All this must be logically from the persons background story.<br />
 People tend to think of murderers if they think of "evil", even if a murder is perhaps
 the most seldom crime. What about tricksters? Thieves? Rowdys? Schemers? Spies? Road robbers?
-Blackmailers? Kidnappers? Badmouthing about the merchant concurrents? Conflicts between
+Blackmailers? Kidnappers? Badmouthing about the merchant competitors? Conflicts between
 neighbours? Peasants that put vermin in the barns of other peasants? Isn't it more pleasing
 to infiltrate a guild, sell their secrets and set them against another guild, to get rid of two
-guilds that are concurring with your (third) guild?<br />
-Whatever type of "evil" you are playing, play him consistent. Don't be a fierce
+guilds that are competing with your (third) guild?<br />
+Whatever type of "evil" you are playing, play it consistently. Don't be a fierce
 robber on one day and, as soon as it gets attractive to take part on the life of a simple
 citizen, play a friendly villager that takes part on the banquette of the king (where of course
 many people know him as a robber, but don't act against him, because it is so nice sitting
