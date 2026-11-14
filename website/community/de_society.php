@@ -56,11 +56,11 @@ donation@illarion.org</p>
 		<dt>Kontoinhaber</dt>
 		<dd>Illarion e.V.</dd>
 		<dt>Bank</dt>
-		<dd>Ev. Kreditgenossenschaft Kassel</dd>
+		<dd>Deutsche Skatbank</dd>
 		<dt>BIC</dt>
-		<dd>GENODEF1EK1</dd>
+		<dd>GENO DEF1 SLR</dd>
 		<dt>IBAN</dt>
-		<dd>DE73 5206 0410 0003 5012 64</dd>
+		<dd>DE59 8306 5408 0007 0332 30</dd>
 		<dt>Verwendungszweck</dt>
 		<dd>Spende für Illarion [Realname]</dd>
 	</dl>
